@@ -3490,7 +3490,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Vector Spaces",
-  "body": " Vector Spaces   Earlier, we considered , the set of -dimensional column vectors. We now introduce a more general concept of “vector”, as an element of an abstract vector space. Basically, vectors are entities that can be added and scaled. While some vectors look like lists of numbers (for example, column vectors, row vectors), other kinds of vectors don’t look like lists of numbers at all (for example, functions, polynomials). Part of the power of linear algebra comes from our ability to find vector spaces in many unexpected places.  Much of the content of this chapter will be a repetition of things we have already seen in the context of . For example, we will be talking about linear combinations, linear independence, spanning sets, bases, subspaces, linear transformations, and so on. We initially introduced these concepts in the context of the vector space , so that they would be easier to understand. We will now see that they in fact apply to all vector spaces.    Definition of vector spaces    Vector space  Let be a field. A vector space over is a set equipped with two operations of addition and scalar multiplication , such that the following properties hold:    A1. Commutative law of addition: .   A2. Associative law of addition: .   A3. The existence of an additive unit: there exists an element such that for all , .   A4. The law of additive inverses: .   SM1. The distributive law over vector addition: .   SM2. The distributive law over scalar addition: .   SM3. The associative law for scalar multiplication: .   SM4. The rule for multiplication by one: .    The above definition is concerned about two operations: vector addition, denoted by , and scalar multiplication, denoted by or sometimes . In the law of additive inverses, we have written for .  Often, the scalars will be real numbers, but it is also possible to use scalars from a different field . We also use the term -vector space to refer to a vector space over a field . When , we also speak of a real vector space , and when , we speak of a complex vector space . If the field is clear from the context, we often don’t mention it at all, and just speak of a “vector space”.  The elements of a vector space are called vectors . Our first example of a vector space is of course .   is a vector space   The set of -dimensional real column vectors, with the usual operations of vector addition and scalar multiplication, is a (real) vector space.   Proof: Properties (A1)–(A4) hold by our definition of vector addition, and properties (SM1)–(SM4) hold by our definition of vector-scalar multiplication.     is a vector space   The set of -dimensional complex column vectors, with the usual operations of vector addition and scalar multiplication, is a (complex) vector space.    We now consider some other examples of vector spaces.   Vector space of polynomials of degree 2   Let be the set of all polynomials of degree at most 2 with real coefficients, i.e., expressions of the form , where . Define addition and scalar multiplication of polynomials in the usual way: Then is a vector space.   Proof: To show that is a vector space, we verify the 8 vector space axioms. Let , , and be polynomials in and let be scalars.   (A1) We prove the commutative law of addition. Since addition in is commutative, this equals    (A2) We prove the associative law of addition. By associativity in , this equals    (A3) To prove the existence of an additive unit, let , the so‑called zero polynomial. Then    (A4) We prove the law of additive inverses.    (SM1) We prove the distributive law over vector addition.    (SM2) We prove the distributive law over scalar addition.    (SM3) We prove the associative law for scalar multiplication.    (SM4) Finally, we prove the rule for multiplication by one.   Since the operations of addition and scalar multiplication on satisfy the 8 vector space axioms, is a vector space.      Vector space of matrices   Let be the set of all -matrices with real entries, together with the usual operations of matrix addition and scalar multiplication. Then is a vector space.   Proof: The properties (A1)–(A4) hold by our definition of matrix addition, and the properties (SM1)–(SM4) hold by our definition of scalar-matrix multiplication.      Not a vector space   Let denote the set of -matrices. Let us define a non-standard addition in by for all matrices . Let scalar multiplication in be the usual scalar multiplication of matrices. We show that is not a vector space.  In order to show that is not a vector space, it suffices to find one of the 8 axioms that is not satisfied. We will begin by examining the axioms for addition until one is found which does not hold. In fact, for this example, the very first axiom fails.  Let Then and . Since , we have , so property (A1) is false.      Vector space of functions   Let be a nonempty set and define to be the set of functions defined on and valued in . In other words, the elements of are functions . The sum of two functions is defined by , and scalar multiplication is defined by . Then is a vector space.  To verify that is a vector space, we must prove the 8 axioms of vector spaces. Let be functions in , and let be scalars.  Recall that two functions are equal if for all , we have .   (A1) For all , . Therefore .   (A2) For all , . Therefore .   (A3) Let denote the function defined by . Then for all , so .   (A4) Let be defined by . Then for all , so .   (SM1) For all , , hence .   (SM2)  , so .   (SM3)  , so .   (SM4)  for all , so .  It follows that satisfies all the required axioms and is a vector space.    For the next two examples of vector spaces, we leave the proofs as an exercise.    Infinite real sequences   A sequence of real numbers, i.e. elements of is an infinite list , where for all . We also use the notation , or occasionally , to denote such a sequence. Let be the set of sequences of real numbers.  We add two sequences by adding their th elements: . We scale a sequence by scaling each of its elements: . Then is a vector space.      Vector space of polynomials of unbounded degree   Let be the set of all polynomials (of any degree) with real coefficients, i.e., expressions of the form , where and . Addition and scalar multiplication of polynomials are defined in the usual way. Then is a vector space.     Elementary consequences of the vector space axioms   In any vector space, the following are true:   The additive unit is unique. In other words, whenever , then .  Additive inverses are unique. In other words, whenever , then .   for all vectors .  The following cancellation law holds: if , then .     We prove the first three properties, and leave the last one as an exercise. Assume is any vector space over a field .   (a) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to both sides of the equation, we have . Applying the law (A3) (additive unit law) to the left-hand side, we have . This proves that whenever , then , or in other words, is the only element acting as an additive unit.   (b) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to the left-hand side, we have . Applying the law (A1) (commutative law) to the right-hand side, we have . Applying the law (A3) (additive unit law) to both sides of the equation, we have . This proves that whenever , then , or in other words, is the only element acting as an additive inverse of .   (c) First, note that the scalar satisfies the property , by property (A3) of the definition of a field. Now let be any vector. Using the vector space law (SM2) (distributive law over scalar addition) and , we have . Next, we use a small trick: add to both sides of the equation. This gives . Applying the additional laws (A2), (A4), and (A3), we have , , and . This proves that holds for all vectors , as desired.   (d) This is left as an exercise.        Consider the set with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.      Consider with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.      Consider with the following non-standard scalar multiplication: Vector addition is defined as usual. Is this a vector space? Explain why or why not.      Consider with the following non-standard addition operation : Scalar multiplication is defined as usual. Is this a vector space? Explain why or why not.      Prove that the set from is a vector space. Hint: this is a special case of , if you realize that a sequence is the same thing as a function .      Prove that the set from is a vector space.      Let be the set of functions defined on a set that have values in a vector space . Is this a vector space? Explain.      Consider the set with the following non-standard operations of addition and scalar multiplication: Show that is a vector space with these operations. Hint: the zero vector is not , but .      Consider the set of real numbers. Addition of real numbers is defined in the usual way, and scalar multiplication is just multiplication of one real number by another. In other words, means to add the two numbers and means to multiply them. Show that , with these operations, is a real vector space.      Let be the field of rational numbers, and let be the set of real numbers of the form , where and are rational numbers. Show that with the usual operations, is a -vector space.     "
+  "body": " Vector Spaces   Earlier, we considered , the set of -dimensional column vectors. We now introduce a more general concept of “vector”, as an element of an abstract vector space. Basically, vectors are entities that can be added and scaled. While some vectors look like lists of numbers (for example, column vectors, row vectors), other kinds of vectors don’t look like lists of numbers at all (for example, functions, polynomials). Part of the power of linear algebra comes from our ability to find vector spaces in many unexpected places.  Much of the content of this chapter will be a repetition of things we have already seen in the context of . For example, we will be talking about linear combinations, linear independence, spanning sets, bases, subspaces, linear transformations, and so on. We initially introduced these concepts in the context of the vector space , so that they would be easier to understand. We will now see that they in fact apply to all vector spaces.     In many courses, vectors first appear as arrows in the plane or as lists of numbers in . In this section, we will step back and ask a more basic question: what properties make a collection of objects behave like vectors?   In this activity, you will examine several different sets together with rules for addition and scalar multiplication. Your goal is not to check a list of axioms, but to identify which structural features seem essential and which failures cause problems.      Consider the following sets, each equipped with the usual addition and scalar multiplication.   The set of ordered pairs .  The set of all polynomials of degree at most 2.  The set of all real-valued functions defined on .   For each set:   Give an example of adding two elements.  Give an example of multiplying an element by a scalar.  Identify one feature that all three sets seem to have in common.        Now consider the following collections. In each case, the objects look familiar, but the set has been restricted in some way.   The set of all polynomials with constant term equal to 1.  The set of all vectors in whose coordinates are positive.  The set of all functions such that .   For each example:   Decide whether the set still behaves like a space of vectors.  Find a specific operation (addition or scalar multiplication) that causes a problem, if one exists.  Explain why this failure is significant.        In , there is a special vector that satisfies for every vector .  For each of the following sets, discuss whether such a special element exists.   Polynomials of degree at most 2.  Polynomials with constant term equal to 1.  Functions that satisfy .   What role does this special element seem to play in determining whether a set should be considered a vector space?      The examples in this activity suggest that “being a vector” is not about what objects look like, but about how they behave under addition and scalar multiplication. In the next section, these ideas will be distilled into a precise definition of a vector space .      Definition of vector spaces    Vector space  Let be a field. A vector space over is a set equipped with two operations of addition and scalar multiplication , such that the following properties hold:    A1. Commutative law of addition: .   A2. Associative law of addition: .   A3. The existence of an additive unit: there exists an element such that for all , .   A4. The law of additive inverses: .   SM1. The distributive law over vector addition: .   SM2. The distributive law over scalar addition: .   SM3. The associative law for scalar multiplication: .   SM4. The rule for multiplication by one: .    The above definition is concerned about two operations: vector addition, denoted by , and scalar multiplication, denoted by or sometimes . In the law of additive inverses, we have written for .  Often, the scalars will be real numbers, but it is also possible to use scalars from a different field . We also use the term -vector space to refer to a vector space over a field . When , we also speak of a real vector space , and when , we speak of a complex vector space . If the field is clear from the context, we often don’t mention it at all, and just speak of a “vector space”.  The elements of a vector space are called vectors . Our first example of a vector space is of course .     The set of -dimensional real column vectors, with the usual operations of vector addition and scalar multiplication, is a (real) vector space.   Proof: Properties (A1)–(A4) hold by our definition of vector addition, and properties (SM1)–(SM4) hold by our definition of vector-scalar multiplication.       The set of -dimensional complex column vectors, with the usual operations of vector addition and scalar multiplication, is a (complex) vector space.    We now consider some other examples of vector spaces.     Let be the set of all polynomials of degree at most 2 with real coefficients, i.e., expressions of the form , where . Define addition and scalar multiplication of polynomials in the usual way: Then is a vector space.   Proof: To show that is a vector space, we verify the 8 vector space axioms. Let , , and be polynomials in and let be scalars.   (A1) We prove the commutative law of addition. Since addition in is commutative, this equals    (A2) We prove the associative law of addition. By associativity in , this equals    (A3) To prove the existence of an additive unit, let , the so‑called zero polynomial. Then    (A4) We prove the law of additive inverses.    (SM1) We prove the distributive law over vector addition.    (SM2) We prove the distributive law over scalar addition.    (SM3) We prove the associative law for scalar multiplication.    (SM4) Finally, we prove the rule for multiplication by one.   Since the operations of addition and scalar multiplication on satisfy the 8 vector space axioms, is a vector space.        Let be the set of all -matrices with real entries, together with the usual operations of matrix addition and scalar multiplication. Then is a vector space.   Proof: The properties (A1)–(A4) hold by our definition of matrix addition, and the properties (SM1)–(SM4) hold by our definition of scalar-matrix multiplication.        Let denote the set of -matrices. Let us define a non-standard addition in by for all matrices . Let scalar multiplication in be the usual scalar multiplication of matrices. We show that is not a vector space.  In order to show that is not a vector space, it suffices to find one of the 8 axioms that is not satisfied. We will begin by examining the axioms for addition until one is found which does not hold. In fact, for this example, the very first axiom fails.  Let Then and . Since , we have , so property (A1) is false.        Let be a nonempty set and define to be the set of functions defined on and valued in . In other words, the elements of are functions . The sum of two functions is defined by , and scalar multiplication is defined by . Then is a vector space.  To verify that is a vector space, we must prove the 8 axioms of vector spaces. Let be functions in , and let be scalars.  Recall that two functions are equal if for all , we have .   (A1) For all , . Therefore .   (A2) For all , . Therefore .   (A3) Let denote the function defined by . Then for all , so .   (A4) Let be defined by . Then for all , so .   (SM1) For all , , hence .   (SM2)  , so .   (SM3)  , so .   (SM4)  for all , so .  It follows that satisfies all the required axioms and is a vector space.    For the next two examples of vector spaces, we leave the proofs as an exercise.      A sequence of real numbers, i.e. elements of is an infinite list , where for all . We also use the notation , or occasionally , to denote such a sequence. Let be the set of sequences of real numbers.  We add two sequences by adding their th elements: . We scale a sequence by scaling each of its elements: . Then is a vector space.        Let be the set of all polynomials (of any degree) with real coefficients, i.e., expressions of the form , where and . Addition and scalar multiplication of polynomials are defined in the usual way. Then is a vector space.      Let be an integer and let denote the set of all polynomials with real coefficients of degree at most . Members of have the form where are real numbers and is a real variable. The purpose of this activity is to verify that is a vector space.    Explain why is closed under the operation of usual polynomial addition. That is, explain why if .    Explain why is closed under scalar multiplication. That is, explain why if and .    Identify\/describe the zero element in axiom (A3) . Then show that for every .    For an element , identify\/describe the additive inverse in axiom A4.    For elements , show that axiom (SM1) holds.        If , then both and are polynomials of degree at most . Adding two such polynomials yields a polynomial having degree at most as well.    If , then . For any constant , we then have which is clearly also in .     . If is any element in , then so that .    If is any element in , then and the additive inverse is defined by .    If is any element in , then . Similarly, if is any element in , then . For any constant , we then have .         In any vector space, the following are true:   The additive unit is unique. In other words, whenever , then .  Additive inverses are unique. In other words, whenever , then .   for all vectors .  The following cancellation law holds: if , then .     We prove the first three properties, and leave the last one as an exercise. Assume is any vector space over a field .   (a) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to both sides of the equation, we have . Applying the law (A3) (additive unit law) to the left-hand side, we have . This proves that whenever , then , or in other words, is the only element acting as an additive unit.   (b) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to the left-hand side, we have . Applying the law (A1) (commutative law) to the right-hand side, we have . Applying the law (A3) (additive unit law) to both sides of the equation, we have . This proves that whenever , then , or in other words, is the only element acting as an additive inverse of .   (c) First, note that the scalar satisfies the property , by property (A3) of the definition of a field. Now let be any vector. Using the vector space law (SM2) (distributive law over scalar addition) and , we have . Next, we use a small trick: add to both sides of the equation. This gives . Applying the additional laws (A2), (A4), and (A3), we have , , and . This proves that holds for all vectors , as desired.   (d) This is left as an exercise.      Summary  The main purpose of this section was to investigate the definition of a vector space over a field through identification of the required operations and axioms.   Standard examples of vector spaces include , polynomial spaces, matrix spaces, and spaces of functions.  We can determine whether a given set with specified operations is a vector space by checking the vector space axioms. We can also identify examples of sets that fail to be vector spaces and explain which axioms are violated.  The vector space axioms derive basic consequences such as the uniqueness of the zero vector and additive inverses.  ``     Consider the set with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.      Consider with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.      Consider with the following non-standard scalar multiplication: Vector addition is defined as usual. Is this a vector space? Explain why or why not.      Consider with the following non-standard addition operation : Scalar multiplication is defined as usual. Is this a vector space? Explain why or why not.      Prove that the set from is a vector space. Hint: this is a special case of , if you realize that a sequence is the same thing as a function .      Prove that the set from is a vector space.      Let be the set of functions defined on a set that have values in a vector space . Is this a vector space? Explain.      Consider the set with the following non-standard operations of addition and scalar multiplication: Show that is a vector space with these operations. Hint: the zero vector is not , but .      Consider the set of real numbers. Addition of real numbers is defined in the usual way, and scalar multiplication is just multiplication of one real number by another. In other words, means to add the two numbers and means to multiply them. Show that , with these operations, is a real vector space.      Let be the field of rational numbers, and let be the set of real numbers of the form , where and are rational numbers. Show that with the usual operations, is a -vector space.     "
+},
+{
+  "id": "preview-vecspace-5-1",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#preview-vecspace-5-1",
+  "type": "Preview Activity",
+  "number": "5.1.1",
+  "title": "",
+  "body": "   In many courses, vectors first appear as arrows in the plane or as lists of numbers in . In this section, we will step back and ask a more basic question: what properties make a collection of objects behave like vectors?   In this activity, you will examine several different sets together with rules for addition and scalar multiplication. Your goal is not to check a list of axioms, but to identify which structural features seem essential and which failures cause problems.      Consider the following sets, each equipped with the usual addition and scalar multiplication.   The set of ordered pairs .  The set of all polynomials of degree at most 2.  The set of all real-valued functions defined on .   For each set:   Give an example of adding two elements.  Give an example of multiplying an element by a scalar.  Identify one feature that all three sets seem to have in common.        Now consider the following collections. In each case, the objects look familiar, but the set has been restricted in some way.   The set of all polynomials with constant term equal to 1.  The set of all vectors in whose coordinates are positive.  The set of all functions such that .   For each example:   Decide whether the set still behaves like a space of vectors.  Find a specific operation (addition or scalar multiplication) that causes a problem, if one exists.  Explain why this failure is significant.        In , there is a special vector that satisfies for every vector .  For each of the following sets, discuss whether such a special element exists.   Polynomials of degree at most 2.  Polynomials with constant term equal to 1.  Functions that satisfy .   What role does this special element seem to play in determining whether a set should be considered a vector space?      The examples in this activity suggest that “being a vector” is not about what objects look like, but about how they behave under addition and scalar multiplication. In the next section, these ideas will be distilled into a precise definition of a vector space .   "
 },
 {
   "id": "definition-vector-space",
@@ -3525,8 +3534,8 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-rn-vector-space",
   "type": "Example",
   "number": "5.1.2",
-  "title": "<span class=\"process-math\">\\(\\mathbb{R}^n\\)<\/span> is a vector space.",
-  "body": " is a vector space   The set of -dimensional real column vectors, with the usual operations of vector addition and scalar multiplication, is a (real) vector space.   Proof: Properties (A1)–(A4) hold by our definition of vector addition, and properties (SM1)–(SM4) hold by our definition of vector-scalar multiplication.   "
+  "title": "",
+  "body": "   The set of -dimensional real column vectors, with the usual operations of vector addition and scalar multiplication, is a (real) vector space.   Proof: Properties (A1)–(A4) hold by our definition of vector addition, and properties (SM1)–(SM4) hold by our definition of vector-scalar multiplication.   "
 },
 {
   "id": "example-cn-vector-space",
@@ -3534,8 +3543,8 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-cn-vector-space",
   "type": "Example",
   "number": "5.1.3",
-  "title": "<span class=\"process-math\">\\(\\mathbb{C}^n\\)<\/span> is a vector space.",
-  "body": " is a vector space   The set of -dimensional complex column vectors, with the usual operations of vector addition and scalar multiplication, is a (complex) vector space.   "
+  "title": "",
+  "body": "   The set of -dimensional complex column vectors, with the usual operations of vector addition and scalar multiplication, is a (complex) vector space.   "
 },
 {
   "id": "example-p2-polynomials",
@@ -3543,8 +3552,8 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-p2-polynomials",
   "type": "Example",
   "number": "5.1.4",
-  "title": "Vector space of polynomials of degree 2.",
-  "body": " Vector space of polynomials of degree 2   Let be the set of all polynomials of degree at most 2 with real coefficients, i.e., expressions of the form , where . Define addition and scalar multiplication of polynomials in the usual way: Then is a vector space.   Proof: To show that is a vector space, we verify the 8 vector space axioms. Let , , and be polynomials in and let be scalars.   (A1) We prove the commutative law of addition. Since addition in is commutative, this equals    (A2) We prove the associative law of addition. By associativity in , this equals    (A3) To prove the existence of an additive unit, let , the so‑called zero polynomial. Then    (A4) We prove the law of additive inverses.    (SM1) We prove the distributive law over vector addition.    (SM2) We prove the distributive law over scalar addition.    (SM3) We prove the associative law for scalar multiplication.    (SM4) Finally, we prove the rule for multiplication by one.   Since the operations of addition and scalar multiplication on satisfy the 8 vector space axioms, is a vector space.   "
+  "title": "",
+  "body": "   Let be the set of all polynomials of degree at most 2 with real coefficients, i.e., expressions of the form , where . Define addition and scalar multiplication of polynomials in the usual way: Then is a vector space.   Proof: To show that is a vector space, we verify the 8 vector space axioms. Let , , and be polynomials in and let be scalars.   (A1) We prove the commutative law of addition. Since addition in is commutative, this equals    (A2) We prove the associative law of addition. By associativity in , this equals    (A3) To prove the existence of an additive unit, let , the so‑called zero polynomial. Then    (A4) We prove the law of additive inverses.    (SM1) We prove the distributive law over vector addition.    (SM2) We prove the distributive law over scalar addition.    (SM3) We prove the associative law for scalar multiplication.    (SM4) Finally, we prove the rule for multiplication by one.   Since the operations of addition and scalar multiplication on satisfy the 8 vector space axioms, is a vector space.   "
 },
 {
   "id": "example-8-4",
@@ -3552,8 +3561,8 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-8-4",
   "type": "Example",
   "number": "5.1.5",
-  "title": "Vector space of matrices.",
-  "body": " Vector space of matrices   Let be the set of all -matrices with real entries, together with the usual operations of matrix addition and scalar multiplication. Then is a vector space.   Proof: The properties (A1)–(A4) hold by our definition of matrix addition, and the properties (SM1)–(SM4) hold by our definition of scalar-matrix multiplication.   "
+  "title": "",
+  "body": "   Let be the set of all -matrices with real entries, together with the usual operations of matrix addition and scalar multiplication. Then is a vector space.   Proof: The properties (A1)–(A4) hold by our definition of matrix addition, and the properties (SM1)–(SM4) hold by our definition of scalar-matrix multiplication.   "
 },
 {
   "id": "example-8-5",
@@ -3561,8 +3570,8 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-8-5",
   "type": "Example",
   "number": "5.1.6",
-  "title": "Not a vector space.",
-  "body": " Not a vector space   Let denote the set of -matrices. Let us define a non-standard addition in by for all matrices . Let scalar multiplication in be the usual scalar multiplication of matrices. We show that is not a vector space.  In order to show that is not a vector space, it suffices to find one of the 8 axioms that is not satisfied. We will begin by examining the axioms for addition until one is found which does not hold. In fact, for this example, the very first axiom fails.  Let Then and . Since , we have , so property (A1) is false.   "
+  "title": "",
+  "body": "   Let denote the set of -matrices. Let us define a non-standard addition in by for all matrices . Let scalar multiplication in be the usual scalar multiplication of matrices. We show that is not a vector space.  In order to show that is not a vector space, it suffices to find one of the 8 axioms that is not satisfied. We will begin by examining the axioms for addition until one is found which does not hold. In fact, for this example, the very first axiom fails.  Let Then and . Since , we have , so property (A1) is false.   "
 },
 {
   "id": "example-8-6",
@@ -3570,8 +3579,8 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-8-6",
   "type": "Example",
   "number": "5.1.7",
-  "title": "Vector space of functions.",
-  "body": " Vector space of functions   Let be a nonempty set and define to be the set of functions defined on and valued in . In other words, the elements of are functions . The sum of two functions is defined by , and scalar multiplication is defined by . Then is a vector space.  To verify that is a vector space, we must prove the 8 axioms of vector spaces. Let be functions in , and let be scalars.  Recall that two functions are equal if for all , we have .   (A1) For all , . Therefore .   (A2) For all , . Therefore .   (A3) Let denote the function defined by . Then for all , so .   (A4) Let be defined by . Then for all , so .   (SM1) For all , , hence .   (SM2)  , so .   (SM3)  , so .   (SM4)  for all , so .  It follows that satisfies all the required axioms and is a vector space.   "
+  "title": "",
+  "body": "   Let be a nonempty set and define to be the set of functions defined on and valued in . In other words, the elements of are functions . The sum of two functions is defined by , and scalar multiplication is defined by . Then is a vector space.  To verify that is a vector space, we must prove the 8 axioms of vector spaces. Let be functions in , and let be scalars.  Recall that two functions are equal if for all , we have .   (A1) For all , . Therefore .   (A2) For all , . Therefore .   (A3) Let denote the function defined by . Then for all , so .   (A4) Let be defined by . Then for all , so .   (SM1) For all , , hence .   (SM2)  , so .   (SM3)  , so .   (SM4)  for all , so .  It follows that satisfies all the required axioms and is a vector space.   "
 },
 {
   "id": "example-8-7",
@@ -3579,8 +3588,8 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-8-7",
   "type": "Example",
   "number": "5.1.8",
-  "title": "Infinite real sequences.",
-  "body": " Infinite real sequences   A sequence of real numbers, i.e. elements of is an infinite list , where for all . We also use the notation , or occasionally , to denote such a sequence. Let be the set of sequences of real numbers.  We add two sequences by adding their th elements: . We scale a sequence by scaling each of its elements: . Then is a vector space.   "
+  "title": "",
+  "body": "   A sequence of real numbers, i.e. elements of is an infinite list , where for all . We also use the notation , or occasionally , to denote such a sequence. Let be the set of sequences of real numbers.  We add two sequences by adding their th elements: . We scale a sequence by scaling each of its elements: . Then is a vector space.   "
 },
 {
   "id": "example-8-8",
@@ -3588,8 +3597,17 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-8-8",
   "type": "Example",
   "number": "5.1.9",
-  "title": "Vector space of polynomials of unbounded degree.",
-  "body": " Vector space of polynomials of unbounded degree   Let be the set of all polynomials (of any degree) with real coefficients, i.e., expressions of the form , where and . Addition and scalar multiplication of polynomials are defined in the usual way. Then is a vector space.   "
+  "title": "",
+  "body": "   Let be the set of all polynomials (of any degree) with real coefficients, i.e., expressions of the form , where and . Addition and scalar multiplication of polynomials are defined in the usual way. Then is a vector space.   "
+},
+{
+  "id": "vs-polys-degree-n",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#vs-polys-degree-n",
+  "type": "Activity",
+  "number": "5.1.2",
+  "title": "",
+  "body": "  Let be an integer and let denote the set of all polynomials with real coefficients of degree at most . Members of have the form where are real numbers and is a real variable. The purpose of this activity is to verify that is a vector space.    Explain why is closed under the operation of usual polynomial addition. That is, explain why if .    Explain why is closed under scalar multiplication. That is, explain why if and .    Identify\/describe the zero element in axiom (A3) . Then show that for every .    For an element , identify\/describe the additive inverse in axiom A4.    For elements , show that axiom (SM1) holds.        If , then both and are polynomials of degree at most . Adding two such polynomials yields a polynomial having degree at most as well.    If , then . For any constant , we then have which is clearly also in .     . If is any element in , then so that .    If is any element in , then and the additive inverse is defined by .    If is any element in , then . Similarly, if is any element in , then . For any constant , we then have .     "
 },
 {
   "id": "proposition-8-9",
@@ -3597,15 +3615,15 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#proposition-8-9",
   "type": "Proposition",
   "number": "5.1.10",
-  "title": "Elementary consequences of the vector space axioms.",
-  "body": " Elementary consequences of the vector space axioms   In any vector space, the following are true:   The additive unit is unique. In other words, whenever , then .  Additive inverses are unique. In other words, whenever , then .   for all vectors .  The following cancellation law holds: if , then .     We prove the first three properties, and leave the last one as an exercise. Assume is any vector space over a field .   (a) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to both sides of the equation, we have . Applying the law (A3) (additive unit law) to the left-hand side, we have . This proves that whenever , then , or in other words, is the only element acting as an additive unit.   (b) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to the left-hand side, we have . Applying the law (A1) (commutative law) to the right-hand side, we have . Applying the law (A3) (additive unit law) to both sides of the equation, we have . This proves that whenever , then , or in other words, is the only element acting as an additive inverse of .   (c) First, note that the scalar satisfies the property , by property (A3) of the definition of a field. Now let be any vector. Using the vector space law (SM2) (distributive law over scalar addition) and , we have . Next, we use a small trick: add to both sides of the equation. This gives . Applying the additional laws (A2), (A4), and (A3), we have , , and . This proves that holds for all vectors , as desired.   (d) This is left as an exercise.   "
+  "title": "",
+  "body": "   In any vector space, the following are true:   The additive unit is unique. In other words, whenever , then .  Additive inverses are unique. In other words, whenever , then .   for all vectors .  The following cancellation law holds: if , then .     We prove the first three properties, and leave the last one as an exercise. Assume is any vector space over a field .   (a) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to both sides of the equation, we have . Applying the law (A3) (additive unit law) to the left-hand side, we have . This proves that whenever , then , or in other words, is the only element acting as an additive unit.   (b) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to the left-hand side, we have . Applying the law (A1) (commutative law) to the right-hand side, we have . Applying the law (A3) (additive unit law) to both sides of the equation, we have . This proves that whenever , then , or in other words, is the only element acting as an additive inverse of .   (c) First, note that the scalar satisfies the property , by property (A3) of the definition of a field. Now let be any vector. Using the vector space law (SM2) (distributive law over scalar addition) and , we have . Next, we use a small trick: add to both sides of the equation. This gives . Applying the additional laws (A2), (A4), and (A3), we have , , and . This proves that holds for all vectors , as desired.   (d) This is left as an exercise.   "
 },
 {
   "id": "exercise-8-1-1",
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-1",
   "type": "Exercise",
-  "number": "5.1.2.1",
+  "number": "5.1.3.1",
   "title": "",
   "body": "  Consider the set with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.   "
 },
@@ -3614,7 +3632,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-2",
   "type": "Exercise",
-  "number": "5.1.2.2",
+  "number": "5.1.3.2",
   "title": "",
   "body": "  Consider with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.   "
 },
@@ -3623,7 +3641,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-3",
   "type": "Exercise",
-  "number": "5.1.2.3",
+  "number": "5.1.3.3",
   "title": "",
   "body": "  Consider with the following non-standard scalar multiplication: Vector addition is defined as usual. Is this a vector space? Explain why or why not.   "
 },
@@ -3632,7 +3650,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-4",
   "type": "Exercise",
-  "number": "5.1.2.4",
+  "number": "5.1.3.4",
   "title": "",
   "body": "  Consider with the following non-standard addition operation : Scalar multiplication is defined as usual. Is this a vector space? Explain why or why not.   "
 },
@@ -3641,7 +3659,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-5",
   "type": "Exercise",
-  "number": "5.1.2.5",
+  "number": "5.1.3.5",
   "title": "",
   "body": "  Prove that the set from is a vector space. Hint: this is a special case of , if you realize that a sequence is the same thing as a function .   "
 },
@@ -3650,7 +3668,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-6",
   "type": "Exercise",
-  "number": "5.1.2.6",
+  "number": "5.1.3.6",
   "title": "",
   "body": "  Prove that the set from is a vector space.   "
 },
@@ -3659,7 +3677,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-7",
   "type": "Exercise",
-  "number": "5.1.2.7",
+  "number": "5.1.3.7",
   "title": "",
   "body": "  Let be the set of functions defined on a set that have values in a vector space . Is this a vector space? Explain.   "
 },
@@ -3668,7 +3686,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-8",
   "type": "Exercise",
-  "number": "5.1.2.8",
+  "number": "5.1.3.8",
   "title": "",
   "body": "  Consider the set with the following non-standard operations of addition and scalar multiplication: Show that is a vector space with these operations. Hint: the zero vector is not , but .   "
 },
@@ -3677,7 +3695,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-9",
   "type": "Exercise",
-  "number": "5.1.2.9",
+  "number": "5.1.3.9",
   "title": "",
   "body": "  Consider the set of real numbers. Addition of real numbers is defined in the usual way, and scalar multiplication is just multiplication of one real number by another. In other words, means to add the two numbers and means to multiply them. Show that , with these operations, is a real vector space.   "
 },
@@ -3686,18 +3704,1242 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vecspace-intro.html#exercise-8-1-10",
   "type": "Exercise",
-  "number": "5.1.2.10",
+  "number": "5.1.3.10",
   "title": "",
   "body": "  Let be the field of rational numbers, and let be the set of real numbers of the form , where and are rational numbers. Show that with the usual operations, is a -vector space.   "
 },
 {
-  "id": "backmatter-2",
+  "id": "sec-dot-product",
   "level": "1",
-  "url": "backmatter-2.html",
-  "type": "Acknowledgements",
-  "number": "",
-  "title": "Acknowledgements",
-  "body": " David Austin has written the vast majority of this text and deserves nearly 100% of the credit for its production. I acknowledge him and his acknowledgements are found below.  Many people have supported and shaped this project. First is my colleague Matt Boelkins, whose Active Calculus is a model for how an open textbook can encourage and facilitate good pedagogy. The debt that this book owes to Matt's cannot be overstated. In addition, he has provided a great deal of editorial feedback on this text and improved it in countless ways. Over many, many years, I have valued Matt's friendship and wise counsel.  I could not imagine a more supportive environment than the mathematics department at Grand Valley State University. The influence of my colleagues and their deep commitment to student growth is embedded in every page of this book. Conversations about the teaching of linear algebra with Paul Fishback have been especially helpful as has editorial feedback from Lauren Keough and Lora Bailey. I am also grateful for a sabbatical leave in 2017 during which I began this project.  In addition to my colleagues, I am grateful for the many students who have helped me grow as a teacher. Thank you for your willingness to engage in this very human art of learning and for sharing your experiences, frustrations, and successes with me.  The open textbook community that has grown around the PreTeXt authoring and publishing system is a continual source of support and inspiration. The goal of providing all students with high-quality, affordable textbooks is ambitious, but the commitment of this passionate and dedicated group makes clear that it is possible. As part of that community, Mitch Keller and Kathy Yoshiwara have read much of this book and provided detailed and insightful editorial feedback.  There coud be no better partners than Candice Price, Miloš Savić, and their team at 619 Wreath Publishing. Thank you for your support of this project and for everything you do to further your mission to foster creativity, equity, and scholarship.   Finally, a book is nothing without readers, and I am so thankful for all the instructors, students, and self-learners who have reached out with suggestions, comments, and questions. Hearing from those who are using the book gives meaning to this project, so please know that your voice is always welcomed.  "
+  "url": "sec-dot-product.html",
+  "type": "Section",
+  "number": "6.1",
+  "title": "The dot product",
+  "body": " The dot product   In this section, we introduce a simple algebraic operation, known as the dot product , that helps us measure the length of vectors and the angle formed by a pair of vectors. For two-dimensional vectors and , their dot product is the scalar defined to be For instance,      Compute the dot product      .      Sketch the vector below. Then use the Pythagorean theorem to find the length of .    A coordinate grid and set of axes.   A standard coordinate grid and set of labelled axes. The horizontal and vertical ranges run from to .     Sketch the vector and find its length.      The length of is 5.      Compute the dot product . How is the dot product related to the length of ?     , which is the square of the length of .      Remember that the matrix represents the matrix transformation that rotates vectors counterclockwise by . Beginning with the vector , find , the result of rotating by , and sketch it above.           What is the dot product ?     .      Suppose that . Find the vector that results from rotating by and find the dot product .     .      Suppose that and are two perpendicular vectors. What do you think their dot product is?    The dot product should be zero.       The geometry of the dot product   dot product The dot product is defined, more generally, for any two -dimensional vectors: The important thing to remember is that the dot product will produce a scalar. In other words, the two vectors are combined in such a way as to create a number, and, as we'll see, this number conveys useful geometric information.    We compute the dot product between two four-dimensional vectors as      Properties of dot products  As with ordinary multiplication, the dot product enjoys some familiar algebraic properties, such as commutativity and distributivity. More specifically, it doesn't matter in which order we compute the dot product of two vectors: If is a scalar, we have We may also distribute the dot product across linear combinations:      Suppose that and . Then     The most important property of the dot product, and the real reason for our interest in it, is that it gives us geometric information about vectors and their relationship to one another. Let's first think about the length of a vector by looking at the vector as shown in      A two dimensional vector against a coordinate grid and set of axes.   The vector shown against a coordinate grid and set of axes. From the tip of the vector at the point , there is a vertical line segment drawn to the horizontal axis and a horizontal line segment drawn to the vertical axis. Along with the coordinate axes, these line segments form two right triangles whose legs have length and and whose shared hypotenuse is the vector .     The vector .   We may find the length of this vector using the Pythagorean theorem since the vector forms the hypotenuse of a right triangle having a horizontal leg of length 3 and a vertical leg of length 2. The length of , which we denote as , is therefore . Now notice that the dot product of with itself is . This is true in general; that is, we have   More than that, the dot product of two vectors records information about the angle between them. Consider .     Two vectors, the angle between them, and their vector difference.   Two vectors and are shown along with the angle between them. Between the tips of the two vectors is drawn the vector . The three vectors form a triangle with being an interior angle whose opposite side is formed by .     The dot product measures the angle .   To see this, we will apply the Law of Cosines, which says that The upshot of this reasoning is that   To summarize:   Geometric properties of the dot product  The dot product gives us the following geometric information: where is the angle between and .        Sketch the vectors and using .     A coordinate grid and set of axes.   A standard coordinate grid and set of coordinate axes. The horizontal and vertical ranges both run from to .     Sketch the vectors and here.    Find the lengths and using the dot product.  Find the dot product and use it to find the angle between and .  Consider the vector . Include it in your sketch in and find the angle between and .  If two vectors are perpendicular, what can you say about their dot product? Explain your thinking.  For what value of is the vector perpendicular to ?  Sage can be used to find lengths of vectors and their dot products. For instance, if v and w are vectors, then v.norm() gives the length of v and v * w gives .  Suppose that Use the Sage cell below to find , , , and the angle between and . You may use arccos to find the angle's measure expressed in radians.              We find that so that and .     so that      so that     If two vectors are perpendicular, then the angle between them is . Since , their dot product must be zero.    The dot product is so .    We find that , , , and the angle between these vectors is .                and .              Their dot product must be zero.     .     .       As we move forward, it will be important for us to recognize when vectors are perpendicular to one another. For instance, when vectors and are perpendicular, the angle between them and we have Therefore, the dot product between perpendicular vectors must be zero. This leads to the following definition.    orthogonal We say that vectors and are orthogonal if .   In practical terms, two perpendicular vectors are orthogonal. However, the concept of orthogonality is somewhat more general because it allows one or both of the vectors to be the zero vector .  We've now seen that the dot product gives us geometric information about vectors. It also provides a way to compare vectors. For example, consider the vectors , , and , shown in . The vectors and seem somewhat similar as the directions they define are nearly the same. By comparison, appears rather dissimilar to both and . We will measure the similarity of vectors by finding the angle between them; the smaller the angle, the more similar the vectors.     Three two dimensional vectors two of which nearly point in the same direction.   Three vectors , , and are shown against a standard coordinate grid and axes. The vectors and point in nearly the same direction while points in a very different direction.     Which of the vectors are most similar?     This activity explores two further uses of the dot product beginning with the similarity of vectors.   Our first task is to assess the similarity between various Wikipedia articles by forming vectors from each of five articles. In particular, one may download the text from a Wikipedia article, remove common words, such as the and and , count the number of times the remaining words appear in the article, and represent these counts in a vector.  For example, evaluate the following cell that loads some special commands along with the vectors constructed from the Wikipedia articles on Veteran's Day, Memorial Day, Labor Day, the Golden Globe Awards, and the Super Bowl. For each of the five articles, you will see a list of the number of times 10 words appear in these articles. For instance, the word act appears 3 times in the Veteran's Day article and 0 times in the Labor Day article. For each of the five articles, we obtain 604-dimensional vectors, which are named veterans , memorial , labor , golden , and super .     Suppose that two articles have no words in common. What is the value of the dot product between their corresponding vectors? What does this say about the angle between these vectors?    Suppose there are two articles on the same subject, yet one article is twice as long. What approximate relationship would you expect to hold between the two vectors? What does this say about the angle between them?    Use the Sage cell below to find the angle between the vector veterans and the other four vectors. To express the angle in degrees, use the degrees(x) command, which gives the number of degrees in x radians.     Compare the four angles you have found and discuss what they mean about the similarity between the Veteran's Day article and the other four. How do your findings reflect the nature of these five events?       Vectors are often used to represent how a quantity changes over time. For instance, the vector might represent the value of a company's stock on four consecutive days. When interpreted in this way, we call the vector a time series. Evaluate the Sage cell below to see a representation of two time series , in blue, and , in orange, which we imagine represent the value of two stocks over a period of time. (This cell relies on some data loaded by the first cell in this activity.) Even though one stock has a higher value than the other, the two appear to be related since they seem to rise and fall at roughly similar ways. We often say that they are correlated , and we would like to measure the degree to which they are correlated.   In order to compare the ways in which they rise and fall, we will first demean the time series; that is, for each time series, we will subtract its average value to obtain a new time series. There is a command, demean(s) , that returns the demeaned time series of s . Use the Sage cell below to demean the series and and plot.     If the demeaned series are and , then the correlation between and is defined to be Given the geometric interpretation of the dot product, the correlation equals the cosine of the angle between the demeaned time series, and therefore is between -1 and 1.  Find the correlation between and .     Suppose that two time series are such that their demeaned time series are scalar multiples of one another, as in      Two time series that are positively correlated.   A representation of two time series where each time series is shown as a set of plotted points. There is a set of axes with tick marks on the horizontal axis representing time values , , , and so on. The components of each time series determine the vertical coordinates of the plotted points and each component is one time unit to the right of the preceeding component. Adjacent points are connected by line segments, which gives the time series the appearance of the graph of a function.  The two time series in this diagram roughly rise and fall at the same time as one another, which is why they are positively correlated.     Two time series that are negatively correlated.   Two time series are represented in the same manner as the previous diagram. In this diagram, however, when one of the time series rises, the other falls and vice versa. This is why the time series are negatively correlated.     On the left, the demeaned time series are positive scalar multiples of one another. On the right, they are negative scalar multiples.   For instance, suppose we have time series and whose demeaned time series and are positive scalar multiples of one another. What is the angle between the demeaned vectors? What does this say about the correlation ?    Suppose the demeaned time series and are negative scalar multiples of one another, what is the angle between the demeaned vectors? What does this say about the correlation ?    Use the Sage cell below to plot the time series and and find their correlation.     Use the Sage cell below to plot the time series and and find their correlation.                 If there are no words in common, then the dot product between the two vectors will be zero. This means that they are perpendicular to one another.    The vectors should be, at least approximately, scalar multiples of one another, which means that the angle between them is zero.    The angle veterans makes with memorial is , with labor is , with golden is , and with super is .    It appears that the articles on Veteran's Day and Memorial Day are most similar. This makes sense because both are U.S. national holidays that honor military service. The second most similar article is Labor Day, which is also a national holiday. The other two are quite dissimilar as they are entertainment events.          The graphs are now lowered so that their averages are zero.    The correlation is , which is quite close to 1.    The angle should be zero, which means that the correlation will be .    The angle should be , which means that the correlation should be .    The correlation is .    The correlation is .                They are perpendicular.    The angle should be close to 0.    The angle veterans makes with memorial is , with labor is , with golden is , and with super is .    The articles on Veteran's Day and Memorial Day are most similar.          The graphs are now lowered so that their averages are zero.                                      -means clustering  A typical problem in data science is to find some underlying patterns in a dataset. Suppose, for instance, that we have the set of 177 data points plotted in . Notice that the points are not scattered around haphazardly; instead, they seem to form clusters. Our goal here is to develop a strategy for detecting the clusters.     A scatter plot of 177 data points.   A scatter plot of two dimensional data points. While the points appear to be somewhat randomly scattered throughout the plane, there are subsets of points that are close to one another and that seem to form clusters.     A set of 177 data points.   To see how this could be useful, suppose we have medical data describing a group of patients, some of whom have been diagnosed with a specific condition, such as diabetes. Perhaps we have a record of age, weight, blood sugar, cholesterol, and other attributes for each patient. It could be that the data points for the group diagnosed as having the condition form a cluster that is somewhat distinct from the rest of the data. Suppose that we are able to identify that cluster and that we are then presented with a new patient that has not been tested for the condition. If the attributes for that patient place them in that cluster, we might identify them as being at risk for the condition and prioritize them for appropriate screenings.  If there are many attributes for each patient, the data may be high-dimensional and not easily visualized. We would therefore like to develop an algorithm that separates the data points into clusters without human intervention. We call the result a clustering .  The next activity introduces a technique, called -means clustering, that helps us find clusterings. To do so, we will view the data points as vectors so that the distance between two data points equals the length of the vector joining them. That is, if two points are represented by the vectors and , then the distance between the points is .    To begin, we identify the centroid , or the average, of a set of vectors as    Find the centroid of the vectors and sketch the vectors and the centroid using . You may wish to simply plot the points represented by the tips of the vectors rather than drawing the vectors themselves.     A coordinate grid and set of coordinate axes.   A standard coordinate grid and set of axes. The horizontal and vertical ranges both extend from to .     The vectors , , and their centroid.   Notice that the centroid lies in the center of the points defined by the vectors.    Now we'll illustrate an algorithm that forms clusterings. To begin, consider the following points, represented as vectors, which are shown in .     A scatter plot of four data points.   A coordinate grid and set of axes that contain four data points corresponding to the vectors , , , and .     We will group this set of four points into two clusters.   Suppose that we would like to group these points into clusters. (Later on, we'll see how to choose an appropriate value for , the number of clusters.) We begin by choosing two points and at random and declaring them to be the centers ' of the two clusters.  For example, suppose we randomly choose and as the center of two clusters. The cluster centered on will be the set of points that are closer to than to . Determine which of the four data points are in this cluster, which we denote by , and circle them in .    The second cluster will consist of the data points that are closer to than . Determine which of the four points are in this cluster, which we denote by , and circle them in .    We now have a clustering with two clusters, but we will try to improve upon it in the following way. First, find the centroids of the two clusters; that is, redefine to be the centroid of cluster and to be the centroid of . Find those centroids and indicate them in      A scatter plot of four data points.   A coordinate grid and set of axes that contain four data points corresponding to the vectors , , , and .     Indicate the new centroids and clusters.   Now update the cluster to be the set of points closer to than . Update the cluster in a similar way and indicate the clusters in .    Let's perform this last step again. That is, update the centroids and from the new clusters and then update the clusters and . Indicate your centroids and clusters in .     A scatter plot of four data points.   A coordinate grid and set of axes that contain four data points corresponding to the vectors , , , and .     Indicate the new centroids and clusters.   Notice that this last step produces the same set of clusters so there is no point in repeating it. We declare this to be our final clustering.          The centroid is .       The first cluster is .    The second cluster is .    We redefine and . This leads to new clusters and .    We have new centroids and , and the clusters and are unchanged.          The centroid is .        .     .     and    and .     and . The clusters and are unchanged.       This activity demonstrates our algorithm for finding a clustering. We first choose a value and seek to break the data points into clusters. The algorithm proceeds in the following way:   Choose points at random from our dataset.    Construct the cluster as the set of data points closest to , as the set of data points closest to , and so forth.    Repeat the following until the clusters no longer change:   Find the centroids of the current clusters.    Update the clusters .        The clusterings we find depend on the initial random choice of points . For instance, in the previous activity, we arrived, with the initial choice and , at the clustering:   If we instead choose the initial points to be and , we eventually find the clustering:   Is there a way that we can determine which clustering is the better of the two? It seems like a better clustering will be one for which the points in a cluster are, on average, closer to the centroid of their cluster. If we have a clustering, we therefore define a function, called the objective , which measures the average of the square of the distance from each point to the centroid of the cluster to which that point belongs. A clustering with a smaller objective will have clusters more tightly centered around their centroids, which should result in a better clustering.  For example, when we obtain the clustering: with centroids and , we find the objective to be     We'll now use the objective to compare clusterings and to choose an appropriate value of .   In the previous activity, one initial choice of and led to the clustering: with centroids and . Find the objective of this clustering.    We have now seen two clusterings and computed their objectives. Recall that our dataset is shown in . Which of the two clusterings feels like the better fit? How is this fit reflected in the values of the objectives?    Evaluating the following cell will load and display a dataset consisting of 177 data points. This dataset has the name data . Given this plot of the data, what would seem like a reasonable number of clusters?    In the following cell, you may choose a value of and then run the algorithm to determine and display a clustering and its objective. If you run the algorithm a few times with the same value of , you will likely see different clusterings having different objectives. This is natural since our algorithm starts by making a random choice of points , and a different choices may lead to different clusterings. Choose a value of and run the algorithm a few times. Notice that clusterings having lower objectives seem to fit the data better. Repeat this experiment with a few different values of .     For a given value of , our strategy is to run the algorithm several times and choose the clustering with the smallest objective. After choosing a value of , the following cell will run the algorithm 10 times and display the clustering having the smallest objective.   For each value of between 2 and 9, find the clustering having the smallest objective and plot your findings in .     A horizontal axis labelled k and a vertical axis labelled Objective.   A set of coordinate axes where the horizontal axis is labelled and the vertical axis is labelled Objective . The horizontal range is from to while the vertical range is from to . There is also a coordinate grid to help in plotting points.     Construct a plot of the minimal objective as it depends on the choice of .   This plot is called an elbow plot due to its shape. Notice how the objective decreases sharply when is small and then flattens out. This leads to a location, called the elbow, where the objective transitions from being sharply decreasing to relatively flat. This means that increasing beyond the elbow does not significantly decrease the objective, which makes the elbow a good choice for .  Where does the elbow occur in your plot above? How does this compare to the best value of that you estimated by simply looking at the data in .     Of course, we could increase until each data point is its own cluster. However, this defeats the point of the technique, which is to group together nearby data points in the hope that they share common features, thus providing insight into the structure of the data.       The objective is     The clustering with and appears to be a tighter clustering and has a smaller objective.    It appears that the best clustering is either or .    With a fixed value of , running the algorithm several times leads to different clusterings with different objectives. If we increase , the objective generally decreases.    The elbow occurs around or , which are the values that we felt led to the best clusterings.             The objective is .    The clustering and has a smaller objective.     or .    With a fixed value of , running the algorithm several times leads to different clusterings with different objectives. If we increase , the objective generally decreases.    The elbow occurs around or .          We have now seen how our algorithm and the objective identify a reasonable value for , the number of the clusters, and produce a good clustering having clusters. Notice that we don't claim to have found the best clustering as the true test of any clustering will be in how it helps us understand the dataset and helps us make predictions about any new data that we may encounter.    Summary  This section introduced the dot product and the ability to investigate geometric relationships between vectors.   The dot product of two vectors and satisfies these properties: where is the angle between and .    The vectors and are orthogonal when .    We explored some applications of the dot product to the similarity of vectors, correlation of time series, and -means clustering.         Consider the vectors    Find the lengths of the vectors, and .    Find the dot product and use it to find the angle between and .          We have and so that and .    Since , we find that .           , , , and .     and .         Consider the three vectors    Find the dot products , , and .    Use the dot products you just found to evaluate:    .     .     .     .       For what value of is orthogonal to ?           , , and .                                     , , and .                                   Suppose that and are vectors where    What is ?    What is the angle between and ?    Suppose that is a scalar. Find the value of for which is orthogonal to ?                     so .                     .         Suppose that .   What is the relationship between and ?    What is the relationship between and ?    If for some scalar , what is the relationship between and ? What is the relationship between and ?    Suppose that . Find a scalar so that has length 1.                     so that     We know so                                    Given vectors and , explain why Sketch two vectors and and explain why this fact is called the parallelogram law .            Use the relationship .         Consider the vectors and a general vector .   Write an equation in terms of , , and that describes all the vectors orthogonal to .    Write a linear system that describes all the vectors orthogonal to both and .    Write the solution set to this linear system in parametric form. What type of geometric object does this solution set represent? Indicate with a rough sketch why this makes sense.    Give a parametric description of all vectors orthogonal to . What type of geometric object does this represent? Indicate with a rough sketch why this makes sense.                     , which describes a line     , which describes a plane.                                   Explain your responses to these questions.   Suppose that is orthogonal to both and . Can you guarantee that is also orthogonal to any linear combination ?    Suppose that is orthogonal to itself. What can you say about ?          Yes, because      so           Yes              Suppose that , , and form a basis for and that each vector is orthogonal to the other two. Suppose also that is another vector in .   Explain why for some scalars , , and .    Beginning with the expression apply the distributive property of dot products to explain why Find similar expressions for and .    Verify that form a basis for and that each vector is orthogonal to the other two. Use what you've discovered in this problem to write the vector as a linear combination of , , and .          Since , , and form a basis for , any vector in can be written as a linear combination of them.     so that .  In the same way, and     Check that the vectors are orthogonal by computing their dot products. Then by computing the ratios of dot products.          Since , , and form a basis for , any vector in can be written as a linear combination of them.    Apply the distributive property.   and               Suppose that , , and are three nonzero vectors that are pairwise orthogonal; that is, each vector is orthogonal to the other two.   Explain why cannot be a linear combination of and .    Explain why this set of three vectors is linearly independent.          If , then . In the same way, so must be the zero vector. We're told, however, that is nonzero.    We've seen that is not a linear combination of and . The same thinking shows that none of the vectors is a linear combination of the others so they form a linearly independent set.          If , then and .    None of the vectors is a linear combination of the others.         In the next chapter, we will consider certain matrices and define a function where is a vector in .   Suppose that and . Evaluate .    For a general vector , evaluate as an expression involving and .    Suppose that is an eigenvector of a matrix with associated eigenvalue and that has length 1. What is the value of the function ?                     .                              Back in , we saw that equations of the form represent lines in the plane. In this exercise, we will see how this expression arises geometrically.    A line with three vectors used to develop an equation of the line.   A line moves across the diagram with a coordinate grid and axes in the background. There are three vectors, one labelled , which begins at the origin and ends at a point on the line, and a vector , which begins at the tip of and points orthogonally to the line. There is a third vector , which begins at the origin and ends at a general point on the line.     A line, a point on the line, and a vector perpendicular to the line.     Find the slope and vertical intercept of the line shown in . Then write an equation for the line in the form .    Suppose that is a point on the line, that is a vector perpendicular to the line, and that is a general point on the line. Sketch the vector and describe the angle between this vector and the vector .    What is the value of the dot product ?    Explain why the equation of the line can be written in the form .    Identify the vectors and for the line illustrated in and use them to write the equation of the line in terms of and . Verify that this expression is algebraically equivalent to the equation that you earlier found for this line.    Explain why any line in the plane can be described by an equation having the form . What is the significance of the vector ?          The slope and the intercept so .    The vector is in the direction of the line so it is orthogonal to .    Since these vectors are orthogonal, their dot product is .    Since , we have , which implies that .     and . This gives . We can rearrange this to have the form .    If we choose a vector that is perpendicular to the line and a point on the line, we have .           .     is orthogonal to .         Apply the distributive property          is perpendicular to the line.        "
+},
+{
+  "id": "ula-preview-6-1",
+  "level": "2",
+  "url": "sec-dot-product.html#ula-preview-6-1",
+  "type": "Preview Activity",
+  "number": "6.1.1",
+  "title": "",
+  "body": "   Compute the dot product      .      Sketch the vector below. Then use the Pythagorean theorem to find the length of .    A coordinate grid and set of axes.   A standard coordinate grid and set of labelled axes. The horizontal and vertical ranges run from to .     Sketch the vector and find its length.      The length of is 5.      Compute the dot product . How is the dot product related to the length of ?     , which is the square of the length of .      Remember that the matrix represents the matrix transformation that rotates vectors counterclockwise by . Beginning with the vector , find , the result of rotating by , and sketch it above.           What is the dot product ?     .      Suppose that . Find the vector that results from rotating by and find the dot product .     .      Suppose that and are two perpendicular vectors. What do you think their dot product is?    The dot product should be zero.    "
+},
+{
+  "id": "sec-dot-product-3-3",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-3-3",
+  "type": "Example",
+  "number": "6.1.2",
+  "title": "",
+  "body": "  We compute the dot product between two four-dimensional vectors as    "
+},
+{
+  "id": "sec-dot-product-3-5",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-3-5",
+  "type": "Example",
+  "number": "6.1.3",
+  "title": "",
+  "body": "  Suppose that and . Then    "
+},
+{
+  "id": "fig-dot-length",
+  "level": "2",
+  "url": "sec-dot-product.html#fig-dot-length",
+  "type": "Figure",
+  "number": "6.1.4",
+  "title": "",
+  "body": "   A two dimensional vector against a coordinate grid and set of axes.   The vector shown against a coordinate grid and set of axes. From the tip of the vector at the point , there is a vertical line segment drawn to the horizontal axis and a horizontal line segment drawn to the vertical axis. Along with the coordinate axes, these line segments form two right triangles whose legs have length and and whose shared hypotenuse is the vector .     The vector .  "
+},
+{
+  "id": "fig-dot-angle",
+  "level": "2",
+  "url": "sec-dot-product.html#fig-dot-angle",
+  "type": "Figure",
+  "number": "6.1.5",
+  "title": "",
+  "body": "   Two vectors, the angle between them, and their vector difference.   Two vectors and are shown along with the angle between them. Between the tips of the two vectors is drawn the vector . The three vectors form a triangle with being an interior angle whose opposite side is formed by .     The dot product measures the angle .  "
+},
+{
+  "id": "sec-dot-product-3-14",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-3-14",
+  "type": "Activity",
+  "number": "6.1.2",
+  "title": "",
+  "body": "     Sketch the vectors and using .     A coordinate grid and set of axes.   A standard coordinate grid and set of coordinate axes. The horizontal and vertical ranges both run from to .     Sketch the vectors and here.    Find the lengths and using the dot product.  Find the dot product and use it to find the angle between and .  Consider the vector . Include it in your sketch in and find the angle between and .  If two vectors are perpendicular, what can you say about their dot product? Explain your thinking.  For what value of is the vector perpendicular to ?  Sage can be used to find lengths of vectors and their dot products. For instance, if v and w are vectors, then v.norm() gives the length of v and v * w gives .  Suppose that Use the Sage cell below to find , , , and the angle between and . You may use arccos to find the angle's measure expressed in radians.              We find that so that and .     so that      so that     If two vectors are perpendicular, then the angle between them is . Since , their dot product must be zero.    The dot product is so .    We find that , , , and the angle between these vectors is .                and .              Their dot product must be zero.     .     .      "
+},
+{
+  "id": "sec-dot-product-3-16",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-3-16",
+  "type": "Definition",
+  "number": "6.1.7",
+  "title": "",
+  "body": "  orthogonal We say that vectors and are orthogonal if .  "
+},
+{
+  "id": "fig-similar-vectors",
+  "level": "2",
+  "url": "sec-dot-product.html#fig-similar-vectors",
+  "type": "Figure",
+  "number": "6.1.8",
+  "title": "",
+  "body": "   Three two dimensional vectors two of which nearly point in the same direction.   Three vectors , , and are shown against a standard coordinate grid and axes. The vectors and point in nearly the same direction while points in a very different direction.     Which of the vectors are most similar?  "
+},
+{
+  "id": "sec-dot-product-3-20",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-3-20",
+  "type": "Activity",
+  "number": "6.1.3",
+  "title": "",
+  "body": "  This activity explores two further uses of the dot product beginning with the similarity of vectors.   Our first task is to assess the similarity between various Wikipedia articles by forming vectors from each of five articles. In particular, one may download the text from a Wikipedia article, remove common words, such as the and and , count the number of times the remaining words appear in the article, and represent these counts in a vector.  For example, evaluate the following cell that loads some special commands along with the vectors constructed from the Wikipedia articles on Veteran's Day, Memorial Day, Labor Day, the Golden Globe Awards, and the Super Bowl. For each of the five articles, you will see a list of the number of times 10 words appear in these articles. For instance, the word act appears 3 times in the Veteran's Day article and 0 times in the Labor Day article. For each of the five articles, we obtain 604-dimensional vectors, which are named veterans , memorial , labor , golden , and super .     Suppose that two articles have no words in common. What is the value of the dot product between their corresponding vectors? What does this say about the angle between these vectors?    Suppose there are two articles on the same subject, yet one article is twice as long. What approximate relationship would you expect to hold between the two vectors? What does this say about the angle between them?    Use the Sage cell below to find the angle between the vector veterans and the other four vectors. To express the angle in degrees, use the degrees(x) command, which gives the number of degrees in x radians.     Compare the four angles you have found and discuss what they mean about the similarity between the Veteran's Day article and the other four. How do your findings reflect the nature of these five events?       Vectors are often used to represent how a quantity changes over time. For instance, the vector might represent the value of a company's stock on four consecutive days. When interpreted in this way, we call the vector a time series. Evaluate the Sage cell below to see a representation of two time series , in blue, and , in orange, which we imagine represent the value of two stocks over a period of time. (This cell relies on some data loaded by the first cell in this activity.) Even though one stock has a higher value than the other, the two appear to be related since they seem to rise and fall at roughly similar ways. We often say that they are correlated , and we would like to measure the degree to which they are correlated.   In order to compare the ways in which they rise and fall, we will first demean the time series; that is, for each time series, we will subtract its average value to obtain a new time series. There is a command, demean(s) , that returns the demeaned time series of s . Use the Sage cell below to demean the series and and plot.     If the demeaned series are and , then the correlation between and is defined to be Given the geometric interpretation of the dot product, the correlation equals the cosine of the angle between the demeaned time series, and therefore is between -1 and 1.  Find the correlation between and .     Suppose that two time series are such that their demeaned time series are scalar multiples of one another, as in      Two time series that are positively correlated.   A representation of two time series where each time series is shown as a set of plotted points. There is a set of axes with tick marks on the horizontal axis representing time values , , , and so on. The components of each time series determine the vertical coordinates of the plotted points and each component is one time unit to the right of the preceeding component. Adjacent points are connected by line segments, which gives the time series the appearance of the graph of a function.  The two time series in this diagram roughly rise and fall at the same time as one another, which is why they are positively correlated.     Two time series that are negatively correlated.   Two time series are represented in the same manner as the previous diagram. In this diagram, however, when one of the time series rises, the other falls and vice versa. This is why the time series are negatively correlated.     On the left, the demeaned time series are positive scalar multiples of one another. On the right, they are negative scalar multiples.   For instance, suppose we have time series and whose demeaned time series and are positive scalar multiples of one another. What is the angle between the demeaned vectors? What does this say about the correlation ?    Suppose the demeaned time series and are negative scalar multiples of one another, what is the angle between the demeaned vectors? What does this say about the correlation ?    Use the Sage cell below to plot the time series and and find their correlation.     Use the Sage cell below to plot the time series and and find their correlation.                 If there are no words in common, then the dot product between the two vectors will be zero. This means that they are perpendicular to one another.    The vectors should be, at least approximately, scalar multiples of one another, which means that the angle between them is zero.    The angle veterans makes with memorial is , with labor is , with golden is , and with super is .    It appears that the articles on Veteran's Day and Memorial Day are most similar. This makes sense because both are U.S. national holidays that honor military service. The second most similar article is Labor Day, which is also a national holiday. The other two are quite dissimilar as they are entertainment events.          The graphs are now lowered so that their averages are zero.    The correlation is , which is quite close to 1.    The angle should be zero, which means that the correlation will be .    The angle should be , which means that the correlation should be .    The correlation is .    The correlation is .                They are perpendicular.    The angle should be close to 0.    The angle veterans makes with memorial is , with labor is , with golden is , and with super is .    The articles on Veteran's Day and Memorial Day are most similar.          The graphs are now lowered so that their averages are zero.                                  "
+},
+{
+  "id": "fig-clusters",
+  "level": "2",
+  "url": "sec-dot-product.html#fig-clusters",
+  "type": "Figure",
+  "number": "6.1.10",
+  "title": "",
+  "body": "   A scatter plot of 177 data points.   A scatter plot of two dimensional data points. While the points appear to be somewhat randomly scattered throughout the plane, there are subsets of points that are close to one another and that seem to form clusters.     A set of 177 data points.  "
+},
+{
+  "id": "sec-dot-product-4-7",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-4-7",
+  "type": "Activity",
+  "number": "6.1.4",
+  "title": "",
+  "body": "  To begin, we identify the centroid , or the average, of a set of vectors as    Find the centroid of the vectors and sketch the vectors and the centroid using . You may wish to simply plot the points represented by the tips of the vectors rather than drawing the vectors themselves.     A coordinate grid and set of coordinate axes.   A standard coordinate grid and set of axes. The horizontal and vertical ranges both extend from to .     The vectors , , and their centroid.   Notice that the centroid lies in the center of the points defined by the vectors.    Now we'll illustrate an algorithm that forms clusterings. To begin, consider the following points, represented as vectors, which are shown in .     A scatter plot of four data points.   A coordinate grid and set of axes that contain four data points corresponding to the vectors , , , and .     We will group this set of four points into two clusters.   Suppose that we would like to group these points into clusters. (Later on, we'll see how to choose an appropriate value for , the number of clusters.) We begin by choosing two points and at random and declaring them to be the centers ' of the two clusters.  For example, suppose we randomly choose and as the center of two clusters. The cluster centered on will be the set of points that are closer to than to . Determine which of the four data points are in this cluster, which we denote by , and circle them in .    The second cluster will consist of the data points that are closer to than . Determine which of the four points are in this cluster, which we denote by , and circle them in .    We now have a clustering with two clusters, but we will try to improve upon it in the following way. First, find the centroids of the two clusters; that is, redefine to be the centroid of cluster and to be the centroid of . Find those centroids and indicate them in      A scatter plot of four data points.   A coordinate grid and set of axes that contain four data points corresponding to the vectors , , , and .     Indicate the new centroids and clusters.   Now update the cluster to be the set of points closer to than . Update the cluster in a similar way and indicate the clusters in .    Let's perform this last step again. That is, update the centroids and from the new clusters and then update the clusters and . Indicate your centroids and clusters in .     A scatter plot of four data points.   A coordinate grid and set of axes that contain four data points corresponding to the vectors , , , and .     Indicate the new centroids and clusters.   Notice that this last step produces the same set of clusters so there is no point in repeating it. We declare this to be our final clustering.          The centroid is .       The first cluster is .    The second cluster is .    We redefine and . This leads to new clusters and .    We have new centroids and , and the clusters and are unchanged.          The centroid is .        .     .     and    and .     and . The clusters and are unchanged.      "
+},
+{
+  "id": "sec-dot-product-4-13",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-4-13",
+  "type": "Activity",
+  "number": "6.1.5",
+  "title": "",
+  "body": "  We'll now use the objective to compare clusterings and to choose an appropriate value of .   In the previous activity, one initial choice of and led to the clustering: with centroids and . Find the objective of this clustering.    We have now seen two clusterings and computed their objectives. Recall that our dataset is shown in . Which of the two clusterings feels like the better fit? How is this fit reflected in the values of the objectives?    Evaluating the following cell will load and display a dataset consisting of 177 data points. This dataset has the name data . Given this plot of the data, what would seem like a reasonable number of clusters?    In the following cell, you may choose a value of and then run the algorithm to determine and display a clustering and its objective. If you run the algorithm a few times with the same value of , you will likely see different clusterings having different objectives. This is natural since our algorithm starts by making a random choice of points , and a different choices may lead to different clusterings. Choose a value of and run the algorithm a few times. Notice that clusterings having lower objectives seem to fit the data better. Repeat this experiment with a few different values of .     For a given value of , our strategy is to run the algorithm several times and choose the clustering with the smallest objective. After choosing a value of , the following cell will run the algorithm 10 times and display the clustering having the smallest objective.   For each value of between 2 and 9, find the clustering having the smallest objective and plot your findings in .     A horizontal axis labelled k and a vertical axis labelled Objective.   A set of coordinate axes where the horizontal axis is labelled and the vertical axis is labelled Objective . The horizontal range is from to while the vertical range is from to . There is also a coordinate grid to help in plotting points.     Construct a plot of the minimal objective as it depends on the choice of .   This plot is called an elbow plot due to its shape. Notice how the objective decreases sharply when is small and then flattens out. This leads to a location, called the elbow, where the objective transitions from being sharply decreasing to relatively flat. This means that increasing beyond the elbow does not significantly decrease the objective, which makes the elbow a good choice for .  Where does the elbow occur in your plot above? How does this compare to the best value of that you estimated by simply looking at the data in .     Of course, we could increase until each data point is its own cluster. However, this defeats the point of the technique, which is to group together nearby data points in the hope that they share common features, thus providing insight into the structure of the data.       The objective is     The clustering with and appears to be a tighter clustering and has a smaller objective.    It appears that the best clustering is either or .    With a fixed value of , running the algorithm several times leads to different clusterings with different objectives. If we increase , the objective generally decreases.    The elbow occurs around or , which are the values that we felt led to the best clusterings.             The objective is .    The clustering and has a smaller objective.     or .    With a fixed value of , running the algorithm several times leads to different clusterings with different objectives. If we increase , the objective generally decreases.    The elbow occurs around or .         "
+},
+{
+  "id": "sec-dot-product-6-1",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-1",
+  "type": "Exercise",
+  "number": "6.1.4.1",
+  "title": "",
+  "body": "  Consider the vectors    Find the lengths of the vectors, and .    Find the dot product and use it to find the angle between and .          We have and so that and .    Since , we find that .           , , , and .     and .      "
+},
+{
+  "id": "sec-dot-product-6-2",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-2",
+  "type": "Exercise",
+  "number": "6.1.4.2",
+  "title": "",
+  "body": "  Consider the three vectors    Find the dot products , , and .    Use the dot products you just found to evaluate:    .     .     .     .       For what value of is orthogonal to ?           , , and .                                     , , and .                                "
+},
+{
+  "id": "sec-dot-product-6-3",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-3",
+  "type": "Exercise",
+  "number": "6.1.4.3",
+  "title": "",
+  "body": "  Suppose that and are vectors where    What is ?    What is the angle between and ?    Suppose that is a scalar. Find the value of for which is orthogonal to ?                     so .                     .      "
+},
+{
+  "id": "sec-dot-product-6-4",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-4",
+  "type": "Exercise",
+  "number": "6.1.4.4",
+  "title": "",
+  "body": "  Suppose that .   What is the relationship between and ?    What is the relationship between and ?    If for some scalar , what is the relationship between and ? What is the relationship between and ?    Suppose that . Find a scalar so that has length 1.                     so that     We know so                                 "
+},
+{
+  "id": "sec-dot-product-6-5",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-5",
+  "type": "Exercise",
+  "number": "6.1.4.5",
+  "title": "",
+  "body": "  Given vectors and , explain why Sketch two vectors and and explain why this fact is called the parallelogram law .            Use the relationship .      "
+},
+{
+  "id": "sec-dot-product-6-6",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-6",
+  "type": "Exercise",
+  "number": "6.1.4.6",
+  "title": "",
+  "body": "  Consider the vectors and a general vector .   Write an equation in terms of , , and that describes all the vectors orthogonal to .    Write a linear system that describes all the vectors orthogonal to both and .    Write the solution set to this linear system in parametric form. What type of geometric object does this solution set represent? Indicate with a rough sketch why this makes sense.    Give a parametric description of all vectors orthogonal to . What type of geometric object does this represent? Indicate with a rough sketch why this makes sense.                     , which describes a line     , which describes a plane.                                "
+},
+{
+  "id": "sec-dot-product-6-7",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-7",
+  "type": "Exercise",
+  "number": "6.1.4.7",
+  "title": "",
+  "body": "  Explain your responses to these questions.   Suppose that is orthogonal to both and . Can you guarantee that is also orthogonal to any linear combination ?    Suppose that is orthogonal to itself. What can you say about ?          Yes, because      so           Yes           "
+},
+{
+  "id": "sec-dot-product-6-8",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-8",
+  "type": "Exercise",
+  "number": "6.1.4.8",
+  "title": "",
+  "body": "  Suppose that , , and form a basis for and that each vector is orthogonal to the other two. Suppose also that is another vector in .   Explain why for some scalars , , and .    Beginning with the expression apply the distributive property of dot products to explain why Find similar expressions for and .    Verify that form a basis for and that each vector is orthogonal to the other two. Use what you've discovered in this problem to write the vector as a linear combination of , , and .          Since , , and form a basis for , any vector in can be written as a linear combination of them.     so that .  In the same way, and     Check that the vectors are orthogonal by computing their dot products. Then by computing the ratios of dot products.          Since , , and form a basis for , any vector in can be written as a linear combination of them.    Apply the distributive property.   and            "
+},
+{
+  "id": "sec-dot-product-6-9",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-9",
+  "type": "Exercise",
+  "number": "6.1.4.9",
+  "title": "",
+  "body": "  Suppose that , , and are three nonzero vectors that are pairwise orthogonal; that is, each vector is orthogonal to the other two.   Explain why cannot be a linear combination of and .    Explain why this set of three vectors is linearly independent.          If , then . In the same way, so must be the zero vector. We're told, however, that is nonzero.    We've seen that is not a linear combination of and . The same thinking shows that none of the vectors is a linear combination of the others so they form a linearly independent set.          If , then and .    None of the vectors is a linear combination of the others.      "
+},
+{
+  "id": "sec-dot-product-6-10",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-10",
+  "type": "Exercise",
+  "number": "6.1.4.10",
+  "title": "",
+  "body": "  In the next chapter, we will consider certain matrices and define a function where is a vector in .   Suppose that and . Evaluate .    For a general vector , evaluate as an expression involving and .    Suppose that is an eigenvector of a matrix with associated eigenvalue and that has length 1. What is the value of the function ?                     .                           "
+},
+{
+  "id": "sec-dot-product-6-11",
+  "level": "2",
+  "url": "sec-dot-product.html#sec-dot-product-6-11",
+  "type": "Exercise",
+  "number": "6.1.4.11",
+  "title": "",
+  "body": "  Back in , we saw that equations of the form represent lines in the plane. In this exercise, we will see how this expression arises geometrically.    A line with three vectors used to develop an equation of the line.   A line moves across the diagram with a coordinate grid and axes in the background. There are three vectors, one labelled , which begins at the origin and ends at a point on the line, and a vector , which begins at the tip of and points orthogonally to the line. There is a third vector , which begins at the origin and ends at a general point on the line.     A line, a point on the line, and a vector perpendicular to the line.     Find the slope and vertical intercept of the line shown in . Then write an equation for the line in the form .    Suppose that is a point on the line, that is a vector perpendicular to the line, and that is a general point on the line. Sketch the vector and describe the angle between this vector and the vector .    What is the value of the dot product ?    Explain why the equation of the line can be written in the form .    Identify the vectors and for the line illustrated in and use them to write the equation of the line in terms of and . Verify that this expression is algebraically equivalent to the equation that you earlier found for this line.    Explain why any line in the plane can be described by an equation having the form . What is the significance of the vector ?          The slope and the intercept so .    The vector is in the direction of the line so it is orthogonal to .    Since these vectors are orthogonal, their dot product is .    Since , we have , which implies that .     and . This gives . We can rearrange this to have the form .    If we choose a vector that is perpendicular to the line and a point on the line, we have .           .     is orthogonal to .         Apply the distributive property          is perpendicular to the line.      "
+},
+{
+  "id": "sec-transpose",
+  "level": "1",
+  "url": "sec-transpose.html",
+  "type": "Section",
+  "number": "6.2",
+  "title": "Orthogonal complements and the matrix transpose",
+  "body": " Orthogonal complements and the matrix transpose   We've now seen how the dot product enables us to determine the angle between two vectors and, more specifically, when two vectors are orthogonal. Moving forward, we will explore how the orthogonality condition simplifies many common tasks, such as expressing a vector as a linear combination of a given set of vectors.  This section introduces the notion of an orthogonal complement, the set of vectors each of which is orthogonal to a prescribed subspace. We'll also find a way to describe dot products using matrix products, which allows us to study orthogonality using many of the tools for understanding linear systems that we developed earlier.     Sketch the vector on and one vector that is orthogonal to it.     A coordinate grid and set of axes.   A standard coordinate grid and set of axes. The horizontal and vertical ranges both run from to .     Sketch the vector and one vector orthogonal to it.     The vector is an example of a vector orthogonal to .      If a vector is orthogonal to , what do we know about the dot product ?    The dot product must be zero.      If we write , use the dot product to write an equation for the vectors orthogonal to in terms of and .     .      Use this equation to sketch the set of all vectors orthogonal to in .    This is the line .       introduced the column space and null space of a matrix . If is a matrix, what is the meaning of the null space ?    It is the set of vectors for which .      What is the meaning of the column space ?    It is the set of vector for which the equation is consistent.       Orthogonal complements  The preview activity presented us with a vector and led us through the process of describing all the vectors orthogonal to . Notice that the set of scalar multiples of describes a line , a 1-dimensional subspace of . We then described a second line consisting of all the vectors orthogonal to . Notice that every vector on this line is orthogonal to every vector on the line . We call this new line the orthogonal complement of and denote it by . The lines and are illustrated on the left of .     A line in two dimensions and its orthogonal complement.   A two dimensional vector and the line that it defines. The orthogonal complement , which is a line orthogonal to , is also shown.     A plane in three dimensions and its orthogonal complement.   A plane in three dimensions and its orthogonal complement , which is a line orthogonal to .     On the left is a line and its orthogonal complement . On the right is a plane and its orthogonal complement in .   The next definition places this example into a more general context.   orthogonal complement   Given a subspace of , the orthogonal complement of is the set of vectors in each of which is orthogonal to every vector in . We denote the orthogonal complement by .    A typical example appears on the right of . Here we see a plane , a two-dimensional subspace of , and its orthogonal complement , which is a line in .  As the next activity demonstrates, the orthogonal complement of a subspace is itself a subspace of .    Suppose that and form a basis for , a two-dimensional subspace of . We will find a description of the orthogonal complement .   Suppose that the vector is orthogonal to . If we write , use the fact that to write a linear equation for , , and .    Suppose that is also orthogonal to . In the same way, write a linear equation for , , and that arises from the fact that .    If is orthogonal to both and , these two equations give us a linear system for some matrix . Identify the matrix and write a parametric description of the solution space to the equation .    Since and form a basis for the two-dimensional subspace , any vector in can be written as a linear combination If is orthogonal to both and , use the distributive property of dot products to explain why is orthogonal to .    Give a basis for the orthogonal complement and state the dimension .    Describe , the orthogonal complement of .          We have the equation .    We have the equation .    These two equations give where whose solutions have the parametric form .    By distributivity, .     is the solution space to the equation . Therefore, a basis consists of the single vector , and is one-dimensional.    Since every vector in is orthogonal to every vector in , the orthogonal complement of is .           .     .     so .    By distributivity, .    A basis consists of , and is one-dimensional.    The orthogonal complement of is .         If is the line defined by in , we will describe the orthogonal complement , the set of vectors orthogonal to .  If is orthogonal to , it must be orthogonal to so we have   We can describe the solutions to this equation parametrically as Therefore, the orthogonal complement is a plane, a two-dimensional subspace of , spanned by the vectors and .      Suppose that is the -dimensional subspace of with basis We will give a description of the orthogonal complement .  If is in , we know that is orthogonal to both and . Therefore, In other words, where The solutions may be described parametrically as The distributive property of dot products implies that any vector that is orthogonal to both and is also orthogonal to any linear combination of and since Therefore, is a -dimensional subspace of with basis One may check that the vectors , , and are each orthogonal to both and .      The matrix transpose  The previous activity and examples show how we can describe the orthogonal complement of a subspace as the solution set of a particular linear system. We will make this connection more explicit by defining a new matrix operation called the transpose .   transpose   The transpose of the matrix is the matrix whose rows are the columns of .      If , then      This activity illustrates how multiplying a vector by is related to computing dot products with the columns of . You'll develop a better understanding of this relationship if you compute the dot products and matrix products in this activity without using technology.  If , write the matrix .  Suppose that Find the dot products and .  Now write the matrix and its transpose . Find the product and describe how this product computes both dot products and .  Suppose that is a vector that is orthogonal to both and . What does this say about the dot products and ? What does this say about the product ?  Use the matrix to give a parametric description of all the vectors that are orthogonal to and .   Remember that , the null space of , is the solution set of the equation . If is a vector in , explain why must be orthogonal to both and .    Remember that , the column space of , is the set of linear combinations of the columns of . Therefore, any vector in can be written as . If is a vector in , explain why is orthogonal to every vector in .                         Both dot products are 0 so we have .    We need to solve the equation so we find the reduced row echelon form The vectors orthogonal to both and have the form .     tells us that and .    Since is orthogonal to both and , we have                 , .          .     .     .    Apply the distributive property of dot products.       The previous activity demonstrates an important connection between the matrix transpose and dot products. More specifically, the components of the product are simply the dot products of the columns of with . We will make frequent use of this observation so let's record it as a proposition.    If is the matrix whose columns are , then       Suppose that is a subspace of having basis and that we wish to describe the orthogonal complement .  If is the matrix and is in , we have Describing vectors that are orthogonal to both and is therefore equivalent to the more familiar task of describing the solution set . To do so, we find the reduced row echelon form of and write the solution set parametrically as Once again, the distributive property of dot products tells us that such a vector is also orthogonal to any linear combination of and so this solution set is, in fact, the orthogonal complement . Indeed, we see that the vectors form a basis for , which is a two-dimensional subspace of .    To place this example in a slightly more general context, note that and , the columns of , form a basis of . Since , the column space of is the subspace of linear combinations of the columns of , we have .  This example also shows that the orthogonal complement is described by the solution set of . This solution set is what we have called , the null space of . In this way, we see the following proposition, which is visually represented in .    For any matrix , the orthogonal complement of is ; that is,        The column space of a matrix and the null space of its transpose.   The column space of a matrix is represented as a plane in three dimensions. The null space of its transpose is shown as a line orthogonal to demonstrating that and are orthogonal complements of one another.     The orthogonal complement of the column space of is the null space of .     Properties of the matrix transpose  The transpose is a simple algebraic operation performed on a matrix. The next activity explores some of its properties.    In Sage, the transpose of a matrix A is given by A.T . Define the matrices    Evaluate and . What do you notice about the relationship between these two matrices?  What happens if you transpose a matrix twice; that is, what is ?  Find and . What do you notice about the relationship between these determinants?    Find the product and its transpose .  Is it possible to compute the product ? Explain why or why not.  Find the product and compare it to . What do you notice about the relationship between these two matrices?    What is the transpose of the identity matrix ?  If a square matrix is invertible, explain why you can guarantee that is invertible and why .         .     .             and     The product is not defined because has two columns and has three rows.                 We have so . This means that .           .     .          .          .       In spite of the fact that we are looking at some specific examples, this activity demonstrates the following general properties of the transpose, which may be verified with a little effort.   Properties of the transpose  Here are some properties of the matrix transpose, expressed in terms of general matrices , , and . We assume that is a square matrix.  If is defined, then .   .   .   .  If is defined, then . Notice that the order of the multiplication is reversed.  If is invertible, then .    There is one final property we wish to record though we will wait until to explain why it is true.   For any matrix , we have    This proposition is important because it implies a relationship between the dimensions of a subspace and its orthogonal complement. For instance, if is an matrix, we saw in that and .  Now suppose that is an -dimensional subspace of with basis . If we form the matrix , then so that   The transpose is an matrix having . Since , we have This explains the following proposition.    If is a subspace of , then       In , we constructed the orthogonal complement of a line in . The dimension of the orthogonal complement should be , which explains why we found the orthogonal complement to be a plane.      In , we looked at , a -dimensional subspace of and found its orthogonal complement to be a -dimensional subspace of .         Suppose that is a -dimensional subspace of and that is a matrix whose columns form a basis for ; that is, .  What is the shape of ?  What is the rank of ?  What is the shape of ?  What is the rank of ?  What is ?  What is ?  How are the dimensions of and related?      Suppose that is a subspace of having basis    Find the dimensions and .    Find a basis for . It may be helpful to know that the Sage command A.right_kernel() produces a basis for .     Verify that each of the basis vectors you found for are orthogonal to the basis vectors for .                 is .     .     is .                    since the subspaces live in .           so .    A basis is and .    You can verify by computing the four dot products.                                                               and .    Verify by computing the four dot products.            Summary  This section introduced the matrix transpose, its connection to dot products, and its use in describing the orthogonal complement of a subspace.   The columns of the matrix are the rows of the matrix transpose .    The components of the product are the dot products of with the columns of .    The orthogonal complement of the column space of equals the null space of ; that is, .    If is a subspace of , then       Vectors in and   Can a nonzero vector be in both and ? Why or why not. Explain your answer.      The complement of a plane   Look at and explain why the orthogonal complement of a line in is a line, but the orthogonal complement of a plane in is a line (and not a plane).          Suppose that is a subspace of with basis    What are the dimensions and ?    Find a basis for .    Verify that each of the basis vectors for are orthogonal to and .           and .     and     Verify that for all and .           and .     and     Use the dot product.         Consider the matrix .   Find and a basis for .    Determine the dimension of and find a basis for it.           so since there are two pivot positions. The reduced row echelon form shows that the third column is a linear combination of the first two so and form a basis for .    We know that . To find a basis, solve the equation to obtain .           and a basis for is and      with basis .         Suppose that is the subspace of defined as the solution set of the equation    What are the dimensions and ?    Find a basis for .    Find a basis for .    In general, how can you easily find a basis for when is defined by            where so . Therefore, .    A basis for is , , and .    Since every vector in satisfies , a basis for is                 , .     , , and .                   Determine whether the following statements are true or false and explain your reasoning.   If , then is in .    If is a matrix and is a matrix, then is a matrix.    If the columns of are , , and and , then is orthogonal to .    If is a matrix with , then is a line in .    If is a matrix with , then .          True, since , is in .    False, is a matrix, but it is given by .    True, because the second component of .    True, because .    False, .          True    False    True    True    False         Apply properties of matrix operations to simplify the following expressions.                                                                                A symmetric matrix is one for which .   Explain why a symmetric matrix must be square.    If and are general matrices and is a square diagonal matrix, which of the following matrices can you guarantee are symmetric?              .                  If is an matrix, then is If these matrices are the same, then .       If is diagonal, then .     so this matrix need not be symmetric.     so this matrix is symmetric.     so this matrix is symmetric.             They must have the same number of rows and columns.       Yes    No    No    Yes            If is a square matrix, remember that the characteristic polynomial of is and that the roots of the characteristic polynomial are the eigenvalues of .   Explain why and have the same characteristic polynomial.    Explain why and have the same set of eigenvalues.    Suppose that is diagonalizable with diagonalization . Explain why is diagonalizable and find a diagonalization.           and therefore .    The eigenvalues of a matrix are given by the roots of its characteristic polynomial. Since and have the same characteristic polynomial, they have the same eigenvalues.               Use properties of the matrix transpose.    Because they have the same characteristic polynomial.              This exercise introduces a version of the Pythagorean theorem that we'll use later.   Suppose that and are orthogonal to one another. Use the dot product to explain why     Suppose that is a subspace of and that is a vector in for which where is in and is in . Explain why which is an expression of the Pythagorean theorem.               Because and are orthogonal.               Because and are orthogonal.         In the next chapter, symmetric matrices---that is, matrices for which ---play an important role. It turns out that eigenvectors of a symmetric matrix that are associated to different eigenvalues are orthogonal. We will explain this fact in this exercise.   Viewing a vector as a matrix having one column, we may write . If is a matrix, explain why .    We have seen that the matrix has eigenvectors , with associated eigenvalue , and , with associated eigenvalue . Verify that is symmetric and that and are orthogonal.    Suppose that is a general symmetric matrix and that is an eigenvector associated to eigenvalue and that is an eigenvector associated to a different eigenvalue . Beginning with , apply the identity from the first part of this exercise to explain why and are orthogonal.           .     and .     so since .          Use properties of the transpose.    Compute the dot product of and .    It follows that          Given an matrix , the row space of is the column space of ; that is, .   Suppose that is a matrix. For what is a subspace of ?    How can help us describe ?    Suppose that . Find bases for and .          Since is , it follows that is a subspace of .          so . A basis for are the three rows of . is one-dimensional with basis .                    A basis for are the three rows of . A basis for is .        "
+},
+{
+  "id": "ula-preview-6-2",
+  "level": "2",
+  "url": "sec-transpose.html#ula-preview-6-2",
+  "type": "Preview Activity",
+  "number": "6.2.1",
+  "title": "",
+  "body": "   Sketch the vector on and one vector that is orthogonal to it.     A coordinate grid and set of axes.   A standard coordinate grid and set of axes. The horizontal and vertical ranges both run from to .     Sketch the vector and one vector orthogonal to it.     The vector is an example of a vector orthogonal to .      If a vector is orthogonal to , what do we know about the dot product ?    The dot product must be zero.      If we write , use the dot product to write an equation for the vectors orthogonal to in terms of and .     .      Use this equation to sketch the set of all vectors orthogonal to in .    This is the line .       introduced the column space and null space of a matrix . If is a matrix, what is the meaning of the null space ?    It is the set of vectors for which .      What is the meaning of the column space ?    It is the set of vector for which the equation is consistent.    "
+},
+{
+  "id": "fig-orthog-comps",
+  "level": "2",
+  "url": "sec-transpose.html#fig-orthog-comps",
+  "type": "Figure",
+  "number": "6.2.2",
+  "title": "",
+  "body": "   A line in two dimensions and its orthogonal complement.   A two dimensional vector and the line that it defines. The orthogonal complement , which is a line orthogonal to , is also shown.     A plane in three dimensions and its orthogonal complement.   A plane in three dimensions and its orthogonal complement , which is a line orthogonal to .     On the left is a line and its orthogonal complement . On the right is a plane and its orthogonal complement in .  "
+},
+{
+  "id": "sec-transpose-3-5",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-3-5",
+  "type": "Definition",
+  "number": "6.2.3",
+  "title": "",
+  "body": " orthogonal complement   Given a subspace of , the orthogonal complement of is the set of vectors in each of which is orthogonal to every vector in . We denote the orthogonal complement by .   "
+},
+{
+  "id": "sec-transpose-3-8",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-3-8",
+  "type": "Activity",
+  "number": "6.2.2",
+  "title": "",
+  "body": "  Suppose that and form a basis for , a two-dimensional subspace of . We will find a description of the orthogonal complement .   Suppose that the vector is orthogonal to . If we write , use the fact that to write a linear equation for , , and .    Suppose that is also orthogonal to . In the same way, write a linear equation for , , and that arises from the fact that .    If is orthogonal to both and , these two equations give us a linear system for some matrix . Identify the matrix and write a parametric description of the solution space to the equation .    Since and form a basis for the two-dimensional subspace , any vector in can be written as a linear combination If is orthogonal to both and , use the distributive property of dot products to explain why is orthogonal to .    Give a basis for the orthogonal complement and state the dimension .    Describe , the orthogonal complement of .          We have the equation .    We have the equation .    These two equations give where whose solutions have the parametric form .    By distributivity, .     is the solution space to the equation . Therefore, a basis consists of the single vector , and is one-dimensional.    Since every vector in is orthogonal to every vector in , the orthogonal complement of is .           .     .     so .    By distributivity, .    A basis consists of , and is one-dimensional.    The orthogonal complement of is .      "
+},
+{
+  "id": "example-orthog-comp-line",
+  "level": "2",
+  "url": "sec-transpose.html#example-orthog-comp-line",
+  "type": "Example",
+  "number": "6.2.4",
+  "title": "",
+  "body": "  If is the line defined by in , we will describe the orthogonal complement , the set of vectors orthogonal to .  If is orthogonal to , it must be orthogonal to so we have   We can describe the solutions to this equation parametrically as Therefore, the orthogonal complement is a plane, a two-dimensional subspace of , spanned by the vectors and .   "
+},
+{
+  "id": "example-orthog-comp-gen",
+  "level": "2",
+  "url": "sec-transpose.html#example-orthog-comp-gen",
+  "type": "Example",
+  "number": "6.2.5",
+  "title": "",
+  "body": "  Suppose that is the -dimensional subspace of with basis We will give a description of the orthogonal complement .  If is in , we know that is orthogonal to both and . Therefore, In other words, where The solutions may be described parametrically as The distributive property of dot products implies that any vector that is orthogonal to both and is also orthogonal to any linear combination of and since Therefore, is a -dimensional subspace of with basis One may check that the vectors , , and are each orthogonal to both and .   "
+},
+{
+  "id": "sec-transpose-4-3",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-4-3",
+  "type": "Definition",
+  "number": "6.2.6",
+  "title": "",
+  "body": " transpose   The transpose of the matrix is the matrix whose rows are the columns of .   "
+},
+{
+  "id": "sec-transpose-4-4",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-4-4",
+  "type": "Example",
+  "number": "6.2.7",
+  "title": "",
+  "body": "  If , then   "
+},
+{
+  "id": "sec-transpose-4-5",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-4-5",
+  "type": "Activity",
+  "number": "6.2.3",
+  "title": "",
+  "body": "  This activity illustrates how multiplying a vector by is related to computing dot products with the columns of . You'll develop a better understanding of this relationship if you compute the dot products and matrix products in this activity without using technology.  If , write the matrix .  Suppose that Find the dot products and .  Now write the matrix and its transpose . Find the product and describe how this product computes both dot products and .  Suppose that is a vector that is orthogonal to both and . What does this say about the dot products and ? What does this say about the product ?  Use the matrix to give a parametric description of all the vectors that are orthogonal to and .   Remember that , the null space of , is the solution set of the equation . If is a vector in , explain why must be orthogonal to both and .    Remember that , the column space of , is the set of linear combinations of the columns of . Therefore, any vector in can be written as . If is a vector in , explain why is orthogonal to every vector in .                         Both dot products are 0 so we have .    We need to solve the equation so we find the reduced row echelon form The vectors orthogonal to both and have the form .     tells us that and .    Since is orthogonal to both and , we have                 , .          .     .     .    Apply the distributive property of dot products.      "
+},
+{
+  "id": "prop-transpose-multiplication",
+  "level": "2",
+  "url": "sec-transpose.html#prop-transpose-multiplication",
+  "type": "Proposition",
+  "number": "6.2.8",
+  "title": "",
+  "body": "  If is the matrix whose columns are , then    "
+},
+{
+  "id": "sec-transpose-4-8",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-4-8",
+  "type": "Example",
+  "number": "6.2.9",
+  "title": "",
+  "body": "  Suppose that is a subspace of having basis and that we wish to describe the orthogonal complement .  If is the matrix and is in , we have Describing vectors that are orthogonal to both and is therefore equivalent to the more familiar task of describing the solution set . To do so, we find the reduced row echelon form of and write the solution set parametrically as Once again, the distributive property of dot products tells us that such a vector is also orthogonal to any linear combination of and so this solution set is, in fact, the orthogonal complement . Indeed, we see that the vectors form a basis for , which is a two-dimensional subspace of .   "
+},
+{
+  "id": "prop-col-orthog",
+  "level": "2",
+  "url": "sec-transpose.html#prop-col-orthog",
+  "type": "Proposition",
+  "number": "6.2.10",
+  "title": "",
+  "body": "  For any matrix , the orthogonal complement of is ; that is,    "
+},
+{
+  "id": "fig-orthog-comp",
+  "level": "2",
+  "url": "sec-transpose.html#fig-orthog-comp",
+  "type": "Figure",
+  "number": "6.2.11",
+  "title": "",
+  "body": "   The column space of a matrix and the null space of its transpose.   The column space of a matrix is represented as a plane in three dimensions. The null space of its transpose is shown as a line orthogonal to demonstrating that and are orthogonal complements of one another.     The orthogonal complement of the column space of is the null space of .  "
+},
+{
+  "id": "sec-transpose-5-3",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-5-3",
+  "type": "Activity",
+  "number": "6.2.4",
+  "title": "",
+  "body": "  In Sage, the transpose of a matrix A is given by A.T . Define the matrices    Evaluate and . What do you notice about the relationship between these two matrices?  What happens if you transpose a matrix twice; that is, what is ?  Find and . What do you notice about the relationship between these determinants?    Find the product and its transpose .  Is it possible to compute the product ? Explain why or why not.  Find the product and compare it to . What do you notice about the relationship between these two matrices?    What is the transpose of the identity matrix ?  If a square matrix is invertible, explain why you can guarantee that is invertible and why .         .     .             and     The product is not defined because has two columns and has three rows.                 We have so . This means that .           .     .          .          .      "
+},
+{
+  "id": "prop-col-row-rank",
+  "level": "2",
+  "url": "sec-transpose.html#prop-col-row-rank",
+  "type": "Proposition",
+  "number": "6.2.12",
+  "title": "",
+  "body": " For any matrix , we have   "
+},
+{
+  "id": "prop-orthog-dim",
+  "level": "2",
+  "url": "sec-transpose.html#prop-orthog-dim",
+  "type": "Proposition",
+  "number": "6.2.13",
+  "title": "",
+  "body": "  If is a subspace of , then    "
+},
+{
+  "id": "sec-transpose-5-12",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-5-12",
+  "type": "Example",
+  "number": "6.2.14",
+  "title": "",
+  "body": "  In , we constructed the orthogonal complement of a line in . The dimension of the orthogonal complement should be , which explains why we found the orthogonal complement to be a plane.   "
+},
+{
+  "id": "sec-transpose-5-13",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-5-13",
+  "type": "Example",
+  "number": "6.2.15",
+  "title": "",
+  "body": "  In , we looked at , a -dimensional subspace of and found its orthogonal complement to be a -dimensional subspace of .   "
+},
+{
+  "id": "sec-transpose-5-14",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-5-14",
+  "type": "Activity",
+  "number": "6.2.5",
+  "title": "",
+  "body": "     Suppose that is a -dimensional subspace of and that is a matrix whose columns form a basis for ; that is, .  What is the shape of ?  What is the rank of ?  What is the shape of ?  What is the rank of ?  What is ?  What is ?  How are the dimensions of and related?      Suppose that is a subspace of having basis    Find the dimensions and .    Find a basis for . It may be helpful to know that the Sage command A.right_kernel() produces a basis for .     Verify that each of the basis vectors you found for are orthogonal to the basis vectors for .                 is .     .     is .                    since the subspaces live in .           so .    A basis is and .    You can verify by computing the four dot products.                                                               and .    Verify by computing the four dot products.         "
+},
+{
+  "id": "ula-proteus-6-2-intesectionorth-v1",
+  "level": "2",
+  "url": "sec-transpose.html#ula-proteus-6-2-intesectionorth-v1",
+  "type": "Checkpoint",
+  "number": "6.2.16",
+  "title": "Vectors in <span class=\"process-math\">\\(W\\)<\/span> and <span class=\"process-math\">\\(W^\\perp\\)<\/span>.",
+  "body": " Vectors in and   Can a nonzero vector be in both and ? Why or why not. Explain your answer.    "
+},
+{
+  "id": "ula-proteus-6-2-complementofplane-v1",
+  "level": "2",
+  "url": "sec-transpose.html#ula-proteus-6-2-complementofplane-v1",
+  "type": "Checkpoint",
+  "number": "6.2.17",
+  "title": "The complement of a plane.",
+  "body": " The complement of a plane   Look at and explain why the orthogonal complement of a line in is a line, but the orthogonal complement of a plane in is a line (and not a plane).     "
+},
+{
+  "id": "sec-transpose-7-1",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-1",
+  "type": "Exercise",
+  "number": "6.2.5.1",
+  "title": "",
+  "body": "  Suppose that is a subspace of with basis    What are the dimensions and ?    Find a basis for .    Verify that each of the basis vectors for are orthogonal to and .           and .     and     Verify that for all and .           and .     and     Use the dot product.      "
+},
+{
+  "id": "sec-transpose-7-2",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-2",
+  "type": "Exercise",
+  "number": "6.2.5.2",
+  "title": "",
+  "body": "  Consider the matrix .   Find and a basis for .    Determine the dimension of and find a basis for it.           so since there are two pivot positions. The reduced row echelon form shows that the third column is a linear combination of the first two so and form a basis for .    We know that . To find a basis, solve the equation to obtain .           and a basis for is and      with basis .      "
+},
+{
+  "id": "sec-transpose-7-3",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-3",
+  "type": "Exercise",
+  "number": "6.2.5.3",
+  "title": "",
+  "body": "  Suppose that is the subspace of defined as the solution set of the equation    What are the dimensions and ?    Find a basis for .    Find a basis for .    In general, how can you easily find a basis for when is defined by            where so . Therefore, .    A basis for is , , and .    Since every vector in satisfies , a basis for is                 , .     , , and .                "
+},
+{
+  "id": "sec-transpose-7-4",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-4",
+  "type": "Exercise",
+  "number": "6.2.5.4",
+  "title": "",
+  "body": "  Determine whether the following statements are true or false and explain your reasoning.   If , then is in .    If is a matrix and is a matrix, then is a matrix.    If the columns of are , , and and , then is orthogonal to .    If is a matrix with , then is a line in .    If is a matrix with , then .          True, since , is in .    False, is a matrix, but it is given by .    True, because the second component of .    True, because .    False, .          True    False    True    True    False      "
+},
+{
+  "id": "sec-transpose-7-5",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-5",
+  "type": "Exercise",
+  "number": "6.2.5.5",
+  "title": "",
+  "body": "  Apply properties of matrix operations to simplify the following expressions.                                                                             "
+},
+{
+  "id": "sec-transpose-7-6",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-6",
+  "type": "Exercise",
+  "number": "6.2.5.6",
+  "title": "",
+  "body": "  A symmetric matrix is one for which .   Explain why a symmetric matrix must be square.    If and are general matrices and is a square diagonal matrix, which of the following matrices can you guarantee are symmetric?              .                  If is an matrix, then is If these matrices are the same, then .       If is diagonal, then .     so this matrix need not be symmetric.     so this matrix is symmetric.     so this matrix is symmetric.             They must have the same number of rows and columns.       Yes    No    No    Yes         "
+},
+{
+  "id": "sec-transpose-7-7",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-7",
+  "type": "Exercise",
+  "number": "6.2.5.7",
+  "title": "",
+  "body": "  If is a square matrix, remember that the characteristic polynomial of is and that the roots of the characteristic polynomial are the eigenvalues of .   Explain why and have the same characteristic polynomial.    Explain why and have the same set of eigenvalues.    Suppose that is diagonalizable with diagonalization . Explain why is diagonalizable and find a diagonalization.           and therefore .    The eigenvalues of a matrix are given by the roots of its characteristic polynomial. Since and have the same characteristic polynomial, they have the same eigenvalues.               Use properties of the matrix transpose.    Because they have the same characteristic polynomial.           "
+},
+{
+  "id": "sec-transpose-7-8",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-8",
+  "type": "Exercise",
+  "number": "6.2.5.8",
+  "title": "",
+  "body": "  This exercise introduces a version of the Pythagorean theorem that we'll use later.   Suppose that and are orthogonal to one another. Use the dot product to explain why     Suppose that is a subspace of and that is a vector in for which where is in and is in . Explain why which is an expression of the Pythagorean theorem.               Because and are orthogonal.               Because and are orthogonal.      "
+},
+{
+  "id": "sec-transpose-7-9",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-9",
+  "type": "Exercise",
+  "number": "6.2.5.9",
+  "title": "",
+  "body": "  In the next chapter, symmetric matrices---that is, matrices for which ---play an important role. It turns out that eigenvectors of a symmetric matrix that are associated to different eigenvalues are orthogonal. We will explain this fact in this exercise.   Viewing a vector as a matrix having one column, we may write . If is a matrix, explain why .    We have seen that the matrix has eigenvectors , with associated eigenvalue , and , with associated eigenvalue . Verify that is symmetric and that and are orthogonal.    Suppose that is a general symmetric matrix and that is an eigenvector associated to eigenvalue and that is an eigenvector associated to a different eigenvalue . Beginning with , apply the identity from the first part of this exercise to explain why and are orthogonal.           .     and .     so since .          Use properties of the transpose.    Compute the dot product of and .    It follows that       "
+},
+{
+  "id": "sec-transpose-7-10",
+  "level": "2",
+  "url": "sec-transpose.html#sec-transpose-7-10",
+  "type": "Exercise",
+  "number": "6.2.5.10",
+  "title": "",
+  "body": "  Given an matrix , the row space of is the column space of ; that is, .   Suppose that is a matrix. For what is a subspace of ?    How can help us describe ?    Suppose that . Find bases for and .          Since is , it follows that is a subspace of .          so . A basis for are the three rows of . is one-dimensional with basis .                    A basis for are the three rows of . A basis for is .      "
+},
+{
+  "id": "sec-orthogonal-bases",
+  "level": "1",
+  "url": "sec-orthogonal-bases.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "Orthogonal bases and projections",
+  "body": " Orthogonal bases and projections   We know that a linear system is inconsistent when is not in , the column space of . Later in this chapter, we'll develop a strategy for dealing with inconsistent systems by finding , the vector in that minimizes the distance to . The equation is therefore consistent and its solution set can provide us with useful information about the original system .  In this section and the next, we'll develop some techniques that enable us to find , the vector in a given subspace that is closest to a given vector .    For this activity, it will be helpful to recall the distributive property of dot products: We'll work with the basis of formed by the vectors .     Verify that the vectors and are orthogonal.    We can compute that .      Suppose that and find the dot products and .     and .      We would like to express as a linear combination of and , which means that we need to find weights and such that . To find the weight , dot both sides of this expression with : . and apply the distributive property.     .      In a similar fashion, find the weight .     .      Verify that using the weights you have found.     .     We frequently ask to write a given vector as a linear combination of given basis vectors. In the past, we have done this by solving a linear system. The preview activity illustrates how this task can be simplified when the basis vectors are orthogonal to each other. We'll explore this and other uses of orthogonal bases in this section.    Orthogonal sets  The preview activity dealt with a basis of formed by two orthogonal vectors. More generally, we will consider a set of orthogonal vectors, as described in the next definition.   orthogonal set   By an orthogonal set of vectors, we mean a set of nonzero vectors each of which is orthogonal to the others.      The 3-dimensional vectors form an orthogonal set, which can be verified by computing Notice that this set of vectors forms a basis for .      The vectors form an orthogonal set of 4-dimensional vectors. Since there are only three vectors, this set does not form a basis for . It does, however, form a basis for a 3-dimensional subspace of .    Suppose that a vector is a linear combination of an orthogonal set of vectors ; that is, suppose that Just as in the preview activity, we can find the weight by dotting both sides with and applying the distributive property of dot products: Notice how the presence of an orthogonal set causes most of the terms in the sum to vanish. In the same way, we find that so that   We'll record this fact in the following proposition.    If a vector is a linear combination of an orthogonal set of vectors , then     Using this proposition, we can see that an orthogonal set of vectors must be linearly independent. Suppose, for instance, that is a set of nonzero orthogonal vectors and that one of the vectors is a linear combination of the others, say, We therefore know that which cannot happen since we know that is nonzero. This tells us that    An orthogonal set of vectors is linearly independent.    If the vectors in an orthogonal set have dimension , they form a linearly independent set in and are therefore a basis for the subspace . If there are vectors in the orthogonal set, they form a basis for .    Consider the vectors    Verify that this set forms an orthogonal set of -dimensional vectors.     Explain why we know that this set of vectors forms a basis for .    Suppose that . Find the weights , , and that express as a linear combination using .    If we multiply a vector by a positive scalar , the length of is also multiplied by ; that is, .   unit vector Using this observation, find a vector that is parallel to and has length 1. Such vectors are called unit vectors .     Similarly, find a unit vector that is parallel to and a unit vector that is parallel to .    Construct the matrix and find the product . Use to explain your result.          We compute the dot products , , and .    We know that an orthogonal set of vectors is linearly independent. Therefore, we have a set of three linearly independent vectors in so they must form a basis for .    We find that .    Since , we find     We find that     We find since each entry in this matrix product is the dot product of two columns of .          We compute the dot products , , and .    An orthogonal set of vectors is linearly independent.     .         We find that             This activity introduces an important way of modifying an orthogonal set so that the vectors in the set have unit length. Recall that we may multiply any nonzero vector by a scalar so that the new vector has length 1. For instance, we know that if is a positive scalar, then . To obtain a vector having unit length, we want so that . Therefore, becomes a unit vector parallel to .  Orthogonal sets in which the vectors have unit length are called orthonormal and are especially convenient.   othonormal set   An orthonormal set is an orthogonal set of vectors each of which has unit length.      The vectors are an orthonormal set of vectors in and form an orthonormal basis for .  If we form the matrix we find that since tells us that     The previous activity and example illustrate the next proposition.    If the columns of the matrix form an orthonormal set, then , the identity matrix.      Orthogonal projections  We now turn to an important problem that will appear in many forms in the rest of our explorations. Suppose, as shown in , that we have a subspace of and a vector that is not in that subspace. We would like to find the vector in that is closest to , meaning the distance between and is as small as possible.     A plane in three dimensions, a vector not in the plane, and the orthogonal projection of that vector.   Two three dimensional vectors and and the plane that they define. There is another vector that is not in the plane. The orthogonal projection of is shown as the vector in the plane that is closest to the vector .     Given a plane in and a vector not in the plane, we wish to find the vector in the plane that is closest to .   To get started, let's consider a simpler problem where we have a line in , defined by the vector , and another vector that is not on the line, as shown on the left of . We wish to find , the vector on the line that is closest to , as illustrated in the right of .     A line in two dimensions defined by a vector and another vector not on the line.   A two dimensional vector and the line that it defines. There is another vector that is not on the line.     A line in two dimensions, a vector not on the line, and the orthogonal projection of that vector onto the line.   A two dimensional vector defines a line . There is a vector that is not on the line and its orthogonal projection onto the line . The vector is shown as being orthogonal to the line.     Given a line and a vector , we seek the vector on that is closest to .   To find , we require that be orthogonal to . For instance, if is another vector on the line, as shown in , then the Pythagorean theorem implies that which means that . Therefore, is closer to than any other vector on the line .     A two dimensional diagram demonstrating how orthogonality determines the orthogonal projection.   A line is shown along with a vector , which is not on , and its orthogonal projection , which lies on . There is another vector on , and the vectors and are shown. Because is orthogonal to , there is a right triangle formed by , , and . Since is the hypotenuse of this right triangle, its length is greater than that of .     The vector is closer to than because is orthogonal to .    orthogonal projection   Given a vector in and a subspace of , the orthogonal projection of onto is the vector in that is closest to . It is characterized by the property that is orthogonal to .      This activity demonstrates how to determine the orthogonal projection of a vector onto a subspace of .   Let's begin by considering a line , defined by the vector , and a vector not on , as illustrated in .     A two dimensional line, a vector not on the line, and its orthogonal complement.   A two dimensional vector defines a line . There is a vector not on as well as its orthogonal projection onto the line and the difference .     The orthogonal projection is now represented as a scalar multiple of a basis vector for the line.   This diagram contains most of the same key features as the previous diagram. There is a vector that defines the line , a vector not on line, and the orthogonal projection of onto . The key difference is that the orthogonal projection is written as , a scalar multiple of . In this way, the vector is orthogonal to , which provides a means of finding and hence .     Finding the orthogonal projection of onto the line defined by .      To find , first notice that for some scalar . Since is orthogonal to , what do we know about the dot product     Apply the distributive property of dot products to find the scalar . What is the vector , the orthogonal projection of onto ?    More generally, explain why the orthogonal projection of onto the line defined by is        The same ideas apply more generally. Suppose we have an orthogonal set of vectors and that define a plane in . If another vector in , we seek the vector on the plane closest to . As before, the vector will be orthogonal to , as illustrated in .     Finding the orthogonal projection in three dimensions.   Two orthogonal three dimensional vectors and define a plane . There is a vector not on the plane and its orthogonal projection onto . The vector is drawn as a vector orthogonal to .     Given a plane defined by the orthogonal vectors and and another vector , we seek the vector on closest to .      The vector is orthogonal to . What does this say about the dot products: and ?    Since is in the plane , we can write it as a linear combination . Then Find the weight by dotting with and applying the distributive property of dot products. Similarly, find the weight .    What is the vector , the orthogonal projection of onto the plane ?       Suppose that is a subspace of with orthogonal basis and that is a vector in . Explain why the orthogonal projection of onto is the vector     Suppose that is an orthonormal basis for ; that is, the vectors are orthogonal to one another and have unit length. Explain why the orthogonal projection is     If is the matrix whose columns are an orthonormal basis of , use to explain why .             This dot product should be 0 since the vectors are orthogonal.     .    As before,           These dot products are 0.                    We know and we can find by requiring that be orthogonal to every vector .    The vectors form an orthogonal set and since , the weights are .    We have so that              0     .               0                    We require that be orthogonal to every vector .         Use the fact that        In all the cases considered in the activity, we are looking for , the vector in a subspace closest to a vector , which is found by requiring that be orthogonal to . This means that for any vector in .  If we have an orthogonal basis for , then . Therefore, This leads to the projection formula:   Projection formula   If is a subspace of having an orthogonal basis and is a vector in , then the orthogonal projection of onto is      Caution  Remember that the projection formula given in applies only when the basis of is orthogonal .   If we have an orthonormal basis for , the projection formula simplifies to If we then form the matrix this expression may be succintly written   This leads to the following proposition.    If is an orthonormal basis for a subspace of , then the matrix transformation that projects vectors in orthogonally onto is represented by the matrix where       In the previous activity, we looked at the plane defined by the two orthogonal vectors We can form an orthonormal basis by scalar multiplying these vectors to have unit length: Using these vectors, we form the matrix The projection onto the plane is then given by the matrix   Let's check that this works by considering the vector and finding , its orthogonal projection onto the plane . In terms of the original basis and , the projection formula from tells us that   Alternatively, we use the matrix , as in , to find that          Suppose that is the line in defined by the vector .    Find an orthonormal basis for .    Construct the matrix and use it to construct the matrix that projects vectors orthogonally onto .    Use your matrix to find , the orthogonal projection of onto .    Find and explain its geometric significance.       The vectors form an orthogonal basis of , a two-dimensional subspace of .    Use the projection formula from to find , the orthogonal projection of onto .    Find an orthonormal basis and for and use it to construct the matrix that projects vectors orthogonally onto . Check that , the orthogonal projection you found in the previous part of this activity.    Find and explain its geometric significance.    Find a basis for .    Find a vector in such that     If is the matrix whose columns are and , find the product and explain your result.                               We find that , which makes sense because , a 1-dimensional subspace of .                     since     Since , then , which gives and     We can find      since this product computes the dot products between the columns of .                                                          and                     This activity demonstrates one issue of note. We found , the orthogonal projection of onto , by requiring that be orthogonal to . In other words, is a vector in the orthogonal complement , which we may denote . This explains the following proposition, which is illustrated in     If is a subspace of with orthogonal complement , then any -dimensional vector can be uniquely written as where is in and is in . The vector is the orthogonal projection of onto and is the orthogonal projection of onto .       A two dimensional vector orthogonally projected onto a line and the orthogonal complement of the line.   A two dimensional line and its orthogonal complement , which is another two dimensional line. There is a vector and its orthogonal projection onto and its orthogonal projection onto . This shows that .     A vector along with , its orthogonal projection onto the line , and , its orthogonal projection onto the orthogonal complement .   Let's summarize what we've found. If is a matrix whose columns form an orthonormal set in , then    , the identity matrix, because this product computes the dot products between the columns of .     is the matrix the projects vectors orthogonally onto , the subspace of spanned by .   As we've said before, matrix multiplication depends on the order in which we multiply the matrices, and we see this clearly here.  Because , there is a temptation to say that is invertible. This is usually not the case, however. Remember that an invertible matrix must be a square matrix, and the matrix will only be square if . In this case, there are vectors in the orthonormal set so the subspace spanned by the vectors is . If is a vector in , then is the orthogonal projection of onto . In other words, is the closest vector in to , and this closest vector must be itself. Therefore, , which means that . In this case, is an invertible matrix.    Consider the orthonormal set of vectors and the matrix they define In this case, and span a plane, a 2-dimensional subspace of . We know that and projects vectors orthogonally onto the plane. However, is not a square matrix so it cannot be invertible.      Now consider the orthonormal set of vectors and the matrix they define Here, , , and form a basis for so that both and . Therefore, is a square matrix and is invertible.  Moreover, since , we see that so finding the inverse of is as simple as writing its transpose. Matrices with this property are very special and will play an important role in our upcoming work. We will therefore give them a special name.      orthogonal matrix  A square matrix whose columns form an orthonormal basis for is called orthogonal .    This terminology can be a little confusing. We call a basis orthogonal if the basis vectors are orthogonal to one another. However, a matrix is orthogonal if the columns are orthogonal to one another and have unit length. It pays to keep this in mind when reading statements about orthogonal bases and orthogonal matrices. In the meantime, we record the following proposition.    An orthogonal matrix is invertible and its inverse .      Summary  This section introduced orthogonal sets and the projection formula that allows us to project vectors orthogonally onto a subspace.   Given an orthogonal set that spans an -dimensional subspace of , the orthogonal projection of onto is the vector in closest to and may be written as     If is an orthonormal basis of and is the matrix whose columns are , then the matrix projects vectors orthogonally onto .    If the columns of form an orthonormal basis for an -dimensional subspace of , then .    An orthogonal matrix is a square matrix whose columns form an orthonormal basis. In this case, so that .      Determining orthogonality   For the following sets of vectors, determine if they are orthonormal, orthogonal but not orthonormal, linearly independent but not orthogonal, or not linearly independent.       Linearly independent, not orthogonal     Orthogonal, not orthonormal      Orthonormal     Not linearly independent         Suppose that    Verify that and form an orthogonal basis for a plane in .    Use to find , the orthogonal projection of onto .    Find an orthonormal basis , for .    Find the matrix representing the matrix transformation that projects vectors in orthogonally onto . Verify that .    Determine and explain its geometric significance.          Check that .    Applying the Projection Formula gives .     and     Form so that     Since , we have            .     .     and                    Consider the vectors    Explain why these vectors form an orthogonal basis for .    Suppose that and evaluate the product . Why is this product a diagonal matrix and what is the significance of the diagonal entries?    Express the vector as a linear combination of , , and .    Multiply the vectors , , by appropriate scalars to find an orthonormal basis , , of .    If , find the matrix product and explain the result.          Check that all three dot products , , and .     . This matrix is diagonal because the vectors form an orthogonal set.    We may find the weights of this linear combination by finding so that .         The columns of form an orthonormal basis for so is orthogonal. Therefore, .           , , and .          .                   Suppose that form an orthogonal basis for a subspace of .   Find , the orthogonal projection of onto .    Find the vector in such that .    Find a basis for . and express as a linear combination of the basis vectors.          Apply the Projection Formula to find .     .    Constructing a matrix whose columns are and allows us to find a basis for . This gives the basis and . We then have .                    A basis for is and . We then have .         Consider the vectors    If is the line defined by the vector , find the vector in closest to . Call this vector .    If is the subspace spanned by and , find the vector in closest to . Call this vector .    Determine whether or is closer to and explain why.          Applying the Projection Formula gives     Applying the Projection Formula gives      is the closest vector in to . Since is contained in , cannot be closer. Therefore, must be closer to than .                              Suppose that defines a line in .   Find the orthogonal projections of the vectors , , onto .    Find the matrix .    Use to explain why the columns of are related to the orthogonal projections you found in the first part of this exercise.          Applying the Projection Formula gives the projections          If , then , which projects vectors orthogonally onto . The columns of are the results of projecting the standard basis vectors onto .                    The columns of are the results of projecting the standard basis vectors onto .         Suppose that form the basis for a plane in .   Find a basis for the line that is the orthogonal complement .    Given the vector , find , the orthogonal projection of onto the line .    Explain why the vector must be in and write as a linear combination of and .          A basis vector is           is the orthogonal projection of onto so must be orthogonal to , which means that it is in . We see that .                     .         Determine whether the following statements are true or false and explain your thinking.   If the columns of form an orthonormal basis for a subspace and is a vector in , then .    An orthogonal set of vectors in can have no more than 8 vectors.    If is a matrix whose columns are orthonormal, then .    If is a matrix whose columns are orthonormal, then .    If the orthogonal projection of onto a subspace satisfies , then is in .         True, because is the closest vector in to . Therefore, .    True, because the orthogonal set of vectors is linearly independent.    False, projects vectors orthogonally onto the 5-dimensional subspace .    True, because computes the dot products between the columns of     True, because . Therefore, is in .         True    True    False    True    True         Suppose that is an orthogonal matrix.   Remembering that , explain why     Explain why .  This means that the length of a vector is unchanged after multiplying by an orthogonal matrix.    If is a real eigenvalue of , explain why .           .         If , then so            .         If , then so          Explain why the following statements are true.   If is an orthogonal matrix, then .    If is a matrix whose columns are orthonormal, then is an matrix whose rank is 4.    If is the orthogonal projection of onto a subspace , then is the orthogonal projection of onto .          Since , we have     The columns of form an orthonormal basis for , a 4-dimensional subspace of . Therefore, projects vectors orthogonally onto so and .    If , then is in , the orthogonal complement of . This means that is the orthogonal projection of onto .          Since , we have .    The four columns of form a basis for the column space     If , then is in .         This exercise is about orthogonal matrices.   In , we saw that the matrix represents a rotation by an angle . Explain why this matrix is an orthogonal matrix.    We also saw that the matrix represents a reflection in a line. Explain why this matrix is an orthogonal matrix.    Suppose that is a 2-dimensional unit vector. Use a sketch to indicate all the possible vectors such that and form an orthonormal basis of .    Explain why every orthogonal matrix is either a rotation or a reflection.          If this matrix is , we have .    If this matrix is , we have .     or     If is an orthogonal matrix, then is a unit vector and has the form for some angle . By the last part of this problem, there are only two choices for , one of which gives a rotation and one of which gives a reflection.           .     .     or     The first column of has the form . Now apply the result of the last part of this problem.        "
+},
+{
+  "id": "ula-preview-6-3",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#ula-preview-6-3",
+  "type": "Preview Activity",
+  "number": "6.3.1",
+  "title": "",
+  "body": "  For this activity, it will be helpful to recall the distributive property of dot products: We'll work with the basis of formed by the vectors .     Verify that the vectors and are orthogonal.    We can compute that .      Suppose that and find the dot products and .     and .      We would like to express as a linear combination of and , which means that we need to find weights and such that . To find the weight , dot both sides of this expression with : . and apply the distributive property.     .      In a similar fashion, find the weight .     .      Verify that using the weights you have found.     .    "
+},
+{
+  "id": "sec-orthogonal-bases-3-3",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-3-3",
+  "type": "Definition",
+  "number": "6.3.1",
+  "title": "",
+  "body": " orthogonal set   By an orthogonal set of vectors, we mean a set of nonzero vectors each of which is orthogonal to the others.   "
+},
+{
+  "id": "example-orthogonal-basis",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#example-orthogonal-basis",
+  "type": "Example",
+  "number": "6.3.2",
+  "title": "",
+  "body": "  The 3-dimensional vectors form an orthogonal set, which can be verified by computing Notice that this set of vectors forms a basis for .   "
+},
+{
+  "id": "example-orthogonal-set",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#example-orthogonal-set",
+  "type": "Example",
+  "number": "6.3.3",
+  "title": "",
+  "body": "  The vectors form an orthogonal set of 4-dimensional vectors. Since there are only three vectors, this set does not form a basis for . It does, however, form a basis for a 3-dimensional subspace of .   "
+},
+{
+  "id": "prop-orthog-lincomb",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#prop-orthog-lincomb",
+  "type": "Proposition",
+  "number": "6.3.4",
+  "title": "",
+  "body": "  If a vector is a linear combination of an orthogonal set of vectors , then    "
+},
+{
+  "id": "prop-orthog-lin-indep",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#prop-orthog-lin-indep",
+  "type": "Proposition",
+  "number": "6.3.5",
+  "title": "",
+  "body": "  An orthogonal set of vectors is linearly independent.   "
+},
+{
+  "id": "sec-orthogonal-bases-3-12",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-3-12",
+  "type": "Activity",
+  "number": "6.3.2",
+  "title": "",
+  "body": "  Consider the vectors    Verify that this set forms an orthogonal set of -dimensional vectors.     Explain why we know that this set of vectors forms a basis for .    Suppose that . Find the weights , , and that express as a linear combination using .    If we multiply a vector by a positive scalar , the length of is also multiplied by ; that is, .   unit vector Using this observation, find a vector that is parallel to and has length 1. Such vectors are called unit vectors .     Similarly, find a unit vector that is parallel to and a unit vector that is parallel to .    Construct the matrix and find the product . Use to explain your result.          We compute the dot products , , and .    We know that an orthogonal set of vectors is linearly independent. Therefore, we have a set of three linearly independent vectors in so they must form a basis for .    We find that .    Since , we find     We find that     We find since each entry in this matrix product is the dot product of two columns of .          We compute the dot products , , and .    An orthogonal set of vectors is linearly independent.     .         We find that            "
+},
+{
+  "id": "sec-orthogonal-bases-3-15",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-3-15",
+  "type": "Definition",
+  "number": "6.3.6",
+  "title": "",
+  "body": " othonormal set   An orthonormal set is an orthogonal set of vectors each of which has unit length.   "
+},
+{
+  "id": "sec-orthogonal-bases-3-16",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-3-16",
+  "type": "Example",
+  "number": "6.3.7",
+  "title": "",
+  "body": "  The vectors are an orthonormal set of vectors in and form an orthonormal basis for .  If we form the matrix we find that since tells us that    "
+},
+{
+  "id": "prop-orthonormal-QTQ",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#prop-orthonormal-QTQ",
+  "type": "Proposition",
+  "number": "6.3.8",
+  "title": "",
+  "body": "  If the columns of the matrix form an orthonormal set, then , the identity matrix.   "
+},
+{
+  "id": "fig-3d-orthog-proj",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#fig-3d-orthog-proj",
+  "type": "Figure",
+  "number": "6.3.9",
+  "title": "",
+  "body": "   A plane in three dimensions, a vector not in the plane, and the orthogonal projection of that vector.   Two three dimensional vectors and and the plane that they define. There is another vector that is not in the plane. The orthogonal projection of is shown as the vector in the plane that is closest to the vector .     Given a plane in and a vector not in the plane, we wish to find the vector in the plane that is closest to .  "
+},
+{
+  "id": "fig-projection-line-a",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#fig-projection-line-a",
+  "type": "Figure",
+  "number": "6.3.10",
+  "title": "",
+  "body": "   A line in two dimensions defined by a vector and another vector not on the line.   A two dimensional vector and the line that it defines. There is another vector that is not on the line.     A line in two dimensions, a vector not on the line, and the orthogonal projection of that vector onto the line.   A two dimensional vector defines a line . There is a vector that is not on the line and its orthogonal projection onto the line . The vector is shown as being orthogonal to the line.     Given a line and a vector , we seek the vector on that is closest to .  "
+},
+{
+  "id": "fig-projection-line-b",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#fig-projection-line-b",
+  "type": "Figure",
+  "number": "6.3.11",
+  "title": "",
+  "body": "   A two dimensional diagram demonstrating how orthogonality determines the orthogonal projection.   A line is shown along with a vector , which is not on , and its orthogonal projection , which lies on . There is another vector on , and the vectors and are shown. Because is orthogonal to , there is a right triangle formed by , , and . Since is the hypotenuse of this right triangle, its length is greater than that of .     The vector is closer to than because is orthogonal to .  "
+},
+{
+  "id": "sec-orthogonal-bases-4-8",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-4-8",
+  "type": "Definition",
+  "number": "6.3.12",
+  "title": "",
+  "body": " orthogonal projection   Given a vector in and a subspace of , the orthogonal projection of onto is the vector in that is closest to . It is characterized by the property that is orthogonal to .   "
+},
+{
+  "id": "sec-orthogonal-bases-4-9",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-4-9",
+  "type": "Activity",
+  "number": "6.3.3",
+  "title": "",
+  "body": "  This activity demonstrates how to determine the orthogonal projection of a vector onto a subspace of .   Let's begin by considering a line , defined by the vector , and a vector not on , as illustrated in .     A two dimensional line, a vector not on the line, and its orthogonal complement.   A two dimensional vector defines a line . There is a vector not on as well as its orthogonal projection onto the line and the difference .     The orthogonal projection is now represented as a scalar multiple of a basis vector for the line.   This diagram contains most of the same key features as the previous diagram. There is a vector that defines the line , a vector not on line, and the orthogonal projection of onto . The key difference is that the orthogonal projection is written as , a scalar multiple of . In this way, the vector is orthogonal to , which provides a means of finding and hence .     Finding the orthogonal projection of onto the line defined by .      To find , first notice that for some scalar . Since is orthogonal to , what do we know about the dot product     Apply the distributive property of dot products to find the scalar . What is the vector , the orthogonal projection of onto ?    More generally, explain why the orthogonal projection of onto the line defined by is        The same ideas apply more generally. Suppose we have an orthogonal set of vectors and that define a plane in . If another vector in , we seek the vector on the plane closest to . As before, the vector will be orthogonal to , as illustrated in .     Finding the orthogonal projection in three dimensions.   Two orthogonal three dimensional vectors and define a plane . There is a vector not on the plane and its orthogonal projection onto . The vector is drawn as a vector orthogonal to .     Given a plane defined by the orthogonal vectors and and another vector , we seek the vector on closest to .      The vector is orthogonal to . What does this say about the dot products: and ?    Since is in the plane , we can write it as a linear combination . Then Find the weight by dotting with and applying the distributive property of dot products. Similarly, find the weight .    What is the vector , the orthogonal projection of onto the plane ?       Suppose that is a subspace of with orthogonal basis and that is a vector in . Explain why the orthogonal projection of onto is the vector     Suppose that is an orthonormal basis for ; that is, the vectors are orthogonal to one another and have unit length. Explain why the orthogonal projection is     If is the matrix whose columns are an orthonormal basis of , use to explain why .             This dot product should be 0 since the vectors are orthogonal.     .    As before,           These dot products are 0.                    We know and we can find by requiring that be orthogonal to every vector .    The vectors form an orthogonal set and since , the weights are .    We have so that              0     .               0                    We require that be orthogonal to every vector .         Use the fact that       "
+},
+{
+  "id": "prop-proj-formula",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#prop-proj-formula",
+  "type": "Proposition",
+  "number": "6.3.15",
+  "title": "Projection formula.",
+  "body": " Projection formula   If is a subspace of having an orthogonal basis and is a vector in , then the orthogonal projection of onto is    "
+},
+{
+  "id": "prop-proj-orthonormal",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#prop-proj-orthonormal",
+  "type": "Proposition",
+  "number": "6.3.16",
+  "title": "",
+  "body": "  If is an orthonormal basis for a subspace of , then the matrix transformation that projects vectors in orthogonally onto is represented by the matrix where    "
+},
+{
+  "id": "example-projection-matrix",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#example-projection-matrix",
+  "type": "Example",
+  "number": "6.3.17",
+  "title": "",
+  "body": "  In the previous activity, we looked at the plane defined by the two orthogonal vectors We can form an orthonormal basis by scalar multiplying these vectors to have unit length: Using these vectors, we form the matrix The projection onto the plane is then given by the matrix   Let's check that this works by considering the vector and finding , its orthogonal projection onto the plane . In terms of the original basis and , the projection formula from tells us that   Alternatively, we use the matrix , as in , to find that    "
+},
+{
+  "id": "sec-orthogonal-bases-4-18",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-4-18",
+  "type": "Activity",
+  "number": "6.3.4",
+  "title": "",
+  "body": "     Suppose that is the line in defined by the vector .    Find an orthonormal basis for .    Construct the matrix and use it to construct the matrix that projects vectors orthogonally onto .    Use your matrix to find , the orthogonal projection of onto .    Find and explain its geometric significance.       The vectors form an orthogonal basis of , a two-dimensional subspace of .    Use the projection formula from to find , the orthogonal projection of onto .    Find an orthonormal basis and for and use it to construct the matrix that projects vectors orthogonally onto . Check that , the orthogonal projection you found in the previous part of this activity.    Find and explain its geometric significance.    Find a basis for .    Find a vector in such that     If is the matrix whose columns are and , find the product and explain your result.                               We find that , which makes sense because , a 1-dimensional subspace of .                     since     Since , then , which gives and     We can find      since this product computes the dot products between the columns of .                                                          and                    "
+},
+{
+  "id": "prop-orthog-decomp",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#prop-orthog-decomp",
+  "type": "Proposition",
+  "number": "6.3.18",
+  "title": "",
+  "body": "  If is a subspace of with orthogonal complement , then any -dimensional vector can be uniquely written as where is in and is in . The vector is the orthogonal projection of onto and is the orthogonal projection of onto .   "
+},
+{
+  "id": "fig-orthog-decomp",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#fig-orthog-decomp",
+  "type": "Figure",
+  "number": "6.3.19",
+  "title": "",
+  "body": "   A two dimensional vector orthogonally projected onto a line and the orthogonal complement of the line.   A two dimensional line and its orthogonal complement , which is another two dimensional line. There is a vector and its orthogonal projection onto and its orthogonal projection onto . This shows that .     A vector along with , its orthogonal projection onto the line , and , its orthogonal projection onto the orthogonal complement .  "
+},
+{
+  "id": "sec-orthogonal-bases-4-24",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-4-24",
+  "type": "Example",
+  "number": "6.3.20",
+  "title": "",
+  "body": "  Consider the orthonormal set of vectors and the matrix they define In this case, and span a plane, a 2-dimensional subspace of . We know that and projects vectors orthogonally onto the plane. However, is not a square matrix so it cannot be invertible.   "
+},
+{
+  "id": "sec-orthogonal-bases-4-25",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-4-25",
+  "type": "Example",
+  "number": "6.3.21",
+  "title": "",
+  "body": "  Now consider the orthonormal set of vectors and the matrix they define Here, , , and form a basis for so that both and . Therefore, is a square matrix and is invertible.  Moreover, since , we see that so finding the inverse of is as simple as writing its transpose. Matrices with this property are very special and will play an important role in our upcoming work. We will therefore give them a special name.   "
+},
+{
+  "id": "sec-orthogonal-bases-4-26",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-4-26",
+  "type": "Definition",
+  "number": "6.3.22",
+  "title": "",
+  "body": "  orthogonal matrix  A square matrix whose columns form an orthonormal basis for is called orthogonal .   "
+},
+{
+  "id": "prop-orthog-matrix",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#prop-orthog-matrix",
+  "type": "Proposition",
+  "number": "6.3.23",
+  "title": "",
+  "body": "  An orthogonal matrix is invertible and its inverse .   "
+},
+{
+  "id": "ula-proteus-6-1-othogonalsort-v1",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#ula-proteus-6-1-othogonalsort-v1",
+  "type": "Checkpoint",
+  "number": "6.3.24",
+  "title": "Determining orthogonality.",
+  "body": " Determining orthogonality   For the following sets of vectors, determine if they are orthonormal, orthogonal but not orthonormal, linearly independent but not orthogonal, or not linearly independent.       Linearly independent, not orthogonal     Orthogonal, not orthonormal      Orthonormal     Not linearly independent    "
+},
+{
+  "id": "sec-orthogonal-bases-6-1",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-1",
+  "type": "Exercise",
+  "number": "6.3.4.1",
+  "title": "",
+  "body": "  Suppose that    Verify that and form an orthogonal basis for a plane in .    Use to find , the orthogonal projection of onto .    Find an orthonormal basis , for .    Find the matrix representing the matrix transformation that projects vectors in orthogonally onto . Verify that .    Determine and explain its geometric significance.          Check that .    Applying the Projection Formula gives .     and     Form so that     Since , we have            .     .     and                 "
+},
+{
+  "id": "sec-orthogonal-bases-6-2",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-2",
+  "type": "Exercise",
+  "number": "6.3.4.2",
+  "title": "",
+  "body": "  Consider the vectors    Explain why these vectors form an orthogonal basis for .    Suppose that and evaluate the product . Why is this product a diagonal matrix and what is the significance of the diagonal entries?    Express the vector as a linear combination of , , and .    Multiply the vectors , , by appropriate scalars to find an orthonormal basis , , of .    If , find the matrix product and explain the result.          Check that all three dot products , , and .     . This matrix is diagonal because the vectors form an orthogonal set.    We may find the weights of this linear combination by finding so that .         The columns of form an orthonormal basis for so is orthogonal. Therefore, .           , , and .          .                "
+},
+{
+  "id": "sec-orthogonal-bases-6-3",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-3",
+  "type": "Exercise",
+  "number": "6.3.4.3",
+  "title": "",
+  "body": "  Suppose that form an orthogonal basis for a subspace of .   Find , the orthogonal projection of onto .    Find the vector in such that .    Find a basis for . and express as a linear combination of the basis vectors.          Apply the Projection Formula to find .     .    Constructing a matrix whose columns are and allows us to find a basis for . This gives the basis and . We then have .                    A basis for is and . We then have .      "
+},
+{
+  "id": "sec-orthogonal-bases-6-4",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-4",
+  "type": "Exercise",
+  "number": "6.3.4.4",
+  "title": "",
+  "body": "  Consider the vectors    If is the line defined by the vector , find the vector in closest to . Call this vector .    If is the subspace spanned by and , find the vector in closest to . Call this vector .    Determine whether or is closer to and explain why.          Applying the Projection Formula gives     Applying the Projection Formula gives      is the closest vector in to . Since is contained in , cannot be closer. Therefore, must be closer to than .                           "
+},
+{
+  "id": "sec-orthogonal-bases-6-5",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-5",
+  "type": "Exercise",
+  "number": "6.3.4.5",
+  "title": "",
+  "body": "  Suppose that defines a line in .   Find the orthogonal projections of the vectors , , onto .    Find the matrix .    Use to explain why the columns of are related to the orthogonal projections you found in the first part of this exercise.          Applying the Projection Formula gives the projections          If , then , which projects vectors orthogonally onto . The columns of are the results of projecting the standard basis vectors onto .                    The columns of are the results of projecting the standard basis vectors onto .      "
+},
+{
+  "id": "sec-orthogonal-bases-6-6",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-6",
+  "type": "Exercise",
+  "number": "6.3.4.6",
+  "title": "",
+  "body": "  Suppose that form the basis for a plane in .   Find a basis for the line that is the orthogonal complement .    Given the vector , find , the orthogonal projection of onto the line .    Explain why the vector must be in and write as a linear combination of and .          A basis vector is           is the orthogonal projection of onto so must be orthogonal to , which means that it is in . We see that .                     .      "
+},
+{
+  "id": "sec-orthogonal-bases-6-7",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-7",
+  "type": "Exercise",
+  "number": "6.3.4.7",
+  "title": "",
+  "body": "  Determine whether the following statements are true or false and explain your thinking.   If the columns of form an orthonormal basis for a subspace and is a vector in , then .    An orthogonal set of vectors in can have no more than 8 vectors.    If is a matrix whose columns are orthonormal, then .    If is a matrix whose columns are orthonormal, then .    If the orthogonal projection of onto a subspace satisfies , then is in .         True, because is the closest vector in to . Therefore, .    True, because the orthogonal set of vectors is linearly independent.    False, projects vectors orthogonally onto the 5-dimensional subspace .    True, because computes the dot products between the columns of     True, because . Therefore, is in .         True    True    False    True    True      "
+},
+{
+  "id": "sec-orthogonal-bases-6-8",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-8",
+  "type": "Exercise",
+  "number": "6.3.4.8",
+  "title": "",
+  "body": "  Suppose that is an orthogonal matrix.   Remembering that , explain why     Explain why .  This means that the length of a vector is unchanged after multiplying by an orthogonal matrix.    If is a real eigenvalue of , explain why .           .         If , then so            .         If , then so       "
+},
+{
+  "id": "sec-orthogonal-bases-6-9",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-9",
+  "type": "Exercise",
+  "number": "6.3.4.9",
+  "title": "",
+  "body": "  Explain why the following statements are true.   If is an orthogonal matrix, then .    If is a matrix whose columns are orthonormal, then is an matrix whose rank is 4.    If is the orthogonal projection of onto a subspace , then is the orthogonal projection of onto .          Since , we have     The columns of form an orthonormal basis for , a 4-dimensional subspace of . Therefore, projects vectors orthogonally onto so and .    If , then is in , the orthogonal complement of . This means that is the orthogonal projection of onto .          Since , we have .    The four columns of form a basis for the column space     If , then is in .      "
+},
+{
+  "id": "sec-orthogonal-bases-6-10",
+  "level": "2",
+  "url": "sec-orthogonal-bases.html#sec-orthogonal-bases-6-10",
+  "type": "Exercise",
+  "number": "6.3.4.10",
+  "title": "",
+  "body": "  This exercise is about orthogonal matrices.   In , we saw that the matrix represents a rotation by an angle . Explain why this matrix is an orthogonal matrix.    We also saw that the matrix represents a reflection in a line. Explain why this matrix is an orthogonal matrix.    Suppose that is a 2-dimensional unit vector. Use a sketch to indicate all the possible vectors such that and form an orthonormal basis of .    Explain why every orthogonal matrix is either a rotation or a reflection.          If this matrix is , we have .    If this matrix is , we have .     or     If is an orthogonal matrix, then is a unit vector and has the form for some angle . By the last part of this problem, there are only two choices for , one of which gives a rotation and one of which gives a reflection.           .     .     or     The first column of has the form . Now apply the result of the last part of this problem.      "
+},
+{
+  "id": "sec-gram-schmidt",
+  "level": "1",
+  "url": "sec-gram-schmidt.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Finding orthogonal bases",
+  "body": " Finding orthogonal bases   The last section demonstrated the value of working with orthogonal, and especially orthonormal, sets. If we have an orthogonal basis for a subspace , the Projection Formula tells us that the orthogonal projection of a vector onto is An orthonormal basis is even more convenient: after forming the matrix , we have .  In the examples we've seen so far, however, orthogonal bases were given to us. What we need now is a way to form orthogonal bases. In this section, we'll explore an algorithm that begins with a basis for a subspace and creates an orthogonal basis. Once we have an orthogonal basis, we can scale each of the vectors appropriately to produce an orthonormal basis.    Suppose we have a basis for consisting of the vectors as shown in . Notice that this basis is not orthogonal.     Two vectors in the two dimensional coordinate plane that are not orthogonal to one another.   Two vectors and against a standard coordinate grid and set of axes.     A basis for .      Find the vector that is the orthogonal projection of onto the line defined by .     .      Explain why is orthogonal to .    The orthogonal projection is defined so that is orthogonal to .      Define the new vectors and and sketch them in . Explain why and define an orthogonal basis for .     A two dimensional coordinate grid and set of axes.   A coordinate grid and set of axes. The horizontal and vertical ranges run from to .     Sketch the new basis and .      and are othogonal, which can be checked with the dot product.      Write the vector as a linear combination of and .    The projection formula gives .      Scale the vectors and to produce an orthonormal basis and for .     and .       Gram-Schmidt orthogonalization   Gram-Schmidt The preview activity illustrates the main idea behind an algorithm, known as Gram-Schmidt orthogonalization , that begins with a basis for some subspace of and produces an orthogonal or orthonormal basis. The algorithm relies on our construction of the orthogonal projection. Remember that we formed the orthogonal projection of onto a subspace by requiring that is orthogonal to as shown in .     Orthogonally projecting a three dimensional vector onto a plane.   Two orthogonal vectors and and the plane they define in three dimensions. A vector and its orthogonal projection onto is shown along with the vector , which is orthogonal to .     If is the orthogonal projection of onto , then is orthogonal to .   This observation guides our construction of an orthogonal basis for it allows us to create a vector that is orthogonal to a given subspace. Let's see how the Gram-Schmidt algorithm works.    Suppose that is a three-dimensional subspace of with basis: We can see that this basis is not orthogonal by noting that . Our goal is to create an orthogonal basis , , and for .  To begin, we declare that , and we call the line defined by .      Find the vector that is the orthogonal projection of onto , the line defined by .    Form the vector and verify that it is orthogonal to .    Explain why by showing that any linear combination of and can be written as a linear combination of and and vice versa.    The vectors and are an orthogonal basis for a two-dimensional subspace of . Find the vector that is the orthogonal projection of onto .    Verify that is orthogonal to both and .    Explain why , , and form an orthogonal basis for .    Now find an orthonormal basis for .           .         We have and . Therefore, a linear combination of and can be rewritten as In the same way, and so any linear combination of and can be rewritten as a linear combination of and .    By the Projection Formula, .         We can check that , , and form an orthogonal set. Since can be written in terms of and vice-versa, these new vectors form a basis for .                .         We have and so a linear combination of and can be rewritten as a linear combination of and .     .         Since can be written in terms of and vice-versa, these new vectors form a basis for .            As this activity illustrates, Gram-Schmidt orthogonalization begins with a basis for a subspace of and creates an orthogonal basis for . Let's work through a second example.    Let's start with the basis which is a basis for .  To get started, we'll simply set . We construct from by subtracting its orthogonal projection onto , the line defined by . This gives   Notice that we found . Therefore, we can rewrite any linear combination of and as a linear combination of and . This tells us that In other words, and is a orthogonal basis for , the 2-dimensional subspace that is the span of and .  Finally, we form from by subtracting its orthogonal projection onto :   We can now check that is an orthogonal set. Furthermore, we have, as before, , which says that we have found a new orthogonal basis for .  To create an orthonormal basis, we form unit vectors parallel to each of the vectors in the orthogonal basis:     More generally, if we have a basis for a subspace of , the Gram-Schmidt algorithm creates an orthogonal basis for in the following way:   From here, we may form an orthonormal basis by constructing a unit vector parallel to each vector in the orthogonal basis: .    Sage can automate these computations for us. Before we begin, however, it will be helpful to understand how we can combine things using a list in Python. For instance, if the vectors v1 , v2 , and v3 form a basis for a subspace, we can bundle them together using square brackets: [v1, v2, v3] . Furthermore, we could assign this to a variable, such as basis = [v1, v2, v3] .  Evaluating the following cell will load in some special commands.    There is a command to apply the projection formula: projection(b, basis) returns the orthogonal projection of b onto the subspace spanned by basis , which is a list of vectors.    The command unit(w) returns a unit vector parallel to w .    Given a collection of vectors, say, v1 and v2 , we can form the matrix whose columns are v1 and v2 using matrix([v1, v2]).T . When given a list of vectors, Sage constructs a matrix whose rows are the given vectors. For this reason, we need to apply the transpose.     Let's now consider , the subspace of having basis    Apply the Gram-Schmidt algorithm to find an orthogonal basis , , and for .     Find , the orthogonal projection of onto .    Explain why we know that is a linear combination of the original vectors , , and and then find weights so that     Find an orthonormal basis , , for for and form the matrix whose columns are these vectors.     Find the product and explain the result.    Find the matrix that projects vectors orthogonally onto and verify that gives , the orthogonal projection that you found earlier.                    We know that is in and , , and is a basis for . We find .          since the matrix product computes the dot products of the columns of .                          .                         factorizations  Now that we've seen how the Gram-Schmidt algorithm forms an orthonormal basis for a given subspace, we will explore how the algorithm leads to an important matrix factorization known as the factorization.    Suppose that is the matrix whose columns are These vectors form a basis for , the subspace of that we encountered in . Since these vectors are the columns of , we have .    When we implemented Gram-Schmidt, we first found an orthogonal basis , , and using Use these expressions to write , , and as linear combinations of , , and .    We next normalized the orthogonal basis , , and to obtain an orthonormal basis , , and .  Write the vectors as scalar multiples of . Then use these expressions to write , , and as linear combinations of , , and .    Suppose that . Use the result of the previous part to find a vector so that .    Then find vectors and such that and .    Construct the matrix . Remembering that , explain why .    What is special about the shape of ?    Suppose that is a matrix whose columns are linearly independent. This means that the columns of form a basis for , a 6-dimensional subspace of . Suppose that we apply Gram-Schmidt orthogonalization to create an orthonormal basis whose vectors form the columns of and that we write . What are the shape of and what the shape of ?           Therefore,      so we have This leads to     Since , we have .    In the same way, we have and .    We have .     so is upper triangular.     will be and will be a upper triangular matrix.                     .     and .    We have .     is upper triangular.     will be and will be .       When the columns of a matrix are linearly independent, they form a basis for so that we can perform the Gram-Schmidt algorithm. The previous activity shows how this leads to a factorization of as the product of a matrix whose columns are an orthonormal basis for and an upper triangular matrix .    factorization  If is an matrix whose columns are linearly independent, we may write where is an matrix whose columns form an orthonormal basis for and is an upper triangular matrix.     We'll consider the matrix whose columns, which we'll denote , , and , are the basis of that we considered in . There we found an orthogonal basis , , and that satisfied   In terms of the resulting orthonormal basis , , and , we had so that   Therefore, if , we have the factorization     The value of the factorization will become clear in the next section where we use it to solve least-squares problems.    As before, we would like to use Sage to automate the process of finding and using the factorization of a matrix . Evaluating the following cell provides a command QR(A) that returns the factorization, which may be stored using, for example, Q, R = QR(A) .   Suppose that is the following matrix whose columns are linearly independent.    If , what is the shape of and ? What is special about the form of ?    Find the factorization using Q, R = QR(A) and verify that has the predicted shape and that .     Find the matrix that orthogonally projects vectors onto .    Find , the orthogonal projection of onto .    Explain why the equation must be consistent and then find .           is and is a upper triangular matrix.    We see that               Since is in , the system must be consistent. We find a solution by augmenting by and row reducing: .           is and is a upper triangular matrix.    We see that                .       In fact, Sage provides its own version of the factorization that is a bit different than the way we've developed the factorization here. For this reason, we have provided our own version of the factorization.    Summary  This section explored the Gram-Schmidt orthogonalization algorithm and how it leads to the matrix factorization when the columns of are linearly independent.   Beginning with a basis for a subspace of , the vectors form an orthogonal basis for .    We may scale each vector appropriately to obtain an orthonormal basis .    Expressing the Gram-Schmidt algorithm in matrix form shows that, if the columns of are linearly independent, then we can write , where the columns of form an orthonormal basis for and is upper triangular.         Suppose that a subspace of has a basis formed by    Find an orthogonal basis for .    Find an orthonormal basis for .    Find the matrix that projects vectors orthogonally onto .    Find the orthogonal projection of onto .           and      and                      and      and                    Find the factorization of .    Applying Gram-Schmidt, we have and , which leads to and . It therefore follows that and .  This leads to where and .     and       Consider the basis of given by the vectors     Apply the Gram-Schmit orthogonalization algorithm to find an orthonormal basis , , for .    If is the whose columns are , , and , find the factorization of .    Suppose that we want to solve the equation , which we can rewrite as .   If we set , the equation becomes . Explain how to solve the equation in a computationally efficient manner.    Explain how to solve the equation in a computationally efficient manner.    Find the solution by first solving and then .             We find that             Since , we have .     is upper triangular so this equation can be solved using back substitution.                                .     is upper triangular                 Consider the vectors and the subspace of that they span.    Find an orthonormal basis for .    Find the matrix that projects vectors orthogonally onto .    Find , the orthogonal projection of onto .    Express as a linear combination of , , and .          Applying Gram-Schmidt gives us     Let be the matrix whose columns are the orthonormal basis that results from Gram-Schmidt. Then                                              Consider the set of vectors    What happens when we apply the Gram-Schmit orthogonalization algorithm?    Why does the algorithm fail to produce an orthogonal basis for ?          We find Since , this does not produce a basis for .    The vector so this set of vectors is linearly dependent. Since is in the span of and , projecting into that subspace gives so that .          We find .    This set of vectors is linearly dependent.         Suppose that is a matrix with linearly independent columns and having the factorization . Determine whether the following statements are true or false and explain your thinking.   It follows that .    The matrix is invertible.    The product projects vectors orthogonally onto .    The columns of are an orthogonal basis for .    The orthogonal complement .          True. Since , we have .    True. Since is upper triangular and the diagonal entries of are the lengths of the nonzero vectors , we have , which means that is invertible.    False, because .    True. In fact, they are an orthonormal basis for .    True. If , then for every vector in an orthonormal basis of . Therefore, is orthogonal to .         True  True  False  True  True        Suppose we have the factorization , where is a matrix.   What is the shape of the product ? Explain the significance of this product.    What is the shape of the product ? Explain the significance of this product.    What is the shape of the matrix ?    If is a diagonal matrix, what can you say about the columns of ?           is and projects vectors orthogonally onto .     is the identity matrix because the product computes dot products between the columns of .     is a upper triangular matrix.    The columns of form an orthogonal set.                         They form an orthogonal set.         Suppose we have the factorization where the columns of are and the columns of are .   How can the matrix product be expressed in terms of dot products?    How can the matrix product be expressed in terms of dot products?    Explain why .    Explain why the dot products .          The entries of are the dot products .    The entries of are the dot products .         This follows from the previous parts of this exercise.                         This follows from the previous parts of this exercise.        "
+},
+{
+  "id": "ula-preview-6-4",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#ula-preview-6-4",
+  "type": "Preview Activity",
+  "number": "6.4.1",
+  "title": "",
+  "body": "  Suppose we have a basis for consisting of the vectors as shown in . Notice that this basis is not orthogonal.     Two vectors in the two dimensional coordinate plane that are not orthogonal to one another.   Two vectors and against a standard coordinate grid and set of axes.     A basis for .      Find the vector that is the orthogonal projection of onto the line defined by .     .      Explain why is orthogonal to .    The orthogonal projection is defined so that is orthogonal to .      Define the new vectors and and sketch them in . Explain why and define an orthogonal basis for .     A two dimensional coordinate grid and set of axes.   A coordinate grid and set of axes. The horizontal and vertical ranges run from to .     Sketch the new basis and .      and are othogonal, which can be checked with the dot product.      Write the vector as a linear combination of and .    The projection formula gives .      Scale the vectors and to produce an orthonormal basis and for .     and .    "
+},
+{
+  "id": "fig-proj-orthog",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#fig-proj-orthog",
+  "type": "Figure",
+  "number": "6.4.3",
+  "title": "",
+  "body": "   Orthogonally projecting a three dimensional vector onto a plane.   Two orthogonal vectors and and the plane they define in three dimensions. A vector and its orthogonal projection onto is shown along with the vector , which is orthogonal to .     If is the orthogonal projection of onto , then is orthogonal to .  "
+},
+{
+  "id": "activity-gram-schmidt",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#activity-gram-schmidt",
+  "type": "Activity",
+  "number": "6.4.2",
+  "title": "",
+  "body": "  Suppose that is a three-dimensional subspace of with basis: We can see that this basis is not orthogonal by noting that . Our goal is to create an orthogonal basis , , and for .  To begin, we declare that , and we call the line defined by .      Find the vector that is the orthogonal projection of onto , the line defined by .    Form the vector and verify that it is orthogonal to .    Explain why by showing that any linear combination of and can be written as a linear combination of and and vice versa.    The vectors and are an orthogonal basis for a two-dimensional subspace of . Find the vector that is the orthogonal projection of onto .    Verify that is orthogonal to both and .    Explain why , , and form an orthogonal basis for .    Now find an orthonormal basis for .           .         We have and . Therefore, a linear combination of and can be rewritten as In the same way, and so any linear combination of and can be rewritten as a linear combination of and .    By the Projection Formula, .         We can check that , , and form an orthogonal set. Since can be written in terms of and vice-versa, these new vectors form a basis for .                .         We have and so a linear combination of and can be rewritten as a linear combination of and .     .         Since can be written in terms of and vice-versa, these new vectors form a basis for .           "
+},
+{
+  "id": "example-gram-schmidt",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#example-gram-schmidt",
+  "type": "Example",
+  "number": "6.4.4",
+  "title": "",
+  "body": "  Let's start with the basis which is a basis for .  To get started, we'll simply set . We construct from by subtracting its orthogonal projection onto , the line defined by . This gives   Notice that we found . Therefore, we can rewrite any linear combination of and as a linear combination of and . This tells us that In other words, and is a orthogonal basis for , the 2-dimensional subspace that is the span of and .  Finally, we form from by subtracting its orthogonal projection onto :   We can now check that is an orthogonal set. Furthermore, we have, as before, , which says that we have found a new orthogonal basis for .  To create an orthonormal basis, we form unit vectors parallel to each of the vectors in the orthogonal basis:    "
+},
+{
+  "id": "sec-gram-schmidt-3-10",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-3-10",
+  "type": "Activity",
+  "number": "6.4.3",
+  "title": "",
+  "body": "  Sage can automate these computations for us. Before we begin, however, it will be helpful to understand how we can combine things using a list in Python. For instance, if the vectors v1 , v2 , and v3 form a basis for a subspace, we can bundle them together using square brackets: [v1, v2, v3] . Furthermore, we could assign this to a variable, such as basis = [v1, v2, v3] .  Evaluating the following cell will load in some special commands.    There is a command to apply the projection formula: projection(b, basis) returns the orthogonal projection of b onto the subspace spanned by basis , which is a list of vectors.    The command unit(w) returns a unit vector parallel to w .    Given a collection of vectors, say, v1 and v2 , we can form the matrix whose columns are v1 and v2 using matrix([v1, v2]).T . When given a list of vectors, Sage constructs a matrix whose rows are the given vectors. For this reason, we need to apply the transpose.     Let's now consider , the subspace of having basis    Apply the Gram-Schmidt algorithm to find an orthogonal basis , , and for .     Find , the orthogonal projection of onto .    Explain why we know that is a linear combination of the original vectors , , and and then find weights so that     Find an orthonormal basis , , for for and form the matrix whose columns are these vectors.     Find the product and explain the result.    Find the matrix that projects vectors orthogonally onto and verify that gives , the orthogonal projection that you found earlier.                    We know that is in and , , and is a basis for . We find .          since the matrix product computes the dot products of the columns of .                          .                     "
+},
+{
+  "id": "sec-gram-schmidt-4-3",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-4-3",
+  "type": "Activity",
+  "number": "6.4.4",
+  "title": "",
+  "body": "  Suppose that is the matrix whose columns are These vectors form a basis for , the subspace of that we encountered in . Since these vectors are the columns of , we have .    When we implemented Gram-Schmidt, we first found an orthogonal basis , , and using Use these expressions to write , , and as linear combinations of , , and .    We next normalized the orthogonal basis , , and to obtain an orthonormal basis , , and .  Write the vectors as scalar multiples of . Then use these expressions to write , , and as linear combinations of , , and .    Suppose that . Use the result of the previous part to find a vector so that .    Then find vectors and such that and .    Construct the matrix . Remembering that , explain why .    What is special about the shape of ?    Suppose that is a matrix whose columns are linearly independent. This means that the columns of form a basis for , a 6-dimensional subspace of . Suppose that we apply Gram-Schmidt orthogonalization to create an orthonormal basis whose vectors form the columns of and that we write . What are the shape of and what the shape of ?           Therefore,      so we have This leads to     Since , we have .    In the same way, we have and .    We have .     so is upper triangular.     will be and will be a upper triangular matrix.                     .     and .    We have .     is upper triangular.     will be and will be .      "
+},
+{
+  "id": "prop-qr",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#prop-qr",
+  "type": "Proposition",
+  "number": "6.4.5",
+  "title": "<span class=\"process-math\">\\(QR\\)<\/span> factorization.",
+  "body": "  factorization  If is an matrix whose columns are linearly independent, we may write where is an matrix whose columns form an orthonormal basis for and is an upper triangular matrix.  "
+},
+{
+  "id": "sec-gram-schmidt-4-6",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-4-6",
+  "type": "Example",
+  "number": "6.4.6",
+  "title": "",
+  "body": "  We'll consider the matrix whose columns, which we'll denote , , and , are the basis of that we considered in . There we found an orthogonal basis , , and that satisfied   In terms of the resulting orthonormal basis , , and , we had so that   Therefore, if , we have the factorization    "
+},
+{
+  "id": "sec-gram-schmidt-4-8",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-4-8",
+  "type": "Activity",
+  "number": "6.4.5",
+  "title": "",
+  "body": "  As before, we would like to use Sage to automate the process of finding and using the factorization of a matrix . Evaluating the following cell provides a command QR(A) that returns the factorization, which may be stored using, for example, Q, R = QR(A) .   Suppose that is the following matrix whose columns are linearly independent.    If , what is the shape of and ? What is special about the form of ?    Find the factorization using Q, R = QR(A) and verify that has the predicted shape and that .     Find the matrix that orthogonally projects vectors onto .    Find , the orthogonal projection of onto .    Explain why the equation must be consistent and then find .           is and is a upper triangular matrix.    We see that               Since is in , the system must be consistent. We find a solution by augmenting by and row reducing: .           is and is a upper triangular matrix.    We see that                .      "
+},
+{
+  "id": "sec-gram-schmidt-6-1",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-6-1",
+  "type": "Exercise",
+  "number": "6.4.4.1",
+  "title": "",
+  "body": "  Suppose that a subspace of has a basis formed by    Find an orthogonal basis for .    Find an orthonormal basis for .    Find the matrix that projects vectors orthogonally onto .    Find the orthogonal projection of onto .           and      and                      and      and                 "
+},
+{
+  "id": "sec-gram-schmidt-6-2",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-6-2",
+  "type": "Exercise",
+  "number": "6.4.4.2",
+  "title": "",
+  "body": "  Find the factorization of .    Applying Gram-Schmidt, we have and , which leads to and . It therefore follows that and .  This leads to where and .     and    "
+},
+{
+  "id": "sec-gram-schmidt-6-3",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-6-3",
+  "type": "Exercise",
+  "number": "6.4.4.3",
+  "title": "",
+  "body": "  Consider the basis of given by the vectors     Apply the Gram-Schmit orthogonalization algorithm to find an orthonormal basis , , for .    If is the whose columns are , , and , find the factorization of .    Suppose that we want to solve the equation , which we can rewrite as .   If we set , the equation becomes . Explain how to solve the equation in a computationally efficient manner.    Explain how to solve the equation in a computationally efficient manner.    Find the solution by first solving and then .             We find that             Since , we have .     is upper triangular so this equation can be solved using back substitution.                                .     is upper triangular              "
+},
+{
+  "id": "sec-gram-schmidt-6-4",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-6-4",
+  "type": "Exercise",
+  "number": "6.4.4.4",
+  "title": "",
+  "body": "  Consider the vectors and the subspace of that they span.    Find an orthonormal basis for .    Find the matrix that projects vectors orthogonally onto .    Find , the orthogonal projection of onto .    Express as a linear combination of , , and .          Applying Gram-Schmidt gives us     Let be the matrix whose columns are the orthonormal basis that results from Gram-Schmidt. Then                                           "
+},
+{
+  "id": "sec-gram-schmidt-6-5",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-6-5",
+  "type": "Exercise",
+  "number": "6.4.4.5",
+  "title": "",
+  "body": "  Consider the set of vectors    What happens when we apply the Gram-Schmit orthogonalization algorithm?    Why does the algorithm fail to produce an orthogonal basis for ?          We find Since , this does not produce a basis for .    The vector so this set of vectors is linearly dependent. Since is in the span of and , projecting into that subspace gives so that .          We find .    This set of vectors is linearly dependent.      "
+},
+{
+  "id": "sec-gram-schmidt-6-6",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-6-6",
+  "type": "Exercise",
+  "number": "6.4.4.6",
+  "title": "",
+  "body": "  Suppose that is a matrix with linearly independent columns and having the factorization . Determine whether the following statements are true or false and explain your thinking.   It follows that .    The matrix is invertible.    The product projects vectors orthogonally onto .    The columns of are an orthogonal basis for .    The orthogonal complement .          True. Since , we have .    True. Since is upper triangular and the diagonal entries of are the lengths of the nonzero vectors , we have , which means that is invertible.    False, because .    True. In fact, they are an orthonormal basis for .    True. If , then for every vector in an orthonormal basis of . Therefore, is orthogonal to .         True  True  False  True  True     "
+},
+{
+  "id": "sec-gram-schmidt-6-7",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-6-7",
+  "type": "Exercise",
+  "number": "6.4.4.7",
+  "title": "",
+  "body": "  Suppose we have the factorization , where is a matrix.   What is the shape of the product ? Explain the significance of this product.    What is the shape of the product ? Explain the significance of this product.    What is the shape of the matrix ?    If is a diagonal matrix, what can you say about the columns of ?           is and projects vectors orthogonally onto .     is the identity matrix because the product computes dot products between the columns of .     is a upper triangular matrix.    The columns of form an orthogonal set.                         They form an orthogonal set.      "
+},
+{
+  "id": "sec-gram-schmidt-6-8",
+  "level": "2",
+  "url": "sec-gram-schmidt.html#sec-gram-schmidt-6-8",
+  "type": "Exercise",
+  "number": "6.4.4.8",
+  "title": "",
+  "body": "  Suppose we have the factorization where the columns of are and the columns of are .   How can the matrix product be expressed in terms of dot products?    How can the matrix product be expressed in terms of dot products?    Explain why .    Explain why the dot products .          The entries of are the dot products .    The entries of are the dot products .         This follows from the previous parts of this exercise.                         This follows from the previous parts of this exercise.      "
+},
+{
+  "id": "sec-least-squares",
+  "level": "1",
+  "url": "sec-least-squares.html",
+  "type": "Section",
+  "number": "6.5",
+  "title": "Orthogonal least squares",
+  "body": " Orthogonal least squares   Suppose we collect some data when performing an experiment and plot it as shown on the left of . Notice that there is no line on which all the points lie; in fact, it would be surprising if there were since we can expect some uncertainty in the measurements recorded. There does, however, appear to be a line, as shown on the right, on which the points almost lie.     A scatter plot of two dimensional data points that approximately lie on a line.   A scatter plot of two dimensional data points that approximately lie on a line.     A scatter plot of two dimensional data points and a line on which they approximately lie.   A scatter plot of two dimensional data points and a line on which they approximately lie.     A collection of points and a line approximating the linear relationship implied by them.   In this section, we'll explore how the techniques developed in this chapter enable us to find the line that best approximates the data. More specifically, we'll see how the search for a line passing through the data points leads to an inconsistent system . Since we are unable to find a solution, we instead seek the vector where is as close as possible to . Orthogonal projection gives us just the right tool for doing this.     Is there a solution to the equation where and are such that .     The reduced row echelon form shows that there is no solution.      We know that and form a basis for . Find an orthogonal basis for .    Applying Gram-Schmidt, we find an orthogonal basis consisting of and .      Find the orthogonal projection of onto .    The projection formula gives .      Explain why the equation must be consistent and then find its solution.    The equation is consistent because is in . We find the solution .       A first example  When we've encountered inconsistent systems in the past, we've simply said there is no solution and moved on. The preview activity, however, shows how we can find approximate solutions to an inconsistent system: if there are no solutions to , we instead solve the consistent system , the orthogonal projection of onto . As we'll see, this solution is, in a specific sense, the best possible.    Suppose we have three data points , , and and that we would like to find a line passing through them.   Plot these three points in . Are you able to draw a line that passes through all three points?    A two dimensional coordinate grid and set of axes.   A standard coordinate grid and set of axes. The horizontal and vertical ranges run from to .     Plot the three data points here.      Remember that the equation of a line can be written as where is the slope and is the -intercept. We will try to find and so that the three points lie on the line.  The first data point gives an equation for and . In particular, we know that when , then so we have or . Use the other two data points to create a linear system describing and .    We have obtained a linear system having three equations, one from each data point, for the two unknowns and . Identify a matrix and vector so that the system has the form , where .  Notice that the unknown vector describes the line that we seek.    Is there a solution to this linear system? How does this question relate to your attempt to draw a line through the three points above?     Since this system is inconsistent, we know that is not in the column space . Find an orthogonal basis for and use it to find the orthogonal projection of onto .    Since is in , the equation is consistent. Find its solution and sketch the line in . We say that this is the line of best fit.          After plotting the points, we see that it's not possible to draw a line through all three points.    We have the equations     We have and .    Finding the reduced row echelon form of the associated augmented matrix tells us this is an inconsistent system. Since a solution would describe a line passing through the three points, we should expect this.    Applying Gram-Schmidt gives us the orthogonal basis and . Projecting onto gives .    Solving the equation gives , which describes a line having vertical intercept and the slope . This line is shown in .      The line that best approximates the three data points.           It's not possible to draw a line through all three points.    We have the equations     We have and .    This linear system is inconsistent.     .     . This line is shown in .      The line that best approximates the three data points.        This activity illustrates the idea behind a technique known as orthogonal least squares , which we have been working toward throughout this chapter. If the data points are denoted as , we construct the matrix and vector as With the vector representing the line , we see that the equation describes a line passing through all the data points. In our activity, it is visually apparent that there is no such line, which agrees with the fact that the equation is inconsistent.  Remember that , the orthogonal projection of onto , is the closest vector in to . Therefore, when we solve the equation , we are finding the vector so that is as close to as possible. Let's think about what this means within the context of this problem.  The difference so that the square of the distance between and is Our approach finds the values for and that make this sum of squares as small as possible, which is why we call this a least-squares problem.  Drawing the line defined by the vector , the quantity reflects the vertical distance between the line and the data point , as shown in . Seen in this way, the square of the distance is a measure of how much the line defined by the vector misses the data points. The solution to the least-squares problem is the line that misses the data points by the smallest amount possible.     Three data points, the least squares line, and vertical lines from the points to the line.   Three data points from the last activity and the line given as the solution to the least squares problem. There are vertical line segments from each of the data points to the least squares line that demonstrate the degree to which the line misses the points.     The solution of the least-squares problem and the vertical distances between the line and the data points.     Solving least-squares problems  Now that we've seen an example of what we're trying to accomplish, let's put this technique into a more general framework.  Given an inconsistent system , we seek the vector that minimizes the distance from to . In other words, satisfies , where is the orthogonal projection of onto the column space . We know the equation is consistent since is in , and we know there is only one solution if we assume that the columns of are linearly independent.  We will usually denote the solution of by and call this vector the least-squares approximate solution of to distinguish it from a (possibly non-existent) solution of .  There is an alternative method for finding that does not involve first finding the orthogonal projection . Remember that is defined by the fact that is orthogonal to . In other words, is in the orthogonal complement , which tells us is the same as . Since is in , it follows that Because the least-squares approximate solution is the vector such that , we can rearrange this equation to see that  normal equation This equation is called the normal equation , and we have the following proposition.    If the columns of are linearly independent, then there is a unique least-squares approximate solution to the equation given by the normal equation      Consider the equation with matrix and vector . Since this equation is inconsistent, we will find the least-squares approximate solution by solving the normal equation , which has the form and the solution .     The rate at which a cricket chirps is related to the outdoor temperature, as reflected in some experimental data that we'll study in this activity. The chirp rate is expressed in chirps per second while the temperature is in degrees Fahrenheit. Evaluate the following cell to load the data: Evaluating this cell also provides:   the vectors chirps and temps formed from the columns of the dataset.    the command onesvec(n) , which creates an -dimensional vector whose entries are all one.    Remember that you can form a matrix whose columns are the vectors v1 and v2 with matrix([v1, v2]).T .     We would like to represent this relationship by a linear function    Use the first data point to write an equation involving and .    Suppose that we represent the unknowns using a vector . Use the 15 data points to create the matrix and vector so that the linear system describes the unknown vector .     Write the normal equations ; that is, find the matrix and the vector .    Solve the normal equations to find , the least-squares approximate solution to the equation . Call your solution xhat since x has another meaning in Sage.   What are the values of and that you found?    If the chirp rate is 22 chirps per second, what is your prediction for the temperature?  You can plot the data and your line, assuming you called the solution xhat , using the cell below.           We have the equation .     is the matrix whose first column consists only of 1's and whose second column is the vector of chirp rates. The vector is the vector of temperatures.     and      .    The predicted temperature is degrees.           .     is the matrix whose first column consists only of 1's and whose second column is the vector of chirp rates. The vector is the vector of temperatures.     and      .     degrees.       This example demonstrates an approach, called linear regression , in which a collection of data is modeled using a linear function found by solving a least-squares problem. Once we have the linear function that best fits the data, we can make predictions about situations that we haven't encountered in the data.  If we're going to use our function to make predictions, it's natural to ask how much confidence we have in these predictions. This is a statistical question that leads to a rich and well-developed theory For example, see Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani. An Introduction to Statistical Learning: with Applications in R. Springer, 2013. , which we won't explore in much detail here. However, there is one simple measure of how well our linear function fits the data that is known as the coefficient of determination and denoted by .  We have seen that the square of the distance measures the amount by which the line fails to pass through the data points. When the line is close to the data points, we expect this number to be small. However, the size of this measure depends on the scale of the data. For instance, the two lines shown in seem to fit the data equally well, but is 100 times larger on the right.     Three data points, the least squares line, and vertical line segments from the points to the line.   The three data points from the activity, the least squares line, and vertical line segments from the data points to the line indicating the degree to which the line misses the points.     A similar set of three data points whose coordinates have been multiplied by a factor of 10.   This diagram is similar to the previous one, except the coordinates of the data points have been scaled by a factor of . For example, the point in the original data set has been scaled to in this set. The least squares line and vertical line segments from the points to the line also appear. The key observation is that the two diagrams look exactly the same except for the scale on the axes.     The lines appear to fit equally well in spite of the fact that differs by a factor of 100.   The coefficient of determination is defined by normalizing so that it is independent of the scale. Recall that we described how to demean a vector in : given a vector , we obtain by subtracting the average of the components from each component.   Coefficient of determination  coefficient of determination  R squared   The coefficient of determination is where is the vector obtained by demeaning .    A more complete explanation of this definition relies on the concept of variance, which we explore in and the next chapter. For the time being, it's enough to know that and that the closer is to 1, the better the line fits the data. In our original example, illustrated in , we find that , and in our study of cricket chirp rates, we have . However, assessing the confidence we have in predictions made by solving a least-squares problem can require considerable thought, and it would be naive to rely only on the value of .    Using factorizations  As we've seen, the least-squares approximate solution to may be found by solving the normal equation , and this can be a practical strategy for some problems. However, this approach can be problematic as small rounding errors can accumulate and lead to inaccurate final results.  As the next activity demonstrates, there is an alternate method for finding the least-squares approximate solution using a factorization of the matrix , and this method is preferable as it is numerically more reliable.       Suppose we are interested in finding the least-squares approximate solution to the equation and that we have the factorization . Explain why the least-squares approximate solution is given by solving     Multiply both sides of the second expression by and explain why   Since is upper triangular, this is a relatively simple equation to solve using back substitution, as we saw in . We will therefore write the least-squares approximate solution as and put this to use in the following context.    Brozak’s formula, which is used to calculate a person's body fat index , is where denotes a person's body density in grams per cubic centimeter. Obtaining an accurate measure of is difficult, however, because it requires submerging the person in water and measuring the volume of water displaced. Instead, we will gather several other body measurements, which are more easily obtained, and use it to predict .  For instance, suppose we take 10 patients and measure their weight in pounds, height in inches, abdomen in centimeters, wrist circumference in centimeters, neck circumference in centimeters, and . Evaluating the following cell loads and displays the data. In addition, that cell provides:   vectors weight , height , abdomen , wrist , neck , and BFI formed from the columns of the dataset.    the command onesvec(n) , which returns an -dimensional vector whose entries are all one.    the command QR(A) that returns the factorization of as Q, R = QR(A) .    the command demean(v) , which returns the demeaned vector .     We would like to find the linear function that best fits the data.  Use the first data point to write an equation for the parameters .    Describe the linear system for these parameters. More specifically, describe how the matrix and the vector are formed.    Construct the matrix and find its factorization in the cell below.     Find the least-squares approximate solution by solving the equation . You may want to use N(xhat) to display a decimal approximation of the vector. What are the parameters that best fit the data?    Find the coefficient of determination for your parameters. What does this imply about the quality of the fit?     Suppose a person's measurements are: weight 190, height 70, abdomen 90, wrist 18, and neck 35. Estimate this person's .          The columns of form an orthonormal basis for so that . The equation then becomes .    Since , we have , which gives .          is the matrix whose columns are a vector of all 1's followed by the vectors of weights, heights, abdominal, wrist, and neck measurements. The vector is the vector of BFI readings.     is a matrix and is a upper triangular matrix.    We find that          Evaluating           Use the fact that .    Use the fact that .          is the matrix whose columns are a vector of all 1's followed by the vectors of weights, heights, abdominal, wrist, and neck measurements. The vector is the vector of BFI readings.     is a matrix and is a upper triangular matrix.    We find that          Evaluating        To summarize, we have seen that    If the columns of are linearly independent and we have the factorization , then the least-squares approximate solution to the equation is given by       Polynomial Regression  In the examples we've seen so far, we have fit a linear function to a dataset. Sometimes, however, a polynomial, such as a quadratic function, may be more appropriate. It turns out that the techniques we've developed in this section are still useful as the next activity demonstrates.       Suppose that we have a small dataset containing the points , , , and , such as appear when the following cell is evaluated. In addition to loading and plotting the data, evaluating that cell provides the following commands:    Q, R = QR(A) returns the factorization of .     demean(v) returns the demeaned vector .     Let's fit a quadratic function of the form to this dataset.  Write four equations, one for each data point, that describe the coefficients , , and .    Express these four equations as a linear system where .  Find the factorization of and use it to find the least-squares approximate solution .     Use the parameters , , and that you found to write the quadratic function that fits the data. You can plot this function, along with the data, by entering your function in the place indicated below.     What is your predicted value when ?    Find the coefficient of determination for the quadratic function. What does this say about the quality of the fit?    Now fit a cubic polynomial of the form to this dataset.     Find the coefficient of determination for the cubic function. What does this say about the quality of the fit?    What do you notice when you plot the cubic function along with the data? How does this reflect the value of that you found?           We have the equations     With and , we find     The quadratic function is .    The predicted value is .         We find .     , which means that we have a perfect fit.    The graph of the cubic function passes through each data point.          We have the equations           .     .          .         The graph of the cubic function passes through each data point.       The matrices that you created in the last activity when fitting a quadratic and cubic function to a dataset have a special form. In particular, if the data points are labeled and we seek a degree polynomial, then This is called a Vandermonde matrix of degree .    This activity explores a dataset describing Arctic sea ice and that comes from Sustainability Math.   Evaluating the cell below will plot the extent of Arctic sea ice, in millions of square kilometers, during the twelve months of 2012. In addition, you have access to a few special variables and commands:    month is the vector of month values and ice is the vector of sea ice values from the table above.     vandermonde(x, k) constructs the Vandermonde matrix of degree using the points in the vector x .     Q, R = QR(A) provides the factorization of .     demean(v) returns the demeaned vector .        Find the vector , the least-squares approximate solution to the linear system that results from fitting a degree 5 polynomial to the data.     If your result is stored in the variable xhat , you may plot the polynomial and the data together using the following cell.     Find the coefficient of determination for this polynomial fit.    Repeat these steps to fit a degree 8 polynomial to the data, plot the polynomial with the data, and find .     Repeat one more time by fitting a degree 11 polynomial to the data, creating a plot, and finding .   It's certainly true that higher degree polynomials fit the data better, as seen by the increasing values of , but that's not always a good thing. For instance, when , you may notice that the graph of the polynomial wiggles a little more than we would expect. In this case, the polynomial is trying too hard to fit the data, which usually contains some uncertainty, especially if it's obtained from measurements. The error built in to the data is called noise, and its presence means that we shouldn't expect our polynomial to fit the data perfectly. When we choose a polynomial whose degree is too high, we give the noise too much weight in the model, which leads to some undesirable behavior, like the wiggles in the graph.  Fitting the data with a polynomial whose degree is too high is called overfitting , a phenomenon that can appear in many machine learning applications. Generally speaking, we would like to choose large enough to capture the essential features of the data but not so large that we overfit and build the noise into the model. There are ways to determine the optimal value of , but we won't pursue that here.    Choosing a reasonable value of , estimate the extent of Arctic sea ice at month 6.5, roughly at the Summer Solstice.               The fifth degree polynomial fits the data fairly well.          .          seems like a good choice, and this gives the prediction of million square kilometers of sea ice.               The fifth degree polynomial fits the data fairly well.          .          million square kilometers of sea ice.         Summary  This section introduced some types of least-squares problems and a framework for working with them.   Given an inconsistent system , we find , the least-squares approximate solution, by requiring that be as close to as possible. In other words, where is the orthogonal projection of onto .    One way to find is by solving the normal equations This is not our preferred method since numerical problems can arise.    A second way to find uses a factorization of . If , then and finding is computationally feasible since is upper triangular.    This technique may be applied widely and is useful for modeling data. We saw examples in this section where linear functions of several input variables and polynomials provided effective models for different datasets.    A simple measure of the quality of the fit is the coefficient of determination though some additional thought should be given in real applications.       Evaluating the following cell loads in some commands that will be helpful in the following exercises. In particular, there are commands:    QR(A) that returns the factorization of A as Q, R = QR(A) ,     onesvec(n) that returns the -dimensional vector whose entries are all 1,     demean(v) that demeans the vector v ,     vandermonde(x, k) that returns the Vandermonde matrix of degree formed from the components of the vector x , and     plot_model(xhat, data) that plots the data and the model xhat .        Suppose we write the linear system as .   Find an orthogonal basis for .    Find , the orthogonal projection of onto .    Find a solution to the linear system .          Applying Gram-Schmidt gives the orthogonal basis     Applying the Projection Formula gives .    Solving the linear system gives .           and      .     .         Consider the data in .  A dataset with four points.            1  1    2  1    3  1    4  2        Set up the linear system that describes the line passing through these points.    Write the normal equations that describe the least-squares approximate solution to .    Find the least-squares approximate solution and plot the data and the resulting line.    What is your predicted -value when ?    Find the coefficient of determination .          The matrix and the vector .              The predicted value is .                , .               .              Consider the four points in .    Set up a linear system that describes a quadratic function passing through the points.    Use a factorization to find the least-squares approximate solution and plot the data and the graph of the resulting quadratic function.    What is your predicted -value when ?    Find the coefficient of determination .          We have the Vandermonde matrix and vector .    The quadratic function is .    This gives the predicted value .              Consider the data in .  A simple dataset               1  1  4.2    1  2  3.3    2  1  5.9    2  2  5.1    3  2  7.5    3  3  6.3        Set up a linear system that describes the relationship     Find the least-squares approximate solution .    What is your predicted -value when and ?    Find the coefficient of determination .                     .                          .              Determine whether the following statements are true or false and explain your thinking.   If is consistent, then is a solution to .    If , then the least-squares approximate solution is also a solution to the original equation .    Given the factorization , we have .    A factorization provides a method for finding the least-squares approximate solution to that is more reliable than solving the normal equations.    A solution to is the least-squares approximate solution to .          True. If , then is in so .    True. If , then . Therefore, .    False. The product rather than the matrix that projects vectors orthogonally onto .    True, numerical issues are more likely to arise when solving the normal equations.    False. The normal equations gives the least-squares approximate solution.         True  True  False  True  False        Explain your response to the following questions.   If , what does this say about the vector ?    If the columns of are orthonormal, how can you easily find the least-squares approximate solution to ?          Since and , we know that . This says that is in .    In this case, , which means we have . If we multiply both sides by , we have .           is in .     .         The following cell loads in some data showing the number of people in Bangladesh living without electricity over 27 years. It also defines vectors year , which records the years in the dataset, and people , which records the number of people.    Suppose we want to write where is the year and is the number of people. Construct the matrix and vector so that the linear system describes the vector .    Using a factorization of , find the values of and in the least-squares approximate solution .    What is the coefficient of determination and what does this tell us about the quality of the approximation?    What is your prediction for the number of people living without electricity in 1985?    Estimate the year in which there will be no people living without electricity.          The matrix will be the matrix whose first column is all 1's and whose second column is the vector of years. The vector is the vector that records the number of people.    We obtain .          .    Solve to obtain 2045.          The matrix will be the matrix whose first column is all 1's and whose second column is the vector of years. The vector is the vector that records the number of people.     .          .    2045         This problem concerns a dataset describing planets in our Solar system. For each planet, we have the length of the semi-major axis, essentially the distance from the planet to the Sun in AU (astronomical units), and the period , the length of time in years required to complete one orbit around the Sun.  We would like to model this data using the function where and are parameters we need to determine. Since this isn't a linear function, we will transform this relationship by taking the natural logarithm of both sides to obtain   Evaluating the following cell loads the dataset and defines two vectors logaxis , whose components are , and logperiod , whose components are .    Construct the matrix and vector so that the solution to is the vector .    Find the least-squares approximate solution . What does this give for the values of and ?    Find the coefficient of determination . What does this tell us about the quality of the approximation?   Suppose that the orbit of an asteroid has a semi-major axis whose length is AU. Estimate the period of the asteroid's orbit.   Halley's Comet has a period of years. Estimate the length of its semi-major axis.          The matrix is the matrix whose first column is all 1's and whose second column is the vector of the logarithms of the semi-major axes. The vector is the vector that records the logarithms of the periods.    We find so that and . This means that .     , which means that we have a very good fit because this data reflects a physical law.     years.    The expression means that . Solving for AU.          The matrix is the matrix whose first column is all 1's and whose second column is the vector of the logarithms of the semi-major axes. The vector is the vector that records the logarithms of the periods.     and .          years.     AU.         Evaluating the following cell loads a dataset describing the temperature in the Earth's atmosphere at various altitudes. There are also two vectors altitude , expressed in kilometers, and temperature , in degrees Celsius.    Describe how to form the matrix and vector so that the linear system describes a degree polynomial fitting the data.    After choosing a value of , construct the matrix and vector , and find the least-squares approximate solution .    Plot the polynomial and data using plot_model(xhat, data) .    Now examine what happens as you vary the degree of the polynomial . Choose an appropriate value of that seems to capture the most important features of the data while avoiding overfitting, and explain your choice.    Use your value of to estimate the temperature at an altitude of 55 kilometers.          The matrix will be the Vandermonde matrix of degree using the altitude readings while is the vector of temperatures.     appears to give a good fit without overfitting.    We have     A small value of does not adequately track important features of the data. If we increase too far, the graph tries too hard to match the data, and we see spurious features in the graph.     seems to work well. With this function, we estimate the temperature to be degrees Celsius.          The matrix will be the Vandermonde matrix of degree using the altitude readings while is the vector of temperatures.     appears to give a good fit without overfitting.    We have     A small value of does not adequately track important features of the data. If we increase too far, the graph tries too hard to match the data, and we see spurious features in the graph.    We estimate the temperature to be degrees Celsius.         The following cell loads some data describing 1057 houses in a particular real estate market. For each house, we record the living area in square feet, the lot size in acres, the age in years, and the price in dollars. The cell also defines variables area , size , age , and price . We will use linear regression to predict the price of a house given its living area, lot size, and age:    Use a factorization to find the least-squares approximate solution .    Discuss the significance of the signs of , , and .    If two houses are identical except for differing in age by one year, how would you predict that their prices compare to each another?    Find the coefficient of determination . What does this say about the quality of the fit?    Predict the price of a house whose living area is 2000 square feet, lot size is 1.5 acres, and age is 50 years.                and are positive, which means that increasing the living area or the lot size will cause the house price to increase. However, is negative, which means that an older house will cost less.    Because , we would expect a house that's one year older to cost less.     , which is far from perfect without being terrible. There are other factors that are not included in the dataset that can also influence the house price, such as number of bedrooms and the location.    We estimate .               Increasing the living area or the lot size will cause the house price to increase, but an older house will cost less.    A house that's one year older will cost about less.         We estimate .         We observed that if the columns of are linearly independent, then there is a unique least-squares approximate solution to the equation because the equation has a unique solution. We also said that is the unique solution to the normal equation without explaining why this equation has a unique solution. This exercise offers an explanation.  Assuming that the columns of are linearly independent, we would like to conclude that the equation has a unique solution.   Suppose that is a vector for which . Explain why the following argument is valid and allows us to conclude that . In other words, if , we know that .    If the columns of are linearly independent and , what do we know about the vector ?    Explain why can only happen when .    Assuming that the columns of are linearly independent, explain why has a unique solution.          Starting with the assumption that , we dot both sides of the equation with to obtain . From here, we write This says that the length of must be zero, which tells us that .    If the columns of are linearly independent, we know that the only solution to the homogeneous equation is .    The previous two parts of this exercise tell us that implies that , which implies that .    Since the only solution to the homogeneous equation is , the columns of are linearly independent, which means that has only one solution.          Use the fact that .    It must be true that .    This follows from the previous two parts of this exercise.    The columns of must be linearly independent.         This problem is about the meaning of the coefficient of determination and its connection to variance, a topic that appears in the next section. Throughout this problem, we consider the linear system and the approximate least-squares solution , where . We suppose that is an matrix, and we will denote the -dimensional vector .     Explain why , the mean of the components of , can be found as the dot product     In the examples we have seen in this section, explain why is in .    If we write , explain why and hence why the mean of the components of is zero.    The variance of an -dimensional vector is , where is the vector obtained by demeaning .  Explain why     Explain why and hence   These expressions indicate why it is sometimes said that measures the fraction of variance explained by the function we are using to fit the data. As seen in the previous exercise, there may be other features that are not recorded in the dataset that influence the quantity we wish to predict.    Explain why .           simply sums the components of .    The examples we've seen fit the data using functions that have a constant term such as . This means that will be a column of the matrix and hence in .    Since is in , any vector in , such as , will be orthogonal to .    Notice that which says that Since and are orthogonal, we have . This means that so that .     , which explains why Then     The variances are nonnegative so we have . Also,            simply sums the components of .     is a column of .     is in .    Use the fact that and are orthogonal.    This follows from .    This follow from .        "
+},
+{
+  "id": "lst-squares-intro",
+  "level": "2",
+  "url": "sec-least-squares.html#lst-squares-intro",
+  "type": "Figure",
+  "number": "6.5.1",
+  "title": "",
+  "body": "   A scatter plot of two dimensional data points that approximately lie on a line.   A scatter plot of two dimensional data points that approximately lie on a line.     A scatter plot of two dimensional data points and a line on which they approximately lie.   A scatter plot of two dimensional data points and a line on which they approximately lie.     A collection of points and a line approximating the linear relationship implied by them.  "
+},
+{
+  "id": "ula-preview-6-5",
+  "level": "2",
+  "url": "sec-least-squares.html#ula-preview-6-5",
+  "type": "Preview Activity",
+  "number": "6.5.1",
+  "title": "",
+  "body": "   Is there a solution to the equation where and are such that .     The reduced row echelon form shows that there is no solution.      We know that and form a basis for . Find an orthogonal basis for .    Applying Gram-Schmidt, we find an orthogonal basis consisting of and .      Find the orthogonal projection of onto .    The projection formula gives .      Explain why the equation must be consistent and then find its solution.    The equation is consistent because is in . We find the solution .    "
+},
+{
+  "id": "sec-least-squares-3-3",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-3-3",
+  "type": "Activity",
+  "number": "6.5.2",
+  "title": "",
+  "body": "  Suppose we have three data points , , and and that we would like to find a line passing through them.   Plot these three points in . Are you able to draw a line that passes through all three points?    A two dimensional coordinate grid and set of axes.   A standard coordinate grid and set of axes. The horizontal and vertical ranges run from to .     Plot the three data points here.      Remember that the equation of a line can be written as where is the slope and is the -intercept. We will try to find and so that the three points lie on the line.  The first data point gives an equation for and . In particular, we know that when , then so we have or . Use the other two data points to create a linear system describing and .    We have obtained a linear system having three equations, one from each data point, for the two unknowns and . Identify a matrix and vector so that the system has the form , where .  Notice that the unknown vector describes the line that we seek.    Is there a solution to this linear system? How does this question relate to your attempt to draw a line through the three points above?     Since this system is inconsistent, we know that is not in the column space . Find an orthogonal basis for and use it to find the orthogonal projection of onto .    Since is in , the equation is consistent. Find its solution and sketch the line in . We say that this is the line of best fit.          After plotting the points, we see that it's not possible to draw a line through all three points.    We have the equations     We have and .    Finding the reduced row echelon form of the associated augmented matrix tells us this is an inconsistent system. Since a solution would describe a line passing through the three points, we should expect this.    Applying Gram-Schmidt gives us the orthogonal basis and . Projecting onto gives .    Solving the equation gives , which describes a line having vertical intercept and the slope . This line is shown in .      The line that best approximates the three data points.           It's not possible to draw a line through all three points.    We have the equations     We have and .    This linear system is inconsistent.     .     . This line is shown in .      The line that best approximates the three data points.       "
+},
+{
+  "id": "fig-least-squares-def",
+  "level": "2",
+  "url": "sec-least-squares.html#fig-least-squares-def",
+  "type": "Figure",
+  "number": "6.5.5",
+  "title": "",
+  "body": "   Three data points, the least squares line, and vertical lines from the points to the line.   Three data points from the last activity and the line given as the solution to the least squares problem. There are vertical line segments from each of the data points to the least squares line that demonstrate the degree to which the line misses the points.     The solution of the least-squares problem and the vertical distances between the line and the data points.  "
+},
+{
+  "id": "sec-least-squares-4-6",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-4-6",
+  "type": "Proposition",
+  "number": "6.5.6",
+  "title": "",
+  "body": "  If the columns of are linearly independent, then there is a unique least-squares approximate solution to the equation given by the normal equation    "
+},
+{
+  "id": "sec-least-squares-4-7",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-4-7",
+  "type": "Example",
+  "number": "6.5.7",
+  "title": "",
+  "body": " Consider the equation with matrix and vector . Since this equation is inconsistent, we will find the least-squares approximate solution by solving the normal equation , which has the form and the solution .  "
+},
+{
+  "id": "sec-least-squares-4-8",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-4-8",
+  "type": "Activity",
+  "number": "6.5.3",
+  "title": "",
+  "body": "  The rate at which a cricket chirps is related to the outdoor temperature, as reflected in some experimental data that we'll study in this activity. The chirp rate is expressed in chirps per second while the temperature is in degrees Fahrenheit. Evaluate the following cell to load the data: Evaluating this cell also provides:   the vectors chirps and temps formed from the columns of the dataset.    the command onesvec(n) , which creates an -dimensional vector whose entries are all one.    Remember that you can form a matrix whose columns are the vectors v1 and v2 with matrix([v1, v2]).T .     We would like to represent this relationship by a linear function    Use the first data point to write an equation involving and .    Suppose that we represent the unknowns using a vector . Use the 15 data points to create the matrix and vector so that the linear system describes the unknown vector .     Write the normal equations ; that is, find the matrix and the vector .    Solve the normal equations to find , the least-squares approximate solution to the equation . Call your solution xhat since x has another meaning in Sage.   What are the values of and that you found?    If the chirp rate is 22 chirps per second, what is your prediction for the temperature?  You can plot the data and your line, assuming you called the solution xhat , using the cell below.           We have the equation .     is the matrix whose first column consists only of 1's and whose second column is the vector of chirp rates. The vector is the vector of temperatures.     and      .    The predicted temperature is degrees.           .     is the matrix whose first column consists only of 1's and whose second column is the vector of chirp rates. The vector is the vector of temperatures.     and      .     degrees.      "
+},
+{
+  "id": "fig-regression-scale",
+  "level": "2",
+  "url": "sec-least-squares.html#fig-regression-scale",
+  "type": "Figure",
+  "number": "6.5.8",
+  "title": "",
+  "body": "   Three data points, the least squares line, and vertical line segments from the points to the line.   The three data points from the activity, the least squares line, and vertical line segments from the data points to the line indicating the degree to which the line misses the points.     A similar set of three data points whose coordinates have been multiplied by a factor of 10.   This diagram is similar to the previous one, except the coordinates of the data points have been scaled by a factor of . For example, the point in the original data set has been scaled to in this set. The least squares line and vertical line segments from the points to the line also appear. The key observation is that the two diagrams look exactly the same except for the scale on the axes.     The lines appear to fit equally well in spite of the fact that differs by a factor of 100.  "
+},
+{
+  "id": "sec-least-squares-4-14",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-4-14",
+  "type": "Definition",
+  "number": "6.5.9",
+  "title": "Coefficient of determination.",
+  "body": " Coefficient of determination  coefficient of determination  R squared   The coefficient of determination is where is the vector obtained by demeaning .   "
+},
+{
+  "id": "activity-BFI",
+  "level": "2",
+  "url": "sec-least-squares.html#activity-BFI",
+  "type": "Activity",
+  "number": "6.5.4",
+  "title": "",
+  "body": "     Suppose we are interested in finding the least-squares approximate solution to the equation and that we have the factorization . Explain why the least-squares approximate solution is given by solving     Multiply both sides of the second expression by and explain why   Since is upper triangular, this is a relatively simple equation to solve using back substitution, as we saw in . We will therefore write the least-squares approximate solution as and put this to use in the following context.    Brozak’s formula, which is used to calculate a person's body fat index , is where denotes a person's body density in grams per cubic centimeter. Obtaining an accurate measure of is difficult, however, because it requires submerging the person in water and measuring the volume of water displaced. Instead, we will gather several other body measurements, which are more easily obtained, and use it to predict .  For instance, suppose we take 10 patients and measure their weight in pounds, height in inches, abdomen in centimeters, wrist circumference in centimeters, neck circumference in centimeters, and . Evaluating the following cell loads and displays the data. In addition, that cell provides:   vectors weight , height , abdomen , wrist , neck , and BFI formed from the columns of the dataset.    the command onesvec(n) , which returns an -dimensional vector whose entries are all one.    the command QR(A) that returns the factorization of as Q, R = QR(A) .    the command demean(v) , which returns the demeaned vector .     We would like to find the linear function that best fits the data.  Use the first data point to write an equation for the parameters .    Describe the linear system for these parameters. More specifically, describe how the matrix and the vector are formed.    Construct the matrix and find its factorization in the cell below.     Find the least-squares approximate solution by solving the equation . You may want to use N(xhat) to display a decimal approximation of the vector. What are the parameters that best fit the data?    Find the coefficient of determination for your parameters. What does this imply about the quality of the fit?     Suppose a person's measurements are: weight 190, height 70, abdomen 90, wrist 18, and neck 35. Estimate this person's .          The columns of form an orthonormal basis for so that . The equation then becomes .    Since , we have , which gives .          is the matrix whose columns are a vector of all 1's followed by the vectors of weights, heights, abdominal, wrist, and neck measurements. The vector is the vector of BFI readings.     is a matrix and is a upper triangular matrix.    We find that          Evaluating           Use the fact that .    Use the fact that .          is the matrix whose columns are a vector of all 1's followed by the vectors of weights, heights, abdominal, wrist, and neck measurements. The vector is the vector of BFI readings.     is a matrix and is a upper triangular matrix.    We find that          Evaluating       "
+},
+{
+  "id": "sec-least-squares-5-6",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-5-6",
+  "type": "Proposition",
+  "number": "6.5.10",
+  "title": "",
+  "body": "  If the columns of are linearly independent and we have the factorization , then the least-squares approximate solution to the equation is given by    "
+},
+{
+  "id": "sec-least-squares-6-3",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-6-3",
+  "type": "Activity",
+  "number": "6.5.5",
+  "title": "",
+  "body": "     Suppose that we have a small dataset containing the points , , , and , such as appear when the following cell is evaluated. In addition to loading and plotting the data, evaluating that cell provides the following commands:    Q, R = QR(A) returns the factorization of .     demean(v) returns the demeaned vector .     Let's fit a quadratic function of the form to this dataset.  Write four equations, one for each data point, that describe the coefficients , , and .    Express these four equations as a linear system where .  Find the factorization of and use it to find the least-squares approximate solution .     Use the parameters , , and that you found to write the quadratic function that fits the data. You can plot this function, along with the data, by entering your function in the place indicated below.     What is your predicted value when ?    Find the coefficient of determination for the quadratic function. What does this say about the quality of the fit?    Now fit a cubic polynomial of the form to this dataset.     Find the coefficient of determination for the cubic function. What does this say about the quality of the fit?    What do you notice when you plot the cubic function along with the data? How does this reflect the value of that you found?           We have the equations     With and , we find     The quadratic function is .    The predicted value is .         We find .     , which means that we have a perfect fit.    The graph of the cubic function passes through each data point.          We have the equations           .     .          .         The graph of the cubic function passes through each data point.      "
+},
+{
+  "id": "sec-least-squares-6-5",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-6-5",
+  "type": "Activity",
+  "number": "6.5.6",
+  "title": "",
+  "body": "  This activity explores a dataset describing Arctic sea ice and that comes from Sustainability Math.   Evaluating the cell below will plot the extent of Arctic sea ice, in millions of square kilometers, during the twelve months of 2012. In addition, you have access to a few special variables and commands:    month is the vector of month values and ice is the vector of sea ice values from the table above.     vandermonde(x, k) constructs the Vandermonde matrix of degree using the points in the vector x .     Q, R = QR(A) provides the factorization of .     demean(v) returns the demeaned vector .        Find the vector , the least-squares approximate solution to the linear system that results from fitting a degree 5 polynomial to the data.     If your result is stored in the variable xhat , you may plot the polynomial and the data together using the following cell.     Find the coefficient of determination for this polynomial fit.    Repeat these steps to fit a degree 8 polynomial to the data, plot the polynomial with the data, and find .     Repeat one more time by fitting a degree 11 polynomial to the data, creating a plot, and finding .   It's certainly true that higher degree polynomials fit the data better, as seen by the increasing values of , but that's not always a good thing. For instance, when , you may notice that the graph of the polynomial wiggles a little more than we would expect. In this case, the polynomial is trying too hard to fit the data, which usually contains some uncertainty, especially if it's obtained from measurements. The error built in to the data is called noise, and its presence means that we shouldn't expect our polynomial to fit the data perfectly. When we choose a polynomial whose degree is too high, we give the noise too much weight in the model, which leads to some undesirable behavior, like the wiggles in the graph.  Fitting the data with a polynomial whose degree is too high is called overfitting , a phenomenon that can appear in many machine learning applications. Generally speaking, we would like to choose large enough to capture the essential features of the data but not so large that we overfit and build the noise into the model. There are ways to determine the optimal value of , but we won't pursue that here.    Choosing a reasonable value of , estimate the extent of Arctic sea ice at month 6.5, roughly at the Summer Solstice.               The fifth degree polynomial fits the data fairly well.          .          seems like a good choice, and this gives the prediction of million square kilometers of sea ice.               The fifth degree polynomial fits the data fairly well.          .          million square kilometers of sea ice.      "
+},
+{
+  "id": "sec-least-squares-8-2",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-2",
+  "type": "Exercise",
+  "number": "6.5.6.1",
+  "title": "",
+  "body": "  Suppose we write the linear system as .   Find an orthogonal basis for .    Find , the orthogonal projection of onto .    Find a solution to the linear system .          Applying Gram-Schmidt gives the orthogonal basis     Applying the Projection Formula gives .    Solving the linear system gives .           and      .     .      "
+},
+{
+  "id": "ex-lst-squares-line",
+  "level": "2",
+  "url": "sec-least-squares.html#ex-lst-squares-line",
+  "type": "Exercise",
+  "number": "6.5.6.2",
+  "title": "",
+  "body": "  Consider the data in .  A dataset with four points.            1  1    2  1    3  1    4  2        Set up the linear system that describes the line passing through these points.    Write the normal equations that describe the least-squares approximate solution to .    Find the least-squares approximate solution and plot the data and the resulting line.    What is your predicted -value when ?    Find the coefficient of determination .          The matrix and the vector .              The predicted value is .                , .               .           "
+},
+{
+  "id": "sec-least-squares-8-4",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-4",
+  "type": "Exercise",
+  "number": "6.5.6.3",
+  "title": "",
+  "body": "  Consider the four points in .    Set up a linear system that describes a quadratic function passing through the points.    Use a factorization to find the least-squares approximate solution and plot the data and the graph of the resulting quadratic function.    What is your predicted -value when ?    Find the coefficient of determination .          We have the Vandermonde matrix and vector .    The quadratic function is .    This gives the predicted value .           "
+},
+{
+  "id": "sec-least-squares-8-5",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-5",
+  "type": "Exercise",
+  "number": "6.5.6.4",
+  "title": "",
+  "body": "  Consider the data in .  A simple dataset               1  1  4.2    1  2  3.3    2  1  5.9    2  2  5.1    3  2  7.5    3  3  6.3        Set up a linear system that describes the relationship     Find the least-squares approximate solution .    What is your predicted -value when and ?    Find the coefficient of determination .                     .                          .           "
+},
+{
+  "id": "sec-least-squares-8-6",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-6",
+  "type": "Exercise",
+  "number": "6.5.6.5",
+  "title": "",
+  "body": "  Determine whether the following statements are true or false and explain your thinking.   If is consistent, then is a solution to .    If , then the least-squares approximate solution is also a solution to the original equation .    Given the factorization , we have .    A factorization provides a method for finding the least-squares approximate solution to that is more reliable than solving the normal equations.    A solution to is the least-squares approximate solution to .          True. If , then is in so .    True. If , then . Therefore, .    False. The product rather than the matrix that projects vectors orthogonally onto .    True, numerical issues are more likely to arise when solving the normal equations.    False. The normal equations gives the least-squares approximate solution.         True  True  False  True  False     "
+},
+{
+  "id": "sec-least-squares-8-7",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-7",
+  "type": "Exercise",
+  "number": "6.5.6.6",
+  "title": "",
+  "body": "  Explain your response to the following questions.   If , what does this say about the vector ?    If the columns of are orthonormal, how can you easily find the least-squares approximate solution to ?          Since and , we know that . This says that is in .    In this case, , which means we have . If we multiply both sides by , we have .           is in .     .      "
+},
+{
+  "id": "sec-least-squares-8-8",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-8",
+  "type": "Exercise",
+  "number": "6.5.6.7",
+  "title": "",
+  "body": "  The following cell loads in some data showing the number of people in Bangladesh living without electricity over 27 years. It also defines vectors year , which records the years in the dataset, and people , which records the number of people.    Suppose we want to write where is the year and is the number of people. Construct the matrix and vector so that the linear system describes the vector .    Using a factorization of , find the values of and in the least-squares approximate solution .    What is the coefficient of determination and what does this tell us about the quality of the approximation?    What is your prediction for the number of people living without electricity in 1985?    Estimate the year in which there will be no people living without electricity.          The matrix will be the matrix whose first column is all 1's and whose second column is the vector of years. The vector is the vector that records the number of people.    We obtain .          .    Solve to obtain 2045.          The matrix will be the matrix whose first column is all 1's and whose second column is the vector of years. The vector is the vector that records the number of people.     .          .    2045      "
+},
+{
+  "id": "sec-least-squares-8-9",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-9",
+  "type": "Exercise",
+  "number": "6.5.6.8",
+  "title": "",
+  "body": "  This problem concerns a dataset describing planets in our Solar system. For each planet, we have the length of the semi-major axis, essentially the distance from the planet to the Sun in AU (astronomical units), and the period , the length of time in years required to complete one orbit around the Sun.  We would like to model this data using the function where and are parameters we need to determine. Since this isn't a linear function, we will transform this relationship by taking the natural logarithm of both sides to obtain   Evaluating the following cell loads the dataset and defines two vectors logaxis , whose components are , and logperiod , whose components are .    Construct the matrix and vector so that the solution to is the vector .    Find the least-squares approximate solution . What does this give for the values of and ?    Find the coefficient of determination . What does this tell us about the quality of the approximation?   Suppose that the orbit of an asteroid has a semi-major axis whose length is AU. Estimate the period of the asteroid's orbit.   Halley's Comet has a period of years. Estimate the length of its semi-major axis.          The matrix is the matrix whose first column is all 1's and whose second column is the vector of the logarithms of the semi-major axes. The vector is the vector that records the logarithms of the periods.    We find so that and . This means that .     , which means that we have a very good fit because this data reflects a physical law.     years.    The expression means that . Solving for AU.          The matrix is the matrix whose first column is all 1's and whose second column is the vector of the logarithms of the semi-major axes. The vector is the vector that records the logarithms of the periods.     and .          years.     AU.      "
+},
+{
+  "id": "sec-least-squares-8-10",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-10",
+  "type": "Exercise",
+  "number": "6.5.6.9",
+  "title": "",
+  "body": "  Evaluating the following cell loads a dataset describing the temperature in the Earth's atmosphere at various altitudes. There are also two vectors altitude , expressed in kilometers, and temperature , in degrees Celsius.    Describe how to form the matrix and vector so that the linear system describes a degree polynomial fitting the data.    After choosing a value of , construct the matrix and vector , and find the least-squares approximate solution .    Plot the polynomial and data using plot_model(xhat, data) .    Now examine what happens as you vary the degree of the polynomial . Choose an appropriate value of that seems to capture the most important features of the data while avoiding overfitting, and explain your choice.    Use your value of to estimate the temperature at an altitude of 55 kilometers.          The matrix will be the Vandermonde matrix of degree using the altitude readings while is the vector of temperatures.     appears to give a good fit without overfitting.    We have     A small value of does not adequately track important features of the data. If we increase too far, the graph tries too hard to match the data, and we see spurious features in the graph.     seems to work well. With this function, we estimate the temperature to be degrees Celsius.          The matrix will be the Vandermonde matrix of degree using the altitude readings while is the vector of temperatures.     appears to give a good fit without overfitting.    We have     A small value of does not adequately track important features of the data. If we increase too far, the graph tries too hard to match the data, and we see spurious features in the graph.    We estimate the temperature to be degrees Celsius.      "
+},
+{
+  "id": "sec-least-squares-8-11",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-11",
+  "type": "Exercise",
+  "number": "6.5.6.10",
+  "title": "",
+  "body": "  The following cell loads some data describing 1057 houses in a particular real estate market. For each house, we record the living area in square feet, the lot size in acres, the age in years, and the price in dollars. The cell also defines variables area , size , age , and price . We will use linear regression to predict the price of a house given its living area, lot size, and age:    Use a factorization to find the least-squares approximate solution .    Discuss the significance of the signs of , , and .    If two houses are identical except for differing in age by one year, how would you predict that their prices compare to each another?    Find the coefficient of determination . What does this say about the quality of the fit?    Predict the price of a house whose living area is 2000 square feet, lot size is 1.5 acres, and age is 50 years.                and are positive, which means that increasing the living area or the lot size will cause the house price to increase. However, is negative, which means that an older house will cost less.    Because , we would expect a house that's one year older to cost less.     , which is far from perfect without being terrible. There are other factors that are not included in the dataset that can also influence the house price, such as number of bedrooms and the location.    We estimate .               Increasing the living area or the lot size will cause the house price to increase, but an older house will cost less.    A house that's one year older will cost about less.         We estimate .      "
+},
+{
+  "id": "sec-least-squares-8-12",
+  "level": "2",
+  "url": "sec-least-squares.html#sec-least-squares-8-12",
+  "type": "Exercise",
+  "number": "6.5.6.11",
+  "title": "",
+  "body": "  We observed that if the columns of are linearly independent, then there is a unique least-squares approximate solution to the equation because the equation has a unique solution. We also said that is the unique solution to the normal equation without explaining why this equation has a unique solution. This exercise offers an explanation.  Assuming that the columns of are linearly independent, we would like to conclude that the equation has a unique solution.   Suppose that is a vector for which . Explain why the following argument is valid and allows us to conclude that . In other words, if , we know that .    If the columns of are linearly independent and , what do we know about the vector ?    Explain why can only happen when .    Assuming that the columns of are linearly independent, explain why has a unique solution.          Starting with the assumption that , we dot both sides of the equation with to obtain . From here, we write This says that the length of must be zero, which tells us that .    If the columns of are linearly independent, we know that the only solution to the homogeneous equation is .    The previous two parts of this exercise tell us that implies that , which implies that .    Since the only solution to the homogeneous equation is , the columns of are linearly independent, which means that has only one solution.          Use the fact that .    It must be true that .    This follows from the previous two parts of this exercise.    The columns of must be linearly independent.      "
+},
+{
+  "id": "ex-r2-meaning",
+  "level": "2",
+  "url": "sec-least-squares.html#ex-r2-meaning",
+  "type": "Exercise",
+  "number": "6.5.6.12",
+  "title": "",
+  "body": "  This problem is about the meaning of the coefficient of determination and its connection to variance, a topic that appears in the next section. Throughout this problem, we consider the linear system and the approximate least-squares solution , where . We suppose that is an matrix, and we will denote the -dimensional vector .     Explain why , the mean of the components of , can be found as the dot product     In the examples we have seen in this section, explain why is in .    If we write , explain why and hence why the mean of the components of is zero.    The variance of an -dimensional vector is , where is the vector obtained by demeaning .  Explain why     Explain why and hence   These expressions indicate why it is sometimes said that measures the fraction of variance explained by the function we are using to fit the data. As seen in the previous exercise, there may be other features that are not recorded in the dataset that influence the quantity we wish to predict.    Explain why .           simply sums the components of .    The examples we've seen fit the data using functions that have a constant term such as . This means that will be a column of the matrix and hence in .    Since is in , any vector in , such as , will be orthogonal to .    Notice that which says that Since and are orthogonal, we have . This means that so that .     , which explains why Then     The variances are nonnegative so we have . Also,            simply sums the components of .     is a column of .     is in .    Use the fact that and are orthogonal.    This follows from .    This follow from .      "
 },
 {
   "id": "app-sage-reference",
@@ -3716,6 +4958,15 @@ var ptx_lunr_docs = [
   "number": "B",
   "title": "A note on the print version",
   "body": "  A note on the print version  This book aims to develop readers' ability to reason about linear algebraic concepts and to apply that reasoning in a computational environment. In particular, Sage is introduced as a platform for performing many linear algebraic computations since it is freely available and its syntax mirrors common mathematical notation.   Print readers may access Sage online using either the Sage cell server or a provided page of Sage cells.   Throughout the book, Sage cells appear in various places to encourage readers to use Sage to complete some relevant computation. In the print version, these may appear with some pre-populated code, such as the one below, that you will want to copy into an online Sage cell. Empty cells appear as shown below and are included to indicate part of an exercise or activity that is meant to be completed in Sage.    "
+},
+{
+  "id": "backmatter-4",
+  "level": "1",
+  "url": "backmatter-4.html",
+  "type": "Appendix",
+  "number": "C",
+  "title": "",
+  "body": "  David Austin has written the vast majority of this text and deserves nearly 100% of the credit for its production. I acknowledge him and his acknowledgements are found below.  Many people have supported and shaped this project. First is my colleague Matt Boelkins, whose Active Calculus is a model for how an open textbook can encourage and facilitate good pedagogy. The debt that this book owes to Matt's cannot be overstated. In addition, he has provided a great deal of editorial feedback on this text and improved it in countless ways. Over many, many years, I have valued Matt's friendship and wise counsel.  I could not imagine a more supportive environment than the mathematics department at Grand Valley State University. The influence of my colleagues and their deep commitment to student growth is embedded in every page of this book. Conversations about the teaching of linear algebra with Paul Fishback have been especially helpful as has editorial feedback from Lauren Keough and Lora Bailey. I am also grateful for a sabbatical leave in 2017 during which I began this project.  In addition to my colleagues, I am grateful for the many students who have helped me grow as a teacher. Thank you for your willingness to engage in this very human art of learning and for sharing your experiences, frustrations, and successes with me.  The open textbook community that has grown around the PreTeXt authoring and publishing system is a continual source of support and inspiration. The goal of providing all students with high-quality, affordable textbooks is ambitious, but the commitment of this passionate and dedicated group makes clear that it is possible. As part of that community, Mitch Keller and Kathy Yoshiwara have read much of this book and provided detailed and insightful editorial feedback.  There coud be no better partners than Candice Price, Miloš Savić, and their team at 619 Wreath Publishing. Thank you for your support of this project and for everything you do to further your mission to foster creativity, equity, and scholarship.   Finally, a book is nothing without readers, and I am so thankful for all the instructors, students, and self-learners who have reached out with suggestions, comments, and questions. Hearing from those who are using the book gives meaning to this project, so please know that your voice is always welcomed.   "
 },
 {
   "id": "backmatter-5",
