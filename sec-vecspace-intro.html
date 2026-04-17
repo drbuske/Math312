@@ -129,18 +129,6 @@ eBookConfig.enable_chatcodes =  false;
 <script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-sage",
-  "linked": true,
-  "linkKey": "linked-sage",
-  "autoeval": false,
-  "languages": [
-    "sage"
-  ],
-  "evalButtonText": "Evaluate (Sage)"
-});
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -443,7 +431,7 @@ sagecell.makeSagecell({
 <div class="toc-title-box"><a href="sec-vecspace-intro.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Vector Spaces</span></a></div>
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vecspace-intro.html#section-definition-vector-spaces" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Definition of vector spaces</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-vecspace-intro.html#sec-vecspace-intro-4" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-vecspace-intro.html#exercises-8-1" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li></ul>
 </li>
@@ -723,58 +711,140 @@ B=\begin{pmatrix}0\amp 0\amp 0\\1\amp 0\amp 0\end{pmatrix}.
 <div class="autopermalink" data-description="Example 5.1.7: Vector space of functions"><a href="#example-8-6" title="Copy permalink for Example 5.1.7: Vector space of functions">🔗</a></div></article><div class="para" id="section-definition-vector-spaces-13">For the next two examples of vector spaces, we leave the proofs as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#section-definition-vector-spaces-13" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
 <article class="example example-like" id="example-8-7"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Infinite sequences.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Infinite real sequences.</span>
 </h4>
-<div class="para" id="example-8-7-2-1">Let <span class="process-math">\(K\)</span> be a field. A sequence of elements of <span class="process-math">\(K\)</span> is an infinite list <span class="process-math">\((a_0,a_1,a_2,a_3,\ldots)\text{,}\)</span> where <span class="process-math">\(a_i\in K\)</span> for all <span class="process-math">\(i\text{.}\)</span> We also use the notation <span class="process-math">\((a_i)_{i\in\mathbb{N}}\text{,}\)</span> or occasionally <span class="process-math">\((a_i)\text{,}\)</span> to denote such a sequence. Let <span class="process-math">\(\mathrm{Seq}_K\)</span> be the set of sequences of elements of <span class="process-math">\(K\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-8-7-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-8-7-2-1">A sequence of real numbers, i.e. elements of <span class="process-math">\(\mathbb{R}\)</span> is an infinite list <span class="process-math">\((a_0,a_1,a_2,a_3,\ldots)\text{,}\)</span> where <span class="process-math">\(a_i\in \mathbb{R}\)</span> for all <span class="process-math">\(i\text{.}\)</span> We also use the notation <span class="process-math">\((a_i)_{i\in\mathbb{N}}\text{,}\)</span> or occasionally <span class="process-math">\((a_i)\text{,}\)</span> to denote such a sequence. Let <span class="process-math">\(\mathrm{Seq}_{\mathbb{R}}\)</span> be the set of sequences of real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#example-8-7-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="example-8-7-2-2">We add two sequences by adding their <span class="process-math">\(i\)</span>th elements: <span class="process-math">\((a_i)_{i\in\mathbb{N}}+(b_i)_{i\in\mathbb{N}}
 =(a_i+b_i)_{i\in\mathbb{N}}
 \text{.}\)</span> We scale a sequence by scaling each of its elements: <span class="process-math">\(k(a_i)_{i\in\mathbb{N}}=(ka_i)_{i\in\mathbb{N}}
-\text{.}\)</span> Then <span class="process-math">\(\mathrm{Seq}_K\)</span> is a vector space.<div class="autopermalink" data-description="Paragraph"><a href="#example-8-7-2-2" title="Copy permalink for Paragraph">🔗</a></div>
+\text{.}\)</span> Then <span class="process-math">\(\mathrm{Seq}_{\mathbb{R}}\)</span> is a vector space.<div class="autopermalink" data-description="Paragraph"><a href="#example-8-7-2-2" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 5.1.8: Infinite sequences"><a href="#example-8-7" title="Copy permalink for Example 5.1.8: Infinite sequences">🔗</a></div></article><article class="example example-like" id="example-8-8"><h4 class="heading">
+<div class="autopermalink" data-description="Example 5.1.8: Infinite real sequences"><a href="#example-8-7" title="Copy permalink for Example 5.1.8: Infinite real sequences">🔗</a></div></article><article class="example example-like" id="example-8-8"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Vector space of polynomials of unbounded degree.</span>
 </h4>
-<div class="para" id="example-8-8-2-1">Let <span class="process-math">\(K\)</span> be a field, and let <span class="process-math">\(P\)</span> be the set of all polynomials (of any degree) with coefficients from <span class="process-math">\(K\text{,}\)</span> i.e., expressions of the form <span class="process-math">\(p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
-\text{,}\)</span> where <span class="process-math">\(n\ge 0\)</span> and <span class="process-math">\(a_0,\ldots,a_n\in K\text{.}\)</span> Addition and scalar multiplication of polynomials are defined in the usual way. Then <span class="process-math">\(P\)</span> is a vector space.<div class="autopermalink" data-description="Paragraph"><a href="#example-8-8-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+<div class="para" id="example-8-8-2-1">Let <span class="process-math">\(\mathbb{P}\)</span> be the set of all polynomials (of any degree) with real coefficients, i.e., expressions of the form <span class="process-math">\(p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+\text{,}\)</span> where <span class="process-math">\(n\ge 0\)</span> and <span class="process-math">\(a_0,\ldots,a_n\in \mathbb{R}\text{.}\)</span> Addition and scalar multiplication of polynomials are defined in the usual way. Then <span class="process-math">\(\mathbb{P}\)</span> is a vector space.<div class="autopermalink" data-description="Paragraph"><a href="#example-8-8-2-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 5.1.9: Vector space of polynomials of unbounded degree"><a href="#example-8-8" title="Copy permalink for Example 5.1.9: Vector space of polynomials of unbounded degree">🔗</a></div></article><div class="autopermalink" data-description="Subsection 5.1.1: Definition of vector spaces"><a href="#section-definition-vector-spaces" title="Copy permalink for Subsection 5.1.1: Definition of vector spaces">🔗</a></div></section><section class="exercises" id="sec-vecspace-intro-4"><h3 class="heading hide-type">
-<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="space"> </span><span class="title">Exercises</span>
-</h3>
-<article class="exercise exercise-like" id="sec-vecspace-intro-4-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para logical" id="sec-vecspace-intro-4-1-1-1">
-<div class="para">Consider the matrix and vectors</div>
-<div class="displaymath process-math">
-\begin{equation*}
-A = \left[\begin{array}{rr}
-8 \amp -10 \\
-5 \amp -7 \\
-\end{array}\right],\qquad
-\vvec_1=\twovec{2}{1},~~~
-\vvec_2=\twovec{1}{1}\text{.}
-\end{equation*}
+<div class="autopermalink" data-description="Example 5.1.9: Vector space of polynomials of unbounded degree"><a href="#example-8-8" title="Copy permalink for Example 5.1.9: Vector space of polynomials of unbounded degree">🔗</a></div></article><article class="proposition theorem-like" id="proposition-8-9"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Elementary consequences of the vector space axioms.</span>
+</h4>
+<div class="para" id="proposition-8-9-2-1">In any vector space, the following are true:<div class="autopermalink" data-description="Paragraph"><a href="#proposition-8-9-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha ol-marker-5" id="proposition-8-9-2-2">
+<li id="proposition-8-9-2-2-1">
+<div class="para" id="p-derived-proposition-8-9-2-2-1">The additive unit is unique. In other words, whenever <span class="process-math">\(\uvec+\vvec=\uvec\text{,}\)</span> then <span class="process-math">\(\vvec=\zerovec\text{.}\)</span>
 </div>
-<ol class="lower-alpha ol-marker-1" id="sec-vecspace-intro-4-1-1-1-2">
-<li id="sec-vecspace-intro-4-1-1-1-2-1">
-<div class="para" id="sec-vecspace-intro-4-1-1-1-2-1-1">Show that <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\)</span> are eigenvectors of <span class="process-math">\(A\)</span> and find their associated eigenvalues.<div class="autopermalink" data-description="Paragraph"><a href="#sec-vecspace-intro-4-1-1-1-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
-</div>
-<div id="sec-vecspace-intro-4-1-1-1-2-1-2" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">
-</script></div>
-<div class="autopermalink" data-description="Item 5.1.2.1.a"><a href="#sec-vecspace-intro-4-1-1-1-2-1" title="Copy permalink for Item 5.1.2.1.a">🔗</a></div>
+<div class="autopermalink" data-description="Item a"><a href="#proposition-8-9-2-2-1" title="Copy permalink for Item a">🔗</a></div>
 </li>
-<li id="sec-vecspace-intro-4-1-1-1-2-2">
-<div class="para" id="sec-vecspace-intro-4-1-1-1-2-2-1">Express the vector <span class="process-math">\(\xvec = \twovec{-4}{-1}\)</span> as a linear combination of <span class="process-math">\(\vvec_1\)</span> and <span class="process-math">\(\vvec_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-vecspace-intro-4-1-1-1-2-2-1" title="Copy permalink for Paragraph">🔗</a></div>
+<li id="proposition-8-9-2-2-2">
+<div class="para" id="p-derived-proposition-8-9-2-2-2">Additive inverses are unique. In other words, whenever <span class="process-math">\(\uvec+\vvec=\zerovec\text{,}\)</span> then <span class="process-math">\(\vvec=-\uvec\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 5.1.2.1.b"><a href="#sec-vecspace-intro-4-1-1-1-2-2" title="Copy permalink for Item 5.1.2.1.b">🔗</a></div>
+<div class="autopermalink" data-description="Item b"><a href="#proposition-8-9-2-2-2" title="Copy permalink for Item b">🔗</a></div>
 </li>
-<li id="sec-vecspace-intro-4-1-1-1-2-3">
-<div class="para" id="sec-vecspace-intro-4-1-1-1-2-3-1">Use this expression to compute <span class="process-math">\(A\xvec\text{,}\)</span> <span class="process-math">\(A^2\xvec\text{,}\)</span> and <span class="process-math">\(A^{-1}\xvec\)</span> as a linear combination of eigenvectors.<div class="autopermalink" data-description="Paragraph"><a href="#sec-vecspace-intro-4-1-1-1-2-3-1" title="Copy permalink for Paragraph">🔗</a></div>
+<li id="proposition-8-9-2-2-3">
+<div class="para" id="p-derived-proposition-8-9-2-2-3">
+<span class="process-math">\(0\uvec=\zerovec\)</span> for all vectors <span class="process-math">\(\uvec\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 5.1.2.1.c"><a href="#sec-vecspace-intro-4-1-1-1-2-3" title="Copy permalink for Item 5.1.2.1.c">🔗</a></div>
+<div class="autopermalink" data-description="Item c"><a href="#proposition-8-9-2-2-3" title="Copy permalink for Item c">🔗</a></div>
+</li>
+<li id="proposition-8-9-2-2-4">
+<div class="para" id="p-derived-proposition-8-9-2-2-4">The following cancellation law holds: if <span class="process-math">\(\uvec+\wvec=\vvec+\wvec\text{,}\)</span> then <span class="process-math">\(\uvec=\vvec\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item d"><a href="#proposition-8-9-2-2-4" title="Copy permalink for Item d">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#sec-vecspace-intro-4-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proposition 5.1.10: Elementary consequences of the vector space axioms"><a href="#proposition-8-9" title="Copy permalink for Proposition 5.1.10: Elementary consequences of the vector space axioms">🔗</a></div></article><details id="proposition-8-9-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="proposition-8-9-3-1">We prove the first three properties, and leave the last one as an exercise. Assume <span class="process-math">\(V\)</span> is any vector space over a field <span class="process-math">\(K\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-8-9-3-1" title="Copy permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Exercise 5.1.2.1"><a href="#sec-vecspace-intro-4-1" title="Copy permalink for Exercise 5.1.2.1">🔗</a></div></article><div class="autopermalink" data-description="Exercises 5.1.2"><a href="#sec-vecspace-intro-4" title="Copy permalink for Exercises 5.1.2">🔗</a></div></section><div class="autopermalink" data-description="Section 5.1: Vector Spaces"><a href="#sec-vecspace-intro" title="Copy permalink for Section 5.1: Vector Spaces">🔗</a></div></section></div>
+<div class="para" id="proposition-8-9-3-2">
+<em class="emphasis">(a)</em> Consider arbitrary vectors <span class="process-math">\(\uvec,\vvec\in V\)</span> and assume <span class="process-math">\(\uvec+\vvec=\uvec\text{.}\)</span> Applying the law (A1) (commutative law) to the left-hand side, we have <span class="process-math">\(\vvec+\uvec=\uvec\text{.}\)</span> Adding <span class="process-math">\(-\uvec\)</span> to both sides of the equation, we have <span class="process-math">\((\vvec+\uvec)+(-\uvec)=\uvec+(-\uvec)\text{.}\)</span> Applying the law (A2) (associative law) to the left-hand side, we have <span class="process-math">\(\vvec+(\uvec+(-\uvec))=\uvec+(-\uvec)\text{.}\)</span> Applying the law (A4) (additive inverse law) to both sides of the equation, we have <span class="process-math">\(\vvec+\zerovec=\zerovec\text{.}\)</span> Applying the law (A3) (additive unit law) to the left-hand side, we have <span class="process-math">\(\vvec=\zerovec\text{.}\)</span> This proves that whenever <span class="process-math">\(\uvec+\vvec=\uvec\text{,}\)</span> then <span class="process-math">\(\vvec=\zerovec\text{,}\)</span> or in other words, <span class="process-math">\(\vvec=\zerovec\)</span> is the only element acting as an additive unit.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-8-9-3-2" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-8-9-3-3">
+<em class="emphasis">(b)</em> Consider arbitrary vectors <span class="process-math">\(\uvec,\vvec\in V\)</span> and assume <span class="process-math">\(\uvec+\vvec=\zerovec\text{.}\)</span> Applying the law (A1) (commutative law) to the left-hand side, we have <span class="process-math">\(\vvec+\uvec=\zerovec\text{.}\)</span> Adding <span class="process-math">\(-\uvec\)</span> to both sides of the equation, we have <span class="process-math">\((\vvec+\uvec)+(-\uvec)=\zerovec+(-\uvec)\text{.}\)</span> Applying the law (A2) (associative law) to the left-hand side, we have <span class="process-math">\(\vvec+(\uvec+(-\uvec))=\zerovec+(-\uvec)\text{.}\)</span> Applying the law (A4) (additive inverse law) to the left-hand side, we have <span class="process-math">\(\vvec+\zerovec=\zerovec+(-\uvec)\text{.}\)</span> Applying the law (A1) (commutative law) to the right-hand side, we have <span class="process-math">\(\vvec+\zerovec=-\uvec+\zerovec\text{.}\)</span> Applying the law (A3) (additive unit law) to both sides of the equation, we have <span class="process-math">\(\vvec=-\uvec\text{.}\)</span> This proves that whenever <span class="process-math">\(\uvec+\vvec=\zerovec\text{,}\)</span> then <span class="process-math">\(\vvec=-\uvec\text{,}\)</span> or in other words, <span class="process-math">\(\vvec=-\uvec\)</span> is the only element acting as an additive inverse of <span class="process-math">\(\uvec\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-8-9-3-3" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-8-9-3-4">
+<em class="emphasis">(c)</em> First, note that the scalar <span class="process-math">\(0\in K\)</span> satisfies the property <span class="process-math">\(0+0=0\text{,}\)</span> by property (A3) of the definition of a field. Now let <span class="process-math">\(\uvec\in V\)</span> be any vector. Using the vector space law (SM2) (distributive law over scalar addition) and <span class="process-math">\(0+0=0\text{,}\)</span> we have <span class="process-math">\(0\uvec+0\uvec=(0+0)\uvec=0\uvec\text{.}\)</span> Next, we use a small trick: add <span class="process-math">\(-(0\uvec)\)</span> to both sides of the equation. This gives <span class="process-math">\((0\uvec+0\uvec)+(-(0\uvec))=0\uvec+(-(0\uvec))\text{.}\)</span> Applying the additional laws (A2), (A4), and (A3), we have <span class="process-math">\(0\uvec+(0\uvec+(-(0\uvec)))=0\uvec+(-(0\uvec))\text{,}\)</span> <span class="process-math">\(0\uvec+\zerovec=\zerovec\text{,}\)</span> and <span class="process-math">\(0\uvec=\zerovec\text{.}\)</span> This proves that <span class="process-math">\(0\uvec=\zerovec\)</span> holds for all vectors <span class="process-math">\(\uvec\text{,}\)</span> as desired.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-8-9-3-4" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proposition-8-9-3-5">
+<em class="emphasis">(d)</em> This is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-8-9-3-5" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.1.10.1"><a href="#proposition-8-9-3" title="Copy permalink for Proof 5.1.10.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 5.1.1: Definition of vector spaces"><a href="#section-definition-vector-spaces" title="Copy permalink for Subsection 5.1.1: Definition of vector spaces">🔗</a></div></section><section class="exercises" id="exercises-8-1"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="space"> </span><span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-8-1-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para logical" id="exercise-8-1-1-1-1">
+<div class="para">Consider the set <span class="process-math">\(\mathbb{R}^2\)</span> with the following non-standard addition operation <span class="process-math">\(\oplus\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a,b)\oplus(c,d)=(a+d,b+c).
+\end{equation*}
+</div>
+<div class="para">Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.1"><a href="#exercise-8-1-1" title="Copy permalink for Exercise 5.1.2.1">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="exercise-8-1-2-1-1">
+<div class="para">Consider <span class="process-math">\(\mathbb{R}^2\)</span> with the following non-standard addition operation <span class="process-math">\(\oplus\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a,b)\oplus(c,d)=(0,b+d).
+\end{equation*}
+</div>
+<div class="para">Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.2"><a href="#exercise-8-1-2" title="Copy permalink for Exercise 5.1.2.2">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="exercise-8-1-3-1-1">
+<div class="para">Consider <span class="process-math">\(\mathbb{R}^2\)</span> with the following non-standard scalar multiplication:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+c\odot(a,b)=(a,cb).
+\end{equation*}
+</div>
+<div class="para">Vector addition is defined as usual. Is this a vector space? Explain why or why not.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.3"><a href="#exercise-8-1-3" title="Copy permalink for Exercise 5.1.2.3">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para logical" id="exercise-8-1-4-1-1">
+<div class="para">Consider <span class="process-math">\(\mathbb{R}^2\)</span> with the following non-standard addition operation <span class="process-math">\(\oplus\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a,b)\oplus(c,d)=(a-c,b-d).
+\end{equation*}
+</div>
+<div class="para">Scalar multiplication is defined as usual. Is this a vector space? Explain why or why not.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-4-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.4"><a href="#exercise-8-1-4" title="Copy permalink for Exercise 5.1.2.4">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="exercise-8-1-5-1-1">Prove that the set <span class="process-math">\(\mathrm{Seq}_{\mathbb{R}}\)</span> from <a href="sec-vecspace-intro.html#example-8-7" class="xref" data-knowl="./knowl/xref/example-8-7.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.8: Infinite real sequences">Example 5.1.8</a> is a vector space. <em class="emphasis">Hint:</em> this is a special case of <a href="sec-vecspace-intro.html#example-8-6" class="xref" data-knowl="./knowl/xref/example-8-6.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.7: Vector space of functions">Example 5.1.7</a>, if you realize that a sequence <span class="process-math">\((a_i)_{i\in\mathbb{N}}\)</span> is the same thing as a function <span class="process-math">\(a:\mathbb{N}\to \mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-5-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.5"><a href="#exercise-8-1-5" title="Copy permalink for Exercise 5.1.2.5">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="exercise-8-1-6-1-1">Prove that the set <span class="process-math">\(\mathbb{P}\)</span> from <a href="sec-vecspace-intro.html#example-8-8" class="xref" data-knowl="./knowl/xref/example-8-8.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.9: Vector space of polynomials of unbounded degree">Example 5.1.9</a> is a vector space.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-6-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.6"><a href="#exercise-8-1-6" title="Copy permalink for Exercise 5.1.2.6">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="exercise-8-1-7-1-1">Let <span class="process-math">\(V\)</span> be the set of functions defined on a set <span class="process-math">\(X\)</span> that have values in a vector space <span class="process-math">\(W\text{.}\)</span> Is this a vector space? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-7-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.7"><a href="#exercise-8-1-7" title="Copy permalink for Exercise 5.1.2.7">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para logical" id="exercise-8-1-8-1-1">
+<div class="para">Consider the set <span class="process-math">\(\mathbb{R}^2\)</span> with the following non-standard operations of addition and scalar multiplication:</div>
+<div class="displaymath process-math" id="exercise-8-1-8-1-1-2">
+\begin{gather*}
+(a,b)\oplus(c,d) = (a+c-1, b+d-1),\\
+k\odot(c,d) = (kc+(1-k), kd+(1-k)).
+\end{gather*}
+</div>
+<div class="para">Show that <span class="process-math">\(\mathbb{R}^2\)</span> is a vector space with these operations. <em class="emphasis">Hint:</em> the zero vector is not <span class="process-math">\((0,0)\text{,}\)</span> but <span class="process-math">\((1,1)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-8-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.8"><a href="#exercise-8-1-8" title="Copy permalink for Exercise 5.1.2.8">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="exercise-8-1-9-1-1">Consider the set <span class="process-math">\(\mathbb{R}\)</span> of real numbers. Addition of real numbers is defined in the usual way, and scalar multiplication is just multiplication of one real number by another. In other words, <span class="process-math">\(x+y\)</span> means to add the two numbers and <span class="process-math">\(xy\)</span> means to multiply them. Show that <span class="process-math">\(\mathbb{R}\text{,}\)</span> with these operations, is a real vector space.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-9-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.9"><a href="#exercise-8-1-9" title="Copy permalink for Exercise 5.1.2.9">🔗</a></div></article><article class="exercise exercise-like" id="exercise-8-1-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="exercise-8-1-10-1-1">Let <span class="process-math">\(K=\mathbb{Q}\)</span> be the field of rational numbers, and let <span class="process-math">\(V\)</span> be the set of real numbers of the form <span class="process-math">\(a+b\sqrt{2}\text{,}\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are rational numbers. Show that with the usual operations, <span class="process-math">\(V\)</span> is a <span class="process-math">\(\mathbb{Q}\)</span>-vector space.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-8-1-10-1-1" title="Copy permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.1.2.10"><a href="#exercise-8-1-10" title="Copy permalink for Exercise 5.1.2.10">🔗</a></div></article><div class="autopermalink" data-description="Exercises 5.1.2"><a href="#exercises-8-1" title="Copy permalink for Exercises 5.1.2">🔗</a></div></section><div class="autopermalink" data-description="Section 5.1: Vector Spaces"><a href="#sec-vecspace-intro" title="Copy permalink for Section 5.1: Vector Spaces">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="chap7.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

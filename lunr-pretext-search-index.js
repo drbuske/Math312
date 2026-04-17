@@ -3490,7 +3490,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Vector Spaces",
-  "body": " Vector Spaces   Earlier, we considered , the set of -dimensional column vectors. We now introduce a more general concept of “vector”, as an element of an abstract vector space. Basically, vectors are entities that can be added and scaled. While some vectors look like lists of numbers (for example, column vectors, row vectors), other kinds of vectors don’t look like lists of numbers at all (for example, functions, polynomials). Part of the power of linear algebra comes from our ability to find vector spaces in many unexpected places.  Much of the content of this chapter will be a repetition of things we have already seen in the context of . For example, we will be talking about linear combinations, linear independence, spanning sets, bases, subspaces, linear transformations, and so on. We initially introduced these concepts in the context of the vector space , so that they would be easier to understand. We will now see that they in fact apply to all vector spaces.    Definition of vector spaces    Vector space  Let be a field. A vector space over is a set equipped with two operations of addition and scalar multiplication , such that the following properties hold:    A1. Commutative law of addition: .   A2. Associative law of addition: .   A3. The existence of an additive unit: there exists an element such that for all , .   A4. The law of additive inverses: .   SM1. The distributive law over vector addition: .   SM2. The distributive law over scalar addition: .   SM3. The associative law for scalar multiplication: .   SM4. The rule for multiplication by one: .    The above definition is concerned about two operations: vector addition, denoted by , and scalar multiplication, denoted by or sometimes . In the law of additive inverses, we have written for .  Often, the scalars will be real numbers, but it is also possible to use scalars from a different field . We also use the term -vector space to refer to a vector space over a field . When , we also speak of a real vector space , and when , we speak of a complex vector space . If the field is clear from the context, we often don’t mention it at all, and just speak of a “vector space”.  The elements of a vector space are called vectors . Our first example of a vector space is of course .   is a vector space   The set of -dimensional real column vectors, with the usual operations of vector addition and scalar multiplication, is a (real) vector space.   Proof: Properties (A1)–(A4) hold by our definition of vector addition, and properties (SM1)–(SM4) hold by our definition of vector-scalar multiplication.     is a vector space   The set of -dimensional complex column vectors, with the usual operations of vector addition and scalar multiplication, is a (complex) vector space.    We now consider some other examples of vector spaces.   Vector space of polynomials of degree 2   Let be the set of all polynomials of degree at most 2 with real coefficients, i.e., expressions of the form , where . Define addition and scalar multiplication of polynomials in the usual way: Then is a vector space.   Proof: To show that is a vector space, we verify the 8 vector space axioms. Let , , and be polynomials in and let be scalars.   (A1) We prove the commutative law of addition. Since addition in is commutative, this equals    (A2) We prove the associative law of addition. By associativity in , this equals    (A3) To prove the existence of an additive unit, let , the so‑called zero polynomial. Then    (A4) We prove the law of additive inverses.    (SM1) We prove the distributive law over vector addition.    (SM2) We prove the distributive law over scalar addition.    (SM3) We prove the associative law for scalar multiplication.    (SM4) Finally, we prove the rule for multiplication by one.   Since the operations of addition and scalar multiplication on satisfy the 8 vector space axioms, is a vector space.      Vector space of matrices   Let be the set of all -matrices with real entries, together with the usual operations of matrix addition and scalar multiplication. Then is a vector space.   Proof: The properties (A1)–(A4) hold by our definition of matrix addition, and the properties (SM1)–(SM4) hold by our definition of scalar-matrix multiplication.      Not a vector space   Let denote the set of -matrices. Let us define a non-standard addition in by for all matrices . Let scalar multiplication in be the usual scalar multiplication of matrices. We show that is not a vector space.  In order to show that is not a vector space, it suffices to find one of the 8 axioms that is not satisfied. We will begin by examining the axioms for addition until one is found which does not hold. In fact, for this example, the very first axiom fails.  Let Then and . Since , we have , so property (A1) is false.      Vector space of functions   Let be a nonempty set and define to be the set of functions defined on and valued in . In other words, the elements of are functions . The sum of two functions is defined by , and scalar multiplication is defined by . Then is a vector space.  To verify that is a vector space, we must prove the 8 axioms of vector spaces. Let be functions in , and let be scalars.  Recall that two functions are equal if for all , we have .   (A1) For all , . Therefore .   (A2) For all , . Therefore .   (A3) Let denote the function defined by . Then for all , so .   (A4) Let be defined by . Then for all , so .   (SM1) For all , , hence .   (SM2)  , so .   (SM3)  , so .   (SM4)  for all , so .  It follows that satisfies all the required axioms and is a vector space.    For the next two examples of vector spaces, we leave the proofs as an exercise.    Infinite sequences   Let be a field. A sequence of elements of is an infinite list , where for all . We also use the notation , or occasionally , to denote such a sequence. Let be the set of sequences of elements of .  We add two sequences by adding their th elements: . We scale a sequence by scaling each of its elements: . Then is a vector space.      Vector space of polynomials of unbounded degree   Let be a field, and let be the set of all polynomials (of any degree) with coefficients from , i.e., expressions of the form , where and . Addition and scalar multiplication of polynomials are defined in the usual way. Then is a vector space.        Consider the matrix and vectors .  Show that and are eigenvectors of and find their associated eigenvalues.    Express the vector as a linear combination of and .  Use this expression to compute , , and as a linear combination of eigenvectors.      We find that and so the associated eigenvalues are and .  Setting up an augmented matrix and row reducing shows us that .  We then have       We find that and so the associated eigenvalues are and .   .  We find       "
+  "body": " Vector Spaces   Earlier, we considered , the set of -dimensional column vectors. We now introduce a more general concept of “vector”, as an element of an abstract vector space. Basically, vectors are entities that can be added and scaled. While some vectors look like lists of numbers (for example, column vectors, row vectors), other kinds of vectors don’t look like lists of numbers at all (for example, functions, polynomials). Part of the power of linear algebra comes from our ability to find vector spaces in many unexpected places.  Much of the content of this chapter will be a repetition of things we have already seen in the context of . For example, we will be talking about linear combinations, linear independence, spanning sets, bases, subspaces, linear transformations, and so on. We initially introduced these concepts in the context of the vector space , so that they would be easier to understand. We will now see that they in fact apply to all vector spaces.    Definition of vector spaces    Vector space  Let be a field. A vector space over is a set equipped with two operations of addition and scalar multiplication , such that the following properties hold:    A1. Commutative law of addition: .   A2. Associative law of addition: .   A3. The existence of an additive unit: there exists an element such that for all , .   A4. The law of additive inverses: .   SM1. The distributive law over vector addition: .   SM2. The distributive law over scalar addition: .   SM3. The associative law for scalar multiplication: .   SM4. The rule for multiplication by one: .    The above definition is concerned about two operations: vector addition, denoted by , and scalar multiplication, denoted by or sometimes . In the law of additive inverses, we have written for .  Often, the scalars will be real numbers, but it is also possible to use scalars from a different field . We also use the term -vector space to refer to a vector space over a field . When , we also speak of a real vector space , and when , we speak of a complex vector space . If the field is clear from the context, we often don’t mention it at all, and just speak of a “vector space”.  The elements of a vector space are called vectors . Our first example of a vector space is of course .   is a vector space   The set of -dimensional real column vectors, with the usual operations of vector addition and scalar multiplication, is a (real) vector space.   Proof: Properties (A1)–(A4) hold by our definition of vector addition, and properties (SM1)–(SM4) hold by our definition of vector-scalar multiplication.     is a vector space   The set of -dimensional complex column vectors, with the usual operations of vector addition and scalar multiplication, is a (complex) vector space.    We now consider some other examples of vector spaces.   Vector space of polynomials of degree 2   Let be the set of all polynomials of degree at most 2 with real coefficients, i.e., expressions of the form , where . Define addition and scalar multiplication of polynomials in the usual way: Then is a vector space.   Proof: To show that is a vector space, we verify the 8 vector space axioms. Let , , and be polynomials in and let be scalars.   (A1) We prove the commutative law of addition. Since addition in is commutative, this equals    (A2) We prove the associative law of addition. By associativity in , this equals    (A3) To prove the existence of an additive unit, let , the so‑called zero polynomial. Then    (A4) We prove the law of additive inverses.    (SM1) We prove the distributive law over vector addition.    (SM2) We prove the distributive law over scalar addition.    (SM3) We prove the associative law for scalar multiplication.    (SM4) Finally, we prove the rule for multiplication by one.   Since the operations of addition and scalar multiplication on satisfy the 8 vector space axioms, is a vector space.      Vector space of matrices   Let be the set of all -matrices with real entries, together with the usual operations of matrix addition and scalar multiplication. Then is a vector space.   Proof: The properties (A1)–(A4) hold by our definition of matrix addition, and the properties (SM1)–(SM4) hold by our definition of scalar-matrix multiplication.      Not a vector space   Let denote the set of -matrices. Let us define a non-standard addition in by for all matrices . Let scalar multiplication in be the usual scalar multiplication of matrices. We show that is not a vector space.  In order to show that is not a vector space, it suffices to find one of the 8 axioms that is not satisfied. We will begin by examining the axioms for addition until one is found which does not hold. In fact, for this example, the very first axiom fails.  Let Then and . Since , we have , so property (A1) is false.      Vector space of functions   Let be a nonempty set and define to be the set of functions defined on and valued in . In other words, the elements of are functions . The sum of two functions is defined by , and scalar multiplication is defined by . Then is a vector space.  To verify that is a vector space, we must prove the 8 axioms of vector spaces. Let be functions in , and let be scalars.  Recall that two functions are equal if for all , we have .   (A1) For all , . Therefore .   (A2) For all , . Therefore .   (A3) Let denote the function defined by . Then for all , so .   (A4) Let be defined by . Then for all , so .   (SM1) For all , , hence .   (SM2)  , so .   (SM3)  , so .   (SM4)  for all , so .  It follows that satisfies all the required axioms and is a vector space.    For the next two examples of vector spaces, we leave the proofs as an exercise.    Infinite real sequences   A sequence of real numbers, i.e. elements of is an infinite list , where for all . We also use the notation , or occasionally , to denote such a sequence. Let be the set of sequences of real numbers.  We add two sequences by adding their th elements: . We scale a sequence by scaling each of its elements: . Then is a vector space.      Vector space of polynomials of unbounded degree   Let be the set of all polynomials (of any degree) with real coefficients, i.e., expressions of the form , where and . Addition and scalar multiplication of polynomials are defined in the usual way. Then is a vector space.     Elementary consequences of the vector space axioms   In any vector space, the following are true:   The additive unit is unique. In other words, whenever , then .  Additive inverses are unique. In other words, whenever , then .   for all vectors .  The following cancellation law holds: if , then .     We prove the first three properties, and leave the last one as an exercise. Assume is any vector space over a field .   (a) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to both sides of the equation, we have . Applying the law (A3) (additive unit law) to the left-hand side, we have . This proves that whenever , then , or in other words, is the only element acting as an additive unit.   (b) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to the left-hand side, we have . Applying the law (A1) (commutative law) to the right-hand side, we have . Applying the law (A3) (additive unit law) to both sides of the equation, we have . This proves that whenever , then , or in other words, is the only element acting as an additive inverse of .   (c) First, note that the scalar satisfies the property , by property (A3) of the definition of a field. Now let be any vector. Using the vector space law (SM2) (distributive law over scalar addition) and , we have . Next, we use a small trick: add to both sides of the equation. This gives . Applying the additional laws (A2), (A4), and (A3), we have , , and . This proves that holds for all vectors , as desired.   (d) This is left as an exercise.        Consider the set with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.      Consider with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.      Consider with the following non-standard scalar multiplication: Vector addition is defined as usual. Is this a vector space? Explain why or why not.      Consider with the following non-standard addition operation : Scalar multiplication is defined as usual. Is this a vector space? Explain why or why not.      Prove that the set from is a vector space. Hint: this is a special case of , if you realize that a sequence is the same thing as a function .      Prove that the set from is a vector space.      Let be the set of functions defined on a set that have values in a vector space . Is this a vector space? Explain.      Consider the set with the following non-standard operations of addition and scalar multiplication: Show that is a vector space with these operations. Hint: the zero vector is not , but .      Consider the set of real numbers. Addition of real numbers is defined in the usual way, and scalar multiplication is just multiplication of one real number by another. In other words, means to add the two numbers and means to multiply them. Show that , with these operations, is a real vector space.      Let be the field of rational numbers, and let be the set of real numbers of the form , where and are rational numbers. Show that with the usual operations, is a -vector space.     "
 },
 {
   "id": "definition-vector-space",
@@ -3579,8 +3579,8 @@ var ptx_lunr_docs = [
   "url": "sec-vecspace-intro.html#example-8-7",
   "type": "Example",
   "number": "5.1.8",
-  "title": "Infinite sequences.",
-  "body": " Infinite sequences   Let be a field. A sequence of elements of is an infinite list , where for all . We also use the notation , or occasionally , to denote such a sequence. Let be the set of sequences of elements of .  We add two sequences by adding their th elements: . We scale a sequence by scaling each of its elements: . Then is a vector space.   "
+  "title": "Infinite real sequences.",
+  "body": " Infinite real sequences   A sequence of real numbers, i.e. elements of is an infinite list , where for all . We also use the notation , or occasionally , to denote such a sequence. Let be the set of sequences of real numbers.  We add two sequences by adding their th elements: . We scale a sequence by scaling each of its elements: . Then is a vector space.   "
 },
 {
   "id": "example-8-8",
@@ -3589,16 +3589,106 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.1.9",
   "title": "Vector space of polynomials of unbounded degree.",
-  "body": " Vector space of polynomials of unbounded degree   Let be a field, and let be the set of all polynomials (of any degree) with coefficients from , i.e., expressions of the form , where and . Addition and scalar multiplication of polynomials are defined in the usual way. Then is a vector space.   "
+  "body": " Vector space of polynomials of unbounded degree   Let be the set of all polynomials (of any degree) with real coefficients, i.e., expressions of the form , where and . Addition and scalar multiplication of polynomials are defined in the usual way. Then is a vector space.   "
 },
 {
-  "id": "sec-vecspace-intro-4-1",
+  "id": "proposition-8-9",
   "level": "2",
-  "url": "sec-vecspace-intro.html#sec-vecspace-intro-4-1",
+  "url": "sec-vecspace-intro.html#proposition-8-9",
+  "type": "Proposition",
+  "number": "5.1.10",
+  "title": "Elementary consequences of the vector space axioms.",
+  "body": " Elementary consequences of the vector space axioms   In any vector space, the following are true:   The additive unit is unique. In other words, whenever , then .  Additive inverses are unique. In other words, whenever , then .   for all vectors .  The following cancellation law holds: if , then .     We prove the first three properties, and leave the last one as an exercise. Assume is any vector space over a field .   (a) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to both sides of the equation, we have . Applying the law (A3) (additive unit law) to the left-hand side, we have . This proves that whenever , then , or in other words, is the only element acting as an additive unit.   (b) Consider arbitrary vectors and assume . Applying the law (A1) (commutative law) to the left-hand side, we have . Adding to both sides of the equation, we have . Applying the law (A2) (associative law) to the left-hand side, we have . Applying the law (A4) (additive inverse law) to the left-hand side, we have . Applying the law (A1) (commutative law) to the right-hand side, we have . Applying the law (A3) (additive unit law) to both sides of the equation, we have . This proves that whenever , then , or in other words, is the only element acting as an additive inverse of .   (c) First, note that the scalar satisfies the property , by property (A3) of the definition of a field. Now let be any vector. Using the vector space law (SM2) (distributive law over scalar addition) and , we have . Next, we use a small trick: add to both sides of the equation. This gives . Applying the additional laws (A2), (A4), and (A3), we have , , and . This proves that holds for all vectors , as desired.   (d) This is left as an exercise.   "
+},
+{
+  "id": "exercise-8-1-1",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-1",
   "type": "Exercise",
   "number": "5.1.2.1",
   "title": "",
-  "body": "  Consider the matrix and vectors .  Show that and are eigenvectors of and find their associated eigenvalues.    Express the vector as a linear combination of and .  Use this expression to compute , , and as a linear combination of eigenvectors.      We find that and so the associated eigenvalues are and .  Setting up an augmented matrix and row reducing shows us that .  We then have       We find that and so the associated eigenvalues are and .   .  We find     "
+  "body": "  Consider the set with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.   "
+},
+{
+  "id": "exercise-8-1-2",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-2",
+  "type": "Exercise",
+  "number": "5.1.2.2",
+  "title": "",
+  "body": "  Consider with the following non-standard addition operation : Scalar multiplication is defined in the usual way. Is this a vector space? Explain why or why not.   "
+},
+{
+  "id": "exercise-8-1-3",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-3",
+  "type": "Exercise",
+  "number": "5.1.2.3",
+  "title": "",
+  "body": "  Consider with the following non-standard scalar multiplication: Vector addition is defined as usual. Is this a vector space? Explain why or why not.   "
+},
+{
+  "id": "exercise-8-1-4",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-4",
+  "type": "Exercise",
+  "number": "5.1.2.4",
+  "title": "",
+  "body": "  Consider with the following non-standard addition operation : Scalar multiplication is defined as usual. Is this a vector space? Explain why or why not.   "
+},
+{
+  "id": "exercise-8-1-5",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-5",
+  "type": "Exercise",
+  "number": "5.1.2.5",
+  "title": "",
+  "body": "  Prove that the set from is a vector space. Hint: this is a special case of , if you realize that a sequence is the same thing as a function .   "
+},
+{
+  "id": "exercise-8-1-6",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-6",
+  "type": "Exercise",
+  "number": "5.1.2.6",
+  "title": "",
+  "body": "  Prove that the set from is a vector space.   "
+},
+{
+  "id": "exercise-8-1-7",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-7",
+  "type": "Exercise",
+  "number": "5.1.2.7",
+  "title": "",
+  "body": "  Let be the set of functions defined on a set that have values in a vector space . Is this a vector space? Explain.   "
+},
+{
+  "id": "exercise-8-1-8",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-8",
+  "type": "Exercise",
+  "number": "5.1.2.8",
+  "title": "",
+  "body": "  Consider the set with the following non-standard operations of addition and scalar multiplication: Show that is a vector space with these operations. Hint: the zero vector is not , but .   "
+},
+{
+  "id": "exercise-8-1-9",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-9",
+  "type": "Exercise",
+  "number": "5.1.2.9",
+  "title": "",
+  "body": "  Consider the set of real numbers. Addition of real numbers is defined in the usual way, and scalar multiplication is just multiplication of one real number by another. In other words, means to add the two numbers and means to multiply them. Show that , with these operations, is a real vector space.   "
+},
+{
+  "id": "exercise-8-1-10",
+  "level": "2",
+  "url": "sec-vecspace-intro.html#exercise-8-1-10",
+  "type": "Exercise",
+  "number": "5.1.2.10",
+  "title": "",
+  "body": "  Let be the field of rational numbers, and let be the set of real numbers of the form , where and are rational numbers. Show that with the usual operations, is a -vector space.   "
 },
 {
   "id": "backmatter-2",
