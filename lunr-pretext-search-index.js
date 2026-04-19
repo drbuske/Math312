@@ -3979,6 +3979,564 @@ var ptx_lunr_docs = [
   "body": "  Assume are linearly independent elements of some vector space . Consider the set of vectors Determine whether is linearly independent.    To determine whether is linearly independent, we must solve the equation If the only solution is the trivial solution, the set is linearly independent.  We rewrite the equation as follows: Since are linearly independent, the coefficients in the last equation must all equal 0. In other words:   We solve and find that the unique solution is . Therefore, the set is linearly independent.   "
 },
 {
+  "id": "sec-vecsubspace-intro",
+  "level": "1",
+  "url": "sec-vecsubspace-intro.html",
+  "type": "Section",
+  "number": "5.3",
+  "title": "Subspaces",
+  "body": " Subspaces   In this section we will consider subspaces of general vector spaces.     In earlier sections, we studied vector spaces as entire collections of objects. In practice, however, we often work with smaller collections that live inside a larger vector space. In this activity, we explore when such a subset behaves like a vector space in its own right.  Rather than starting with a formal definition, you will examine examples and look for patterns that help explain which subsets work and which do not.      Consider the following subsets of .   All vectors of the form .  All vectors of the form .  All vectors of the form with .   For each subset:   Decide whether adding two vectors from the subset produces another vector in the subset.  Decide whether multiplying a vector in the subset by a scalar keeps the result in the subset.  Identify one example where something fails, if it does.        Now consider the following subsets of the vector space of polynomials of degree at most 2.   All polynomials with zero constant term.  All polynomials with constant term equal to 1.  All polynomials that have a fixed real number as a root.   For each subset:   Decide whether the zero polynomial belongs to the subset.  Test whether the subset is closed under addition.  Test whether the subset is closed under scalar multiplication.        In each of the previous examples, some subsets behaved well under the vector space operations, while others failed in specific ways.   Which properties seem to fail most often?  Why does the failure of a single property prevent a subset from behaving like a vector space?  What role does the zero vector seem to play in all successful examples?      These examples suggest that only certain subsets of a vector space are stable under the operations of addition and scalar multiplication. In the next section, we will formalize these observations by introducing the definition of a subspace .      Definition of subspace    Let be a vector space over a field . A subset is said to be a subspace of if the following conditions hold:    , where is the additive unit of .   is closed under addition: Whenever , then .   is closed under scalar multiplication: Whenever and , then .       As we have seen, the subspaces of are:   the zero subspace ;  lines through the origin;  planes through the origin;  itself.       Let , the vector space of functions from real numbers to real numbers. Let be the subset of continuous functions. Then is a subspace of .   Proof: We know from calculus that:   the zero function, defined by for all , is continuous;  if are continuous functions, then is continuous;  if is a continuous function and a constant, then is continuous.   It follows that contains , and is closed under addition and scalar multiplication. Therefore, is a subspace of .      Let . Recall from calculus that a function is called differentiable if the derivative exists for all . Let be the subset of differentiable functions. Then is a subspace of .  We know from calculus that:   the zero function, defined by for all , is differentiable. In fact, its derivative is ;  if are differentiable functions, then is differentiable. In fact, ;  if is a differentiable function and a constant, then is differentiable. In fact, .   It follows that contains , and is closed under addition and scalar multiplication. Therefore, is a subspace of .      Let , the vector space of sequences of real numbers. Let In other words, is the set of all sequences satisfying the recurrence relation . Then is a subspace of .   Proof: Before we prove that is a subspace, let us first consider an example. The following sequences are elements of , because they both satisfy the recurrence:     Note that if we add these sequences, we get which again satisfies the recurrence. Therefore, the set is closed under the addition of these particular sequences and .  We now prove the properties in general.   Let be the zero sequence, defined by for all . Then satisfies the recurrence relation, since for all , . Therefore .  To show that is closed under addition, consider any two sequences , and let . Then for all , so satisfies the recurrence. It follows that .  To show that is closed under scalar multiplication, consider any and , and let . Then for all , so satisfies the recurrence. It follows that .       Let denote the vector space of convergent, infinite sequences of real numbers. Let denote the subset of infinite sequences of real numbers that converge to 0. Show that is a subspace of .  Let denote the subset of (the vector space of convergent, infinite sequences) that consists of those sequences having finite support . By that, we mean that consists of sequences where only finitely many of the terms are nonzero. Is a subspace of ? Why or why not?  Is the set of convergent, geometric sequences (i.e. those of the form where ) a subspace of ? Why or why not?  Is the set a subspace of ? Why or why not?  Is the set of all constant sequences a subspace of ? Why or why not?       We show that if and are sequences in , then their sum is as well. But the sum of two sequences that converge to 0 also converges to 0. We also show that if is a sequence converging to 0 then any multiple of it will also converge to 0. But this is clear. So is closed under addition and scalar multiplication. The zero element is obviously the sequence of all 0's and hence clearly converges to 0 and is in .  is a subspace. If we add two such sequences, then the sum will only have a finite number of terms that are not zero (at most double the number of nonzero terms in each individual sequence). If we multiply such a sequence by a constant, it will have (at most) the same number of nonzero terms. The zero sequence (consisting of all 0's) has no nonzero terms and so is also in .  No. Adding the sequences and gives a sequence which is not geometric unless either or is 0.  No. The constant sequence is in , but adding this sequence to itself will not yield a sequence in .  Yes. The zero sequence is the zero element and is constant. Adding two constant sequences will yield a constant sequence. Multiplying each term of a sequence by a scalar will produce another constant sequence.         Let . Recall from calculus that a differential equation is an equation about an unknown function and its derivatives. For example is a differential equation. The functions , , and are examples of solutions of this differential equation. Let be the set of all functions that are solutions of the differential equation . Then is a subspace of .   Proof: The zero function is a solution of the differential equation, and therefore an element of .  To show that is closed under addition, let and consider . Then and , and therefore . Therefore .  To show that is closed under scalar multiplication, let and , and consider . Then , and therefore . It follows that .      Consider , the vector space of polynomials of degree at most 2, with real coefficients. Fix some real number , and let be the subset of polynomials that have as a root. Then is a subspace of .   Proof: We can express as follows: We need to show that is a subspace.   The zero polynomial, given by , satisfies , so .   To show that is closed under addition, assume , and let . Then and , therefore . It follows that .   To show that is closed under scalar multiplication, assume and be a scalar. Then , and therefore .      Let be an arbitrary vector space over a field . Then is a subspace of , called the zero subspace. Also, is a subspace of itself.   Proof: Clearly contains , and is closed under addition and scalar multiplication because and for all . Similarly, contains and is closed under addition and scalar multiplication, because addition and scalar multiplication are operations on . Therefore, both and are subspaces of .       Let , the vector space of continuous real-valued functions. Define to be the set of functions for which . For example, is in . Show that is a subspace of .    Let as before. Define to be the set of functions for which . For example, and are in . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of real-valued matrices. Is a subspace of ? If so, prove it. If not, why not? If so, what is the dimension of this subspace?    Let , the vector space of real-valued matrices. Is a subspace of ? If so, prove it. If not, why not? If so, what is the dimension of this subspace?    Let . Show that is a subspace of .    Let , the vector space of polynomials with real coefficients of degree at most 2. Let . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of polynomials with real coefficients of degree at most 2. Let . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of continuous real-valued functions. Define , the set of functions that vanish at infinity. That is . Is a subspace of ? Why or why not?        The zero vector, (the constant zero function) is in since it satisfies the equation . If and both satisfy the equation, then also satisfies the equation since . Also, if , and is any real number, then since .     is a subspace. The zero vector, (the constant zero function) is in since it satisfies the equation . If and both satisfy the equation, then also satisfies the equation since . Also, if , and is any real number, then since .    Yes and the dimension is 2. The zero matrix is clearly in . If and , then which is clearly in as well. Also, for any scalar , we have which is also clearly in . A basis is .    Yes and the dimension is 2. The zero matrix is clearly in . If and , then which is clearly in as well. Also, for any scalar , we have which is also clearly in . A basis is .    Since the matrix commutes with any matrix, we know that . Suppose . Then and . So Also,     No. The zero polynomial is not in .    Yes. First, the zero polynomial is in since all coefficients are 0 (and hence their sum is too). If , where and , then and we have since and . Also, where so that is closed under addition and scalar multiplication.    Yes. The zero function is in since it vanishes at . Adding two functions that vanish at will produce a function that also vanishes there. And multiplying such a function by a constant will still vanish at .        Subspaces are vector spaces  The interest of subspaces lies in the fact that they are vector spaces in their own right, as stated in the following proposition.      Let be a subspace of a vector space . Then satisfies the vector space axioms (A1)–(A4) and (SM1)–(SM4) , with respect to the same operations (addition and scalar multiplication) as those defined on .    Since is a subspace, it is closed under addition and scalar multiplication. This ensures that addition and scalar multiplication are well-defined operations on . The axioms (A1) , (A2) , (A4) , and (SM1)–(SM4) all obviously hold in , because they hold in (two elements of are equal in if and only if they are equal in ). The axiom (A3) holds because .        Let be a vector space over some field , and consider a set of vectors . Then is the smallest subspace of containing . More explicitly, we have:   The set is a subspace of , and .  If is any other subspace of such that , then .      To show that is a subspace, first note that , because is the empty linear combination. Also, if , then by definition of span, there exist and such that Then and therefore . It follows that is closed under addition. The proof for scalar multiplication is similar. Finally, every is trivially a linear combination of itself, , and therefore .  Consider any other subspace of such that . To show that , consider an arbitrary element . By definition of span, there exist and such that By assumption, . Since is closed under addition and scalar multiplication, it follows that . Since was an arbitrary element of , it follows that .     While the last proposition looks technical, it can actually be useful for proving that two sets of vectors span the same subspace. The following in an example of this.   We show that the sets and span the same subspace of . In other words, we show that   To show that two sets are equal, we must show that each is a subset of the other. So we will show and . By , it is sufficient to show that and , i.e., we must show that every element of is a linear combination of elements of and vice versa.    . We have Since each element of is an element of , it follows that . By , this implies that .    . We have Since each element of is an element of , it follows that . By , this implies that .     Summary   A subspace is a subset of a vector space that contains the zero vector and is closed under addition and scalar multiplication.  Many familiar collections, such as solution sets of linear equations, spaces of functions with special properties, and sets defined by linear conditions, naturally form subspaces.  Every subspace is itself a vector space when equipped with the same operations as the larger space.  The span of a set of vectors is the smallest subspace containing that set, providing a systematic way to describe subspaces.       Consider the set of symmetric -matrices, i.e., matrices satisfying . Show that this set of symmetric matrices is a subspace of , the vector space of all -matrices.      Consider the set of all vectors such that . Is this a subspace of ?    No. It is not closed under scalar multiplication.      Consider the set of all vectors such that . Is this a subspace of ?    No. It is not closed under addition.      Let be the set of those polynomials such that . Is a subspace of ? Explain.      Let be subspaces of a vector space and consider defined as the set of all vectors that can be written of the form , where and . Show that is a subspace of .      Let be subspaces of a vector space . Then consists of all vectors which are in both and . Show that is a subspace of .      Let be subspaces of a vector space . Then consists of all vectors which are in either or . Show that is not necessarily a subspace of by giving an example where fails to be a subspace.      Let Is a subspace of ?    This is not a subspace. is in it, but is not.      Let be the subset of given by Is a subspace of ?      Let Show that is a subspace of .      Let be the subset of given by Is a subspace of ?      Let be the subset of given by Is a subspace of ?      Let be the subset of consisting of all real-valued sequences that are alternating, i.e., where for even and for odd , or vice versa. Is a subspace of ?      Let be the subset of consisting of all real-valued sequences that satisfy the recurrence relation Is a subspace of ?      A sequence is called periodic if there exists some such that for all , . The number is called a period of the sequence. For example, the following is a periodic sequence with period 3:    Show that the set of all periodic sequences of a fixed period forms a subspace of .  More difficult: show that the set of all periodic sequences of all periods forms a subspace of .       A function is called symmetric if for all . Let be the subset of consisting of all symmetric functions. Is a subspace of ?      A function is said to vanish at infinity if and . Let be the subset of consisting of all functions that vanish at infinity. Prove that is a subspace of .      Show that the sets and span the same subspace of .      Show that the sets and span the same subspace of .     "
+},
+{
+  "id": "preview-subspace-5-3",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#preview-subspace-5-3",
+  "type": "Preview Activity",
+  "number": "5.3.1",
+  "title": "",
+  "body": "   In earlier sections, we studied vector spaces as entire collections of objects. In practice, however, we often work with smaller collections that live inside a larger vector space. In this activity, we explore when such a subset behaves like a vector space in its own right.  Rather than starting with a formal definition, you will examine examples and look for patterns that help explain which subsets work and which do not.      Consider the following subsets of .   All vectors of the form .  All vectors of the form .  All vectors of the form with .   For each subset:   Decide whether adding two vectors from the subset produces another vector in the subset.  Decide whether multiplying a vector in the subset by a scalar keeps the result in the subset.  Identify one example where something fails, if it does.        Now consider the following subsets of the vector space of polynomials of degree at most 2.   All polynomials with zero constant term.  All polynomials with constant term equal to 1.  All polynomials that have a fixed real number as a root.   For each subset:   Decide whether the zero polynomial belongs to the subset.  Test whether the subset is closed under addition.  Test whether the subset is closed under scalar multiplication.        In each of the previous examples, some subsets behaved well under the vector space operations, while others failed in specific ways.   Which properties seem to fail most often?  Why does the failure of a single property prevent a subset from behaving like a vector space?  What role does the zero vector seem to play in all successful examples?      These examples suggest that only certain subsets of a vector space are stable under the operations of addition and scalar multiplication. In the next section, we will formalize these observations by introducing the definition of a subspace .   "
+},
+{
+  "id": "definition-8-25",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#definition-8-25",
+  "type": "Definition",
+  "number": "5.3.1",
+  "title": "",
+  "body": "  Let be a vector space over a field . A subset is said to be a subspace of if the following conditions hold:    , where is the additive unit of .   is closed under addition: Whenever , then .   is closed under scalar multiplication: Whenever and , then .   "
+},
+{
+  "id": "example-8-26",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#example-8-26",
+  "type": "Example",
+  "number": "5.3.2",
+  "title": "",
+  "body": "  As we have seen, the subspaces of are:   the zero subspace ;  lines through the origin;  planes through the origin;  itself.   "
+},
+{
+  "id": "example-8-27",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#example-8-27",
+  "type": "Example",
+  "number": "5.3.3",
+  "title": "",
+  "body": "  Let , the vector space of functions from real numbers to real numbers. Let be the subset of continuous functions. Then is a subspace of .   Proof: We know from calculus that:   the zero function, defined by for all , is continuous;  if are continuous functions, then is continuous;  if is a continuous function and a constant, then is continuous.   It follows that contains , and is closed under addition and scalar multiplication. Therefore, is a subspace of .  "
+},
+{
+  "id": "example-8-28",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#example-8-28",
+  "type": "Example",
+  "number": "5.3.4",
+  "title": "",
+  "body": "  Let . Recall from calculus that a function is called differentiable if the derivative exists for all . Let be the subset of differentiable functions. Then is a subspace of .  We know from calculus that:   the zero function, defined by for all , is differentiable. In fact, its derivative is ;  if are differentiable functions, then is differentiable. In fact, ;  if is a differentiable function and a constant, then is differentiable. In fact, .   It follows that contains , and is closed under addition and scalar multiplication. Therefore, is a subspace of .  "
+},
+{
+  "id": "example-8-29",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#example-8-29",
+  "type": "Example",
+  "number": "5.3.5",
+  "title": "",
+  "body": "  Let , the vector space of sequences of real numbers. Let In other words, is the set of all sequences satisfying the recurrence relation . Then is a subspace of .   Proof: Before we prove that is a subspace, let us first consider an example. The following sequences are elements of , because they both satisfy the recurrence:     Note that if we add these sequences, we get which again satisfies the recurrence. Therefore, the set is closed under the addition of these particular sequences and .  We now prove the properties in general.   Let be the zero sequence, defined by for all . Then satisfies the recurrence relation, since for all , . Therefore .  To show that is closed under addition, consider any two sequences , and let . Then for all , so satisfies the recurrence. It follows that .  To show that is closed under scalar multiplication, consider any and , and let . Then for all , so satisfies the recurrence. It follows that .   "
+},
+{
+  "id": "subspace-sequences",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#subspace-sequences",
+  "type": "Activity",
+  "number": "5.3.2",
+  "title": "",
+  "body": "   Let denote the vector space of convergent, infinite sequences of real numbers. Let denote the subset of infinite sequences of real numbers that converge to 0. Show that is a subspace of .  Let denote the subset of (the vector space of convergent, infinite sequences) that consists of those sequences having finite support . By that, we mean that consists of sequences where only finitely many of the terms are nonzero. Is a subspace of ? Why or why not?  Is the set of convergent, geometric sequences (i.e. those of the form where ) a subspace of ? Why or why not?  Is the set a subspace of ? Why or why not?  Is the set of all constant sequences a subspace of ? Why or why not?       We show that if and are sequences in , then their sum is as well. But the sum of two sequences that converge to 0 also converges to 0. We also show that if is a sequence converging to 0 then any multiple of it will also converge to 0. But this is clear. So is closed under addition and scalar multiplication. The zero element is obviously the sequence of all 0's and hence clearly converges to 0 and is in .  is a subspace. If we add two such sequences, then the sum will only have a finite number of terms that are not zero (at most double the number of nonzero terms in each individual sequence). If we multiply such a sequence by a constant, it will have (at most) the same number of nonzero terms. The zero sequence (consisting of all 0's) has no nonzero terms and so is also in .  No. Adding the sequences and gives a sequence which is not geometric unless either or is 0.  No. The constant sequence is in , but adding this sequence to itself will not yield a sequence in .  Yes. The zero sequence is the zero element and is constant. Adding two constant sequences will yield a constant sequence. Multiplying each term of a sequence by a scalar will produce another constant sequence.     "
+},
+{
+  "id": "example-8-30",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#example-8-30",
+  "type": "Example",
+  "number": "5.3.6",
+  "title": "",
+  "body": "  Let . Recall from calculus that a differential equation is an equation about an unknown function and its derivatives. For example is a differential equation. The functions , , and are examples of solutions of this differential equation. Let be the set of all functions that are solutions of the differential equation . Then is a subspace of .   Proof: The zero function is a solution of the differential equation, and therefore an element of .  To show that is closed under addition, let and consider . Then and , and therefore . Therefore .  To show that is closed under scalar multiplication, let and , and consider . Then , and therefore . It follows that .  "
+},
+{
+  "id": "example-8-31",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#example-8-31",
+  "type": "Example",
+  "number": "5.3.7",
+  "title": "",
+  "body": "  Consider , the vector space of polynomials of degree at most 2, with real coefficients. Fix some real number , and let be the subset of polynomials that have as a root. Then is a subspace of .   Proof: We can express as follows: We need to show that is a subspace.   The zero polynomial, given by , satisfies , so .   To show that is closed under addition, assume , and let . Then and , therefore . It follows that .   To show that is closed under scalar multiplication, assume and be a scalar. Then , and therefore .  "
+},
+{
+  "id": "example-8-32",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#example-8-32",
+  "type": "Example",
+  "number": "5.3.8",
+  "title": "",
+  "body": "  Let be an arbitrary vector space over a field . Then is a subspace of , called the zero subspace. Also, is a subspace of itself.   Proof: Clearly contains , and is closed under addition and scalar multiplication because and for all . Similarly, contains and is closed under addition and scalar multiplication, because addition and scalar multiplication are operations on . Therefore, both and are subspaces of .  "
+},
+{
+  "id": "subspace-function-spaces",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#subspace-function-spaces",
+  "type": "Activity",
+  "number": "5.3.3",
+  "title": "",
+  "body": "    Let , the vector space of continuous real-valued functions. Define to be the set of functions for which . For example, is in . Show that is a subspace of .    Let as before. Define to be the set of functions for which . For example, and are in . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of real-valued matrices. Is a subspace of ? If so, prove it. If not, why not? If so, what is the dimension of this subspace?    Let , the vector space of real-valued matrices. Is a subspace of ? If so, prove it. If not, why not? If so, what is the dimension of this subspace?    Let . Show that is a subspace of .    Let , the vector space of polynomials with real coefficients of degree at most 2. Let . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of polynomials with real coefficients of degree at most 2. Let . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of continuous real-valued functions. Define , the set of functions that vanish at infinity. That is . Is a subspace of ? Why or why not?        The zero vector, (the constant zero function) is in since it satisfies the equation . If and both satisfy the equation, then also satisfies the equation since . Also, if , and is any real number, then since .     is a subspace. The zero vector, (the constant zero function) is in since it satisfies the equation . If and both satisfy the equation, then also satisfies the equation since . Also, if , and is any real number, then since .    Yes and the dimension is 2. The zero matrix is clearly in . If and , then which is clearly in as well. Also, for any scalar , we have which is also clearly in . A basis is .    Yes and the dimension is 2. The zero matrix is clearly in . If and , then which is clearly in as well. Also, for any scalar , we have which is also clearly in . A basis is .    Since the matrix commutes with any matrix, we know that . Suppose . Then and . So Also,     No. The zero polynomial is not in .    Yes. First, the zero polynomial is in since all coefficients are 0 (and hence their sum is too). If , where and , then and we have since and . Also, where so that is closed under addition and scalar multiplication.    Yes. The zero function is in since it vanishes at . Adding two functions that vanish at will produce a function that also vanishes there. And multiplying such a function by a constant will still vanish at .     "
+},
+{
+  "id": "proposition-8-33",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#proposition-8-33",
+  "type": "Proposition",
+  "number": "5.3.9",
+  "title": "",
+  "body": "   Let be a subspace of a vector space . Then satisfies the vector space axioms (A1)–(A4) and (SM1)–(SM4) , with respect to the same operations (addition and scalar multiplication) as those defined on .    Since is a subspace, it is closed under addition and scalar multiplication. This ensures that addition and scalar multiplication are well-defined operations on . The axioms (A1) , (A2) , (A4) , and (SM1)–(SM4) all obviously hold in , because they hold in (two elements of are equal in if and only if they are equal in ). The axiom (A3) holds because .   "
+},
+{
+  "id": "proposition-8-34",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#proposition-8-34",
+  "type": "Proposition",
+  "number": "5.3.10",
+  "title": "",
+  "body": "   Let be a vector space over some field , and consider a set of vectors . Then is the smallest subspace of containing . More explicitly, we have:   The set is a subspace of , and .  If is any other subspace of such that , then .      To show that is a subspace, first note that , because is the empty linear combination. Also, if , then by definition of span, there exist and such that Then and therefore . It follows that is closed under addition. The proof for scalar multiplication is similar. Finally, every is trivially a linear combination of itself, , and therefore .  Consider any other subspace of such that . To show that , consider an arbitrary element . By definition of span, there exist and such that By assumption, . Since is closed under addition and scalar multiplication, it follows that . Since was an arbitrary element of , it follows that .    "
+},
+{
+  "id": "example-8-35",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#example-8-35",
+  "type": "Example",
+  "number": "5.3.11",
+  "title": "",
+  "body": " We show that the sets and span the same subspace of . In other words, we show that   To show that two sets are equal, we must show that each is a subset of the other. So we will show and . By , it is sufficient to show that and , i.e., we must show that every element of is a linear combination of elements of and vice versa.    . We have Since each element of is an element of , it follows that . By , this implies that .    . We have Since each element of is an element of , it follows that . By , this implies that .  "
+},
+{
+  "id": "exercise-8-3-1",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-1",
+  "type": "Exercise",
+  "number": "5.3.4.1",
+  "title": "",
+  "body": "  Consider the set of symmetric -matrices, i.e., matrices satisfying . Show that this set of symmetric matrices is a subspace of , the vector space of all -matrices.   "
+},
+{
+  "id": "exercise-8-3-2",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-2",
+  "type": "Exercise",
+  "number": "5.3.4.2",
+  "title": "",
+  "body": "  Consider the set of all vectors such that . Is this a subspace of ?    No. It is not closed under scalar multiplication.   "
+},
+{
+  "id": "exercise-8-3-3",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-3",
+  "type": "Exercise",
+  "number": "5.3.4.3",
+  "title": "",
+  "body": "  Consider the set of all vectors such that . Is this a subspace of ?    No. It is not closed under addition.   "
+},
+{
+  "id": "exercise-8-3-4",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-4",
+  "type": "Exercise",
+  "number": "5.3.4.4",
+  "title": "",
+  "body": "  Let be the set of those polynomials such that . Is a subspace of ? Explain.   "
+},
+{
+  "id": "exercise-8-3-5",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-5",
+  "type": "Exercise",
+  "number": "5.3.4.5",
+  "title": "",
+  "body": "  Let be subspaces of a vector space and consider defined as the set of all vectors that can be written of the form , where and . Show that is a subspace of .   "
+},
+{
+  "id": "exercise-8-3-6",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-6",
+  "type": "Exercise",
+  "number": "5.3.4.6",
+  "title": "",
+  "body": "  Let be subspaces of a vector space . Then consists of all vectors which are in both and . Show that is a subspace of .   "
+},
+{
+  "id": "exercise-8-3-7",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-7",
+  "type": "Exercise",
+  "number": "5.3.4.7",
+  "title": "",
+  "body": "  Let be subspaces of a vector space . Then consists of all vectors which are in either or . Show that is not necessarily a subspace of by giving an example where fails to be a subspace.   "
+},
+{
+  "id": "exercise-8-3-8",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-8",
+  "type": "Exercise",
+  "number": "5.3.4.8",
+  "title": "",
+  "body": "  Let Is a subspace of ?    This is not a subspace. is in it, but is not.   "
+},
+{
+  "id": "exercise-8-3-9",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-9",
+  "type": "Exercise",
+  "number": "5.3.4.9",
+  "title": "",
+  "body": "  Let be the subset of given by Is a subspace of ?   "
+},
+{
+  "id": "exercise-8-3-10",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-10",
+  "type": "Exercise",
+  "number": "5.3.4.10",
+  "title": "",
+  "body": "  Let Show that is a subspace of .   "
+},
+{
+  "id": "exercise-8-3-11",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-11",
+  "type": "Exercise",
+  "number": "5.3.4.11",
+  "title": "",
+  "body": "  Let be the subset of given by Is a subspace of ?   "
+},
+{
+  "id": "exercise-8-3-12",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-12",
+  "type": "Exercise",
+  "number": "5.3.4.12",
+  "title": "",
+  "body": "  Let be the subset of given by Is a subspace of ?   "
+},
+{
+  "id": "exercise-8-3-13",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-13",
+  "type": "Exercise",
+  "number": "5.3.4.13",
+  "title": "",
+  "body": "  Let be the subset of consisting of all real-valued sequences that are alternating, i.e., where for even and for odd , or vice versa. Is a subspace of ?   "
+},
+{
+  "id": "exercise-8-3-14",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-14",
+  "type": "Exercise",
+  "number": "5.3.4.14",
+  "title": "",
+  "body": "  Let be the subset of consisting of all real-valued sequences that satisfy the recurrence relation Is a subspace of ?   "
+},
+{
+  "id": "exercise-8-3-15",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-15",
+  "type": "Exercise",
+  "number": "5.3.4.15",
+  "title": "",
+  "body": "  A sequence is called periodic if there exists some such that for all , . The number is called a period of the sequence. For example, the following is a periodic sequence with period 3:    Show that the set of all periodic sequences of a fixed period forms a subspace of .  More difficult: show that the set of all periodic sequences of all periods forms a subspace of .    "
+},
+{
+  "id": "exercise-8-3-16",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-16",
+  "type": "Exercise",
+  "number": "5.3.4.16",
+  "title": "",
+  "body": "  A function is called symmetric if for all . Let be the subset of consisting of all symmetric functions. Is a subspace of ?   "
+},
+{
+  "id": "exercise-8-3-17",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-17",
+  "type": "Exercise",
+  "number": "5.3.4.17",
+  "title": "",
+  "body": "  A function is said to vanish at infinity if and . Let be the subset of consisting of all functions that vanish at infinity. Prove that is a subspace of .   "
+},
+{
+  "id": "exercise-8-3-18",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-18",
+  "type": "Exercise",
+  "number": "5.3.4.18",
+  "title": "",
+  "body": "  Show that the sets and span the same subspace of .   "
+},
+{
+  "id": "exercise-8-3-19",
+  "level": "2",
+  "url": "sec-vecsubspace-intro.html#exercise-8-3-19",
+  "type": "Exercise",
+  "number": "5.3.4.19",
+  "title": "",
+  "body": "  Show that the sets and span the same subspace of .   "
+},
+{
+  "id": "sec-basis-dimension",
+  "level": "1",
+  "url": "sec-basis-dimension.html",
+  "type": "Section",
+  "number": "5.4",
+  "title": "Basis and dimension",
+  "body": " Basis and dimension   As we did for earlier, we are also able to give meaning to basis and dimension for general vector spaces.    In the previous sections, we studied spanning sets and linear independence. In this section, we combine these ideas to address a fundamental question: what is the smallest collection of vectors needed to describe every vector in a space?   Rather than starting with formal definitions, this activity asks you to experiment with representing vectors using different sets and to observe when representations are possible, unique, or redundant.      Consider the vectors , , and in .   Show that every vector in can be written as a combination of and .  Show that every vector in can also be written as a combination of and .        Now consider the set .   Is it possible to remove one vector from and still represent every vector in ? Explain.  What does this suggest about whether all three vectors are necessary?  How might you recognize when a vector in a spanning set is unnecessary?        Consider the vector space of polynomials of degree at most 2.   Explain why every polynomial in can be written using the set .  Could a set with only two polynomials possibly describe every element of ? Why or why not?  How does this compare to what you observed in ?      These examples suggest that certain spanning sets are minimal and free of redundancy, while others are not. In the remainder of this section, we will formalize these ideas using the concepts of basis and dimension.      Bases   Let be a vector space. A set of vectors is called a basis of if    is a spanning set for , and   is linearly independent.       Consider the vector space of polynomials of degree at most 2 with real coefficients.    is a basis of .   is a basis of .   is a basis of .   Unlike , a vector space like does not necessarily have a “standard” basis. One basis might be useful for one application, and another basis for a different application.  It is easy to verify that each set of vectors is linearly independent and spanning. See , , and for similar calculations.      Consider the vector space of all polynomials with rational coefficients. The following is a basis for :   Note that this basis is infinite.   Proof: The polynomials are linearly independent by . Namely, if they were linearly dependent, then one of the polynomials could be written as a linear combination of earlier ones. However, this is not possible because a polynomial of degree cannot be a linear combination of polynomials of degree less than .  To show that the polynomials are a spanning set, consider an arbitrary element of . Then by definition, is of the form for some and . But then is a linear combination of , i.e., it is in the span of .      Consider the vector space of infinite sequences. As before, let be the sequence whose th element is 1 and that is 0 everywhere else, i.e., and so on. Then the set is not a basis of .  Indeed, although we saw in that the sequences are linearly independent, shows that they are not spanning. Indeed, is a subspace of , consisting exactly of the finitely supported sequences, i.e., those sequences that have only finitely many non-zero components. Thus, is a basis of .   The following theorem ensures that every vector space has a basis. We will not prove this theorem, because when the spaces are infinite-dimensional, the proof uses mathematics that is beyond the scope of this book. The proof uses a reasoning principle called the axiom of choice, which allows us to prove the existence of a basis even in cases where we cannot find an actual concrete example of a basis. For example, it is not possible to give a specific example of a basis for the space , even though the following theorem guarantees that such a basis exists.      Every vector space has a basis.    It is useful to think about the Exchange Lemma in the context of . It is true in general vector spaces as well.    [Exchange Lemma]   Let be a vector space over a field . Suppose are linearly independent elements of . Then .    An important consequence of the Exchange Lemma is that any two bases of a vector space have the same size.      Let be a vector space over some field , and let and be bases of . Then either and are both finite and have the same number of elements, or else and are both infinite.    We first show that and are either both finite or both infinite. Assume one of them, say , is finite and contains vectors. Since is spanning and is linearly independent, it follows from the Exchange Lemma that cannot contain more than vectors, and in particular, must be finite. So the sets are either both finite or both infinite.  If they are both finite, say of size and , then by the Exchange Lemma, we have and , hence .      Dimension  allows us to define the dimension of a vector space.     Let be a vector space over a field . If has a basis consisting of vectors, we say that has dimension , and we write . In this case we also say that is finite-dimensional. If has an infinite basis, we say that is infinite-dimensional, and we write .   Note that the dimension is well-defined by and , since these theorems ensure that every vector space has a basis (and therefore a dimension), and that any two bases are of the same size (and therefore a vector space cannot have more than one dimension).  We now calculate the dimensions of some vector spaces we encountered earlier.   The space has dimension .  The space has dimension . We found several bases for this space in .  The space has dimension . A possible basis consists of all the matrices that contain a single and zeros everywhere else.  The space is infinite-dimensional if is an infinite set. If is a finite set of elements, then this space is -dimensional. In that case, a basis is given by the set of functions whose value is for one input and for all other inputs.  The space is infinite-dimensional. We found an infinite linearly independent set in , showing that the space cannot be finite-dimensional.  The space is infinite-dimensional. We found a basis for this space in .  The subspace of consisting of the continuous functions is infinite-dimensional. For example, the functions form an infinite, linearly independent set of continuous functions.  The subspace of consisting of the differentiable functions is infinite-dimensional. Again, the set is an infinite linearly independent set in this space.      In , we considered the space of sequences of real numbers that satisfy the recurrence . What is the dimension of this space?  The space is -dimensional. The easiest way to see this is to observe that a sequence is determined by its first two elements. We can say that the first two elements of the sequence are parameters, and all the other elements are then computed by the recurrence relation.  Specifically, suppose and . Using the recurrence relation to compute the remaining elements, we have   Since this is the general form of the elements of , and since the two sequences starting with and are clearly linearly independent, it follows that is a basis of .      In , we considered the space of solutions of the differential equation . What is the dimension of this space?  From calculus, we know that the general solution of the differential equation is , where are constants. We also know, from , that and are linearly independent. It follows that is a basis for the solution space. The solution space is therefore -dimensional.   We conclude this section by stating two properties of bases that generalize earlier theorems: every linearly independent set can be extended to a basis by adding 0 or more vectors, and every spanning set can be reduced to a basis by removing 0 or more vectors.      Let be a vector space, and let be a linearly independent set of vectors. Then can be extended to a basis of , i.e., there exists a basis of such that .        Let be a vector space, and let be a spanning set of . Then can be shrunk to a basis, i.e., there exists a basis of such that .       Let be the linearly independent set given by We enlarge to a basis of .  We can obtain a basis of by adding two more linearly independent matrices The resulting basis is      Consider the spanning set given by We shrink to a basis of .  We use a version of the casting-out method . We examine each element of from left to right and cast out the elements that are linear combinations of previous elements. Clearly the first two elements, and , are linearly independent.  The next element, , is redundant because it is a linear combination of and . The next element is linearly independent of and . The final element is redundant because it is a linear combination of and .  Therefore, the following subset of is a basis of :      For each vector space below, calculate the dimension.               , the vector space of matrics with real entries.     , the subspace of lower triangular matrices.     , the vector space of continuous real-valued functions on .     , the subspace of real-valued sequences that converge to 0.    The subspace .    The subspace of constant real-valued sequences.             6    9    6              3    1        Summary   A basis of a vector space is a collection of vectors that is both spanning and linearly independent, allowing every vector in the space to be written uniquely as a linear combination of the basis vectors.  Although a vector space may have many different bases, all bases of a given vector space have the same size, which captures an intrinsic property of the space.  The dimension of a vector space is the number of vectors in any basis for the space, providing a way to measure the “size” or complexity of the space.  Every vector space has a basis, and any linearly independent set can be extended to a basis, while any spanning set can be reduced to a basis.       Let be the vector space of polynomials of degree at most . Determine which of the following are bases for this vector space.    .   .      Yes. Suppose Then collect equal powers of :  Does the system have a non-trivial solution? The only solution is and therefore, the polynomials are linearly independent. Since there are linearly independent polynomials in a -dimensional space, they form a basis.   Yes.       Determine whether the following is a basis for , the vector space of polynomials of degree at most :       Find a basis for the following subspace of :       Find a basis for the following subspace of :       Extend the following linearly independent set of polynomials to a basis of : .      Let be a -dimensional vector space. If you have linearly independent vectors in , can you conclude that the vectors span ?    Yes, because the set of linearly independent vectors can be extended to a basis of . But since is -dimensional, has only elements, which must be the original vectors.      Let be a -dimensional vector space. If you have vectors in , is it possible that they are linearly independent? Explain.    No. Since has a spanning set of size , the vectors cannot be linearly independent by the Exchange Lemma.      Find a basis for the vector space of symmetric -matrices, i.e., matrices satisfying . What is the dimension of this space?      Let be the subspace of (over the field ) consisting of all polynomials that satisfy . Find a basis for . What is the dimension of ?      Find a basis for What is the dimension of ?     "
+},
+{
+  "id": "preview-basisdim-5-4",
+  "level": "2",
+  "url": "sec-basis-dimension.html#preview-basisdim-5-4",
+  "type": "Preview Activity",
+  "number": "5.4.1",
+  "title": "",
+  "body": "  In the previous sections, we studied spanning sets and linear independence. In this section, we combine these ideas to address a fundamental question: what is the smallest collection of vectors needed to describe every vector in a space?   Rather than starting with formal definitions, this activity asks you to experiment with representing vectors using different sets and to observe when representations are possible, unique, or redundant.      Consider the vectors , , and in .   Show that every vector in can be written as a combination of and .  Show that every vector in can also be written as a combination of and .        Now consider the set .   Is it possible to remove one vector from and still represent every vector in ? Explain.  What does this suggest about whether all three vectors are necessary?  How might you recognize when a vector in a spanning set is unnecessary?        Consider the vector space of polynomials of degree at most 2.   Explain why every polynomial in can be written using the set .  Could a set with only two polynomials possibly describe every element of ? Why or why not?  How does this compare to what you observed in ?      These examples suggest that certain spanning sets are minimal and free of redundancy, while others are not. In the remainder of this section, we will formalize these ideas using the concepts of basis and dimension.   "
+},
+{
+  "id": "definition-basis",
+  "level": "2",
+  "url": "sec-basis-dimension.html#definition-basis",
+  "type": "Definition",
+  "number": "5.4.1",
+  "title": "",
+  "body": " Let be a vector space. A set of vectors is called a basis of if    is a spanning set for , and   is linearly independent.   "
+},
+{
+  "id": "example-8-37",
+  "level": "2",
+  "url": "sec-basis-dimension.html#example-8-37",
+  "type": "Example",
+  "number": "5.4.2",
+  "title": "",
+  "body": "  Consider the vector space of polynomials of degree at most 2 with real coefficients.    is a basis of .   is a basis of .   is a basis of .   Unlike , a vector space like does not necessarily have a “standard” basis. One basis might be useful for one application, and another basis for a different application.  It is easy to verify that each set of vectors is linearly independent and spanning. See , , and for similar calculations.  "
+},
+{
+  "id": "example-8-38",
+  "level": "2",
+  "url": "sec-basis-dimension.html#example-8-38",
+  "type": "Example",
+  "number": "5.4.3",
+  "title": "",
+  "body": "  Consider the vector space of all polynomials with rational coefficients. The following is a basis for :   Note that this basis is infinite.   Proof: The polynomials are linearly independent by . Namely, if they were linearly dependent, then one of the polynomials could be written as a linear combination of earlier ones. However, this is not possible because a polynomial of degree cannot be a linear combination of polynomials of degree less than .  To show that the polynomials are a spanning set, consider an arbitrary element of . Then by definition, is of the form for some and . But then is a linear combination of , i.e., it is in the span of .  "
+},
+{
+  "id": "example-8-39",
+  "level": "2",
+  "url": "sec-basis-dimension.html#example-8-39",
+  "type": "Example",
+  "number": "5.4.4",
+  "title": "",
+  "body": "  Consider the vector space of infinite sequences. As before, let be the sequence whose th element is 1 and that is 0 everywhere else, i.e., and so on. Then the set is not a basis of .  Indeed, although we saw in that the sequences are linearly independent, shows that they are not spanning. Indeed, is a subspace of , consisting exactly of the finitely supported sequences, i.e., those sequences that have only finitely many non-zero components. Thus, is a basis of .  "
+},
+{
+  "id": "theorem-8-40",
+  "level": "2",
+  "url": "sec-basis-dimension.html#theorem-8-40",
+  "type": "Theorem",
+  "number": "5.4.5",
+  "title": "",
+  "body": "   Every vector space has a basis.   "
+},
+{
+  "id": "section-definition-basis-8",
+  "level": "2",
+  "url": "sec-basis-dimension.html#section-definition-basis-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Exchange Lemma "
+},
+{
+  "id": "lemma-8-41",
+  "level": "2",
+  "url": "sec-basis-dimension.html#lemma-8-41",
+  "type": "Lemma",
+  "number": "5.4.6",
+  "title": "[Exchange Lemma].",
+  "body": " [Exchange Lemma]   Let be a vector space over a field . Suppose are linearly independent elements of . Then .   "
+},
+{
+  "id": "theorem-8-42",
+  "level": "2",
+  "url": "sec-basis-dimension.html#theorem-8-42",
+  "type": "Theorem",
+  "number": "5.4.7",
+  "title": "",
+  "body": "   Let be a vector space over some field , and let and be bases of . Then either and are both finite and have the same number of elements, or else and are both infinite.    We first show that and are either both finite or both infinite. Assume one of them, say , is finite and contains vectors. Since is spanning and is linearly independent, it follows from the Exchange Lemma that cannot contain more than vectors, and in particular, must be finite. So the sets are either both finite or both infinite.  If they are both finite, say of size and , then by the Exchange Lemma, we have and , hence .   "
+},
+{
+  "id": "definition-8-43",
+  "level": "2",
+  "url": "sec-basis-dimension.html#definition-8-43",
+  "type": "Definition",
+  "number": "5.4.8",
+  "title": "",
+  "body": "  Let be a vector space over a field . If has a basis consisting of vectors, we say that has dimension , and we write . In this case we also say that is finite-dimensional. If has an infinite basis, we say that is infinite-dimensional, and we write .  "
+},
+{
+  "id": "example-8-44",
+  "level": "2",
+  "url": "sec-basis-dimension.html#example-8-44",
+  "type": "Example",
+  "number": "5.4.9",
+  "title": "",
+  "body": "  In , we considered the space of sequences of real numbers that satisfy the recurrence . What is the dimension of this space?  The space is -dimensional. The easiest way to see this is to observe that a sequence is determined by its first two elements. We can say that the first two elements of the sequence are parameters, and all the other elements are then computed by the recurrence relation.  Specifically, suppose and . Using the recurrence relation to compute the remaining elements, we have   Since this is the general form of the elements of , and since the two sequences starting with and are clearly linearly independent, it follows that is a basis of .  "
+},
+{
+  "id": "example-8-45",
+  "level": "2",
+  "url": "sec-basis-dimension.html#example-8-45",
+  "type": "Example",
+  "number": "5.4.10",
+  "title": "",
+  "body": "  In , we considered the space of solutions of the differential equation . What is the dimension of this space?  From calculus, we know that the general solution of the differential equation is , where are constants. We also know, from , that and are linearly independent. It follows that is a basis for the solution space. The solution space is therefore -dimensional.  "
+},
+{
+  "id": "proposition-8-46",
+  "level": "2",
+  "url": "sec-basis-dimension.html#proposition-8-46",
+  "type": "Proposition",
+  "number": "5.4.11",
+  "title": "",
+  "body": "   Let be a vector space, and let be a linearly independent set of vectors. Then can be extended to a basis of , i.e., there exists a basis of such that .   "
+},
+{
+  "id": "proposition-8-47",
+  "level": "2",
+  "url": "sec-basis-dimension.html#proposition-8-47",
+  "type": "Proposition",
+  "number": "5.4.12",
+  "title": "",
+  "body": "   Let be a vector space, and let be a spanning set of . Then can be shrunk to a basis, i.e., there exists a basis of such that .   "
+},
+{
+  "id": "example-8-48",
+  "level": "2",
+  "url": "sec-basis-dimension.html#example-8-48",
+  "type": "Example",
+  "number": "5.4.13",
+  "title": "",
+  "body": "  Let be the linearly independent set given by We enlarge to a basis of .  We can obtain a basis of by adding two more linearly independent matrices The resulting basis is   "
+},
+{
+  "id": "example-8-49",
+  "level": "2",
+  "url": "sec-basis-dimension.html#example-8-49",
+  "type": "Example",
+  "number": "5.4.14",
+  "title": "",
+  "body": "  Consider the spanning set given by We shrink to a basis of .  We use a version of the casting-out method . We examine each element of from left to right and cast out the elements that are linear combinations of previous elements. Clearly the first two elements, and , are linearly independent.  The next element, , is redundant because it is a linear combination of and . The next element is linearly independent of and . The final element is redundant because it is a linear combination of and .  Therefore, the following subset of is a basis of :   "
+},
+{
+  "id": "subspace-dimension",
+  "level": "2",
+  "url": "sec-basis-dimension.html#subspace-dimension",
+  "type": "Activity",
+  "number": "5.4.2",
+  "title": "",
+  "body": "  For each vector space below, calculate the dimension.               , the vector space of matrics with real entries.     , the subspace of lower triangular matrices.     , the vector space of continuous real-valued functions on .     , the subspace of real-valued sequences that converge to 0.    The subspace .    The subspace of constant real-valued sequences.             6    9    6              3    1     "
+},
+{
+  "id": "exercise-8-4-1",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-1",
+  "type": "Exercise",
+  "number": "5.4.4.1",
+  "title": "",
+  "body": "  Let be the vector space of polynomials of degree at most . Determine which of the following are bases for this vector space.    .   .      Yes. Suppose Then collect equal powers of :  Does the system have a non-trivial solution? The only solution is and therefore, the polynomials are linearly independent. Since there are linearly independent polynomials in a -dimensional space, they form a basis.   Yes.    "
+},
+{
+  "id": "exercise-8-4-2",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-2",
+  "type": "Exercise",
+  "number": "5.4.4.2",
+  "title": "",
+  "body": "  Determine whether the following is a basis for , the vector space of polynomials of degree at most :    "
+},
+{
+  "id": "exercise-8-4-3",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-3",
+  "type": "Exercise",
+  "number": "5.4.4.3",
+  "title": "",
+  "body": "  Find a basis for the following subspace of :    "
+},
+{
+  "id": "exercise-8-4-4",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-4",
+  "type": "Exercise",
+  "number": "5.4.4.4",
+  "title": "",
+  "body": "  Find a basis for the following subspace of :    "
+},
+{
+  "id": "exercise-8-4-5",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-5",
+  "type": "Exercise",
+  "number": "5.4.4.5",
+  "title": "",
+  "body": "  Extend the following linearly independent set of polynomials to a basis of : .   "
+},
+{
+  "id": "exercise-8-4-6",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-6",
+  "type": "Exercise",
+  "number": "5.4.4.6",
+  "title": "",
+  "body": "  Let be a -dimensional vector space. If you have linearly independent vectors in , can you conclude that the vectors span ?    Yes, because the set of linearly independent vectors can be extended to a basis of . But since is -dimensional, has only elements, which must be the original vectors.   "
+},
+{
+  "id": "exercise-8-4-7",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-7",
+  "type": "Exercise",
+  "number": "5.4.4.7",
+  "title": "",
+  "body": "  Let be a -dimensional vector space. If you have vectors in , is it possible that they are linearly independent? Explain.    No. Since has a spanning set of size , the vectors cannot be linearly independent by the Exchange Lemma.   "
+},
+{
+  "id": "exercise-8-4-8",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-8",
+  "type": "Exercise",
+  "number": "5.4.4.8",
+  "title": "",
+  "body": "  Find a basis for the vector space of symmetric -matrices, i.e., matrices satisfying . What is the dimension of this space?   "
+},
+{
+  "id": "exercise-8-4-9",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-9",
+  "type": "Exercise",
+  "number": "5.4.4.9",
+  "title": "",
+  "body": "  Let be the subspace of (over the field ) consisting of all polynomials that satisfy . Find a basis for . What is the dimension of ?   "
+},
+{
+  "id": "exercise-8-4-10",
+  "level": "2",
+  "url": "sec-basis-dimension.html#exercise-8-4-10",
+  "type": "Exercise",
+  "number": "5.4.4.10",
+  "title": "",
+  "body": "  Find a basis for What is the dimension of ?   "
+},
+{
   "id": "sec-dot-product",
   "level": "1",
   "url": "sec-dot-product.html",

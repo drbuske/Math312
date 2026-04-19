@@ -149,7 +149,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-vecspace-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="chap6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-vecspace-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chap7.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-vecsubspace-intro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\avec}{{\mathbf a}}
 \newcommand{\bvec}{{\mathbf b}}
 \newcommand{\cvec}{{\mathbf c}}
@@ -448,6 +448,24 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-lin-comb-span-lin-ind.html#exercises-8-2" class="internal"><span class="codenumber">5.2.5</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-vecsubspace-intro.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Subspaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vecsubspace-intro.html#section-definition-subspaces" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Definition of subspace</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vecsubspace-intro.html#subsec-subspace-is-vs" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Subspaces are vector spaces</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-vecsubspace-intro.html#subsec-subspace-Summary" class="internal"><span class="codenumber">5.3.3</span> <span class="title">Summary</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-vecsubspace-intro.html#exercises-8-3" class="internal"><span class="codenumber">5.3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-basis-dimension.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Basis and dimension</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basis-dimension.html#section-definition-basis" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Bases</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basis-dimension.html#subsec-dimension-vs" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Dimension</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basis-dimension.html#subsec-basisdim-Summary" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Summary</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-basis-dimension.html#exercises-8-4" class="internal"><span class="codenumber">5.4.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -529,52 +547,52 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <article class="task exercise-like" id="preview-lc-task-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="preview-lc-task-1-1-1">Consider the vectors <span class="process-math">\(\uvec=\begin{bmatrix}1 \\ 0 \end{bmatrix}\)</span> and <span class="process-math">\(\vvec=\begin{bmatrix}0 \\ 1 \end{bmatrix}\)</span> in <span class="process-math">\(\mathbb{R}^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#preview-lc-task-1-1-1" title="Copy permalink for Paragraph">🔗</a></div>
-</div> <ol class="lower-roman ol-marker-6" id="preview-lc-task-1-1-2">
+</div> <ol class="decimal" id="preview-lc-task-1-1-2">
 <li id="preview-lc-task-1-1-2-1">
 <div class="para" id="p-derived-preview-lc-task-1-1-2-1">List at least five different vectors that can be formed using expressions of the form <span class="process-math">\(a\uvec+b\vvec\text{,}\)</span> where <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are real numbers.</div>
-<div class="autopermalink" data-description="Item i"><a href="#preview-lc-task-1-1-2-1" title="Copy permalink for Item i">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#preview-lc-task-1-1-2-1" title="Copy permalink for Item 1">🔗</a></div>
 </li>
 <li id="preview-lc-task-1-1-2-2">
 <div class="para" id="p-derived-preview-lc-task-1-1-2-2">Describe, in words, the collection of all vectors that can be formed this way.</div>
-<div class="autopermalink" data-description="Item ii"><a href="#preview-lc-task-1-1-2-2" title="Copy permalink for Item ii">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#preview-lc-task-1-1-2-2" title="Copy permalink for Item 2">🔗</a></div>
 </li>
 <li id="preview-lc-task-1-1-2-3">
 <div class="para" id="p-derived-preview-lc-task-1-1-2-3">What changes if you restrict <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> to be integers?</div>
-<div class="autopermalink" data-description="Item iii"><a href="#preview-lc-task-1-1-2-3" title="Copy permalink for Item iii">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#preview-lc-task-1-1-2-3" title="Copy permalink for Item 3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Task 5.2.1.a"><a href="#preview-lc-task-1" title="Copy permalink for Task 5.2.1.a">🔗</a></div></article><article class="task exercise-like" id="preview-lc-task-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="preview-lc-task-2-1-1">Now consider the vectors <span class="process-math">\(\wvec=\begin{bmatrix}1 \\ 1\end{bmatrix}\)</span> and <span class="process-math">\(\zvec=\begin{bmatrix}2 \\ 2\end{bmatrix}\)</span> in <span class="process-math">\(\mathbb{R}^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#preview-lc-task-2-1-1" title="Copy permalink for Paragraph">🔗</a></div>
-</div> <ol class="lower-roman ol-marker-6" id="preview-lc-task-2-1-2">
+</div> <ol class="decimal" id="preview-lc-task-2-1-2">
 <li id="preview-lc-task-2-1-2-1">
 <div class="para" id="p-derived-preview-lc-task-2-1-2-1">Which vectors can be formed using expressions of the form <span class="process-math">\(a\wvec+b\zvec\text{?}\)</span>
 </div>
-<div class="autopermalink" data-description="Item i"><a href="#preview-lc-task-2-1-2-1" title="Copy permalink for Item i">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#preview-lc-task-2-1-2-1" title="Copy permalink for Item 1">🔗</a></div>
 </li>
 <li id="preview-lc-task-2-1-2-2">
 <div class="para" id="p-derived-preview-lc-task-2-1-2-2">Compare your answer with the result from the previous task.</div>
-<div class="autopermalink" data-description="Item ii"><a href="#preview-lc-task-2-1-2-2" title="Copy permalink for Item ii">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#preview-lc-task-2-1-2-2" title="Copy permalink for Item 2">🔗</a></div>
 </li>
 <li id="preview-lc-task-2-1-2-3">
 <div class="para" id="p-derived-preview-lc-task-2-1-2-3">What seems different about the roles played by <span class="process-math">\(\wvec\)</span> and <span class="process-math">\(\zvec\)</span> compared to <span class="process-math">\(\uvec\)</span> and <span class="process-math">\(\vvec\text{?}\)</span>
 </div>
-<div class="autopermalink" data-description="Item iii"><a href="#preview-lc-task-2-1-2-3" title="Copy permalink for Item iii">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#preview-lc-task-2-1-2-3" title="Copy permalink for Item 3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Task 5.2.1.b"><a href="#preview-lc-task-2" title="Copy permalink for Task 5.2.1.b">🔗</a></div></article><article class="task exercise-like" id="preview-lc-task-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="preview-lc-task-3-1-1">Consider the set of polynomials <span class="process-math">\(p_1(x)=x\)</span> and <span class="process-math">\(p_2(x)=x^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#preview-lc-task-3-1-1" title="Copy permalink for Paragraph">🔗</a></div>
-</div> <ol class="lower-roman ol-marker-6" id="preview-lc-task-3-1-2">
+</div> <ol class="decimal" id="preview-lc-task-3-1-2">
 <li id="preview-lc-task-3-1-2-1">
 <div class="para" id="p-derived-preview-lc-task-3-1-2-1">Write several expressions that combine <span class="process-math">\(p_1\)</span> and <span class="process-math">\(p_2\)</span> using multiplication by numbers and addition.</div>
-<div class="autopermalink" data-description="Item i"><a href="#preview-lc-task-3-1-2-1" title="Copy permalink for Item i">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#preview-lc-task-3-1-2-1" title="Copy permalink for Item 1">🔗</a></div>
 </li>
 <li id="preview-lc-task-3-1-2-2">
 <div class="para" id="p-derived-preview-lc-task-3-1-2-2">Which polynomials can be created this way?</div>
-<div class="autopermalink" data-description="Item ii"><a href="#preview-lc-task-3-1-2-2" title="Copy permalink for Item ii">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#preview-lc-task-3-1-2-2" title="Copy permalink for Item 2">🔗</a></div>
 </li>
 <li id="preview-lc-task-3-1-2-3">
 <div class="para" id="p-derived-preview-lc-task-3-1-2-3">Is it possible to create the polynomial <span class="process-math">\(1\)</span> using these two polynomials? Explain.</div>
-<div class="autopermalink" data-description="Item iii"><a href="#preview-lc-task-3-1-2-3" title="Copy permalink for Item iii">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#preview-lc-task-3-1-2-3" title="Copy permalink for Item 3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Task 5.2.1.c"><a href="#preview-lc-task-3" title="Copy permalink for Task 5.2.1.c">🔗</a></div></article><div class="conclusion" id="preview-lincombo-5-2-5"><div class="para" id="preview-lincombo-5-2-5-1">This activity suggests that some collections of vectors are powerful enough to generate large portions of a vector space, while others are limited or redundant. In the remainder of this section, we will develop precise language to describe these ideas using the concepts of linear combinations, span, and linear independence.<div class="autopermalink" data-description="Paragraph"><a href="#preview-lincombo-5-2-5-1" title="Copy permalink for Paragraph">🔗</a></div>
@@ -1178,7 +1196,7 @@ R=\{2\uvec-\wvec,\;\wvec+\vvec,\;3\vvec+\tfrac12\uvec\}.
 </div>
 <div class="autopermalink" data-description="Exercise 5.2.5.10"><a href="#exercise-8-2-9" title="Copy permalink for Exercise 5.2.5.10">🔗</a></div></article><div class="autopermalink" data-description="Exercises 5.2.5"><a href="#exercises-8-2" title="Copy permalink for Exercises 5.2.5">🔗</a></div></section><div class="autopermalink" data-description="Section 5.2: Linear combinations, span, and linear independence"><a href="#sec-lin-comb-span-lin-ind" title="Copy permalink for Section 5.2: Linear combinations, span, and linear independence">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-vecspace-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chap6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-vecspace-intro.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-vecsubspace-intro.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
