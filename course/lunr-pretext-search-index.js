@@ -1,94 +1,184 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "syllabus",
+  "id": "sec-course-info",
   "level": "1",
-  "url": "syllabus.html",
+  "url": "sec-course-info.html",
   "type": "Section",
   "number": "",
-  "title": "Syllabus",
-  "body": " Syllabus        Course Information  This is the syllabus for Demo PreTeXt Course (PTX 101, section 007) for Spring 2026. It is a 0 credit course.   Instructor  Prof. Levin, Ross Hall 2240D, oscar.levin@unco.edu .    Student Hours  Tuesday and Friday 10-12 on Zoom    Class meets  MWF 10-11 in Ross 2090    Course Description  This course is entirely fictional. There isn't even a catalog to pull a description from. But if there were, it would have a course description and that course description would be put here for students to read (but likely because the university administration requires it be included in a syllabus).    Prerequisite  TEX 100 or suitable score on the typesetting placement exam.    Textbook and course materials   PreTeXt for Instructors by Oscar Levin. You can view an accessible online copy of this free, open source textbook at .       Course Overview  The goal of this course is to... oh, who am I kidding. This isn't a real course, so why would I spend time writting a course overview? I suppose I should because it helps see an example.  A common thing you might see here is a list of topics we will cover. So the topics we will cover include,   How to write a syllabus in PreTeXt .    How to write worksheets and handouts in PreTeXt     How to spend too much time typing up examples.   There is more we could say here, but for now I will stop.      Assessments and Grades  Your grade in this course will be based on a combination of your effort to master the material and the number of learning targets you master during the course.  Unlike a traditional course in which you earn points for completing various tasks to various levels of success, grading in this course is done using standards based grading . One advantage of this method is that you will have multiple opportunities to demonstrate your mastery of particular standards, and what matters is how many of these standards you demonstrate mastery on by the end of the course.  We call each standard a learning target and list these next.   Learning targets  By the end of this course, you should be able to:   Create a new PreTeXt document, build it into both HTML and PDF output, and deploy it to GitHub Pages.    Organize a PreTeXt document using sections, subsections, and paragraphs.    Make up random learning targets just to demonstrate what they look like.       Assessment of Learning Targets  Three times during the semester we will have an in-class exam. Each exam will be your first opportunity to demonstrate mastery of learning targets related to material we have covered prior to the exam.  If, after completing the exam, there are learning targets from that exam you have not demonstrated mastery on, you may attempt to demonstrate mastery on that target again by taking a quiz during student hours.    Final Exam  The final exam will take place on No day in particular, 2026 . Probably more to say here...    Assessment of Mathematical Engagement  Your level of effort and engagement will be assessed through your participation in class and completion of a variety of homework assignments.   Participation  Every three weeks you will be asked to complete a short self assessment on Canvas measuring your level of participation both in and out of class. This, combined with your attendance and my perception of your level of participation, will be used to determine your participation grade (out of 100).    Daily Prep Assignments  Prior to most classes you will have a short reading assignment or preview activity to complete. These will be graded based on completion.    Practice Problems  To gain procedural fluency in the content of the course, each topic will be accompanied with a small set of practice problems. These will be machine graded, but you can attempt them as many times as you like prior to the due date.    Written Homework  Some description of written homework should go here.       Final Grades  Grades will be computed based on the number of learning targets you have demonstrated mastery on and your level of mathematical engagement, according to the following table.      A  B  C  D    M (or E) level Learning Targets  15  12  9  6    E level Learning Targets  8  5  2  0    Engagement Score  90%  80%  70%  60%    To receive a particular grade, you must meet or exceed the requirements for that grade in all three categories. If you do not meet the requirements for a D , your final grade will be an F.       Course Policies   Attendance  Attendance is expected and critical to your success, and you will be missed if you are absent. Showing up is a key to success in all aspects of life. At the same time, I realize that it may be necessary for you to miss some class meetings due to work, family commitments, and so forth. In that case, let me know of your absence, and we can come up with a plan to help you stay up-to-date.  One important note though: in this class, just like in every other class, missing a day of class, even with a perfectly valid excuse, does not excuse you from learning what was covered that day. As your instructor, I will try to help you catch up, but this will take more work than it would have if you were in class.    Late work  All assignments have due dates; these exist to help you manage your workload and help me manage getting you feedback in a timely manner. To help motivate you to keep these deadlines, turning in your work on or before the due date will have the following benefits:   Approximately 5% free points on the assignment (for most work that I manually grade).    You will be among the first students to receive feedback\/grades on the assignment.    Opportunity to revise submitted work for a better grade.    Less stress about upcoming work and easier\/better learning for the next topic in class.   Additionally, most assignments will have an absolute cut-off for late work one week after the official due date. This is intended to give you a little flexibility but also not let old work pile up on top of you; sometimes it is just better to start with a clean slate and dive into the next thing.  Of course, life can happen and you don't owe me an explanation for why you might occasionally miss a deadline. Just let me know if you will be handing in something late and when I can expect it. This should not occur regularly; if you are having trouble meeting deadlines consistently, let's chat and make a plan.    Classroom Decorum  Please be respectful of your and my time by staying off your cell phones when in class, arriving on time, and not packing up your things before the end of class.  Additionally, we expect that you will treat all members of our course community with respect and kindness. In doing mathematics, or almost anything worth doing in life, you are going to make many errors and false starts while becoming more proficient. Think, for example, of learning to play a musical instrument, or learning an athletic skill, or developing a friendship. We want to establish a classroom atmosphere where the inevitable struggles and mistakes become an opportunity to learn and grow; not an opportunity for embarrassment. Thus, please be constructive and polite in questioning your colleagues in class.    Academic Integrity  Don't cheat! It is expected that members of this class will observe strict policies of academic honesty in every aspect of this course. In particular, you are expected to solve homework problems by yourself or together with your group, and not find solutions online. In general, the university's policies and recommendations for academic misconduct will be followed.    Generative AI  Generative AI tools (such as ChatGPT, Google Gemini, or CoPilot) are everywhere and present exciting opportunities. Some tasks AI can help us with can clear the way for more important things; but AI can also rob us of the opportunity to do the important things ourselves. It is your responsibility to ensure that you use these tools with academic integrity.  What does this mean? Ask yourself what you hope to get out of this course. I really hope your answer involves learning new skills, becoming a better thinker, and understanding mathematics at a deeper level (even if these goals are in service to eventually getting a better paying and more fulfilling job).  AI tools might be able to help you achieve these goals. Here are a few example prompts that you might find useful and are completely inline with these goals.    I am trying to learn the concept . Give me a sample question and ask me to find the answer and explain how I found it to you. Then ask me some followup questions, acting like a student I am tutoring on the topic. Make sure I can explain everything sufficiently so you can understand the concepts involved.      My professor gave me this sample quiz question: . Generate 5 additional questions that are similar in style and difficulty and ask me to give you the answers. Don't give me solutions until I have done so, but point out any errors I might have made.      Here is an example from my textbook: . Make up a similar question and walk me through a solution step my step, asking me to ask questions after each step to make sure I really understand the process.       Warning: As good as AI has become recently, it is still not great at mathematics, so anything you get out of a generative AI tool should be approached with a fair amount of skepticism. This is also a good way to learn mathematics though: play find the mistake in what AI gives you!  To be clear, you should NOT use AI tools to shortcut the learning process. Getting someone else to do your work for you (even if that someone is a robot) is plagiarism and a violation of the academic integrity policy. If you have any doubt about whether you are using AI productively, I'd love to have a conversation about it with you.    "
+  "title": "Course Information",
+  "body": " Course Information  This is the syllabus for Linear Algebra (MATH 312) for Summer 2026. It is a 4-credit course offered through St. Cloud State University.    Instructor  Dr. Dale Buske, CH 367A, .    Student Hours  Available via Zoom by appointment. Meetings on campus are also possible. Email to set up a day, time, and method to meet.    Accessibility Services  Please contact Student Accessibility Services (SAS), or 320-308-4080, Centennial Hall 202, to meet and discuss reasonable and appropriate accommodations.    Class Meetings  The course is asynchronous; however, closely following the suggested schedule is strongly advised in order to be successful and prepared for assessments of your learning.     Course Description  Matrices, matrix operations, systems of linear equations, determinants, geometry of R-n, vector spaces, subspaces, linear transformations, inner products, eigenvalues. 4 cr    Prerequisite  MATH 221 - Calculus I    Academic Integrity  There is nothing more important in this class than academic integrity . Sure, you want to master the topics in the course (and perhaps earn a good grade). Sure, you want to enjoy doing it. And, it is also important to know that your instructor intends to play his part in helping you be successful. Succeeding, as you know, will require hard work and significant effort. Cutting corners will not serve you well.  University policy is clear: Work submitted by an individual as her\/his\/their own course work in connection with an application for a position, promotion, tenure, salary increase, or other academic activity must be academically honest and a product of his or her own efforts. (A.II, 2.4, SUB.d.2, Professional and Ethical Standards for Employees and Students).    Cheating cannot be tolerated. All work must be your own. Suspected incidents of academic dishonesty will be aggressively managed via the procedure found in the SCSU student handbook .    In this course, students are likely to use AI tools to enhance their learning experience. However, it is essential to use these tools ethically and responsibly. AI can be a valuable resource for understanding complex concepts and solving problems, but it should not replace your own critical thinking and problem-solving efforts. All submitted work must be your own, and any assistance from AI tools must be properly acknowledged on written work. The use of AI is forbidden on assessments of your knowledge (e.g. exams, MyOpenMath). Using AI to complete work without acknowledgment will be considered a violation of academic integrity policies. In mathematics, AI often gives incorrect responses (i.e. hallucinations) and large language models such as ChatGPT are widely deemed “unreliable” in doing mathematics. Relaying AI responses that are incorrect will earn no credit. However, not acknowledging the use of AI in a response is far worse – it is academic misconduct.    Course Materials  Though most of course materials can be found at https:\/\/drbuske.github.io\/Math312 , D2L Brightspace will be the learning management tool used to organize the course. Grades, a calendar, assignments, and exams as well as announcements we be posted on D2L. Visit and login to your account using your Huskynet ID and password.  Electronic homework will be done via the platform located at .       Course Overview  People learn mathematics by doing mathematics. Though the course is asynchronous and hence flexible, you would be well-advised to do mathematics each day. The course calendar has dates for each topic. Each section of the text contains videos, readings, and exercises to prepare you for each graded assessment. Procrastination will not serve you well. A number of tools are available to support you, but the most important tool will be your dedicated effort.   "
 },
 {
   "id": "sec-course-info-2",
   "level": "2",
-  "url": "syllabus.html#sec-course-info-2",
+  "url": "sec-course-info.html#sec-course-info-2",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
-  "body": "Demo PreTeXt Course (PTX 101, section 007) "
+  "body": "Linear Algebra (MATH 312) "
 },
 {
-  "id": "sec-assessments-3",
-  "level": "2",
-  "url": "syllabus.html#sec-assessments-3",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "standards based grading "
-},
-{
-  "id": "sec-assessments-4",
-  "level": "2",
-  "url": "syllabus.html#sec-assessments-4",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "learning target "
-},
-{
-  "id": "notes-week-01",
+  "id": "syllabus-3",
   "level": "1",
-  "url": "notes-week-01.html",
+  "url": "syllabus-3.html",
   "type": "Section",
   "number": "",
-  "title": "Week 1",
-  "body": " Week 1   This is an outline of the topics we covered in the first week of class.     Monday 8\/22      Wednesday 8\/24      Friday 8\/26     "
+  "title": "Topics and Learning Outcomes",
+  "body": " Topics and Learning Outcomes     Topics  Systems of equations: What can we expect; Finding solutions to linear systems; Computation with Sage; Pivots and their influence on solutions spaces.  Vectors, matrices, and linear combinations: Vectors and linear combinations; Matrix multiplication and linear combinations; The span of a set of vectors; Linear independence; Matrix transformations; The geometry of matrix transformations.  Invertibility, bases, and coordinate systems: Invertibility; Bases and coordinate systems; Determinants; Subspaces.  Eigenvalues and eigenvectors: An introduction to eigenvalues and eigenvectors; Finding eigenvalues and eigenvectors; Diagonalization, similarity, and powers of a matrix.  Vector spaces: Definition of vector spaces; Linear combinations, span, and independence; Vector subspaces; Basis and dimension.  Orthogonality and Least Squares: The dot product; Orthogonal complements and the matrix transpose; Orthogonal bases and projections; Finding orthogonal bases; Orthogonal least squares.    Learning Outcomes    Perform elementary row operations on matrices; determine and analyze solutions of a system of linear equations.  Perform matrix arithmetic, calculate determinants, and determine inverses to given matrices.  Identify Euclidean spaces and subspaces and other vector spaces.  Identify spans and spanning sets.  Distinguish between linearly dependent and linearly independent sets of vectors.  Identify bases and dimensions of vector spaces.  Calculate characteristic polynomials, eigenvalues and eigenvectors, and diagonalize matrices.  Identify and calculate with orthogonal vectors, orthogonal bases, and orthonormal bases.  Orthogonally diagonalize symmetric matrices.       "
 },
 {
-  "id": "notes-week-02",
+  "id": "subsec-calendar",
   "level": "1",
-  "url": "notes-week-02.html",
+  "url": "subsec-calendar.html",
   "type": "Section",
   "number": "",
-  "title": "Week 2",
-  "body": " Week 2   Monday      Wednesday      Friday     "
+  "title": "Calendar",
+  "body": " Calendar  Below is a calendar with dates that you should study each topic and dates to take the written exams. Depending on your schedule, you may wish to do some of the work on weekends. Just be sure to not fall behind and be prepared for assessments on the prescribed dates.   Course Schedule    Week Starting  Monday  Tuesday  Wednesday  Thursday  Friday    5\/11  1.1 What can we expect  1.2 Finding solutions to linear systems  1.3 Computation with Sage  1.4 Pivonts and their influence on solution spaces  Review & Exam 1    5\/18  2.1 Vectors and linear combinations  2.2 Matrix multiplication and linear combinations  2.3 The span of a set of vectors  2.4 Linear independence  2.5 Matrix transformations    5\/25  No Class  2.6 The geometry of matrix transformations  Review & Exam 2  3.1 Invertibility  3.2 Bases and coordinate systems    6\/1  3.3 Determinants  3.4 Subspaces  Review & Exam 3  4.1 An introduction to eigenvalues and eigenvectors  4.2 Finding eigenvalues and eigenvectors    6\/8  4.3 Diagonalization, similarity, and powers of a matrix  Review & Exam 4  5.1 Definition of vector spaces  5.2 Linear combinations, span, and independence  5.3 Vector subspaces    6\/15  5.4 Basis and dimension  Review & Exam 5  6.1 The dot product  6.2 Orthogonal complements and the matrix transpose  No class    6\/22  6.3 Orthogonal bases and projections  6.4 Finding orthogonal bases  6.5 Orthogonal least squares  Review & Exam 6  Review & Final Exam     Exams will cover the following material from the course.   Exam dates and topics     Exam    Date    Topics     Exam 1  May 15  Sections 1.1-1.4    Exam 2  May 27  Sections 2.1-2.6    Exam 3  June 3  Sections 3.1-3.4    Exam 4  June 9  Sections 4.1-4.3    Exam 5  June 16  Sections 5.1-5.4    Exam 6  June 25  Sections 6.1-6.5    Final Exam  June 26  All sections     "
 },
 {
-  "id": "activity-01-intro-activity",
-  "level": "1",
-  "url": "activity-01-intro-activity.html",
-  "type": "Worksheet",
-  "number": "",
-  "title": "Introduction Activity",
-  "body": " Introduction Activity    This is the introduction to the activity.      This is the first exercise. It is great.    "
-},
-{
-  "id": "activity-01-intro-activity-3",
+  "id": "schedule-table",
   "level": "2",
-  "url": "activity-01-intro-activity.html#activity-01-intro-activity-3",
-  "type": "Worksheet Exercise",
+  "url": "subsec-calendar.html#schedule-table",
+  "type": "Table",
   "number": "1",
+  "title": "Course Schedule",
+  "body": " Course Schedule    Week Starting  Monday  Tuesday  Wednesday  Thursday  Friday    5\/11  1.1 What can we expect  1.2 Finding solutions to linear systems  1.3 Computation with Sage  1.4 Pivonts and their influence on solution spaces  Review & Exam 1    5\/18  2.1 Vectors and linear combinations  2.2 Matrix multiplication and linear combinations  2.3 The span of a set of vectors  2.4 Linear independence  2.5 Matrix transformations    5\/25  No Class  2.6 The geometry of matrix transformations  Review & Exam 2  3.1 Invertibility  3.2 Bases and coordinate systems    6\/1  3.3 Determinants  3.4 Subspaces  Review & Exam 3  4.1 An introduction to eigenvalues and eigenvectors  4.2 Finding eigenvalues and eigenvectors    6\/8  4.3 Diagonalization, similarity, and powers of a matrix  Review & Exam 4  5.1 Definition of vector spaces  5.2 Linear combinations, span, and independence  5.3 Vector subspaces    6\/15  5.4 Basis and dimension  Review & Exam 5  6.1 The dot product  6.2 Orthogonal complements and the matrix transpose  No class    6\/22  6.3 Orthogonal bases and projections  6.4 Finding orthogonal bases  6.5 Orthogonal least squares  Review & Exam 6  Review & Final Exam    "
+},
+{
+  "id": "ExamDates",
+  "level": "2",
+  "url": "subsec-calendar.html#ExamDates",
+  "type": "Table",
+  "number": "2",
+  "title": "Exam dates and topics",
+  "body": " Exam dates and topics     Exam    Date    Topics     Exam 1  May 15  Sections 1.1-1.4    Exam 2  May 27  Sections 2.1-2.6    Exam 3  June 3  Sections 3.1-3.4    Exam 4  June 9  Sections 4.1-4.3    Exam 5  June 16  Sections 5.1-5.4    Exam 6  June 25  Sections 6.1-6.5    Final Exam  June 26  All sections    "
+},
+{
+  "id": "sec-assessments",
+  "level": "1",
+  "url": "sec-assessments.html",
+  "type": "Section",
+  "number": "",
+  "title": "Assessments and Grades",
+  "body": " Assessments and Grades     MOMwork  Associated with the course is an open source (FREE) electronic homework system (MyOpenMath). We will use this for MOMwork. To access this, use the link .  Course ID: 320379  Enrollment Key: Buske312Summer26    Concept Maps  There will be four short “concept map” assignments—one each on (1) first‑order differential equations, (2) higher‑order linear ODEs, (3) Laplace transforms, and (4) systems of differential equations. A concept map is a hand‑drawn visual diagram that shows how key ideas in a topic connect, such as methods, definitions, relationships, and big‑picture structures. Each map should include the major concepts from the unit and arrows or labeled links showing how those ideas relate to one another. The goal is not artistic quality but clarity of thinking and organization. These assignments are graded on a simple credit\/no‑credit basis for completeness, effort, and meaningful connections—not correctness of the mathematical details. Because the maps must be hand‑drawn and reflect your own understanding, they are naturally individualized and are excellent preparation for the written exams. The due dates for these concept maps will be aligned with exam dates so that you may hand them in at that time.   Concept map due dates     Concept Map    Due Date     first‑order differential equations  June 2 (at Exam 1)    higher‑order linear ODEs  June 15 (at Exam 2)    Laplace transforms  June 30 (at Exam 3)    systems of differential equations  July 14 (at Exam 4)       Written Exams  There will be seven (7) written exams. One of the written exams will be a comprehensive final. All exams are to be independent assessments of your knowledge.    Grading  I will use my best professional judgment in determining grades. While many courses utilize 90%, 80%, 70%, and 60% as cutoffs for A, B, C, and D grades, these will serve only as guidelines. Averages above these marks will guarantee these grades but lower marks may earn higher final grades.   Grade weighting     Item    Weighting     MOMwork (MyOpenMath)  20%    Concept Maps  5%    Exams  75%        "
+},
+{
+  "id": "sec-assessments-2",
+  "level": "2",
+  "url": "sec-assessments.html#sec-assessments-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": "  This is the first exercise. It is great.   "
+  "body": "concept map "
 },
 {
-  "id": "handouts",
+  "id": "ch-practice-exams-2",
   "level": "1",
-  "url": "handouts.html",
-  "type": "Chapter",
+  "url": "ch-practice-exams-2.html",
+  "type": "Handout",
   "number": "",
-  "title": "Handouts",
-  "body": " Handouts    "
+  "title": "Chapter 1 Practice Exam",
+  "body": " Chapter 1 Practice Exam   Topics                     Be sure to try each question before looking at the solutions.   Questions   Express as a Linear Combination   Express the vector as a linear combination of and .    Solve by setting up a system of linear equations.    We solve: \\[ a + 2b = 5,\\quad 2a + b = 7. \\] Multiply first eqn by 2: . Subtract second eqn: , so . Then gives .  Hence .     Checking a Vector in a Span   Is in the span of the vectors , , and ? Justify your answer.    Set up a system and determine if it has a solution.    The system is: \\[ a + 0b + 2c = 3,\\quad 2a + b + 0c = 6,\\quad 0a + 2b + c = -2. \\] From first: . Substitute into second: . Third: , so , .  Since a solution exists, ∈ span of the three vectors.     Linear Independence Check   Determine whether the functions are linearly independent in .    Use the fact that a nontrivial combination equal to zero would force a polynomial in to vanish identically, which implies each coefficient is zero.    Suppose \\[ a + b e^x + c e^{2x} = 0 \\] for all . Rewrite in terms of : \\[ a + bu + cu^2 = 0 \\text{ for all }u>0. \\] A quadratic polynomial that is zero on a continuum must be identically zero, so . Therefore, they are linearly independent.     Vectors of Dependent Set   Given the set in , show that it is linearly dependent and identify a redundant vector.    If they are dependent, you can find a nontrivial combination equaling zero—then solve to express one vector in terms of the others.    Solve \\[ a(1,0,1)+b(2,1,1)+c(3,1,2)= (0,0,0). \\] Equating components: \\[ a+2b+3c=0,\\quad b+c=0,\\quad a+b+2c=0. \\] From second: . Plug into first: . Then third: . So . For instance, ⇒ . Then: \\[ (3,1,2) = (1,0,1)+(2,1,1). \\] So the set is dependent and is redundant.     Dimension of Solution Space   What is the dimension of the solution space of the homogeneous linear system if is a matrix with three distinct real eigenvalues?    A basis of solutions corresponds to eigenvectors—distinction implies how many independent solutions there are.    With three distinct real eigenvalues, has three independent eigenvectors, yielding a three‑dimensional solution space. Hence, \\(\\dim(\\text{solution space})=3\\).       Consider the differential equation     Find the general solution using an integral expression.  Determine the particular solution satisfying the initial condition .      Recall that if , then any solution must satisfy   Integrate term‑by‑term. After finding the general solution, substitute and to determine .    The general solution is . The initial condition gives , so the particular solution is .    We begin with the differential equation   By the fundamental theorem of calculus, a solution must satisfy   Integrating term‑by‑term:   Therefore the general solution is   To find the particular solution satisfying , substitute into the general solution:   Thus , and the particular solution is        Consider the differential equation   Sketch a small portion of the slope field in the region , by hand. Then answer the following questions:   Determine whether the solution curve through the point is initially increasing or decreasing. Justify your answer using the slope field.  Without solving the differential equation explicitly, describe the qualitative long–term behavior of solutions. Do they tend toward a particular line, diverge, or behave in some other way?     Remember that the slope field is built from small line segments whose slope equals at each point . For part (a), compute at the given point to determine whether the local slope is positive or negative. For part (b), think about values of along the line and whether slopes push trajectories toward or away from that line.    (a) The solution through is initially decreasing because . (b) Solutions tend toward the line , which acts as a stable equilibrium line for the differential equation.    We are given the differential equation   To understand the qualitative behavior of solutions, we begin by noting that the slope field at each point is determined by the value of . In particular:   When , the slope is horizontal.  When , solution curves locally increase.  When , solution curves locally decrease.   (a) At the point we compute   Because the slope is negative, the solution curve passing through initially decreases as increases.   Slope field for on , together with a solution curve through .      (b) To analyze long–term behavior, we solve the differential equation. Rewriting it in linear form,   the integrating factor is , and multiplying both sides yields   Integrating,   and dividing by gives the general solution   As , the exponential term decays to zero. Therefore every solution approaches the straight line   which serves as the asymptotic line that solutions follow for large . In particular, this line is an attracting solution curve: trajectories above it are pushed downward, and trajectories below it are pushed upward.  The qualitative picture is that all solutions to approach the line as increases.        Consider the differential equation     Separate variables and find the general solution.  Find the particular solution satisfying the initial condition .      First rewrite the equation so that all -terms are on one side and all -terms on the other:   Then integrate both sides. After integrating, exponentiate to solve for , and finally use the initial condition to determine the constant.    The general solution is The initial condition gives , so the particular solution is     Starting with the differential equation   we separate variables by dividing both sides by and multiplying by :   Integrate both sides:   Compute the integrals:   Exponentiating,   Write as a new positive constant , giving   Solving for produces the general solution:   Apply the initial condition :   Hence , and the particular solution is        Consider the linear differential equation     Find the general solution using the integrating factor method.  Find the particular solution satisfying the initial condition .      Rewrite the equation in the standard linear form and identify . The integrating factor is   Multiply both sides of the equation by this integrating factor. The left-hand side becomes . Integrate both sides, then multiply by to solve for .    The general solution is Using gives , so the particular solution is     We begin with the linear differential equation   In linear form , we have and .  The integrating factor is   Multiply the entire differential equation by :   The left-hand side is the derivative of :   Integrate both sides:   Multiply both sides by to solve for :   Simplifying the exponential:   To find the constant , apply the initial condition :   Thus .  Therefore the particular solution is        Consider the autonomous differential equation     Find all equilibrium solutions.  Construct a phase diagram for this differential equation.  Classify each equilibrium as stable, unstable, or semi-stable based on your phase diagram.  Describe the long-term behavior of solutions with , , and .      Compute the sign of in each region:       Note that for all , and equals zero only when . So the sign of is entirely determined by .  Stability comes from arrow directions:   Arrows pointing toward the equilibrium implies stable.  Arrows pointing away implies unstable.  Arrows pointing toward on one side and away on the other implies semi-stable.     Equilibria: and . The phase diagram has arrows up for , arrows down for , and arrows down for . Thus is stable , and is semi-stable . Long-term behavior:  : solution increases toward from below.  : solution decreases toward from above.  : solution decreases toward .      (a) Equilibria occur where   giving and .  (b) To determine the sign of , note that the squared factor is always nonnegative and equals zero only at . Therefore the sign of is the sign of .   If , then , so . Arrow: up .  If , then , so . Arrow: down .  If , then , so . Arrow: down .   (c) Therefore the phase diagram is as in .   Phase diagram for .      Stability analysis:    : arrows point towards  on both sides so the equilibrium is stable .   : arrow from below points away from , but arrow from above points downward towards . Thus is semi-stable equilibrium.   (d) Long–term behavior:   If , then the arrow is upward; the solution moves toward the stable equilibrium .  If , the arrow is downward; the solution decreases toward the stable equilibrium .  If , the arrow is downward; the solution decreases toward the equilibrium .        Consider the initial value problem   Use Euler’s method with step size to approximate the value of . Show your intermediate computations for each Euler step.    Recall that Euler’s method updates the approximate solution by   where . Starting at and using , compute successively:   at ,  at ,  at .     Using Euler’s method with , is approximately     We apply Euler’s method with and . The starting point is   Step 1: Compute at .    Step 2: Compute at .    Step 3: Compute at .    Therefore, the Euler approximation of with is       "
 },
 {
-  "id": "homework",
-  "level": "1",
-  "url": "homework.html",
-  "type": "Chapter",
-  "number": "",
-  "title": "Homework",
-  "body": " Homework    "
+  "id": "exam-linear-combinations-1",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-linear-combinations-1",
+  "type": "Exercise",
+  "number": "1",
+  "title": "Express as a Linear Combination.",
+  "body": " Express as a Linear Combination   Express the vector as a linear combination of and .    Solve by setting up a system of linear equations.    We solve: \\[ a + 2b = 5,\\quad 2a + b = 7. \\] Multiply first eqn by 2: . Subtract second eqn: , so . Then gives .  Hence .   "
+},
+{
+  "id": "exam-span-2",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-span-2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "Checking a Vector in a Span.",
+  "body": " Checking a Vector in a Span   Is in the span of the vectors , , and ? Justify your answer.    Set up a system and determine if it has a solution.    The system is: \\[ a + 0b + 2c = 3,\\quad 2a + b + 0c = 6,\\quad 0a + 2b + c = -2. \\] From first: . Substitute into second: . Third: , so , .  Since a solution exists, ∈ span of the three vectors.   "
+},
+{
+  "id": "exam-linindep-3",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-linindep-3",
+  "type": "Exercise",
+  "number": "3",
+  "title": "Linear Independence Check.",
+  "body": " Linear Independence Check   Determine whether the functions are linearly independent in .    Use the fact that a nontrivial combination equal to zero would force a polynomial in to vanish identically, which implies each coefficient is zero.    Suppose \\[ a + b e^x + c e^{2x} = 0 \\] for all . Rewrite in terms of : \\[ a + bu + cu^2 = 0 \\text{ for all }u>0. \\] A quadratic polynomial that is zero on a continuum must be identically zero, so . Therefore, they are linearly independent.   "
+},
+{
+  "id": "exam-linindep-4",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-linindep-4",
+  "type": "Exercise",
+  "number": "4",
+  "title": "Vectors of Dependent Set.",
+  "body": " Vectors of Dependent Set   Given the set in , show that it is linearly dependent and identify a redundant vector.    If they are dependent, you can find a nontrivial combination equaling zero—then solve to express one vector in terms of the others.    Solve \\[ a(1,0,1)+b(2,1,1)+c(3,1,2)= (0,0,0). \\] Equating components: \\[ a+2b+3c=0,\\quad b+c=0,\\quad a+b+2c=0. \\] From second: . Plug into first: . Then third: . So . For instance, ⇒ . Then: \\[ (3,1,2) = (1,0,1)+(2,1,1). \\] So the set is dependent and is redundant.   "
+},
+{
+  "id": "exam-dimension-5",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-dimension-5",
+  "type": "Exercise",
+  "number": "5",
+  "title": "Dimension of Solution Space.",
+  "body": " Dimension of Solution Space   What is the dimension of the solution space of the homogeneous linear system if is a matrix with three distinct real eigenvalues?    A basis of solutions corresponds to eigenvectors—distinction implies how many independent solutions there are.    With three distinct real eigenvalues, has three independent eigenvectors, yielding a three‑dimensional solution space. Hence, \\(\\dim(\\text{solution space})=3\\).   "
+},
+{
+  "id": "integrals-as-solutions-example",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#integrals-as-solutions-example",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "   Consider the differential equation     Find the general solution using an integral expression.  Determine the particular solution satisfying the initial condition .      Recall that if , then any solution must satisfy   Integrate term‑by‑term. After finding the general solution, substitute and to determine .    The general solution is . The initial condition gives , so the particular solution is .    We begin with the differential equation   By the fundamental theorem of calculus, a solution must satisfy   Integrating term‑by‑term:   Therefore the general solution is   To find the particular solution satisfying , substitute into the general solution:   Thus , and the particular solution is    "
+},
+{
+  "id": "slope-field-exam-problem",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#slope-field-exam-problem",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "   Consider the differential equation   Sketch a small portion of the slope field in the region , by hand. Then answer the following questions:   Determine whether the solution curve through the point is initially increasing or decreasing. Justify your answer using the slope field.  Without solving the differential equation explicitly, describe the qualitative long–term behavior of solutions. Do they tend toward a particular line, diverge, or behave in some other way?     Remember that the slope field is built from small line segments whose slope equals at each point . For part (a), compute at the given point to determine whether the local slope is positive or negative. For part (b), think about values of along the line and whether slopes push trajectories toward or away from that line.    (a) The solution through is initially decreasing because . (b) Solutions tend toward the line , which acts as a stable equilibrium line for the differential equation.    We are given the differential equation   To understand the qualitative behavior of solutions, we begin by noting that the slope field at each point is determined by the value of . In particular:   When , the slope is horizontal.  When , solution curves locally increase.  When , solution curves locally decrease.   (a) At the point we compute   Because the slope is negative, the solution curve passing through initially decreases as increases.   Slope field for on , together with a solution curve through .      (b) To analyze long–term behavior, we solve the differential equation. Rewriting it in linear form,   the integrating factor is , and multiplying both sides yields   Integrating,   and dividing by gives the general solution   As , the exponential term decays to zero. Therefore every solution approaches the straight line   which serves as the asymptotic line that solutions follow for large . In particular, this line is an attracting solution curve: trajectories above it are pushed downward, and trajectories below it are pushed upward.  The qualitative picture is that all solutions to approach the line as increases.    "
+},
+{
+  "id": "separable-equation-corrected",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#separable-equation-corrected",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "   Consider the differential equation     Separate variables and find the general solution.  Find the particular solution satisfying the initial condition .      First rewrite the equation so that all -terms are on one side and all -terms on the other:   Then integrate both sides. After integrating, exponentiate to solve for , and finally use the initial condition to determine the constant.    The general solution is The initial condition gives , so the particular solution is     Starting with the differential equation   we separate variables by dividing both sides by and multiplying by :   Integrate both sides:   Compute the integrals:   Exponentiating,   Write as a new positive constant , giving   Solving for produces the general solution:   Apply the initial condition :   Hence , and the particular solution is    "
+},
+{
+  "id": "integrating-factor-no-absorption",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#integrating-factor-no-absorption",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "   Consider the linear differential equation     Find the general solution using the integrating factor method.  Find the particular solution satisfying the initial condition .      Rewrite the equation in the standard linear form and identify . The integrating factor is   Multiply both sides of the equation by this integrating factor. The left-hand side becomes . Integrate both sides, then multiply by to solve for .    The general solution is Using gives , so the particular solution is     We begin with the linear differential equation   In linear form , we have and .  The integrating factor is   Multiply the entire differential equation by :   The left-hand side is the derivative of :   Integrate both sides:   Multiply both sides by to solve for :   Simplifying the exponential:   To find the constant , apply the initial condition :   Thus .  Therefore the particular solution is    "
+},
+{
+  "id": "autonomous-phase-diagram-correct",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#autonomous-phase-diagram-correct",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "   Consider the autonomous differential equation     Find all equilibrium solutions.  Construct a phase diagram for this differential equation.  Classify each equilibrium as stable, unstable, or semi-stable based on your phase diagram.  Describe the long-term behavior of solutions with , , and .      Compute the sign of in each region:       Note that for all , and equals zero only when . So the sign of is entirely determined by .  Stability comes from arrow directions:   Arrows pointing toward the equilibrium implies stable.  Arrows pointing away implies unstable.  Arrows pointing toward on one side and away on the other implies semi-stable.     Equilibria: and . The phase diagram has arrows up for , arrows down for , and arrows down for . Thus is stable , and is semi-stable . Long-term behavior:  : solution increases toward from below.  : solution decreases toward from above.  : solution decreases toward .      (a) Equilibria occur where   giving and .  (b) To determine the sign of , note that the squared factor is always nonnegative and equals zero only at . Therefore the sign of is the sign of .   If , then , so . Arrow: up .  If , then , so . Arrow: down .  If , then , so . Arrow: down .   (c) Therefore the phase diagram is as in .   Phase diagram for .      Stability analysis:    : arrows point towards  on both sides so the equilibrium is stable .   : arrow from below points away from , but arrow from above points downward towards . Thus is semi-stable equilibrium.   (d) Long–term behavior:   If , then the arrow is upward; the solution moves toward the stable equilibrium .  If , the arrow is downward; the solution decreases toward the stable equilibrium .  If , the arrow is downward; the solution decreases toward the equilibrium .    "
+},
+{
+  "id": "eulers-method-exam",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#eulers-method-exam",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "   Consider the initial value problem   Use Euler’s method with step size to approximate the value of . Show your intermediate computations for each Euler step.    Recall that Euler’s method updates the approximate solution by   where . Starting at and using , compute successively:   at ,  at ,  at .     Using Euler’s method with , is approximately     We apply Euler’s method with and . The starting point is   Step 1: Compute at .    Step 2: Compute at .    Step 3: Compute at .    Therefore, the Euler approximation of with is    "
 }
 ]
 
