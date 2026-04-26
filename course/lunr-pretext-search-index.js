@@ -1140,8 +1140,8 @@ var ptx_lunr_docs = [
   "url": "ws-act-4-3-1.html",
   "type": "Worksheet",
   "number": "",
-  "title": "Preview Activity 4.3.`",
-  "body": " Preview Activity 4.3.`    In this preview activity, we will review some familiar properties about matrix multiplication that appear in this section.     Remember that matrix-vector multiplication constructs linear combinations of the columns of the matrix. For instance, if , express the product in terms of and .     .      What is the product in terms of and ?     .      Next, remember how matrix-matrix multiplication is defined. Suppose that we have matrices and and that . How can we express the matrix product in terms of the columns of ?     .      Suppose that is a matrix having eigenvectors and with associated eigenvalues and . Express the product in terms of and .     .      Suppose that is the matrix from the previous part and that . What is the matrix product      .     "
+  "title": "Preview Activity 4.3.1",
+  "body": " Preview Activity 4.3.1    In this preview activity, we will review some familiar properties about matrix multiplication that appear in this section.     Remember that matrix-vector multiplication constructs linear combinations of the columns of the matrix. For instance, if , express the product in terms of and .     .      What is the product in terms of and ?     .      Next, remember how matrix-matrix multiplication is defined. Suppose that we have matrices and and that . How can we express the matrix product in terms of the columns of ?     .      Suppose that is a matrix having eigenvectors and with associated eigenvalues and . Express the product in terms of and .     .      Suppose that is the matrix from the previous part and that . What is the matrix product      .     "
 },
 {
   "id": "ula-preview-4-3",
@@ -1169,6 +1169,132 @@ var ptx_lunr_docs = [
   "number": "62",
   "title": "",
   "body": "  Suppose that is a matrix having eigenvectors and with associated eigenvalues and . Because the eigenvalues are real and distinct, we know that these eigenvectors form a basis of .   What are the products and in terms of and ?    If we form the matrix , what is the product in terms of and ?    Use the eigenvalues to form the diagonal matrix and determine the product in terms of and .    The results from the previous two parts of this activity demonstrate that . Using the fact that the eigenvectors and form a basis of , explain why is invertible and that we must have .    Suppose that . Verify that and are eigenvectors of with eigenvalues and .    Use the Sage cell below to define the matrices and and then verify that .        We have and .    .     . Comparing the result of this part of the activity to the previous, we see that .    Since the eigenvectors form a basis, the columns of are linearly independent and their span is . This guarantees that is invertible. Multiplying the equation on the right by gives .    The rest of the activity can be verified using Sage.   "
+},
+{
+  "id": "ws-act-4-3-3",
+  "level": "1",
+  "url": "ws-act-4-3-3.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 4.3.3",
+  "body": " Activity 4.3.3      Find a diagonalization of , if one exists, when .  Can the diagonal matrix be diagonalized? If so, explain how to find the matrices and .  Find a diagonalization of , if one exists, when .    Find a diagonalization of , if one exists, when .    Suppose that where .  Explain why is invertible.  Find a diagonalization of .  Find a diagonalization of .        We find that has eigenvectors with associated eigenvalue and with associated eigenvalue . We then have and .  Yes. We know that the eigenvectors are with associated eigenvalue and with associated eigenvalue . Therefore, and . This shows that the diagonalization is ; that is, since is already diagonal, it is diagonalized by the identity matrix.  We find eigenvectors , , and with associated eigenvalues , , and . Therefore, where   Once again, we see that is an eigenvalue with multiplicity one and is an eigenvalue with multiplicity two. However, so we are not able to find a basis for consisting of eigenvalues of . Therefore, is not diagonalizable.  If ,   is invertible since .  We know that and are eigenvectors of with associated eigenvalues and . If is an eigenvector of with associated eigenvalue , then is an eigenvector of with associated eigenvalue . Therefore, where .  We have where .       "
+},
+{
+  "id": "ws-act-4-3-3-2",
+  "level": "2",
+  "url": "ws-act-4-3-3.html#ws-act-4-3-3-2",
+  "type": "Activity",
+  "number": "63",
+  "title": "",
+  "body": "    Find a diagonalization of , if one exists, when .  Can the diagonal matrix be diagonalized? If so, explain how to find the matrices and .  Find a diagonalization of , if one exists, when .    Find a diagonalization of , if one exists, when .    Suppose that where .  Explain why is invertible.  Find a diagonalization of .  Find a diagonalization of .        We find that has eigenvectors with associated eigenvalue and with associated eigenvalue . We then have and .  Yes. We know that the eigenvectors are with associated eigenvalue and with associated eigenvalue . Therefore, and . This shows that the diagonalization is ; that is, since is already diagonal, it is diagonalized by the identity matrix.  We find eigenvectors , , and with associated eigenvalues , , and . Therefore, where   Once again, we see that is an eigenvalue with multiplicity one and is an eigenvalue with multiplicity two. However, so we are not able to find a basis for consisting of eigenvalues of . Therefore, is not diagonalizable.  If ,   is invertible since .  We know that and are eigenvectors of with associated eigenvalues and . If is an eigenvector of with associated eigenvalue , then is an eigenvector of with associated eigenvalue . Therefore, where .  We have where .      "
+},
+{
+  "id": "ws-act-4-3-4",
+  "level": "1",
+  "url": "ws-act-4-3-4.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 4.3.4",
+  "body": " Activity 4.3.4      Let's begin with the diagonal matrix . Find the powers , , and . What is for a general value of ?  Suppose that is a matrix with eigenvector and associated eigenvalue ; that is, . By considering , explain why is also an eigenvector of with eigenvalue .  Suppose that where . Remembering that the columns of are eigenvectors of , explain why is diagonalizable and find a diagonalization in terms of and .  Give another explanation of the diagonalizability of by writing .  In the same way, find a diagonalization of , , and .  Suppose that is a diagonalizable matrix with eigenvalues and . What happens to as becomes very large?       We have   We know that so that is also an eigenvector of with associated eigenvalue .  Since eigenvectors of are also eigenvectors of , we can use the matrix to diagonalize . The eigenvalues are squared, however, so we have where .  We can also see this by noting that    , , and .  We can write where . Therefore, where . As becomes very large, and become very close to zero. Hence and become very close to the zero matrix.     "
+},
+{
+  "id": "ws-act-4-3-4-2",
+  "level": "2",
+  "url": "ws-act-4-3-4.html#ws-act-4-3-4-2",
+  "type": "Activity",
+  "number": "64",
+  "title": "",
+  "body": "    Let's begin with the diagonal matrix . Find the powers , , and . What is for a general value of ?  Suppose that is a matrix with eigenvector and associated eigenvalue ; that is, . By considering , explain why is also an eigenvector of with eigenvalue .  Suppose that where . Remembering that the columns of are eigenvectors of , explain why is diagonalizable and find a diagonalization in terms of and .  Give another explanation of the diagonalizability of by writing .  In the same way, find a diagonalization of , , and .  Suppose that is a diagonalizable matrix with eigenvalues and . What happens to as becomes very large?       We have   We know that so that is also an eigenvector of with associated eigenvalue .  Since eigenvectors of are also eigenvectors of , we can use the matrix to diagonalize . The eigenvalues are squared, however, so we have where .  We can also see this by noting that    , , and .  We can write where . Therefore, where . As becomes very large, and become very close to zero. Hence and become very close to the zero matrix.    "
+},
+{
+  "id": "ws-act-4-3-5",
+  "level": "1",
+  "url": "ws-act-4-3-5.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 4.3.5",
+  "body": " Activity 4.3.5    We begin by rewriting in terms of and and noting that   Explain why has the geometric effect of rotating vectors by and scaling them by a factor of .  Let's now consider the matrix whose eigenvalues are and . We will choose to focus on one of the eigenvalues   Form the matrix using these values of and . Then rewrite the point in polar coordinates by identifying the values of and . Explain the geometric effect of multiplying vectors by .   Suppose that . Verify that .    Explain why .  We formed the matrix by choosing the eigenvalue . Suppose we had instead chosen . Form the matrix and use polar coordinates to describe the geometric effect of .  Using the matrix , show that .      The matrix has the geometric effect of scaling vectors uniformly by a factor of while the matrix rotates vectors by .  We have so we form the matrix . This shows that will scale vectors by a factor of while rotating them by .  Sage will verify this relationship.  As we saw earlier, we have and hence .  We have and so we form the matrix . This shows that will scale vectors by a factor of while rotating them by .     "
+},
+{
+  "id": "ws-act-4-3-5-2",
+  "level": "2",
+  "url": "ws-act-4-3-5.html#ws-act-4-3-5-2",
+  "type": "Activity",
+  "number": "65",
+  "title": "",
+  "body": "  We begin by rewriting in terms of and and noting that   Explain why has the geometric effect of rotating vectors by and scaling them by a factor of .  Let's now consider the matrix whose eigenvalues are and . We will choose to focus on one of the eigenvalues   Form the matrix using these values of and . Then rewrite the point in polar coordinates by identifying the values of and . Explain the geometric effect of multiplying vectors by .   Suppose that . Verify that .    Explain why .  We formed the matrix by choosing the eigenvalue . Suppose we had instead chosen . Form the matrix and use polar coordinates to describe the geometric effect of .  Using the matrix , show that .      The matrix has the geometric effect of scaling vectors uniformly by a factor of while the matrix rotates vectors by .  We have so we form the matrix . This shows that will scale vectors by a factor of while rotating them by .  Sage will verify this relationship.  As we saw earlier, we have and hence .  We have and so we form the matrix . This shows that will scale vectors by a factor of while rotating them by .    "
+},
+{
+  "id": "ws-act-5-1-1",
+  "level": "1",
+  "url": "ws-act-5-1-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Preview Activity 5.1.1",
+  "body": " Preview Activity 5.1.1     In many courses, vectors first appear as arrows in the plane or as lists of numbers in . In this section, we will step back and ask a more basic question: what properties make a collection of objects behave like vectors?   In this activity, you will examine several different sets together with rules for addition and scalar multiplication. Your goal is not to check a list of axioms, but to identify which structural features seem essential and which failures cause problems.      Consider the following sets, each equipped with the usual addition and scalar multiplication.   The set of ordered pairs .  The set of all polynomials of degree at most 2.  The set of all real-valued functions defined on .   For each set:   Give an example of adding two elements.  Give an example of multiplying an element by a scalar.  Identify one feature that all three sets seem to have in common.        Now consider the following collections. In each case, the objects look familiar, but the set has been restricted in some way.   The set of all polynomials with constant term equal to 1.  The set of all vectors in whose coordinates are positive.  The set of all functions such that .   For each example:   Decide whether the set still behaves like a space of vectors.  Find a specific operation (addition or scalar multiplication) that causes a problem, if one exists.  Explain why this failure is significant.        In , there is a special vector that satisfies for every vector .  For each of the following sets, discuss whether such a special element exists.   Polynomials of degree at most 2.  Polynomials with constant term equal to 1.  Functions that satisfy .   What role does this special element seem to play in determining whether a set should be considered a vector space?      The examples in this activity suggest that “being a vector” is not about what objects look like, but about how they behave under addition and scalar multiplication. In the next section, these ideas will be distilled into a precise definition of a vector space .    "
+},
+{
+  "id": "preview-vecspace-5-1",
+  "level": "2",
+  "url": "ws-act-5-1-1.html#preview-vecspace-5-1",
+  "type": "Activity",
+  "number": "66",
+  "title": "",
+  "body": "   In many courses, vectors first appear as arrows in the plane or as lists of numbers in . In this section, we will step back and ask a more basic question: what properties make a collection of objects behave like vectors?   In this activity, you will examine several different sets together with rules for addition and scalar multiplication. Your goal is not to check a list of axioms, but to identify which structural features seem essential and which failures cause problems.      Consider the following sets, each equipped with the usual addition and scalar multiplication.   The set of ordered pairs .  The set of all polynomials of degree at most 2.  The set of all real-valued functions defined on .   For each set:   Give an example of adding two elements.  Give an example of multiplying an element by a scalar.  Identify one feature that all three sets seem to have in common.        Now consider the following collections. In each case, the objects look familiar, but the set has been restricted in some way.   The set of all polynomials with constant term equal to 1.  The set of all vectors in whose coordinates are positive.  The set of all functions such that .   For each example:   Decide whether the set still behaves like a space of vectors.  Find a specific operation (addition or scalar multiplication) that causes a problem, if one exists.  Explain why this failure is significant.        In , there is a special vector that satisfies for every vector .  For each of the following sets, discuss whether such a special element exists.   Polynomials of degree at most 2.  Polynomials with constant term equal to 1.  Functions that satisfy .   What role does this special element seem to play in determining whether a set should be considered a vector space?      The examples in this activity suggest that “being a vector” is not about what objects look like, but about how they behave under addition and scalar multiplication. In the next section, these ideas will be distilled into a precise definition of a vector space .   "
+},
+{
+  "id": "ws-act-5-1-2",
+  "level": "1",
+  "url": "ws-act-5-1-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 5.1.2",
+  "body": " Activity 5.1.2    Let be an integer and let denote the set of all polynomials with real coefficients of degree at most . Members of have the form where are real numbers and is a real variable. The purpose of this activity is to verify that is a vector space.    Explain why is closed under the operation of usual polynomial addition. That is, explain why if .    Explain why is closed under scalar multiplication. That is, explain why if and .    Identify\/describe the zero element in axiom (A3) . Then show that for every .    For an element , identify\/describe the additive inverse in axiom A4.    For elements , show that axiom (SM1) holds.        If , then both and are polynomials of degree at most . Adding two such polynomials yields a polynomial having degree at most as well.    If , then For any constant , we then have which is clearly also in .     . If is any element in , then so that     If is any element in , then and the additive inverse is defined by     If is any element in , then Similarly, if is any element in , then For any constant , we then have       "
+},
+{
+  "id": "vs-polys-degree-n",
+  "level": "2",
+  "url": "ws-act-5-1-2.html#vs-polys-degree-n",
+  "type": "Activity",
+  "number": "67",
+  "title": "",
+  "body": "  Let be an integer and let denote the set of all polynomials with real coefficients of degree at most . Members of have the form where are real numbers and is a real variable. The purpose of this activity is to verify that is a vector space.    Explain why is closed under the operation of usual polynomial addition. That is, explain why if .    Explain why is closed under scalar multiplication. That is, explain why if and .    Identify\/describe the zero element in axiom (A3) . Then show that for every .    For an element , identify\/describe the additive inverse in axiom A4.    For elements , show that axiom (SM1) holds.        If , then both and are polynomials of degree at most . Adding two such polynomials yields a polynomial having degree at most as well.    If , then For any constant , we then have which is clearly also in .     . If is any element in , then so that     If is any element in , then and the additive inverse is defined by     If is any element in , then Similarly, if is any element in , then For any constant , we then have      "
+},
+{
+  "id": "ws-act-5-1-3",
+  "level": "1",
+  "url": "ws-act-5-1-3.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 5.1.3",
+  "body": " Activity 5.1.3    Let be an open interval of real numbers. Define to be the set of continuous, real-valued functions defined on . That is, elements are continuous functions . Define the addition of continous functions by and scalar multiplication by We investigate whether is a vector space or not.   Explain why is closed under addition as defined. That is, explain why if .  Explain why is closed under scalar multiplication. That is, explain why if and .  Identify\/describe the zero element 0 and additive inverse of elements . How do you know that these elements are also in ?  Carefully show that axiom (SM2) holds for .  Is a vector space?       Adding two continuous functions gives another continuous function.  Think of multiplying by as vertically stretching the graph of a function . If , then it is also reflected about the axis. In any case, if a function is continuous, then vertically stretching and\/or reflecting about the -axis will not change the continuous nature of the graph.  The element in is the zero function for every . Since constant functions are continuous, the zero function is continuous. If is continuous on , then is the function having graph reflected about the -axis and is therefore also continuous.  If , then is a continuous function on . For any , we then have .  yes.      "
+},
+{
+  "id": "vs-continuous_ab",
+  "level": "2",
+  "url": "ws-act-5-1-3.html#vs-continuous_ab",
+  "type": "Activity",
+  "number": "68",
+  "title": "",
+  "body": "  Let be an open interval of real numbers. Define to be the set of continuous, real-valued functions defined on . That is, elements are continuous functions . Define the addition of continous functions by and scalar multiplication by We investigate whether is a vector space or not.   Explain why is closed under addition as defined. That is, explain why if .  Explain why is closed under scalar multiplication. That is, explain why if and .  Identify\/describe the zero element 0 and additive inverse of elements . How do you know that these elements are also in ?  Carefully show that axiom (SM2) holds for .  Is a vector space?       Adding two continuous functions gives another continuous function.  Think of multiplying by as vertically stretching the graph of a function . If , then it is also reflected about the axis. In any case, if a function is continuous, then vertically stretching and\/or reflecting about the -axis will not change the continuous nature of the graph.  The element in is the zero function for every . Since constant functions are continuous, the zero function is continuous. If is continuous on , then is the function having graph reflected about the -axis and is therefore also continuous.  If , then is a continuous function on . For any , we then have .  yes.     "
+},
+{
+  "id": "ws-act-5-1-4",
+  "level": "1",
+  "url": "ws-act-5-1-4.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 5.1.4",
+  "body": " Activity 5.1.4    Let denote the space of all infinite sequences of real numbers. We denote such a sequence as where it is understood that the subscripts run from 0 to . Addition is defined by and scalar multiplication by for .   Identify the zero element in from axiom (A3) .  Identify the additive inverse of and then show that for every .  Is a vector space?  Let denote the space of all convergent sequences of real numbers under the same operations. Is a vector space or not?  Let denote the space of all real sequences that converge to 1 under the same operations. Is a vector space or not?  Let denote the space of all real sequences that converge to 0 under the same operations. Is a vector space or not?  Let denote the space of all real positive sequences under the same operations. Is a vector space or not?       The zero element is the sequence  For , we have . The additive inverse is the sequence . Then,  Yes.  Yes; note that the sum of two convergent sequences is also convergent. So too is a scalar multiple of a convergent sequence.  No. This is easy to see by taking the constant sequence and adding it to itself. This sequence does not converge to 1.  Yes. The sum of two such sequences also converges to 0 and any constant multiple of a sequence converging to 0 also converges to 0.  No. There is no additive unit - see axiom (A3) .      "
+},
+{
+  "id": "vs-sequences-real",
+  "level": "2",
+  "url": "ws-act-5-1-4.html#vs-sequences-real",
+  "type": "Activity",
+  "number": "69",
+  "title": "",
+  "body": "  Let denote the space of all infinite sequences of real numbers. We denote such a sequence as where it is understood that the subscripts run from 0 to . Addition is defined by and scalar multiplication by for .   Identify the zero element in from axiom (A3) .  Identify the additive inverse of and then show that for every .  Is a vector space?  Let denote the space of all convergent sequences of real numbers under the same operations. Is a vector space or not?  Let denote the space of all real sequences that converge to 1 under the same operations. Is a vector space or not?  Let denote the space of all real sequences that converge to 0 under the same operations. Is a vector space or not?  Let denote the space of all real positive sequences under the same operations. Is a vector space or not?       The zero element is the sequence  For , we have . The additive inverse is the sequence . Then,  Yes.  Yes; note that the sum of two convergent sequences is also convergent. So too is a scalar multiple of a convergent sequence.  No. This is easy to see by taking the constant sequence and adding it to itself. This sequence does not converge to 1.  Yes. The sum of two such sequences also converges to 0 and any constant multiple of a sequence converging to 0 also converges to 0.  No. There is no additive unit - see axiom (A3) .     "
 },
 {
   "id": "ch-practice-exams-2",
