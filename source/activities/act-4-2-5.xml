@@ -1,0 +1,168 @@
+<worksheet label="ws-act-4-2-5">
+   <title>Activity 4.2.5</title>
+    <activity>
+      <statement>
+      <p> We will use Sage to find the eigenvalues and eigenvectors of
+      a matrix.  Let's begin with the matrix
+      <m>A = \left[\begin{array}{rr}
+      -3 \amp 1 \\
+      0 \amp -3 \\
+      \end{array}\right]
+      </m>.
+      <ol marker="a.">
+	<li><p>
+	  We can find the characteristic polynomial of 
+	  <m>A</m> by writing 
+	  <c>A.charpoly('lambda')</c>.  Notice that we have to give Sage a
+	  variable in which to write the polynomial;  here, we use
+	  <c>lambda</c> though <c>x</c> works just as well. </p>
+
+	  <sage>
+	    <input>
+A = matrix(2,2,[-3,1,0,-3])
+A.charpoly('lambda')
+	    </input>
+	  </sage>
+
+	  <p> The factored form of the characteristic polynomial may
+	  be more useful since it will tell us the eigenvalues and
+	  their multiplicities.  The factored characteristic polynomial is
+	  found with <c>A.fcp('lambda')</c>. </p>
+	  
+	  <sage>
+	    <input>
+A = matrix(2,2,[-3,1,0,-3])
+A.fcp('lambda')
+	    </input>
+	  </sage>
+	</li>
+
+	<li><p> If we only want the eigenvalues, we can use
+	<c>A.eigenvalues()</c>.  </p>
+
+	  <sage>
+	    <input>
+A = matrix(2,2,[-3,1,0,-3])
+A.eigenvalues()
+	    </input>
+	  </sage>
+
+	  <p> Notice that the multiplicity of an eigenvalue is the
+	  number of times it is repeated in the list of
+	  eigenvalues. </p>
+	</li>
+
+	<li><p> Finally, we can find eigenvectors by
+	<c>A.eigenvectors_right()</c>.  (We are looking for
+	<em>right</em> eigenvalues since the vector <m>\vvec</m>
+	appears to the right of <m>A</m> in the definition
+	<m>A\vvec=\lambda \vvec</m>.) </p>
+	  
+	  <sage>
+	    <input>
+A = matrix(2,2,[-3,1,0,-3])
+A.eigenvectors_right()
+	    </input>
+	  </sage>
+
+	  <p> At first glance, the result of this command can be a
+	  little confusing to interpret.  What we see is a list with
+	  one entry for each eigenvalue.  For each eigenvalue, there
+	  is a triple consisting of (i) the eigenvalue <m>\lambda</m>,
+	  (ii) a basis for <m>E_\lambda</m>, and (iii) the
+	  multiplicity of <m>\lambda</m>. </p> </li>
+
+	  <li><p> When working with decimal entries, which are called
+	  <em>floating point numbers</em> in computer science, we must
+	  remember that computers perform only approximate arithmetic.
+	  This is a problem when we wish to find the eigenvectors of such a
+	  matrix.  To illustrate, consider the matrix
+	  <m>A=\left[\begin{array}{rr}
+	  0.4 \amp 0.3 \\
+	  0.6 \amp 0.7 \\
+	  \end{array}\right]
+	  </m>.
+	  <ol marker="1.">
+	    <li><p> Without using Sage, find the eigenvalues of this
+	    matrix.
+	    </p></li>
+
+	    <li><p> What do you find for the reduced row echelon form
+	    of <m>A-I</m>? </p></li>
+
+	    <li><p> Let's now use Sage to determine the reduced row
+	    echelon form of <m>A-I</m>: </p>
+	      
+	    <sage>
+	      <input>
+A = matrix(2,2,[0.4,0.3,0.6,0.7])
+(A-identity_matrix(2)).rref()
+	      </input>
+	    </sage>
+
+	    <p> What result does Sage report for the reduced row echelon
+	    form?  Why is this result not correct? </p>
+	    </li>
+	    
+	    <li><p> Because the arithmetic Sage performs with floating
+	    point entries is only approximate, we are not able to find
+	    the eigenspace <m>E_1</m>.  In this next chapter, we will
+	    learn how to address this issue.  In the meantime,
+	    we can get around this problem by writing the entries in
+	    the matrix as rational numbers: </p>
+
+	    <sage>
+	      <input>
+A = matrix(2,2,[4/10,3/10,6/10,7/10])
+A.eigenvectors_right()
+	      </input>
+	    </sage>
+	    </li>
+	  </ol></p>
+	  </li>
+      </ol></p>
+      </statement>
+      
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> The <c>fcp</c> command will return the factored
+	  characteristic polynomial <c>lambda^2 - 2*lambda - 3</c>.
+	  </p></li>
+
+	  <li><p> The <c>eigenvalues</c> command returns a list of
+	  eigenvalues <c>[-3, -3]</c>.
+	  </p></li>
+
+	  <li><p> The <c>eigenvectors_right</c> command returns
+	  <c>[(-3, [(1, 0)], 2)]</c>.
+	  </p></li>
+
+	  <li><p> If we begin with the matrix <m>A</m>, we find
+	  <ol marker="1.">
+	    <li><p> The eigenvalues are <m>\lambda=1</m> and
+	    <m>\lambda=0.1</m>.
+	    </p></li>
+
+	    <li><p> The reduced row echelon form is
+	    <m>\mattwo{-2}{1}{0}{0}</m>, which shows that <m>A-I</m>
+	    is not invertible, as expected.
+	    </p></li>
+
+	    <li><p> Sage returns <m>\mattwo{1}{0}{0}{1}</m>, which is
+	    not correct because <m>A-I</m> cannot be invertible if
+	    <m>\lambda=1</m> is an eigenvalue of <m>A</m>.
+	    </p></li>
+
+	    <li><p> Here we find the correct eigenvalues,
+	    <m>\lambda=1</m> with basis vector <m>\twovec{1}{2}</m>
+	    for <m>E_1</m> and <m>\lambda=0.1</m> with basis vector
+	    <m>\twovec{1}{-1}</m> for <m>E_{0.1}</m>.
+	    </p></li>
+	  </ol>
+	  </p></li>
+	</ol></p>
+      </solution>
+	    
+    </activity>
+   
+</worksheet>

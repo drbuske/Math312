@@ -1,0 +1,98 @@
+<worksheet label="ws-act-4-3-4">
+   <title>Activity 4.3.4</title>
+    <activity>
+      <statement>
+      <p>
+	<ol marker="a.">
+	  <li><p> Let's begin with the diagonal matrix
+	  <me>
+	    D = \left[\begin{array}{rr}
+	    2 \amp 0 \\
+	    0 \amp -1 \\
+	    \end{array}\right]
+	  </me>.  Find the powers <m>D^2</m>, <m>D^3</m>, and
+	  <m>D^4</m>.  What is <m>D^k</m> for a general value of
+	  <m>k</m>? </p></li>
+
+	  <li><p> Suppose that <m>A</m> is a matrix with eigenvector
+	  <m>\vvec</m> and associated eigenvalue <m>\lambda</m>;  that
+	  is, <m>A\vvec = \lambda\vvec</m>.  By considering
+	  <m>A^2\vvec</m>, explain why <m>\vvec</m> is also an
+	  eigenvector of <m>A^2</m> with eigenvalue
+	  <m>\lambda^2</m>. </p></li>
+
+	  <li><p> Suppose that <m>A= PDP^{-1}</m> where
+	  <me>
+	    D = \left[\begin{array}{rr}
+	    2 \amp 0 \\
+	    0 \amp -1 \\
+	    \end{array}\right]
+	  </me>.  Remembering that the columns of <m>P</m> are
+	  eigenvectors of <m>A</m>,
+	  explain why <m>A^2</m> is diagonalizable and find a
+	  diagonalization in terms of <m>P</m> and <m>D</m>.</p></li>
+
+	  <li><p> Give another explanation of the diagonalizability of
+	  <m>A^2</m> by writing
+	  <me>
+	    A^2 = (PDP^{-1})(PDP^{-1}) = PD(P^{-1}P)DP^{-1}
+	  </me>. </p></li>
+
+	  <li><p> In the same way, find a diagonalization of
+	  <m>A^3</m>, <m>A^4</m>, and <m>A^k</m>. </p></li>
+
+	  <li><p> Suppose that <m>A</m> is a diagonalizable
+	  <m>2\times2</m> matrix with eigenvalues <m>\lambda_1 =
+	  0.5</m> and <m>\lambda_2=0.1</m>.  What happens to
+	  <m>A^k</m> as <m>k</m> becomes very large? </p></li>
+
+	</ol>
+      </p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> We have
+	  <me>
+	    D^2=\mattwo4001, D^3=\mattwo800{-1}, \ldots,
+	    D^k=\mattwo{2^k}00{(-1)^k}\text{.}
+	  </me>
+	  </p></li>
+
+	  <li><p> We know that <m>A^2\vvec = \lambda A\vvec =
+	  \lambda^2\vvec</m> so that <m>\vvec</m> is also an
+	  eigenvector of <m>A^2</m> with associated eigenvalue
+	  <m>\lambda^2</m>. </p></li>
+
+	  <li><p> Since eigenvectors of <m>A</m> are also eigenvectors
+	  of <m>A^2</m>, we can use the matrix <m>P</m> to diagonalize
+	  <m>A^2</m>.  The eigenvalues are squared, however, so we
+	  have <m>A^2=PEP^{-1}</m> where
+	  <m>E=D^2=\mattwo4001</m>. </p></li>
+
+	  <li><p> We can also see this by noting that
+	  <me>
+	    \begin{aligned}
+	    A^2 \amp = (PDP^{-1})(PDP^{-1})
+	    = PD(P^{-1}P)DP^{-1} \\
+	    \amp = PDIDP^{-1}
+	    = PD^2P^{-1}\text{.}\\
+	    \end{aligned}
+	  </me>
+	  </p></li>
+
+	  <li><p> <m>A^3=PD^3P^{-1}</m>, <m>A^4=PD^4P^{-1}</m>, and
+	  <m>A^k=PD^kP^{-1}</m>. </p></li>
+
+	  <li><p> We can write <m>A=PDP^{-1}</m> where
+	  <m>D=\mattwo{0.5}00{0.1}</m>.  Therefore,
+	  <m>A^k=PD^kP^{-1}</m> where
+	  <m>D^k=\mattwo{0.5^k}00{0.1^k}</m>.  As <m>k</m> becomes
+	  very large, <m>0.5^k</m> and <m>0.1^k</m> become very close
+	  to zero.  Hence <m>D^k</m> and <m>A^k</m> become very close
+	  to the zero matrix. </p></li>
+	</ol></p>
+      </solution>
+    </activity>
+   
+</worksheet>

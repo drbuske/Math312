@@ -1,0 +1,146 @@
+<worksheet label="ws-act-4-1-1">
+   <title>Preview Activity 4.1.1</title>
+    <activity label="ula-preview-4-1">
+      <introduction>
+      <p> Before we introduce the definition of eigenvectors and
+      eigenvalues, it will be helpful to remember some ideas we have
+      seen previously.</p>
+      </introduction>
+
+      <task label="ula-preview-4-1-a">
+        <statement>
+	  <sidebyside widths="50% 45%">
+	  <p> Suppose that <m>\vvec</m> is the vector shown in the
+	  figure.  Sketch the vector <m>2\vvec</m> and the vector
+	  <m>-\vvec</m>.
+	  </p>
+	  <image source="images/eigen-intro-vec">
+            <shortdescription>
+              A two dimensional vector and coordinate grid.
+            </shortdescription>
+            <description>
+              <p>A <m>1\times1</m> standard coordinate grid with a
+              vector <m>\vvec=\twovec12</m>.</p>
+            </description>
+          </image>
+	  </sidebyside>
+          <p component="rs-preview">You will be prompted to upload a
+          scan of your sketch in part (b).</p>
+        </statement>
+        <solution>
+	  <p>
+	    The vectors are as shown.
+	    <sidebyside width="40%">
+	      <image source="images/ex-eigen-intro-vec" />
+	    </sidebyside>
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-4-1-b" attachment="yes">
+        <statement>
+	  <p> State the geometric effect that scalar multiplication
+	  has on the vector <m>\vvec</m>.  Then sketch all the vectors
+	  of the form <m>\lambda \vvec</m> where <m>\lambda</m> is a scalar.
+	  </p>
+          <p component="rs-preview">Scan and upload your
+          sketch below.</p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> Scalar multiplication has the effect of stretching
+	  and possibly flipping <m>\vvec</m> along the line defined by
+	  <m>\vvec</m>. </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-4-1-c">
+        <statement>
+	  <p> State the geometric effect of the matrix
+	  transformation defined by
+	  <me>
+	    \left[\begin{array}{rr}
+	    3 \amp 0 \\
+	    0 \amp -1 \\
+	    \end{array}\right]
+	    </me>.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> This matrix transformation stretches vectors by a
+	  factor of <m>3</m> in the horizontal direction and flips
+	  vectors vertically.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-4-1-d">
+        <statement>
+	  <p> Suppose that <m>A</m> is a <m>2\times 2</m>
+	  matrix and that <m>\vvec_1</m> and <m>\vvec_2</m> are vectors
+	  such that
+	  <me>
+            A\vvec_1 = 3 \vvec_1, \qquad A\vvec_2 = -\vvec_2
+	  </me>.
+	  Use the linearity of matrix multiplication to express the
+	  following vectors in terms of <m>\vvec_1</m> and
+	  <m>\vvec_2</m>.
+	  <ol marker="1.">
+	    <li><p> <m>A(4\vvec_1)</m>. </p></li>
+	    <li><p> <m>A(\vvec_1 + \vvec_2)</m>. </p></li>
+	    <li><p> <m>A(4\vvec_1 -3\vvec_2)</m>. </p></li>
+	    <li><p> <m>A^2\vvec_1</m>. </p></li>
+	    <li><p> <m>A^2(4\vvec_1 - 3\vvec_2)</m>. </p></li>
+	    <li><p> <m>A^4\vvec_1</m>. </p></li>
+	  </ol></p>
+        </statement>
+        <response component="rs-preview"/>
+
+        <solution>
+	  <p> Applying linearity, we see that
+	  <ol marker="1.">
+	    <li><p> <m>A(4\vvec_1) = 4A\vvec_1 =
+	    12\vvec_1</m>. </p></li>
+	    <li><p> <m>A(\vvec_1+\vvec_2) = A\vvec_1 + A\vvec_2 =
+	    3\vvec_1 - \vvec_2</m>. </p></li>
+	    <li><p> <m>A(4\vvec_1-3\vvec_2) = 4A\vvec_1 -3A\vvec_2 =
+	    12\vvec_1 + 3\vvec_2</m>. </p></li>
+	    <li><p> <m>A^2\vvec_1 = A(3\vvec_1) =
+	    9\vvec_1</m>. </p></li>
+	    <li><p> <m>A^2(4\vvec_1-3\vvec_2) = A(12\vvec_1 +3\vvec_2) =
+	    36\vvec_1 - 3\vvec_2</m>. </p></li>
+	    <li><p> <m>A^4\vvec_1 = 3^4\vvec_1 =
+	    81\vvec_1</m>. </p></li>
+	  </ol>
+	  </p>
+        </solution>
+      </task>
+
+      <task component="rs-preview">
+        <query label="ula-preview-4-1-poll" visibility="instructor">
+          <statement>
+            <p>I feel confident with the material in this activity.</p>
+          </statement>
+          <choices>
+            <choice><p>Strongly Agree</p></choice>
+            <choice><p>Agree</p></choice>
+            <choice><p>Neutral</p></choice>
+            <choice><p>Disagree</p></choice>
+            <choice><p>Strongly Disagree</p></choice>
+          </choices>
+        </query>
+      </task>
+
+      <task component="rs-preview"
+            label="ula-preview-4-1-what-else">
+        <statement>
+          <p>What would you need to know to feel
+          more confident about this material?</p>
+        </statement>
+        <response/>
+      </task>
+
+    </activity>
+   
+</worksheet>

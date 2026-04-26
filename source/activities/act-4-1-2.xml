@@ -1,0 +1,166 @@
+<worksheet label="ws-act-4-1-2">
+   <title>Activity 4.1.2</title>
+    <activity xml:id="activity-eigen-geom">
+      <statement>
+      <p> This definition has an important geometric interpretation
+      that we will investigate here.
+      <ol marker="a.">
+	<li><p> Suppose that <m>\vvec</m> is a nonzero vector and
+	that <m>\lambda</m> is a scalar.  What is the geometric
+	relationship between <m>\vvec</m> and <m>\lambda\vvec</m>?
+	</p></li>
+
+	<li><p> Let's now consider the eigenvector condition:
+	<m>A\vvec = \lambda\vvec</m>.  Here we have two vectors,
+	<m>\vvec</m> and <m>A\vvec</m>.  If <m>A\vvec =
+	\lambda\vvec</m>, what is the geometric relationship between
+	<m>\vvec</m> and <m>A\vvec</m>?
+	</p></li>
+
+	<li>
+	<figure xml:id="js-eigen">
+	  <caption>
+	    A geometric interpretation of the eigenvalue-eigenvector
+	    condition <m>A\vvec = \lambda\vvec</m> .
+	  </caption>
+	  
+	  <interactive xml:id="interactive-eigen"
+		       platform="javascript" width="100%"
+		       aspect="36:34"
+		       source="jslibrary/figures.js
+			       jslibrary/eigenvectors.js"
+		       preview="preview/eigenvectors-preview.png">
+            <shortdescription>
+              An interactive diagram for exploring eigenvectors.
+            </shortdescription>
+            <description>
+              <p>An interactive diagram in which the reader can select
+              a <m>2\times2</m> matrix <m>A</m> using a set of sliders
+              appearing in a <m>2\times2</m> array across the top.
+              Below that is a <m>1\times1</m> standard coordinate grid
+              and coordinate axes along with a vector <m>\vvec</m>
+              that can be moved by clicking and dragging.  The vector
+              <m>A\vvec</m> is also shown.</p>
+            </description>
+	    <sbsgroup>
+	      <sidebyside width="75%">
+		<slate xml:id="eigenvectors-sliders"
+		       aspect="9:2"
+		       surface="canvas" />
+	      </sidebyside>
+	      <sidebyside width="75%">
+		<slate xml:id="eigenvectors-canvas"
+		       aspect="1:1"
+		       surface="canvas" />
+	      </sidebyside>
+	    </sbsgroup>
+	    <instructions>
+	      <p>
+		The sliders in the diagram below allow you to choose a
+		matrix <m>A = \begin{bmatrix} a \amp b \\ c \amp d
+		\end{bmatrix}</m>.  The vector <m>\vvec</m>, shaded
+		red, may be moved by clicking in the head of the
+		vector.  The vector <m>A\vvec</m> is then shown in
+		outline.
+	      </p>
+	    </instructions>
+	    <static>
+	      <sidebyside width="100%">
+		<p>
+		  There is an interactive diagram, available at
+		  <url href="http://gvsu.edu/s/0Ja"
+		       visual="gvsu.edu/s/0Ja"/>,
+		  that accompanies this activity.
+		</p>
+	      </sidebyside>
+	      <sidebyside width="45%">
+		<image source="preview/eigenvectors-preview.png"/>
+	      </sidebyside>
+	    </static>
+	  </interactive>
+	</figure>
+
+	<p> Choose the matrix
+	<m>A=
+	\left[\begin{array}{rr}
+	1\amp 2 \\
+	2\amp 1 \\
+	\end{array}\right]
+	</m>.
+	Move the vector <m>\vvec</m> so that the eigenvector condition
+	holds.  What is the eigenvector <m>\vvec</m> and what is the
+	associated eigenvalue?
+	</p></li>
+
+	<li><p> By algebraically computing <m>A\vvec</m>, verify that
+	the eigenvector condition holds for the vector <m>\vvec</m>
+	that you found.  </p></li>
+
+	<li><p> If you multiply the eigenvector <m>\vvec</m> that you
+	found by <m>2</m>, do you still have an eigenvector?  If so,
+	what is the associated eigenvalue? </p></li>
+
+	<li><p> Are you able to find another eigenvector <m>\vvec</m>
+	that is not a scalar multiple of the first one that you found?
+	If so, what is the eigenvector and what is the associated
+	eigenvalue? </p></li>
+
+	<li><p> Now consider the matrix
+	<m>A = \left[\begin{array}{rr}
+	2 \amp 1 \\
+	0 \amp 2 \\
+	\end{array}\right]
+	</m>.
+	Use the diagram to describe any eigenvectors and associated
+	eigenvalues.
+	</p></li>
+
+	<li><p> Finally, consider the matrix
+	<m>A = \left[\begin{array}{rr}
+	0 \amp -1 \\
+	1 \amp 0 \\
+	\end{array}\right]
+	</m>.
+	Use the diagram to describe any eigenvectors and associated
+	eigenvalues.  What geometric transformation does this
+	matrix perform on vectors?  How does this explain the presence
+	of any eigenvectors?
+	</p></li>
+      </ol> </p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> The vectors <m>\vvec</m> and <m>\lambda\vvec</m> lie
+	  on the same line. </p></li>
+
+	  <li><p> The vectors <m>\vvec</m> and <m>A\vvec</m> lie on
+	  the same line. </p></li>
+
+	  <li><p> There are many possibilities, but we see that
+	  <m>\twovec{1}{1}</m> is an eigenvector with associated
+	  eigenvalue <m>\lambda=3</m>. </p></li>
+
+	  <li><p> If we perform the matrix multiplication, we see that
+	  <m>A\twovec{1}{1} = \twovec{3}{3} =
+	  3\twovec{1}{1}</m>. </p></li> 
+
+	  <li><p> Yes, <m>\twovec{2}{2}</m> is still an eigenvector
+	  with associated eigenvalue <m>\lambda=3</m>. </p></li>
+
+	  <li><p> We see that <m>\twovec{1}{-1}</m> is an eigenvector
+	  with associated eigenvalue <m>\lambda=-1</m>. </p></li>
+
+	  <li><p> The only eigenvectors that appear are scalar
+	  multiples of <m>\twovec{1}{0}</m> with associated eigenvalue
+	  <m>\lambda=2</m>. </p></li>
+
+	  <li><p> There are no eigenvectors.  The matrix
+	  transformation rotates vectors by <m>90^\circ</m> so it is
+	  not possible for <m>\vvec</m> and <m>A\vvec</m> to lie on
+	  the same line. </p></li>
+	</ol></p>
+      </solution>
+    </activity>
+   
+</worksheet>

@@ -1,0 +1,133 @@
+<worksheet label="ws-act-4-3-2">
+   <title>Activity 4.3.2</title>
+    <activity>
+      <statement>
+      <p> Suppose that <m>A</m> is a <m>2\times2</m> matrix having
+      eigenvectors <m>\vvec_1</m> and <m>\vvec_2</m> with associated
+      eigenvalues <m>\lambda_1=3</m> and <m>\lambda_2 = -6</m>.
+      Because the eigenvalues are real and distinct, we know 
+      <!-- by
+      <xref ref="prop-eigen-basis"/> -->
+      that these eigenvectors form a
+      basis of <m>\real^2</m>. 
+      <ol marker="a.">
+	<li>
+	  <p>
+	    What are the products <m>A\vvec_1</m> and <m>A\vvec_2</m>
+	    in terms of <m>\vvec_1</m> and <m>\vvec_2</m>?
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    If we form the matrix <m>P = \begin{bmatrix}
+	    \vvec_1 \amp \vvec_2
+	    \end{bmatrix}
+	    </m>, what is the product <m>AP</m> in
+	    terms of <m>\vvec_1</m> and <m>\vvec_2</m>?
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    Use the eigenvalues to form the diagonal matrix <m>D
+	    = \begin{bmatrix}
+	    3 \amp 0 \\
+	    0 \amp -6 
+	    \end{bmatrix}</m> and
+	    determine the product <m>PD</m> in terms of
+	    <m>\vvec_1</m> and <m>\vvec_2</m>.  
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    The results from the previous two parts of this activity
+	    demonstrate that <m>AP=PD</m>.  
+	    Using the fact that the eigenvectors <m>\vvec_1</m> and
+	    <m>\vvec_2</m> form a basis of 
+	    <m>\real^2</m>, explain why <m>P</m> is
+	    invertible and that we must have <m>A=PDP^{-1}</m>.
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    Suppose that <m>A=\begin{bmatrix}
+	    -3 \amp 6 \\
+	    3 \amp 0 \\
+	    \end{bmatrix}</m>.  Verify that <m>\vvec_1=\twovec11</m>
+	    and <m>\vvec_2=\twovec2{-1}</m> are eigenvectors of
+	    <m>A</m> with eigenvalues <m>\lambda_1 = 3</m> and
+	    <m>\lambda_2=-6</m>.
+	  </p>
+	</li>
+
+	<li>
+	  <p>
+	    Use the Sage cell below to define the matrices <m>P</m>
+	    and <m>D</m> and then verify that <m>A=PDP^{-1}</m>.
+	  </p> 
+	<sage>
+	  <input>
+# enter the matrices P and D below	    
+P =
+D =	    
+P*D*P.inverse()
+	  </input>
+	</sage>
+	</li>
+      </ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> We have
+	  <m>A\vvec_1=3\vvec_1</m> and <m>A\vvec_2 = -6\vvec_2</m>.
+	  </p></li>
+
+	  <li>
+	    <p>
+	      <m>AP = \begin{bmatrix}
+	      A\vvec_1 \amp A\vvec_2
+	      \end{bmatrix} = \begin{bmatrix}
+	      3\vvec_1 \amp -6\vvec_2
+	      \end{bmatrix}</m>.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      <m>PD = \begin{bmatrix}
+	      \vvec_1 \amp \vvec_2
+	      \end{bmatrix}
+	      \begin{bmatrix}
+	      3 \amp 0 \\
+	      0 \amp -6\\
+	      \end{bmatrix}
+	      = \begin{bmatrix}
+	      3\vvec_1 \amp -6\vvec_2
+	      \end{bmatrix}
+	      </m>.  Comparing the result of this part of the activity
+	      to the previous, we see that <m>AP = PD</m>.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      Since the eigenvectors form a basis, the columns of
+	      <m>P</m> are linearly independent and their span is
+	      <m>\real^2</m>.  This guarantees that <m>P</m> is invertible.
+	      Multiplying the equation <m>AP=PD</m> on the right by
+	      <m>P^{-1}</m> gives
+	      <m>APP^{-1} = A = PDP^{-1}</m>. 
+	    </p>
+	  </li>
+	</ol></p>
+	<p>
+	  The rest of the activity can be verified using Sage.
+	</p>
+      </solution>
+    </activity>
+   
+</worksheet>

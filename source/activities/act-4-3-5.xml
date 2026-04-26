@@ -1,0 +1,123 @@
+<worksheet label="ws-act-4-3-5">
+  <title>Activity 4.3.5</title>
+   <activity>
+      <statement>
+	<p> We begin by rewriting
+	<m>C</m> in terms of <m>r</m> and
+	  <m>\theta</m> and noting that
+	  <me>
+	    C = 
+	    \left[\begin{array}{rr}
+	    a \amp -b \\
+	    b \amp a \\
+	    \end{array}\right]
+	    = 
+	    \left[\begin{array}{rr}
+	    r\cos\theta \amp -r\sin\theta \\
+	    r\sin\theta \amp r\cos\theta \\
+	    \end{array}\right]
+	    =
+	    \left[\begin{array}{rr}
+	    r \amp 0 \\
+	    0 \amp r \\
+	    \end{array}\right]
+	    \left[\begin{array}{rr}
+	    \cos\theta \amp -\sin\theta \\
+	    \sin\theta \amp \cos\theta \\
+	    \end{array}\right].
+	  </me>
+	  <ol marker="a.">
+	    <li><p> Explain why <m>C</m> has the geometric effect of
+	    rotating vectors by <m>\theta</m> and scaling them by a
+	    factor of <m>r</m>. </p></li>
+	    
+	    <li><p> Let's now consider the matrix
+	    <me>
+	      A = \left[\begin{array}{rr}
+	      -2 \amp 2  \\
+	      -5 \amp 4 \\
+	      \end{array}\right]
+	    </me>
+	    whose eigenvalues are <m>\lambda_1 = 1+i</m> and <m>\lambda_2 =
+	    1-i</m>.  We will choose to focus on one of the eigenvalues
+	    <m>\lambda_1 = a+bi= 1+i. </m> </p>
+	    
+	    <p> Form the matrix <m>C</m> using these values of <m>a</m>
+	    and <m>b</m>.  Then rewrite the point <m>(a,b)</m> in polar
+	    coordinates by identifying the values of <m>r</m> and
+	    <m>\theta</m>.  Explain the geometric effect of multiplying
+	    vectors by <m>C</m>. </p>
+	    </li>
+	    
+	    <li><p> Suppose that
+	    <m>P=\left[\begin{array}{rr}
+	    1 \amp 1 \\
+	    2 \amp 1 \\
+	    \end{array}\right]
+	    </m>.  Verify that <m>A = PCP^{-1}</m>. </p>
+	    
+	    <sage>
+	      <input>
+C = 
+P = 
+P*C*P.inverse()
+	      </input>
+	    </sage>
+	    </li>
+	    
+	    <li><p> Explain why <m>A^k = PC^kP^{-1}</m>. </p></li>
+	    
+	    <li><p> We formed the matrix <m>C</m> by choosing the
+	    eigenvalue <m>\lambda_1=1+i</m>.  Suppose we had instead
+	    chosen <m>\lambda_2 = 1-i</m>.  Form the matrix <m>C'</m> and
+	    use polar coordinates to describe the geometric effect of
+	    <m>C'</m>.  </p></li>
+	    
+	    <li><p> Using the matrix
+	    <m>
+	      P' = \left[\begin{array}{rr}
+	      1 \amp -1 \\
+	      2 \amp -1 \\
+	      \end{array}\right]
+	      </m>, show that <m>A = P'C'P'^{-1}</m>.
+	    </p></li>
+	</ol></p>
+      </statement>
+      
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> The matrix <m>S=\mattwo r00r</m> has the geometric
+	  effect of scaling vectors uniformly by a factor of
+	  <m>r</m> while the matrix
+	  <m>R=\mattwo{\cos\theta}{-\sin\theta}{\sin\theta}{\cos\theta}</m>
+	  rotates vectors by <m>\theta</m>. </p></li>
+
+	  <li><p> We have <m>a=b=1</m> so we form the matrix
+	  <m>C=\mattwo1{-1}11 =
+	  \mattwo{\sqrt{2}}00{\sqrt{2}}
+	  \mattwo{\cos(45^\circ)}{-\sin(45^\circ)}
+	  {\sin(45^\circ)}{\cos(45^\circ)}</m>.  This shows that
+	  <m>C</m> will scale vectors by a factor of <m>\sqrt2</m>
+	  while rotating them by <m>45^\circ</m>. </p></li>
+
+	  <li><p> Sage will verify this relationship.
+	  </p></li>
+
+	  <li><p> As we saw earlier, we have <m>A^2 =
+	  (PCP^{-1})(PCP^{-1}) = PC^2P^{-1}</m> and hence <m>A^k =
+	  PC^kP^{-1}</m>. </p></li>
+
+	  <li><p> We have <m>a=1</m> and <m>b=-1</m> so we form the
+	  matrix 
+	  <m>C'=\mattwo1{1}{-1}1 =
+	  \mattwo{\sqrt{2}}00{\sqrt{2}}
+	  \mattwo{\cos(-45^\circ)}{-\sin(-45^\circ)}
+	  {\sin(-45^\circ)}{\cos(-45^\circ)}</m>.  This shows that
+	  <m>C</m> will scale vectors by a factor of <m>\sqrt2</m>
+	  while rotating them by <m>-45^\circ</m>. </p></li>
+	</ol></p>
+      </solution>
+
+    </activity>
+   
+</worksheet>

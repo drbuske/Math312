@@ -1,0 +1,193 @@
+<worksheet label="ws-act-4-2-4">
+   <title>Activity 4.2.4</title>
+    <activity>
+      <statement>
+      <p>
+	<ol marker="a.">
+	  <li><p> Identify the eigenvalues, and their multiplicities,
+	  of an <m>n\times n</m>
+	  matrix whose characteristic polynomial is
+	  <m>(2-\lambda)^3(-3-\lambda)^{10}(5-\lambda)</m>.  What can you
+	  conclude about the dimensions of the eigenspaces?  What is the
+	  shape of the matrix?  Do you have enough information to
+	  guarantee that there is a basis of <m>\real^n</m> consisting
+	  of eigenvectors? </p></li>
+
+	  <li><p> Find the eigenvalues of 
+	  <m>
+	    \left[\begin{array}{rr}
+	    0 \amp -1 \\
+	    4 \amp -4 \\
+	    \end{array}\right]
+	  </m> and state their multiplicities.  Can you find a basis
+	  of <m>\real^2</m> consisting of eigenvectors of this matrix?
+	  </p></li>
+	  
+	  <li><p> Consider the matrix
+	  <m>A =
+	  \left[\begin{array}{rrr}
+	  -1 \amp 0 \amp 2 \\
+	  -2 \amp -2 \amp -4 \\
+	  0 \amp 0 \amp -2 \\
+	  \end{array}\right]
+	  </m> whose characteristic equation is
+	  <me>
+	    (-2-\lambda)^2(-1-\lambda) = 0
+	  </me>.
+	  <ol marker="1.">
+	    <li><p> Identify the eigenvalues and their
+	    multiplicities. </p></li>
+
+	    <li><p> For each eigenvalue <m>\lambda</m>, find a basis
+	    of the eigenspace <m>E_\lambda</m> and state its
+	    dimension. </p></li>
+
+	    <li><p> Is there a basis of <m>\real^3</m> consisting of
+	    eigenvectors of <m>A</m>?</p></li>
+	  </ol></p></li>
+
+	  <li><p> Now consider the matrix
+	  <m> A =
+	  \left[\begin{array}{rrr}
+	  -5 \amp -2 \amp -6 \\
+	  -2 \amp -2 \amp -4 \\
+	  2 \amp 1 \amp 2 \\
+	  \end{array}\right]
+	  </m> whose characteristic equation is also
+	  <me>
+	    (-2-\lambda)^2(-1-\lambda) = 0
+	  </me>.
+	  <ol marker="1.">
+	    <li><p> Identify the eigenvalues and their
+	    multiplicities. </p></li>
+
+	    <li><p> For each eigenvalue <m>\lambda</m>, find a basis
+	    of the eigenspace <m>E_\lambda</m> and state its
+	    dimension. </p></li>
+
+	    <li><p> Is there a basis of <m>\real^3</m> consisting of
+	    eigenvectors of <m>A</m>?</p></li>
+	  </ol></p></li>
+
+	  <li><p> Consider the matrix
+	  <m>A = 
+	  \left[\begin{array}{rrr}
+	  -5 \amp -2 \amp -6 \\
+	  4 \amp 1 \amp 8 \\
+	  2 \amp 1 \amp 2 \\
+	  \end{array}\right]
+	  </m> whose characteristic equation is 
+	  <me>
+	    (-2-\lambda)(1-\lambda)(-1-\lambda) = 0
+	  </me>.
+	  <ol marker="1.">
+	    <li><p> Identify the eigenvalues and their
+	    multiplicities. </p></li>
+
+	    <li><p> For each eigenvalue <m>\lambda</m>, find a basis
+	    of the eigenspace <m>E_\lambda</m> and state its
+	    dimension. </p></li>
+
+	    <li><p> Is there a basis of <m>\real^3</m> consisting of
+	    eigenvectors of <m>A</m>?</p></li>
+	  </ol></p></li>
+	  
+	</ol>
+      </p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> There are three eigenvalues, <m>\lambda=2</m> has
+	  multiplicity <m>3</m>, <m>\lambda=-3</m> has multiplicity
+	  <m>10</m>, and <m>\lambda=5</m> has multiplicity <m>1</m>.
+	  We know that
+	  <me>
+	  \begin{aligned}
+	  1 \leq \dim E_2 \amp {}\leq{} 3 \\
+	  1 \leq \dim E_{-3} \amp {}\leq{} 10 \\
+	  1 \leq \dim E_5 \amp {}\leq{} 1\text{.} \\
+	  \end{aligned}
+	  </me>
+	  We can guarantee that <m>\dim E_{5} = 1</m>, but we can say
+	  nothing further about the other two eigenspaces.
+	</p>
+
+	<p> The dimension of the matrix is <m>14\times14</m> since the
+	degree of the characteristic polynomial is <m>14</m>.  We
+	cannot guarantee that we can form a basis for
+	<m>\real^{14}</m> consisting of eigenvectors, however.
+	  </p></li>
+
+	  <li><p> There is one eigenvalue <m>\lambda=-2</m> having
+	  multiplicity two.  Because the eigenspace <m>E_{-2}</m> is
+	  one-dimensional, however, we cannot find a basis for
+	  <m>\real^2</m> consisting of eigenvectors of <m>A</m>.
+	  </p></li>
+
+	  <li><p> For the <m>3\times3</m> matrix <m>A</m>,
+	  <ol marker="1.">
+	    <li><p> We have eigenvalues <m>\lambda=-2</m> with
+	    multiplicity <m>2</m> and <m>\lambda=-1</m> with multiplicity
+	    <m>1</m>.
+	    </p></li>
+
+	    <li><p> The eigenspace <m>E_{-2}</m> is two-dimensional
+	    with basis
+	    <m>\left\{\threevec{-2}{0}{1},\threevec010\right\}</m>.
+	    The eigenspace <m>E_{-1}</m> is one-dimensional with basis
+	    vector <m>\threevec{-1}20</m>.
+	    </p></li>
+
+	    <li><p> We are able to form a
+	    basis for <m>\real^3</m> consisting of eigenvectors of
+	    <m>A</m>.
+	    </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> For the <m>3\times3</m> matrix <m>A</m>,
+	  <ol marker="1.">
+	    <li><p> We have eigenvalues <m>\lambda=-2</m> with
+	    multiplicity <m>2</m> and <m>\lambda=-1</m> with multiplicity
+	    <m>1</m>.
+	    </p></li>
+
+	    <li><p> The eigenspace <m>E_{-2}</m> is one-dimensional
+	    with basis vector <m>\threevec{-2}01</m>.  The eigenspace
+	    <m>E_{-1}</m> is also one-dimensional with basis vector
+	    <m>\threevec{-1}{2}{0}</m>.
+	    </p></li>
+
+	    <li><p> It is not possible to form a basis for
+	    <m>\real^3</m> consisting of eigenvectors of <m>A</m>.
+	    </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> For this matrix,
+	  <ol marker="1.">
+	    <li><p> There are three eigenvalues <m>\lambda=-2</m>,
+	    <m>-1</m>, and <m>1</m>, each having multiplicity
+	    <m>1</m>.
+	    </p></li>
+
+	    <li><p> A basis vector for the eigenspace <m>E_{-2}</m> is
+	    <m>\threevec{-2}01</m>. 
+	    A basis vector for the eigenspace <m>E_{-1}</m> is
+	    <m>\threevec{1}{-2}0</m>. 
+	    A basis vector for the eigenspace <m>E_{1}</m> is
+	    <m>\threevec{-2}{3}{1}</m>.
+	    </p></li>
+
+	    <li><p> We can form a basis for <m>\real^3</m> consisting
+	    of eigenvectors of <m>A</m>.
+	    </p></li>
+	  </ol>
+	  </p></li>
+	</ol></p>
+      </solution>
+	  
+    </activity>
+   
+</worksheet>

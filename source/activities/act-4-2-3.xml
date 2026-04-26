@@ -1,0 +1,121 @@
+<worksheet label="ws-act-4-2-3">
+   <title>Activity 4.2.3</title>
+    <activity>
+      <statement>
+      <p> In this activity, we will find the eigenvectors of a matrix
+      as the null space of the matrix <m>A-\lambda I</m>.
+      <ol marker="a.">
+	<li><p> Let's begin with the matrix
+	<m>
+	  A = \left[\begin{array}{rr}
+	  1 \amp 2 \\
+	  2 \amp 1 \\
+	  \end{array}\right]
+	</m>.  We have seen that <m>\lambda = 3</m> is an eigenvalue.
+	Form the matrix <m>A-3I</m> and find a basis for the
+	eigenspace <m>E_3 = \nul(A-3I)</m>.
+	What is the dimension of this eigenspace?
+	For each of the basis vectors <m>\vvec</m>, verify
+	that <m>A\vvec = 3\vvec</m>. </p></li>
+
+	<li><p> We also saw that <m>\lambda = -1</m> is an
+	eigenvalue.  Form the matrix <m>A-(-1)I</m> and find a basis
+	for the eigenspace <m>E_{-1}</m>.  What is the dimension of
+	this eigenspace? 
+	For each of the basis vectors
+	<m>\vvec</m>, verify that <m>A\vvec = -\vvec</m>. </p></li>
+
+	<li><p> Is it possible to form a basis of <m>\real^2</m>
+	consisting of eigenvectors of <m>A</m>? </p></li>
+
+	<li><p> Now consider the matrix
+	<m>A = \left[\begin{array}{rr}
+	3 \amp 0 \\
+	0 \amp 3 \\
+	\end{array}\right]
+	</m>.  Write the characteristic equation for <m>A</m> and use
+	it to find the eigenvalues of <m>A</m>.  For each eigenvalue,
+	find a basis for its eigenspace <m>E_\lambda</m>.  Is it
+	possible to form a basis of <m>\real^2</m> consisting of
+	eigenvectors of <m>A</m>? </p></li>
+
+	<li><p> Next, consider the matrix
+	<m>A = \left[\begin{array}{rr}
+	2 \amp 1 \\
+	0 \amp 2 \\
+	\end{array}\right]
+	</m>.  Write the characteristic equation for <m>A</m> and use
+	it to find the eigenvalues of <m>A</m>.  For each eigenvalue,
+	find a basis for its eigenspace <m>E_\lambda</m>.  Is it
+	possible to form a basis of <m>\real^2</m> consisting of
+	eigenvectors of <m>A</m>? </p></li>
+
+	<li><p> Finally, find the eigenvalues and eigenvectors of the
+	diagonal matrix  
+	<m>
+	  A = \left[\begin{array}{rr}
+	  4 \amp 0 \\
+	  0 \amp -1 \\
+	  \end{array}\right]
+	</m>.  Explain your result by considering the geometric effect
+	of the matrix transformation defined by <m>A</m>. </p></li>
+      </ol>
+      </p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> We have
+	  <me>
+	    A - 3I =
+	    \mattwo{-2}{2}{2}{-2}
+	    \sim
+	    \mattwo{1}{-1}{0}{0}\text{.}
+	  </me>
+	  The null space <m>\nul(A-3I)</m> is one-dimensional with
+	  basis <m>\twovec{1}{1}</m>.
+	  </p></li>
+
+	  <li><p> We have
+	  <me>
+	    A - (-1)I =
+	    \mattwo{2}{2}{2}{2}
+	    \sim
+	    \mattwo{1}{1}{0}{0}\text{.}
+	  </me>
+	  The null space <m>\nul(A+I)</m> is one-dimensional with
+	  basis <m>\twovec{-1}{1}</m>.
+	  </p></li>
+
+	  <li><p> We can form a basis for <m>\real^2</m> consisting of
+	  eigenvectors of <m>A</m> by taking <m>\left\{\twovec{1}{1},
+	  \twovec{-1}{1}\right\}</m>.
+	  </p></li>
+
+	  <li><p> The characteristic equation is <m>(3-\lambda)^2 =
+	  0</m>, which means that there is a single eigenvalue
+	  <m>\lambda=3</m>.  This eigenspace is two-dimensional with
+	  basis <m>\left\{\twovec{1}{0},\twovec{0}{1}\right\}</m>.  In
+	  this case, 
+	  we can form a basis for <m>\real^2</m> consisting of
+	  eigenvectors of <m>A</m>.
+	  </p></li>
+
+	  <li><p> The characteristic equation is <m>(2-\lambda)^2 =
+	  0</m> so there is again a single eigenvalue
+	  <m>\lambda=2</m>.  In this case, the eigenspace is
+	  one-dimensional with basis vector <m>\twovec{1}{0}</m>.  It
+	  is not possible to form a basis for <m>\real^2</m>
+	  consisting of eigenvectors.
+	  </p></li>
+
+	  <li><p> We have eigenvectors <m>\twovec10</m> with
+	  associated eigenvector <m>\lambda=4</m> and <m>\twovec01</m>
+	  with associated eigenvector <m>\lambda=-1</m>.
+	  </p></li>
+	</ol></p>
+      </solution>
+	    
+    </activity>
+   
+</worksheet>

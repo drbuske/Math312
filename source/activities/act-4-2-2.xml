@@ -1,0 +1,137 @@
+<worksheet label="ws-act-4-2-2">
+  <title>Activity 4.2.2</title>
+    <activity>
+      <statement>
+      <p> The eigenvalues of a square matrix are defined by the
+      condition that there be a nonzero solution to the homogeneous
+      equation <m>(A-\lambda I)\vvec=\zerovec</m>.
+      <ol marker="a.">
+	<li><p> If there is a nonzero solution to the homogeneous
+	equation <m>(A-\lambda I)\vvec = \zerovec</m>, what can we
+	conclude about the invertibility of the matrix <m>A-\lambda
+	I</m>? </p></li>
+
+	<li><p> If there is a nonzero solution to the homogeneous
+	equation <m>(A-\lambda I)\vvec = \zerovec</m>, what can we
+	conclude about the determinant <m>\det(A-\lambda I)</m>?
+	</p></li>
+
+	<li><p> Let's consider the matrix 
+	<me>
+	  A = \left[\begin{array}{rr}
+	  1 \amp 2 \\
+	  2 \amp 1 \\
+	  \end{array}\right]
+	</me>
+	from which we construct
+	<me>
+	  A-\lambda I =
+	  \left[\begin{array}{rr}
+	  1 \amp 2 \\
+	  2 \amp 1 \\
+	  \end{array}\right]
+	  - \lambda 
+	  \left[\begin{array}{rr}
+	  1 \amp 0 \\
+	  0 \amp 1 \\
+	  \end{array}\right]
+	  =
+	  \left[\begin{array}{rr}
+	  1-\lambda \amp 2 \\
+	  2 \amp 1-\lambda \\
+	  \end{array}\right]
+	</me>.
+	Find the determinant <m>\det(A-\lambda I)</m>.  What kind of
+	equation do you obtain when we set this determinant to zero to
+	obtain <m>\det(A-\lambda I) = 0</m>? </p></li>
+
+	<li><p> Use the determinant you found in the previous part to
+	find the eigenvalues <m>\lambda</m> by solving the equation
+	<m>\det(A-\lambda I) = 0</m>.  We considered this matrix in
+	<xref ref="activity-eigen-geom"/> so we should find the same
+	eigenvalues for <m>A</m> that we found by reasoning
+	geometrically there. </p></li>
+
+	<li><p> Consider the matrix
+	<m>A = \left[\begin{array}{rr}
+	2 \amp 1 \\
+	0 \amp 2 \\
+	\end{array}\right]
+	</m> and find its eigenvalues by solving the equation
+	<m>\det(A-\lambda I) = 0</m>. </p></li>
+
+	<li><p> Consider the matrix
+	<m>A = \left[\begin{array}{rr}
+	0 \amp -1 \\
+	1 \amp 0 \\
+	\end{array}\right]
+	</m> and find its eigenvalues by solving the equation
+	<m>\det(A-\lambda I) = 0</m>. </p></li>
+
+	<li><p> Find the eigenvalues of the triangular matrix
+	<m>
+	  \left[\begin{array}{rrr}
+	  3 \amp -1 \amp 4 \\
+	  0 \amp -2 \amp 3 \\
+	  0 \amp 0 \amp 1 \\
+	  \end{array}\right]
+	</m>.  What is generally true about the eigenvalues of a
+	triangular matrix? </p></li>
+      </ol>
+      </p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		The matrix <m>A-\lambda I</m> cannot be invertible.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		It must be the case that <m>\det(A-\lambda I) = 0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We find that <m>\det(A-\lambda I) = \lambda^2 -
+		2\lambda - 3 = 0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\lambda^2 - 2\lambda - 3= (\lambda-3)(\lambda+1) =
+		0</m> so we find eigenvalues <m>\lambda = 3</m> and
+		<m>\lambda = -1</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		For this matrix, we have <m>\det(A-\lambda I) =
+		(\lambda-2)^2=0</m> so there is one eigenvalue,
+		<m>\lambda = 2</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\det(A-\lambda I) = \lambda^2 + 1 = 0</m> so there
+		are complex eigenvalues, <m>\lambda = i</m> and
+		<m>\lambda = -i</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Because the determinant of a triangular matrix equals
+		the product of its diagonal entries, 
+		The eigenvalues are equal to the entries on the
+		diagonal.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+    </activity>
+   
+</worksheet>
