@@ -361,6 +361,78 @@ var ptx_lunr_docs = [
   "body": " Matrix operations    Compute the scalar multiple .                Find the sum .                Suppose that and are two matrices. What do we need to know about their shapes before we can form the sum ?    The shapes must be the same.    The shapes must be the same.      The matrix , which we call the identity matrix, is the matrix whose entries are zero except for the diagonal entries, all of which are 1. matrix, identity For instance, . If we can form the sum , what must be true about the matrix ?    The shape of must be .    The shape of must be .      Find the matrix where .              "
 },
 {
+  "id": "ws-act-2-2-2",
+  "level": "1",
+  "url": "ws-act-2-2-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 2.2.2",
+  "body": " Activity 2.2.2   Matrix-vector multiplication     Find the matrix product .   Suppose that is the matrix . If is defined, what is the dimension of the vector and what is the dimension of ?   A vector whose entries are all zero is denoted by . If is a matrix, what is the product ?   Suppose that is the identity matrix and . Find the product and explain why is called the identity matrix.   Suppose we write the matrix in terms of its columns as . If the vector , what is the product ?    Suppose that . Is there a vector such that ?       We have   The dimension of must be the same as the number of columns of so is three-dimensional. The dimension of equals the number of rows of so is four-dimensional.  We have .  We have ; that is, multiplying a vector by produces the same vector.  The product .  If , then we have with corresponding augmented matrix This means that is the unique solution to the equation .         The dimension of must three, and the dimension of must be four.   .   .   .   is the unique solution.     "
+},
+{
+  "id": "ws-act-2-2-2-2",
+  "level": "2",
+  "url": "ws-act-2-2-2.html#ws-act-2-2-2-2",
+  "type": "Activity",
+  "number": "18",
+  "title": "Matrix-vector multiplication.",
+  "body": " Matrix-vector multiplication     Find the matrix product .   Suppose that is the matrix . If is defined, what is the dimension of the vector and what is the dimension of ?   A vector whose entries are all zero is denoted by . If is a matrix, what is the product ?   Suppose that is the identity matrix and . Find the product and explain why is called the identity matrix.   Suppose we write the matrix in terms of its columns as . If the vector , what is the product ?    Suppose that . Is there a vector such that ?       We have   The dimension of must be the same as the number of columns of so is three-dimensional. The dimension of equals the number of rows of so is four-dimensional.  We have .  We have ; that is, multiplying a vector by produces the same vector.  The product .  If , then we have with corresponding augmented matrix This means that is the unique solution to the equation .         The dimension of must three, and the dimension of must be four.   .   .   .   is the unique solution.    "
+},
+{
+  "id": "ws-act-2-2-3",
+  "level": "1",
+  "url": "ws-act-2-2-3.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 2.2.3",
+  "body": " Activity 2.2.3    Sage can find the product of a matrix and vector using the * operator. For example,    Use Sage to evaluate the product from of the previous activity.    In Sage, define the matrix and vectors .   What do you find when you evaluate ?  What do you find when you evaluate and and compare your results?  What do you find when you evaluate and and compare your results?       We define A = matrix(3, 4, [1, 2, 0, -1, 2, 4, -3, -2, -1, -2, 6, 1]) v = vector([3, 1, -1, 1]) A*v   We define A = matrix(2, 3, [-2, 0, 3, 1, 4, 2]) zero = vector([0, 0]) v = vector([-2, 3]) w = vector([1, 2])    .   .         We define A = matrix(3, 4, [1, 2, 0, -1, 2, 4, -3, -2, -1, -2, 6, 1]) v = vector([3, 1, -1, 1]) A*v   We define A = matrix(2, 3, [-2, 0, 3, 1, 4, 2]) zero = vector([0, 0]) v = vector([-2, 3]) w = vector([1, 2])    .   .        "
+},
+{
+  "id": "ws-act-2-2-3-2",
+  "level": "2",
+  "url": "ws-act-2-2-3.html#ws-act-2-2-3-2",
+  "type": "Activity",
+  "number": "19",
+  "title": "",
+  "body": "  Sage can find the product of a matrix and vector using the * operator. For example,    Use Sage to evaluate the product from of the previous activity.    In Sage, define the matrix and vectors .   What do you find when you evaluate ?  What do you find when you evaluate and and compare your results?  What do you find when you evaluate and and compare your results?       We define A = matrix(3, 4, [1, 2, 0, -1, 2, 4, -3, -2, -1, -2, 6, 1]) v = vector([3, 1, -1, 1]) A*v   We define A = matrix(2, 3, [-2, 0, 3, 1, 4, 2]) zero = vector([0, 0]) v = vector([-2, 3]) w = vector([1, 2])    .   .         We define A = matrix(3, 4, [1, 2, 0, -1, 2, 4, -3, -2, -1, -2, 6, 1]) v = vector([3, 1, -1, 1]) A*v   We define A = matrix(2, 3, [-2, 0, 3, 1, 4, 2]) zero = vector([0, 0]) v = vector([-2, 3]) w = vector([1, 2])    .   .       "
+},
+{
+  "id": "ws-act-2-2-4",
+  "level": "1",
+  "url": "ws-act-2-2-4.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 2.2.4",
+  "body": " Activity 2.2.4   The equation      Consider the linear system Identify the matrix and vector to express this system in the form .   If and are as below, write the linear system corresponding to the equation and describe its solution space, using a parametric description if appropriate:    Describe the solution space of the equation .   Suppose is an matrix. What can you guarantee about the solution space of the equation ?       and .  Form the augmented matrix so that   We have the augmented matrix Since this system is inconsistent, there are no solutions to the matrix equation.  We know that there is at least one solution, namely, .       and .     There are no solutions.  There is at least one solution, namely, .     "
+},
+{
+  "id": "ws-act-2-2-4-2",
+  "level": "2",
+  "url": "ws-act-2-2-4.html#ws-act-2-2-4-2",
+  "type": "Activity",
+  "number": "20",
+  "title": "The equation <span class=\"process-math\">\\(A\\xvec = \\bvec\\)<\/span>.",
+  "body": " The equation      Consider the linear system Identify the matrix and vector to express this system in the form .   If and are as below, write the linear system corresponding to the equation and describe its solution space, using a parametric description if appropriate:    Describe the solution space of the equation .   Suppose is an matrix. What can you guarantee about the solution space of the equation ?       and .  Form the augmented matrix so that   We have the augmented matrix Since this system is inconsistent, there are no solutions to the matrix equation.  We know that there is at least one solution, namely, .       and .     There are no solutions.  There is at least one solution, namely, .    "
+},
+{
+  "id": "ws-act-2-2-5",
+  "level": "1",
+  "url": "ws-act-2-2-5.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 2.2.5",
+  "body": " Activity 2.2.5    Consider the matrices .   Before computing, first explain why the shapes of and enable us to form the product . Then describe the shape of .   Compute the product .  Sage can multiply matrices using the * operator. Define the matrices and in the Sage cell below and check your work by computing .   Are we able to form the matrix product ? If so, use the Sage cell above to find . Is it generally true that ?  Suppose we form the three matrices. . Compare what happens when you compute and . State your finding as a general principle.   Compare the results of evaluating and and state your finding as a general principle.  When we are dealing with real numbers, we know if and , then . Define matrices and compute and . If , is it necessarily true that ?  Again, with real numbers, we know that if , then either or . Define and compute . If , is it necessarily true that either or ?       The product exists because the number of columns of equals the number of rows of . The dimensions of are .  We have .  Define A = matrix(2, 3, [1, 3, 2, -3, 4, -1]) B = matrix(3, 2, [3, 0, 1, 2, -2, -1]) A*B   Yes, we can form the product because the number of columns of equals the number of rows of . This product will be , however, so it must be true that .  We find that .  We find that .  It is not generally true that if , as illustrated by this example.  It is not generally true that or if , as illustrated by this example.      The product exists because the number of columns of equals the number of rows of . The dimensions of are .  We have .  Define A = matrix(2, 3, [1, 3, 2, -3, 4, -1]) B = matrix(3, 2, [3, 0, 1, 2, -2, -1]) A*B   It is not generally true that .  We find that .  We find that .  It is not generally true that if .  It is not generally true that or if .     "
+},
+{
+  "id": "ws-act-2-2-5-2",
+  "level": "2",
+  "url": "ws-act-2-2-5.html#ws-act-2-2-5-2",
+  "type": "Activity",
+  "number": "21",
+  "title": "",
+  "body": "  Consider the matrices .   Before computing, first explain why the shapes of and enable us to form the product . Then describe the shape of .   Compute the product .  Sage can multiply matrices using the * operator. Define the matrices and in the Sage cell below and check your work by computing .   Are we able to form the matrix product ? If so, use the Sage cell above to find . Is it generally true that ?  Suppose we form the three matrices. . Compare what happens when you compute and . State your finding as a general principle.   Compare the results of evaluating and and state your finding as a general principle.  When we are dealing with real numbers, we know if and , then . Define matrices and compute and . If , is it necessarily true that ?  Again, with real numbers, we know that if , then either or . Define and compute . If , is it necessarily true that either or ?       The product exists because the number of columns of equals the number of rows of . The dimensions of are .  We have .  Define A = matrix(2, 3, [1, 3, 2, -3, 4, -1]) B = matrix(3, 2, [3, 0, 1, 2, -2, -1]) A*B   Yes, we can form the product because the number of columns of equals the number of rows of . This product will be , however, so it must be true that .  We find that .  We find that .  It is not generally true that if , as illustrated by this example.  It is not generally true that or if , as illustrated by this example.      The product exists because the number of columns of equals the number of rows of . The dimensions of are .  We have .  Define A = matrix(2, 3, [1, 3, 2, -3, 4, -1]) B = matrix(3, 2, [3, 0, 1, 2, -2, -1]) A*B   It is not generally true that .  We find that .  We find that .  It is not generally true that if .  It is not generally true that or if .    "
+},
+{
   "id": "ch-practice-exams-2",
   "level": "1",
   "url": "ch-practice-exams-2.html",
