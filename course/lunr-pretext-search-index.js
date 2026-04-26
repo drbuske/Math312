@@ -79,106 +79,187 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Chapter 1 Practice Exam",
-  "body": " Chapter 1 Practice Exam   Topics                     Be sure to try each question before looking at the solutions.   Questions   Express as a Linear Combination   Express the vector as a linear combination of and .    Solve by setting up a system of linear equations.    We solve: \\[ a + 2b = 5,\\quad 2a + b = 7. \\] Multiply first eqn by 2: . Subtract second eqn: , so . Then gives .  Hence .     Checking a Vector in a Span   Is in the span of the vectors , , and ? Justify your answer.    Set up a system and determine if it has a solution.    The system is: \\[ a + 0b + 2c = 3,\\quad 2a + b + 0c = 6,\\quad 0a + 2b + c = -2. \\] From first: . Substitute into second: . Third: , so , .  Since a solution exists, ∈ span of the three vectors.     Linear Independence Check   Determine whether the functions are linearly independent in .    Use the fact that a nontrivial combination equal to zero would force a polynomial in to vanish identically, which implies each coefficient is zero.    Suppose \\[ a + b e^x + c e^{2x} = 0 \\] for all . Rewrite in terms of : \\[ a + bu + cu^2 = 0 \\text{ for all }u>0. \\] A quadratic polynomial that is zero on a continuum must be identically zero, so . Therefore, they are linearly independent.     Vectors of Dependent Set   Given the set in , show that it is linearly dependent and identify a redundant vector.    If they are dependent, you can find a nontrivial combination equaling zero—then solve to express one vector in terms of the others.    Solve \\[ a(1,0,1)+b(2,1,1)+c(3,1,2)= (0,0,0). \\] Equating components: \\[ a+2b+3c=0,\\quad b+c=0,\\quad a+b+2c=0. \\] From second: . Plug into first: . Then third: . So . For instance, ⇒ . Then: \\[ (3,1,2) = (1,0,1)+(2,1,1). \\] So the set is dependent and is redundant.     Dimension of Solution Space   What is the dimension of the solution space of the homogeneous linear system if is a matrix with three distinct real eigenvalues?    A basis of solutions corresponds to eigenvectors—distinction implies how many independent solutions there are.    With three distinct real eigenvalues, has three independent eigenvectors, yielding a three‑dimensional solution space. Hence, \\(\\dim(\\text{solution space})=3\\).       Consider the differential equation     Find the general solution using an integral expression.  Determine the particular solution satisfying the initial condition .      Recall that if , then any solution must satisfy   Integrate term‑by‑term. After finding the general solution, substitute and to determine .    The general solution is . The initial condition gives , so the particular solution is .    We begin with the differential equation   By the fundamental theorem of calculus, a solution must satisfy   Integrating term‑by‑term:   Therefore the general solution is   To find the particular solution satisfying , substitute into the general solution:   Thus , and the particular solution is        Consider the differential equation   Sketch a small portion of the slope field in the region , by hand. Then answer the following questions:   Determine whether the solution curve through the point is initially increasing or decreasing. Justify your answer using the slope field.  Without solving the differential equation explicitly, describe the qualitative long–term behavior of solutions. Do they tend toward a particular line, diverge, or behave in some other way?     Remember that the slope field is built from small line segments whose slope equals at each point . For part (a), compute at the given point to determine whether the local slope is positive or negative. For part (b), think about values of along the line and whether slopes push trajectories toward or away from that line.    (a) The solution through is initially decreasing because . (b) Solutions tend toward the line , which acts as a stable equilibrium line for the differential equation.    We are given the differential equation   To understand the qualitative behavior of solutions, we begin by noting that the slope field at each point is determined by the value of . In particular:   When , the slope is horizontal.  When , solution curves locally increase.  When , solution curves locally decrease.   (a) At the point we compute   Because the slope is negative, the solution curve passing through initially decreases as increases.   Slope field for on , together with a solution curve through .      (b) To analyze long–term behavior, we solve the differential equation. Rewriting it in linear form,   the integrating factor is , and multiplying both sides yields   Integrating,   and dividing by gives the general solution   As , the exponential term decays to zero. Therefore every solution approaches the straight line   which serves as the asymptotic line that solutions follow for large . In particular, this line is an attracting solution curve: trajectories above it are pushed downward, and trajectories below it are pushed upward.  The qualitative picture is that all solutions to approach the line as increases.        Consider the differential equation     Separate variables and find the general solution.  Find the particular solution satisfying the initial condition .      First rewrite the equation so that all -terms are on one side and all -terms on the other:   Then integrate both sides. After integrating, exponentiate to solve for , and finally use the initial condition to determine the constant.    The general solution is The initial condition gives , so the particular solution is     Starting with the differential equation   we separate variables by dividing both sides by and multiplying by :   Integrate both sides:   Compute the integrals:   Exponentiating,   Write as a new positive constant , giving   Solving for produces the general solution:   Apply the initial condition :   Hence , and the particular solution is        Consider the linear differential equation     Find the general solution using the integrating factor method.  Find the particular solution satisfying the initial condition .      Rewrite the equation in the standard linear form and identify . The integrating factor is   Multiply both sides of the equation by this integrating factor. The left-hand side becomes . Integrate both sides, then multiply by to solve for .    The general solution is Using gives , so the particular solution is     We begin with the linear differential equation   In linear form , we have and .  The integrating factor is   Multiply the entire differential equation by :   The left-hand side is the derivative of :   Integrate both sides:   Multiply both sides by to solve for :   Simplifying the exponential:   To find the constant , apply the initial condition :   Thus .  Therefore the particular solution is        Consider the autonomous differential equation     Find all equilibrium solutions.  Construct a phase diagram for this differential equation.  Classify each equilibrium as stable, unstable, or semi-stable based on your phase diagram.  Describe the long-term behavior of solutions with , , and .      Compute the sign of in each region:       Note that for all , and equals zero only when . So the sign of is entirely determined by .  Stability comes from arrow directions:   Arrows pointing toward the equilibrium implies stable.  Arrows pointing away implies unstable.  Arrows pointing toward on one side and away on the other implies semi-stable.     Equilibria: and . The phase diagram has arrows up for , arrows down for , and arrows down for . Thus is stable , and is semi-stable . Long-term behavior:  : solution increases toward from below.  : solution decreases toward from above.  : solution decreases toward .      (a) Equilibria occur where   giving and .  (b) To determine the sign of , note that the squared factor is always nonnegative and equals zero only at . Therefore the sign of is the sign of .   If , then , so . Arrow: up .  If , then , so . Arrow: down .  If , then , so . Arrow: down .   (c) Therefore the phase diagram is as in .   Phase diagram for .      Stability analysis:    : arrows point towards  on both sides so the equilibrium is stable .   : arrow from below points away from , but arrow from above points downward towards . Thus is semi-stable equilibrium.   (d) Long–term behavior:   If , then the arrow is upward; the solution moves toward the stable equilibrium .  If , the arrow is downward; the solution decreases toward the stable equilibrium .  If , the arrow is downward; the solution decreases toward the equilibrium .        Consider the initial value problem   Use Euler’s method with step size to approximate the value of . Show your intermediate computations for each Euler step.    Recall that Euler’s method updates the approximate solution by   where . Starting at and using , compute successively:   at ,  at ,  at .     Using Euler’s method with , is approximately     We apply Euler’s method with and . The starting point is   Step 1: Compute at .    Step 2: Compute at .    Step 3: Compute at .    Therefore, the Euler approximation of with is       "
+  "body": " Chapter 1 Practice Exam   Topics                     Be sure to try each question before looking at the solutions.   Questions    Consider the equation .   How many solutions does this equation have?  Give a geometric interpretation of the solution set.     Think about what the graph of a single linear equation in two unknowns looks like.     Infinitely many solutions.  The solution set is a line in the plane.     A single linear equation in two unknowns represents a line in the coordinate plane. Every point on this line satisfies the equation, so there are infinitely many solutions.      Consider the system of equations    How many solutions does this system have?  Explain your answer geometrically.     Think about how two non‑parallel lines intersect.     Exactly one solution.  The lines intersect at a single point.     Each equation represents a line in the plane. Since the lines are not parallel, they intersect in exactly one point. That point satisfies both equations, so the system has exactly one solution.      Consider the system     Does this system have a solution?    Explain why or why not.      Compare the two equations and think about their graphs.     No.  The equations represent parallel lines.       The system has no solutions.    The equations have the same left‑hand side but different constants, so they represent distinct parallel lines, which do not intersect.        Consider the system   How many solutions does this system have? Explain your reasoning.    Think about whether all three equations can be satisfied at the same time.    Exactly one solution.    The first two equations intersect at a single point. The third equation is also satisfied by that same point. Therefore, all three equations are satisfied by exactly one point.      Consider two linear equations in three unknowns.    What does the solution set of a single linear equation in three unknowns look like geometrically?    What would you typically expect the solution set of two such equations to look like?      Recall how lines generalize to higher dimensions.     A plane.  A line.       A single linear equation in three unknowns represents a plane in three‑dimensional space.    Two planes typically intersect in a line, which forms the solution set.        Solve the system of equations and describe the solution set.    Try adding the two equations.    The solution is .    Adding the two equations gives , so . Substituting into the first equation gives , so . Thus the system has exactly one solution, .      Determine whether the following system is equivalent to . Explain your reasoning.       Think about whether the two systems have the same solutions.    Yes, the systems are equivalent.    The second equation in the original system is just twice the first, so it does not impose a new condition. Both systems describe the same set of solutions: all points satisfying . Therefore, the systems are equivalent.      Consider the system   Determine whether this system has a solution. If it does, find all solutions. If it does not, explain why.    Ask whether a single pair can satisfy both equations at the same time.    The system has no solutions.    The first equation requires , while the second requires . There is no pair of numbers for which both of these statements can be true simultaneously.  Therefore, the system is inconsistent and has no solutions.      Solve the system and describe the solution set.    Compare the second equation to the first.    The system has infinitely many solutions.    The second equation is obtained by multiplying the first by 2, so both equations describe the same line. Every solution of satisfies both equations. Therefore, the system has infinitely many solutions.      Solve the system and describe the solution set.    Subtract the second equation from the first.    The solution set is a line in three‑dimensional space.    Subtracting the second equation from the first gives , so . Substituting into the first equation gives .  Thus the solutions are all triples of the form . Since there are infinitely many such triples, the solution set is a line.      The reduced augmented matrix of a linear system is   Find the solution to the system.    Interpret each row as an equation.     .    The first row corresponds to , and the second row corresponds to . Therefore, the unique solution is .      Consider the augmented matrix   Does the corresponding system have a solution? Explain your answer.    What equation does the second row represent?    The system has no solutions.    The second row represents the equation , which is impossible. Therefore, the system is inconsistent and has no solutions.      The augmented matrix of a linear system is   Describe the solution set.    Identify any free variables.    The system has infinitely many solutions.    The first row represents , and the second row imposes no additional condition. Solving for gives .  Since is free, there are infinitely many solutions of the form .      Start with the augmented matrix   Replace the second row with the result of subtracting twice the first row from it. Then find the solution to the system.    Compute .     .    Subtracting twice the first row from the second gives   The second row gives . Substituting into the first equation yields . Thus the solution is .      The reduced augmented matrix of a system in three variables is   Describe the solution set geometrically.    Count the number of free variables.    The solution set is a line in three‑dimensional space.    The matrix corresponds to the equations and . Solving gives and .  Since is free, the solutions form a line in .      The reduced row echelon form of an augmented matrix is   Identify the pivot positions and determine which variables are free.    Pivot positions correspond to leading 1s in the matrix.    The pivot positions are in columns 1 and 2, and the third variable is free.    The leading 1s occur in the first and second columns, so those columns contain pivot positions. The third column does not contain a pivot, so the corresponding variable is free.      Consider the augmented matrix   Is the corresponding linear system consistent? Explain your answer.    Look for a pivot in the last column.    The system is inconsistent.    The second row corresponds to the equation , which is impossible. This occurs because there is a pivot in the last column. Therefore, the system is inconsistent and has no solutions.      The row echelon form of a system is   Does the system have infinitely many solutions? If so, explain why.    Determine whether every variable corresponds to a pivot column.    Yes, the system has infinitely many solutions.    There are three variables but only two pivot columns. Since at least one variable is free, the system has infinitely many solutions.      A system of linear equations in three variables has a reduced row echelon form with exactly two pivot positions.  Describe the solution set geometrically.    Think about how many free variables there are.    The solution set is a line in three‑dimensional space.    With three variables and two pivot positions, there is one free variable. Therefore, the solution set depends on one parameter and forms a line in .      Explain why the number of pivot positions in the reduced row echelon form of an augmented matrix determines whether a system has no solutions, exactly one solution, or infinitely many solutions.    Consider the roles of pivots in the coefficient columns and the last column.    Pivot positions determine consistency and the number of free variables.    If there is a pivot in the last column, the system is inconsistent and has no solutions. If every variable column has a pivot, there are no free variables and the system has exactly one solution. If there are fewer pivot positions than variables and no pivot in the last column, there are free variables and infinitely many solutions.      "
 },
 {
-  "id": "exam-linear-combinations-1",
+  "id": "exam-1-1-1",
   "level": "2",
-  "url": "ch-practice-exams-2.html#exam-linear-combinations-1",
+  "url": "ch-practice-exams-2.html#exam-1-1-1",
   "type": "Exercise",
   "number": "1",
-  "title": "Express as a Linear Combination.",
-  "body": " Express as a Linear Combination   Express the vector as a linear combination of and .    Solve by setting up a system of linear equations.    We solve: \\[ a + 2b = 5,\\quad 2a + b = 7. \\] Multiply first eqn by 2: . Subtract second eqn: , so . Then gives .  Hence .   "
+  "title": "",
+  "body": "  Consider the equation .   How many solutions does this equation have?  Give a geometric interpretation of the solution set.     Think about what the graph of a single linear equation in two unknowns looks like.     Infinitely many solutions.  The solution set is a line in the plane.     A single linear equation in two unknowns represents a line in the coordinate plane. Every point on this line satisfies the equation, so there are infinitely many solutions.   "
 },
 {
-  "id": "exam-span-2",
+  "id": "exam-1-1-2",
   "level": "2",
-  "url": "ch-practice-exams-2.html#exam-span-2",
+  "url": "ch-practice-exams-2.html#exam-1-1-2",
   "type": "Exercise",
   "number": "2",
-  "title": "Checking a Vector in a Span.",
-  "body": " Checking a Vector in a Span   Is in the span of the vectors , , and ? Justify your answer.    Set up a system and determine if it has a solution.    The system is: \\[ a + 0b + 2c = 3,\\quad 2a + b + 0c = 6,\\quad 0a + 2b + c = -2. \\] From first: . Substitute into second: . Third: , so , .  Since a solution exists, ∈ span of the three vectors.   "
+  "title": "",
+  "body": "  Consider the system of equations    How many solutions does this system have?  Explain your answer geometrically.     Think about how two non‑parallel lines intersect.     Exactly one solution.  The lines intersect at a single point.     Each equation represents a line in the plane. Since the lines are not parallel, they intersect in exactly one point. That point satisfies both equations, so the system has exactly one solution.   "
 },
 {
-  "id": "exam-linindep-3",
+  "id": "exam-1-1-3",
   "level": "2",
-  "url": "ch-practice-exams-2.html#exam-linindep-3",
+  "url": "ch-practice-exams-2.html#exam-1-1-3",
   "type": "Exercise",
   "number": "3",
-  "title": "Linear Independence Check.",
-  "body": " Linear Independence Check   Determine whether the functions are linearly independent in .    Use the fact that a nontrivial combination equal to zero would force a polynomial in to vanish identically, which implies each coefficient is zero.    Suppose \\[ a + b e^x + c e^{2x} = 0 \\] for all . Rewrite in terms of : \\[ a + bu + cu^2 = 0 \\text{ for all }u>0. \\] A quadratic polynomial that is zero on a continuum must be identically zero, so . Therefore, they are linearly independent.   "
+  "title": "",
+  "body": "  Consider the system     Does this system have a solution?    Explain why or why not.      Compare the two equations and think about their graphs.     No.  The equations represent parallel lines.       The system has no solutions.    The equations have the same left‑hand side but different constants, so they represent distinct parallel lines, which do not intersect.     "
 },
 {
-  "id": "exam-linindep-4",
+  "id": "exam-1-1-4",
   "level": "2",
-  "url": "ch-practice-exams-2.html#exam-linindep-4",
+  "url": "ch-practice-exams-2.html#exam-1-1-4",
   "type": "Exercise",
   "number": "4",
-  "title": "Vectors of Dependent Set.",
-  "body": " Vectors of Dependent Set   Given the set in , show that it is linearly dependent and identify a redundant vector.    If they are dependent, you can find a nontrivial combination equaling zero—then solve to express one vector in terms of the others.    Solve \\[ a(1,0,1)+b(2,1,1)+c(3,1,2)= (0,0,0). \\] Equating components: \\[ a+2b+3c=0,\\quad b+c=0,\\quad a+b+2c=0. \\] From second: . Plug into first: . Then third: . So . For instance, ⇒ . Then: \\[ (3,1,2) = (1,0,1)+(2,1,1). \\] So the set is dependent and is redundant.   "
+  "title": "",
+  "body": "  Consider the system   How many solutions does this system have? Explain your reasoning.    Think about whether all three equations can be satisfied at the same time.    Exactly one solution.    The first two equations intersect at a single point. The third equation is also satisfied by that same point. Therefore, all three equations are satisfied by exactly one point.   "
 },
 {
-  "id": "exam-dimension-5",
+  "id": "exam-1-1-5",
   "level": "2",
-  "url": "ch-practice-exams-2.html#exam-dimension-5",
+  "url": "ch-practice-exams-2.html#exam-1-1-5",
   "type": "Exercise",
   "number": "5",
-  "title": "Dimension of Solution Space.",
-  "body": " Dimension of Solution Space   What is the dimension of the solution space of the homogeneous linear system if is a matrix with three distinct real eigenvalues?    A basis of solutions corresponds to eigenvectors—distinction implies how many independent solutions there are.    With three distinct real eigenvalues, has three independent eigenvectors, yielding a three‑dimensional solution space. Hence, \\(\\dim(\\text{solution space})=3\\).   "
+  "title": "",
+  "body": "  Consider two linear equations in three unknowns.    What does the solution set of a single linear equation in three unknowns look like geometrically?    What would you typically expect the solution set of two such equations to look like?      Recall how lines generalize to higher dimensions.     A plane.  A line.       A single linear equation in three unknowns represents a plane in three‑dimensional space.    Two planes typically intersect in a line, which forms the solution set.     "
 },
 {
-  "id": "integrals-as-solutions-example",
+  "id": "exam-find-1",
   "level": "2",
-  "url": "ch-practice-exams-2.html#integrals-as-solutions-example",
+  "url": "ch-practice-exams-2.html#exam-find-1",
   "type": "Exercise",
   "number": "6",
   "title": "",
-  "body": "   Consider the differential equation     Find the general solution using an integral expression.  Determine the particular solution satisfying the initial condition .      Recall that if , then any solution must satisfy   Integrate term‑by‑term. After finding the general solution, substitute and to determine .    The general solution is . The initial condition gives , so the particular solution is .    We begin with the differential equation   By the fundamental theorem of calculus, a solution must satisfy   Integrating term‑by‑term:   Therefore the general solution is   To find the particular solution satisfying , substitute into the general solution:   Thus , and the particular solution is    "
+  "body": "  Solve the system of equations and describe the solution set.    Try adding the two equations.    The solution is .    Adding the two equations gives , so . Substituting into the first equation gives , so . Thus the system has exactly one solution, .   "
 },
 {
-  "id": "slope-field-exam-problem",
+  "id": "exam-find-2",
   "level": "2",
-  "url": "ch-practice-exams-2.html#slope-field-exam-problem",
+  "url": "ch-practice-exams-2.html#exam-find-2",
   "type": "Exercise",
   "number": "7",
   "title": "",
-  "body": "   Consider the differential equation   Sketch a small portion of the slope field in the region , by hand. Then answer the following questions:   Determine whether the solution curve through the point is initially increasing or decreasing. Justify your answer using the slope field.  Without solving the differential equation explicitly, describe the qualitative long–term behavior of solutions. Do they tend toward a particular line, diverge, or behave in some other way?     Remember that the slope field is built from small line segments whose slope equals at each point . For part (a), compute at the given point to determine whether the local slope is positive or negative. For part (b), think about values of along the line and whether slopes push trajectories toward or away from that line.    (a) The solution through is initially decreasing because . (b) Solutions tend toward the line , which acts as a stable equilibrium line for the differential equation.    We are given the differential equation   To understand the qualitative behavior of solutions, we begin by noting that the slope field at each point is determined by the value of . In particular:   When , the slope is horizontal.  When , solution curves locally increase.  When , solution curves locally decrease.   (a) At the point we compute   Because the slope is negative, the solution curve passing through initially decreases as increases.   Slope field for on , together with a solution curve through .      (b) To analyze long–term behavior, we solve the differential equation. Rewriting it in linear form,   the integrating factor is , and multiplying both sides yields   Integrating,   and dividing by gives the general solution   As , the exponential term decays to zero. Therefore every solution approaches the straight line   which serves as the asymptotic line that solutions follow for large . In particular, this line is an attracting solution curve: trajectories above it are pushed downward, and trajectories below it are pushed upward.  The qualitative picture is that all solutions to approach the line as increases.    "
+  "body": "  Determine whether the following system is equivalent to . Explain your reasoning.       Think about whether the two systems have the same solutions.    Yes, the systems are equivalent.    The second equation in the original system is just twice the first, so it does not impose a new condition. Both systems describe the same set of solutions: all points satisfying . Therefore, the systems are equivalent.   "
 },
 {
-  "id": "separable-equation-corrected",
+  "id": "exam-find-3",
   "level": "2",
-  "url": "ch-practice-exams-2.html#separable-equation-corrected",
+  "url": "ch-practice-exams-2.html#exam-find-3",
   "type": "Exercise",
   "number": "8",
   "title": "",
-  "body": "   Consider the differential equation     Separate variables and find the general solution.  Find the particular solution satisfying the initial condition .      First rewrite the equation so that all -terms are on one side and all -terms on the other:   Then integrate both sides. After integrating, exponentiate to solve for , and finally use the initial condition to determine the constant.    The general solution is The initial condition gives , so the particular solution is     Starting with the differential equation   we separate variables by dividing both sides by and multiplying by :   Integrate both sides:   Compute the integrals:   Exponentiating,   Write as a new positive constant , giving   Solving for produces the general solution:   Apply the initial condition :   Hence , and the particular solution is    "
+  "body": "  Consider the system   Determine whether this system has a solution. If it does, find all solutions. If it does not, explain why.    Ask whether a single pair can satisfy both equations at the same time.    The system has no solutions.    The first equation requires , while the second requires . There is no pair of numbers for which both of these statements can be true simultaneously.  Therefore, the system is inconsistent and has no solutions.   "
 },
 {
-  "id": "integrating-factor-no-absorption",
+  "id": "exam-find-4",
   "level": "2",
-  "url": "ch-practice-exams-2.html#integrating-factor-no-absorption",
+  "url": "ch-practice-exams-2.html#exam-find-4",
   "type": "Exercise",
   "number": "9",
   "title": "",
-  "body": "   Consider the linear differential equation     Find the general solution using the integrating factor method.  Find the particular solution satisfying the initial condition .      Rewrite the equation in the standard linear form and identify . The integrating factor is   Multiply both sides of the equation by this integrating factor. The left-hand side becomes . Integrate both sides, then multiply by to solve for .    The general solution is Using gives , so the particular solution is     We begin with the linear differential equation   In linear form , we have and .  The integrating factor is   Multiply the entire differential equation by :   The left-hand side is the derivative of :   Integrate both sides:   Multiply both sides by to solve for :   Simplifying the exponential:   To find the constant , apply the initial condition :   Thus .  Therefore the particular solution is    "
+  "body": "  Solve the system and describe the solution set.    Compare the second equation to the first.    The system has infinitely many solutions.    The second equation is obtained by multiplying the first by 2, so both equations describe the same line. Every solution of satisfies both equations. Therefore, the system has infinitely many solutions.   "
 },
 {
-  "id": "autonomous-phase-diagram-correct",
+  "id": "exam-find-5",
   "level": "2",
-  "url": "ch-practice-exams-2.html#autonomous-phase-diagram-correct",
+  "url": "ch-practice-exams-2.html#exam-find-5",
   "type": "Exercise",
   "number": "10",
   "title": "",
-  "body": "   Consider the autonomous differential equation     Find all equilibrium solutions.  Construct a phase diagram for this differential equation.  Classify each equilibrium as stable, unstable, or semi-stable based on your phase diagram.  Describe the long-term behavior of solutions with , , and .      Compute the sign of in each region:       Note that for all , and equals zero only when . So the sign of is entirely determined by .  Stability comes from arrow directions:   Arrows pointing toward the equilibrium implies stable.  Arrows pointing away implies unstable.  Arrows pointing toward on one side and away on the other implies semi-stable.     Equilibria: and . The phase diagram has arrows up for , arrows down for , and arrows down for . Thus is stable , and is semi-stable . Long-term behavior:  : solution increases toward from below.  : solution decreases toward from above.  : solution decreases toward .      (a) Equilibria occur where   giving and .  (b) To determine the sign of , note that the squared factor is always nonnegative and equals zero only at . Therefore the sign of is the sign of .   If , then , so . Arrow: up .  If , then , so . Arrow: down .  If , then , so . Arrow: down .   (c) Therefore the phase diagram is as in .   Phase diagram for .      Stability analysis:    : arrows point towards  on both sides so the equilibrium is stable .   : arrow from below points away from , but arrow from above points downward towards . Thus is semi-stable equilibrium.   (d) Long–term behavior:   If , then the arrow is upward; the solution moves toward the stable equilibrium .  If , the arrow is downward; the solution decreases toward the stable equilibrium .  If , the arrow is downward; the solution decreases toward the equilibrium .    "
+  "body": "  Solve the system and describe the solution set.    Subtract the second equation from the first.    The solution set is a line in three‑dimensional space.    Subtracting the second equation from the first gives , so . Substituting into the first equation gives .  Thus the solutions are all triples of the form . Since there are infinitely many such triples, the solution set is a line.   "
 },
 {
-  "id": "eulers-method-exam",
+  "id": "exam-1-2-A",
   "level": "2",
-  "url": "ch-practice-exams-2.html#eulers-method-exam",
+  "url": "ch-practice-exams-2.html#exam-1-2-A",
   "type": "Exercise",
   "number": "11",
   "title": "",
-  "body": "   Consider the initial value problem   Use Euler’s method with step size to approximate the value of . Show your intermediate computations for each Euler step.    Recall that Euler’s method updates the approximate solution by   where . Starting at and using , compute successively:   at ,  at ,  at .     Using Euler’s method with , is approximately     We apply Euler’s method with and . The starting point is   Step 1: Compute at .    Step 2: Compute at .    Step 3: Compute at .    Therefore, the Euler approximation of with is    "
+  "body": "  The reduced augmented matrix of a linear system is   Find the solution to the system.    Interpret each row as an equation.     .    The first row corresponds to , and the second row corresponds to . Therefore, the unique solution is .   "
+},
+{
+  "id": "exam-1-2-B",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-1-2-B",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Consider the augmented matrix   Does the corresponding system have a solution? Explain your answer.    What equation does the second row represent?    The system has no solutions.    The second row represents the equation , which is impossible. Therefore, the system is inconsistent and has no solutions.   "
+},
+{
+  "id": "exam-1-2-C",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-1-2-C",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  The augmented matrix of a linear system is   Describe the solution set.    Identify any free variables.    The system has infinitely many solutions.    The first row represents , and the second row imposes no additional condition. Solving for gives .  Since is free, there are infinitely many solutions of the form .   "
+},
+{
+  "id": "exam-1-2-D",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-1-2-D",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "  Start with the augmented matrix   Replace the second row with the result of subtracting twice the first row from it. Then find the solution to the system.    Compute .     .    Subtracting twice the first row from the second gives   The second row gives . Substituting into the first equation yields . Thus the solution is .   "
+},
+{
+  "id": "exam-1-2-E",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-1-2-E",
+  "type": "Exercise",
+  "number": "15",
+  "title": "",
+  "body": "  The reduced augmented matrix of a system in three variables is   Describe the solution set geometrically.    Count the number of free variables.    The solution set is a line in three‑dimensional space.    The matrix corresponds to the equations and . Solving gives and .  Since is free, the solutions form a line in .   "
+},
+{
+  "id": "exam-pivot-1",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-pivot-1",
+  "type": "Exercise",
+  "number": "16",
+  "title": "",
+  "body": "  The reduced row echelon form of an augmented matrix is   Identify the pivot positions and determine which variables are free.    Pivot positions correspond to leading 1s in the matrix.    The pivot positions are in columns 1 and 2, and the third variable is free.    The leading 1s occur in the first and second columns, so those columns contain pivot positions. The third column does not contain a pivot, so the corresponding variable is free.   "
+},
+{
+  "id": "exam-pivot-2",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-pivot-2",
+  "type": "Exercise",
+  "number": "17",
+  "title": "",
+  "body": "  Consider the augmented matrix   Is the corresponding linear system consistent? Explain your answer.    Look for a pivot in the last column.    The system is inconsistent.    The second row corresponds to the equation , which is impossible. This occurs because there is a pivot in the last column. Therefore, the system is inconsistent and has no solutions.   "
+},
+{
+  "id": "exam-pivot-3",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-pivot-3",
+  "type": "Exercise",
+  "number": "18",
+  "title": "",
+  "body": "  The row echelon form of a system is   Does the system have infinitely many solutions? If so, explain why.    Determine whether every variable corresponds to a pivot column.    Yes, the system has infinitely many solutions.    There are three variables but only two pivot columns. Since at least one variable is free, the system has infinitely many solutions.   "
+},
+{
+  "id": "exam-pivot-4",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-pivot-4",
+  "type": "Exercise",
+  "number": "19",
+  "title": "",
+  "body": "  A system of linear equations in three variables has a reduced row echelon form with exactly two pivot positions.  Describe the solution set geometrically.    Think about how many free variables there are.    The solution set is a line in three‑dimensional space.    With three variables and two pivot positions, there is one free variable. Therefore, the solution set depends on one parameter and forms a line in .   "
+},
+{
+  "id": "exam-pivot-5",
+  "level": "2",
+  "url": "ch-practice-exams-2.html#exam-pivot-5",
+  "type": "Exercise",
+  "number": "20",
+  "title": "",
+  "body": "  Explain why the number of pivot positions in the reduced row echelon form of an augmented matrix determines whether a system has no solutions, exactly one solution, or infinitely many solutions.    Consider the roles of pivots in the coefficient columns and the last column.    Pivot positions determine consistency and the number of free variables.    If there is a pivot in the last column, the system is inconsistent and has no solutions. If every variable column has a pivot, there are no free variables and the system has exactly one solution. If there are fewer pivot positions than variables and no pivot in the last column, there are free variables and infinitely many solutions.   "
 }
 ]
 
