@@ -1,0 +1,163 @@
+<worksheet label="ws-act-3-1-1">
+   <title>Preview Activity 3.1.1</title>
+    <activity label="ula-preview-3-1">
+      <task label="ula-preview-3-1-a">
+        <statement>
+          <p>
+            Explain how you would solve the equation <m>3x =
+	    5</m> using multiplication rather than
+	  division. </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+          <p> Dividing by <m>3</m> is the same as
+	  multiplying by <m>\frac13</m>, the multiplicative inverse
+	  <m>\frac13</m> of <m>3</m>.  We have
+	    <me>
+	      \begin{array}{rl}
+	      \frac13(3x) \amp = \dfrac13 5  \\
+	      \left(\frac13 3\right)x\amp = \dfrac53   \\
+	      1x \amp = \dfrac 53 \\
+	      x \amp = \dfrac53\text{.} \\
+	      \end{array}
+	    </me>
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-1-b">
+	<statement>
+          <p> Find the <m>2\times2</m> matrix <m>A</m> that
+	  rotates vectors counterclockwise by
+	  <m>90^\circ</m>. </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    As we have seen a few times, the matrix is
+	    <m>A=\left[\begin{array}{rr}
+	    0 \amp -1 \\
+	    1 \amp 0 \\
+	    \end{array}\right]\text{.}
+	    </m>
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-1-c">
+        <statement>
+	  <p> Find the <m>2\times2</m> matrix <m>B</m> that
+	  rotates vectors <em>clockwise</em> by
+	  <m>90^\circ</m>. </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    Here, the matrix is
+	    <m>B=\left[\begin{array}{rr}
+	    0 \amp 1 \\
+	    -1 \amp 0 \\
+	    \end{array}\right]\text{.}
+	    </m>
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-1-d">
+        <statement>
+	  <p> What do you expect the product <m>AB</m> to be?
+	  Explain the reasoning behind your expectation and then
+	  compute <m>AB</m> to verify it. </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> We should expect that <m>AB=I</m> since the effect
+	  of rotating by <m>90^\circ</m> clockwise followed by
+	  rotating <m>90^\circ</m> counterclockwise is to leave a
+	  vector unchanged.  We can verify this by performing the
+	  matrix multiplication. 
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-1-e">
+        <statement>
+	  <p> Solve the equation <m>A\xvec = \twovec{3}{-2}</m>
+	  using Gaussian elimination.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> We have
+	  <me>
+	    \left[\begin{array}{rr|r}
+	    0 \amp -1 \amp 3 \\
+	    1 \amp 0 \amp -2 \\
+	    \end{array}\right]
+	    \sim
+	    \left[\begin{array}{rr|r}
+	    1 \amp 0 \amp -2 \\
+	    0 \amp 1 \amp -3 \\
+	    \end{array}\right]
+	  </me>
+	  so the solution is <m>\xvec=\twovec{-2}{-3}</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-1-f">
+        <statement>
+	  <p> Explain why your solution may also be found by
+	  computing <m>\xvec = B\twovec{3}{-2}</m>. </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    The equation <m>A\xvec=\twovec{3}{-2}</m> is asking us to
+	    find the vector that becomes <m>\twovec{3}{-2}</m> after
+	    being rotated by <m>90^\circ</m>.  If we rotate
+	    <m>\twovec{3}{-2}</m> by <m>90^\circ</m> in the opposite
+	    direction, it will 
+	    have this property.  That is,
+	    if <m>\xvec = B\twovec3{-2}</m>, then
+	    <me>
+	      A\xvec = A(B\twovec3{-2})
+	      = (AB)\twovec{3}{-2} 
+	      = I\twovec{3}{-2} 
+	      = \twovec{3}{-2}.
+	    </me>
+	  </p>
+        </solution>
+      </task>
+
+      <task component="rs-preview">
+        <query label="ula-preview-3-1-poll" visibility="instructor">
+          <statement>
+            <p>I feel confident with the material in this activity.</p>
+          </statement>
+          <choices>
+            <choice><p>Strongly Agree</p></choice>
+            <choice><p>Agree</p></choice>
+            <choice><p>Neutral</p></choice>
+            <choice><p>Disagree</p></choice>
+            <choice><p>Strongly Disagree</p></choice>
+          </choices>
+        </query>
+      </task>
+
+      <task component="rs-preview"
+            label="ula-preview-3-1-what-else">
+        <statement>
+          <p>What would you need to know to feel
+          more confident about this material?</p>
+        </statement>
+        <response/>
+      </task>
+
+    </activity>
+   
+</worksheet>

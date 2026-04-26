@@ -1,0 +1,146 @@
+<worksheet xml:id="ws-act-3-3-1">
+  <title>Preview Activity 3.3.1</title>
+<activity label="ula-preview-3-4">
+      <introduction>
+        <p> We will explore the area formula in this preview
+        activity.</p>
+      </introduction>
+
+      <task label="ula-preview-3-4-a">
+        <statement>
+	  <p> Find the area of the following parallelograms. </p>
+
+	  <sbsgroup>
+	    <sidebyside widths="3% 30% 3% 30% 3% 30%">
+	      <p> 1. </p>
+	      <image source="images/parallelogram-a">
+                <shortdescription>
+                  A one by one square
+                </shortdescription>
+                <description>
+                  <p>A parallelogram with vertices at the origin,
+                  <m>(1,0)</m>, <m>(1,1)</m>, and <m>(0,1)</m>.</p>
+                </description>
+              </image>
+	      <p> 2. </p>
+	      <image source="images/parallelogram-b">
+                <shortdescription>
+                  A rectangle having sides of length two and three
+                </shortdescription>
+                <description>
+                  <p>A parallelogram with vertices at the origin,
+                  <m>(2,0)</m>, <m>(2,3)</m>, and <m>(0,3)</m>.</p>
+                </description>
+              </image>
+	      <p> 3. </p>
+	      <image source="images/parallelogram-c">
+                <shortdescription>
+                  A square whose sides make 45 degree angles with the
+                  coordinate axes.
+                </shortdescription>
+                <description>
+                  <p>A parallelogram with vertices at the origin,
+                  <m>(1,-1)</m>, <m>(2,0)</m>, and <m>(1,1)</m>.</p>
+                </description>
+              </image>
+	    </sidebyside>
+	    <sidebyside widths="3% 30% 3% 30% 3% 30%">
+	      <p> 4. </p>
+	      <image source="images/parallelogram-d">
+                <shortdescription>
+                  A parallelogram with horizontal sides.
+                </shortdescription>
+                <description>
+                  <p>A parallelogram with vertices at the origin,
+                  <m>(2,0)</m>, <m>(3,2)</m>, and <m>(1,2)</m>.</p>
+                </description>
+              </image>
+	      <p> 5. </p>
+	      <image source="images/parallelogram-e">
+                <shortdescription>
+                  A parallelogram with horizontal sides.
+                </shortdescription>
+                <description>
+                  <p>A parallelogram with vertices at the origin,
+                  <m>(2,0)</m>, <m>(4,2)</m>, and <m>(0,2)</m>.</p>
+                </description>
+              </image>
+	      <p>
+	      </p>
+	      <p>
+	      </p>
+	    </sidebyside>
+	  </sbsgroup>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> We find the following areas.
+	  <ol marker="1.">
+	    <li><p> A <m>1\times1</m> square has area 1. </p></li>
+	    <li><p> A <m>2\times3</m> rectangle has area 6. </p></li>
+	    <li><p> The square has side length <m>\sqrt{2}</m> giving
+	    an area of 2. </p></li>
+	    <li><p> If we consider the horizontal length as the base,
+	    we see that <m>b=h=2</m> so that the area is 4. </p></li>
+	    <li><p> In the same way, we can consider both the base and
+	    height to be 2 so that the area is 4. </p></li>
+	  </ol>
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-4-b">
+        <statement>
+	  <sidebyside widths="50% 40%" valign="middle">
+	    <p> Explain why the area of the parallelogram formed by
+	      the vectors <m>\vvec</m> and <m>\wvec_1</m> is the same as
+	    that formed by <m>\vvec</m> and <m>\wvec_2</m>. </p>
+	    <image source="images/area-shear">
+              <shortdescription>
+                A horizontal vector with two vectors ending on the
+                same horizontal line.
+              </shortdescription>
+              <description>
+                <p>A horizontal vector <m>\vvec</m> and two vectors
+                <m>\wvec_1</m> and <m>\wvec_2</m> that end on the same
+                horizontal line.</p>
+              </description>
+            </image>
+	  </sidebyside>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> If we consider the base to be the length of
+	  <m>\vvec</m>, then the height, which is the perpendicular
+	  distance to its parallel side, is the same in both
+	  parallelograms. </p>
+        </solution>
+      </task>
+
+      <task component="rs-preview">
+        <query label="ula-preview-3-4-poll" visibility="instructor">
+          <statement>
+            <p>I feel confident with the material in this activity.</p>
+          </statement>
+          <choices>
+            <choice><p>Strongly Agree</p></choice>
+            <choice><p>Agree</p></choice>
+            <choice><p>Neutral</p></choice>
+            <choice><p>Disagree</p></choice>
+            <choice><p>Strongly Disagree</p></choice>
+          </choices>
+        </query>
+      </task>
+
+      <task component="rs-preview"
+            label="ula-preview-3-4-what-else">
+        <statement>
+          <p>What would you need to know to feel
+          more confident about this material?</p>
+        </statement>
+        <response/>
+      </task>
+
+    </activity>
+
+</worksheet>

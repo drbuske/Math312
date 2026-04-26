@@ -1,0 +1,180 @@
+<worksheet label="ws-act-3-1-3">
+  <title>Activity 3.1.3</title>
+   <activity>
+    <title>Inverse of a Product</title>
+      <statement>
+	<p>
+	  We'll begin by considering the square matrix
+	  <me>
+	    A = \begin{bmatrix}
+	    1 \amp 0 \amp 2 \\
+	    2 \amp 2 \amp 1 \\
+	    1 \amp 1 \amp 1 \\
+	    \end{bmatrix}.
+	  </me>
+	  
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Describe the solution space to the equation <m>A\xvec
+		= \threevec343</m> by augmenting <m>A</m> and finding
+		the reduced row echelon form.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<!-- Using <xref ref="proposition-invertible-rref"/>, -->
+		Explain why <m>A</m> is invertible and find its
+		inverse.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Now use the inverse to solve the equation <m>A\xvec =
+		\threevec343</m> and verify that your result agrees
+		with what you found in part a.
+	      </p>
+	    </li>
+		
+	    <li>
+	      <p>
+		If you have defined a matrix <c>B</c> in Sage, you can
+		find it's inverse as <c>B.inverse()</c> or
+		<c>B^-1</c>.  Use Sage to 
+		find the inverse of the matrix
+		<me>
+		  B = \left[\begin{array}{rrr}
+		  1 \amp -2 \amp -1 \\
+		  -1 \amp 5 \amp 6 \\
+		  5 \amp -4 \amp 6 \\
+		  \end{array}\right]
+		</me>
+		and use it to solve the equation <m>B\xvec =
+		\threevec83{36}</m>. 
+		  <sage>
+		    <input>
+		    </input>
+		  </sage>
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		If <m>A</m> and <m>B</m> are the two matrices defined
+		in this activity, find their product <m>AB</m> and
+		verify that it is invertible.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Compute the products <m>A^{-1}B^{-1}</m> and
+		<m>B^{-1}A^{-1}</m>.  Which one agrees with
+		<m>(AB)^{-1}</m>?
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Explain your finding by considering the product
+		<me>
+		  (AB)(B^{-1}A^{-1})
+		</me>
+		and using associativity to regroup the products so
+		that the middle two terms are multiplied first.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    Constructing the augmented matrix, we see that
+	    <me>
+	      \left[\begin{array}{rrr|r}
+	      1 \amp 0 \amp 2 \amp 3 \\
+	      2 \amp 2 \amp 1 \amp 4 \\
+	      1 \amp 1 \amp 1 \amp 3
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrr|r}
+	      1 \amp 0 \amp 0 \amp -1 \\
+	      0 \amp 1 \amp 0 \amp 2 \\
+	      0 \amp 0 \amp 1 \amp 2
+	      \end{array}\right],
+	    </me>
+	    which says that there is a unique solution <m>\xvec =
+	    \threevec{-1}22</m>.
+	  </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      Our work in part a shows that <m>A\sim I</m> from which
+	      we conclude that <m>A</m> is invertible.  To find the
+	      inverse,
+	      <me>
+		\left[\begin{array}{rrr|rrr}
+		1 \amp 0 \amp 2 \amp 1 \amp 0 \amp 0 \\
+		2 \amp 2 \amp 1 \amp 0 \amp 1 \amp 0 \\
+		1 \amp 1 \amp 1 \amp 0 \amp 0 \amp 1
+		\end{array}\right]
+		\sim
+		\left[\begin{array}{rrr|rrr}
+		1 \amp 0 \amp 0 \amp 1 \amp 2 \amp -4 \\
+		0 \amp 1 \amp 0 \amp -1 \amp -1 \amp 3 \\
+		0 \amp 0 \amp 1 \amp 0 \amp -1 \amp 2
+		\end{array}\right],
+	      </me>
+	      which says that
+	      <me>
+		A^{-1} = \begin{bmatrix}
+		1 \amp 2 \amp -4 \\
+		-1 \amp -1 \amp 3 \\
+		0 \amp -1 \amp 2 \\
+		\end{bmatrix}.
+	      </me>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      We see that <m>A^{-1}\threevec343 = \threevec{-1}22</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Sage tells us that <m>B^{-1}\threevec{8}3{36} =
+	      \threevec{76}{47}{-26}</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Sage helps us see that <m>(AB)\sim I</m>, which tells us
+	      that <m>AB</m> is invertible.
+	    </p>
+	  </li>
+
+	  <li><p>
+	    We find that <m>(AB)^{-1} = B^{-1}A^{-1}</m>.
+	  </p></li>
+
+	  <li>
+	    <p>
+	      We see that
+	      <me>
+		(AB)(B^{-1}A^{-1}) = A(BB^{-1})A^{-1} = AIA^{-1} =
+		AA^{-1} = I.
+	      </me>
+	    </p>
+	  </li>
+	</ol></p>
+      </solution>
+
+    </activity>
+   
+</worksheet>

@@ -1,0 +1,179 @@
+<worksheet label="ws-act-3-1-2">
+   <title>Activity 3.1.2</title>
+    <activity>
+      <statement>
+	<p>
+	  This activity demonstrates a procedure for finding the
+	  inverse of a matrix <m>A</m>.
+
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Suppose that <m>A = \begin{bmatrix}
+		3 \amp -2 \\
+		1 \amp -1 \\
+		\end{bmatrix}
+		</m>.  To find an inverse <m>B</m>, we write its columns
+		as <m>B = \begin{bmatrix}\bvec_1 \amp \bvec_2
+		\end{bmatrix}</m> and require that
+		<me>
+		  \begin{aligned}
+		  AB \amp = I \\
+		  \begin{bmatrix}
+		  A\bvec_1 \amp A\bvec_2
+		  \end{bmatrix}
+		  \amp = 
+		  \begin{bmatrix}
+		  1 \amp 0 \\
+		  0 \amp 1 \\
+		  \end{bmatrix}.
+		  \end{aligned}
+		</me>
+		In other words, we can find the columns of <m>B</m> by
+		solving the equations
+		<me>
+		  A\bvec_1 = \twovec10,~~~
+		  A\bvec_2 = \twovec01.
+		</me>
+		Solve these equations to find <m>\bvec_1</m> and
+		<m>\bvec_2</m>.  Then write the matrix <m>B</m> and
+		verify that <m>AB=I</m>.  This is enough for us to
+		conclude that <m>B</m> is
+		the inverse of <m>A</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Find the product <m>BA</m> and explain why we now know
+		that <m>B</m> is invertible and <m>B^{-1}=A</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		What happens when you try to find the inverse of
+		<m>C = \begin{bmatrix}
+		-2 \amp 1 \\
+		4 \amp -2 \\
+		\end{bmatrix}</m>?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		We now develop a condition that must be satisfied by
+		an invertible matrix.
+		Suppose that <m>A</m> is an invertible
+		<m>n\times n</m> matrix with inverse <m>B</m> and 
+		suppose that <m>\bvec</m> is any <m>n</m>-dimensional
+		vector. Since <m>AB=I</m>, we have
+		<me>
+		  A(B\bvec) = (AB)\bvec = I\bvec = \bvec.
+		</me>
+		This says that the equation <m>A\xvec = \bvec</m> is
+		consistent and that <m>\xvec=B\bvec</m> is a solution.
+	      </p>
+
+	      <p>
+		Since we know that <m>A\xvec = \bvec</m> is consistent
+		for any vector <m>\bvec</m>, what does this say about
+		the span of the columns of <m>A</m>?
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Since <m>A</m> is a square matrix,
+		what does this say
+		about the pivot positions of <m>A</m>? What is the
+		reduced row echelon form of <m>A</m>?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		In this activity, we have studied the matrices
+		<me>
+		  A = \begin{bmatrix}
+		  3 \amp -2 \\
+		  1 \amp -1 \\
+		  \end{bmatrix},~~~
+		  C = \begin{bmatrix}
+		  -2 \amp 1 \\
+		  4 \amp -2 \\
+		  \end{bmatrix}.
+		</me>
+		Find the reduced row echelon form of each and explain
+		how those forms enable us to conclude that one matrix
+		is invertible and the other is not.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    Solving the two equations for <m>\bvec_1</m> and
+	    <m>\bvec_2</m> gives
+	    <m>B = \begin{bmatrix}
+	    1 \amp -2 \\
+	    1 \amp -3 \\
+	    \end{bmatrix}</m>.  We can verify that, as we
+	    expect, <m>AB=I</m>.
+	  </p></li>
+
+	  <li><p>
+	    We find that <m>BA=I</m>, which is the condition that
+	    tells us that <m>B</m> is invertible.
+	  </p></li>
+
+	  <li><p>
+	    Seeking the first column of <m>C^{-1}</m>, we see that
+	    the equation <m>C\xvec = \twovec10</m> is not consistent.
+	    This means that <m>C</m> is not invertible.
+	  </p></li>
+
+	  <li><p>
+	    Since the equation <m>A\xvec = \bvec</m> is consistent for
+	    every <m>\bvec</m>, we know that the span of the columns
+	    of <m>A</m> is <m>\real^n</m>.
+	  </p></li>
+
+	  <li><p>
+	    Because the span of the columns of <m>A</m> is
+	    <m>\real^n</m>, there is a pivot position in every row.
+	    Since <m>A</m> is square, there is also a pivot position
+	    in every column.  This means that the reduced row echelon
+	    form of <m>A</m> must be the identity matrix <m>I_n</m>.
+	  </p></li>
+
+	  <li><p>
+	    We see that
+	    <me>
+	      A\sim \begin{bmatrix}
+	      1 \amp 0 \\
+	      0 \amp 1 \\
+	      \end{bmatrix},~~~
+	      C\sim
+	      \begin{bmatrix}
+	      1 \amp -\frac12 \\
+	      0 \amp 0 \\
+	      \end{bmatrix},
+	    </me>
+	    which shows that <m>A</m> is invertible and <m>C</m> is
+	    not. 
+	  </p></li>
+	</ol></p>
+      </solution>
+
+    </activity>
+   
+</worksheet>

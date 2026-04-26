@@ -1,0 +1,137 @@
+<worksheet label="ws-act-3-2-1">
+   <title>Preview Activity 3.2.1</title>
+    <activity label="ula-preview-3-2">
+      <introduction>
+        <p> Consider the vectors
+        <me>
+	  \vvec_1 = \twovec{2}{1},
+	  \vvec_2 = \twovec{1}{2}
+        </me>
+        in <m>\real^2</m>, which are shown in
+        <xref ref="fig-basis-1" />.
+        </p>
+
+        <figure xml:id="fig-basis-1">
+	  <sidebyside width="50%">
+	    <image source="images/basis-1">
+              <shortdescription>
+                Two vectors and a set of skewed grid lines
+                representing their linear combinations.
+              </shortdescription>
+              <description>
+                <p>There is a set of coordinate axes and a standard
+                <m>1\times1</m> coordinate grid in the background.
+                There are also two vectors <m>\vvec_1=\twovec21</m>
+                and <m>\vvec_2=\twovec12</m> and two sets of parallel
+                lines representing the linear combinations of
+                <m>\vvec_1</m> and <m>\vvec_2</m>.  One set of
+                parallel lines is parallel to <m>\vvec_1</m> and
+                passes through the integer multiples of <m>\vvec_2</m>
+                while the other set is parallel to <m>\vvec_2</m> and
+                passes through integer multiples of
+                <m>\vvec_1</m>.</p>
+              </description>
+            </image>
+	  </sidebyside>
+	  <caption>
+	    Linear combinations of <m>\vvec_1</m> and <m>\vvec_2</m>.
+	  </caption>
+        </figure>
+      </introduction>
+
+      <task label="ula-preview-3-2-a">
+        <statement>
+          <p>Indicate the linear combination <m>\vvec_1 -
+	  2\vvec_2</m> on the figure.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> We can see graphically, or we can compute, that
+	  <m>\vvec_1-2\vvec_2 = \twovec{0}{-3}</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-2-b">
+        <statement>
+	  <p> Express the vector <m>\twovec{-3}{0}</m> as a linear
+	  combination of <m>\vvec_1</m> and <m>\vvec_2</m>. </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> Again, we graphically see that <m>\twovec{-3}{0} =
+	  -2\vvec_1+\vvec_2</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-2-c">
+        <statement>
+	  <p> Find the linear combination <m>10\vvec_1 -
+	  13\vvec_2</m>.  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> Since the linear combination extends beyond the
+	  figure, we compute that <m>10\vvec_1-13\vvec_2 =
+	  \twovec{7}{-16}</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-2-d">
+        <statement>
+	  <p> Express the vector <m>\twovec{16}{-4}</m> as a linear
+	  combination of <m>\vvec_1</m> and <m>\vvec_2</m>. </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> We need to find the solution to the linear system
+	  <m>c_1\vvec_1 + c_2\vvec_2 = \twovec{16}{-4}</m>, which is
+	  <m>\twovec{c_1}{c_2} = \twovec{12}{-8}</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-3-2-e">
+        <statement>
+	  <p> Explain why every vector in <m>\real^2</m> can be
+	  written as a linear combination of <m>\vvec_1</m> and
+	  <m>\vvec_2</m> in exactly one way. </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p> The matrix <m>\left[\begin{array}{rr} \vvec_1 \amp
+	  \vvec_2 \end{array}\right]</m> has a pivot position in every
+	  row and every column.
+	  </p>
+        </solution>
+      </task>
+
+      <task component="rs-preview">
+        <query label="ula-preview-3-2-poll" visibility="instructor">
+          <statement>
+            <p>I feel confident with the material in this activity.</p>
+          </statement>
+          <choices>
+            <choice><p>Strongly Agree</p></choice>
+            <choice><p>Agree</p></choice>
+            <choice><p>Neutral</p></choice>
+            <choice><p>Disagree</p></choice>
+            <choice><p>Strongly Disagree</p></choice>
+          </choices>
+        </query>
+      </task>
+
+      <task component="rs-preview"
+            label="ula-preview-3-2-what-else">
+        <statement>
+          <p>What would you need to know to feel
+          more confident about this material?</p>
+        </statement>
+        <response/>
+      </task>
+    </activity>
+   
+</worksheet>

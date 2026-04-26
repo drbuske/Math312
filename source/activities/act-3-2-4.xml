@@ -1,0 +1,234 @@
+<worksheet xml:id="ws-act-3-2-4">
+  <title>Activity 3.2.4</title>
+<activity>
+      <title> Edge detection </title>
+
+      <statement>
+      <p> An important problem in the field of computer vision is to
+      detect edges in a digital photograph, as is shown in <xref
+      ref="fig-edge-detection" />.  Edge detection algorithms are
+      useful when, say, we want a robot to locate an object in its
+      field of view.  Graphic designers also use these algorithms to
+      create artistic effects.
+      </p>
+
+      <figure xml:id = "fig-edge-detection">
+	<sidebyside widths="45% 45%">
+	  <image source="images/spring-canyon-cropped.jpg">
+            <shortdescription>
+              A color photograph of a red rock canyon wall against a
+              blue sky.
+            </shortdescription>
+            <description>
+              <p>A color photograph showing a red rock canyon wall
+              against a blue sky.  There are a few shadows in the
+              canyon wall, but the region of the photograph occupied
+              by the wall is fairly homogeneous.  The blue sky is also
+              fairly homogeneous so that there is a sharp division
+              between the area occupied by the canyon wall and the
+              area occupied by the sky.  There is also some vegetation
+              at the bottom and branches of a tree on the left.</p>
+            </description>
+          </image>
+	  <image source="images/spring-canyon-edges.jpg">
+            <shortdescription>
+              Black and white image showing the edges detected in the
+              photograph by an edge detection algorithm.
+            </shortdescription>
+            <description>
+              <p>This image has a pure white background and curves
+              drawn in black indicating edges detected in the
+              photograph.  There is a prominent vertical curve
+              representing the edge between the canyon wall and the
+              sky.  Additional curves highlight some of the shadows in
+              the canyon wall as well as the vegetation and branches
+              of the tree.</p>
+            </description>
+          </image>
+	</sidebyside>
+	<caption> A canyon wall in Capitol Reef National Park and the
+	result of an edge detection algorithm.
+	</caption>
+      </figure>
+
+      <p> We will consider a very simple version of an edge detection
+      algorithm to give a sense of how this works.  Rather than
+      considering a two-dimensional photograph, we will think about a
+      one-dimensional row of pixels in a photograph.  The grayscale
+      values of a pixel measure the brightness of a pixel;  a
+      grayscale value of 0 corresponds to black, and a value of 255
+      corresponds to white.
+      </p>
+
+      <p> Suppose, for simplicity, that the grayscale values for a row
+      of six pixels are represented by a vector <m>\xvec</m> in
+      <m>\real^6</m>: 
+      </p>
+
+      <sidebyside align="top">
+	<p>
+	  <me>
+	  \xvec = \left[\begin{array}{r}
+	  25 \\ 34 \\ 30 \\ 45 \\ 190 \\ 200
+	  \end{array}\right]
+	  </me>.
+	</p>
+
+	<image source="images/edges-grayscale">
+          <shortdescription>
+            Plot of grayscale values for the six pixels.
+          </shortdescription>
+          <description>
+            <p>A horizontal axis with labelled locations one through
+            six representing the six pixels and a vertical axis with a
+            scale from zero to 250.  There are six points plotted
+            representing the grayscale values of the six pixels.  The
+            first four grayscale values are relatively small, but the
+            fifth and sixth are relatively large so that we see a jump
+            in the values between the fourth and fifth pixel.</p>
+          </description>
+        </image>
+      </sidebyside>
+
+      <p> We can easily see that there is a jump in brightness between
+      pixels 4 and 5, but how can we detect it computationally?  We
+      will introduce a new basis <m>\bcal</m> for <m>\real^6</m> with
+      vectors:
+      <me>
+	\vvec_1=\left[\begin{array}{r} 1 \\ 0 \\ 0 \\ 0 \\ 0
+	\\ 0 \end{array}\right],
+	\vvec_2=\left[\begin{array}{r} 1 \\ 1 \\ 0 \\ 0 \\ 0
+	\\ 0 \end{array}\right],
+	\vvec_3=\left[\begin{array}{r} 1 \\ 1 \\ 1 \\ 0 \\ 0
+	\\ 0 \end{array}\right],
+	\vvec_4=\left[\begin{array}{r} 1 \\ 1 \\ 1 \\ 1 \\ 0
+	\\ 0 \end{array}\right],
+	\vvec_5=\left[\begin{array}{r} 1 \\ 1 \\ 1 \\ 1 \\ 1
+	\\ 0 \end{array}\right],
+	\vvec_6=\left[\begin{array}{r} 1 \\ 1 \\ 1 \\ 1 \\ 1
+	\\ 1 \end{array}\right]
+      </me>.
+
+      <ol marker="a.">
+	<li><p> Construct the matrix <m>P_\bcal</m> that relates the
+	standard coordinate system with the coordinates in the basis
+	<m>\bcal</m>.
+	</p></li>
+
+	<li><p> Determine the matrix 
+	<m>P_\bcal^{-1}</m> that converts the representation of
+	<m>\xvec</m> in standard coordinates into the coordinate
+	system defined by <m>\bcal</m>.
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+	</p></li>
+
+	<li><p> Suppose the
+	vectors are expressed in general terms as
+	<me>
+	  \xvec = \left[\begin{array}{r}
+	  x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \\ x_6 \end{array}\right],~~~
+	  \coords{\xvec}{\bcal} = \left[\begin{array}{r}
+	  c_1 \\ c_2 \\ c_3 \\ c_4 \\ c_5 \\ c_6 \end{array}\right]
+	</me>.
+	Using the relationship <m>\coords{\xvec}{\bcal} =
+	P_{\bcal}^{-1}\xvec</m>, determine an expression for the
+	coefficient <m>c_2</m> in terms of <m>x_1,x_2,\ldots,x_6</m>.
+	What does <m>c_2</m> measure in terms of the grayscale values
+	of the pixels?  What does <m>c_4</m> measure in terms of the
+	grayscale values of the pixels?
+	</p></li>
+
+	<li><p> Now for the specific vector
+	  <me>
+	  \xvec = \left[\begin{array}{r}
+	  25 \\ 34 \\ 30 \\ 45 \\ 190 \\ 200
+	  \end{array}\right]
+	  </me>,
+	  determine the representation of <m>\xvec</m> in the
+	  <m>\bcal</m>-coordinate system.
+	</p></li>
+
+	<li><p>
+	  Explain how the coefficients in <m>\coords{\xvec}{\bcal}</m>
+	  determine the location of the jump in brightness in the
+	  grayscale values represented by the vector <m>\xvec</m>.
+	</p></li>
+      </ol>
+      </p>
+
+      <p> Readers who are familiar with calculus may recognize that
+      this change of basis converts a vector <m>\xvec</m> into
+      <m>\coords{\xvec}{\bcal}</m>, the set of changes in
+      <m>\xvec</m>.  This process is similar to differentiation in
+      calculus.  Similarly, the process of converting
+      <m>\coords{\xvec}{\bcal}</m> into the vector <m>\xvec</m> adds
+      together the changes in a process similar to integration.  As a
+      result, this
+      change of basis represents a linear algebraic
+      version of the Fundamental Theorem of Calculus.
+      </p>
+    </statement>
+
+    <solution>
+      <p><ol marker="a.">
+	<li><p> We form the matrix
+	<me>
+	  P_{\bcal} =
+	  \left[\begin{array}{rrrrrr}
+	  1 \amp 1 \amp 1 \amp 1 \amp 1 \amp 1 \\
+	  0 \amp 1 \amp 1 \amp 1 \amp 1 \amp 1 \\
+	  0 \amp 0 \amp 1 \amp 1 \amp 1 \amp 1 \\
+	  0 \amp 0 \amp 0 \amp 1 \amp 1 \amp 1 \\
+	  0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 1 \\
+	  0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1
+	  \end{array}\right]\text{.}
+	</me>
+	</p></li>
+
+	<li><p>
+	  We find that
+	  <me>
+	    P_{\bcal}^{-1} = 
+	    \left[\begin{array}{rrrrrr}
+	    1 \amp -1 \amp 0 \amp 0 \amp 0 \amp 0 \\
+	    0 \amp 1 \amp -1 \amp 0 \amp 0 \amp 0 \\
+	    0 \amp 0 \amp 1 \amp -1 \amp 0 \amp 0 \\
+	    0 \amp 0 \amp 0 \amp 1 \amp -1 \amp 0 \\
+	    0 \amp 0 \amp 0 \amp 0 \amp 1 \amp -1 \\
+	    0 \amp 0 \amp 0 \amp 0 \amp 0 \amp 1
+	    \end{array}\right]\text{.}
+	  </me>
+	</p></li>
+
+	<li><p> We see that <m>c_2=x_3-x_2</m> so <m>c_2</m> measures
+	the change in brightness between one pixel and its neighbor.
+	Similarly, <m>c_4=x_5-x_4</m>, which measures another change
+	in brightness.
+	</p></li>
+
+	<li><p> We compute that
+	<me>\coords{\xvec}{\bcal}=P_{\bcal}^{-1}\xvec =
+	\left[\begin{array}{c}
+	-9 \\ 4 \\ -15 \\ -145 \\ -10 \\ 200
+	\end{array}\right]\text{.}
+	</me>
+	</p></li>
+
+	<li><p>
+	  Most of the coefficients that measure changes are relatively
+	  small in absolute value.  The coefficient <m>c_4</m>,
+	  however, which measures the change in brightness between the
+	  fourth and fifth pixel, has a large absolute value.  This
+	  tells us that there is a large change in brightness between
+	  the fourth and fifth pixel, which points to an edge in the
+	  image.
+	</p></li>
+      </ol></p>
+    </solution>
+
+  </activity>
+
+</worksheet>
