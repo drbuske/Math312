@@ -1,279 +1,435 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<section xml:id="syllabus" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="syllabus" xmlns:xi="http://www.w3.org/2001/XInclude"> -->
   <title>Syllabus</title>
 
-  <introduction>
-    <p>
-    </p>
-  </introduction>
-  <!-- Include subsections -->
-  <subsection xml:id="sec-course-info">
+  <!-- Include chapters -->
+  <section xml:id="sec-course-info">
     <title>Course Information</title>
 
     <p>
-      This is the syllabus for <term>Demo PreTeXt Course (PTX 101, section 007)</term> for Spring 2026.
-      It is a 0 credit course.
+      This is the syllabus for <term>Linear Algebra (MATH 312)</term> for Summer 2026.
+      It is a 4-credit course offered through St. Cloud State University.
+      <!-- use a description list (dl) for short items -->
       <dl>
-      <li>
-        <title>Instructor</title>
+        <li>
+          <title>Instructor</title>
 
-        <p>
-          Prof.
-          Levin, Ross Hall 2240D, <url href="mailto:oscar.levin@unco.edu">oscar.levin@unco.edu</url>.
-        </p>
-      </li>
+          <p>
+            Dr. Dale Buske, CH 367A, <url href="mailto:drbuske@stcloudstate.edu" visual="drbuske@stcloudstate.edu"/>.
+          </p>
+        </li>
 
-      <li>
-        <title>Student Hours</title>
+        <li>
+          <title>Student Hours</title>
 
-        <p>
-          Tuesday and Friday 10-12 on Zoom
-        </p>
-      </li>
+          <p>
+            Available via Zoom by appointment.  Meetings on campus are also possible.  Email to set up a day, time, and method to meet.  
+          </p>
+        </li>
 
-      <li>
-        <title>Class meets</title>
+        <li>
+          <title>Accessibility Services</title>
+          <p>Please contact Student Accessibility Services (SAS), <url href="mailto:sas@stcloudstate.edu" visual="sas@stcloudstate.edu"/> or 320-308-4080, Centennial Hall 202, to meet and discuss reasonable and appropriate accommodations.
+          </p>
+        </li>
 
-        <p>
-          MWF 10-11 in Ross 2090
-        </p>
-      </li>
+        <li>
+          <title>Class Meetings</title>
 
-      <li>
-        <title>Course Description</title>
+          <p>
+            The course is asynchronous; however, closely following the suggested schedule is strongly advised in order to be successful and prepared for assessments of your learning.   
+          </p>
 
-        <p>
-          This course is entirely fictional.
-          There isn't even a catalog to pull a description from.
-          But if there were, it would have a course description and that course description would be put here for students to read (but likely because the university administration requires it be included in a syllabus).
-        </p>
-      </li>
+          <!-- <table xml:id="MeetingDates" >
+<title>Exam Dates</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Date</alert> </cell>
+<cell> <alert>Time</alert> </cell>
+</row>
 
-      <li>
-        <title>Prerequisite</title>
+<row>
+<cell> June 2 </cell> 
+<cell> 9:00-10:30 AM </cell>   
+</row>
 
-        <p>
-          TEX 100 or suitable score on the typesetting placement exam.
-        </p>
-      </li>
+<row>
+<cell> June 16 </cell> 
+<cell> 9:00-10:30 AM </cell>   
+</row>
 
-      <li>
-        <title>Textbook and course materials</title>
+<row>
+<cell> June 30 </cell> 
+<cell> 9:00-10:30 AM </cell>   
+</row>
 
-        <p>
-          <pubtitle><pretext/>
-          for Instructors</pubtitle>
-          by Oscar Levin.
-          You can view an accessible online copy of this free, open source textbook at <url href="https://pfi.mathtech.org"/>.
-        </p>
-      </li>
+<row>
+<cell> July 14 </cell> 
+<cell> 9:00-10:30 AM </cell>   
+</row>
+
+<row>
+<cell> July 23 </cell> 
+<cell> 9:00-11:15 AM </cell>  
+</row>
+
+</tabular>
+</table> -->
+
+        </li>
+
+        <li>
+          <title>Course Description</title>
+
+          <p>
+            Matrices, matrix operations, systems of linear equations, determinants, geometry of R-n, vector spaces, subspaces, linear transformations, inner products, eigenvalues.  4 cr
+          </p>
+        </li>
+
+        <li>
+          <title>Prerequisite</title>
+
+          <p>
+            MATH 221 - Calculus I
+          </p>
+        </li>
+
+        <li>
+          <title>Academic Integrity</title>
+          <p>There is nothing more important in this class than <em>academic integrity</em>.  Sure, you want to master the topics in the course (and perhaps earn a good grade).  Sure, you want to enjoy doing it.  And, it is also important to know that your instructor intends to play his part in helping you be successful.  Succeeding, as you know, will require hard work and significant effort.  Cutting corners will not serve you well.  
+          </p>
+
+          <p>University policy is clear:  
+            <blockquote><p><em>Work submitted by an individual as her/his/their own course work in connection with an application for a position, promotion, tenure, salary increase, or other academic activity must be academically honest and a product of his or her own efforts. (A.II, 2.4, SUB.d.2, Professional and Ethical Standards for Employees and Students).</em></p>
+            </blockquote>
+          </p>
+
+          <p>Cheating cannot be tolerated. All work must be your own.  Suspected incidents of academic dishonesty will be aggressively managed via the <url href="https://policies.stcloudstate.edu/SCSU/Viewer.aspx?id=6" visual="policies.stcloudstate.ed/SCSU/"> procedure found in the SCSU student handbook</url>.  
+          </p>
+        </li>
+
+        <li>
+          <p>
+            In this course, students are likely to use AI tools to enhance their learning experience. However, it is essential to use these tools ethically and responsibly. AI can be a valuable resource for understanding complex concepts and solving problems, but it should not replace your own critical thinking and problem-solving efforts. All submitted work must be your own, and any assistance from AI tools must be properly acknowledged on written work.  The use of AI is forbidden on assessments of your knowledge (e.g. exams, MyOpenMath). Using AI to complete work without acknowledgment will be considered a violation of academic integrity policies.  In mathematics, AI often gives incorrect responses (i.e. hallucinations) and large language models such as ChatGPT are widely deemed “unreliable” in doing mathematics.  Relaying AI responses that are incorrect will earn no credit.  However, not acknowledging the use of AI in a response is far worse – it is academic misconduct.   
+          </p>
+        </li>
+
+        <li>
+          <title>Course Materials</title>
+
+          <p>
+            Though most of course materials can be found at <url href="https://drbuske.github.io/Math312/frontmatter.html">https://drbuske.github.io/Math312</url>, D2L Brightspace will be the learning management tool used to organize the course.  Grades, a calendar, assignments, and exams as well as announcements we be posted on D2L.  Visit <url href="http://myhuskynet.stcloudstate.edu" visual="http://myhuskynet.stcloudstate.edu"/> and login to your account using your Huskynet ID and password.  
+          </p>
+
+          <p>
+            Electronic homework will be done via the <url href="http://www.myopenmath.com" visual="MyOpenMath"/> platform located at <url href="http://www.myopenmath.com" visual="http://www.myopenmath.com"/>.  
+          </p>
+        </li>
       </dl>
     </p>
 
-    <!-- Use paragraphs to break apart subsections -->
+  <!-- Use paragraphs to break apart subsections -->
     <paragraphs>
       <title>Course Overview</title>
 
       <p>
-        The goal of this course is to...
-        oh, who am I kidding.
-        This isn't a real course, so why would I spend time writting a course overview?  I suppose I should because it helps see an example.
-      </p>
-
-      <p>
-        A common thing you might see here is a list of topics we will cover.
-        So the topics we will cover include,
-        <ul>
-          <li>
-            <p>
-              How to write a syllabus in <pretext/>.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              How to write worksheets and handouts in <pretext/>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              How to spend too much time typing up examples.
-            </p>
-          </li>
-        </ul>
-        There is more we could say here, but for now I will stop.
+        People learn mathematics by <em>doing</em> mathematics.  Though the course is asynchronous and hence flexible, you would be well-advised to <em>do</em> mathematics each day.  The course calendar has dates for each topic.  Each section of the text contains videos, readings, and exercises to prepare you for each graded assessment.  Procrastination will not serve you well.  A number of tools are available to support you, but the most important tool will be your dedicated effort.  
       </p>
     </paragraphs>
-  </subsection>
+  </section>
+
+
+
+  <section>
+    <title>Topics and Learning Outcomes</title>
+    <p>
+      <dl>
+        <li>
+          <title>Topics</title>
+          <p>
+            Systems of equations: What can we expect; Finding solutions to linear systems; Computation with Sage; Pivots and their influence on solutions spaces.
+          </p>
+
+          <p>
+            Vectors, matrices, and linear combinations:  Vectors and linear combinations; Matrix multiplication and linear combinations; The span of a set of vectors; Linear independence; Matrix transformations; The geometry of matrix transformations.
+          </p>
+
+          <p> Invertibility, bases, and coordinate systems: Invertibility; Bases and coordinate systems; Determinants; Subspaces.
+          </p>
+
+          <p> Eigenvalues and eigenvectors: An introduction to eigenvalues and eigenvectors; Finding eigenvalues and eigenvectors; Diagonalization, similarity, and powers of a matrix.
+          </p>
+
+          <p> Vector spaces: Definition of vector spaces; Linear combinations, span, and independence; Vector subspaces; Basis and dimension.
+          </p>
+
+          <p> Orthogonality and Least Squares: The dot product; Orthogonal complements and the matrix transpose; Orthogonal bases and projections; Finding orthogonal bases; Orthogonal least squares.
+          </p>
+        </li>
+
+        <li>
+          <title>Learning Outcomes</title>
+          <p>
+            <ul>
+  <li>Perform elementary row operations on matrices; determine and analyze solutions of a system of linear equations.</li>
+  <li>Perform matrix arithmetic, calculate determinants, and determine inverses to given matrices.</li>
+  <li>Identify Euclidean spaces and subspaces and other vector spaces.</li>
+  <li>Identify spans and spanning sets.</li>
+  <li>Distinguish between linearly dependent and linearly independent sets of vectors.</li>
+  <li>Identify bases and dimensions of vector spaces.</li>
+  <li>Calculate characteristic polynomials, eigenvalues and eigenvectors, and diagonalize matrices.</li>
+  <li>Identify and calculate with orthogonal vectors, orthogonal bases, and orthonormal bases.</li>
+  <li>Orthogonally diagonalize symmetric matrices.</li>
+</ul>
+          </p>
+        </li>
+      </dl>
+    </p>
+  </section>
+  
+  <section xml:id="subsec-calendar">
+    <title>Calendar</title>
+    <p>
+      Below is a calendar with dates that you should study each topic and dates to take the written exams.  Depending on your schedule, you may wish to do some of the work on weekends.  Just be sure to not fall behind and be prepared for assessments on the prescribed dates.  
+    </p>
+
+<table xml:id="schedule-table">
+  <title>Course Schedule</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+      <cell><alert>Week Starting</alert></cell>
+      <cell><alert>Monday</alert></cell>
+      <cell><alert>Tuesday</alert></cell>
+      <cell><alert>Wednesday</alert></cell>
+      <cell><alert>Thursday</alert></cell>
+      <cell><alert>Friday</alert></cell>
+    </row>
+
+    <row>
+      <cell><alert>5/11</alert></cell>
+      <cell>1.1 What can we expect</cell>
+      <cell>1.2 Finding solutions to linear systems</cell>
+      <cell>1.3 Computation with Sage</cell>
+      <cell>1.4 Pivonts and their influence on solution spaces</cell>
+      <cell><alert>Review &amp; Exam 1</alert></cell>
+    </row>
+
+    <row>
+      <cell><alert>5/18</alert></cell>
+      <cell>2.1 Vectors and linear combinations</cell>
+      <cell>2.2 Matrix multiplication and linear combinations</cell>
+      <cell>2.3 The span of a set of vectors</cell>
+      <cell>2.4 Linear independence</cell>
+      <cell>2.5 Matrix transformations</cell>
+    </row>
+
+    <row>
+      <cell><alert>5/25</alert></cell>
+      <cell><em>No Class</em></cell>
+      <cell>2.6 The geometry of matrix transformations</cell>
+      <cell><alert>Review &amp; Exam 2</alert></cell>
+      <cell>3.1 Invertibility</cell>
+      <cell>3.2 Bases and coordinate systems</cell>
+    </row>
+
+    <row>
+      <cell><alert>6/1</alert></cell>
+      <cell>3.3 Determinants</cell>
+      <cell>3.4 Subspaces</cell>
+      <cell><alert>Review &amp; Exam 3</alert></cell>
+      <cell>4.1 An introduction to eigenvalues and eigenvectors</cell>
+      <cell>4.2 Finding eigenvalues and eigenvectors</cell>
+    </row>
+
+    <row>
+      <cell><alert>6/8</alert></cell>
+      <cell>4.3 Diagonalization, similarity, and powers of a matrix</cell>
+      <cell><alert>Review &amp; Exam 4</alert></cell>
+      <cell>5.1 Definition of vector spaces</cell>
+      <cell>5.2 Linear combinations, span, and independence</cell>
+      <cell>5.3 Vector subspaces</cell>
+    </row>
+
+    <row>
+      <cell><alert>6/15</alert></cell>
+      <cell>5.4 Basis and dimension</cell>
+      <cell><alert>Review &amp; Exam 5</alert></cell>
+      <cell>6.1 The dot product</cell>
+      <cell>6.2 Orthogonal complements and the matrix transpose</cell>
+      <cell><em>No class</em></cell>
+    </row>
+
+    <row>
+      <cell><alert>6/22</alert></cell>
+      <cell>6.3 Orthogonal bases and projections</cell>
+      <cell>6.4 Finding orthogonal bases</cell>
+      <cell>6.5 Orthogonal least squares</cell>
+      <cell><alert>Review &amp; Exam 6</alert></cell>
+      <cell><alert>Review &amp; Final Exam</alert></cell>
+    </row>
+
+  </tabular>
+</table>
+
+    <p>
+      Exams will cover the following material from the course.
+    </p>
+
+    <table xml:id="ExamDates" >
+<title>Exam dates and topics</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Exam</alert> </cell>
+<cell> <alert>Date</alert> </cell>
+<cell> <alert>Topics</alert> </cell>
+</row>
+
+<row>
+<cell> Exam 1 </cell> 
+<cell> May 15 </cell> 
+<cell> Sections 1.1-1.4 </cell>     
+</row>
+
+<row>
+<cell> Exam 2 </cell> 
+<cell> May 27 </cell>  
+<cell> Sections 2.1-2.6 </cell>  
+</row>
+
+<row>
+<cell> Exam 3 </cell> 
+<cell> June 3 </cell> 
+<cell> Sections 3.1-3.4 </cell>  
+</row>
+
+<row>
+<cell> Exam 4 </cell> 
+<cell> June 9 </cell> 
+<cell> Sections 4.1-4.3 </cell>   
+</row>
+
+<row>
+<cell> Exam 5 </cell> 
+<cell> June 16 </cell> 
+<cell> Sections 5.1-5.4 </cell> 
+</row>
+
+<row>
+<cell> Exam 6 </cell> 
+<cell> June 25 </cell> 
+<cell> Sections 6.1-6.5 </cell> 
+</row>
+
+<row>
+<cell> Final Exam </cell> 
+<cell> June 26 </cell> 
+<cell> All sections </cell> 
+</row>
+
+</tabular>
+</table>
+
+  </section> 
 
   <!-- Other subsections for larger dividers -->
-  <subsection xml:id="sec-assessments">
+  <section xml:id="sec-assessments">
     <title>Assessments and Grades</title>
 
     <p>
-      Your grade in this course will be based on a combination of your effort to master the material and the number of learning targets you master during the course.
+<dl>
+  <li>
+    <title>
+      MOMwork
+    </title>
+  
+  <p> Associated with the course is an open source (FREE) electronic homework system (MyOpenMath).  We will use this for MOMwork.  To access this, use the link <url href="https://www.myopenmath.com/" visual="https://www.myopenmath.com/"/>.
+  </p> 
+
+      <p>Course ID: <alert>320379</alert></p>
+      <p>Enrollment Key: <alert>Buske312Summer26</alert></p>
+      </li>
+
+      <li>
+        <title>Concept Maps</title>
+        <p>
+          There will be four short “concept map” assignments—one each on (1) first‑order differential equations, (2) higher‑order linear ODEs, (3) Laplace transforms, and (4) systems of differential equations. A <term>concept map</term> is a hand‑drawn visual diagram that shows how key ideas in a topic connect, such as methods, definitions, relationships, and big‑picture structures. Each map should include the major concepts from the unit and arrows or labeled links showing how those ideas relate to one another. The goal is not artistic quality but clarity of thinking and organization. These assignments are graded on a simple credit/no‑credit basis for completeness, effort, and meaningful connections—not correctness of the mathematical details.  Because the maps must be hand‑drawn and reflect your own understanding, they are naturally individualized and are excellent preparation for the written exams.  The due dates for these concept maps will be aligned with exam dates so that you may hand them in at that time.  
+        </p>
+
+        <table xml:id="ConceptMaps" >
+<title>Concept map due dates</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Concept Map</alert> </cell>
+<cell> <alert>Due Date</alert> </cell>
+</row>
+
+<row>
+<cell> first‑order differential equations </cell> 
+<cell> June 2 (at Exam 1) </cell>     
+</row>
+
+<row>
+<cell> higher‑order linear ODEs </cell> 
+<cell> June 15 (at Exam 2) </cell>    
+</row>
+
+<row>
+<cell> Laplace transforms </cell> 
+<cell> June 30 (at Exam 3) </cell>  
+</row>
+
+<row>
+<cell> systems of differential equations </cell> 
+<cell> July 14 (at Exam 4) </cell>  
+</row>
+
+</tabular>
+</table>
+      </li>
+
+      <li>
+        <title>Written Exams</title>
+        <p>
+          There will be seven (7) written exams.  One of the written exams will be a comprehensive final.  All exams are to be independent assessments of your knowledge.   
+        </p>
+      </li>
+
+      <li>
+        <title>Grading</title>
+        <p>
+          I will use my best professional judgment in determining grades. While many courses utilize 90%, 80%, 70%, and 60% as cutoffs for A, B, C, and D grades, these will serve only as guidelines.  Averages above these marks will guarantee these grades but lower marks may earn higher final grades.  
+        </p>
+
+        <table xml:id="GradeWeights" >
+<title>Grade weighting</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Item</alert> </cell>
+<cell> <alert>Weighting</alert> </cell>
+</row>
+
+<row>
+<cell> MOMwork (MyOpenMath) </cell> 
+<cell> 20% </cell>     
+</row>
+
+<row>
+<cell> Concept Maps </cell> 
+<cell> 5% </cell>    
+</row>
+
+<row>
+<cell> Exams </cell> 
+<cell> 75% </cell>  
+</row>
+
+</tabular>
+</table>
+      </li>
+</dl>
     </p>
 
-    <p>
-      Unlike a traditional course in which you earn points for completing various tasks to various levels of success, grading in this course is done using <term>standards based grading</term>.
-      One advantage of this method is that you will have multiple opportunities to demonstrate your mastery of particular standards, and what matters is how many of these standards you demonstrate mastery on by the end of the course.
-    </p>
+  </section>
 
-    <p>
-      We call each standard a <term>learning target</term> and list these next.
-    </p>
-
-
-    <paragraphs>
-      <title>Learning targets</title>
-
-      <p>
-        By the end of this course, you should be able to:
-        <ol>
-          <li>
-            <p>
-              Create a new <pretext/> document, build it into both HTML and PDF output, and deploy it to GitHub Pages.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Organize a <pretext/> document using sections, subsections, and paragraphs.
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Make up random learning targets just to demonstrate what they look like.
-            </p>
-          </li>
-        </ol>
-      </p>
-    </paragraphs>
-
-
-    <paragraphs>
-      <title>Assessment of Learning Targets</title>
-
-      <p>
-        Three times during the semester we will have an in-class exam.
-        Each exam will be your first opportunity to demonstrate mastery of learning targets related to material we have covered prior to the exam.
-      </p>
-
-      <p>
-        If, after completing the exam, there are learning targets from that exam you have not demonstrated mastery on, you may attempt to demonstrate mastery on that target again by taking a quiz during student hours.
-      </p>
-    </paragraphs>
-
-
-    <paragraphs>
-      <title>Final Exam</title>
-
-      <p>
-        The final exam will take place on <alert>No day in particular, 2026</alert>.
-        Probably more to say here...
-      </p>
-    </paragraphs>
-
-
-    <paragraphs>
-      <title>Assessment of Mathematical Engagement</title>
-
-      <p>
-        Your level of effort and engagement will be assessed through your participation in class and completion of a variety of homework assignments.
-        <dl>
-        <li>
-          <title>Participation</title>
-
-          <p>
-            Every three weeks you will be asked to complete a short self assessment on Canvas measuring your level of participation both in and out of class.
-            This, combined with your attendance and my perception of your level of participation, will be used to determine your participation grade (out of 100).
-          </p>
-        </li>
-
-        <li>
-          <title>Daily Prep Assignments</title>
-
-          <p>
-            Prior to most classes you will have a short reading assignment or preview activity to complete.
-            These will be graded based on completion.
-          </p>
-        </li>
-
-        <li>
-          <title>Practice Problems</title>
-
-          <p>
-            To gain procedural fluency in the content of the course, each topic will be accompanied with a small set of practice problems.
-            These will be machine graded, but you can attempt them as many times as you like prior to the due date.
-          </p>
-        </li>
-
-        <li>
-          <title>Written Homework</title>
-
-          <p>
-            Some description of written homework should go here.
-          </p>
-        </li>
-        </dl>
-      </p>
-    </paragraphs>
-
-
-    <paragraphs>
-      <title>Final Grades</title>
-
-      <p>
-        Grades will be computed based on the number of learning targets you have demonstrated mastery on and your level of mathematical engagement, according to the following table.
-      </p>
-
-
-      <tabular>
-        <col right="minor" halign="right"/><col right="minor" halign="center"/><col right="minor" halign="center"/><col right="minor" halign="center"/><col halign="center"/>
-        <row header="yes" bottom="minor">
-          <cell></cell>
-          <cell>A</cell>
-          <cell>B</cell>
-          <cell>C</cell>
-          <cell>D</cell>
-        </row>
-
-        <row bottom="minor">
-          <cell halign="right">M (or E) level Learning Targets</cell>
-          <cell>15</cell>
-          <cell>12</cell>
-          <cell>9</cell>
-          <cell>6</cell>
-        </row>
-
-        <row bottom="minor">
-          <cell halign="right">E level Learning Targets</cell>
-          <cell>8</cell>
-          <cell>5</cell>
-          <cell>2</cell>
-          <cell>0</cell>
-        </row>
-
-        <row>
-          <cell halign="right">Engagement Score</cell>
-          <cell>90%</cell>
-          <cell>80%</cell>
-          <cell>70%</cell>
-          <cell>60%</cell>
-        </row>
-      </tabular>
-
-      <p>
-        To receive a particular grade, you must meet or exceed the requirements for that grade in <em>all three</em> categories.
-        If you do not meet the requirements for a <q>D</q>, your final grade will be an <q>F.</q>
-      </p>
-    </paragraphs>
-  </subsection>
-
-  <!-- include policies -->
-  <xi:include href="./policies.ptx"/>
-
-</section>
+</chapter>
