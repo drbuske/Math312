@@ -1,0 +1,162 @@
+<worksheet label="ws-act-2-2-4">
+   <title>Activity 2.2.4</title>
+    <activity>
+      <title> The equation <m>A\xvec = \bvec</m> </title>
+      <statement><p>
+      <ol marker="a.">
+	<li> <p> Consider the linear system
+	<me>
+	  \begin{alignedat}{4}
+	  2x \amp {}+{} \amp y \amp {}-{} \amp 3z \amp {}={} \amp 4 \\
+	  -x \amp {}+{} \amp 2y \amp {}+{} \amp z \amp {}={} \amp 3 \\
+	  3x \amp {}-{} \amp y \amp \amp \amp {}={} \amp -4. \\
+	  \end{alignedat}
+	</me>
+	Identify the matrix <m>A</m> and vector <m>\bvec</m> to
+	express this system in the form <m>A\xvec = \bvec</m>.
+	</p></li>
+
+	<li> <p> If <m>A</m> and <m>\bvec</m> are as below, write the
+	linear system corresponding to the equation
+	<m>A\xvec=\bvec</m> and describe its solution space, using a
+	parametric description if appropriate:
+	<me>
+	  A = \left[\begin{array}{rrr}
+	  3 \amp -1 \amp 0 \\
+	  -2 \amp 0 \amp 6
+	  \end{array}
+	  \right],~~~
+	  \bvec = \left[\begin{array}{r}
+	  -6 \\ 2
+	  \end{array}
+	  \right].
+	</me>
+	<sage>
+	  <input>
+	  </input>
+	</sage>
+	</p></li>
+
+	<li><p>
+	  Describe the solution space of the equation
+	  <me>
+	    \left[
+	    \begin{array}{rrrr}
+	    1 \amp 2 \amp 0 \amp -1 \\
+	    2 \amp 4 \amp -3 \amp -2 \\
+	    -1 \amp -2 \amp 6 \amp 1 \\
+	    \end{array}
+	    \right]
+	    \xvec
+	    = 
+	    \left[\begin{array}{r}
+	    -1 \\ 1 \\ 5
+	    \end{array}
+	    \right]
+	  </me>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	</p></li>
+
+	<li><p> Suppose <m>A</m> is an <m>m\times n</m> matrix.  What
+	can you guarantee about the solution space of the equation <m>A\xvec
+	= \zerovec</m>?  </p></li>
+      </ol>
+      </p></statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    <m>A = \left[\begin{array}{rrr}
+	    2 \amp 1 \amp -3 \\
+	    -1 \amp 2 \amp 1 \\
+	    3 \amp -1 \amp 0 \\
+	    \end{array}\right]
+	    </m>
+	    and <m>\bvec=\threevec{4}{3}{-4}</m>.
+	  </p></li>
+
+	  <li><p>
+	    Form the augmented matrix
+	    <me>
+	      \left[\begin{array}{rrrr}
+	      3 \amp -1 \amp 0 \amp -6 \\
+	      -2 \amp 0 \amp 6 \amp 2
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrrr}
+	      1 \amp 0 \amp -3 \amp -1 \\
+	      0 \amp 1 \amp -9 \amp 3
+	      \end{array}\right]
+	    </me>
+	    so that
+	    <me>
+	      \xvec = \threevec{x_1}{x_2}{x_3} =
+	      \threevec{-1+3x_3}{3+9x_3}{x_3} =
+	      \threevec{-1}{3}{0}+x_3\threevec{3}{9}{1}\text{.}
+	    </me>
+	  </p></li>
+
+	  <li><p>
+	    We have the augmented matrix
+	    <me>
+	      \left[\begin{array}{rrrrr}
+	      1 \amp 2 \amp 0 \amp -1 \amp -1 \\
+	      2 \amp 4 \amp -3 \amp -2 \amp 1 \\
+	      -1 \amp -2 \amp 6 \amp 1 \amp 5
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rrrrr}
+	      1 \amp 2 \amp 0 \amp -1 \amp 0 \\
+	      0 \amp 0 \amp 1 \amp 0 \amp 0 \\
+	      0 \amp 0 \amp 0 \amp 0 \amp 1
+	      \end{array}\right]\text{.}
+	    </me>
+	    Since this system is inconsistent, there are no solutions
+	    to the matrix equation.
+	  </p></li>
+
+	  <li><p>
+	    We know that there is at least one solution, namely,
+	    <m>\xvec=\zerovec</m>.
+	  </p></li>
+
+	</ol></p>
+      </solution>
+
+      <answer>
+	<p><ol marker="a.">
+	  <li><p>
+	    <m>A = \left[\begin{array}{rrr}
+	    2 \amp 1 \amp -3 \\
+	    -1 \amp 2 \amp 1 \\
+	    3 \amp -1 \amp 0 \\
+	    \end{array}\right]
+	    </m>
+	    and <m>\bvec=\threevec{4}{3}{-4}</m>.
+	  </p></li>
+
+	  <li><p>
+	    <m>
+	      \xvec = \threevec{x_1}{x_2}{x_3} =
+	      \threevec{-1}{3}{0}+x_3\threevec{3}{9}{1}\text{.}
+	    </m>
+	  </p></li>
+
+	  <li><p>
+	    There are no solutions.
+	  </p></li>
+
+	  <li><p>
+	    There is at least one solution, namely,
+	    <m>\xvec=\zerovec</m>.
+	  </p></li>
+
+	</ol></p>
+      </answer>
+
+    </activity>
+   
+</worksheet>
