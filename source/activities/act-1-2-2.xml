@@ -1,0 +1,176 @@
+<worksheet label="ws-act-1-2-2">
+   <title>Activity 1.2.2</title>
+    <activity>
+      <title>
+	Gaussian Elimination
+      </title>
+      <statement>
+	<p>
+	  For each of the following linear systems, 
+	  use Gaussian elimination to describe the solutions to the
+	  following systems of linear equations.  In particular,
+	  determine whether each linear system has exactly one
+	  solution, infinitely many solutions, or no solutions.
+      <ol marker="a.">
+	<li align="top"> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 1 \\
+	    2x \amp  {}-{}  \amp y \amp  {}-{}  \amp 2z \amp  {}={}  \amp 2 \\
+	    -x \amp  {}+{}  \amp y \amp  {}+{}  \amp z \amp  {}={}
+            \amp 0 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+	
+	<li> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp  {}={}  \amp -1 \\
+	    2x \amp  {}+{}  \amp 4y \amp  {}-{}  \amp z \amp  {}={}  \amp 5 \\
+	    x \amp  {}+{}  \amp 2y \amp  \amp  \amp  {}={}  \amp 3 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+	
+	<li> <p>
+	  <m>
+	    \begin{alignedat}{4}
+	    -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp  {}={}  \amp -1 \\
+	    2x \amp  {}+{}  \amp 4y \amp  {}-{}  \amp z \amp  {}={}  \amp 5 \\
+	    x \amp  {}+{}  \amp 2y \amp  \amp  \amp  {}={}  \amp 2 \\ \\
+	    \end{alignedat}
+	  </m>
+	</p></li>
+      </ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li>
+	    <p>
+	      Our aim is to apply a sequence of scaling, interchange,
+	      and replacement operations to first put the system into
+	      a triangular form.  We begin by multiplying the first
+	      equation by <m>-2</m> and adding it to the second
+	      equation.  Next, we add the first equation to the third.
+	      This leads us to:
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp
+		{}={}  \amp 1 \\
+		\amp  \amp -3y \amp  {}-{}  \amp 6z \amp  {}={}  \amp 0 \\
+		\amp  \amp 2y \amp  {}+{}  \amp 3z \amp  {}={}  \amp 1 \\
+		\end{alignedat}
+	      </me>
+	      We will now apply a scaling operation to make the
+	      coefficient of <m>y</m> equal <m>1</m> in the second
+	      equation.
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 1 \\
+		\amp  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 0 \\
+		\amp  \amp 2y \amp  {}+{}  \amp 3z \amp  {}={}  \amp 1 \\
+		\end{alignedat}
+	      </me>
+	      Another replacement operation brings the system into a
+	      triangular form.
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  {}+{}  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 1 \\
+		\amp  \amp y \amp  {}+{}  \amp 2z \amp  {}={}  \amp 0 \\
+		\amp  \amp \amp  \amp -z \amp  {}={}  \amp 1 \\
+		\end{alignedat}
+	      </me>
+	    </p>
+
+	    <p>
+	      From here, we begin the process of back substitution
+	      seeking a decoupled system.  
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  {}+{}  \amp y \amp  \amp \amp  {}={}  \amp 3 \\
+		\amp  \amp y \amp \amp \amp  {}={}  \amp 2 \\
+		\amp  \amp \amp  \amp z \amp  {}={}  \amp -1 \\
+		\end{alignedat}
+	      </me>
+	      Finally, we have the decoupled system
+	      <me>
+		\begin{alignedat}{4}
+		x \amp  \amp \amp  \amp \amp  {}={}  \amp 1 \\
+		\amp  \amp y \amp \amp \amp  {}={}  \amp 2 \\
+		\amp  \amp \amp  \amp z \amp  {}={}  \amp -1, \\
+		\end{alignedat}
+	      </me>
+	      which tells us that the solution space consists of the
+	      single solution <m>(1,2,-1)</m>.
+	  </p></li>
+
+	  <li><p>
+	    Once again, we begin with a sequence of replacement and
+	    scaling operations that lead to the triangular system
+	    <me>
+	      \begin{alignedat}{4}
+	      -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp
+	      {}={}  \amp -1 \\
+	      \amp  \amp \amp  \amp z \amp  {}={}  \amp 1 \\
+	      \amp  \amp \amp  \amp 0 \amp  {}={}  \amp 0 \\
+	      \end{alignedat}
+	    </me>
+	    Back substitution gives us the system
+	    <me>
+	      \begin{alignedat}{4}
+	      x \amp  {}+{}  \amp 2y \amp  \amp \amp
+	      {}={}  \amp 3 \\
+	      \amp  \amp \amp  \amp z \amp  {}={}  \amp 1 \\
+	      \amp  \amp \amp  \amp 0 \amp  {}={}  \amp 0 \\
+	      \end{alignedat}
+	    </me>
+	    The third equation does not impose a restriction on the
+	    solutions since it is satisfied for any <m>(x,y,z)</m>.
+	    The second equation tells us that <m>z</m> must equal
+	    <m>1</m>;  however, there are infinitely many solutions to
+	    the first equation that have <m>z=1</m>.  Therefore, this
+	    system has infinitely many solutions.
+	  </p></li>
+
+	  <li><p>
+	    After applying two replacement and one scaling operation,
+	    we find
+	    <me>
+	      \begin{alignedat}{4}
+	      -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp
+	      {}={}  \amp -1 \\
+	      \amp  \amp \amp  \amp z \amp  {}={}  \amp 1 \\
+	      \amp  \amp \amp  \amp 2z \amp  {}={}  \amp 1 \\
+	      \end{alignedat}
+	    </me>
+	    Another replacement operation leads to the system
+	    <me>
+	      \begin{alignedat}{4}
+	      -x \amp  {}-{}  \amp 2y \amp  {}+{}  \amp 2z \amp
+	      {}={}  \amp -1 \\
+	      \amp  \amp \amp  \amp z \amp  {}={}  \amp 1 \\
+	      \amp  \amp \amp  \amp 0 \amp  {}={}  \amp 1 \\
+	      \end{alignedat}
+	    </me>
+	    Since the third equation has no solutions, the original
+	    system can have no solutions as well.
+	  </p></li>
+	</ol></p>
+      </solution>
+
+      <answer>
+	<p><ol marker="a.">
+	  <li><p> There is a single solution
+	  <m>(1,2,-1)</m>. </p></li>
+
+	  <li><p> There are infinitely many solutions. </p></li>
+
+	  <li><p> There are no solutions. </p></li>
+	</ol></p>
+      </answer>
+
+    </activity>
+   
+</worksheet>

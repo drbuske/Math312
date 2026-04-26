@@ -1,0 +1,154 @@
+<worksheet label="ws-act-1-3-1">
+   <title>Activity 1.3.1</title>
+    <activity>
+      <title> Basic Sage commands </title>
+
+      <statement>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p> Sage uses the standard operators +, -, *, /, and ^
+	      for the usual arithmetic operations.  By entering text in
+	      the cell below, ask Sage to evaluate
+	      <me>
+		3 + 4(2^4 - 1)
+	      </me>
+	      <sage>
+		<input>
+		</input>
+	      </sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Notice that we can create new lines by pressing
+		<em>Enter</em> and entering additional commands on
+		them. 	What happens when you evaluate this Sage cell?
+		<sage>
+		  <input>
+		    5 * 3
+		    10 - 4
+		  </input>
+		</sage>
+	      </p>
+	      
+	      <p>
+		Notice that we only see the result from the last command.
+		With the <c>print</c> command, we may see earlier results,
+		if we wish. 
+		<sage>
+		  <input>
+		    print(5 * 3)
+		    print(10 - 4)
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p> We may give a name to the result of one command and
+	      refer to it in a later command.
+	      <sage>
+		<input>
+		  income = 1500 * 12
+		  taxes = income * 0.15
+		  print(taxes)
+		</input>
+	      </sage>
+	      </p>
+	      
+	      <p> Suppose you have three tests in your linear algebra
+	      class and your scores are 90, 100, and 98.  In the Sage cell
+	      below, add your scores together and call the result
+	      <c>total</c>.  On the next line, find the average of your
+	      test scores and print it.
+	      <sage>
+		<input>
+		</input>
+	      </sage>
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p> If you are not a programmer, you may ignore this part.
+	      If you are an experienced programmer, however, you should
+	      know that Sage is written in the Python programming
+	      language and that you may enter Python code into a Sage
+	      cell.
+	      <sage>
+		<input>
+for i in range(10):
+    print(i)
+		</input>
+	      </sage>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+      <solution>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <cd>
+3 + 4*(2^4 - 1)
+	      </cd>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Only the results of the last line are displayed.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      <cd>
+total = 90 + 100 + 98
+average = total / 3
+print(average)
+	      </cd>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      This cells print the integers from 0 to 9.
+	    </p>
+	  </li>
+	</ol>
+      </solution>
+      <answer>
+	<ol marker="a.">
+	  <li>
+	    <p>
+	      <cd>
+3 + 4*(2^4 - 1)
+	      </cd>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Only the results of the last line are displayed.
+	    </p>
+	  </li>
+
+	  <li>
+	    <p>
+	      <cd>
+total = 90 + 100 + 98
+average = total / 3
+print(average)
+	      </cd>
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      This cells print the integers from 0 to 9.
+	    </p>
+	  </li>
+	</ol>
+      </answer>
+
+    </activity>
+   
+</worksheet>

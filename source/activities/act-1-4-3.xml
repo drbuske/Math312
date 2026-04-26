@@ -1,0 +1,184 @@
+<worksheet label="ws-act-1-4-3">
+   <title>Activity 1.4.3</title>
+    <activity>
+      <statement>
+	<p><ol marker="a.">
+	  <li><p>
+	    Here are the three augmented matrices in reduced row echelon
+	    form that we considered in the previous section.
+	    <sidebyside>
+	      <p>
+		<me>
+		  \left[
+		  \begin{array}{rrr|r}
+		  1 \amp 0 \amp 0 \amp 3 \\
+		  0 \amp 1 \amp 0 \amp 0 \\
+		  0 \amp 0 \amp 1 \amp -2 \\
+		  0 \amp 0 \amp 0 \amp 0 \\
+		  \end{array}
+		  \right]
+		</me>
+	      </p>
+	      
+	      <p>
+		<me>
+		  \left[
+		  \begin{array}{rrr|r}
+		  1 \amp 0 \amp 2 \amp 3 \\
+		  0 \amp 1 \amp -1 \amp 0 \\
+		  0 \amp 0 \amp 0 \amp 0 \\
+		  0 \amp 0 \amp 0 \amp 0 \\
+		  \end{array}
+		  \right]
+		</me>
+	      </p>
+
+	      <p>
+		<me>
+		  \left[
+		  \begin{array}{rrr|r}
+		  1 \amp 0 \amp 2 \amp 0 \\
+		  0 \amp 1 \amp -1 \amp 0 \\
+		  0 \amp 0 \amp 0 \amp 1 \\
+		  0 \amp 0 \amp 0 \amp 0 \\
+		  \end{array}
+		  \right]
+		</me>
+	      </p>
+	    </sidebyside>
+	  </p>
+	  <p>
+	    For each matrix, identify the pivot positions and state
+	    whether the corresponding linear system is
+	    consistent.  If the system is consistent, explain whether
+	    the solution is unique or whether there are infinitely many
+	    solutions.  
+	  </p>
+	  </li>
+
+	  <li><p> If possible, give an example of a <m>3\times5</m>
+	  augmented matrix that corresponds to a linear system
+	  having a unique solution.  If it is not possible, explain why.
+	  </p></li>
+
+	  <li><p> If possible, give an example of a <m>5\times3</m>
+	  augmented matrix that corresponds to a linear system
+	  having a unique solution.  If it is not possible, explain why.
+	  </p></li>
+
+	  <li> <p>
+	    What condition on the pivot positions guarantees that a
+	    linear system has a unique solution?
+	  </p></li>
+
+	  <li> <p>
+	    If a linear system has a unique solution, what
+	    can we say about the relationship between the number of
+	    equations and the number of variables?
+	  </p></li>
+	</ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li><p> The pivot positions are indicated below.
+	      <sidebyside>
+		<p>
+		  <me>
+		    \left[
+		    \begin{array}{rrr|r}
+		    {\mathbf 1} \amp 0 \amp 0 \amp 3 \\
+		    0 \amp {\mathbf 1} \amp 0 \amp 0 \\
+		    0 \amp 0 \amp {\mathbf 1} \amp -2 \\
+		    0 \amp 0 \amp 0 \amp 0 \\
+		    \end{array}
+		    \right]
+		  </me>
+		</p>
+		
+		<p>
+		  <me>
+		    \left[
+		    \begin{array}{rrr|r}
+		    {\mathbf 1} \amp 0 \amp 2 \amp 3 \\
+		    0 \amp {\mathbf 1} \amp -1 \amp 0 \\
+		    0 \amp 0 \amp 0 \amp 0 \\
+		    0 \amp 0 \amp 0 \amp 0 \\
+		    \end{array}
+		    \right]
+		  </me>
+		</p>
+		
+		<p>
+		  <me>
+		    \left[
+		    \begin{array}{rrr|r}
+		    {\mathbf 1} \amp 0 \amp 2 \amp 0 \\
+		    0 \amp {\mathbf 1} \amp -1 \amp 0 \\
+		    0 \amp 0 \amp 0 \amp {\mathbf 1} \\
+		    0 \amp 0 \amp 0 \amp 0 \\
+		    \end{array}
+		    \right]
+		  </me>
+		</p>
+	      </sidebyside>
+	      The third linear system is inconsistent.  The first
+	      system is consistent and has exactly one solution
+	      because <m>x_1=3</m>, <m>x_2=0</m>, and <m>x_3=-2</m>.  The
+	      second system is consistent and has infinitely many
+	      solutions since we can write the equations as
+	      <me>
+		\begin{alignedat}{2}
+		x_1 \amp {}={} \amp 3 -2x_3 \\
+		x_2 \amp {}={} \amp x_3\text{.} \\
+		\end{alignedat}
+	      </me>
+	    </p></li>
+
+	    <li><p>
+	      This is not possible as we see by considering the shape
+	      of a typical matrix:
+	      <me>
+		\left[\begin{array}{rrrr|r}
+		1 \amp 0 \amp 0 \amp -3 \amp 1  \\
+		0 \amp 1 \amp 0 \amp 1 \amp 2 \\
+		0 \amp 0 \amp 1 \amp 2 \amp 4 \\
+		\end{array}\right]
+	      </me>
+	      In this case, the variable <m>x_4</m> is free meaning
+	      there are infinitely many solutions.
+	    </p></li>
+
+	    <li><p>
+	      This is possible as the following matrix illustrates:
+	      <me>
+		\left[\begin{array}{rr|r}
+		1 \amp 0 \amp 0 \\
+		0 \amp 1 \amp -3 \\
+		0 \amp 0 \amp 0 \\
+		0 \amp 0 \amp 0 \\
+		0 \amp 0 \amp 0 \\
+		\end{array}\right]\text{.}
+	      </me>
+	    </p></li>
+
+	    <li><p>
+	      If every column of the coefficient matrix has a pivot
+	      position, we can guarantee that the solution is unique.
+	    </p></li>
+
+	    <li><p>
+	      If the coefficient matrix has a
+	      pivot position in every column, there must be at least
+	      as many rows as columns.  Therefore, the number of
+	      equations must be at least as many as
+	      the number of variables.
+	    </p></li>
+	  </ol>
+	</p>
+      </solution>
+    </activity>
+   
+</worksheet>
