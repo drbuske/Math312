@@ -1,0 +1,329 @@
+<worksheet label="ws-act-2-3-2">
+   <title>Activity 2.3.2</title>
+    <activity xml:id="activity-intro-span">
+      <statement>
+      <p>  Let's look at two examples to develop some intuition for
+      the concept of span.
+      <ol marker="a.">
+	<li><p> First, we will consider the set of vectors
+	<me>
+	  \vvec = \twovec{1}{2}, ~~~\wvec = \twovec{-2}{-4}
+	</me>.
+      </p>
+
+      <figure xml:id="js-span-1">
+	<caption>
+	  An interactive diagram for constructing linear combinations
+	  of the vectors <m>\vvec</m> and <m>\wvec</m>. 
+	</caption>
+
+	<interactive xml:id="interactive-span1"
+		     platform="javascript" width="100%"
+		     source="jslibrary/figures.js
+			     jslibrary/span1.js"
+		     aspect="28:23"
+		     preview="preview/span1-preview.png"
+		     >
+          <shortdescription>
+            An interactive for exploring linear combinations of two
+            vectors.
+          </shortdescription>
+          <description>
+            <p>There is a diagram with two vectors
+            <m>\vvec=twovec12</m> and <m>\wvec=\twovec{-2}{-4}</m>
+            shown.  These vectors lie on a line, which is also
+            shown.</p>
+            <p>At the top of the diagram are two sliders, which allow
+            the reader to vary two scalars <m>c</m> and <m>d</m>.
+            The linear combination <m>c\vvec+d\wvec</m> is also shown.
+            When either of the two sliders is changed, the new linear
+            combination is shown.</p>
+          </description>
+	  <sbsgroup>
+	    <sidebyside width="60%">
+	      <slate xml:id="span1-sliders"
+		     aspect="7:2"
+		     surface="canvas" />
+	    </sidebyside>
+	    <sidebyside width="60%">
+	      <slate xml:id="span1-canvas"
+		     aspect="1:1"
+		     surface="canvas" />
+	    </sidebyside>
+	  </sbsgroup>
+	  <instructions>
+	    <p>
+	      The diagram below can be used to construct linear
+	      combinations whose weights <m>c</m> and <m>d</m> may be
+	      varied using the sliders at the top.  The vectors
+	      <m>\vvec</m> and <m>\wvec</m> are outlined while
+	      the linear combination
+	      <me>
+		c\vvec + d\wvec
+	      </me>
+	      is shaded in red.
+	    </p>
+	  </instructions>
+          <static>
+            <sidebyside width="100%">
+              <p>
+                There is an interactive diagram,
+                available at <url
+                href="http://gvsu.edu/s/0Jg"
+                visual="gvsu.edu/s/0Jg"/>, that
+                accompanies this activity.  The diagram at the top of
+		that page accompanies part a of this activity.
+              </p>
+            </sidebyside>
+            <sidebyside width="45%">
+              <image source="preview/span1-preview.png"/>
+            </sidebyside>
+          </static>
+	</interactive>
+      </figure>
+
+      <p> <ol marker="1.">
+	<li><p> What vector is the linear combination of <m>\vvec</m>
+	and <m>\wvec</m> with weights:
+	<ul>
+	  <li> <p> <m> c = 2</m> and <m>d=0</m>? </p></li>
+	  <li> <p> <m> c = 1</m> and <m>d=1</m>? </p></li>
+	  <li> <p> <m> c = 0</m> and <m>d=-1</m>? </p></li>
+	</ul>
+	</p> </li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{2}{4}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{2}{4}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{3}{0}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{3}{0}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Describe the set of vectors in the span of <m>\vvec</m> and
+	  <m>\wvec</m>.
+	</p></li>
+
+	<li> <p> For what vectors <m>\bvec</m> does the equation
+	<me>
+	  \left[\begin{array}{rr} 1 \amp -2 \\ 2 \amp -4
+	  \end{array}\right] \xvec = \bvec
+	</me>
+	have a solution?
+	</p></li>
+      </ol> </p>
+      </li> 
+
+      <li> <p>
+	We will now look at an example where
+	<me>
+	  \vvec = \twovec{2}{1}, ~~~\wvec = \twovec{1}{2}
+	</me>.
+      </p>
+
+      <figure xml:id="js-span-2">
+	<caption>
+	  An interactive diagram for constructing linear combinations
+	  of the vectors <m>\vvec</m> and <m>\wvec</m>. 
+	</caption>
+
+	<interactive xml:id="interactive-span2"
+		     platform="javascript" width="100%"
+		     aspect="28:23"
+		     source="jslibrary/figures.js
+			     jslibrary/span2.js"
+		     preview="preview/span2-preview.png">
+          <shortdescription>
+            An interactive for exploring linear combinations of two
+            vectors.
+          </shortdescription>
+          <description>
+            <p>There is a diagram with two vectors
+            <m>\vvec=twovec21</m> and <m>\wvec=\twovec12</m>
+            shown.  There is also a grid consisting of two sets of
+            parallel lines.  One set of parallel lines is parallel to
+            <m>\vvec</m> and passes through integer multiples of
+            <m>\wvec</m>.  The other set of parallel lines is parallel
+            to <m>\wvec</m> and passes through integer multiples of
+            <m>\vvec</m>. </p>
+            <p>At the top of the diagram are two sliders, which allow
+            the reader to vary two scalars <m>c</m> and <m>d</m>.
+            The linear combination <m>c\vvec+d\wvec</m> is also shown.
+            When either of the two sliders is changed, the new linear
+            combination is shown.</p>
+          </description>
+	  <sbsgroup>
+	    <sidebyside width="60%">
+	      <slate xml:id="span2-sliders"
+		     aspect="7:2"
+		     surface="canvas" />
+	    </sidebyside>
+	    <sidebyside width="60%">
+	      <slate xml:id="span2-canvas"
+		     aspect="1:1"
+		     surface="canvas" />
+	    </sidebyside>
+	  </sbsgroup>
+	  <instructions>
+	    <p>
+	      In a similar way, the diagram below can be used to construct
+	      linear combinations 
+	      <me>
+		c\vvec + d\wvec.
+	      </me>
+	    </p>
+	  </instructions>
+          <static>
+            <sidebyside width="100%">
+              <p>
+		The diagram at the bottom of
+		the page at
+		<url
+                href="http://gvsu.edu/s/0Jg"
+                visual="gvsu.edu/s/0Jg"/>
+		accompanies part b of this activity.
+              </p>
+            </sidebyside>
+            <sidebyside width="45%">
+              <image source="preview/span2-preview.png"/>
+            </sidebyside>
+          </static>
+	</interactive>
+      </figure>
+
+      <p> <ol marker="1.">
+	<li><p> What vector is the linear combination of <m>\vvec</m>
+	and <m>\wvec</m> with weights:
+	<ul>
+	  <li> <p> <m> c = 2</m> and <m>d=0</m>? </p></li>
+	  <li> <p> <m> c = 1</m> and <m>d=1</m>? </p></li>
+	  <li> <p> <m> c = 0</m> and <m>d=-1</m>? </p></li>
+	</ul>
+	</p> </li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{-2}{2}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{-2}{2}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Can the vector <m> \twovec{3}{0}</m> be expressed as a
+	  linear combination of <m>\vvec</m> and <m>\wvec</m>?  Is the
+	  vector <m> \twovec{3}{0}</m> in the span of <m>\vvec</m> and
+	  <m>\wvec</m>?  
+	</p></li>
+
+	<li> <p>
+	  Describe the set of vectors in the span of <m>\vvec</m> and
+	  <m>\wvec</m>.
+	</p></li>
+
+	<li> <p> For what vectors <m>\bvec</m> does the equation
+	<me>
+	  \left[\begin{array}{rr} 2 \amp 1 \\ 1 \amp 2
+	  \end{array}\right] \xvec = \bvec
+	</me>
+	have a solution?
+	</p></li>
+      </ol> </p>
+      </li> 
+
+      </ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> For the first set of vectors, we find:
+	  <ol marker="1.">
+	    <li><p> We can form the linear combinations:
+	      <ul>
+		<li><p> When <m> c = 2</m> and <m>d=0</m>,
+		the linear combination is <m>\twovec{2}{4}</m>.
+		</p></li>
+		<li> <p> When <m> c = 1</m> and <m>d=1</m>, the linear
+		combination is <m>\twovec{-1}{-2}</m>.
+		</p></li>
+		<li> <p> When <m> c = 0</m> and <m>d=-1</m>, the
+		linear combination is <m>\twovec{2}{4}</m>.
+		</p></li>
+	      </ul>
+	    </p></li>
+
+	    <li><p> Yes, we saw that there are at least two ways.
+	    For instance, when the weights are <m>c=2</m> and
+	    <m>d=0</m>.  This means that <m>\twovec24</m> is in
+	    the span of <m>\vvec</m> and <m>\wvec</m>.
+	    </p></li>
+
+	    <li><p>
+	      No.  No matter how we change the weights, the linear
+	      combination lies on the line through <m>\vvec</m> and
+	      <m>\wvec</m>.  This means that <m>\twovec{3}{0}</m> is
+	      not in the span of <m>\vvec</m> and <m>\wvec</m>.
+	    </p></li>
+
+	    <li><p>
+	      The span of <m>\vvec</m> and <m>\wvec</m> is the set of
+	      all vectors on the line through <m>\vvec</m>.
+	    </p></li>
+
+	    <li><p>
+	      If the equation has a solution, <m>\bvec</m> must lie on
+	      the line defined by <m>\vvec</m>.
+	    </p></li>
+
+	  </ol></p> </li>
+
+	  <li><p> For the second set of vectors, we have:
+	    <ol marker="1.">
+	      <li><p> We can form the linear combinations:
+		<ul>
+		  <li> <p> When <m> c = 2</m> and <m>d=0</m>, the
+		  linear combination is <m>\twovec42</m>.
+		  </p></li>
+		  <li> <p> When <m> c = 1</m> and <m>d=1</m>, the
+		  linear combination is <m>\twovec{3}{3}</m>.
+		  </p></li>
+		  <li> <p> When <m> c = 0</m> and <m>d=-1</m>, the
+		  linear combination is <m>\twovec{-1}{-2}</m>.
+		  </p></li>
+		</ul>
+	      </p></li>
+
+	      <li><p>
+		Yes.  Using the diagram, we see that
+		<m>\twovec{-2}{2}=-2\vvec + 2\wvec</m>.  This means
+		that <m>\twovec{-2}{2}</m> is in the span of
+		<m>\vvec</m> and <m>\wvec</m>.
+	      </p></li>
+
+	      <li><p>
+		Yes.  Using the diagram, we see that
+		<m>\twovec{3}{0}=2\vvec-1\wvec</m>.  This means that
+		<m>\twovec{3}{0}</m> is in the span of <m>\vvec</m>
+		and <m>\wvec</m>.
+	      </p></li>
+
+	      <li><p>
+		Every two-dimensional vector is in the span of
+		<m>\vvec</m> and <m>\wvec</m>.
+	      </p></li>
+
+	      <li><p>
+		The equation has a solution for every <m>\bvec</m>.
+	      </p></li>
+	    </ol></p></li>
+	</ol></p>
+      </solution>
+    </activity>
+   
+</worksheet>

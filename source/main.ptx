@@ -17,8 +17,8 @@
       <xi:include href="./syllabus/syllabus.ptx" /> 
       <!-- Other documents could go here, like a schedule, project description, etc. -->
 
-          <chapter xml:id="activities">
-      <title>Activity Solutions</title>
+          <chapter xml:id="ch1activities">
+      <title>Ch. 1 Activity Solutions</title>
 
       <xi:include href="./activities/act-1-1-1.xml"/> 
       <xi:include href="./activities/act-1-1-2.xml"/>
@@ -32,6 +32,10 @@
       <xi:include href="./activities/act-1-4-1.xml"/>
       <xi:include href="./activities/act-1-4-2.xml"/>
       <xi:include href="./activities/act-1-4-3.xml"/>
+   </chapter> 
+
+       <chapter xml:id="ch2activities">
+      <title>Ch. 2 Activity Solutions</title>
       <xi:include href="./activities/act-2-1-1.xml"/>
       <xi:include href="./activities/act-2-1-2.xml"/>
       <xi:include href="./activities/act-2-1-3.xml"/>
@@ -40,7 +44,27 @@
       <xi:include href="./activities/act-2-2-3.xml"/>
       <xi:include href="./activities/act-2-2-4.xml"/>
       <xi:include href="./activities/act-2-2-5.xml"/>
+      <xi:include href="./activities/act-2-3-1.xml"/>
+      <xi:include href="./activities/act-2-3-2.xml"/>
+      <xi:include href="./activities/act-2-3-3.xml"/>
+      <xi:include href="./activities/act-2-4-1.xml"/>
+      <xi:include href="./activities/act-2-4-2.xml"/>
+      <xi:include href="./activities/act-2-4-3.xml"/>
+      <xi:include href="./activities/act-2-5-1.xml"/>
+      <xi:include href="./activities/act-2-5-2.xml"/>
+      <xi:include href="./activities/act-2-5-3.xml"/>
+      <xi:include href="./activities/act-2-5-4.xml"/>
+      <xi:include href="./activities/act-2-5-5.xml"/>
+      <xi:include href="./activities/act-2-6-1.xml"/>
+      <xi:include href="./activities/act-2-6-2.xml"/>
+      <xi:include href="./activities/act-2-6-3.xml"/>
+      <xi:include href="./activities/act-2-6-4.xml"/>
     </chapter> 
+
+       <chapter xml:id="ch3activities">
+      <title>Ch. 3 Activity Solutions</title>
+
+       </chapter>
 
        <!--  <chapter xml:id="ch-Textbook">
       <title>Daily Prep</title>

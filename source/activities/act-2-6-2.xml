@@ -1,0 +1,194 @@
+<worksheet label="ws-act-2-6-2">
+   <title>Activity 2.6.2</title>
+    <activity xml:id="activity-linear-trans-geom">
+      <title>
+	Using matrix transformations to describe geometric operations
+      </title> 
+      <statement>
+
+	<figure xml:id="js-matrix-mult">
+	  <caption>
+	    The matrix transformation <m>T</m> transforms features
+	    shown on the left into features shown on the right.
+	  </caption>
+	  
+	  <interactive xml:id="interactive-matrix-mult"
+		       platform="javascript" width="100%"
+		       aspect="14:9"
+		       source="jslibrary/figures.js
+			       jslibrary/mult.c.js"
+		       preview="preview/mult-preview.png">
+            <shortdescription>
+              An interactive diagram to explore the geometry of matrix
+              transformations.
+            </shortdescription>
+            <description>
+              <p>This interactive diagram provides a means of
+              exploring the effect that a matrix transformation has on
+              the plane as a whole.</p>
+              <p>Across the top of the diagram are four sliders
+              arranged in a <m>2\times2</m> array, which allow a
+              reader to define a <m>2\times2</m> matrix <m>A</m>.  The
+              matrix transformation <m>T:\real^2\to\real^2</m> is
+              given by <m>T(\xvec) = A\xvec</m>.</p>
+              <p>The bottom part of the diagram consists of two
+              smaller figures, one on the left and one on the right.
+              The figure on the left contains a <m>1\times1</m>
+              coordinate grid, a set of labelled axes, the unit square
+              whose lower left vertex is at the origin, and a vector
+              <m>\xvec=\twovec10</m>.</p>
+              <p>The figure on the right shows the effect of
+              <m>T</m> on these features.  In particular, the vector
+              <m>T(\xvec)</m> is shown along with the transformed
+              coordinate grid and unit square.</p>
+            </description>
+	    <sbsgroup>
+	      <sidebyside width="80%">
+		<slate xml:id="mult-sliders"
+		       aspect="10:2"
+		       surface="canvas" />
+	      </sidebyside>
+	      <sidebyside widths="45% 45%" margins="2% 2%">
+		<slate xml:id="mult-left" aspect="1:1" surface="canvas" />
+		<slate xml:id="mult-right" aspect="1:1" surface="canvas" />
+	      </sidebyside>
+	    </sbsgroup>
+	    <instructions>
+	      <p>
+		The diagram below demonstrates the effect of a matrix
+		transformation <m>T</m> on the plane.  You may modify
+		the matrix <m>A=\begin{bmatrix} a \amp b \\ c \amp c
+		\\ \end{bmatrix}</m> defining <m>T</m>
+		through the sliders at the top.
+	      </p>
+	      <p>
+		Since a matrix transformation takes a vector as input
+		and produces a vector as output, we will show the
+		inputs and outputs on separate sets of axes.  In
+		particular, the axes on the left represent the inputs
+		while the axes on the right illustrate how input
+		features are transformed by <m>T</m>.
+	      </p>
+	    </instructions>
+	    <static>
+	      <sidebyside width="100%">
+		<p>
+		  This activity uses an interactive diagram that is
+		  available at <url href="http://gvsu.edu/s/0Jf"
+		  visual="gvsu.edu/s/0Jf"/>.
+		</p>
+	      </sidebyside>
+	      <sidebyside width="75%">
+		<image source="preview/mult-preview.png"/>
+	      </sidebyside>
+	    </static>
+	  </interactive>
+	</figure>
+	
+	<p>
+	  For the following <m>2\times2</m> matrices <m>A</m>,
+	  use the diagram to study the effect of the
+	  corresponding matrix transformation <m>T(\xvec) =
+	  A\xvec</m>.  For each transformation, describe the geometric
+	  effect the transformation has on the plane.
+	  <ol marker="a.">
+	    <li><p>
+	      <m>A=\left[\begin{array}{rr}
+	      2 \amp 0 \\
+	      0 \amp 1 \\
+	      \end{array}\right]</m>.
+	    </p></li>
+
+	    <li><p>
+	      <m>A=\left[\begin{array}{rr}
+	      2 \amp 0 \\
+	      0 \amp 2 \\
+	      \end{array}\right]</m>.
+	    </p></li>
+
+	    <li><p>
+	      <m>A=\left[\begin{array}{rr}
+	      0 \amp 1 \\
+	      -1 \amp 0 \\
+	      \end{array}\right]</m>.
+	    </p></li>
+
+	    <li><p>
+	      <m>A=\left[\begin{array}{rr}
+	      1 \amp 1 \\
+	      0 \amp 1 \\
+	      \end{array}\right]</m>.
+	    </p></li>
+
+	    <li><p>
+	      <m>A=\left[\begin{array}{rr}
+	      -1 \amp 0 \\
+	      0 \amp 1 \\
+	      \end{array}\right]</m>.
+	    </p></li>
+
+	    <li><p>
+	      <m>A=\left[\begin{array}{rr}
+	      1 \amp 0 \\
+	      0 \amp 0 \\
+	      \end{array}\right]</m>.
+	    </p></li>
+
+	    <li><p>
+	      <m>A=\left[\begin{array}{rr}
+	      1 \amp 0 \\
+	      0 \amp 1 \\
+	      \end{array}\right]</m>.
+	    </p></li>
+
+	    <li><p>
+	      <m>A=\left[\begin{array}{rr}
+	      1 \amp -1 \\
+	      -2 \amp 2 \\
+	      \end{array}\right]</m>.
+	    </p></li>
+
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> This transformation stretches by a factor of 2 in
+	  the horizontal direction.
+	  </p></li>
+
+	  <li><p> This transformation stretches by a factor of 2
+	  uniformly in all directions.
+	  </p></li>
+
+	  <li><p> This is a <m>90^\circ</m> clockwise rotation.
+	  </p></li>
+
+	  <li><p> This transformation is called a <em>shear</em>;  it
+	  pushes vectors horizontally an amount equal to the vertical
+	  component.
+	  </p></li>
+
+	  <li><p> This transformation reflects vectors in the vertical
+	  axis.
+	  </p></li>
+
+	  <li><p> This transformation is called a <em>projection</em>;
+	  it produces the shadow of the vector on the horizontal
+	  axis.
+	  </p></li>
+
+	  <li><p> This transformation is called the <em>identity</em>;
+	  it causes no change.
+	  </p></li>
+
+	  <li><p> This transformation pushes vectors onto the line
+	  defined by the vector <m>\twovec{1}{-2}</m>.
+	  </p></li>
+	</ol></p>
+      </solution>
+
+    </activity>
+   
+</worksheet>

@@ -1,0 +1,126 @@
+<worksheet label="ws-act-2-4-2">
+   <title>Activity 2.4.2</title>
+    <activity>
+      <statement>
+      <p> We would like to develop a means to detect when a set of
+      vectors is linearly dependent.  This activity will point the
+      way. 
+      <ol marker="a.">
+	<li ><p> Suppose we have five vectors in <m>\real^4</m> that
+	form the columns of a matrix having reduced row echelon form
+	<me>
+	  \left[\begin{array}{rrrrr}
+	  \vvec_1 \amp 	  \vvec_2 \amp 	  \vvec_3 \amp
+	  \vvec_4 \amp	  \vvec_5 
+	  \end{array}\right]
+	  \sim
+	  \left[\begin{array}{rrrrr}
+	  1 \amp 0 \amp -1 \amp 0 \amp 2 \\
+	  0 \amp 1 \amp 2 \amp 0 \amp 3 \\
+	  0 \amp 0 \amp 0 \amp 1 \amp -1 \\
+	  0 \amp 0 \amp 0 \amp 0 \amp 0 \\
+	  \end{array}\right]
+	</me>.
+	Is it possible to write one of the vectors
+	<m>\vvec_1,\vvec_2,\ldots,\vvec_5</m> as a linear
+	combination of the others?  If so, show explicitly how one
+	vector appears as a linear combination of some of the other
+	vectors.  Is this set of vectors linearly dependent or
+	independent? 
+	</p></li>
+
+	<li><p> Suppose we have another set of three vectors in
+	<m>\real^4</m> that form the columns of a matrix having 
+	reduced row echelon form
+	<me>
+	  \left[\begin{array}{rrr}
+	  \wvec_1 \amp 	  \wvec_2 \amp 	  \wvec_3 \\
+	  \end{array}\right]
+	  \sim
+	  \left[\begin{array}{rrr}
+	  1 \amp 0 \amp 0 \\
+	  0 \amp 1 \amp 0 \\
+	  0 \amp 0 \amp 1 \\
+	  0 \amp 0 \amp 0 \\
+	  \end{array}\right]
+	</me>.
+	Is it possible to write one of these vectors <m>\wvec_1</m>,
+	<m>\wvec_2</m>, <m>\wvec_3</m> as a linear
+	combination of the others?  If so, show explicitly how one
+	vector appears as a linear combination of some of the other
+	vectors.  Is this set of vectors linearly dependent or
+	independent? 
+	</p></li>
+
+	<li><p>
+	  By looking at the pivot positions, how can you determine
+	  whether the columns of a matrix are linearly dependent or
+	  independent?
+	</p></li>
+
+	<li><p>
+	  If one vector in a set is the zero vector <m>\zerovec</m>,
+	  can the set of vectors be linearly independent?
+	</p></li>
+
+	<li><p>
+	  Suppose a set of vectors in <m>\real^{10}</m> has twelve
+	  vectors.  Is it possible for this set to be linearly
+	  independent?
+	</p></li>
+      </ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p>
+	    Let's focus on the first three vectors and view the matrix
+	    as an augmented one:
+	    <me>
+	      \left[\begin{array}{rr|r}
+	      \vvec_1 \amp \vvec_2 \amp \vvec_3
+	      \end{array}\right]
+	      \sim
+	      \left[\begin{array}{rr|r}
+	      1 \amp 0 \amp -1 \\
+	      0 \amp 1 \amp 2 \\
+	      0 \amp 0 \amp 0 \\
+	      0 \amp 0 \amp 0 \\
+	      \end{array}\right]\text{.}
+	    </me>
+	    This shows that <m>\vvec_3=-\vvec_1+2\vvec_2</m> so it is
+	    possible to write one of the vectors as a linear
+	    combination of the others.  
+	    Therefore, the set is linearly dependent.
+	  </p></li>
+
+	  <li><p>
+	    Applying the same reasoning as in the previous part, we
+	    see that we cannot write any of the vectors as a linear
+	    combination of the others.  Therefore, the set is linearly
+	    independent.   
+	  </p></li>
+
+	  <li><p>
+	    The columns of a matrix are linearly independent exactly
+	    when there is a pivot position in every column of the
+	    matrix.
+	  </p></li>
+
+	  <li><p>
+	    No, because we can write the zero vector <m>\zerovec</m>
+	    as a linear combination of the other vectors: <m>\zerovec
+	    = 0\vvec_2 + \ldots + 0\vvec_n</m>.
+	  </p></li>
+
+	  <li><p>
+	    No, because the matrix formed by the vectors would have 12
+	    columns and only 10 rows.  There can be at most 10 pivot
+	    positions so there are at least two columns without pivot
+	    positions.
+	  </p></li>
+	</ol></p>
+      </solution>
+    </activity>
+   
+</worksheet>

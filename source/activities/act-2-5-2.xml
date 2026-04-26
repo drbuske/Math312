@@ -1,0 +1,161 @@
+<worksheet label="ws-act-2-5-2">
+   <title>Activity 2.5.2</title>
+    <activity>
+      <statement>
+	<p> In this activity, we will look at some examples of matrix
+	transformations. 
+	<ol marker="a."> 
+	  <li><p>
+	    To begin, suppose that <m>A</m> is the matrix
+	    <me>A = \left[\begin{array}{rr}
+	    2 \amp 1 \\
+	    1 \amp 2 \\
+	    \end{array}\right].
+	    </me>
+	    with associated matrix transformation <m>T(\xvec) =
+	    A\xvec</m>.
+
+	    <ol marker="1.">
+	      <li><p>What is
+	      <m>T\left(\twovec{1}{-2}\right)</m>?</p></li> 
+
+	      <li><p>What is
+	      <m>T\left(\twovec{1}{0}\right)</m>?</p></li> 
+
+	      <li><p>What is
+	      <m>T\left(\twovec{0}{1}\right)</m>?</p></li>
+
+	      <li><p> Is there a vector <m>\xvec</m> such that
+	      <m>T(\xvec) = \twovec{3}{0}</m>? </p></li>
+
+	      <li><p>
+		Write <m>T\left(\twovec xy\right)</m> as a
+		two-dimensional vector.
+	      </p>
+	      </li>
+	    </ol></p>
+	  </li>
+
+	  <li> <p> Suppose that <m>T(\xvec) = A\xvec</m> where
+	  <me>
+	    A=\left[\begin{array}{rrrr}
+	    3 \amp 3 \amp -2 \amp 1 \\
+	    0 \amp 2 \amp 1 \amp -3 \\
+	    -2 \amp 1 \amp 4 \amp -4
+	    \end{array}\right]
+	    </me>.
+	    <ol marker="1.">  
+	      <li><p> What is the dimension of the vectors
+	      <m>\xvec</m> that are inputs for <m>T</m>?  </p></li>
+
+	      <li><p> What is the dimension of the vectors
+	      <m>T(\xvec)=A\xvec</m> that are outputs? </p></li>
+
+	      <li><p> If we describe this transformation as
+	      <m>T:\real^n\to\real^m</m>, what are the values of
+	      <m>n</m> and <m>m</m> and how do they relate to the
+	      shape of <m>A</m>? </p></li>
+
+	      <li><p> Describe the vectors <m>\xvec</m> for which
+	      <m>T(\xvec) = \zerovec</m>. </p></li>
+	  </ol></p></li>
+
+	  <li><p> If <m>A</m> is the matrix
+	  <m>A=\left[\begin{array}{rr} \vvec_1 \amp \vvec_2
+	  \end{array}\right]</m>,
+	  what is <m>T\left(\twovec10\right)</m> in terms of the
+	  vectors <m>\vvec_1</m> and <m>\vvec_2</m>?
+	  What about
+	  <m>T\left(\twovec{0}{1}\right)</m>?
+	  </p></li>
+
+	  <li><p> Suppose that <m>A</m> is a <m>3\times 2</m> matrix
+	  and that <m>T(\xvec)=A\xvec</m>.  If
+	  <me>
+	    T\left(\twovec{1}{0}\right) = \threevec{3}{-1}{1},
+	    T\left(\twovec{0}{1}\right) = \threevec{2}{2}{-1}
+	    </me>,
+	    what is the matrix <m>A</m>?
+	  </p></li>
+
+	</ol></p>
+      </statement>
+
+      <solution>
+	<p><ol marker="a.">
+	  <li><p> If <m>A = \left[\begin{array}{rr} 2 \amp 1 \\
+	  1 \amp 2 \end{array}\right]</m>, then
+	  <ol marker="1.">
+	    <li><p> <m>T\left(\twovec{1}{-2}\right) =
+	    A\twovec{1}{-2} = \twovec{0}{-3}</m>.
+	    </p></li>
+
+	    <li><p> <m>T\left(\twovec{1}{0}\right) =
+	    A\twovec{1}{0} = \twovec{2}{1}</m>.
+	    </p></li>
+
+	    <li><p> <m>T\left(\twovec{0}{1}\right) =
+	    A\twovec{0}{1} = \twovec{1}{2}</m>.
+	    </p></li>
+
+	    <li><p> <m>T\left(\twovec xy\right) =
+	    \twovec{2x+y}{x+2y}</m>.
+	    </p></li>
+
+	    <li><p> We seek a vector <m>\xvec</m> such that
+	    <m>T(\xvec) = A\xvec=\twovec{3}{0}</m>.  We can solve
+	    this equation to find the unique solution
+	    <m>\xvec=\twovec{2}{-1}</m>.
+	    </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> Now if
+	  <me>
+	    A=\left[\begin{array}{rrrr}
+	    3 \amp 3 \amp -2 \amp 1 \\
+	    0 \amp 2 \amp 1 \amp -3 \\
+	    -2 \amp 1 \amp 4 \amp -4
+	    \end{array}\right]\text{,}
+	  </me>
+	  the matrix has dimensions <m>3\times4</m>.
+	  <ol marker="1.">
+	    <li><p> <m>\xvec</m> must be a four-dimensional
+	    vector. </p></li>
+
+	    <li><p> <m>A\xvec</m> must be a three-dimensional
+	    vector. </p></li>
+
+	    <li><p> For this matrix, we have
+	    <m>T:\real^4\to\real^3</m>.  In general, if <m>A</m>
+	    is an <m>m\times n</m> matrix,
+	    <m>T:\real^n\to\real^m</m>.
+	    </p></li>
+
+	    <li><p> If we solve the homogeneous equation
+	    <m>A\xvec=\zerovec</m>, we find that
+	    <m>\xvec=x_4\fourvec{-3}{2}{-1}{1}</m>.
+	    </p></li>
+	  </ol>
+	  </p></li>
+
+	  <li><p> <m>T\left(\twovec{1}{0}\right) = \vvec_1</m>, the
+	  first column of the matrix.  Similarly,
+	  <m>T\left(\twovec{0}{1}\right)</m> gives the second column
+	  of the matrix.  </p></li>
+
+	  <li><p> The matrix is
+	  <m>A=\left[
+	  \begin{array}{rr}
+	  3 \amp 2 \\
+	  -1 \amp 2 \\
+	  1 \amp -1 \\
+	  \end{array}\right]\text{.}
+	  </m>
+	  </p></li>
+	</ol></p>
+      </solution>
+      
+    </activity>
+   
+</worksheet>
