@@ -1297,6 +1297,114 @@ var ptx_lunr_docs = [
   "body": "  Let denote the space of all infinite sequences of real numbers. We denote such a sequence as where it is understood that the subscripts run from 0 to . Addition is defined by and scalar multiplication by for .   Identify the zero element in from axiom (A3) .  Identify the additive inverse of and then show that for every .  Is a vector space?  Let denote the space of all convergent sequences of real numbers under the same operations. Is a vector space or not?  Let denote the space of all real sequences that converge to 1 under the same operations. Is a vector space or not?  Let denote the space of all real sequences that converge to 0 under the same operations. Is a vector space or not?  Let denote the space of all real positive sequences under the same operations. Is a vector space or not?       The zero element is the sequence  For , we have . The additive inverse is the sequence . Then,  Yes.  Yes; note that the sum of two convergent sequences is also convergent. So too is a scalar multiple of a convergent sequence.  No. This is easy to see by taking the constant sequence and adding it to itself. This sequence does not converge to 1.  Yes. The sum of two such sequences also converges to 0 and any constant multiple of a sequence converging to 0 also converges to 0.  No. There is no additive unit - see axiom (A3) .     "
 },
 {
+  "id": "ws-act-5-2-1",
+  "level": "1",
+  "url": "ws-act-5-2-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Preview Activity 5.2.1",
+  "body": " Preview Activity 5.2.1    In the previous section, we learned what it means for a set of objects to form a vector space. In this section, we ask a new question: how can vectors be built from other vectors?   Rather than beginning with formal definitions, this activity invites you to experiment with combinations of vectors and to identify patterns that will later be captured by precise mathematical language.      Consider the vectors and in .   List at least five different vectors that can be formed using expressions of the form , where and are real numbers.  Describe, in words, the collection of all vectors that can be formed this way.  What changes if you restrict and to be integers?        Now consider the vectors and in .   Which vectors can be formed using expressions of the form ?  Compare your answer with the result from the previous task.  What seems different about the roles played by and compared to and ?        Consider the set of polynomials and .   Write several expressions that combine and using multiplication by numbers and addition.  Which polynomials can be created this way?  Is it possible to create the polynomial using these two polynomials? Explain.        This activity suggests that some collections of vectors are powerful enough to generate large portions of a vector space, while others are limited or redundant. In the remainder of this section, we will develop precise language to describe these ideas using the concepts of linear combinations, span, and linear independence.    "
+},
+{
+  "id": "preview-lincombo-5-2",
+  "level": "2",
+  "url": "ws-act-5-2-1.html#preview-lincombo-5-2",
+  "type": "Activity",
+  "number": "70",
+  "title": "",
+  "body": "  In the previous section, we learned what it means for a set of objects to form a vector space. In this section, we ask a new question: how can vectors be built from other vectors?   Rather than beginning with formal definitions, this activity invites you to experiment with combinations of vectors and to identify patterns that will later be captured by precise mathematical language.      Consider the vectors and in .   List at least five different vectors that can be formed using expressions of the form , where and are real numbers.  Describe, in words, the collection of all vectors that can be formed this way.  What changes if you restrict and to be integers?        Now consider the vectors and in .   Which vectors can be formed using expressions of the form ?  Compare your answer with the result from the previous task.  What seems different about the roles played by and compared to and ?        Consider the set of polynomials and .   Write several expressions that combine and using multiplication by numbers and addition.  Which polynomials can be created this way?  Is it possible to create the polynomial using these two polynomials? Explain.        This activity suggests that some collections of vectors are powerful enough to generate large portions of a vector space, while others are limited or redundant. In the remainder of this section, we will develop precise language to describe these ideas using the concepts of linear combinations, span, and linear independence.   "
+},
+{
+  "id": "ws-act-5-3-1",
+  "level": "1",
+  "url": "ws-act-5-3-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Preview Activity 5.3.1",
+  "body": " Preview Activity 5.3.1     In earlier sections, we studied vector spaces as entire collections of objects. In practice, however, we often work with smaller collections that live inside a larger vector space. In this activity, we explore when such a subset behaves like a vector space in its own right.  Rather than starting with a formal definition, you will examine examples and look for patterns that help explain which subsets work and which do not.      Consider the following subsets of .   All vectors of the form .  All vectors of the form .  All vectors of the form with .   For each subset:   Decide whether adding two vectors from the subset produces another vector in the subset.  Decide whether multiplying a vector in the subset by a scalar keeps the result in the subset.  Identify one example where something fails, if it does.        Now consider the following subsets of the vector space of polynomials of degree at most 2.   All polynomials with zero constant term.  All polynomials with constant term equal to 1.  All polynomials that have a fixed real number as a root.   For each subset:   Decide whether the zero polynomial belongs to the subset.  Test whether the subset is closed under addition.  Test whether the subset is closed under scalar multiplication.        In each of the previous examples, some subsets behaved well under the vector space operations, while others failed in specific ways.   Which properties seem to fail most often?  Why does the failure of a single property prevent a subset from behaving like a vector space?  What role does the zero vector seem to play in all successful examples?      These examples suggest that only certain subsets of a vector space are stable under the operations of addition and scalar multiplication. In the next section, we will formalize these observations by introducing the definition of a subspace .    "
+},
+{
+  "id": "preview-subspace-5-3",
+  "level": "2",
+  "url": "ws-act-5-3-1.html#preview-subspace-5-3",
+  "type": "Activity",
+  "number": "71",
+  "title": "",
+  "body": "   In earlier sections, we studied vector spaces as entire collections of objects. In practice, however, we often work with smaller collections that live inside a larger vector space. In this activity, we explore when such a subset behaves like a vector space in its own right.  Rather than starting with a formal definition, you will examine examples and look for patterns that help explain which subsets work and which do not.      Consider the following subsets of .   All vectors of the form .  All vectors of the form .  All vectors of the form with .   For each subset:   Decide whether adding two vectors from the subset produces another vector in the subset.  Decide whether multiplying a vector in the subset by a scalar keeps the result in the subset.  Identify one example where something fails, if it does.        Now consider the following subsets of the vector space of polynomials of degree at most 2.   All polynomials with zero constant term.  All polynomials with constant term equal to 1.  All polynomials that have a fixed real number as a root.   For each subset:   Decide whether the zero polynomial belongs to the subset.  Test whether the subset is closed under addition.  Test whether the subset is closed under scalar multiplication.        In each of the previous examples, some subsets behaved well under the vector space operations, while others failed in specific ways.   Which properties seem to fail most often?  Why does the failure of a single property prevent a subset from behaving like a vector space?  What role does the zero vector seem to play in all successful examples?      These examples suggest that only certain subsets of a vector space are stable under the operations of addition and scalar multiplication. In the next section, we will formalize these observations by introducing the definition of a subspace .   "
+},
+{
+  "id": "ws-act-5-3-2",
+  "level": "1",
+  "url": "ws-act-5-3-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 5.3.2",
+  "body": " Activity 5.3.2     Let denote the vector space of convergent, infinite sequences of real numbers. Let denote the subset of infinite sequences of real numbers that converge to 0. Show that is a subspace of .  Let denote the subset of (the vector space of convergent, infinite sequences) that consists of those sequences having finite support . By that, we mean that consists of sequences where only finitely many of the terms are nonzero. Is a subspace of ? Why or why not?  Is the set of convergent, geometric sequences (i.e. those of the form where ) a subspace of ? Why or why not?  Is the set a subspace of ? Why or why not?  Is the set of all constant sequences a subspace of ? Why or why not?       We show that if and are sequences in , then their sum is as well. But the sum of two sequences that converge to 0 also converges to 0. We also show that if is a sequence converging to 0 then any multiple of it will also converge to 0. But this is clear. So is closed under addition and scalar multiplication. The zero element is obviously the sequence of all 0's and hence clearly converges to 0 and is in .  is a subspace. If we add two such sequences, then the sum will only have a finite number of terms that are not zero (at most double the number of nonzero terms in each individual sequence). If we multiply such a sequence by a constant, it will have (at most) the same number of nonzero terms. The zero sequence (consisting of all 0's) has no nonzero terms and so is also in .  No. Adding the sequences and gives a sequence which is not geometric unless either or is 0.  No. The constant sequence is in , but adding this sequence to itself will not yield a sequence in .  Yes. The zero sequence is the zero element and is constant. Adding two constant sequences will yield a constant sequence. Multiplying each term of a sequence by a scalar will produce another constant sequence.      "
+},
+{
+  "id": "subspace-sequences",
+  "level": "2",
+  "url": "ws-act-5-3-2.html#subspace-sequences",
+  "type": "Activity",
+  "number": "72",
+  "title": "",
+  "body": "   Let denote the vector space of convergent, infinite sequences of real numbers. Let denote the subset of infinite sequences of real numbers that converge to 0. Show that is a subspace of .  Let denote the subset of (the vector space of convergent, infinite sequences) that consists of those sequences having finite support . By that, we mean that consists of sequences where only finitely many of the terms are nonzero. Is a subspace of ? Why or why not?  Is the set of convergent, geometric sequences (i.e. those of the form where ) a subspace of ? Why or why not?  Is the set a subspace of ? Why or why not?  Is the set of all constant sequences a subspace of ? Why or why not?       We show that if and are sequences in , then their sum is as well. But the sum of two sequences that converge to 0 also converges to 0. We also show that if is a sequence converging to 0 then any multiple of it will also converge to 0. But this is clear. So is closed under addition and scalar multiplication. The zero element is obviously the sequence of all 0's and hence clearly converges to 0 and is in .  is a subspace. If we add two such sequences, then the sum will only have a finite number of terms that are not zero (at most double the number of nonzero terms in each individual sequence). If we multiply such a sequence by a constant, it will have (at most) the same number of nonzero terms. The zero sequence (consisting of all 0's) has no nonzero terms and so is also in .  No. Adding the sequences and gives a sequence which is not geometric unless either or is 0.  No. The constant sequence is in , but adding this sequence to itself will not yield a sequence in .  Yes. The zero sequence is the zero element and is constant. Adding two constant sequences will yield a constant sequence. Multiplying each term of a sequence by a scalar will produce another constant sequence.     "
+},
+{
+  "id": "ws-act-5-3-3",
+  "level": "1",
+  "url": "ws-act-5-3-3.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 5.3.3",
+  "body": " Activity 5.3.3      Let , the vector space of continuous real-valued functions. Define to be the set of functions for which . For example, is in . Show that is a subspace of .    Let as before. Define to be the set of functions for which . For example, and are in . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of real-valued matrices. Is a subspace of ? If so, prove it. If not, why not? If so, what is the dimension of this subspace?    Let , the vector space of real-valued matrices. Is a subspace of ? If so, prove it. If not, why not? If so, what is the dimension of this subspace?    Let . Show that is a subspace of .    Let , the vector space of polynomials with real coefficients of degree at most 2. Let . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of polynomials with real coefficients of degree at most 2. Let . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of continuous real-valued functions. Define , the set of functions that vanish at infinity. That is . Is a subspace of ? Why or why not?        The zero vector, (the constant zero function) is in since it satisfies the equation . If and both satisfy the equation, then also satisfies the equation since . Also, if , and is any real number, then since .     is a subspace. The zero vector, (the constant zero function) is in since it satisfies the equation . If and both satisfy the equation, then also satisfies the equation since . Also, if , and is any real number, then since .    Yes and the dimension is 2. The zero matrix is clearly in . If and , then which is clearly in as well. Also, for any scalar , we have which is also clearly in . A basis is .    Yes and the dimension is 2. The zero matrix is clearly in . If and , then which is clearly in as well. Also, for any scalar , we have which is also clearly in . A basis is .    Since the matrix commutes with any matrix, we know that . Suppose . Then and . So Also,     No. The zero polynomial is not in .    Yes. First, the zero polynomial is in since all coefficients are 0 (and hence their sum is too). If , where and , then and we have since and Also, where so that is closed under addition and scalar multiplication.    Yes. The zero function is in since it vanishes at . Adding two functions that vanish at will produce a function that also vanishes there. And multiplying such a function by a constant will still vanish at .      "
+},
+{
+  "id": "subspace-function-spaces",
+  "level": "2",
+  "url": "ws-act-5-3-3.html#subspace-function-spaces",
+  "type": "Activity",
+  "number": "73",
+  "title": "",
+  "body": "    Let , the vector space of continuous real-valued functions. Define to be the set of functions for which . For example, is in . Show that is a subspace of .    Let as before. Define to be the set of functions for which . For example, and are in . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of real-valued matrices. Is a subspace of ? If so, prove it. If not, why not? If so, what is the dimension of this subspace?    Let , the vector space of real-valued matrices. Is a subspace of ? If so, prove it. If not, why not? If so, what is the dimension of this subspace?    Let . Show that is a subspace of .    Let , the vector space of polynomials with real coefficients of degree at most 2. Let . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of polynomials with real coefficients of degree at most 2. Let . Is a subspace of ? If so, prove it. If not, why not?    Let , the vector space of continuous real-valued functions. Define , the set of functions that vanish at infinity. That is . Is a subspace of ? Why or why not?        The zero vector, (the constant zero function) is in since it satisfies the equation . If and both satisfy the equation, then also satisfies the equation since . Also, if , and is any real number, then since .     is a subspace. The zero vector, (the constant zero function) is in since it satisfies the equation . If and both satisfy the equation, then also satisfies the equation since . Also, if , and is any real number, then since .    Yes and the dimension is 2. The zero matrix is clearly in . If and , then which is clearly in as well. Also, for any scalar , we have which is also clearly in . A basis is .    Yes and the dimension is 2. The zero matrix is clearly in . If and , then which is clearly in as well. Also, for any scalar , we have which is also clearly in . A basis is .    Since the matrix commutes with any matrix, we know that . Suppose . Then and . So Also,     No. The zero polynomial is not in .    Yes. First, the zero polynomial is in since all coefficients are 0 (and hence their sum is too). If , where and , then and we have since and Also, where so that is closed under addition and scalar multiplication.    Yes. The zero function is in since it vanishes at . Adding two functions that vanish at will produce a function that also vanishes there. And multiplying such a function by a constant will still vanish at .     "
+},
+{
+  "id": "ws-act-5-4-1",
+  "level": "1",
+  "url": "ws-act-5-4-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Preview Activity 5.4.1",
+  "body": " Preview Activity 5.4.1    In the previous sections, we studied spanning sets and linear independence. In this section, we combine these ideas to address a fundamental question: what is the smallest collection of vectors needed to describe every vector in a space?   Rather than starting with formal definitions, this activity asks you to experiment with representing vectors using different sets and to observe when representations are possible, unique, or redundant.      Consider the vectors , , and in .   Show that every vector in can be written as a combination of and .  Show that every vector in can also be written as a combination of and .        Now consider the set .   Is it possible to remove one vector from and still represent every vector in ? Explain.  What does this suggest about whether all three vectors are necessary?  How might you recognize when a vector in a spanning set is unnecessary?        Consider the vector space of polynomials of degree at most 2.   Explain why every polynomial in can be written using the set .  Could a set with only two polynomials possibly describe every element of ? Why or why not?  How does this compare to what you observed in ?      These examples suggest that certain spanning sets are minimal and free of redundancy, while others are not. In the remainder of this section, we will formalize these ideas using the concepts of basis and dimension.    "
+},
+{
+  "id": "preview-basisdim-5-4",
+  "level": "2",
+  "url": "ws-act-5-4-1.html#preview-basisdim-5-4",
+  "type": "Activity",
+  "number": "74",
+  "title": "",
+  "body": "  In the previous sections, we studied spanning sets and linear independence. In this section, we combine these ideas to address a fundamental question: what is the smallest collection of vectors needed to describe every vector in a space?   Rather than starting with formal definitions, this activity asks you to experiment with representing vectors using different sets and to observe when representations are possible, unique, or redundant.      Consider the vectors , , and in .   Show that every vector in can be written as a combination of and .  Show that every vector in can also be written as a combination of and .        Now consider the set .   Is it possible to remove one vector from and still represent every vector in ? Explain.  What does this suggest about whether all three vectors are necessary?  How might you recognize when a vector in a spanning set is unnecessary?        Consider the vector space of polynomials of degree at most 2.   Explain why every polynomial in can be written using the set .  Could a set with only two polynomials possibly describe every element of ? Why or why not?  How does this compare to what you observed in ?      These examples suggest that certain spanning sets are minimal and free of redundancy, while others are not. In the remainder of this section, we will formalize these ideas using the concepts of basis and dimension.   "
+},
+{
+  "id": "ws-act-5-4-2",
+  "level": "1",
+  "url": "ws-act-5-4-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 5.4.2",
+  "body": " Activity 5.4.2    For each vector space below, calculate the dimension.               , the vector space of matrics with real entries.     , the subspace of lower triangular matrices.     , the vector space of continuous real-valued functions on .     , the subspace of real-valued sequences that converge to 0.    The subspace .    The subspace of constant real-valued sequences.             6    9    6              3    1      "
+},
+{
+  "id": "subspace-dimension",
+  "level": "2",
+  "url": "ws-act-5-4-2.html#subspace-dimension",
+  "type": "Activity",
+  "number": "75",
+  "title": "",
+  "body": "  For each vector space below, calculate the dimension.               , the vector space of matrics with real entries.     , the subspace of lower triangular matrices.     , the vector space of continuous real-valued functions on .     , the subspace of real-valued sequences that converge to 0.    The subspace .    The subspace of constant real-valued sequences.             6    9    6              3    1     "
+},
+{
   "id": "ch-practice-exams-2",
   "level": "1",
   "url": "ch-practice-exams-2.html",
