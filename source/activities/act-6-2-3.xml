@@ -1,0 +1,205 @@
+<worksheet label="ws-act-6-2-3">
+   <title>Activity 6.2.3</title>
+    <activity>
+      <statement>
+	<p> This activity illustrates how multiplying a vector by
+	<m>A^T</m> is related to computing dot products with the columns
+	of <m>A</m>.  You'll develop a better understanding of this
+	relationship if you compute the dot products and matrix products
+	in this activity without using technology.
+	<ol marker="a.">
+	  <li><p> If
+	  <m>B =
+	  \begin{bmatrix}
+	  3 \amp 4 \\
+	  -1 \amp 2 \\
+	  0 \amp -2 \\
+	  \end{bmatrix}
+	  </m>, write the matrix <m>B^T</m>.
+	  </p></li>
+
+	  <li><p> Suppose that
+	  <me>
+	    \vvec_1=\threevec20{-2},\hspace{24pt}
+	    \vvec_2=\threevec112,\hspace{24pt}
+	    \wvec=\threevec{-2}23\text{.}
+	  </me>
+	  Find the dot products <m>\vvec_1\cdot\wvec</m> and
+	  <m>\vvec_2\cdot\wvec</m>.
+	  </p></li>
+
+	  <li><p> Now write the matrix
+	  <m>A = \begin{bmatrix} \vvec_1 \amp \vvec_2 \end{bmatrix}</m> and
+	  its transpose <m>A^T</m>.  Find the product <m>A^T\wvec</m> and
+	  describe how this product computes both dot products
+	  <m>\vvec_1\cdot\wvec</m> and <m>\vvec_2\cdot\wvec</m>.
+	  </p></li>
+
+	  <li><p> Suppose that <m>\xvec</m> is a vector that is
+	  orthogonal to both <m>\vvec_1</m> and <m>\vvec_2</m>.  What
+	  does this say about the dot products <m>\vvec_1\cdot\xvec</m>
+	  and <m>\vvec_2\cdot\xvec</m>?  What does this say about the
+	  product <m>A^T\xvec</m>?
+	  </p></li>
+
+	  <li><p> Use the matrix <m>A^T</m> to give a parametric
+	  description of all the vectors <m>\xvec</m> that are
+	  orthogonal to <m>\vvec_1</m>
+	  and <m>\vvec_2</m>.  
+	  </p></li>
+
+	  <li>
+	    <p>
+	      Remember that <m>\nul(A^T)</m>, the null space of
+	      <m>A^T</m>, is the solution set of the equation
+	      <m>A^T\xvec=\zerovec</m>.  If <m>\xvec</m> is a vector in
+	      <m>\nul(A^T)</m>, explain why <m>\xvec</m> must be
+	      orthogonal to both <m>\vvec_1</m> and <m>\vvec_2</m>.
+	    </p>
+	  </li>
+	  <li>
+	    <p>
+	      Remember that <m>\col(A)</m>, the column space of <m>A</m>,
+	      is the set of linear combinations of the columns of
+	      <m>A</m>.  Therefore, any vector in <m>\col(A)</m> can be
+	      written as <m>c_1\vvec_1+c_2\vvec_2</m>.
+	      If <m>\xvec</m> is a vector in <m>\nul(A^T)</m>, explain
+	      why <m>\xvec</m> is orthogonal to every vector in
+	      <m>\col(A)</m>.
+	    </p>
+	  </li>
+	</ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<m>A^T = \begin{bmatrix}
+		3 \amp -1 \amp 0 \\
+		4 \amp 2 \amp -2
+		\end{bmatrix}
+		</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<md>
+		  <mrow>
+		    \vvec_1\cdot\wvec \amp{}={} 2(-2) + 0(2) + (-2)3
+		    \amp{}={} -10
+		  </mrow>
+		  <mrow>
+		    \vvec_2\cdot\wvec \amp{}={} 1(-2) + 1(2) + 2(3)
+		    \amp{}={} 6
+		  </mrow>
+		</md>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<me>A^T\wvec =
+		\twovec{2(-2)+0(2)+(-2)3}{1(-2)+1(2)+2(3)} =
+		\twovec{-10}{6}
+		=\twovec{\vvec_1\cdot\wvec}{\vvec_2\cdot\wvec}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Both dot products are 0 so we have <m>A^T\xvec =
+		\zerovec</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p> We need to solve the equation <m>A^T\xvec =
+	      \zerovec</m> so we find the reduced row echelon form 
+	      <me>A^T \sim \begin{bmatrix}
+		1 \amp 0 \amp -1 \\
+		0 \amp 1 \amp 3\\
+		\end{bmatrix}\text{.}
+	      </me>
+	      The vectors orthogonal to both <m>\vvec_1</m> and
+	      <m>\vvec_2</m> have the form
+	      <m>\xvec=x_3\threevec1{-3}1</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>A^T\xvec =
+		\twovec{\vvec_1\cdot\xvec}{\vvec_2\cdot\xvec} =
+		\twovec00</m> tells us that <m>\vvec_1\cdot\xvec=0</m>
+		and <m>\vvec_2\cdot\xvec=0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Since <m>\xvec</m> is orthogonal to both
+		<m>\vvec_1</m> and <m>\vvec_2</m>, we have
+		<me>
+		  (c_1\vvec_1+c_2\vvec_2)\cdot\xvec =
+		  c_1\vvec_1\cdot\xvec + c_2\vvec_2\cdot\xvec = 0
+		</me>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<m>A^T = \begin{bmatrix}
+		3 \amp -1 \amp 0 \\
+		4 \amp 2 \amp -2
+		\end{bmatrix}
+		</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\vvec_1\cdot\wvec =-10</m>,
+		<m>\vvec_2\cdot\wvec =6</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<me>A^T\wvec 
+		=\twovec{\vvec_1\cdot\wvec}{\vvec_2\cdot\wvec}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>A^T\xvec =
+		\zerovec</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\xvec=x_3\threevec1{-3}1</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>A^T\xvec =
+		\twovec{\vvec_1\cdot\xvec}{\vvec_2\cdot\xvec} =
+		\twovec00</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Apply the distributive property of dot products.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+		    
+    </activity>
+   
+</worksheet>

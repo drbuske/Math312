@@ -1,0 +1,184 @@
+<worksheet label="ws-act-6-2-2">
+   <title>Activity 6.2.2</title>
+    <activity>
+      <statement>
+	<p>
+	  Suppose that <m>\wvec_1=\threevec10{-2}</m> and
+	  <m>\wvec_2=\threevec11{-1}</m> form a basis for
+	  <m>W</m>, a two-dimensional subspace of
+	  <m>\real^3</m>.  We will find a description of the
+	  orthogonal complement <m>W^\perp</m>. 
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Suppose that the vector <m>\xvec</m> is orthogonal to
+		<m>\wvec_1</m>.  If we write
+		<m>\xvec=\threevec{x_1}{x_2}{x_3}</m>,
+		use the fact that <m>\wvec_1\cdot\xvec =
+		0</m> to write a linear
+		equation for <m>x_1</m>, <m>x_2</m>, and <m>x_3</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Suppose that <m>\xvec</m> is also orthogonal to
+		<m>\wvec_2</m>.  In the same way, write a linear
+		equation for <m>x_1</m>, <m>x_2</m>, and <m>x_3</m>
+		that arises from the fact that <m>\wvec_2\cdot\xvec =
+		0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		If <m>\xvec</m> is orthogonal to both <m>\wvec_1</m>
+		and <m>\wvec_2</m>, these two equations give us a
+		linear system <m>B\xvec=\zerovec</m> for some matrix
+		<m>B</m>.  Identify the matrix <m>B</m> and write a
+		parametric description of the solution space to the
+		equation <m>B\xvec = \zerovec</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Since <m>\wvec_1</m> and <m>\wvec_2</m> form a basis
+		for the two-dimensional subspace <m>W</m>, any vector
+		<m>\wvec</m> in <m>W</m> can be written as a linear
+		combination
+		<me>
+		  \wvec = c_1\wvec_1 + c_2\wvec_2\text{.}
+		</me>
+		If <m>\xvec</m> is orthogonal to both <m>\wvec_1</m>
+		and <m>\wvec_2</m>, use the distributive property of
+		dot products to explain why <m>\xvec</m> is orthogonal
+		to <m>\wvec</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Give a basis for the orthogonal complement
+		<m>W^\perp</m> and state the dimension <m>\dim W^\perp</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Describe <m>(W^\perp)^\perp</m>, the orthogonal
+		complement of <m>W^\perp</m>.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		We have the equation <m>\wvec_1\cdot\xvec = x_1 - 2x_3
+		= 0</m>. 
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have the equation <m>\wvec_2\cdot\xvec = x_1+x_2 - x_3
+		= 0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		These two equations give <m>B\xvec=\zerovec</m> where
+		<me>
+		  B = \begin{bmatrix}
+		  1 \amp 0 \amp -2 \\
+		  1 \amp 1 \amp -1 \\
+		  \end{bmatrix}
+		  \sim
+		  \begin{bmatrix}
+		  1 \amp 0 \amp -2 \\
+		  0 \amp 1 \amp 1 \\
+		  \end{bmatrix}\text{,}
+		</me>
+		whose solutions have the parametric form
+		<m>\xvec=x_3\threevec2{-1}1</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		By distributivity,
+		<m>(c_1\wvec_1+c_2\wvec_2)\cdot\xvec=
+		c_1\wvec_1\cdot\xvec + c_2\wvec_2\cdot\xvec = 0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>W^\perp</m> is the solution space to the equation
+		<m>B\xvec=\zerovec</m>.  Therefore, a basis consists
+		of the single vector
+		<m>\threevec2{-1}1</m>, and <m>W^\perp</m> is
+		one-dimensional.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Since every vector in <m>W^\perp</m> is orthogonal to
+		every vector in <m>W</m>, the orthogonal complement of
+		<m>W^\perp</m> is <m>W</m>.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<m>\wvec_1\cdot\xvec = x_1 - 2x_3
+		= 0</m>. 
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\wvec_2\cdot\xvec = x_1+x_2 - x_3
+		= 0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>
+		  B = \begin{bmatrix}
+		  1 \amp 0 \amp -2 \\
+		  1 \amp 1 \amp -1 \\
+		  \end{bmatrix}
+		</m>
+		so
+		<m>\xvec=x_3\threevec2{-1}1</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		By distributivity,
+		<m>(c_1\wvec_1+c_2\wvec_2)\cdot\xvec=
+		c_1\wvec_1\cdot\xvec + c_2\wvec_2\cdot\xvec = 0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		A basis consists of
+		<m>\threevec1{-1}1</m>, and <m>W^\perp</m> is
+		one-dimensional.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The orthogonal complement of
+		<m>W^\perp</m> is <m>W</m>.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+    </activity>
+   
+</worksheet>

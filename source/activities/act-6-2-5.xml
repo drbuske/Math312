@@ -1,0 +1,216 @@
+<worksheet label="ws-act-6-2-5">
+   <title>Activity 6.2.5</title>
+    <activity>
+      <statement>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Suppose that <m>W</m> is a <m>5</m>-dimensional
+		subspace of <m>\real^9</m> and that <m>A</m> is a matrix whose
+		columns form a basis for <m>W</m>;  that is, <m>\col(A) =
+		W</m>.
+		<ol marker="1.">
+		  <li><p> What is the shape of <m>A</m>? </p></li>
+		  
+		  <li><p> What is the rank of <m>A</m>? </p></li>
+		  
+		  <li><p> What is the shape of <m>A^T</m>? </p></li>
+		  
+		  <li><p> What is the rank of <m>A^T</m>? </p></li>
+		  
+		  <li><p> What is <m>\dim\nul(A^T)</m>?  </p></li>
+		  
+		  <li><p> What is <m>\dim W^\perp</m>? </p></li>
+		  
+		  <li><p> How are the dimensions of <m>W</m> and
+		  <m>W^\perp</m> related? </p></li>
+		</ol>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Suppose that <m>W</m> is a subspace of <m>\real^4</m>
+		having basis
+		<me>
+		  \wvec_1 = \fourvec102{-1},\hspace{24pt}
+		  \wvec_2 = \fourvec{-1}2{-6}3.
+		</me>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      Find the dimensions <m>\dim W</m> and <m>\dim
+		      W^\perp</m>.
+		    </p>
+		  </li>
+
+		  <li>
+		    <p>
+		      Find a basis for <m>W^\perp</m>.  It may be
+		      helpful to know that the Sage command
+		      <c>A.right_kernel()</c> produces a basis for
+		      <m>\nul(A)</m>.
+		      <sage>
+			<input>
+			</input>
+		      </sage>
+		    </p>
+		  </li>
+
+		  <li>
+		    <p>
+		      Verify that each of the basis vectors you found
+		      for <m>W^\perp</m> are orthogonal to the basis
+		      vectors for <m>W</m>.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      <m>A</m> is <m>9\times 5</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\rank(A) = 5</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>A^T</m> is <m>5\times 9</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\rank(A^T) = 5</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\dim \nul(A^T) = 9 - 5 = 4</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\dim W^\perp = \dim\nul(A^T) = 4</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\dim W + \dim W^\perp = 9 </m> since the
+		      subspaces live in <m>\real^9</m>.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      <m>\dim W = 2</m> so <m>\dim W^\perp =
+		      4-2=2</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>A basis is
+		    <m>\vvec_1=\fourvec1{-1}01</m> and
+		    <m>\vvec_2=\fourvec0012</m> .
+		    </p>
+		  </li>
+		  <li>
+		    <p>You can verify by computing the four dot
+		    products.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      <m>9\times 5</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>5</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>5\times 9</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>5</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>4</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>4</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\dim W + \dim W^\perp = 9 </m>
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      <m>2</m> 
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		    <m>\fourvec1{-1}01</m> and
+		    <m>\fourvec0012</m> .
+		    </p>
+		  </li>
+		  <li>
+		    <p>Verify by computing the four dot
+		    products.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+    </activity>
+   
+</worksheet>
