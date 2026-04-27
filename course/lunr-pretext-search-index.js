@@ -1495,6 +1495,96 @@ var ptx_lunr_docs = [
   "body": "  We'll now use the objective to compare clusterings and to choose an appropriate value of .   In the previous activity, one initial choice of and led to the clustering: with centroids and . Find the objective of this clustering.    We have now seen two clusterings and computed their objectives. Recall that our dataset is shown in . Which of the two clusterings feels like the better fit? How is this fit reflected in the values of the objectives?    Evaluating the following cell will load and display a dataset consisting of 177 data points. This dataset has the name data . Given this plot of the data, what would seem like a reasonable number of clusters?    In the following cell, you may choose a value of and then run the algorithm to determine and display a clustering and its objective. If you run the algorithm a few times with the same value of , you will likely see different clusterings having different objectives. This is natural since our algorithm starts by making a random choice of points , and a different choices may lead to different clusterings. Choose a value of and run the algorithm a few times. Notice that clusterings having lower objectives seem to fit the data better. Repeat this experiment with a few different values of .     For a given value of , our strategy is to run the algorithm several times and choose the clustering with the smallest objective. After choosing a value of , the following cell will run the algorithm 10 times and display the clustering having the smallest objective.   For each value of between 2 and 9, find the clustering having the smallest objective and plot your findings in .     A horizontal axis labelled k and a vertical axis labelled Objective.   A set of coordinate axes where the horizontal axis is labelled and the vertical axis is labelled Objective . The horizontal range is from to while the vertical range is from to . There is also a coordinate grid to help in plotting points.     Construct a plot of the minimal objective as it depends on the choice of .   This plot is called an elbow plot due to its shape. Notice how the objective decreases sharply when is small and then flattens out. This leads to a location, called the elbow, where the objective transitions from being sharply decreasing to relatively flat. This means that increasing beyond the elbow does not significantly decrease the objective, which makes the elbow a good choice for .  Where does the elbow occur in your plot above? How does this compare to the best value of that you estimated by simply looking at the data in .     Of course, we could increase until each data point is its own cluster. However, this defeats the point of the technique, which is to group together nearby data points in the hope that they share common features, thus providing insight into the structure of the data.       The objective is     The clustering with and appears to be a tighter clustering and has a smaller objective.    It appears that the best clustering is either or .    With a fixed value of , running the algorithm several times leads to different clusterings with different objectives. If we increase , the objective generally decreases.    The elbow occurs around or , which are the values that we felt led to the best clusterings.             The objective is .    The clustering and has a smaller objective.     or .    With a fixed value of , running the algorithm several times leads to different clusterings with different objectives. If we increase , the objective generally decreases.    The elbow occurs around or .         "
 },
 {
+  "id": "ws-act-6-2-1",
+  "level": "1",
+  "url": "ws-act-6-2-1.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Preview Activity 6.2.1",
+  "body": " Preview Activity 6.2.1     Sketch the vector on and one vector that is orthogonal to it.     A coordinate grid and set of axes.   A standard coordinate grid and set of axes. The horizontal and vertical ranges both run from to .     Sketch the vector and one vector orthogonal to it.     The vector is an example of a vector orthogonal to .      If a vector is orthogonal to , what do we know about the dot product ?    The dot product must be zero.      If we write , use the dot product to write an equation for the vectors orthogonal to in terms of and .     .      Use this equation to sketch the set of all vectors orthogonal to in .    This is the line .       An earlier section introduced the column space and null space of a matrix . If is a matrix, what is the meaning of the null space ?    It is the set of vectors for which .      What is the meaning of the column space ?    It is the set of vector for which the equation is consistent.     "
+},
+{
+  "id": "ula-preview-6-2",
+  "level": "2",
+  "url": "ws-act-6-2-1.html#ula-preview-6-2",
+  "type": "Activity",
+  "number": "81",
+  "title": "",
+  "body": "   Sketch the vector on and one vector that is orthogonal to it.     A coordinate grid and set of axes.   A standard coordinate grid and set of axes. The horizontal and vertical ranges both run from to .     Sketch the vector and one vector orthogonal to it.     The vector is an example of a vector orthogonal to .      If a vector is orthogonal to , what do we know about the dot product ?    The dot product must be zero.      If we write , use the dot product to write an equation for the vectors orthogonal to in terms of and .     .      Use this equation to sketch the set of all vectors orthogonal to in .    This is the line .       An earlier section introduced the column space and null space of a matrix . If is a matrix, what is the meaning of the null space ?    It is the set of vectors for which .      What is the meaning of the column space ?    It is the set of vector for which the equation is consistent.    "
+},
+{
+  "id": "ws-act-6-2-2",
+  "level": "1",
+  "url": "ws-act-6-2-2.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 6.2.2",
+  "body": " Activity 6.2.2    Suppose that and form a basis for , a two-dimensional subspace of . We will find a description of the orthogonal complement .   Suppose that the vector is orthogonal to . If we write , use the fact that to write a linear equation for , , and .    Suppose that is also orthogonal to . In the same way, write a linear equation for , , and that arises from the fact that .    If is orthogonal to both and , these two equations give us a linear system for some matrix . Identify the matrix and write a parametric description of the solution space to the equation .    Since and form a basis for the two-dimensional subspace , any vector in can be written as a linear combination If is orthogonal to both and , use the distributive property of dot products to explain why is orthogonal to .    Give a basis for the orthogonal complement and state the dimension .    Describe , the orthogonal complement of .          We have the equation .    We have the equation .    These two equations give where whose solutions have the parametric form .    By distributivity, .     is the solution space to the equation . Therefore, a basis consists of the single vector , and is one-dimensional.    Since every vector in is orthogonal to every vector in , the orthogonal complement of is .           .     .     so .    By distributivity, .    A basis consists of , and is one-dimensional.    The orthogonal complement of is .       "
+},
+{
+  "id": "ws-act-6-2-2-2",
+  "level": "2",
+  "url": "ws-act-6-2-2.html#ws-act-6-2-2-2",
+  "type": "Activity",
+  "number": "82",
+  "title": "",
+  "body": "  Suppose that and form a basis for , a two-dimensional subspace of . We will find a description of the orthogonal complement .   Suppose that the vector is orthogonal to . If we write , use the fact that to write a linear equation for , , and .    Suppose that is also orthogonal to . In the same way, write a linear equation for , , and that arises from the fact that .    If is orthogonal to both and , these two equations give us a linear system for some matrix . Identify the matrix and write a parametric description of the solution space to the equation .    Since and form a basis for the two-dimensional subspace , any vector in can be written as a linear combination If is orthogonal to both and , use the distributive property of dot products to explain why is orthogonal to .    Give a basis for the orthogonal complement and state the dimension .    Describe , the orthogonal complement of .          We have the equation .    We have the equation .    These two equations give where whose solutions have the parametric form .    By distributivity, .     is the solution space to the equation . Therefore, a basis consists of the single vector , and is one-dimensional.    Since every vector in is orthogonal to every vector in , the orthogonal complement of is .           .     .     so .    By distributivity, .    A basis consists of , and is one-dimensional.    The orthogonal complement of is .      "
+},
+{
+  "id": "ws-act-6-2-3",
+  "level": "1",
+  "url": "ws-act-6-2-3.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 6.2.3",
+  "body": " Activity 6.2.3    This activity illustrates how multiplying a vector by is related to computing dot products with the columns of . You'll develop a better understanding of this relationship if you compute the dot products and matrix products in this activity without using technology.  If , write the matrix .  Suppose that Find the dot products and .  Now write the matrix and its transpose . Find the product and describe how this product computes both dot products and .  Suppose that is a vector that is orthogonal to both and . What does this say about the dot products and ? What does this say about the product ?  Use the matrix to give a parametric description of all the vectors that are orthogonal to and .   Remember that , the null space of , is the solution set of the equation . If is a vector in , explain why must be orthogonal to both and .    Remember that , the column space of , is the set of linear combinations of the columns of . Therefore, any vector in can be written as . If is a vector in , explain why is orthogonal to every vector in .                         Both dot products are 0 so we have .    We need to solve the equation so we find the reduced row echelon form The vectors orthogonal to both and have the form .     tells us that and .    Since is orthogonal to both and , we have                 , .          .     .     .    Apply the distributive property of dot products.       "
+},
+{
+  "id": "ws-act-6-2-3-2",
+  "level": "2",
+  "url": "ws-act-6-2-3.html#ws-act-6-2-3-2",
+  "type": "Activity",
+  "number": "83",
+  "title": "",
+  "body": "  This activity illustrates how multiplying a vector by is related to computing dot products with the columns of . You'll develop a better understanding of this relationship if you compute the dot products and matrix products in this activity without using technology.  If , write the matrix .  Suppose that Find the dot products and .  Now write the matrix and its transpose . Find the product and describe how this product computes both dot products and .  Suppose that is a vector that is orthogonal to both and . What does this say about the dot products and ? What does this say about the product ?  Use the matrix to give a parametric description of all the vectors that are orthogonal to and .   Remember that , the null space of , is the solution set of the equation . If is a vector in , explain why must be orthogonal to both and .    Remember that , the column space of , is the set of linear combinations of the columns of . Therefore, any vector in can be written as . If is a vector in , explain why is orthogonal to every vector in .                         Both dot products are 0 so we have .    We need to solve the equation so we find the reduced row echelon form The vectors orthogonal to both and have the form .     tells us that and .    Since is orthogonal to both and , we have                 , .          .     .     .    Apply the distributive property of dot products.      "
+},
+{
+  "id": "ws-act-6-2-4",
+  "level": "1",
+  "url": "ws-act-6-2-4.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 6.2.4",
+  "body": " Activity 6.2.4    In Sage, the transpose of a matrix A is given by A.T . Define the matrices    Evaluate and . What do you notice about the relationship between these two matrices?  What happens if you transpose a matrix twice; that is, what is ?  Find and . What do you notice about the relationship between these determinants?    Find the product and its transpose .  Is it possible to compute the product ? Explain why or why not.  Find the product and compare it to . What do you notice about the relationship between these two matrices?    What is the transpose of the identity matrix ?  If a square matrix is invertible, explain why you can guarantee that is invertible and why .         .     .             and     The product is not defined because has two columns and has three rows.                 We have so . This means that .           .     .          .          .       "
+},
+{
+  "id": "ws-act-6-2-4-2",
+  "level": "2",
+  "url": "ws-act-6-2-4.html#ws-act-6-2-4-2",
+  "type": "Activity",
+  "number": "84",
+  "title": "",
+  "body": "  In Sage, the transpose of a matrix A is given by A.T . Define the matrices    Evaluate and . What do you notice about the relationship between these two matrices?  What happens if you transpose a matrix twice; that is, what is ?  Find and . What do you notice about the relationship between these determinants?    Find the product and its transpose .  Is it possible to compute the product ? Explain why or why not.  Find the product and compare it to . What do you notice about the relationship between these two matrices?    What is the transpose of the identity matrix ?  If a square matrix is invertible, explain why you can guarantee that is invertible and why .         .     .             and     The product is not defined because has two columns and has three rows.                 We have so . This means that .           .     .          .          .      "
+},
+{
+  "id": "ws-act-6-2-5",
+  "level": "1",
+  "url": "ws-act-6-2-5.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Activity 6.2.5",
+  "body": " Activity 6.2.5       Suppose that is a -dimensional subspace of and that is a matrix whose columns form a basis for ; that is, .  What is the shape of ?  What is the rank of ?  What is the shape of ?  What is the rank of ?  What is ?  What is ?  How are the dimensions of and related?      Suppose that is a subspace of having basis    Find the dimensions and .    Find a basis for . It may be helpful to know that the Sage command A.right_kernel() produces a basis for .     Verify that each of the basis vectors you found for are orthogonal to the basis vectors for .                 is .     .     is .                    since the subspaces live in .           so .    A basis is and .    You can verify by computing the four dot products.                                                               and .    Verify by computing the four dot products.          "
+},
+{
+  "id": "ws-act-6-2-5-2",
+  "level": "2",
+  "url": "ws-act-6-2-5.html#ws-act-6-2-5-2",
+  "type": "Activity",
+  "number": "85",
+  "title": "",
+  "body": "     Suppose that is a -dimensional subspace of and that is a matrix whose columns form a basis for ; that is, .  What is the shape of ?  What is the rank of ?  What is the shape of ?  What is the rank of ?  What is ?  What is ?  How are the dimensions of and related?      Suppose that is a subspace of having basis    Find the dimensions and .    Find a basis for . It may be helpful to know that the Sage command A.right_kernel() produces a basis for .     Verify that each of the basis vectors you found for are orthogonal to the basis vectors for .                 is .     .     is .                    since the subspaces live in .           so .    A basis is and .    You can verify by computing the four dot products.                                                               and .    Verify by computing the four dot products.         "
+},
+{
   "id": "ch-practice-exams-2",
   "level": "1",
   "url": "ch-practice-exams-2.html",
