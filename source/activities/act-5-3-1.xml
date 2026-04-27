@@ -1,0 +1,134 @@
+<worksheet label="ws-act-5-3-1">
+  <title>Preview Activity 5.3.1</title> 
+    <activity xml:id="preview-subspace-5-3">
+
+  <!-- <title>Preview Activity: When Is a Subset Still a Vector Space?</title> -->
+
+  <introduction>
+    <p>
+      In earlier sections, we studied vector spaces as entire collections of
+      objects. In practice, however, we often work with smaller collections
+      that live inside a larger vector space. In this activity, we explore
+      when such a subset behaves like a vector space in its own right.
+    </p>
+
+    <p>
+      Rather than starting with a formal definition, you will examine examples
+      and look for patterns that help explain which subsets work and which do
+      not.
+    </p>
+  </introduction>
+
+  <!-- Task 1 -->
+  <task xml:id="preview-subspaces-task-1">
+    <statement>
+      <p>
+        Consider the following subsets of <m>\mathbb{R}^2</m>.
+      </p>
+
+      <ol>
+        <li>
+          All vectors of the form <m>\begin{bmatrix}x \\ 0 \end{bmatrix}</m>.
+        </li>
+        <li>
+          All vectors of the form <m>\begin{bmatrix}x \\ 1 \end{bmatrix}</m>.
+        </li>
+        <li>
+          All vectors of the form <m>\begin{bmatrix}x \\ y \end{bmatrix}</m> with <m>x+y=0</m>.
+        </li>
+      </ol>
+
+      <p>
+        For each subset:
+      </p>
+
+      <ol>
+        <li>
+          Decide whether adding two vectors from the subset produces another
+          vector in the subset.
+        </li>
+        <li>
+          Decide whether multiplying a vector in the subset by a scalar keeps
+          the result in the subset.
+        </li>
+        <li>
+          Identify one example where something fails, if it does.
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <!-- Task 2 -->
+  <task xml:id="preview-subspaces-task-2">
+    <statement>
+      <p>
+        Now consider the following subsets of the vector space <m>\mathbb{P}_2</m> of
+        polynomials of degree at most 2.
+      </p>
+
+      <ol>
+        <li>
+          All polynomials with zero constant term.
+        </li>
+        <li>
+          All polynomials with constant term equal to 1.
+        </li>
+        <li>
+          All polynomials that have a fixed real number <m>r</m> as a root.
+        </li>
+      </ol>
+
+      <p>
+        For each subset:
+      </p>
+
+      <ol>
+        <li>
+          Decide whether the zero polynomial belongs to the subset.
+        </li>
+        <li>
+          Test whether the subset is closed under addition.
+        </li>
+        <li>
+          Test whether the subset is closed under scalar multiplication.
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <!-- Task 3 -->
+  <task xml:id="preview-subspaces-task-3">
+    <statement>
+      <p>
+        In each of the previous examples, some subsets behaved well under the
+        vector space operations, while others failed in specific ways.
+      </p>
+
+      <ol>
+        <li>
+          Which properties seem to fail most often?
+        </li>
+        <li>
+          Why does the failure of a single property prevent a subset from
+          behaving like a vector space?
+        </li>
+        <li>
+          What role does the zero vector seem to play in all successful
+          examples?
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <conclusion>
+    <p>
+      These examples suggest that only certain subsets of a vector space are
+      stable under the operations of addition and scalar multiplication.
+      In the next section, we will formalize these observations by introducing
+      the definition of a <em>subspace</em>.
+    </p>
+  </conclusion>
+
+</activity>
+   
+</worksheet>

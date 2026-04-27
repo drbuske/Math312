@@ -1,0 +1,140 @@
+<worksheet label="ws-act-5-3-3">
+  <title>Activity 5.3.3</title> 
+    <activity xml:id="subspace-function-spaces">
+<statement>
+  <ol marker="(a)">
+    <li>
+      <p>
+        Let <m>V=C(-\infty,\infty)</m>, the vector space of continuous real-valued functions.
+Define <m>W</m> to be the set of functions <m>\fvec \in V</m> for which <m>\fvec' - \fvec = 0</m>.
+For example, <m>\fvec(x)=e^{x}</m> is in <m>W</m>.
+Show that <m>W</m> is a subspace of <m>V</m>.  
+      </p>
+    </li>
+    <li>
+      <p>
+        Let <m>V=C(-\infty,\infty)</m> as before.
+Define <m>W</m> to be the set of functions <m>\fvec \in V</m> for which <m>\fvec'' + \fvec = 0</m>.
+For example, <m>\fvec(x)=\sin x</m> and <m>\fvec(x) = \cos x</m> are in <m>W</m>.
+Is <m>W</m> a subspace of <m>V</m>? If so, prove it.
+If not, why not?
+      </p>
+    </li>
+    <li>
+      <p>
+        Let <m>V = \Mvec_{2 \times 2}(\mathbb{R})</m>, the vector space of <m>2\times 2</m> real-valued matrices.
+Is <m>W = \left\{ \left[ \begin{array}{cc}a &#x26; 0 \\ 0 &#x26; b\end{array} \right] : a,b \in \mathbb{R}\right\}</m> a subspace of <m>V</m>? If so, prove it.
+If not, why not? If so, what is the dimension of this subspace?
+      </p>
+    </li>
+    <li>
+      <p>
+        Let <m>V = \Mvec_{2 \times 2}(\mathbb{R})</m>, the vector space of <m>2\times 2</m> real-valued matrices.
+Is <m>W = \left\{ \left[ \begin{array}{cc}a &#x26; b \\ 0 &#x26; a\end{array} \right] : a,b \in \mathbb{R}\right\}</m> a subspace of <m>V</m>? If so, prove it.
+If not, why not? If so, what is the dimension of this subspace?   
+      </p>
+    </li>
+    <li>
+      <p>
+        Let <m>V = \Mvec_{2 \times 2}(\mathbb{R})</m>.
+Show that <m>W = \left\{ A: A\left[ \begin{array}{cc}1 &#x26; 0 \\ 1 &#x26; -1\end{array} \right] = \left[ \begin{array}{cc}1 &#x26; 1 \\ 0 &#x26; -1\end{array} \right]A \right\}</m> is a subspace of <m>V</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Let <m>V = \mathbb{P}_{2}</m>, the vector space of polynomials with real coefficients of degree at most 2.
+Let <m>W = \left\{ p \in V : p(0)=1\right\}</m>.
+Is <m>W</m> a subspace of <m>V</m>? If so, prove it.
+If not, why not?
+      </p>
+    </li>
+    <li>
+      <p>
+     Let <m>V = \mathbb{P}_{2}</m>, the vector space of polynomials with real coefficients of degree at most 2.
+Let <m>W = \left\{ p(x)=ax^{2}+bx+c \mid a+b+c=0\right\}</m>.
+Is <m>W</m> a subspace of <m>V</m>? If so, prove it.
+If not, why not?
+      </p>
+    </li>
+    <li>
+      <p>
+  Let <m>V=C(-\infty,\infty)</m>, the vector space of continuous real-valued functions.
+Define <m>W = C_{0}(-\infty,\infty)</m>, the set of functions <m>\fvec \in V</m> that vanish at infinity.
+That is <m>\displaystyle W = \left\{ \fvec \in V : \lim_{x \rightarrow \pm\infty}\fvec(x) = 0 \right\}</m>.
+Is <m>W</m> a subspace of <m>V</m>? Why or why not?
+      </p>
+    </li>
+  </ol>
+</statement>
+<solution>
+  <ol marker="(a)">
+    <li>
+      <p>
+        The zero vector, <m>{\mathbf{0}}(x) = 0</m> (the constant zero function) is in <m>W</m> since it satisfies the equation <m>\fvec' - \fvec=0</m>.
+If <m>\fvec</m> and <m>\gvec</m> both satisfy the equation, then <m>\fvec+\gvec</m> also satisfies the equation since <m>(\fvec+\gvec)' - (\fvec+\gvec) = (\fvec' - \fvec) + (\gvec' - \gvec) = 0 +0 = 0</m>.
+Also, if <m>\fvec \in W</m>, and <m>k</m> is any real number, then <m>k\fvec \in W</m> since <m>(k\fvec)' - (k\fvec) = k(\fvec' - \fvec) = k(0) = 0</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>W</m> is a subspace. The zero vector, <m>{\mathbf{0}}(x) = 0</m> (the constant zero function) is in <m>W</m> since it satisfies the equation <m>\fvec'' + \fvec=0</m>. If <m>\fvec</m> and <m>\gvec</m> both satisfy the equation, then <m>\fvec+\gvec</m> also satisfies the equation since <m>(\fvec+\gvec)'' + (\fvec+\gvec) = (\fvec'' + \fvec) + (\gvec'' + \gvec) = 0 +0 = 0</m>. Also, if <m>\fvec \in W</m>, and <m>k</m> is any real number, then <m>k\fvec \in W</m> since <m>(k\fvec)'' + (k\fvec) = k(\fvec'' + \fvec) = k(0) = 0</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Yes and the dimension is 2.
+The zero matrix <m>{\zerovec}= \left[ \begin{array}{cc}0 &#x26; 0 \\ 0 &#x26; 0\end{array} \right]</m> is clearly in <m>W</m>.
+If <m>A=\left[ \begin{array}{cc}a_1 &#x26; 0 \\ 0 &#x26; b_1\end{array} \right] \in W</m> and <m>B=\left[ \begin{array}{cc}a_2 &#x26; 0 \\ 0 &#x26; b_2\end{array} \right] \in W</m>, then <m>A+B =\left[ \begin{array}{cc}a_1+a_2 &#x26; 0 \\ 0 &#x26; b_1+b_2\end{array} \right]</m> which is clearly in <m>W</m> as well.
+Also, for any scalar <m>k</m>, we have <m>kA = k \left[ \begin{array}{cc}a_1 &#x26; 0 \\ 0 &#x26; b_1\end{array} \right] = \left[ \begin{array}{cc}ka_1 &#x26; 0 \\ 0 &#x26; kb_1\end{array} \right]</m> which is also clearly in <m>W</m>.
+A basis is <m>\left\{ \left[ \begin{array}{cc}1 &#x26; 0 \\ 0 &#x26; 0\end{array} \right], \left[ \begin{array}{cc}0 &#x26; 0 \\ 0 &#x26; 1\end{array} \right] \right\}</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Yes and the dimension is 2.
+The zero matrix <m>{\zerovec}= \left[ \begin{array}{cc}0 &#x26; 0 \\ 0 &#x26; 0\end{array} \right]</m> is clearly in <m>W</m>.
+If <m>A=\left[ \begin{array}{cc}a_1 &#x26; b_1 \\ 0 &#x26; a_1\end{array} \right] \in W</m> and <m>B=\left[ \begin{array}{cc}a_2 &#x26; b_2 \\ 0 &#x26; a_2\end{array} \right] \in W</m>, then <m>A+B =\left[ \begin{array}{cc}a_1+a_2 &#x26; b_1+b_2 \\ 0 &#x26; a_1+a_2\end{array} \right]</m> which is clearly in <m>W</m> as well.
+Also, for any scalar <m>k</m>, we have <m>kA = k \left[ \begin{array}{cc}a_1 &#x26; b_1 \\ 0 &#x26; a_1\end{array} \right] = \left[ \begin{array}{cc}ka_1 &#x26; kb_1 \\ 0 &#x26; ka_1\end{array} \right]</m> which is also clearly in <m>W</m>.
+A basis is <m>\left\{ \left[ \begin{array}{cc}1 &#x26; 0 \\ 0 &#x26; 1\end{array} \right], \left[ \begin{array}{cc}0 &#x26; 1 \\ 0 &#x26; 0\end{array} \right] \right\}</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Since the <m>\zerovec</m> matrix commutes with any matrix, we know that <m>{\zerovec}\in W</m>.
+Suppose <m>A, B \in W</m>.
+Then <m>A\left[ \begin{array}{cc}1 &#x26; 0 \\ 1 &#x26; -1\end{array} \right] = \left[ \begin{array}{cc}1 &#x26; 1 \\ 0 &#x26; -1\end{array} \right]A</m> and <m>B\left[ \begin{array}{cc}1 &#x26; 0 \\ 1 &#x26; -1\end{array} \right] = \left[ \begin{array}{cc}1 &#x26; 1 \\ 0 &#x26; -1\end{array} \right]B</m>.
+So <md>
+  <mrow> (A+B)\left[ \begin{array}{cc} 1 \amp 0 \\ 1 \amp -1  \end{array} \right] \amp = A\left[ \begin{array}{cc} 1 \amp 0 \\ 1 \amp -1 \end{array} \right] + B\left[ \begin{array}{cc} 1 \amp 0 \\ 1 \amp -1 \end{array} \right] </mrow>
+  <mrow> \amp = \left[ \begin{array}{cc} 1 \amp 1 \\ 0 \amp -1 \end{array} \right]A + \left[ \begin{array}{cc} 1 \amp 1 \\ 0 \amp -1 \end{array} \right]B   </mrow>
+  <mrow> \amp = \left[ \begin{array}{cc} 1 \amp 1 \\ 0 \amp -1 \end{array} \right](A+B).</mrow>
+</md>
+Also, <me>(kA)\left[ \begin{array}{cc}1 &#x26; 0 \\ 1 &#x26; -1\end{array} \right] = k \left( A\left[ \begin{array}{cc}1 &#x26; 0 \\ 1 &#x26; -1\end{array} \right] \right) = k\left( \left[ \begin{array}{cc}1 &#x26; 1 \\ 0 &#x26; -1\end{array} \right]A \right) = \left[ \begin{array}{cc}1 &#x26; 1 \\ 0 &#x26; -1\end{array} \right](kA).</me>
+      </p>
+    </li>
+    <li>
+      <p>
+        No.
+The zero polynomial is not in <m>W</m>.
+      </p>
+    </li>
+    <li>
+      <p>
+        Yes.
+First, the zero polynomial <m>\zerovec(x) = 0</m> is in <m>W</m> since all coefficients are 0 (and hence their sum is too).
+If <m>\pvec, \qvec \in W</m>, where <m>\pvec(x) = a_{1}x^{2} + b_{1}x + c_{1}</m> and <m>\qvec(x) = a_{2}x^{2} + b_{2}x + c_{2}</m>, then <md><mrow>(\pvec+\qvec)(x) \amp = a_{1}x^{2} + b_{1}x + c_{1} + a_{2}x^{2} + b_{2}x + c_{2}</mrow><mrow> \amp = (a_{1}+a_{2})x^{2} + (b_{1}+b_{2})x + (c_{1}+c_{2})</mrow></md> and we have <me>(a_{1}+a_{2}) + (b_{1}+b_{2}) + (c_{1}+c_{2})=0</me> since <me>a_{1}+b_{1}+c_{1}=0</me> and <me>a_{2}+b_{2}+c_{2}=0.</me>
+Also, <md><mrow>(k\pvec)(x) \amp = k(a_{1}x^{2}+b_{1}x+c_{1})</mrow><mrow> \amp = (ka_{1})x^{2} + (kb_{1})x + (kc_{1})</mrow></md> where <me>ka_{1} + kb_{1} + kc_{1} = k(a_{1}+b_{1}+c_{1})=0</me> so that <m>W</m> is closed under addition and scalar multiplication.
+      </p>
+    </li>
+    <li>
+      <p>
+        Yes.
+The zero function <m>{\zerovec}(x) = 0</m> is in <m>W</m> since it vanishes at <m>\pm \infty</m>.
+Adding two functions that vanish at <m>\pm \infty</m> will produce a function that also vanishes there.
+And multiplying such a function by a constant will still vanish at <m>\pm \infty</m>. 
+      </p>
+    </li>
+  </ol>
+</solution>
+</activity>
+   
+</worksheet>

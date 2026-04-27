@@ -1,0 +1,43 @@
+<worksheet label="ws-act-5-1-4">
+  <title>Activity 5.1.4</title>
+    <activity xml:id="vs-sequences-real">
+<statement>
+  <p>
+   Let <m>\mathbb{R}^{\mathbb{N}}</m> denote the space of all infinite sequences <m>a_{0}, a_{1}, a_{2}, \ldots</m> of real numbers.
+We denote such a sequence as <m>(\avec_{n})</m> where it is understood that the subscripts <m>n</m> run from 0 to <m>\infty</m>.
+Addition is defined by <m>(\avec_{n}) + (\bvec_{n}) = (\avec_{n}+\bvec_{n})</m> and scalar multiplication by <m>c(\avec_{n}) = (c\avec_{n})</m> for <m>c \in \mathbb{R}</m>.
+  </p>
+  <ol marker="(a)">
+    <li>Identify the zero element <m>{\zerovec}</m> in <m>\mathbb{R}^{\mathbb{N}}</m> from axiom <em>(A3)</em>.</li>
+    <li>Identify the additive inverse of <m>(\avec_{n}) \in \mathbb{R}^{\mathbb{N}}</m> and then show that <m>(\avec_{n}) + (-\avec_{n}) ={\zerovec}</m> for every <m>(\avec_{n}) \in \mathbb{R}^{\mathbb{N}}</m>. </li>
+    <li> Is <m>\mathbb{R}^{\mathbb{N}}</m> a vector space?  </li>
+    <li>Let <m>c</m> denote the space of all <alert>convergent sequences</alert> of real numbers under the same operations.
+Is <m>c</m> a vector space or not?  </li>
+<li>Let <m>c_{1}</m> denote the space of all real <alert>sequences that converge to 1</alert> under the same operations.
+Is <m>c_{1}</m> a vector space or not?  </li>
+<li> Let <m>c_{0}</m> denote the space of all real <alert>sequences that converge to 0</alert> under the same operations.
+Is <m>c_{0}</m> a vector space or not? </li>
+<li>Let <m>c^{+}</m> denote the space of all real <alert>positive sequences</alert> under the same operations.
+Is <m>c^{+}</m> a vector space or not? </li>
+  </ol>
+</statement>
+<solution>
+  <p>
+    <ol marker="(a)">
+      <li> The zero element <m>{\zerovec}</m> is the sequence <m>0,0,0,0,\ldots</m></li>
+      <li> For <m>(\avec_{n}) \in \mathbb{R}^{\mathbb{N}}</m>, we have <m>(\avec_{n}) = a_{1}, a_{2}, a_{3}, \ldots</m>.
+The additive inverse <m>(-\avec_{n})</m> is the sequence <m>-a_{1}, -a_{2}, -a_{3}, \ldots</m>.
+Then, <md><mrow>(\avec_{n}) + (-\avec_{n}) \amp = (a_{1} , a_{2} , a_{3} , \ldots) + (-a_{1}, - a_{2}, - a_{3}, \ldots)</mrow><mrow> \amp =( (a_{1}-a_{1}) , (a_{2}-a_{2}) , (a_{3}-a_{3}), \ldots)</mrow><mrow> \amp = (0,0,0,\ldots)</mrow><mrow> \amp ={\zerovec}.</mrow></md></li>
+<li>Yes.</li>
+<li>Yes; note that the sum of two convergent sequences is also convergent.  So too is a scalar multiple of a convergent sequence. </li>
+<li>No.
+This is easy to see by taking the constant sequence <m>1,1,1,1,\ldots</m> and adding it to itself.
+This sequence does not converge to 1. </li>
+<li>Yes.  The sum of two such sequences also converges to 0 and any constant multiple of a sequence converging to 0 also converges to 0.</li>
+<li>No.  There is no additive unit - see axiom <em>(A3)</em>. </li>
+    </ol>
+  </p>
+</solution>
+</activity>
+   
+</worksheet>

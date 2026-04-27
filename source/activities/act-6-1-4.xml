@@ -1,0 +1,298 @@
+<worksheet label="ws-act-6-1-4">
+   <title>Activity 6.1.4</title>
+    <activity>
+      <statement>
+	<p>
+	  To begin, we identify the <em>centroid</em>, or the
+	  average, of a set of vectors
+	  <m>\vvec_1, \vvec_2, \ldots,\vvec_n</m> 
+	  as
+	  <me>
+	    \frac1n\left(\vvec_1+\vvec_2+\ldots+\vvec_n\right).
+	  </me>
+
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Find the centroid of the vectors
+		<me>
+		  \vvec_1=\twovec11,
+		  \vvec_2=\twovec41,
+		  \vvec_3=\twovec44.
+		</me>
+		and sketch the vectors and the centroid using <xref
+		ref="fig-centroid-plot" />.  You may wish to simply plot
+		the points represented by the tips of the vectors rather
+		than drawing the vectors themselves.
+	      </p>
+
+	      <figure xml:id="fig-centroid-plot">
+		<sidebyside width="50%">
+		  <image source="images/empty-5-k">
+                    <shortdescription>
+                      A coordinate grid and set of coordinate axes.
+                    </shortdescription>
+                    <description>
+                      <p>A <m>1\times1</m> standard coordinate grid
+                      and set of axes.  The horizontal and vertical
+                      ranges both extend from <m>-1</m> to
+                      <m>5</m>.</p>
+                    </description>
+                  </image>
+		</sidebyside>
+		<caption>
+		  The vectors <m>\vvec_1</m>, <m>\vvec_2</m>,
+		  <m>\vvec_3</m> and their centroid.
+		</caption>
+	      </figure>
+
+	      <p>
+		Notice that the centroid lies in the center of the
+		points defined by the vectors.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Now we'll illustrate an algorithm
+		that forms clusterings.  To begin, consider the
+		following 
+		points, represented as vectors,
+		<me>
+		  \vvec_1=\twovec{-2}{1},
+		  \vvec_2=\twovec11,
+		  \vvec_3=\twovec12,
+		  \vvec_4=\twovec32,
+		</me>
+		which are shown in <xref ref="fig-clustering-ex" />.
+	      </p>
+
+	      <figure xml:id="fig-clustering-ex">
+		<sidebyside width="50%">
+		  <image source="images/kmeans-data">
+                    <shortdescription>
+                      A scatter plot of four data points.
+                    </shortdescription>
+                    <description>
+                      <p>A <m>1\times1</m> coordinate grid and set of
+                      axes that contain four data points corresponding
+                      to the vectors <m>\vvec_1=\twovec{-2}1</m>,
+                      <m>\vvec_2=\twovec11</m>,
+                      <m>\vvec_3=\twovec12</m>, and
+                      <m>\vvec_4=\twovec32</m>.</p>
+                    </description>
+                  </image>
+		</sidebyside>
+		<caption>
+		  We will group this set of four points into two
+		  clusters.
+		</caption>
+	      </figure>
+
+	      <p> 
+		Suppose that we would like to group these points into
+		<m>k=2</m> clusters. (Later on, we'll see how to choose
+		an appropriate value for <m>k</m>, the number of
+		clusters.)  We begin by choosing two points
+		<m>c_1</m> and <m>c_2</m> at random and declaring them
+		to be the <q>centers</q>' of the two clusters.
+	      </p>
+
+	      <p>
+		For example, suppose we randomly choose
+		<m>c_1=\vvec_2</m> and <m>c_2=\vvec_3</m> as the center
+		of two clusters.  The cluster centered on
+		<m>c_1=\vvec_2</m> will be the set of points that are
+		closer to <m>c_1=\vvec_2</m> than to <m>c_2=\vvec_3</m>.
+		Determine which of the four data points are in this
+		cluster, which we denote by <m>C_1</m>, and circle them
+		in <xref ref="fig-clustering-ex" />.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		The second cluster will consist of the data points that
+		are closer to <m>c_2=\vvec_3</m> than
+		<m>c_1=\vvec_2</m>.  Determine which of the four points
+		are in this cluster, which we denote by <m>C_2</m>, and
+		circle them in <xref ref="fig-clustering-ex" />.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		We now have a clustering with two clusters, but we will
+		try to improve upon it in the following way.  First,
+		find the centroids of the two clusters;  that is,
+		redefine <m>c_1</m> to be the centroid of cluster
+		<m>C_1</m> and <m>c_2</m> to be the centroid of
+		<m>C_2</m>. 
+		Find those centroids and
+		indicate them in <xref ref="fig-clustering-ex-2" />
+	      </p>
+
+	      <figure xml:id="fig-clustering-ex-2">
+		<sidebyside width="50%">
+		  <image source="images/kmeans-data">
+                    <shortdescription>
+                      A scatter plot of four data points.
+                    </shortdescription>
+                    <description>
+                      <p>A <m>1\times1</m> coordinate grid and set of
+                      axes that contain four data points corresponding
+                      to the vectors <m>\vvec_1=\twovec{-2}1</m>,
+                      <m>\vvec_2=\twovec11</m>,
+                      <m>\vvec_3=\twovec12</m>, and
+                      <m>\vvec_4=\twovec32</m>.</p>
+                    </description>
+                  </image>
+		</sidebyside>
+		<caption>
+		  Indicate the new centroids and clusters.
+		</caption>
+	      </figure>
+
+	      <p>
+		Now update the cluster <m>C_1</m> to be
+		the set of points closer to <m>c_1</m> than <m>c_2</m>.
+		Update the cluster <m>C_2</m> in a similar way and
+		indicate the clusters in <xref ref="fig-clustering-ex-2"
+		/>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Let's perform this last step again.  That is, update the
+		centroids <m>c_1</m> and <m>c_2</m> from the new
+		clusters and then update the clusters <m>C_1</m> and
+		<m>C_2</m>.  Indicate your centroids and clusters in 
+		<xref ref="fig-clustering-ex-3" />.
+	      </p>
+
+	      <figure xml:id="fig-clustering-ex-3">
+		<sidebyside width="50%">
+		  <image source="images/kmeans-data">
+                    <shortdescription>
+                      A scatter plot of four data points.
+                    </shortdescription>
+                    <description>
+                      <p>A <m>1\times1</m> coordinate grid and set of
+                      axes that contain four data points corresponding
+                      to the vectors <m>\vvec_1=\twovec{-2}1</m>,
+                      <m>\vvec_2=\twovec11</m>,
+                      <m>\vvec_3=\twovec12</m>, and
+                      <m>\vvec_4=\twovec32</m>.</p>
+                    </description>
+                  </image>
+		</sidebyside>
+		<caption>
+		  Indicate the new centroids and clusters.
+		</caption>
+	      </figure>
+
+	      <p>
+		Notice that this last step produces the same set of
+		clusters so there is no point in repeating it.  We
+		declare this to be our final clustering.
+	      </p>
+	    </li>
+
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		The centroid is <m>c = \twovec32</m>.
+	      </p>
+	      <sidebyside width="50%">
+		<image source="images/k-means-6-1" />
+	      </sidebyside>
+	    </li>
+
+	    <li>
+	      <p>
+		The first cluster is <m>C_1 = \{\vvec_1,
+		\vvec_2\}</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		The second cluster is 
+		<m>C_2=\{\vvec_3,\vvec_4\}</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		We redefine <m>c_1 = \twovec{-1/2}{0}</m> and <m>c_2 =
+		\twovec22</m>. This leads to new clusters <m>C_1 =
+		\{\vvec_1\}</m> and <m>C_2=\{\vvec_2, \vvec_3,
+		\vvec_4\}</m>. 
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have new centroids <m>c_1 = \twovec{-2}1</m> and
+		<m>c_2 = \twovec{5/3}{5/3}</m>, and the clusters
+		<m>C_1</m> and <m>C_2</m> are unchanged.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		The centroid is <m>c = \twovec32</m>.
+	      </p>
+	      <sidebyside width="50%">
+		<image source="images/k-means-6-1" />
+	      </sidebyside>
+	    </li>
+
+	    <li>
+	      <p>
+		<m>C_1 = \{\vvec_1,
+		\vvec_2\}</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		<m>C_2=\{\vvec_3,\vvec_4\}</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		<m>c_1 = \twovec{-1/2}{0}</m> and <m>c_2 =
+		\twovec22</m>
+	      </p>
+	      <p>
+		<m>C_1 = \{\vvec_1\}</m> and <m>C_2=\{\vvec_2, \vvec_3,
+		\vvec_4\}</m>. 
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>c_1 = \twovec{-2}1</m> and
+		<m>c_2 = \twovec{5/3}{5/3}</m>.  The clusters
+		<m>C_1</m> and <m>C_2</m> are unchanged.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+    </activity>
+   
+</worksheet>

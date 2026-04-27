@@ -1,205 +1,86 @@
 <worksheet label="ws-act-5-1-2">
   <title>Activity 5.1.2</title> 
-    <activity xml:id="act-5-1-3" workspace="3cm">
-      <introduction>
-        <p>
-      Suppose that <m>g</m> is given by the graph at left in <xref ref="F-5-1-Act3"/>
-      and that <m>A</m> is the corresponding integral function defined by <m>A(x) = \int_1^x g(t) \, dt</m>.
-    </p>
-        <figure xml:id="F-5-1-Act3">
-          <caption>At left, the graph of <m>y = g(t)</m>; at right, axes for plotting <m>y = A(x)</m>, where <m>A</m> is defined by the formula <m>A(x) = \int_1^x g(t) \, dt</m>.</caption>
-          <image width="100%" source="images/5_1_Act3">
-<description>
-Two side-by-side coordinate grids. The left graph shows a piecewise linear function g with points rising from the origin to about (1, 1), decreasing to a minimum near (3, −3), then increasing to a peak at about (5, 3) before returning to zero at x = 6. The right grid shows axes only, with no function plotted.
-</description>
-            <!-- <description>
-            <p>
-              Two sets of adjacent coordinate axes are provided, both showing the independent variable ranging horizontally from <m>-1</m> to <m>7</m> and the dependent variable ranging vertically from <m>-1</m> to <m>7</m>.  The grid is <m>1 \times 1</m>.
-            </p>
-            <p>
-              On the left axes, the graph of <m>y = g(t)</m> is provided.  This piecewise linear function is <m>0</m> for <m>t \lt 0</m> and <m>t \gt 6</m>.  On the interval <m>0 \lt t \lt 1</m>, <m>g(t) = t</m>.  On the interval <m>1 \lt t \lt 3</m>, <m>g(t) = 3-2t</m>. On the interval <m>3 \lt t \lt 5</m>, <m>g(t) = 3(t-4)</m>. And on the interval <m>5 \lt t \lt 6</m>, <m>g(t) = -3(t-6)</m>.
-            </p>
-            <p>        
-              At right, blank coordinate axes for plotting <m>y = A(x) = \int_1^x g(t) \, dt</m>.
-            </p>
-          </description> -->
-        </image>
-        </figure>
-        <p/>
-      </introduction>
-      <task workspace="3cm" xml:id="act-5-1-3-task-0">
-        <statement>
-          <p>
-            On what interval(s) is <m>A</m> an increasing function?
-            On what intervals is <m>A</m> decreasing?
-            Why?
-          </p>
-        </statement>
-        <hint>
-          <p>
-            Where is <m>A</m> accumulating positive signed area?
-          </p>
-        </hint>
-        <answer>
-          <p><m>A</m> is increasing on <m>(0,1.5)</m>, <m>(4,6)</m>;
-            <m>A</m> is decreasing on <m>(1.5,4)</m>.
-          </p>
-        </answer>
-        <solution>
-          <p><m>A</m> is accumulating positive signed area wherever <m>g</m> is positive,
-            and thus <m>A</m> is increasing on <m>(0,1.5)</m>,
-            <m>(4,6)</m>;
-            <m>A</m> is accumulating negative signed area and therefore decreasing wherever <m>g</m> is negative,
-            which occurs on <m>(1.5,4)</m>.
-          </p>
-        </solution>
-      </task>
-      <task workspace="3cm" xml:id="act-5-1-3-task-1">
-        <statement>
-          <p>
-            On what interval(s) do you think <m>A</m> is concave up? concave down?
-            Why?
-          </p>
-        </statement>
-        <hint>
-          <p>
-            As <m>A</m> accumulates positive or negative signed area,
-            where is the rate at which such area is accumulated increasing?
-          </p>
-        </hint>
-        <answer>
-          <p><m>A</m> is concave up on <m>(0,1)</m> and <m>(3,5)</m>;
-            <m>A</m> is concave down on <m>(1,3)</m> and <m>(5,6)</m>.
-          </p>
-        </answer>
-        <solution>
-          <p>
-            Here we want to consider where <m>A</m> is changing at an increasing rate
-            (concave up)
-            or changing at a decreasing rate
-            (concave down).
-            On <m>(0,1)</m> and <m>(4,5)</m>, <m>A</m> is increasing,
-            and we can also see that since <m>g</m> is increasing,
-            <m>A</m> is increasing at an increasing rate.
-            Similarly, on <m>(3,4)</m>
-            (where <m>g</m> is negative so <m>A</m> is decreasing),
-            since <m>g</m> is increasing it follows that <m>A</m> is decreasing at an increasing rate.
-            Thus,
-            <m>A</m> is concave up on <m>(0,1)</m> and <m>(3,5)</m>.
-            Analogous reasoning shows that <m>A</m> is concave down on <m>(1,3)</m> and <m>(5,6)</m>.
-          </p>
-        </solution>
-      </task>
-      <task workspace="2cm" xml:id="act-5-1-3-task-2">
-        <statement>
-          <p>
-            At what point(s) does <m>A</m> have a relative minimum? a relative maximum?
-          </p>
-        </statement>
-        <hint>
-          <p>
-            Where does <m>A</m> change from accumulating positive signed area to accumulating negative signed area?
-          </p>
-        </hint>
-        <answer>
-          <p>
-            At <m>x = 1.5</m>, <m>A</m> has a relative maximum;
-            <m>A</m> has a relative minimum at <m>x = 4</m>.
-          </p>
-        </answer>
-        <solution>
-          <p>
-            Based on our work in (a),
-            we see that <m>A</m> changes from increasing to decreasing at <m>x = 1.5</m>,
-            and thus <m>A</m> has a relative maximum there.
-            Similarly, <m>A</m> has a relative minimum at <m>x = 4</m>.
-          </p>
-        </solution>
-      </task>
-      <task workspace="6cm" xml:id="act-5-1-3-task-3">
-        <statement>
-          <p>
-            Use the given information to determine the exact values of <m>A(0)</m>,
-            <m>A(1)</m>,
-            <m>A(2)</m>,
-            <m>A(3)</m>, <m>A(4)</m>,
-            <m>A(5)</m>, and <m>A(6)</m>.
-          </p>
-        </statement>
-        <hint>
-          <p>
-            Note,
-            for instance, that <m>A(2) = \int_1^2 g(t) \, dt</m>.
-          </p>
-        </hint>
-        <answer>
-          <p><m>A(0) = -\frac{1}{2}</m>;
-            <m>A(1) = 0</m>; <m>A(2) = 0</m>; <m>A(3) = -2</m>;
-            <m>A(4) = -3.5</m>, <m>A(5) = -2</m>, <m>A(6) = -0.5</m>.
-          </p>
-        </answer>
-        <solution>
-          <p>
-            Using the fact that <m>g</m> is piecewise linear and the definition of <m>A</m>,
-            we find that <m>A(0) = \int_1^0 g(t) \, dt = -\int_0^1 g(t) \, dt = -\frac{1}{2}</m>;
-            <m>A(1) = \int_1^1 g(t) \, dt = 0</m>;
-            <m>A(2) = \int_1^2 g(t) \, dt = 0</m>.
-            Analogous reasoning shows that <m>A(3) = -2</m>,
-            <m>A(4) = -3.5</m>, <m>A(5) = -2</m>, <m>A(6) = -0.5</m>.
-          </p>
-        </solution>
-      </task>
-      <task workspace="3cm" xml:id="act-5-1-3-task-4">
-        <statement>
-          <p>
-            Based on your responses to all of the preceding questions,
-            sketch a complete and accurate graph of
-            <m>y = A(x)</m> on the axes provided,
-            being sure to indicate the behavior of <m>A</m> for <m>x \lt 0</m> and <m>x \gt 6</m>.
-          </p>
-        </statement>
-        <hint>
-          <p>
-            Use your work in (a)-(d) appropriately.
-          </p>
-        </hint>
-        <answer>
-          <p>
-            Use your work in (a)-(d) appropriately.
-          </p>
-        </answer>
-        <solution>
-          <p>
-            Use your work in (a)-(d) appropriately.
-          </p>
-        </solution>
-      </task>
-      <task workspace="3cm" xml:id="act-5-1-3-task-5">
-        <statement>
-          <p>
-            How does the graph of <m>B</m> compare to <m>A</m> if <m>B</m> is instead defined by <m>B(x) = \int_0^x g(t) \, dt</m>?
-          </p>
-        </statement>
-        <hint>
-          <p>
-            What is the value of <m>B(0)</m>?
-            How does this compare to <m>A(0)</m>?
-          </p>
-        </hint>
-        <answer>
-          <p><m>B(x) = A(x) + \frac{1}{2}</m>.
-          </p>
-        </answer>
-        <solution>
-          <p>
-            Note that <m>B(0) = 0</m>,
-            while <m>A(0) = -\frac{1}{2}</m>.
-            Likewise, <m>B(1) = \frac{1}{2}</m>, while <m>A(1) = 0</m>.
-            Indeed, we can see that for any value of <m>x</m>,
-            <m>B(x) = A(x) + \frac{1}{2}</m>.
-          </p>
-        </solution>
-      </task>
-    </activity>
+    <activity xml:id="vs-polys-degree-n">
+
+  <statement>
+<p>
+  Let <m>n \geq 0</m> be an integer and let <m>\mathbb{P}_{n}</m> denote the set of all polynomials with real coefficients of degree at most <m>n \geq 0</m>.
+  Members of <m>\mathbb{P}_{n}</m> have the form
+  <md>
+    <mrow> {\pvec}(t) = a_{0} + a_{1}t + a_{2}t^{2} + \ldots + a_{n} t^{n} </mrow>
+  </md>
+  where <m>a_{0}, a_{1}, \ldots, a_{n}</m> are real numbers and <m>t</m> is a real variable.
+  The purpose of this activity is to verify that <m>\mathbb{P}_{n}</m> is a vector space.
+</p>
+
+  <ol marker="(a)">
+    <li>
+      <p>
+        Explain why <m>\mathbb{P}_{n}</m> is closed under the operation of usual polynomial addition.
+        That is, explain why <m>{\pvec}+ \qvec \in \mathbb{P}_{n}</m> if <m>\pvec, \qvec \in \mathbb{P}_{n}</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Explain why <m>\mathbb{P}_{n}</m> is closed under scalar multiplication.
+        That is, explain why <m>c{\pvec}\in \mathbb{P}_{n}</m> if <m>c \in \mathbb{R}</m> and <m>\pvec\in \mathbb{P}_{n}</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Identify/describe the zero element <m>{\zerovec}\in \mathbb{P}_{n}</m> in axiom <em>(A3)</em>.
+        Then show that <m>\pvec +{\zerovec}= \pvec</m> for every <m>\pvec \in \mathbb{P}_{n}</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        For an element <m>\pvec \in \mathbb{P}_{n}</m>, identify/describe the additive inverse <m>-\pvec</m> in axiom A4.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        For elements <m>\pvec, \qvec \in \mathbb{P}_{n}</m>, show that axiom <em>(SM1)</em> holds.
+      </p>
+    </li>
+  </ol>
+  </statement>
+
+  <solution>
+    <ol>
+      <li>
+        <p>If <m>\pvec, \qvec \in \mathbb{P}_{n}</m>, then both <m>\pvec</m> and <m>\qvec</m> are polynomials of degree at most <m>n</m>. Adding two such polynomials yields a polynomial <m>\pvec + \qvec</m> having degree at most <m>n</m> as well. </p>
+      </li>
+
+      <li>
+      <p>
+        If <m>\pvec\in \mathbb{P}_{n}</m>, then <me>\pvec(x)=a_{0}+a_{1}x+a_{2}x^{2} + \ldots + a_{n}x^{n}.</me> For any constant <m>c</m>, we then have <md><mrow>(c\pvec)(x) \amp = c(a_{0}+a_{1}x+a_{2}x^{2} + \ldots + a_{n}x^{n}) </mrow> <mrow> \amp = c\cdot a_{0} + (c\cdot a_{1})x + (c \cdot a_{2})x^{2} + \ldots + (c \cdot a_{n})x^{n}</mrow></md> which is clearly also in <m>\mathbb{P}_{n}</m>. 
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <m>{\zerovec}(x) = 0 + 0x + 0x^{2} + \ldots 0x^{n}</m>. If <m>\pvec</m> is any element in <m>\mathbb{P}_{n}</m>, then <me>\pvec(x) = a_{0} + a_{1}x + a_{2}x^{2} + \ldots + a_{n}x^{n}</me> so that <md><mrow>\pvec(x) +{\zerovec}(x) \amp = (a_{0} + a_{1}x + a_{2}x^{2} + \ldots + a_{n}x^{n}) + (0 + 0x + 0x^{2} + \ldots 0x^{n}) </mrow><mrow> \amp =  (a_{0}+0) + (a_{1}+0)x + (a_{2}+0)x^{2} + \ldots + (a_{n}+0)x^{n} </mrow> <mrow> \amp = a_{0} + a_{1}x + a_{2}x^{2} + \ldots + a_{n}x^{n} </mrow> <mrow> \amp = \pvec(x).</mrow></md> 
+      </p>
+    </li>
+
+    <li>
+      <p>
+        If <m>\pvec</m> is any element in <m>\mathbb{P}_{n}</m>, then <me>\pvec(x) = a_{0} + a_{1}x + a_{2}x^{2} + \ldots + a_{n}x^{n}</me> and the additive inverse is <m>-\pvec</m> defined by <me>-\pvec(x) = -a_{0} -a_{1}x - a_{2}x^{2} - \ldots - a_{n}x^{n}.</me> 
+      </p>
+    </li>
+
+    <li>
+      <p>
+        If <m>\pvec</m> is any element in <m>\mathbb{P}_{n}</m>, then <me>\pvec(x) = a_{0} + a_{1}x + a_{2}x^{2} + \ldots + a_{n}x^{n}.</me> Similarly, if <m>\qvec</m> is any element in <m>\mathbb{P}_{n}</m>, then <me>\qvec(x) = b_{0} + b_{1}x + b_{2}x^{2} + \ldots + b_{n}x^{n}.</me> For any constant <m>k \in \mathbb{R}</m>, we then have <md><mrow> (k(\pvec+\qvec))(x) \amp = k(\pvec(x) + \qvec(x))</mrow><mrow> \amp = k((a_{0}+b_{0}) + (a_{1}+b_{1})x + (a_{2}+b_{2})x^{2} + \ldots + (a_{n}+b_{n})x^{n} </mrow><mrow> \amp = ka_{0} + kb_{0} + ka_{1}x + kb_{1}x + ka_{2}x^{2} + kb_{2}x^{2} + \ldots + ka_{n}x^{n} + kb_{n}x^{n} </mrow> <mrow> \amp = (ka_{0} + ka_{1}x + ka_{2}x^{2} + \ldots + ka_{n}x^{n}) + (kb_{0} + kb_{1}x + kb_{2}x^{2} + \ldots + kb_{n}x^{n})</mrow><mrow> \amp = (k\pvec)(x) + (k\qvec)(x).</mrow></md>
+      </p>
+    </li>
+    </ol>
+  </solution>
+
+</activity>
    
 </worksheet>

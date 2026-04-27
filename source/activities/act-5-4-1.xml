@@ -1,0 +1,100 @@
+<worksheet label="ws-act-5-4-1">
+   <title>Preview Activity 5.4.1</title>
+    <activity xml:id="preview-basisdim-5-4">
+
+  <introduction>
+    <p>
+      In the previous sections, we studied spanning sets and linear
+      independence. In this section, we combine these ideas to address a
+      fundamental question:
+      <em>what is the smallest collection of vectors needed to describe every
+      vector in a space?</em>
+    </p>
+
+    <p>
+      Rather than starting with formal definitions, this activity asks you to
+      experiment with representing vectors using different sets and to observe
+      when representations are possible, unique, or redundant.
+    </p>
+  </introduction>
+
+  <!-- Task 1 -->
+  <task xml:id="preview-basis-task-1">
+    <statement>
+      <p>
+        Consider the vectors
+        <m>\uvec_1=\begin{bmatrix}1 \\ 0 \end{bmatrix}</m>, <m>\uvec_2=\begin{bmatrix}0 \\ 1 \end{bmatrix}</m>, and <m>\uvec_3=\begin{bmatrix}1 \\ 1 \end{bmatrix}</m> in
+        <m>\mathbb{R}^2</m>.
+      </p>
+
+      <ol>
+        <li>
+          Show that every vector in <m>\mathbb{R}^2</m> can be written as a
+          combination of <m>\uvec_1</m> and <m>\uvec_2</m>.
+        </li>
+        <li>
+          Show that every vector in <m>\mathbb{R}^2</m> can also be written as a
+          combination of <m>\uvec_1</m> and <m>\uvec_3</m>.
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <!-- Task 2 -->
+  <task xml:id="preview-basis-task-2">
+    <statement>
+      <p>
+        Now consider the set
+        <m>S=\left\{\begin{bmatrix}1 \\ 0 \end{bmatrix},\begin{bmatrix}0 \\ 1 \end{bmatrix},\begin{bmatrix}1 \\ 1 \end{bmatrix}\right\}</m>.
+      </p>
+
+      <ol>
+        <li>
+          Is it possible to remove one vector from <m>S</m> and still represent
+          every vector in <m>\mathbb{R}^2</m>? Explain.
+        </li>
+        <li>
+          What does this suggest about whether all three vectors are necessary?
+        </li>
+        <li>
+          How might you recognize when a vector in a spanning set is
+          unnecessary?
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <!-- Task 3 -->
+  <task xml:id="preview-basis-task-3">
+    <statement>
+      <p>
+        Consider the vector space <m>\mathbb{P}_2</m> of polynomials of degree at most 2.
+      </p>
+
+      <ol>
+        <li>
+          Explain why every polynomial in <m>\mathbb{P}_2</m> can be written using the
+          set <m>\{1,x,x^2\}</m>.
+        </li>
+        <li>
+          Could a set with only two polynomials possibly describe every element
+          of <m>\mathbb{P}_2</m>? Why or why not?
+        </li>
+        <li>
+          How does this compare to what you observed in <m>\mathbb{R}^2</m>?
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <conclusion>
+    <p>
+      These examples suggest that certain spanning sets are minimal and free
+      of redundancy, while others are not. In the remainder of this section,
+      we will formalize these ideas using the concepts of basis and dimension.
+    </p>
+  </conclusion>
+
+</activity>
+   
+</worksheet>

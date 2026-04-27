@@ -1,0 +1,250 @@
+<worksheet label="ws-act-6-1-5">
+   <title>Activity 6.1.5</title>
+    <activity>
+      <statement>
+	<p>
+	  We'll now use the objective to compare clusterings and to
+	  choose an appropriate value of <m>k</m>.
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		In the previous activity, one initial choice of
+		<m>c_1</m> and <m>c_2</m> led to the
+		clustering:
+		<me>
+		  \begin{array}{rcl}
+		  C_1 \amp {}={} \amp \{\vvec_1\} \\
+		  C_2 \amp {}={} \amp \{\vvec_2, \vvec_3,\vvec_4\}
+		  \end{array}
+		</me>
+		with centroids <m>c_1=\vvec_1</m> and
+		<m>c_2=\twovec{5/3}{5/3}</m>.  
+		Find the objective of this clustering.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have now seen two clusterings and computed their
+		objectives.  Recall that our dataset is shown in <xref
+		ref="fig-clustering-ex" />.  Which of the two
+		clusterings feels like the better fit?  How is this fit
+		reflected in the values of the objectives?
+	      </p>
+	    </li>
+
+	    <li xml:id="li-guess-clusters">
+	      <p>
+		Evaluating the following cell will load and display a
+		dataset consisting of 177 data points.  This dataset
+		has the name <c>data</c>.
+		<sage>
+		  <input>
+sage.repl.load.load("https://raw.githubusercontent.com/davidaustinm/ula_modules/master/k_means.py", globals())
+list_plot(data, color='blue', size=20, aspect_ratio=1)
+		  </input>
+		</sage>
+		Given this plot of the data, what would seem like a
+		reasonable number of clusters?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		In the following cell, you may choose a value of
+		<m>k</m> and then run the algorithm to determine and
+		display a clustering and its objective.  If you run the
+		algorithm a few 
+		times with the same value of <m>k</m>, you will likely
+		see different clusterings having different objectives.
+		This is natural since our algorithm starts by making a
+		random choice of points <m>c_1,c_2,\ldots,c_k</m>, and a
+		different choices may lead to different clusterings.
+		Choose a value of <m>k</m> and run the algorithm a few
+		times.  Notice that clusterings having lower objectives
+		seem to fit the data better.  Repeat this experiment
+		with a few different values of <m>k</m>.
+		<sage>
+		  <input>
+k = 2  # you may change the value of k here
+clusters, centroids, objective = kmeans(data, k)
+print('Objective =', objective)
+plotclusters(clusters, centroids)
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		For a given value of <m>k</m>, our strategy is to run
+		the algorithm several times and choose the clustering
+		with the smallest objective.  After choosing a value of
+		<m>k</m>, the following cell will run the
+		algorithm 10 times and display the clustering having the
+		smallest objective.
+		<sage>
+		  <input>
+k = 2  # you may change the value of k here
+clusters, centroids, objective = minimalobjective(data, k)
+print('Objective =', objective)
+plotclusters(clusters, centroids)
+		  </input>
+		</sage>
+	      </p>
+	      
+	      <p>
+		For each value of <m>k</m> between 2 and 9, find the
+		clustering having the smallest objective and plot your
+		findings in <xref ref="fig-clustering-elbow" />.
+	      </p>
+	      
+	      <figure xml:id="fig-clustering-elbow">
+		<sidebyside width="80%">
+		  <image source="images/clustering-elbow">
+                    <shortdescription>
+                      A horizontal axis labelled k and a vertical axis
+                      labelled Objective.
+                    </shortdescription>
+                    <description>
+                      <p>A set of coordinate axes where the horizontal
+                      axis is labelled <m>k</m> and the vertical axis
+                      is labelled <q>Objective</q>.  The horizontal
+                      range is from <m>0</m> to <m>9</m> while the
+                      vertical range is from <m>0</m> to <m>4</m>.
+                      There is also a
+                      coordinate grid to help in plotting points.</p>
+                    </description>
+                  </image>
+		</sidebyside>
+		<caption>
+		  Construct a plot of the minimal objective as it
+		  depends on the choice of <m>k</m>.
+		</caption>
+	      </figure>
+
+	      <p>
+		This plot is called an <em>elbow plot</em> due to its
+		shape.  Notice how the objective decreases
+		sharply when <m>k</m> is small and then flattens out.
+		This leads to a location, called the elbow, where the
+		objective transitions from being sharply decreasing to
+		relatively flat.  This means that increasing <m>k</m>
+		beyond the elbow does not significantly decrease the
+		objective, which makes the elbow a good choice for
+		<m>k</m>.
+	      </p>
+
+	      <p>
+		Where does the elbow occur in your plot above?  How does
+		this compare to the best value of <m>k</m> that you
+		estimated by simply looking at the data in <xref
+		ref="li-guess-clusters" />.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+
+	<p>
+	  Of course, we could increase <m>k</m> until each data
+	  point is its own cluster.  However, this defeats the
+	  point of the technique, which is to group together
+	  nearby data points in the hope that they share common
+	  features, thus providing insight into the structure
+	  of the data.
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		The objective is
+		<me> \frac14\left(\len{(\vvec_1 - c_1)}^2
+		+ \len{(\vvec_2 - c_2)}^2
+		+ \len{(\vvec_3 - c_2)}^2
+		+ \len{(\vvec_4 - c_2)}^2\right)
+		= \frac56\text{.}
+		</me>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		The clustering with <m>C_1=\{\vvec_1\}</m> and <m>C_2
+		= \{\vvec_2, \vvec_3, \vvec_4\}</m> appears to be a
+		tighter clustering and has a smaller objective.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		It appears that the best clustering is either
+		<m>k=6</m> or <m>k=7</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		With a fixed value of <m>k</m>, running the algorithm
+		several times leads to different clusterings with
+		different objectives.  If we increase <m>k</m>, the
+		objective generally decreases.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The elbow occurs around <m>k=6</m> or <m>k=7</m>,
+		which are the values that we felt led to the best
+		clusterings.
+	      </p>
+	      <sidebyside width="90%">
+		<image source="images/clustering-elbow-plot" />
+	      </sidebyside>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+	    
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		The objective is <m>5/6</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		The clustering <m>C_1=\{\vvec_1\}</m> and <m>C_2
+		= \{\vvec_2, \vvec_3, \vvec_4\}</m> has a smaller
+		objective. 
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>k=6</m> or <m>k=7</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		With a fixed value of <m>k</m>, running the algorithm
+		several times leads to different clusterings with
+		different objectives.  If we increase <m>k</m>, the
+		objective generally decreases.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The elbow occurs around <m>k=6</m> or <m>k=7</m>.
+	      </p>
+	      <sidebyside width="90%">
+		<image source="images/clustering-elbow-plot" />
+	      </sidebyside>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+	    
+    </activity>
+   
+</worksheet>

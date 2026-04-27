@@ -1,0 +1,199 @@
+<worksheet label="ws-act-6-1-2">
+   <title>Activity 6.1.2</title>
+    <activity>
+      <statement>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p> Sketch the vectors <m>\vvec=\twovec32</m> and
+	      <m>\wvec=\twovec{-1}3</m> using <xref
+	      ref="fig-dot-empty" />.
+	      </p>
+	
+	      <figure xml:id="fig-dot-empty">
+		<sidebyside width="50%">
+		  <image source="images/empty-4">
+                    <shortdescription>
+                      A coordinate grid and set of axes.
+                    </shortdescription>
+                    <description>
+                      <p>A <m>1\times1</m> standard coordinate grid
+                      and set of coordinate axes.  The horizontal and
+                      vertical ranges both run from <m>-4</m> to
+                      <m>4</m>.</p>
+                    </description>
+                  </image>
+		</sidebyside>
+		<caption>
+		  Sketch the vectors <m>\vvec</m> and <m>\wvec</m> here.
+		</caption>
+	      </figure>
+	    </li>
+	    
+	    <li><p> Find the lengths <m>\len{\vvec}</m> and
+	    <m>\len{\wvec}</m> using the dot product. </p></li>
+	    
+	    <li><p> Find the dot product <m>\vvec\cdot\wvec</m> and use it
+	    to find the angle between <m>\vvec</m> and
+	    <m>\wvec</m>.
+	    </p></li>
+	    
+	    <li><p> Consider the vector <m>\xvec = \twovec{-2}{3}</m>.
+	    Include it in your sketch in <xref ref="fig-dot-empty" /> and
+	    find the angle between <m>\vvec</m> and <m>\xvec</m>.
+	    </p></li>
+	    
+	    <li><p> If two vectors are perpendicular, what can you say
+	    about their dot product?  Explain your thinking.
+	    </p></li>
+	    
+	    <li><p> For what value of <m>k</m> is the vector
+	    <m>\twovec6k</m> perpendicular to <m>\wvec</m>?
+	    </p></li>
+	    
+	    <li><p> Sage can be used to find lengths of vectors and their
+	    dot products.  For instance, if <c>v</c> and <c>w</c> are
+	    vectors, then <c>v.norm()</c> gives the length of <c>v</c> and
+	    <c>v * w</c> gives <m>\vvec\cdot\wvec</m>.</p>
+	    
+	    <p> Suppose that
+	    <me>
+	      \vvec=\fourvec203{-2}, \hspace{24pt}
+	      \wvec=\fourvec1{-3}41\text{.}
+	    </me>
+	    Use the Sage cell below to find <m>\len{\vvec}</m>,
+	    <m>\len{\wvec}</m>, <m>\vvec\cdot\wvec</m>, and the angle
+	    between <m>\vvec</m> and <m>\wvec</m>.  You may use
+	    <c>arccos</c> to find the angle's measure expressed in
+	    radians.  
+	    <sage>
+	    </sage>
+	    </p></li>
+	</ol></p>
+      </statement>
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <sidebyside width="50%">
+		<image source="images/ex-6-1-1-plot" />
+	      </sidebyside>
+	    </li>
+
+	    <li>
+	      <p>
+		We find that
+		<md>
+		  <mrow>
+		    \vvec\cdot\vvec {}={} 13
+		  </mrow>
+		  <mrow>
+		    \wvec\cdot\wvec {}={} 10
+		  </mrow>
+		</md>
+		so that
+		<m>\len{\vvec} = \sqrt{13}</m> and <m>\len{\wvec} =
+		\sqrt{10}</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		<m>\vvec\cdot\wvec = 3</m> so that
+		<me>
+		  \theta =
+		  \arccos\left(\frac{\vvec\cdot\wvec}{\len{\vvec}\len{\wvec}}\right)
+		  = 52.1^\circ.
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\vvec\cdot\xvec = 0</m> so that
+		<me>
+		  \theta =
+		  \arccos\left(\frac{\vvec\cdot\xvec}{\len{\vvec}\len{\xvec}}\right)
+		  = 90^\circ.
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		If two vectors are perpendicular, then the angle
+		between them is <m>90^\circ</m>.  Since
+		<m>\cos(90^\circ) = 0</m>, their dot product
+		must be zero.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The dot product is <m>-6 + 3k = 0</m> so <m>k=2</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We find that <m>\len{\vvec} = \sqrt{17}</m>,
+		<m>\len{\wvec} = 3\sqrt{3}</m>, <m>\vvec\cdot\wvec =
+		12</m>, and the angle between these vectors is
+		<m>55.9^\circ</m>.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <sidebyside width="50%">
+		<image source="images/ex-6-1-1-plot" />
+	      </sidebyside>
+	    </li>
+
+	    <li>
+	      <p>
+		<m>\len{\vvec} = \sqrt{13}</m> and <m>\len{\wvec} =
+		\sqrt{10}</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		<m> 
+		  \theta =
+		  = 52.1^\circ.
+		</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>
+		  \theta =
+		  = 90^\circ.
+		</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Their dot product
+		must be zero.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>k=2</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>55.9^\circ</m>.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+
+      </answer>
+    </activity>
+   
+</worksheet>

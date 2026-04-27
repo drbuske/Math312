@@ -1,0 +1,53 @@
+<worksheet label="ws-act-5-1-3">
+   <title>Activity 5.1.3</title>
+    <activity xml:id="vs-continuous_ab">
+
+  <statement>
+<p> Let <m>(a,b)</m> be an open interval of real numbers.
+Define <m>C(a,b)</m> to be the set of continuous, real-valued functions <m>\fvec</m> defined on <m>(a,b)</m>.
+That is, elements are continuous functions <m>\fvec: (a,b) \rightarrow \mathbb{R}</m>.
+Define the addition of continous functions by
+<md>
+  <mrow>(\fvec+\gvec)(x) = \fvec(x)+\gvec(x)</mrow>
+</md>
+and scalar multiplication by
+<md>
+  <mrow> (c\fvec)(x) = c(\fvec(x)).</mrow>
+</md>
+We investigate whether <m>C(a,b)</m> is a vector space or not.</p>
+<ol marker="(a)">
+  <li>Explain why <m>C(a,b)</m> is closed under addition as defined.
+That is, explain why <m>{\fvec}+ \gvec \in C(a,b)</m> if <m>\fvec, \gvec \in C(a,b)</m>.  
+</li>
+<li>Explain why <m>C(a,b)</m> is closed under scalar multiplication.
+That is, explain why <m>c{\fvec}\in C(a,b)</m> if <m>c \in \mathbb{R}</m> and 
+<m>\fvec \in C(a,b)</m>.</li>
+<li>Identify/describe the zero element <alert>0</alert> and additive inverse <m>-\fvec</m> of elements <m>\fvec \in C(a,b)</m>.
+How do you know that these elements are also in <m>C(a,b)</m>?   </li>
+<li>Carefully show that axiom <em>(SM2)</em> holds for <m>C(a,b)</m>.  </li>
+<li>Is <m>C(a,b)</m> a vector space?  </li>
+</ol>
+  </statement>
+
+  <solution>
+    <p>
+      <ol marker="(a)">
+        <li>Adding two continuous functions gives another continuous function.</li>
+        <li>Think of multiplying by <m>c</m> as vertically stretching the graph of a function <m>f(x)</m>.
+If <m>c &#x3C; 0</m>, then it is also reflected about the <m>x-</m>axis.
+In any case, if a function <m>f(x)</m> is continuous, then vertically stretching and/or 
+reflecting about the <m>x</m>-axis will not change the continuous nature of the graph.</li>
+<li>The <m>{\mathbf{0}}</m> element in <m>C(a,b)</m> is the zero function <m>{\mathbf{0}}(x) = 0</m> for every <m>x</m>.
+Since constant functions are continuous, the zero function is continuous.
+If <m>\fvec</m> is continuous on <m>(a,b)</m>, then <m>-\fvec</m> is the function having graph reflected about the <m>x</m>-axis and is therefore also continuous.
+</li>  
+<li>If <m>\uvec \in C(a,b)</m>, then <m>\uvec(x)</m> is a continuous function on <m>(a,b)</m>.
+For any <m>k, l \in \mathbb{R}</m>, we then have <m>((k+l)\uvec)(x) = k\uvec(x) + l\uvec(x)</m>. </li>
+<li>yes.</li>
+</ol>
+    </p>
+  </solution>
+
+</activity>
+   
+</worksheet>

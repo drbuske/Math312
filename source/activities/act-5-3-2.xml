@@ -1,0 +1,46 @@
+<worksheet label="ws-act-5-3-2">
+  <title>Activity 5.3.2</title> 
+    <activity xml:id="subspace-sequences">
+
+  <statement>
+<ol marker="(a)">
+  <li>Let <m>c</m> denote the vector space of convergent, infinite sequences of real numbers.
+Let <m>c_{0}</m> denote the subset of infinite sequences of real numbers that converge to 0.
+Show that <m>c_{0}</m> is a subspace of <m>c</m>.
+</li>
+<li>Let <m>W</m> denote the subset of <m>c</m> (the vector space of convergent, infinite sequences) that consists of those sequences having <alert>finite support</alert>.
+By that, we mean that <m>W</m> consists of sequences where only finitely many of the terms are nonzero.
+Is <m>W</m> a subspace of <m>c</m>? Why or why not?  </li>
+<li> Is the set of convergent, geometric sequences (i.e.
+those of the form <m>a_{n}=ar^{n}</m> where <m>|r|&#x3C;1</m>) a subspace of <m>c</m>? Why or why not?  </li>
+<li>Is the set <m>\displaystyle S=\left\{ (a_{n}) \in c : \lim_{n \rightarrow \infty}a_{n}= 1 \right\}</m> a subspace of <m>c</m>? Why or why not? </li>
+<li> Is the set of all constant sequences a subspace of <m>c</m>? Why or why not?    </li>
+</ol>
+  </statement>
+
+  <solution>
+    <p>
+      <ol marker="(a)">
+        <li>We show that if <m>(\avec_{n})</m> and <m>(\bvec_{n})</m> are sequences in <m>c_{0}</m>, then their sum is as well.
+But the sum of two sequences that converge to 0 also converges to 0.
+We also show that if <m>(\avec_{n})</m> is a sequence converging to 0 then any multiple of it will also converge to 0.
+But this is clear.
+So <m>c_{0}</m> is closed under addition and scalar multiplication.
+The zero element is obviously the sequence of all 0's and hence clearly converges to 0 and is in <m>c_{0}</m>. </li>
+        <li><m>W</m> is a subspace. If we add two such sequences, then the sum will only have a finite number of terms that are not zero (at most double the number of nonzero terms in each individual sequence). If we multiply such a sequence by a constant, it will have (at most) the same number of nonzero terms. The zero sequence (consisting of all 0's) has no nonzero terms and so is also in <m>W</m>.
+</li>  
+<li>No.
+Adding the sequences <m>(r,r^{2},r^{3},\ldots)</m> and <m>(s,s^{2},s^{3},\ldots)</m> gives a sequence <m>(r+s, r^{2}+s^{2}, r^{3}+s^{3},\ldots)</m> which is not geometric unless either <m>r</m> or <m>s</m> is 0.    </li>
+<li>No.
+The constant sequence <m>(1,1,1,\ldots)</m> is in <m>S</m>, but adding this sequence to itself will not yield a sequence in <m>S</m>.</li>
+<li>Yes.
+The zero sequence <m>(0,0,0,\ldots)</m> is the zero element and is constant.
+Adding two constant sequences will yield a constant sequence.
+Multiplying each term of a sequence by a scalar <m>k</m> will produce another constant sequence. </li>
+</ol>
+    </p>
+  </solution>
+
+</activity>
+   
+</worksheet>

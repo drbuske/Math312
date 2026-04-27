@@ -1,0 +1,95 @@
+<worksheet label="ws-act-5-4-2">
+   <title>Activity 5.4.2</title>
+    <activity xml:id="subspace-dimension">
+<statement>
+  <p> For each vector space below, calculate the dimension.  </p>
+    <ol marker="(a)">
+      <li>
+        <p>
+          <m>\mathbb{R}^{n}</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\mathbb{P}_{5}</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>M_{3 \times 3}(\mathbb{R})</m>, the vector space of <m>3 \times 3</m> matrics with real entries.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>{\cal{L}}_{3}(\mathbb{R})</m>, the subspace of lower triangular <m>3 \times 3</m> matrices.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>C(0,1)</m>, the vector space of continuous real-valued functions on <m>(0,1)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>c_{0}</m>, the subspace of real-valued sequences that converge to 0. 
+        </p>
+      </li>
+      <li>
+        <p>
+          The subspace <m>W ={\textrm{span}}\ \left\{ 1, x, x+1, x+2, x^{2}, x^{2}+x \right\}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The subspace of constant real-valued sequences.  
+        </p>
+      </li>
+    </ol>
+</statement>
+<solution>
+  <ol>
+    <li>
+      <p>
+        <m>n</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        6
+      </p>
+    </li>
+    <li>
+      <p>
+        9
+      </p>
+    </li>
+    <li>
+      <p>
+        6
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\infty</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\infty</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        3
+      </p>
+    </li>
+    <li>
+      <p>
+        1
+      </p>
+    </li>
+  </ol>
+</solution>
+</activity>
+   
+</worksheet>

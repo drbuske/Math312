@@ -1,0 +1,128 @@
+<worksheet label="ws-act-5-2-1">
+   <title>Preview Activity 5.2.1</title>
+    <activity xml:id="preview-lincombo-5-2">
+
+  <introduction>
+    <p>
+      In the previous section, we learned what it means for a set of objects
+      to form a vector space. In this section, we ask a new question:
+      <em>how can vectors be built from other vectors?</em>
+    </p>
+
+    <p>
+      Rather than beginning with formal definitions, this activity invites you
+      to experiment with combinations of vectors and to identify patterns that
+      will later be captured by precise mathematical language.
+    </p>
+  </introduction>
+
+  <!-- Task 1 -->
+  <task xml:id="preview-lc-task-1">
+    <statement>
+      <p>
+        Consider the vectors
+        <m>\uvec=\begin{bmatrix}1 \\ 0 \end{bmatrix}</m> and <m>\vvec=\begin{bmatrix}0 \\ 1 \end{bmatrix}</m> in <m>\mathbb{R}^2</m>.
+      </p>
+
+      <ol>
+        <li>
+          List at least five different vectors that can be formed using
+          expressions of the form
+          <m>a\uvec+b\vvec</m>, where <m>a</m> and <m>b</m> are real numbers.
+        </li>
+        <li>
+          Describe, in words, the collection of all vectors that can be formed
+          this way.
+        </li>
+        <li>
+          What changes if you restrict <m>a</m> and <m>b</m> to be integers?
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <!-- Task 2 -->
+  <task xml:id="preview-lc-task-2">
+    <statement>
+      <p>
+        Now consider the vectors <m>\wvec=\begin{bmatrix}1 \\ 1\end{bmatrix}</m> and <m>\zvec=\begin{bmatrix}2 \\ 2\end{bmatrix}</m> in
+        <m>\mathbb{R}^2</m>.
+      </p>
+
+      <ol>
+        <li>
+          Which vectors can be formed using expressions of the form
+          <m>a\wvec+b\zvec</m>?
+        </li>
+        <li>
+          Compare your answer with the result from the previous task.
+        </li>
+        <li>
+          What seems different about the roles played by <m>\wvec</m> and
+          <m>\zvec</m> compared to <m>\uvec</m> and <m>\vvec</m>?
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <!-- Task 3 -->
+  <task xml:id="preview-lc-task-3">
+    <statement>
+      <p>
+        Consider the set of polynomials
+        <m>p_1(x)=x</m> and <m>p_2(x)=x^2</m>.
+      </p>
+
+      <ol>
+        <li>
+          Write several expressions that combine <m>p_1</m> and <m>p_2</m>
+          using multiplication by numbers and addition.
+        </li>
+        <li>
+          Which polynomials can be created this way?
+        </li>
+        <li>
+          Is it possible to create the polynomial <m>1</m> using these two
+          polynomials? Explain.
+        </li>
+      </ol>
+    </statement>
+  </task>
+
+  <!-- Task 4 -->
+  <!-- <task xml:id="preview-lc-task-4">
+    <statement>
+      <p>
+        In each of the previous tasks, you worked with a small collection of
+        vectors and examined all the vectors that could be produced from them.
+      </p>
+
+      <ol>
+        <li>
+          What properties must a collection of vectors have in order to
+          generate “many” other vectors?
+        </li>
+        <li>
+          What kinds of collections seem insufficient for this purpose?
+        </li>
+        <li>
+          How might you decide whether one vector is “redundant” given the
+          others?
+        </li>
+      </ol>
+    </statement>
+  </task> -->
+
+  <conclusion>
+    <p>
+      This activity suggests that some collections of vectors are powerful
+      enough to generate large portions of a vector space, while others are
+      limited or redundant. In the remainder of this section, we will develop
+      precise language to describe these ideas using the concepts of linear
+      combinations, span, and linear independence.
+    </p>
+  </conclusion>
+
+</activity>
+   
+</worksheet>

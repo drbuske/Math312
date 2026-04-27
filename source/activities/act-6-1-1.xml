@@ -1,0 +1,129 @@
+<worksheet label="ws-act-6-1-1">
+   <title>Preview Activity 6.1.1</title>
+    <activity label="ula-preview-6-1">
+      <task label="ula-preview-6-1-a">
+        <statement>
+	  <p> Compute the dot product
+	  <me>\twovec{3}{4}\cdot\twovec{2}{-2}\text{.}
+	  </me>
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    <m>\twovec34\cdot\twovec2{-2} = 3\cdot2+4\cdot(-2) =
+	    -2</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-1-b">
+        <statement>
+	  <p> Sketch the vector <m>\vvec=\twovec{3}{4}</m> below.  Then
+	  use the Pythagorean theorem to find the length of <m>\vvec</m>.
+	  <figure>
+	    <sidebyside width="50%">
+	      <image source="images/empty-6">
+                <shortdescription>
+                  A coordinate grid and set of axes.
+                </shortdescription>
+                <description>
+                  <p>A <m>1\times1</m> standard coordinate grid and
+                  set of labelled axes.  The horizontal and vertical
+                  ranges run from <m>-6</m> to <m>6</m>.</p>
+                </description>
+              </image>
+	    </sidebyside>
+	    <caption>
+	      Sketch the vector <m>\vvec</m> and find its length.
+	    </caption>
+	  </figure>
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    The length of <m>\vvec</m> is 5.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-1-c">
+        <statement>
+	  <p> Compute the dot product <m>\vvec\cdot\vvec</m>.  How
+	  is the dot product related to the length of <m>\vvec</m>?
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    <m>\vvec\cdot\vvec = 25</m>, which is the square of
+	    the length of <m>\vvec</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-1-d">
+        <statement>
+	  <p> Remember that the matrix <m>\mattwo0{-1}10</m>
+	  represents the matrix transformation that rotates vectors
+	  counterclockwise by <m>90^\circ</m>.  Beginning with the vector
+	  <m>\vvec = \twovec34</m>, find <m>\wvec</m>, the result
+	  of rotating <m>\vvec</m> by <m>90^\circ</m>, and sketch it above.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    <m>\wvec=\twovec{-4}3</m>
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-1-e">
+        <statement>
+	  <p> What is the dot product <m>\vvec\cdot\wvec</m>?
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    <m>\vvec\cdot\wvec=0</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-1-f">
+        <statement>
+	  <p> Suppose that <m>\vvec=\twovec ab</m>.  Find the
+	  vector <m>\wvec</m> that results from rotating <m>\vvec</m>
+	  by <m>90^\circ</m> and find the dot product
+	  <m>\vvec\cdot\wvec</m>.  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    <m>\vvec\cdot\wvec=0</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-1-g">
+        <statement>
+	  <p> Suppose that <m>\vvec</m> and <m>\wvec</m> are two
+	  perpendicular vectors.  What do you think their dot product
+	  <m>\vvec\cdot\wvec</m> is?
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    The dot product should be zero.
+	  </p>
+        </solution>
+      </task>
+
+    
+    </activity>
+   
+</worksheet>
