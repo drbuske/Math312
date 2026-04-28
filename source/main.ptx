@@ -124,6 +124,21 @@
           <xi:include href="./activities/act-6-2-3.xml"/>
           <xi:include href="./activities/act-6-2-4.xml"/>
           <xi:include href="./activities/act-6-2-5.xml"/>
+          <xi:include href="./activities/act-6-3-1.xml"/>
+          <xi:include href="./activities/act-6-3-2.xml"/>
+          <xi:include href="./activities/act-6-3-3.xml"/>
+          <xi:include href="./activities/act-6-3-4.xml"/>
+          <xi:include href="./activities/act-6-4-1.xml"/>
+          <xi:include href="./activities/act-6-4-2.xml"/>
+          <xi:include href="./activities/act-6-4-3.xml"/>
+          <xi:include href="./activities/act-6-4-4.xml"/>
+          <xi:include href="./activities/act-6-4-5.xml"/>
+          <xi:include href="./activities/act-6-5-1.xml"/>
+          <xi:include href="./activities/act-6-5-2.xml"/>
+          <xi:include href="./activities/act-6-5-3.xml"/>
+          <xi:include href="./activities/act-6-5-4.xml"/>
+          <xi:include href="./activities/act-6-5-5.xml"/>
+          <xi:include href="./activities/act-6-5-6.xml"/>
       </chapter>
 
        <!--  <chapter xml:id="ch-Textbook">

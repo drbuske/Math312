@@ -1,0 +1,142 @@
+<worksheet label="ws-act-6-4-1">
+   <title>Preview Activity 6.4.1</title>
+    <activity label="ula-preview-6-4">
+      <introduction>
+        <p>
+	  Suppose we have a basis for <m>\real^2</m> consisting of
+	  the vectors
+	  <me>
+	    \vvec_1=\twovec11,\hspace{24pt}
+	    \vvec_2=\twovec02
+	  </me>
+	  as shown in <xref ref="fig-gs-intro" />.  Notice that this basis
+	  is not orthogonal.
+        </p>
+        <figure xml:id="fig-gs-intro">
+	  <sidebyside width="50%">
+	    <image source="images/gram-schmidt-intro">
+              <shortdescription>
+                Two vectors in the two dimensional coordinate plane
+                that are not orthogonal to one another.
+              </shortdescription>
+              <description>
+                <p>Two vectors <m>\vvec_1=\twovec11</m> and
+                <m>\vvec_2=\twovec02</m> against a <m>1\times1</m>
+                standard coordinate grid and set of axes.</p>
+              </description>
+            </image>
+	  </sidebyside>
+	  <caption>
+	    A basis for <m>\real^2</m>.
+	  </caption>
+        </figure>
+      </introduction>
+
+      <task label="ula-preview-6-4-a">
+        <statement>
+	  <p>
+	    Find the vector <m>\vhat_2</m> that is the orthogonal
+	    projection of
+	    <m>\vvec_2</m> onto the line defined by <m>\vvec_1</m>.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    <m>\vhat_2 = \vvec_1</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-4-b">
+        <statement>
+	  <p>
+	    Explain why <m>\vvec_2 - \vhat_2</m> is orthogonal to
+	    <m>\vvec_1</m>.
+	  </p>
+	</statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    The orthogonal projection <m>\vhat_2</m> is defined so
+	    that <m>\vvec_2-\vhat_2</m> is orthogonal to
+	    <m>\vvec_1</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-4-c"
+            attachment="yes">
+        <statement>
+	  <p>
+	    Define the new vectors <m>\wvec_1=\vvec_1</m> and
+	    <m>\wvec_2=\vvec_2-\vhat_2</m> and sketch them in <xref
+	    ref="fig-gs-empty" />.  Explain why <m>\wvec_1</m> and
+	    <m>\wvec_2</m> define an orthogonal basis for <m>\real^2</m>.
+	  </p>
+          <p component="rs-preview">You can upload a scan of your sketch below.</p>
+	  
+	  <figure xml:id="fig-gs-empty">
+	    <sidebyside width="50%">
+	      <image source="images/empty-3">
+                <shortdescription>
+                  A two dimensional coordinate grid and set of axes.
+                </shortdescription>
+                <description>
+                  <p>A <m>1\times1</m> coordinate grid and set of
+                  axes.  The horizontal and vertical ranges run from
+                  <m>-3</m> to <m>3</m>.</p>
+                </description>
+              </image>
+	    </sidebyside>
+	    <caption>
+	      Sketch the new basis <m>\wvec_1</m> and <m>\wvec_2</m>.
+	    </caption>
+	  </figure>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    <m>\wvec_1 = \twovec11</m> and
+	    <m>\wvec_2=\twovec{-1}1</m> are othogonal, which can
+	    be checked with the dot product.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-4-d">
+        <statement>
+	  <p>
+	    Write the vector <m>\bvec=\twovec8{-10}</m> as a linear
+	    combination of <m>\wvec_1</m> and <m>\wvec_2</m>.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    The projection formula gives <m>\bvec = -\wvec_1
+	    -9\wvec_2</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-4-e">
+        <statement>
+	  <p>
+	    Scale the vectors <m>\wvec_1</m> and <m>\wvec_2</m> to
+	    produce an orthonormal basis <m>\uvec_1</m> and
+	    <m>\uvec_2</m> for <m>\real^2</m>.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    <m>\uvec_1=\frac1{\sqrt{2}}\twovec11</m> and
+	    <m>\uvec_2=\frac1{\sqrt{2}}\twovec{-1}1</m>.
+	  </p>
+        </solution>
+      </task>
+
+    </activity>
+   
+</worksheet>

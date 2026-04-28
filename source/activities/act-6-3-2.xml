@@ -1,0 +1,195 @@
+<worksheet label="ws-act-6-3-2">
+   <title>Activity 6.3.2</title>
+    <activity>
+      <statement>
+	<p>
+	  Consider the vectors
+	  <me>
+	    \wvec_1 = \threevec1{-1}1,\hspace{24pt}
+	    \wvec_2 = \threevec1{1}0,\hspace{24pt}
+	    \wvec_3 = \threevec1{-1}{-2}.
+	  </me>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Verify that this set forms an
+		orthogonal set of <m>3</m>-dimensional vectors.
+	      </p>
+	      <sage>
+		<input>
+		</input>
+	      </sage>
+	    </li>
+
+	    <li>
+	      <p>
+		Explain why we know that this set of vectors forms a
+		basis for <m>\real^3</m>.
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		Suppose that <m>\bvec=\threevec24{-4}</m>.  Find the
+		weights <m>c_1</m>, <m>c_2</m>, and <m>c_3</m> that express
+		<m>\bvec</m> as a linear combination
+		<m>\bvec=c_1\wvec_1 + c_2\wvec_2 + c_3\wvec_3
+		</m>
+		using <url href="https://drbuske.github.io/linearalgebra/sec-orthogonal-bases.html#prop-orthog-lincomb" visual="Proposition 6.3.4"/>. 
+    <!-- <xref ref="prop-orthog-lincomb" />. -->
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		If we multiply a vector <m>\vvec</m> by a positive
+		scalar <m>s</m>, the length of <m>\vvec</m> is also
+		multiplied by <m>s</m>;  that is,
+		<m>\len{s\vvec} = s\len{\vvec}</m>.
+	      </p>
+
+	      <p>
+		<idx>unit vector</idx>
+		Using this observation, find a vector <m>\uvec_1</m>
+		that is parallel to <m>\wvec_1</m> and has length 1.
+		Such vectors are called <em>unit vectors</em>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    <li>
+	      <p> Similarly, find a
+	      unit vector <m>\uvec_2</m> that is parallel to
+	      <m>\wvec_2</m> and a unit vector <m>\uvec_3</m> that is
+	      parallel to <m>\wvec_3</m>. 
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Construct the matrix
+		<m>Q=\begin{bmatrix}
+		\uvec_1 \amp \uvec_2 \amp \uvec_3
+		\end{bmatrix}
+		</m> and find the product <m>Q^TQ</m>.  Use <url href="
+https://drbuske.github.io/linearalgebra/sec-transpose.html#prop-transpose-multiplication" visual="Proposition 6.2.8"/>
+    <!-- <xref ref="prop-transpose-multiplication" /> -->
+    to explain your
+		result. 
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		We compute the dot products
+		<m>\wvec_1\cdot\wvec_2=0</m>,
+		<m>\wvec_1\cdot\wvec_3=0</m>, and
+		<m>\wvec_2\cdot\wvec_3=0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We know that an orthogonal set of vectors is linearly
+		independent.  Therefore, we have a set of three
+		linearly independent vectors in <m>\real^3</m> so they
+		must form a basis for <m>\real^3</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We find that <m>\bvec = -2\wvec_1 + 3\wvec_2 +
+		\wvec_3</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Since <m>\len{\wvec_1} = \sqrt{3}</m>, we find
+		<me>
+		  \uvec_1 = \frac{1}{\sqrt{3}}\wvec_1 =
+		  \threevec{1/\sqrt{3}}{-1/\sqrt{3}}{1/\sqrt{3}}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We find that
+		<me>
+		  \uvec_2 =
+		  \threevec{1/\sqrt{2}}{1/\sqrt{2}}0,\hspace{24pt}
+		  \uvec_3 =
+		  \threevec{1/\sqrt{6}}{-1/\sqrt{6}}{-2/\sqrt{6}}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We find <m>Q^TQ=I</m> since each entry in this matrix
+		product is the dot product of two columns of <m>Q</m>.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+		  
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		We compute the dot products
+		<m>\wvec_1\cdot\wvec_2=0</m>,
+		<m>\wvec_1\cdot\wvec_3=0</m>, and
+		<m>\wvec_2\cdot\wvec_3=0</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		An orthogonal set of vectors is linearly
+		independent.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\bvec = -2\wvec_1 + 3\wvec_2 +
+		\wvec_3</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>
+		  \uvec_1 = \frac{1}{\sqrt{3}}\wvec_1 =
+		  \threevec{1/\sqrt{3}}{-1/\sqrt{3}}{1/\sqrt{3}}
+		</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We find that
+		<me>
+		  \uvec_2 =
+		  \threevec{1/\sqrt{2}}{1/\sqrt{2}}0,\hspace{24pt}
+		  \uvec_3 =
+		  \threevec{1/\sqrt{6}}{-1/\sqrt{6}}{-2/\sqrt{6}}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>Q^TQ=I</m>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+		
+    </activity>
+   
+</worksheet>

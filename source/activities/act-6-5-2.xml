@@ -1,0 +1,244 @@
+<worksheet label="ws-act-6-5-2">
+   <title>Activity 6.5.2</title>
+    <activity>
+      <statement>
+	<p>
+	  Suppose we have three data points <m>(1,1)</m>,
+	  <m>(2,1)</m>, and <m>(3,3)</m> and that we would like to find a
+	  line passing through them.
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Plot these three points in <xref ref="fig-ls-empty"
+		/>.  Are you able to draw a line that passes through
+		all three points? 
+		<figure xml:id="fig-ls-empty">
+		  <sidebyside width="50%">
+		    <image source = "images/empty-ls">
+                      <shortdescription>
+                        A two dimensional coordinate grid and set of
+                        axes.
+                      </shortdescription>
+                      <description>
+                        <p>A standard <m>1\times1</m> coordinate grid
+                        and set of axes.  The horizontal and vertical
+                        ranges run from <m>-1</m> to <m>4</m>.</p>
+                      </description>
+                    </image>
+		  </sidebyside>
+		  <caption> Plot the three data points here. </caption>
+		</figure>
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		Remember that the equation of a line can be written
+		as <m>b + mx=y</m> where <m>m</m> is the slope and <m>b</m> is
+		the <m>y</m>-intercept.  We will try to find <m>b</m> and
+		<m>m</m> so that the three points lie on the line.
+	      </p>
+	      
+	      <p>
+		The first data point <m>(1,1)</m> gives an equation
+		for <m>b</m> and <m>m</m>.  In particular, we know that when
+		<m>x=1</m>, then <m>y=1</m> so we have
+		<m>b + m(1) = 1</m> or <m>b + m = 1</m>.  Use the other two
+		data points to create a linear system describing <m>m</m> and
+		<m>b</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		We have obtained a linear system having three equations,
+		one from each data 
+		point, for the two unknowns <m>b</m> and <m>m</m>.
+		Identify a matrix <m>A</m> and vector <m>\bvec</m> so
+		that the system has the form <m>A\xvec=\bvec</m>, where
+		<m>\xvec=\ctwovec bm</m>.  
+	      </p>
+
+	      <p>
+		Notice that the unknown vector <m>\xvec=\ctwovec bm</m>
+		describes the line that we seek.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Is there a solution to this linear system?  How does
+		this question relate to your attempt to draw a line
+		through the three points above?
+		<sage>
+		  <input>
+
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Since this system is inconsistent, we know that
+		<m>\bvec</m> is not in the column space <m>\col(A)</m>.
+		Find an orthogonal basis for <m>\col(A)</m> and use it
+		to find the orthogonal projection <m>\widehat\bvec</m>
+		of <m>\bvec</m> onto <m>\col(A)</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Since <m>\widehat\bvec</m> is in <m>\col(A)</m>, the
+		equation <m>A\xvec = \widehat\bvec</m> is consistent.  Find its
+		solution <m>\xvec = \ctwovec{b}{m}</m> and sketch the line
+		<m>y=b + mx</m> in <xref ref="fig-ls-empty" />.  We say that
+		this is the line of best fit.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		After plotting the points, we see that it's not
+		possible to draw a line through all three points.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have the equations
+		<md>
+		  <mrow>
+		    b + m \amp {}={} 1
+		  </mrow>
+		  <mrow>
+		    b + 2m \amp {}={} 1
+		  </mrow>
+		  <mrow>
+		    b + 3m \amp {}={} 3
+		  </mrow>
+		</md>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have <m>A = \begin{bmatrix}
+		1 \amp 1 \\
+		1 \amp 2 \\
+		1 \amp 3 \\
+		\end{bmatrix}</m> and <m>\bvec=\threevec113</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Finding the reduced row echelon form of the associated
+		augmented matrix tells us this is an inconsistent
+		system.  Since a solution would describe a line
+		passing through the three points, we should expect
+		this.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Applying Gram-Schmidt gives us the orthogonal basis
+		<m>\wvec_1=\threevec111</m> and <m>\wvec_2 =
+		\threevec{-1}01</m>.  Projecting <m>\bvec</m> onto
+		<m>\col(A)</m> gives
+		<m>\bhat=\threevec{2/3}{5/3}{8/3}</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Solving the equation <m>A\xvec = \bhat</m> gives
+		<m>\xvec=\ctwovec{-1/3}1</m>, which describes a line
+		having vertical intercept <m>b=-1/3</m> and the slope
+		<m>=1</m>.  This line is shown in <xref
+		ref="fig-best-fit-line" />.
+	      </p>
+	      <figure xml:id="fig-best-fit-line">
+		<sidebyside width="50%">
+		  <image source="images/line-regress-2" />
+		</sidebyside>
+		<caption>
+		  The line that best approximates the three data
+		  points.
+		</caption>
+	      </figure>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		It's not
+		possible to draw a line through all three points.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have the equations
+		<md>
+		  <mrow>
+		    b + m \amp {}={} 1
+		  </mrow>
+		  <mrow>
+		    b + 2m \amp {}={} 1
+		  </mrow>
+		  <mrow>
+		    b + 3m \amp {}={} 3
+		  </mrow>
+		</md>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have <m>A = \begin{bmatrix}
+		1 \amp 1 \\
+		1 \amp 2 \\
+		1 \amp 3 \\
+		\end{bmatrix}</m> and <m>\bvec=\threevec113</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		This linear system is inconsistent.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\bhat=\threevec{2/3}{5/3}{8/3}</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\xvec=\twovec{-1/3}1</m>.
+		This line is shown in <xref
+		ref="fig-best-fit-line-ans" />.
+	      </p>
+	      <figure xml:id="fig-best-fit-line-ans">
+		<sidebyside width="50%">
+		  <image source="images/line-regress-2" />
+		</sidebyside>
+		<caption>
+		  The line that best approximates the three data
+		  points.
+		</caption>
+	      </figure>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+
+    </activity>
+   
+</worksheet>

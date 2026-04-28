@@ -1,0 +1,279 @@
+<worksheet label="ws-act-6-5-5">
+   <title>Activity 6.5.5</title>
+    <activity>
+      <statement>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Suppose that we have a small dataset containing the
+		points <m>(0,2)</m>, <m>(1,1)</m>, <m>(2,3)</m>, and
+		<m>(3,3)</m>, such as appear when the following cell is
+		evaluated.
+		<sage>
+		  <input>
+sage.repl.load.load('https://raw.githubusercontent.com/davidaustinm/ula_modules/master/orthogonality.py',
+globals())
+data = [[0, 2], [1, 1], [2, 3], [3, 3]]
+list_plot(data, color='blue', size=40)		  
+		  </input>
+		</sage>
+		In addition to loading and plotting the data, evaluating
+		that cell provides the following commands:
+		<ul>
+		  <li>
+		    <p>
+		      <c>Q, R = QR(A)</c> returns the <m>QR</m>
+		      factorization of <m>A</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <c>demean(v)</c> returns the demeaned vector
+		      <m>\widetilde{\vvec}</m>.
+		    </p>
+		  </li>
+		</ul>
+	      </p>
+
+	      <p>
+		Let's fit a quadratic function of the form
+		<me>
+		  \beta_0 + \beta_1 x + \beta_2 x^2 = y
+		</me>
+		to this dataset.
+	      </p>
+
+	      <p>
+		Write four equations, one for each data point, that
+		describe the 
+		coefficients <m>\beta_0</m>, <m>\beta_1</m>, and
+		<m>\beta_2</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Express these four equations as a linear system
+		<m>A\xvec = \bvec</m> where <m>\xvec =
+		\threevec{\beta_0}{\beta_1}{\beta_2}</m>.
+	      </p>
+
+	      <p>
+		Find the <m>QR</m> factorization of <m>A</m> and use it
+		to find the least-squares approximate solution
+		<m>\xhat</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Use the parameters <m>\beta_0</m>,
+		<m>\beta_1</m>, and <m>\beta_2</m> that you found to
+		write the quadratic function that fits the data.  You
+		can plot this function, along with the data, by entering
+		your function in the place indicated below.
+		<sage>
+		  <input>
+list_plot(data, color='blue', size=40) + plot( **your function here**,
+0, 3, color='red')
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		What is your predicted <m>y</m> value when <m>x=1.5</m>?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Find the coefficient of determination <m>R^2</m> for the
+		quadratic 
+		function.  What does this say about the quality of the
+		fit?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Now fit a cubic polynomial of the form
+		<me>
+		  \beta_0 + \beta_1x + \beta_2 x^2 + \beta_3x^3 = y
+		</me>
+		to this dataset.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Find the coefficient of determination <m>R^2</m> for the
+		cubic function.  What does this say about the quality of
+		the fit?
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		What do you notice when you plot the cubic function
+		along with the data?  How does this reflect the value of
+		<m>R^2</m> that you found?
+		<sage>
+		  <input>
+list_plot(data, color='blue', size=40) + plot( **your function here**,
+0, 3, color='red')
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		We have the equations
+		<md>
+		  <mrow>
+		    \beta_0 + 0\beta_1 + 0^2\beta_2 \amp {}={} 2
+		  </mrow>
+		  <mrow>
+		    \beta_0 + 1\beta_1 + 1^2\beta_2 \amp {}={} 1
+		  </mrow>
+		  <mrow>
+		    \beta_0 + 2\beta_1 + 2^2\beta_2 \amp {}={} 3
+		  </mrow>
+		  <mrow>
+		    \beta_0 + 3\beta_1 + 3^2\beta_2 \amp {}={} 3
+		  </mrow>
+		</md>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		With <m>A=\begin{bmatrix}
+		1 \amp 0 \amp 0 \\
+		1 \amp 1 \amp 1 \\
+		1 \amp 2 \amp 4 \\
+		1 \amp 3 \amp 9 \\
+		\end{bmatrix}
+		</m> and <m>\bvec=\fourvec2133</m>, we find
+		<m>\xhat = \threevec{7/4}{-1/4}{1/4}</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The quadratic function is <m>\frac74 - \frac14 x +
+		\frac14x^2 = y</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The predicted value is <m>y=\frac74 -
+		\frac14(1.5)+\frac14(1.5)^2 = 1.9375</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2 = 0.54</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We find <m>2-\frac{25}{6}x+4x^2-\frac56x^3 = y</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2=1</m>, which means that we have a perfect fit.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The graph of the cubic function passes through each
+		data point.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		We have the equations
+		<md>
+		  <mrow>
+		    \beta_0 + 0\beta_1 + 0^2\beta_2 \amp {}={} 2
+		  </mrow>
+		  <mrow>
+		    \beta_0 + 1\beta_1 + 1^2\beta_2 \amp {}={} 1
+		  </mrow>
+		  <mrow>
+		    \beta_0 + 2\beta_1 + 2^2\beta_2 \amp {}={} 3
+		  </mrow>
+		  <mrow>
+		    \beta_0 + 3\beta_1 + 3^2\beta_2 \amp {}={} 3
+		  </mrow>
+		</md>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\xhat = \threevec{7/4}{-1/4}{1/4}</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\frac74 - \frac14 x +
+		\frac14x^2 = y</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>1.9375</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>0.54</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>2-\frac{25}{6}x+4x^2-\frac56x^3 = y</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2=1</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The graph of the cubic function passes through each
+		data point.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+    </activity>
+   
+</worksheet>

@@ -1,0 +1,248 @@
+<worksheet label="ws-act-6-5-6">
+   <title>Activity 6.5.6</title>
+    <activity>
+      <statement>
+	<p>
+	  This activity explores a dataset describing 
+	  Arctic sea ice and that comes from
+	  <url href="http://sustainabilitymath.org/"
+	       visual="sustainabilitymath.org">
+	    Sustainability Math.
+	  </url>
+	</p>
+	
+	<p>
+	  Evaluating the cell below will plot the extent of Arctic sea
+	  ice, in millions of square kilometers, during the twelve
+	  months of 2012.
+	  <sage>
+	    <input>
+sage.repl.load.load('https://raw.githubusercontent.com/davidaustinm/ula_modules/master/orthogonality.py', globals())
+df = pd.read_csv('https://raw.githubusercontent.com/davidaustinm/ula_modules/master/data/sea_ice.csv')
+data = [vector([row[0], row[2]]) for row in df.values]
+month = vector(df['Month'])
+ice = vector(df['2012'])
+print(df[['Month', '2012']])
+list_plot(data, color='blue', size=40)
+	    </input>
+	  </sage>
+	  In addition, you have access to a few special variables and
+	  commands: 
+	  <ul>
+	    <li>
+	      <p>
+		<c>month</c> is the vector of month values and
+		<c>ice</c> is the vector of sea ice values from the
+		table above.  
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		<c>vandermonde(x, k)</c> constructs the Vandermonde
+		matrix of degree <m>k</m> using the points in the vector
+		<c>x</c>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		<c>Q, R = QR(A)</c> provides the <m>QR</m> factorization
+		of <m>A</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		<c>demean(v)</c> returns the demeaned vector
+		<m>\widetilde{\vvec}</m>.
+	      </p>
+	    </li>
+	  </ul>
+	</p>
+
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Find the vector <m>\xhat</m>, the least-squares
+		approximate solution to the linear system that results
+		from fitting a degree 5 polynomial to the data.
+		<sage>
+		  <input>
+
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		If your result is stored in the variable <c>xhat</c>,
+		you may plot the polynomial and the data together using
+		the following cell.
+		<sage>
+		  <input>
+plot_model(xhat, data)
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Find the coefficient of determination <m>R^2</m> for
+		this polynomial fit.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Repeat these steps to fit a degree 8 polynomial to the
+		data, plot the polynomial with the data, and find
+		<m>R^2</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Repeat one more time by fitting a degree 11 polynomial
+		to the data, creating a plot, and finding <m>R^2</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+
+	      <p>
+		It's certainly true that higher degree polynomials fit
+		the data better, as seen by the increasing values of
+		<m>R^2</m>, but that's not always a good thing. For
+		instance, when <m>k=11</m>, you may notice that the
+		graph of the polynomial wiggles a little more than we
+		would expect. In this case, the polynomial is trying too
+		hard to fit the data, which usually contains some
+		uncertainty, especially if it's obtained from
+		measurements.  The error built in to the data is called
+		<em>noise,</em> and its presence means that we shouldn't
+		expect our polynomial to fit the data perfectly.  When
+		we choose a polynomial whose degree is too high, we give
+		the noise too much weight in the model, which leads to
+		some undesirable behavior, like the wiggles in the
+		graph.
+	      </p>
+
+	      <p>
+		Fitting the data with a polynomial whose degree is too
+		high is called <em>overfitting</em>, a phenomenon that
+		can appear in many machine learning applications.
+		Generally speaking, we would like to choose <m>k</m>
+		large enough to capture the essential features of the
+		data but not so large that we overfit and build the
+		noise into the model.  There are ways to determine the
+		optimal value of <m>k</m>, but we won't pursue that
+		here.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Choosing a reasonable value of <m>k</m>, estimate the
+		extent of Arctic sea ice at month 6.5, roughly at the
+		Summer Solstice.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+      
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<m>\xhat = \begin{bmatrix}
+		17.4\\-7.1\\4.5\\-1.1\\0.1\\-0.003
+		\end{bmatrix}
+		</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The fifth degree polynomial fits the data fairly well.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2=0.99</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2=0.9997</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2=1</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>k=5</m> seems like a good choice, and this gives
+		the prediction of <m>8.7</m> million square kilometers
+		of sea ice.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+	    
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<m>\xhat = \begin{bmatrix}
+		17.4\\-7.1\\4.5\\-1.1\\0.1\\-0.003
+		\end{bmatrix}
+		</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The fifth degree polynomial fits the data fairly well.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2=0.99</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2=0.9997</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>R^2=1</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>8.7</m> million square kilometers
+		of sea ice.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+	    
+    </activity>
+   
+</worksheet>

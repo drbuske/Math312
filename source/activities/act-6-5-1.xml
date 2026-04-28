@@ -1,0 +1,102 @@
+<worksheet label="ws-act-6-5-1">
+   <title>Preview Activity 6.5.1</title>
+    <activity label="ula-preview-6-5">
+      <task label="ula-preview-6-5-a">
+        <statement>
+	  <p> Is there a solution to the equation
+	  <m>A\xvec=\bvec</m> where <m>A</m> and <m>\bvec</m> are such
+	  that
+	  <me>
+	    \begin{bmatrix}
+	    1 \amp 2 \\
+	    2 \amp 5 \\
+	    -1 \amp 0 \\
+	    \end{bmatrix}
+	    \xvec = \threevec5{-3}{-1}
+	  </me>.
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    The reduced row echelon form
+	    <me>
+	      \left[
+	      \begin{array}{cc|c}
+	      1 \amp 2 \amp 5 \\
+	      2 \amp 5 \amp -3 \\
+	      -1 \amp 0 \amp -1\\
+	      \end{array}
+	      \right]
+	      \sim
+	      \left[
+	      \begin{array}{cc|c}
+	      1 \amp 0 \amp 0 \\
+	      0 \amp 1 \amp 0 \\
+	      0 \amp 0 \amp 1 \\
+	      \end{array}
+	      \right]
+	    </me>
+	    shows that there is no solution.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-5-b">
+        <statement>
+	  <p>
+	    We know that <m>\threevec12{-1}</m> and
+	    <m>\threevec250</m> form a basis for <m>\col(A)</m>.  Find
+	    an orthogonal basis for <m>\col(A)</m>.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    Applying Gram-Schmidt, we find an orthogonal basis
+	    consisting of <m>\wvec_1=\cthreevec12{-1}</m> and
+	    <m>\wvec_2=\threevec012</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-5-c">
+        <statement>
+	  <p>
+	    Find the orthogonal projection <m>\widehat\bvec</m>
+	    of <m>\bvec</m> onto <m>\col(A)</m>.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    The projection formula gives <m>\bhat =
+	    \cthreevec0{-1}{-2}</m>.
+	  </p>
+        </solution>
+      </task>
+
+      <task label="ula-preview-6-5-d">
+        <statement>
+	  <p>
+	    Explain why the equation <m>A\xvec=\widehat\bvec</m>
+	    must be consistent and then find its solution.
+	  </p>
+        </statement>
+        <response component="rs-preview"/>
+        <solution>
+	  <p>
+	    The equation is consistent because <m>\bhat</m> is in
+	    <m>\col(A)</m>.  We find the solution
+	    <m>\xvec=\twovec2{-1}</m>.
+	  </p>
+        </solution>
+      </task>
+
+    </activity>
+   
+</worksheet>

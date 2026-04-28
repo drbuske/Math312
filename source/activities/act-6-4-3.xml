@@ -1,0 +1,239 @@
+<worksheet label="ws-act-6-4-3">
+   <title>Activity 6.4.3</title>
+    <activity>
+      <statement>
+	<p>
+	  Sage can automate these computations for us.  Before
+	  we begin, however, it will be helpful to understand how we can
+	  combine things using a <c>list</c> in Python.  For
+	  instance, if the vectors <c>v1</c>, <c>v2</c>, and <c>v3</c>
+	  form a basis for a subspace, we can bundle them together using
+	  square brackets: <c>[v1, v2, v3]</c>.  Furthermore, we could
+	  assign this to a variable, such as <c>basis = [v1, v2, v3]</c>.
+	</p>
+	
+	<p>
+	  Evaluating the following cell will load in some special
+	  commands.  
+	  <sage>
+	    <input>
+sage.repl.load.load("https://raw.githubusercontent.com/davidaustinm/ula_modules/master/orthogonality.py", globals())
+	    </input>
+	  </sage>
+	  <ul>
+	    <li>
+	      <p>
+		There is a command to apply the projection formula:
+		<c>projection(b, basis)</c> returns the orthogonal
+		projection of <c>b</c> onto the subspace spanned by
+		<c>basis</c>, which is a list of vectors.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The command <c>unit(w)</c> returns a unit vector
+		parallel to <c>w</c>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Given a collection of vectors, say, <c>v1</c> and
+		<c>v2</c>, we can form the matrix whose columns are
+		<c>v1</c> and <c>v2</c> using
+		<c>matrix([v1, v2]).T</c>.  When given a <c>list</c> of
+		vectors, Sage constructs a matrix whose <em>rows</em>
+		are the given vectors.  For this reason, we need to apply
+		the transpose.
+	      </p>
+	    </li>
+	  </ul>
+	</p>
+
+	<p>
+	  Let's now consider <m>W</m>, the subspace of <m>\real^5</m>
+	  having basis
+	  <me>
+	    \vvec_1 = \fivevec{14}{-6}{8}2{-6},\hspace{24pt}
+	    \vvec_2 = \fivevec{5}{-3}{4}3{-7},\hspace{24pt}
+	    \vvec_3 = \fivevec{2}30{-2}1.
+	  </me>
+	  
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Apply the Gram-Schmidt algorithm to find an orthogonal
+		basis <m>\wvec_1</m>, <m>\wvec_2</m>, and <m>\wvec_3</m>
+		for <m>W</m>.
+	      </p>
+	      <sage>
+		<input>
+		</input>
+	      </sage>
+	    </li>
+
+	    <li>
+	      <p>
+		Find <m>\bhat</m>,
+		the orthogonal projection of <m>\bvec = 
+		\fivevec{-5}{11}0{-1}5</m> onto <m>W</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Explain why we know that <m>\bhat</m> is a linear
+		combination of the 
+		original vectors <m>\vvec_1</m>, <m>\vvec_2</m>, and
+		<m>\vvec_3</m> and then find weights so that
+		<me>
+		  \bhat = c_1\vvec_1 + c_2\vvec_2 + c_3\vvec_3.
+		</me>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Find an orthonormal basis <m>\uvec_1</m>,
+		<m>\uvec_2</m>, for <m>\uvec_3</m> for <m>W</m> and form
+		the matrix <m>Q</m> whose columns are these vectors.
+	      </p>
+	      <sage>
+		<input>
+		</input>
+	      </sage>
+	    </li>
+
+	    <li>
+	      <p>
+		Find the product <m>Q^TQ</m> and explain the result.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Find the matrix <m>P</m> that projects vectors
+		orthogonally onto <m>W</m> and verify that <m>P\bvec</m>
+		gives <m>\bhat</m>, the orthogonal projection that you
+		found earlier.
+	      </p>
+	    </li>
+
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<me>
+		  \wvec_1=\fivevec{14}{-6}82{-6},\hspace{24pt}
+		  \wvec_2=\fivevec{-2}{0}02{-4},\hspace{24pt}
+		  \wvec_3=\fivevec130{-1}{-1}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\bhat=\fivevec{-4}9{-4}{-4}3</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We know that <m>\bhat</m> is in <m>W</m> and
+		<m>\vvec_1</m>, <m>\vvec_2</m>, and <m>\vvec_3</m> is
+		a basis for <m>W</m>.  We find
+		<m>\bhat=-\frac34\vvec_1+\frac12\vvec_2+2\vvec_3</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<me>
+		  \uvec_1=\fivevec{14/\sqrt{336}}{-6\sqrt{336}}{8/\sqrt{336}}
+		  {2/\sqrt{336}}{-6/\sqrt{336}},\hspace{24pt}
+		  \uvec_2=\fivevec{-2/\sqrt{24}}{0}0{2/\sqrt{24}}{-4/\sqrt{24}},\hspace{24pt}
+		  \uvec_3=\fivevec{1/\sqrt{12}}{3/\sqrt{12}}0{-1/\sqrt{12}}{-1/\sqrt{12}}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>Q^TQ=I</m> since the matrix product computes the
+		dot products of the columns of <m>Q</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>P = QQ^T = \begin{bmatrix}
+		5/6 \amp 0 \amp 1/3 \amp -1/6 \amp 0 \\
+		0 \amp 6/7 \amp -1/7 \amp -2/7 \amp -1/7 \\
+		1/3 \amp -1/7 \amp 4/21 \amp 1/21 \amp -1/7 \\
+		-1/6 \amp -2/7 \amp 1/21 \amp 11/42 \amp -2/7 \\
+		0 \amp -1/7 \amp -1/7 \amp -2/7 \amp 6/7
+		\end{bmatrix}
+		</m>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+		
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<me>
+		  \wvec_1=\fivevec{14}{-6}82{-6},\hspace{24pt}
+		  \wvec_2=\fivevec{-2}{0}02{-4},\hspace{24pt}
+		  \wvec_3=\fivevec130{-1}{-1}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\bhat=\fivevec{-4}9{-4}{-4}3</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\bhat=-\frac34\vvec_1+\frac12\vvec_2+2\vvec_3</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<me>
+		  \uvec_1=\fivevec{14/\sqrt{336}}{-6\sqrt{336}}{8/\sqrt{336}}
+		  {2/\sqrt{336}}{-6/\sqrt{336}},\hspace{24pt}
+		  \uvec_2=\fivevec{-2/\sqrt{24}}{0}0{2/\sqrt{24}}
+		  {-4/\sqrt{24}},\hspace{24pt}
+		  \uvec_3=\fivevec{1/\sqrt{12}}{3/\sqrt{12}}0
+		  {-1/\sqrt{12}}{-1/\sqrt{12}}
+		</me>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>Q^TQ=I</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>P = QQ^T = \begin{bmatrix}
+		5/6 \amp 0 \amp 1/3 \amp -1/6 \amp 0 \\
+		0 \amp 6/7 \amp -1/7 \amp -2/7 \amp -1/7 \\
+		1/3 \amp -1/7 \amp 4/21 \amp 1/21 \amp -1/7 \\
+		-1/6 \amp -2/7 \amp 1/21 \amp 11/42 \amp -2/7 \\
+		0 \amp -1/7 \amp -1/7 \amp -2/7 \amp 6/7
+		\end{bmatrix}
+		</m>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+		
+    </activity>
+   
+</worksheet>

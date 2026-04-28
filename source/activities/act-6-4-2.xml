@@ -1,0 +1,207 @@
+<worksheet label="ws-act-6-4-2">
+   <title>Activity 6.4.2</title>
+    <activity xml:id="activity-gram-schmidt">
+      <statement>
+	<p>
+	  Suppose that <m>W</m> is a three-dimensional subspace of
+	  <m>\real^4</m> with basis:
+	  <me>
+	    \vvec_1 = \fourvec1111,\hspace{24pt}
+	    \vvec_2 = \fourvec1322,\hspace{24pt}
+	    \vvec_3 = \fourvec1{-3}{-3}{-3}\text{.}
+	  </me>
+	  We can see that this basis is not orthogonal by noting that
+	  <m>\vvec_1\cdot\vvec_2 = 8</m>.  Our goal is to create an
+	  orthogonal basis <m>\wvec_1</m>, <m>\wvec_2</m>, and
+	  <m>\wvec_3</m> for <m>W</m>.
+	</p>
+	<p>
+	  To begin, we declare that <m>\wvec_1=\vvec_1</m>, and we
+	  call <m>W_1</m> the line defined by <m>\wvec_1</m>.
+	</p>
+	<p>
+	  <sage>
+	    <input>
+	    </input>
+	  </sage>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Find the vector <m>\vhat_2</m> that is the orthogonal
+		projection of <m>\vvec_2</m> onto <m>W_1</m>, the line
+		defined by <m>\wvec_1</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Form the vector <m>\wvec_2 = \vvec_2-\vhat_2</m> and
+		verify that it is orthogonal to <m>\wvec_1</m>.
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		Explain why <m>\laspan{\wvec_1,\wvec_2} =
+		\laspan{\vvec_1,\vvec_2}</m> by showing that any linear
+		combination of <m>\vvec_1</m> and <m>\vvec_2</m> can be
+		written as a linear combination of <m>\wvec_1</m> and
+		<m>\wvec_2</m> and vice versa.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		The vectors <m>\wvec_1</m> and <m>\wvec_2</m> are an
+		orthogonal basis for a two-dimensional subspace <m>W_2</m> of
+		<m>\real^4</m>.  Find the vector <m>\vhat_3</m> that is the
+		orthogonal projection of <m>\vvec_3</m> onto <m>W_2</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Verify that <m>\wvec_3 = \vvec_3-\vhat_3</m> is
+		orthogonal to both <m>\wvec_1</m> and
+		<m>\wvec_2</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Explain why <m>\wvec_1</m>, <m>\wvec_2</m>, and
+		<m>\wvec_3</m> form an orthogonal basis for <m>W</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Now find an orthonormal basis for <m>W</m>.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<m>\widehat{\vvec}_2 = \frac{\vvec_2\cdot\wvec_1}
+		{\wvec_1\cdot\wvec_1}\wvec_1=\fourvec2222</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\wvec_2 = \fourvec{-1}100</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have <m>\vvec_1 = \wvec_1</m> and <m>\vvec_2 =
+		\wvec_2 + 2\wvec_1</m>.  Therefore, a linear
+		combination of <m>\vvec_1</m> and <m>\vvec_1</m> can
+		be rewritten as
+		<me>
+		  c_1\vvec_1+c_2\vvec_2 =
+		  c_1\wvec_1+c_2(\wvec_2+2\wvec_1) =
+		  (c_1+2c_2)\wvec_1 + c_2\wvec_2\text{.}
+		</me>
+		In the same way, <m>\wvec_1=\vvec_1</m> and <m>\wvec_2
+		= \vvec_2-2\vvec_1</m> so any linear combination of
+		<m>\wvec_1</m> and <m>\wvec_2</m> can be rewritten as
+		a linear combination of <m>\vvec_1</m> and
+		<m>\vvec_1</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		By the Projection Formula, <m>\widehat{\vvec}_3 =
+		\fourvec0{-4}{-2}{-2}</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\wvec_3 = \fourvec11{-1}{-1}</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We can check that <m>\wvec_1</m>, <m>\wvec_2</m>, and
+		<m>\wvec_3</m> form an orthogonal set.  Since
+		<m>\vvec_i</m> can be written in terms of
+		<m>\wvec_j</m> and vice-versa, these new vectors form
+		a basis for <m>W</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<me>
+		  \uvec_1=\fourvec{1/2}{1/2}{1/2}{1/2},\hspace{24pt}
+		  \uvec_2=\fourvec{-1/\sqrt{2}}{1/\sqrt{2}}00,\hspace{24pt}
+		  \uvec_3=\fourvec{1/2}{1/2}{-1/2}{-1/2}
+		</me>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+		
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<m>\widehat{\vvec}_2 = \fourvec2222</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\wvec_2 = \fourvec{-1}100</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		We have <m>\vvec_1 = \wvec_1</m> and <m>\vvec_2 =
+		\wvec_2 + 2\wvec_1</m> so a linear
+		combination of <m>\vvec_1</m> and <m>\vvec_1</m> can
+		be rewritten as a linear combination of <m>\wvec_1</m>
+		and <m>\wvec_2</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\widehat{\vvec}_3 =
+		\fourvec0{-4}{-2}{-2}</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\wvec_3 = \fourvec11{-1}{-1}</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Since
+		<m>\vvec_i</m> can be written in terms of
+		<m>\wvec_j</m> and vice-versa, these new vectors form
+		a basis for <m>W</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<me>
+		  \uvec_1=\fourvec{1/2}{1/2}{1/2}{1/2},\hspace{24pt}
+		  \uvec_2=\fourvec{-1/\sqrt{2}}{1/\sqrt{2}}00,\hspace{24pt}
+		  \uvec_3=\fourvec{1/2}{1/2}{-1/2}{-1/2}
+		</me>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+		
+    </activity>
+   
+</worksheet>

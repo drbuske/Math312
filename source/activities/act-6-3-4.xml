@@ -1,0 +1,296 @@
+<worksheet label="ws-act-6-3-4">
+   <title>Activity 6.3.4</title>
+    <activity>
+      <statement>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Suppose that <m>L</m> is the line in <m>\real^3</m>
+		defined by the vector
+		<m>\wvec=\threevec{1}{2}{-2}</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      Find an orthonormal basis <m>\uvec</m> for
+		      <m>L</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Construct the matrix
+		      <m>Q = \begin{bmatrix}\uvec\end{bmatrix}</m> and
+		      use it to construct the matrix <m>P</m> that
+		      projects vectors orthogonally onto <m>L</m>.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Use your matrix to find <m>\bhat</m>, the
+		      orthogonal projection 
+		      of <m>\bvec=\threevec111</m> onto <m>L</m>.
+		    </p>
+		  </li>
+
+		  <li>
+		    <p>
+		      Find <m>\rank(P)</m> and explain its geometric
+		      significance.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		The vectors
+		<me>
+		  \wvec_1 = \fourvec1111,\hspace{24pt}
+		  \wvec_2 = \fourvec011{-2}
+		</me>
+		form an orthogonal basis of <m>W</m>, a two-dimensional
+		subspace 
+		of <m>\real^4</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      Use the projection formula 
+          <!-- from <xref
+		      ref="prop-proj-formula" /> --> to find <m>\bhat</m>,
+		      the orthogonal projection of
+		      <m>\bvec=\fourvec92{-2}3</m> onto <m>W</m>.
+		    </p>
+		  </li>
+
+		  <li>
+		    <p>
+		      Find an orthonormal basis <m>\uvec_1</m> and
+		      <m>\uvec_2</m> for <m>W</m> and use it to
+		      construct the matrix 
+		      <m>P</m> that projects vectors orthogonally onto
+		      <m>W</m>.  Check that <m>P\bvec = \bhat</m>, the
+		      orthogonal projection you found in the previous
+		      part of this activity.
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Find <m>\rank(P)</m> and explain its geometric
+		      significance.
+		    </p>
+		  </li>
+
+		  <li>
+		    <p>
+		      Find a basis for <m>W^\perp</m>.
+		    </p>
+		  </li>
+
+		  <li>
+		    <p>
+		      Find a vector <m>\bvec^\perp</m> in <m>W^\perp</m>
+		      such that
+		      <me>
+			\bvec = \bhat + \bvec^\perp.
+		      </me>
+		    </p>
+		  </li>
+
+		  <li>
+		    <p>
+		      If <m>Q</m> is the matrix whose columns are
+		      <m>\uvec_1</m> and <m>\uvec_2</m>, find the
+		      product <m>Q^TQ</m> and explain your result.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </statement>
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      <m>\uvec=\threevec{1/3}{2/3}{-2/3}</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>QQ^T = \begin{bmatrix}
+		      1/9 \amp 2/9 \amp -2/9 \\
+		      2/9 \amp 4/9 \amp -4/9 \\
+		      -2/9 \amp -4/9 \amp 4/9
+		      \end{bmatrix}</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\bhat=\threevec{1/9}{2/9}{-2/9}</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      We find that <m>\rank(P)</m>, which makes sense
+		      because <m>\col(P) = L</m>, a 1-dimensional
+		      subspace of <m>\real^3</m>.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      <m>\bhat = \fourvec3225</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>P = \begin{bmatrix}
+		      1/4 \amp 1/4 \amp 1/4 \amp 1/4 \\
+		      1/4 \amp 5/12 \amp 5/12 \amp -1/12 \\
+		      1/4 \amp 5/12 \amp 5/12 \amp 1/12 \\
+		      1/4 \amp -1/12 \amp -1/12 \amp 11/12
+		      \end{bmatrix}
+		      </m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\rank(P)=2</m> since <m>\col(P) = W</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      Since <m>W=\col(P)</m>, then <m>W^\perp =
+		      \nul(P)</m>, which gives
+		      <m>\vvec_1=\fourvec0{-1}10</m> and
+		      <m>\vvec_2=\fourvec{-3}{-2}01</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      We can find <m>\bvec^\perp = \bvec - \bhat =
+		      \fourvec60{-4}{-2}</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>Q^TQ = \begin{bmatrix}
+		      1 \amp 0 \\
+		      0 \amp 1
+		      \end{bmatrix}
+		      </m> since this product computes the dot
+		      products between the columns of <m>Q</m>.
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      <m>\uvec=\threevec{1/3}{2/3}{-2/3}</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>QQ^T = \begin{bmatrix}
+		      1/9 \amp 2/9 \amp -2/9 \\
+		      2/9 \amp 4/9 \amp -4/9 \\
+		      -2/9 \amp -4/9 \amp 4/9
+		      \end{bmatrix}</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\bhat=\threevec{1/9}{2/9}{-2/9}</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\rank(P)=1</m>
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<ol marker="1.">
+		  <li>
+		    <p>
+		      <m>\bhat = \fourvec3235</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>P = \begin{bmatrix}
+		      1/4 \amp 1/4 \amp 1/4 \amp 1/4 \\
+		      1/4 \amp 5/12 \amp 5/12 \amp -1/12 \\
+		      1/4 \amp 5/12 \amp 5/12 \amp 1/12 \\
+		      1/4 \amp -1/12 \amp -1/12 \amp 11/12
+		      \end{bmatrix}
+		      </m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\rank(P)=2</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\vvec_1=\fourvec0{-1}10</m> and
+		      <m>\vvec_2=\fourvec{-3}{-2}01</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>\bvec^\perp = 
+		      \fourvec60{-4}{-2}</m>
+		    </p>
+		  </li>
+		  <li>
+		    <p>
+		      <m>Q^TQ = \begin{bmatrix}
+		      1 \amp 0 \\
+		      0 \amp 1
+		      \end{bmatrix}</m>
+		    </p>
+		  </li>
+		</ol>
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+		
+    </activity>
+   
+</worksheet>

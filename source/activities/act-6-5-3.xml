@@ -1,0 +1,210 @@
+<worksheet label="ws-act-6-5-3">
+   <title>Activity 6.5.3</title>
+    <activity>
+      <statement>
+	<p>
+	  The rate at which a cricket chirps is related to the outdoor
+	  temperature, as reflected in some experimental data that we'll
+	  study in this activity.  The
+	  chirp rate <m>C</m> is expressed in chirps per second while the
+	  temperature <m>T</m> is in degrees Fahrenheit.  Evaluate the
+	  following cell to load the data:
+	  <sage>
+	    <input>
+sage.repl.load.load('https://raw.githubusercontent.com/davidaustinm/ula_modules/master/orthogonality.py', globals())
+df = pd.read_csv('https://raw.githubusercontent.com/davidaustinm/ula_modules/master/data/crickets.csv')
+data = [vector(row) for row in df.values]
+chirps = vector(df['Chirps'])
+temps = vector(df['Temperature'])
+print(df)
+list_plot(data, color='blue', size=40, xmin=12, xmax=22, ymin=60, ymax=100)
+	    </input>
+	  </sage>
+	  Evaluating this cell also provides:
+	  <ul>
+	    <li>
+	      <p> the vectors <c>chirps</c> and <c>temps</c> formed from
+	      the columns of the dataset.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		the command <c>onesvec(n)</c>, which creates an
+		<m>n</m>-dimensional vector whose entries are all one.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		Remember that you can form a matrix whose columns are
+		the vectors <c>v1</c> and <c>v2</c> with
+		<c>matrix([v1, v2]).T</c>.
+	      </p>
+	    </li>
+	  </ul>
+	</p>
+
+	<p>
+	  We would like to represent this relationship by a linear
+	  function
+	  <me>
+	    \beta_0 + \beta_1 C = T\text{.}
+	  </me>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		Use the first data point <m>(C_1,T_1)=(20.0,88.6)</m>
+		to write an equation involving <m>\beta_0</m> and
+		<m>\beta_1</m>.
+	      </p>
+	    </li>
+	    
+	    <li>
+	      <p>
+		Suppose that we represent the unknowns using a vector
+		<m>\xvec = \twovec{\beta_0}{\beta_1}</m>.  Use the 15
+		data points to
+		create the matrix
+		<m>A</m> and vector <m>\bvec</m> 
+		so that the linear system
+		<m>A\xvec= \bvec</m> describes the unknown vector
+		<m>\xvec</m>.
+		<sage>
+		  <input>
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		Write the normal equations <m>A^TA\xhat =
+		A^T\bvec</m>; that is, find the matrix <m>A^TA</m> and the
+		vector <m>A^T\bvec</m>.
+	      </p>
+	    </li>
+
+	    <li>
+	      <p> Solve the normal equations to find <m>\xhat</m>, the
+	      least-squares approximate solution to the equation
+	      <m>A\xvec=\bvec</m>.  Call your solution <c>xhat</c>
+	      since <c>x</c>
+	      has another meaning in Sage.
+	      <sage>
+		<input>
+		</input>
+	      </sage>
+	      </p>
+
+	      <p>
+		What are the values of <m>\beta_0</m> and <m>\beta_1</m>
+		that you found?
+	      </p>
+	    </li>
+
+	    <li>
+	      <p>
+		If the chirp rate is 22 chirps per second, what is
+		your prediction for the temperature?
+	      </p>
+
+	      <p>
+		You can plot the data and your line, assuming you called
+		the solution <c>xhat</c>, using the cell
+		below.
+		<sage>
+		  <input>
+plot_model(xhat, data, domain=(12, 22))
+		  </input>
+		</sage>
+	      </p>
+	    </li>
+	    
+	  </ol>
+	</p>
+      </statement>
+
+      <solution>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		We have the equation <m>\beta_0 + 20.0\beta_1 =
+		88.6</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>A</m> is the <m>15\times2</m> matrix whose first
+		column consists only of 1's and whose second column is
+		the vector of chirp rates.  The vector <m>\bvec</m> is
+		the vector of temperatures.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>A^TA=\begin{bmatrix}
+		15.0 \amp 248.5 \\
+		248.5 \amp 4157.9 \\
+		\end{bmatrix}</m> and <m>A^T\bvec =
+		\twovec{1190.2}{19857.7}</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\xhat = \twovec{\beta_0}{\beta_1} =
+		\twovec{22.8}{3.4}</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		The predicted temperature is <m>\beta_0 + 22\beta_1 =
+		97.9</m> degrees.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </solution>
+
+      <answer>
+	<p>
+	  <ol marker="a.">
+	    <li>
+	      <p>
+		<m>\beta_0 + 20.0\beta_1 =
+		88.6</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>A</m> is the <m>15\times2</m> matrix whose first
+		column consists only of 1's and whose second column is
+		the vector of chirp rates.  The vector <m>\bvec</m> is
+		the vector of temperatures.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>A^TA=\begin{bmatrix}
+		15.0 \amp 248.5 \\
+		248.5 \amp 4157.9 \\
+		\end{bmatrix}</m> and <m>A^T\bvec =
+		\twovec{1190.2}{19857.7}</m>
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>\xhat = \twovec{\beta_0}{\beta_1} =
+		\twovec{22.8}{3.4}</m>.
+	      </p>
+	    </li>
+	    <li>
+	      <p>
+		<m>97.9</m> degrees.
+	      </p>
+	    </li>
+	  </ol>
+	</p>
+      </answer>
+    </activity>
+   
+</worksheet>
