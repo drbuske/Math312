@@ -367,25 +367,15 @@
 
     <p>
 <dl>
-  <li>
-    <title>
-      MOMwork
-    </title>
   
-  <p> Associated with the course is an open source (FREE) electronic homework system (MyOpenMath).  We will use this for MOMwork.  To access this, use the link <url href="https://www.myopenmath.com/" visual="https://www.myopenmath.com/"/>.
-  </p> 
-
-      <p>Course ID: <alert>323855</alert></p>
-      <p>Enrollment Key: <alert>Buske312Su26</alert></p>
-      </li>
 
       <li>
-        <title>Concept Maps</title>
+        <title>Written Homework</title>
         <p>
-          There will be four short “concept map” assignments—one each on (1) first‑order differential equations, (2) higher‑order linear ODEs, (3) Laplace transforms, and (4) systems of differential equations. A <term>concept map</term> is a hand‑drawn visual diagram that shows how key ideas in a topic connect, such as methods, definitions, relationships, and big‑picture structures. Each map should include the major concepts from the unit and arrows or labeled links showing how those ideas relate to one another. The goal is not artistic quality but clarity of thinking and organization. These assignments are graded on a simple credit/no‑credit basis for completeness, effort, and meaningful connections—not correctness of the mathematical details.  Because the maps must be hand‑drawn and reflect your own understanding, they are naturally individualized and are excellent preparation for the written exams.  The due dates for these concept maps will be aligned with exam dates so that you may hand them in at that time.  
+          There will be 13 written homework assignments.  Directions for these and the specific exercises to address can be found under the <alert>Written Homework</alert> section of this website.  Remember that <em>doing</em> mathematics is the best, and perhaps <em>only</em> way to learn mathematics!  
         </p>
 
-        <table xml:id="ConceptMaps" >
+        <!-- <table xml:id="ConceptMaps" >
 <title>Concept map due dates</title>
 <tabular halign="center" bottom="minor" top="minor">
 <row header="no" bottom="medium" top="medium">
@@ -414,7 +404,19 @@
 </row>
 
 </tabular>
-</table>
+</table> -->
+      </li>
+
+      <li>
+    <title>
+      MOMwork
+    </title>
+  
+  <p> Associated with the course is an open source (FREE) electronic homework system (MyOpenMath).  We will use this for MOMwork.  To access this, use the link <url href="https://www.myopenmath.com/" visual="https://www.myopenmath.com/"/>.
+  </p> 
+
+      <p>Course ID: <alert>323855</alert></p>
+      <p>Enrollment Key: <alert>Buske312Su26</alert></p>
       </li>
 
       <li>
@@ -474,17 +476,17 @@
 
 <row>
 <cell> MOMwork (MyOpenMath) </cell> 
-<cell> 20% </cell>     
+<cell> 10% </cell>     
 </row>
 
 <row>
-<cell> Concept Maps </cell> 
-<cell> 5% </cell>    
+<cell> Written Homework </cell> 
+<cell> 20% </cell>    
 </row>
 
 <row>
 <cell> Exams </cell> 
-<cell> 75% </cell>  
+<cell> 70% </cell>  
 </row>
 
 </tabular>

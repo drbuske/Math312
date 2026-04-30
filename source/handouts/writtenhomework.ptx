@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout xml:id="writtenhomework312">
+<title>Written Homework</title>
+
+  <!-- <page>
+    <p workspace="1in">
+      A first paragraph with some space for notes below it.
+    </p>
+
+  </page> -->
+
+  <p><em>Doing</em> mathematics is necessary to understand mathematics.  To that end, there are 13 written homework assignments you will submit this term.  Since there are 13 sections in the textbook, this means that there is one written homework assignment to be submitted for each two sections of content.  Deadlines for submission appear in D2L Brightspace.  Solutions to these exercises should be <alert>written by hand</alert> and not typed.  In addition, some exercises may require you to do a screen capture.  These include exercises in which Sage calculations are done and Checkpoint exercises in which you must drag and drop.  Your goal is to effectively communicate these solutions.  <em>Submissions will be limited to a single file.  Please convert that file to PDF before submission.</em>
+  </p>
+
+  <p>If you struggle on some of these exercises, it is natural to turn to an AI system for help.  If you do so, please be sure to document such aid in your submission.  But be aware that as of 2026, AI LLM's often hallucinate and produce incorrect mathematics.  So be careful in just assuming what is being returned to you is even vaguely correct.  
+  </p>
+
+  <p>
+    Below are the 13 written homework assignments to be submitted to D2L.  
+  </p>
+
+  <p>
+  <dl>
+    <li>
+      <title>Hwk 3 (2.1, 2.2)</title>
+      <p>
+        <alert>2.1:</alert> Exercises #1, 2, 4, 5
+      </p>
+      <p>
+        <alert>2.2:</alert> Checkpoints 2.2.11, 2.2.12, 2.2.13; Exercises 1-5, 9, 11
+      </p>
+    </li>
+    <li>
+      <title>Hwk 4 (2.3, 2.4)</title>
+      <p>
+        <alert>2.3:</alert> Checkpoints 2.3.16, 2.3.17, 2.3.18, 2.3.19, 2.3.20; Exercises #1,3-5,7,10
+      </p>
+      <p>
+        <alert>2.4:</alert> Checkpoints 2.4.11, 2.4.12, 2.4.13; Exercises #1,2,4,5,9
+      </p>
+    </li>
+    <li>
+      <title>Hwk 5 (2.5, 2.6)</title>
+      <p>
+        <alert>2.5:</alert> Exercises #1,2,4,5,7,8
+      </p>
+      <p>
+        <alert>2.6:</alert> Checkpoints 2.6.19, 2.6.20,2.6.21,2.6.24; Exercises #1,2,4
+      </p>
+    </li>
+  </dl>
+</p>
+</handout>

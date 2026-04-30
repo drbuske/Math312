@@ -17,6 +17,8 @@
       <xi:include href="./syllabus/syllabus.ptx" /> 
       <!-- Other documents could go here, like a schedule, project description, etc. -->
 
+      <xi:include href="./handouts/writtenhomework.ptx" /> 
+
           <chapter xml:id="ch1activities">
       <title>Ch. 1 Activity Solutions</title>
 
