@@ -12,11 +12,156 @@
 
   <page>
     
-  <p><em>Doing</em> mathematics is necessary to understand mathematics.  To that end, there are 13 written homework assignments you will submit this term.  Since there are 13 sections in the textbook, this means that there is one written homework assignment to be submitted for each two sections of content.  Deadlines for submission appear in D2L Brightspace.  Solutions to these exercises should be <alert>written by hand</alert> and not typed.  In addition, some exercises may require you to do a screen capture.  These include exercises in which Sage calculations are done and Checkpoint exercises in which you must drag and drop.  Your goal is to effectively communicate these solutions.  <em>Submissions will be limited to a single file.  Please convert that file to PDF before submission.</em>
+  <p><em>Doing</em> mathematics is necessary to understand mathematics.  To that end, there are 13 written homework assignments you will submit this term.  Since there are 13 sections in the textbook, this means that there is one written homework assignment to be submitted for each two sections of content.  Deadlines for submission appear in D2L Brightspace.  
+  </p>
+  
+  <p>Solutions to these exercises must be <alert>written by hand</alert> and not typed.  In addition, some exercises may require you to do a screen capture.  These include exercises in which Sage calculations are done and Checkpoint exercises in which you drag and drop answers.  Your goal is to effectively communicate these solutions.  <em>Submissions will be limited to a single file.  Please convert that file to PDF before submission.</em>
   </p>
 
-  <p>If you struggle on some of these exercises, it is natural to turn to an AI system for help.  If you do so, please be sure to document such aid in your submission.  But be aware that as of 2026, AI LLM's often hallucinate and produce incorrect mathematics.  So be careful in just assuming what is being returned to you is even vaguely correct.  
+  <p>If you struggle on some of these exercises, it is natural to turn to an AI system for help.  If you do so, please be sure to document such aid in your submission.  But be aware that as of 2026, AI LLM's often hallucinate and produce incorrect mathematics.  So be careful in just assuming what is being returned to you is correct.  
   </p>
+
+  <p>The grading rubric for homework assignments is found below.  Because of the fast-paced nature of the course, it will be nearly impossible to provide meaningful feedback prior to taking an exam on that same topic (which may be that same day or same hour!).  The best way to get quick feedback may be posting to the Discussion board in D2L - another student may respond more quickly than I can.  AI can also help provide feedback (assuming you are willing to upload the questions and your written work to such an interface...such effort is not required).  
+  </p>
+
+  <table xml:id="Homework312Rubric" >
+<title>Written Homework Grading Rubric</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Category 1: Engagement</alert> </cell>
+<cell> <alert></alert> </cell>
+<cell> <alert></alert> </cell>
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> <alert>Score</alert> </cell> 
+<cell> <alert>Description</alert> </cell>     
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 4 </cell>  
+<cell> All or nearly all problems attempted; clear evidence of sustained effort on each problem </cell>  
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 3 </cell> 
+<cell> Most problems attempted; minor omissions or very brief attempts on 1–2 problems </cell>  
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 2 </cell> 
+<cell> Several problems missing or largely incomplete </cell>   
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 1 </cell> 
+<cell> Minimal engagement; many problems left blank </cell> 
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 0 </cell> 
+<cell> Little or no work submitted </cell> 
+</row>
+
+<row>
+<cell> <alert>Category 2: Reasoning</alert> </cell> 
+<cell>  </cell> 
+<cell>  </cell> 
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> <alert>Score</alert> </cell> 
+<cell> <alert>Description</alert> </cell>     
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 3 </cell> 
+<cell> Reasoning is visible: explanations, intermediate steps, or justification are present </cell>  
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 2 </cell> 
+<cell> Some reasoning shown, but often incomplete or unclear </cell>   
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 1 </cell> 
+<cell> Answers given with little or no explanation </cell> 
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 0 </cell> 
+<cell> No discernible reasoning </cell> 
+</row>
+
+<row>
+<cell> <alert>Category 3: Language</alert> </cell> 
+<cell>  </cell> 
+<cell>  </cell> 
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> <alert>Score</alert> </cell> 
+<cell> <alert>Description</alert> </cell>     
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 2 </cell> 
+<cell> Uses appropriate terminology (e.g., solution set, equation, system, variable, consistency) and structured responses </cell>   
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 1 </cell> 
+<cell> Some correct terminology, but inconsistent or informal </cell> 
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 0 </cell> 
+<cell> Little or no mathematical language used </cell> 
+</row>
+
+<row>
+<cell> <alert>Category 4: Clarity</alert> </cell> 
+<cell>  </cell> 
+<cell>  </cell> 
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> <alert>Score</alert> </cell> 
+<cell> <alert>Description</alert> </cell>     
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 1 </cell> 
+<cell> Work is legible, organized, and easy to follow </cell> 
+</row>
+
+<row>
+<cell>  </cell> 
+<cell> 0 </cell> 
+<cell> Work is difficult to read or poorly organized </cell> 
+</row>
+
+</tabular>
+</table>
+
 
   <p>
     Below are the 13 written homework assignments to be submitted to D2L.  
@@ -31,7 +176,7 @@
         <alert>1.1:</alert> No exercises from this section!
       </p>
       <p>
-        <alert>1.2:</alert> Checkpoints 1.2.8, 1.2.9, 1.2.10, 1.2.11.1.2.12; </p><p>Exercises 1,2,4,6,9
+        <alert>1.2:</alert> Checkpoints 1.2.8, 1.2.9, 1.2.10, 1.2.11.1.2.12; </p><p>Exercises 1,2,5,6
       </p>
     </li>
     <li>
