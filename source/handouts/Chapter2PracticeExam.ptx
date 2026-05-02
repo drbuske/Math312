@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Chapter 2 Practice Exam</title>
+
+<section>
+<title>Topics</title>
+
+    <ul>
+      <li><url href="https://drbuske.github.io/linearalgebra/sec-vectors-lin-combs.html" visual="Vectors and linear combinations"/>
+      </li>
+      <li>
+        <p>
+          <url href="https://drbuske.github.io/linearalgebra/sec-matrices-lin-combs.html" visual="Matrix multiplication and linear combinations"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="https://drbuske.github.io/linearalgebra/sec-span.html" visual="The span of a set of vectors"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="https://drbuske.github.io/linearalgebra/sec-linear-dep.html" visual="Linear independence"/>
+        </p>
+      </li>
+            <li>
+        <p>
+          <url href="https://drbuske.github.io/linearalgebra/sec-linear-trans.html" visual="Matrix transformations"/>
+        </p>
+      </li>
+            <li>
+        <p>
+          <url href="https://drbuske.github.io/linearalgebra/sec-transforms-geom.html" visual="The geometry of matrix transformations"/>
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam2">
+    <title>Questions</title> 
+
+ <exercise xml:id="lincombs-practice-1">
+  <statement>
+    Determine whether the vector
+    <me>
+      \mathbf{b} =
+      \begin{bmatrix} 3 \\ 1 \\ 2 \end{bmatrix}
+    </me>
+    is a linear combination of
+    <me>
+      \mathbf{v}_1 =
+      \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
+      \quad \text{and} \quad
+      \mathbf{v}_2 =
+      \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}.
+    </me>
+    If it is, find scalars that express <m>\mathbf{b}</m> as such a combination.
+  </statement>
+
+  <hint>
+    <p> Try to solve the vector equation
+    <m>a\mathbf{v}_1 + b\mathbf{v}_2 = \mathbf{b}</m>
+    by comparing components. </p>
+  </hint>
+
+  <answer>
+    <p>
+    Yes, <m>\mathbf{b}</m> is a linear combination of <m>\mathbf{v}_1</m> and
+    <m>\mathbf{v}_2</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p> We solve
+    <me>
+      a\begin{bmatrix}1\\0\\1 \end{bmatrix}
+      +
+      b\begin{bmatrix}2\\1\\0 \end{bmatrix}
+      =
+      \begin{bmatrix}3\\1\\2 \end{bmatrix}.
+    </me>
+    This gives the system
+    <me>
+      \begin{aligned}
+        a + 2b \amp = 3 \\
+        b \amp = 1 \\
+        a \amp = 2.
+      \end{aligned}
+    </me>
+     The equations are consistent, so
+    <m>\mathbf{b} = 2\mathbf{v}_1 + 1\mathbf{v}_2</m>. 
+  </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-2-core-idea">
+  <statement>
+    Consider the augmented matrix
+    <me>
+      \begin{bmatrix}
+        1 \amp 2 \amp -1 \amp 3 \\
+        0 \amp 1 \amp  2 \amp 1
+      \end{bmatrix}.
+    </me>
+    <ol>
+      <li>Write a system of linear equations represented by this matrix.</li>
+      <li>Identify which variables are pivot variables and which are free.</li>
+      <li>Explain why performing row operations on this matrix does not change
+          the solution set of the system.</li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p> Each row corresponds to one equation, and pivot variables correspond to
+    leading entries.</p>
+  </hint>
+
+  <answer>
+    <p> The system has two pivot variables and one free variable, and row operations
+    preserve the solution set.</p>
+  </answer>
+
+  <solution>
+    <p> The matrix represents the system
+    <me>
+      \begin{aligned}
+        x + 2y - z \amp = 3 \\
+        y + 2z \amp = 1.
+      \end{aligned}
+    </me>
+    The leading entries occur in the <m>x</m> and <m>y</m> columns, so
+    <m>x</m> and <m>y</m> are pivot variables, while <m>z</m> is free.
+  </p>
+  <p>
+    Row operations correspond to rewriting equations using algebraic steps
+    such as swapping equations, scaling them, or replacing one equation with
+    a combination of others. These operations do not change the set of solutions,
+    only the way the system is written.
+  </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-3-core-1">
+  <statement>
+    Consider the matrix equation
+    <me>
+      \begin{bmatrix}
+        1 \amp 2 \amp 1 \\
+        0 \amp 1 \amp -1 \\
+        1 \amp 3 \amp 0
+      \end{bmatrix}
+      \begin{bmatrix}
+        x_1 \\ x_2 \\ x_3
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        4 \\ 1 \\ 5
+      \end{bmatrix}.
+    </me>
+    <ol>
+      <li>Rewrite this equation as a vector equation involving the columns of the matrix.</li>
+      <li>Determine whether the equation has a solution.</li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      Think of the right-hand side as a linear combination of the columns of the
+      matrix. Solve for the coefficients.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      Yes, the equation has a solution; the right-hand side is a linear combination
+      of the columns.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Writing the equation in vector form gives
+    </p>
+    <me>
+      x_1
+      \begin{bmatrix}1\\0\\1\end{bmatrix}
+      +
+      x_2
+      \begin{bmatrix}2\\1\\3\end{bmatrix}
+      +
+      x_3
+      \begin{bmatrix}1\\-1\\0\end{bmatrix}
+      =
+      \begin{bmatrix}4\\1\\5\end{bmatrix}.
+    </me>
+    <p>
+      Solving the system yields <m>x_1 = 1</m>, <m>x_2 = 1</m>, and <m>x_3 = 1</m>.
+      Therefore, the vector on the right lies in the span of the columns, and the
+      matrix equation is consistent.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-3-core-2">
+  <statement>
+    Let
+    <me>
+      A =
+      \begin{bmatrix}
+        1 \amp 0 \amp 2 \\
+        2 \amp 1 \amp 4 \\
+        0 \amp 1 \amp 1
+      \end{bmatrix}
+    </me>
+    and
+    <me>
+      \mathbf{b} =
+      \begin{bmatrix}
+        3 \\ 7 \\ 2
+      \end{bmatrix}.
+    </me>
+    Decide whether the equation <m>A\mathbf{x} = \mathbf{b}</m> has a solution by
+    interpreting it as a vector equation.
+  </statement>
+
+  <hint>
+    <p>
+      Ask whether <m>\mathbf{b}</m> can be written as a linear combination of the
+      columns of <m>A</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      No, the equation does not have a solution.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The corresponding vector equation is
+    </p>
+    <me>
+      x_1
+      \begin{bmatrix}1\\2\\0\end{bmatrix}
+      +
+      x_2
+      \begin{bmatrix}0\\1\\1\end{bmatrix}
+      +
+      x_3
+      \begin{bmatrix}2\\4\\1\end{bmatrix}
+      =
+      \begin{bmatrix}3\\7\\2\end{bmatrix}.
+    </me>
+    <p>
+      Solving this system leads to an inconsistency, showing that
+      <m>\mathbf{b}</m> is not in the span of the columns of <m>A</m>.
+      Therefore, the matrix equation has no solution.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-3-span-core">
+  <statement>
+    Let
+    <me>
+      \mathbf{v}_1 =
+      \begin{bmatrix}
+        1 \\ 0 \\ 1
+      \end{bmatrix},
+      \quad
+      \mathbf{v}_2 =
+      \begin{bmatrix}
+        2 \\ 1 \\ 3
+      \end{bmatrix}.
+    </me>
+    <ol>
+      <li>Describe the set <m>\text{span}\{\mathbf{v}_1, \mathbf{v}_2\}</m> geometrically.</li>
+      <li>Determine whether the vector
+        <me>
+          \mathbf{w} =
+          \begin{bmatrix}
+            3 \\ 1 \\ 4
+          \end{bmatrix}
+        </me>
+        lies in this span.</li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      The span consists of all linear combinations of the given vectors.
+      To test membership, try to solve
+      <m>a\mathbf{v}_1 + b\mathbf{v}_2 = \mathbf{w}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The span is a plane through the origin, and <m>\mathbf{w}</m> lies in this plane.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Since <m>\mathbf{v}_1</m> and <m>\mathbf{v}_2</m> are not scalar multiples,
+      their span is a plane through the origin in <m>\mathbb{R}^3</m>.
+    </p>
+    <p>
+      To see whether <m>\mathbf{w}</m> lies in the span, we solve
+    </p>
+    <me>
+      a
+      \begin{bmatrix}
+        1 \\ 0 \\ 1
+      \end{bmatrix}
+      +
+      b
+      \begin{bmatrix}
+        2 \\ 1 \\ 3
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        3 \\ 1 \\ 4
+      \end{bmatrix}.
+    </me>
+    <p>
+      This leads to the system
+      <me>
+        \begin{aligned}
+          a + 2b \amp = 3 \\
+          b \amp = 1 \\
+          a + 3b \amp = 4.
+        \end{aligned}
+      </me>
+      The system is consistent with <m>a = 1</m> and <m>b = 1</m>.
+      Therefore, <m>\mathbf{w}</m> lies in the span.
+    </p>
+  </solution>
+</exercise>
+
+<!-- <exercise label="exam-1-1-3">
+  <statement>
+    <p>
+      Consider the system
+      <md>
+        \begin{aligned}
+          2x + y \amp= 1 \\
+          2x + y \amp= 3
+        \end{aligned}
+      </md>
+    </p>
+    <ol marker="(a)">
+      <li>
+        <p>Does this system have a solution?</p>
+      </li>
+      <li>
+        <p>Explain why or why not.</p>
+      </li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      Compare the two equations and think about their graphs.
+    </p>
+  </hint>
+
+  <answer>
+    <ol marker="(a)">
+      <li><p>No.</p></li>
+      <li><p>The equations represent parallel lines.</p></li>
+    </ol>
+  </answer>
+
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          The system has no solutions.
+        </p>
+      </li>
+      <li>
+        <p>
+          The equations have the same left‑hand side but different constants,
+          so they represent distinct parallel lines, which do not intersect.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise label="exam-1-1-4">
+  <statement>
+    <p>
+      Consider the system
+      <me>
+        \begin{aligned}
+          x + y \amp= 2 \\
+          x - y \amp= 0 \\
+          2x \amp= 4
+        \end{aligned}
+      </me>
+    </p>
+    <p>
+      How many solutions does this system have? Explain your reasoning.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Think about whether all three equations can be satisfied at the same
+      time.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      Exactly one solution.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The first two equations intersect at a single point. The third equation
+      is also satisfied by that same point. Therefore, all three equations are
+      satisfied by exactly one point.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-1-1-5">
+  <statement>
+    <p>
+      Consider two linear equations in three unknowns.
+    </p>
+    <ol marker="(a)">
+      <li>
+        <p>
+          What does the solution set of a single linear equation in three
+          unknowns look like geometrically?
+        </p>
+      </li>
+      <li>
+        <p>
+          What would you typically expect the solution set of two such
+          equations to look like?
+        </p>
+      </li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      Recall how lines generalize to higher dimensions.
+    </p>
+  </hint>
+
+  <answer>
+    <ol marker="(a)">
+      <li><p>A plane.</p></li>
+      <li><p>A line.</p></li>
+    </ol>
+  </answer>
+
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          A single linear equation in three unknowns represents a plane in
+          three‑dimensional space.
+        </p>
+      </li>
+      <li>
+        <p>
+          Two planes typically intersect in a line, which forms the solution
+          set.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise label="exam-find-1">
+  <statement>
+    <p>
+      Solve the system of equations
+      <me>
+        \begin{aligned}
+          x + y \amp= 5 \\
+          x - y \amp= 1
+        \end{aligned}
+      </me>
+      and describe the solution set.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Try adding the two equations.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The solution is <m>(x,y) = (3,2)</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Adding the two equations gives
+      <m>2x = 6</m>, so <m>x = 3</m>.
+      Substituting into the first equation gives
+      <m>3 + y = 5</m>, so <m>y = 2</m>.
+      Thus the system has exactly one solution, <m>(3,2)</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-find-2">
+  <statement>
+    <p>
+      Determine whether the following system is equivalent to
+      <me>
+        \begin{aligned}
+          x + y \amp= 4 \\
+          2x + 2y \amp= 8
+        \end{aligned}
+      </me>.
+      Explain your reasoning.
+    </p>
+    <p>
+      <me>
+        \begin{aligned}
+          x + y \amp= 4 \\
+          x + y \amp= 4
+        \end{aligned}
+      </me>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Think about whether the two systems have the same solutions.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      Yes, the systems are equivalent.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The second equation in the original system is just twice the first,
+      so it does not impose a new condition.
+      Both systems describe the same set of solutions:
+      all points satisfying <m>x + y = 4</m>.
+      Therefore, the systems are equivalent.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-find-3">
+  <statement>
+    <p>
+      Consider the system
+      <me>
+        \begin{aligned}
+          x + y \amp= 2 \\
+          x + y \amp= 5
+        \end{aligned}
+      </me>
+    </p>
+    <p>
+      Determine whether this system has a solution. If it does, find all
+      solutions. If it does not, explain why.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Ask whether a single pair <m>(x,y)</m> can satisfy both equations at the
+      same time.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The system has no solutions.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The first equation requires <m>x + y = 2</m>, while the second requires
+      <m>x + y = 5</m>. There is no pair of numbers <m>(x,y)</m> for which both
+      of these statements can be true simultaneously.
+    </p>
+    <p>
+      Therefore, the system is inconsistent and has no solutions.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-find-4">
+  <statement>
+    <p>
+      Solve the system
+      <me>
+        \begin{aligned}
+          x + 2y \amp= 6 \\
+          2x + 4y \amp= 12
+        \end{aligned}
+      </me>
+      and describe the solution set.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Compare the second equation to the first.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The system has infinitely many solutions.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The second equation is obtained by multiplying the first by 2, so both
+      equations describe the same line.
+      Every solution of <m>x + 2y = 6</m> satisfies both equations.
+      Therefore, the system has infinitely many solutions.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-find-5">
+  <statement>
+    <p>
+      Solve the system
+      <me>
+        \begin{aligned}
+          x + y + z \amp= 6 \\
+          x - y + z \amp= 2
+        \end{aligned}
+      </me>
+      and describe the solution set.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Subtract the second equation from the first.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The solution set is a line in three‑dimensional space.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Subtracting the second equation from the first gives
+      <m>2y = 4</m>, so <m>y = 2</m>.
+      Substituting into the first equation gives
+      <m>x + z = 4</m>.
+    </p>
+    <p>
+      Thus the solutions are all triples of the form
+      <m>(x,2,4-x)</m>.
+      Since there are infinitely many such triples, the solution set is a line.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-1-2-A">
+  <statement>
+    <p>
+      The reduced augmented matrix of a linear system is
+      <me>
+        \left[
+        \begin{array}{cc\amp c}
+          1 \amp 0 \amp 3 \\
+          0 \amp 1 \amp -2
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      Find the solution to the system.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Interpret each row as an equation.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>(x,y) = (3,-2)</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The first row corresponds to <m>x = 3</m>, and the second row corresponds
+      to <m>y = -2</m>. Therefore, the unique solution is <m>(3,-2)</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-1-2-B">
+  <statement>
+    <p>
+      Consider the augmented matrix
+      <me>
+        \left[
+        \begin{array}{cc\amp c}
+          1 \amp 2 \amp 4 \\
+          0 \amp 0 \amp 1
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      Does the corresponding system have a solution? Explain your answer.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      What equation does the second row represent?
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The system has no solutions.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The second row represents the equation <m>0 = 1</m>, which is impossible.
+      Therefore, the system is inconsistent and has no solutions.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-1-2-C">
+  <statement>
+    <p>
+      The augmented matrix of a linear system is
+      <me>
+        \left[
+        \begin{array}{cc\amp c}
+          1 \amp -1 \amp 2 \\
+          0 \amp 0 \amp 0
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      Describe the solution set.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Identify any free variables.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The system has infinitely many solutions.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The first row represents <m>x - y = 2</m>, and the second row imposes no
+      additional condition. Solving for <m>x</m> gives <m>x = y + 2</m>.
+    </p>
+    <p>
+      Since <m>y</m> is free, there are infinitely many solutions of the form
+      <m>(y+2,y)</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-1-2-D">
+  <statement>
+    <p>
+      Start with the augmented matrix
+      <me>
+        \left[
+        \begin{array}{cc\amp c}
+          1 \amp 1 \amp 5 \\
+          2 \amp 3 \amp 11
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      Replace the second row with the result of subtracting twice the first
+      row from it. Then find the solution to the system.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Compute <m>R_2 - 2R_1</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>(x,y) = (2,3)</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Subtracting twice the first row from the second gives
+      <me>
+        \left[
+        \begin{array}{cc\amp c}
+          1 \amp 1 \amp 5 \\
+          0 \amp 1 \amp 1
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      The second row gives <m>y = 1</m>. Substituting into the first equation
+      yields <m>x = 4</m>. Thus the solution is <m>(4,1)</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-1-2-E">
+  <statement>
+    <p>
+      The reduced augmented matrix of a system in three variables is
+      <me>
+        \left[
+        \begin{array}{ccc\amp c}
+          1 \amp 0 \amp 2 \amp 1 \\
+          0 \amp 1 \amp -1 \amp 3
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      Describe the solution set geometrically.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Count the number of free variables.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The solution set is a line in three‑dimensional space.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The matrix corresponds to the equations <m>x + 2z = 1</m> and
+      <m>y - z = 3</m>. Solving gives <m>x = 1 - 2z</m> and <m>y = 3 + z</m>.
+    </p>
+    <p>
+      Since <m>z</m> is free, the solutions form a line in
+      <m>\mathbb{R}^3</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-pivot-1">
+  <statement>
+    <p>
+      The reduced row echelon form of an augmented matrix is
+      <me>
+        \left[
+        \begin{array}{ccc\amp c}
+          1 \amp 0 \amp 2 \amp 3 \\
+          0 \amp 1 \amp -1 \amp 0 \\
+          0 \amp 0 \amp 0 \amp 0
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      Identify the pivot positions and determine which variables are free.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Pivot positions correspond to leading 1s in the matrix.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The pivot positions are in columns 1 and 2, and the third variable is
+      free.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The leading 1s occur in the first and second columns, so those columns
+      contain pivot positions. The third column does not contain a pivot, so
+      the corresponding variable is free.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-pivot-2">
+  <statement>
+    <p>
+      Consider the augmented matrix
+      <me>
+        \left[
+        \begin{array}{ccc\amp c}
+          1 \amp 2 \amp -1 \amp 4 \\
+          0 \amp 0 \amp 0 \amp 1
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      Is the corresponding linear system consistent? Explain your answer.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Look for a pivot in the last column.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The system is inconsistent.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The second row corresponds to the equation <m>0 = 1</m>, which is
+      impossible. This occurs because there is a pivot in the last column.
+      Therefore, the system is inconsistent and has no solutions.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-pivot-3">
+  <statement>
+    <p>
+      The row echelon form of a system is
+      <me>
+        \left[
+        \begin{array}{ccc\amp c}
+          1 \amp -1 \amp 2 \amp 0 \\
+          0 \amp 0 \amp 1 \amp 3
+        \end{array}
+        \right].
+      </me>
+    </p>
+    <p>
+      Does the system have infinitely many solutions? If so, explain why.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Determine whether every variable corresponds to a pivot column.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      Yes, the system has infinitely many solutions.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      There are three variables but only two pivot columns. Since at least one
+      variable is free, the system has infinitely many solutions.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-pivot-4">
+  <statement>
+    <p>
+      A system of linear equations in three variables has a reduced row
+      echelon form with exactly two pivot positions.
+    </p>
+    <p>
+      Describe the solution set geometrically.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Think about how many free variables there are.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The solution set is a line in three‑dimensional space.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      With three variables and two pivot positions, there is one free
+      variable. Therefore, the solution set depends on one parameter and forms
+      a line in <m>\mathbb{R}^3</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise label="exam-pivot-5">
+  <statement>
+    <p>
+      Explain why the number of pivot positions in the reduced row echelon
+      form of an augmented matrix determines whether a system has no
+      solutions, exactly one solution, or infinitely many solutions.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Consider the roles of pivots in the coefficient columns and the last
+      column.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      Pivot positions determine consistency and the number of free variables.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      If there is a pivot in the last column, the system is inconsistent and
+      has no solutions. If every variable column has a pivot, there are no
+      free variables and the system has exactly one solution. If there are
+      fewer pivot positions than variables and no pivot in the last column,
+      there are free variables and infinitely many solutions.
+    </p>
+  </solution>
+</exercise> -->
+
+</exercises>
+
+</section>
+</handout>
