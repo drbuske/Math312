@@ -2077,7 +2077,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Chapter 2 Practice Exam",
-  "body": " Chapter 2 Practice Exam   Topics                               Be sure to try each question before looking at the solutions.   Questions   Determine whether the vector is a linear combination of If it is, find scalars that express as such a combination.   Try to solve the vector equation by comparing components.    Yes, is a linear combination of and .    We solve This gives the system The equations are consistent, so .     Consider the augmented matrix   Write a system of linear equations represented by this matrix.  Identify which variables are pivot variables and which are free.  Explain why performing row operations on this matrix does not change the solution set of the system.     Each row corresponds to one equation, and pivot variables correspond to leading entries.    The system has two pivot variables and one free variable, and row operations preserve the solution set.    The matrix represents the system The leading entries occur in the and columns, so and are pivot variables, while is free.  Row operations correspond to rewriting equations using algebraic steps such as swapping equations, scaling them, or replacing one equation with a combination of others. These operations do not change the set of solutions, only the way the system is written.     Consider the matrix equation   Rewrite this equation as a vector equation involving the columns of the matrix.  Determine whether the equation has a solution.     Think of the right-hand side as a linear combination of the columns of the matrix. Solve for the coefficients.    Yes, the equation has a solution; the right-hand side is a linear combination of the columns.    Writing the equation in vector form gives   Solving the system yields , , and . Therefore, the vector on the right lies in the span of the columns, and the matrix equation is consistent.     Let and Decide whether the equation has a solution by interpreting it as a vector equation.   Ask whether can be written as a linear combination of the columns of .    No, the equation does not have a solution.    The corresponding vector equation is   Solving this system leads to an inconsistency, showing that is not in the span of the columns of . Therefore, the matrix equation has no solution.     Let   Describe the set geometrically.  Determine whether the vector lies in this span.     The span consists of all linear combinations of the given vectors. To test membership, try to solve .    The span is a plane through the origin, and lies in this plane.    Since and are not scalar multiples, their span is a plane through the origin in .  To see whether lies in the span, we solve   This leads to the system The system is consistent with and . Therefore, lies in the span.       "
+  "body": " Chapter 2 Practice Exam   Topics                               Be sure to try each question before looking at the solutions.   Questions   Determine whether the vector is a linear combination of If it is, find scalars that express as such a combination.   Try to solve the vector equation by comparing components.    Yes, is a linear combination of and .    We solve This gives the system The equations are consistent, so .     Consider the augmented matrix   Write a system of linear equations represented by this matrix.  Identify which variables are pivot variables and which are free.  Explain why performing row operations on this matrix does not change the solution set of the system.     Each row corresponds to one equation, and pivot variables correspond to leading entries.    The system has two pivot variables and one free variable, and row operations preserve the solution set.    The matrix represents the system The leading entries occur in the and columns, so and are pivot variables, while is free.  Row operations correspond to rewriting equations using algebraic steps such as swapping equations, scaling them, or replacing one equation with a combination of others. These operations do not change the set of solutions, only the way the system is written.     Consider the matrix equation   Rewrite this equation as a vector equation involving the columns of the matrix.  Determine whether the equation has a solution.     Think of the right-hand side as a linear combination of the columns of the matrix. Solve for the coefficients.    Yes, the equation has a solution; the right-hand side is a linear combination of the columns.    Writing the equation in vector form gives   Solving the system yields , , and . Therefore, the vector on the right lies in the span of the columns, and the matrix equation is consistent.     Let and Decide whether the equation has a solution by interpreting it as a vector equation.   Ask whether can be written as a linear combination of the columns of .    No, the equation does not have a solution.    The corresponding vector equation is   Solving this system leads to an inconsistency, showing that is not in the span of the columns of . Therefore, the matrix equation has no solution.     Let   Describe the set geometrically.  Determine whether the vector lies in this span.     The span consists of all linear combinations of the given vectors. To test membership, try to solve .    The span is a plane through the origin, and lies in this plane.    Since and are not scalar multiples, their span is a plane through the origin in .  To see whether lies in the span, we solve   This leads to the system The system is consistent with and . Therefore, lies in the span.     Let and Decide whether the equation has a solution by interpreting it as a vector equation.   Ask whether can be written as a linear combination of the columns of .    No, the equation does not have a solution.    The corresponding vector equation is   Solving this system leads to an inconsistency, showing that is not in the span of the columns of . Therefore, the matrix equation has no solution.     Determine whether the vectors are linearly independent. Justify your answer using the definition of linear independence.   Ask whether a nontrivial linear combination of the vectors can equal the zero vector. Look for obvious scalar multiples.    The vectors are linearly dependent.    The vector is twice . Therefore, is a nontrivial linear combination that equals the zero vector.  Since not all coefficients are zero, the set of vectors is linearly dependent by definition.     Suppose three vectors in all lie in the same plane through the origin.  Can these three vectors be linearly independent? Explain.  Explain how your answer follows from the definition of linear independence.     Think about how many directions are needed to describe all vectors in a plane.    No, the three vectors cannot be linearly independent.    A plane through the origin in can be described as the span of two linearly independent vectors. Any third vector in the same plane can be written as a linear combination of those two.  Therefore, one of the three vectors can be expressed as a linear combination of the others, which means the set is linearly dependent by definition.     Determine whether the vectors are linearly independent. You must justify your answer using reduced row echelon form.   Form a matrix whose columns are the given vectors and compute its reduced row echelon form.    The vectors are linearly independent.    Form the matrix with the vectors as columns:   Row‑reducing this matrix yields the reduced row echelon form   Since there is a pivot in every column, the only solution to the equation is the trivial one. Therefore, the vectors are linearly independent.     For what value(s) of are the vectors linearly independent?   Form a matrix using the vectors as columns and determine when a pivot fails to appear.    The vectors are linearly independent for all values of except .    Place the vectors as columns of a matrix:   Row‑reducing yields a pivot in every column unless . When , one column becomes a linear combination of the others.  Therefore, the vectors are linearly independent for all , and linearly dependent when .     Let be the linear transformation defined by   Compute and , where and .  Explain how these images determine the transformation .     Multiply the matrix by each standard basis vector. Recall that every vector in can be written as a linear combination of and .     and . These vectors determine the entire transformation.    We compute   Every vector can be written as . Linearity implies . Therefore, knowing the images of the standard basis vectors completely determines the transformation.     Let be the linear transformation defined by   Compute and , where and .  Describe the geometric effect of on vectors in .  Describe the image of the unit square under .     Compute the images of the standard basis vectors. The image of the unit square is determined by the images of these vectors.     and . The transformation is a shear, and the unit square maps to a parallelogram.    We compute   The transformation leaves horizontal vectors unchanged while shifting vertical vectors to the right, producing a shear. Since the unit square is spanned by and , its image is the parallelogram spanned by and .      "
 },
 {
   "id": "lincombs-practice-1",
@@ -2123,6 +2123,69 @@ var ptx_lunr_docs = [
   "number": "5",
   "title": "",
   "body": " Let   Describe the set geometrically.  Determine whether the vector lies in this span.     The span consists of all linear combinations of the given vectors. To test membership, try to solve .    The span is a plane through the origin, and lies in this plane.    Since and are not scalar multiples, their span is a plane through the origin in .  To see whether lies in the span, we solve   This leads to the system The system is consistent with and . Therefore, lies in the span.   "
+},
+{
+  "id": "sec2-3-core-3",
+  "level": "2",
+  "url": "ch-practice-exams-3.html#sec2-3-core-3",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": " Let and Decide whether the equation has a solution by interpreting it as a vector equation.   Ask whether can be written as a linear combination of the columns of .    No, the equation does not have a solution.    The corresponding vector equation is   Solving this system leads to an inconsistency, showing that is not in the span of the columns of . Therefore, the matrix equation has no solution.   "
+},
+{
+  "id": "sec2-4-linind-1",
+  "level": "2",
+  "url": "ch-practice-exams-3.html#sec2-4-linind-1",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": " Determine whether the vectors are linearly independent. Justify your answer using the definition of linear independence.   Ask whether a nontrivial linear combination of the vectors can equal the zero vector. Look for obvious scalar multiples.    The vectors are linearly dependent.    The vector is twice . Therefore, is a nontrivial linear combination that equals the zero vector.  Since not all coefficients are zero, the set of vectors is linearly dependent by definition.   "
+},
+{
+  "id": "sec2-4-linind-2",
+  "level": "2",
+  "url": "ch-practice-exams-3.html#sec2-4-linind-2",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": " Suppose three vectors in all lie in the same plane through the origin.  Can these three vectors be linearly independent? Explain.  Explain how your answer follows from the definition of linear independence.     Think about how many directions are needed to describe all vectors in a plane.    No, the three vectors cannot be linearly independent.    A plane through the origin in can be described as the span of two linearly independent vectors. Any third vector in the same plane can be written as a linear combination of those two.  Therefore, one of the three vectors can be expressed as a linear combination of the others, which means the set is linearly dependent by definition.   "
+},
+{
+  "id": "sec2-4-linind-rref",
+  "level": "2",
+  "url": "ch-practice-exams-3.html#sec2-4-linind-rref",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": " Determine whether the vectors are linearly independent. You must justify your answer using reduced row echelon form.   Form a matrix whose columns are the given vectors and compute its reduced row echelon form.    The vectors are linearly independent.    Form the matrix with the vectors as columns:   Row‑reducing this matrix yields the reduced row echelon form   Since there is a pivot in every column, the only solution to the equation is the trivial one. Therefore, the vectors are linearly independent.   "
+},
+{
+  "id": "sec2-4-param-linind",
+  "level": "2",
+  "url": "ch-practice-exams-3.html#sec2-4-param-linind",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": " For what value(s) of are the vectors linearly independent?   Form a matrix using the vectors as columns and determine when a pivot fails to appear.    The vectors are linearly independent for all values of except .    Place the vectors as columns of a matrix:   Row‑reducing yields a pivot in every column unless . When , one column becomes a linear combination of the others.  Therefore, the vectors are linearly independent for all , and linearly dependent when .   "
+},
+{
+  "id": "sec2-5-matrix-trans-columns",
+  "level": "2",
+  "url": "ch-practice-exams-3.html#sec2-5-matrix-trans-columns",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": " Let be the linear transformation defined by   Compute and , where and .  Explain how these images determine the transformation .     Multiply the matrix by each standard basis vector. Recall that every vector in can be written as a linear combination of and .     and . These vectors determine the entire transformation.    We compute   Every vector can be written as . Linearity implies . Therefore, knowing the images of the standard basis vectors completely determines the transformation.   "
+},
+{
+  "id": "sec2-5-matrix-trans-columns-2",
+  "level": "2",
+  "url": "ch-practice-exams-3.html#sec2-5-matrix-trans-columns-2",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": " Let be the linear transformation defined by   Compute and , where and .  Describe the geometric effect of on vectors in .  Describe the image of the unit square under .     Compute the images of the standard basis vectors. The image of the unit square is determined by the images of these vectors.     and . The transformation is a shear, and the unit square maps to a parallelogram.    We compute   The transformation leaves horizontal vectors unchanged while shifting vertical vectors to the right, producing a shear. Since the unit square is spanned by and , its image is the parallelogram spanned by and .   "
 }
 ]
 
