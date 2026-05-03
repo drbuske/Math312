@@ -343,741 +343,498 @@
   </solution>
 </exercise>
 
-<!-- <exercise label="exam-1-1-3">
+<exercise xml:id="sec2-3-core-3">
   <statement>
+    Let
+    <me>
+      A =
+      \begin{bmatrix}
+        1 \amp 0 \amp 2 \\
+        2 \amp 1 \amp 4 \\
+        0 \amp 1 \amp 1
+      \end{bmatrix}
+    </me>
+    and
+    <me>
+      \mathbf{b} =
+      \begin{bmatrix}
+        3 \\ 7 \\ 2
+      \end{bmatrix}.
+    </me>
+    Decide whether the equation <m>A\mathbf{x} = \mathbf{b}</m> has a solution by
+    interpreting it as a vector equation.
+  </statement>
+
+  <hint>
     <p>
-      Consider the system
-      <md>
-        \begin{aligned}
-          2x + y \amp= 1 \\
-          2x + y \amp= 3
-        \end{aligned}
-      </md>
+      Ask whether <m>\mathbf{b}</m> can be written as a linear combination of the
+      columns of <m>A</m>.
     </p>
-    <ol marker="(a)">
-      <li>
-        <p>Does this system have a solution?</p>
-      </li>
-      <li>
-        <p>Explain why or why not.</p>
-      </li>
+  </hint>
+
+  <answer>
+    <p>
+      No, the equation does not have a solution.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The corresponding vector equation is
+    </p>
+    <me>
+      x_1
+      \begin{bmatrix}1\\2\\0\end{bmatrix}
+      +
+      x_2
+      \begin{bmatrix}0\\1\\1\end{bmatrix}
+      +
+      x_3
+      \begin{bmatrix}2\\4\\1\end{bmatrix}
+      =
+      \begin{bmatrix}3\\7\\2\end{bmatrix}.
+    </me>
+    <p>
+      Solving this system leads to an inconsistency, showing that
+      <m>\mathbf{b}</m> is not in the span of the columns of <m>A</m>.
+      Therefore, the matrix equation has no solution.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-4-linind-1">
+  <statement>
+    Determine whether the vectors
+    <me>
+      \mathbf{v}_1 =
+      \begin{bmatrix}
+        1 \\ 2 \\ 1
+      \end{bmatrix},
+      \quad
+      \mathbf{v}_2 =
+      \begin{bmatrix}
+        2 \\ 4 \\ 2
+      \end{bmatrix},
+      \quad
+      \mathbf{v}_3 =
+      \begin{bmatrix}
+        0 \\ 1 \\ -1
+      \end{bmatrix}
+    </me>
+    are linearly independent.
+    Justify your answer using the definition of linear independence.
+  </statement>
+
+  <hint>
+    <p>
+      Ask whether a nontrivial linear combination of the vectors can equal
+      the zero vector.  Look for obvious scalar multiples.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The vectors are linearly dependent.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The vector <m>\mathbf{v}_2</m> is twice <m>\mathbf{v}_1</m>.
+      Therefore,
+      <m>\mathbf{v}_2 - 2\mathbf{v}_1 = \mathbf{0}</m>
+      is a nontrivial linear combination that equals the zero vector.
+    </p>
+    <p>
+      Since not all coefficients are zero, the set of vectors is linearly
+      dependent by definition.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-4-linind-2">
+  <statement>
+    Suppose three vectors in <m>\mathbb{R}^3</m> all lie in the same plane
+    through the origin.
+    <ol>
+      <li>Can these three vectors be linearly independent?  Explain.</li>
+      <li>Explain how your answer follows from the definition of linear independence.</li>
     </ol>
   </statement>
 
   <hint>
     <p>
-      Compare the two equations and think about their graphs.
+      Think about how many directions are needed to describe all vectors in a plane.
     </p>
   </hint>
 
   <answer>
-    <ol marker="(a)">
-      <li><p>No.</p></li>
-      <li><p>The equations represent parallel lines.</p></li>
+    <p>
+      No, the three vectors cannot be linearly independent.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      A plane through the origin in <m>\mathbb{R}^3</m> can be described as the
+      span of two linearly independent vectors.
+      Any third vector in the same plane can be written as a linear combination
+      of those two.
+    </p>
+    <p>
+      Therefore, one of the three vectors can be expressed as a linear combination
+      of the others, which means the set is linearly dependent by definition.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-4-linind-rref">
+  <statement>
+    Determine whether the vectors
+    <me>
+      \mathbf{v}_1 =
+      \begin{bmatrix}
+        1 \\ 2 \\ 1
+      \end{bmatrix},
+      \quad
+      \mathbf{v}_2 =
+      \begin{bmatrix}
+        2 \\ 3 \\ 1
+      \end{bmatrix},
+      \quad
+      \mathbf{v}_3 =
+      \begin{bmatrix}
+        1 \\ 1 \\ 0
+      \end{bmatrix}
+    </me>
+    are linearly independent.
+    You must justify your answer using reduced row echelon form.
+  </statement>
+
+  <hint>
+    <p>
+      Form a matrix whose columns are the given vectors and compute its
+      reduced row echelon form.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The vectors are linearly independent.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Form the matrix with the vectors as columns:
+    </p>
+    <me>
+      \begin{bmatrix}
+        1 \amp 2 \amp 1 \\
+        2 \amp 3 \amp 1 \\
+        1 \amp 1 \amp 0
+      \end{bmatrix}.
+    </me>
+    <p>
+      Row‑reducing this matrix yields the reduced row echelon form
+    </p>
+    <me>
+      \begin{bmatrix}
+        1 \amp 0 \amp 0 \\
+        0 \amp 1 \amp 0 \\
+        0 \amp 0 \amp 1
+      \end{bmatrix}.
+    </me>
+    <p>
+      Since there is a pivot in every column, the only solution to the equation
+      <m>c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + c_3\mathbf{v}_3 = \mathbf{0}</m>
+      is the trivial one. Therefore, the vectors are linearly independent.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-4-param-linind">
+  <statement>
+    For what value(s) of <m>k</m> are the vectors
+    <me>
+      \mathbf{v}_1 =
+      \begin{bmatrix}
+        1 \\ k \\ 2
+      \end{bmatrix},
+      \quad
+      \mathbf{v}_2 =
+      \begin{bmatrix}
+        2 \\ 3 \\ 4
+      \end{bmatrix},
+      \quad
+      \mathbf{v}_3 =
+      \begin{bmatrix}
+        1 \\ 1 \\ k
+      \end{bmatrix}
+    </me>
+    linearly independent?
+  </statement>
+
+  <hint>
+    <p>
+      Form a matrix using the vectors as columns and determine when a pivot
+      fails to appear.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The vectors are linearly independent for all values of <m>k</m> except
+      <m>k = 2</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Place the vectors as columns of a matrix:
+    </p>
+    <me>
+      \begin{bmatrix}
+        1 \amp 2 \amp 1 \\
+        k \amp 3 \amp 1 \\
+        2 \amp 4 \amp k
+      \end{bmatrix}.
+    </me>
+    <p>
+      Row‑reducing yields a pivot in every column unless
+      <m>k - 2 = 0</m>.
+      When <m>k = 2</m>, one column becomes a linear combination of the others.
+    </p>
+    <p>
+      Therefore, the vectors are linearly independent for all
+      <m>k \neq 2</m>, and linearly dependent when <m>k = 2</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-5-matrix-trans-columns">
+  <statement>
+    Let <m>T : \mathbb{R}^2 \to \mathbb{R}^2</m> be the linear transformation defined by
+    <me>
+      T(\mathbf{x}) =
+      \begin{bmatrix}
+        2 \amp 1 \\
+        -1 \amp 1
+      \end{bmatrix}
+      \mathbf{x}.
+    </me>
+    <ol>
+      <li>Compute <m>T(\mathbf{e}_1)</m> and <m>T(\mathbf{e}_2)</m>, where
+      <m>\mathbf{e}_1 = \begin{bmatrix}1\\0\end{bmatrix}</m> and
+      <m>\mathbf{e}_2 = \begin{bmatrix}0\\1\end{bmatrix}</m>.</li>
+      <li>Explain how these images determine the transformation <m>T</m>.</li>
     </ol>
-  </answer>
-
-  <solution>
-    <ol marker="(a)">
-      <li>
-        <p>
-          The system has no solutions.
-        </p>
-      </li>
-      <li>
-        <p>
-          The equations have the same left‑hand side but different constants,
-          so they represent distinct parallel lines, which do not intersect.
-        </p>
-      </li>
-    </ol>
-  </solution>
-</exercise>
-
-<exercise label="exam-1-1-4">
-  <statement>
-    <p>
-      Consider the system
-      <me>
-        \begin{aligned}
-          x + y \amp= 2 \\
-          x - y \amp= 0 \\
-          2x \amp= 4
-        \end{aligned}
-      </me>
-    </p>
-    <p>
-      How many solutions does this system have? Explain your reasoning.
-    </p>
   </statement>
 
   <hint>
     <p>
-      Think about whether all three equations can be satisfied at the same
-      time.
+      Multiply the matrix by each standard basis vector.
+      Recall that every vector in <m>\mathbb{R}^2</m> can be written as a linear
+      combination of <m>\mathbf{e}_1</m> and <m>\mathbf{e}_2</m>.
     </p>
   </hint>
 
   <answer>
     <p>
-      Exactly one solution.
+      <m>T(\mathbf{e}_1) = \begin{bmatrix}2\\-1\end{bmatrix}</m> and
+      <m>T(\mathbf{e}_2) = \begin{bmatrix}1\\1\end{bmatrix}</m>.
+      These vectors determine the entire transformation.
     </p>
   </answer>
 
   <solution>
     <p>
-      The first two equations intersect at a single point. The third equation
-      is also satisfied by that same point. Therefore, all three equations are
-      satisfied by exactly one point.
+      We compute
+      <me>
+        T(\mathbf{e}_1) =
+        \begin{bmatrix}
+          2 \amp 1 \\
+          -1 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}1\\0\end{bmatrix}
+        =
+        \begin{bmatrix}2\\-1\end{bmatrix},
+        \quad
+        T(\mathbf{e}_2) =
+        \begin{bmatrix}
+          2 \amp 1 \\
+          -1 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}0\\1\end{bmatrix}
+        =
+        \begin{bmatrix}1\\1\end{bmatrix}.
+      </me>
+    </p>
+    <p>
+      Every vector <m>\mathbf{x}\in\mathbb{R}^2</m> can be written as
+      <m>\mathbf{x} = a\mathbf{e}_1 + b\mathbf{e}_2</m>.
+      Linearity implies
+      <m>T(\mathbf{x}) = aT(\mathbf{e}_1) + bT(\mathbf{e}_2)</m>.
+      Therefore, knowing the images of the standard basis vectors completely
+      determines the transformation.
     </p>
   </solution>
 </exercise>
 
-<exercise label="exam-1-1-5">
+<exercise xml:id="sec2-5-matrix-trans-columns-2">
   <statement>
-    <p>
-      Consider two linear equations in three unknowns.
-    </p>
-    <ol marker="(a)">
-      <li>
-        <p>
-          What does the solution set of a single linear equation in three
-          unknowns look like geometrically?
-        </p>
-      </li>
-      <li>
-        <p>
-          What would you typically expect the solution set of two such
-          equations to look like?
-        </p>
-      </li>
+    Let <m>T : \mathbb{R}^2 \to \mathbb{R}^2</m> be the linear transformation defined by
+    <me>
+      T(\mathbf{x}) =
+      \begin{bmatrix}
+        1 \amp 3 \\
+        0 \amp 1
+      \end{bmatrix}
+      \mathbf{x}.
+    </me>
+    <ol>
+      <li>Compute <m>T(\mathbf{e}_1)</m> and <m>T(\mathbf{e}_2)</m>, where
+      <m>\mathbf{e}_1 = \begin{bmatrix}1\\0\end{bmatrix}</m> and
+      <m>\mathbf{e}_2 = \begin{bmatrix}0\\1\end{bmatrix}</m>.</li>
+      <li>Describe the geometric effect of <m>T</m> on vectors in <m>\mathbb{R}^2</m>.</li>
+      <li>Describe the image of the unit square under <m>T</m>.</li>
     </ol>
   </statement>
 
   <hint>
     <p>
-      Recall how lines generalize to higher dimensions.
+      Compute the images of the standard basis vectors. The image of the unit
+      square is determined by the images of these vectors.
     </p>
   </hint>
 
   <answer>
-    <ol marker="(a)">
-      <li><p>A plane.</p></li>
-      <li><p>A line.</p></li>
+    <p>
+      <m>T(\mathbf{e}_1) = \begin{bmatrix}1\\0\end{bmatrix}</m> and
+      <m>T(\mathbf{e}_2) = \begin{bmatrix}3\\1\end{bmatrix}</m>.
+      The transformation is a shear, and the unit square maps to a parallelogram.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We compute
+      <me>
+        T(\mathbf{e}_1) =
+        \begin{bmatrix}
+          1 \amp 3 \\
+          0 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}1\\0\end{bmatrix}
+        =
+        \begin{bmatrix}1\\0\end{bmatrix},
+        \quad
+        T(\mathbf{e}_2) =
+        \begin{bmatrix}
+          1 \amp 3 \\
+          0 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}0\\1\end{bmatrix}
+        =
+        \begin{bmatrix}3\\1\end{bmatrix}.
+      </me>
+    </p>
+    <p>
+      The transformation leaves horizontal vectors unchanged while shifting
+      vertical vectors to the right, producing a shear.
+      Since the unit square is spanned by <m>\mathbf{e}_1</m> and <m>\mathbf{e}_2</m>,
+      its image is the parallelogram spanned by <m>T(\mathbf{e}_1)</m> and
+      <m>T(\mathbf{e}_2)</m>.
+    </p>
+
+    <image width="50%">
+    <prefigure xmlns="https://prefigure.org"
+             label="parallelogram-image-trans-01-31">
+<diagram dimensions="(300, 300)" margins="5">
+  <coordinates bbox="(-1,-1,4,4)">
+    <grid-axes decorations="no"/>
+    <vector v="(3,1)" stroke="blue" alignment="nw"> <m>T(\mathbf{e}_2)</m> </vector>
+    <vector v="(1,0)" tail="(3,1)" stroke="blue"/>
+    <vector v="(3,1)" tail="(1,0)" stroke="blue"/>
+    <vector v="(1,0)" stroke="blue" alignment="s"> <m>T(\mathbf{e}_1)</m> </vector>
+    <polygon points="(0,0),(3,1),(4,1),(1,0)" fill="blue" opacity="0.4"/>
+  </coordinates>
+</diagram>
+    </prefigure>
+  </image>
+  </solution>
+</exercise>
+
+<exercise xml:id="sec2-6-geometry-matrix">
+  <statement>
+    The figure below shows the image of the unit square in <m>\mathbb{R}^2</m>
+    under a linear transformation <m>T</m>.
+    <image xml:id="myfirstgeomtrans" width="60%"> 
+      <prefigure xmlns="https://prefigure.org"
+             label="parallelogram-image-trans-11-n12">
+      <diagram dimensions="(300, 300)" margins="5">
+        <coordinates bbox="(-1,-1,3,3)">
+          <grid-axes xlabel="x" ylabel="y"/>
+          <vector v="(-1,2)" stroke="blue" alignment="nw">
+            <m>T(\mathbf{e}_2)</m>
+          </vector>
+          <vector v="(1,1)" stroke="red" alignment="e">
+            <m>T(\mathbf{e}_1)</m>
+          </vector>
+          <polygon points="(0,0),(1,1),(0,3),(-1,2)" fill="blue" opacity="0.25"/>
+        </coordinates>
+      </diagram>
+    </prefigure>
+  </image>
+    <ol>
+      <li>Write the matrix of <m>T</m>.</li>
+      <li>Explain how the diagram determines this matrix.</li>
     </ol>
-  </answer>
-
-  <solution>
-    <ol marker="(a)">
-      <li>
-        <p>
-          A single linear equation in three unknowns represents a plane in
-          three‑dimensional space.
-        </p>
-      </li>
-      <li>
-        <p>
-          Two planes typically intersect in a line, which forms the solution
-          set.
-        </p>
-      </li>
-    </ol>
-  </solution>
-</exercise>
-
-<exercise label="exam-find-1">
-  <statement>
-    <p>
-      Solve the system of equations
-      <me>
-        \begin{aligned}
-          x + y \amp= 5 \\
-          x - y \amp= 1
-        \end{aligned}
-      </me>
-      and describe the solution set.
-    </p>
   </statement>
 
   <hint>
     <p>
-      Try adding the two equations.
+      The columns of the matrix of a linear transformation are the images of the
+      standard basis vectors <m>\mathbf{e}_1</m> and <m>\mathbf{e}_2</m>.
     </p>
   </hint>
 
   <answer>
     <p>
-      The solution is <m>(x,y) = (3,2)</m>.
+      The matrix of <m>T</m> is
+      <m>
+        \begin{bmatrix}
+          1 \amp -1 \\
+          1 \amp 2
+        \end{bmatrix}.
+      </m>
     </p>
   </answer>
 
   <solution>
     <p>
-      Adding the two equations gives
-      <m>2x = 6</m>, so <m>x = 3</m>.
-      Substituting into the first equation gives
-      <m>3 + y = 5</m>, so <m>y = 2</m>.
-      Thus the system has exactly one solution, <m>(3,2)</m>.
+      From the diagram, we see that
+      <m>T(\mathbf{e}_1) = \begin{bmatrix}1\\1\end{bmatrix}</m>
+      and
+      <m>T(\mathbf{e}_2) = \begin{bmatrix}-1\\2\end{bmatrix}</m>.
+    </p>
+    <p>
+      For a linear transformation, the matrix is formed by placing
+      <m>T(\mathbf{e}_1)</m> and <m>T(\mathbf{e}_2)</m> as the first and second
+      columns, respectively.
+      Therefore,
+    </p>
+    <me>
+      \begin{bmatrix}
+        1 \amp -1 \\
+        1 \amp 2
+      \end{bmatrix}
+    </me>
+    <p>
+      is the matrix of <m>T</m>.
     </p>
   </solution>
 </exercise>
-
-<exercise label="exam-find-2">
-  <statement>
-    <p>
-      Determine whether the following system is equivalent to
-      <me>
-        \begin{aligned}
-          x + y \amp= 4 \\
-          2x + 2y \amp= 8
-        \end{aligned}
-      </me>.
-      Explain your reasoning.
-    </p>
-    <p>
-      <me>
-        \begin{aligned}
-          x + y \amp= 4 \\
-          x + y \amp= 4
-        \end{aligned}
-      </me>
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Think about whether the two systems have the same solutions.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      Yes, the systems are equivalent.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The second equation in the original system is just twice the first,
-      so it does not impose a new condition.
-      Both systems describe the same set of solutions:
-      all points satisfying <m>x + y = 4</m>.
-      Therefore, the systems are equivalent.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-find-3">
-  <statement>
-    <p>
-      Consider the system
-      <me>
-        \begin{aligned}
-          x + y \amp= 2 \\
-          x + y \amp= 5
-        \end{aligned}
-      </me>
-    </p>
-    <p>
-      Determine whether this system has a solution. If it does, find all
-      solutions. If it does not, explain why.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Ask whether a single pair <m>(x,y)</m> can satisfy both equations at the
-      same time.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The system has no solutions.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The first equation requires <m>x + y = 2</m>, while the second requires
-      <m>x + y = 5</m>. There is no pair of numbers <m>(x,y)</m> for which both
-      of these statements can be true simultaneously.
-    </p>
-    <p>
-      Therefore, the system is inconsistent and has no solutions.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-find-4">
-  <statement>
-    <p>
-      Solve the system
-      <me>
-        \begin{aligned}
-          x + 2y \amp= 6 \\
-          2x + 4y \amp= 12
-        \end{aligned}
-      </me>
-      and describe the solution set.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Compare the second equation to the first.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The system has infinitely many solutions.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The second equation is obtained by multiplying the first by 2, so both
-      equations describe the same line.
-      Every solution of <m>x + 2y = 6</m> satisfies both equations.
-      Therefore, the system has infinitely many solutions.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-find-5">
-  <statement>
-    <p>
-      Solve the system
-      <me>
-        \begin{aligned}
-          x + y + z \amp= 6 \\
-          x - y + z \amp= 2
-        \end{aligned}
-      </me>
-      and describe the solution set.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Subtract the second equation from the first.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The solution set is a line in three‑dimensional space.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      Subtracting the second equation from the first gives
-      <m>2y = 4</m>, so <m>y = 2</m>.
-      Substituting into the first equation gives
-      <m>x + z = 4</m>.
-    </p>
-    <p>
-      Thus the solutions are all triples of the form
-      <m>(x,2,4-x)</m>.
-      Since there are infinitely many such triples, the solution set is a line.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-1-2-A">
-  <statement>
-    <p>
-      The reduced augmented matrix of a linear system is
-      <me>
-        \left[
-        \begin{array}{cc\amp c}
-          1 \amp 0 \amp 3 \\
-          0 \amp 1 \amp -2
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      Find the solution to the system.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Interpret each row as an equation.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      <m>(x,y) = (3,-2)</m>.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The first row corresponds to <m>x = 3</m>, and the second row corresponds
-      to <m>y = -2</m>. Therefore, the unique solution is <m>(3,-2)</m>.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-1-2-B">
-  <statement>
-    <p>
-      Consider the augmented matrix
-      <me>
-        \left[
-        \begin{array}{cc\amp c}
-          1 \amp 2 \amp 4 \\
-          0 \amp 0 \amp 1
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      Does the corresponding system have a solution? Explain your answer.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      What equation does the second row represent?
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The system has no solutions.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The second row represents the equation <m>0 = 1</m>, which is impossible.
-      Therefore, the system is inconsistent and has no solutions.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-1-2-C">
-  <statement>
-    <p>
-      The augmented matrix of a linear system is
-      <me>
-        \left[
-        \begin{array}{cc\amp c}
-          1 \amp -1 \amp 2 \\
-          0 \amp 0 \amp 0
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      Describe the solution set.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Identify any free variables.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The system has infinitely many solutions.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The first row represents <m>x - y = 2</m>, and the second row imposes no
-      additional condition. Solving for <m>x</m> gives <m>x = y + 2</m>.
-    </p>
-    <p>
-      Since <m>y</m> is free, there are infinitely many solutions of the form
-      <m>(y+2,y)</m>.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-1-2-D">
-  <statement>
-    <p>
-      Start with the augmented matrix
-      <me>
-        \left[
-        \begin{array}{cc\amp c}
-          1 \amp 1 \amp 5 \\
-          2 \amp 3 \amp 11
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      Replace the second row with the result of subtracting twice the first
-      row from it. Then find the solution to the system.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Compute <m>R_2 - 2R_1</m>.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      <m>(x,y) = (2,3)</m>.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      Subtracting twice the first row from the second gives
-      <me>
-        \left[
-        \begin{array}{cc\amp c}
-          1 \amp 1 \amp 5 \\
-          0 \amp 1 \amp 1
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      The second row gives <m>y = 1</m>. Substituting into the first equation
-      yields <m>x = 4</m>. Thus the solution is <m>(4,1)</m>.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-1-2-E">
-  <statement>
-    <p>
-      The reduced augmented matrix of a system in three variables is
-      <me>
-        \left[
-        \begin{array}{ccc\amp c}
-          1 \amp 0 \amp 2 \amp 1 \\
-          0 \amp 1 \amp -1 \amp 3
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      Describe the solution set geometrically.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Count the number of free variables.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The solution set is a line in three‑dimensional space.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The matrix corresponds to the equations <m>x + 2z = 1</m> and
-      <m>y - z = 3</m>. Solving gives <m>x = 1 - 2z</m> and <m>y = 3 + z</m>.
-    </p>
-    <p>
-      Since <m>z</m> is free, the solutions form a line in
-      <m>\mathbb{R}^3</m>.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-pivot-1">
-  <statement>
-    <p>
-      The reduced row echelon form of an augmented matrix is
-      <me>
-        \left[
-        \begin{array}{ccc\amp c}
-          1 \amp 0 \amp 2 \amp 3 \\
-          0 \amp 1 \amp -1 \amp 0 \\
-          0 \amp 0 \amp 0 \amp 0
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      Identify the pivot positions and determine which variables are free.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Pivot positions correspond to leading 1s in the matrix.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The pivot positions are in columns 1 and 2, and the third variable is
-      free.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The leading 1s occur in the first and second columns, so those columns
-      contain pivot positions. The third column does not contain a pivot, so
-      the corresponding variable is free.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-pivot-2">
-  <statement>
-    <p>
-      Consider the augmented matrix
-      <me>
-        \left[
-        \begin{array}{ccc\amp c}
-          1 \amp 2 \amp -1 \amp 4 \\
-          0 \amp 0 \amp 0 \amp 1
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      Is the corresponding linear system consistent? Explain your answer.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Look for a pivot in the last column.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The system is inconsistent.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      The second row corresponds to the equation <m>0 = 1</m>, which is
-      impossible. This occurs because there is a pivot in the last column.
-      Therefore, the system is inconsistent and has no solutions.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-pivot-3">
-  <statement>
-    <p>
-      The row echelon form of a system is
-      <me>
-        \left[
-        \begin{array}{ccc\amp c}
-          1 \amp -1 \amp 2 \amp 0 \\
-          0 \amp 0 \amp 1 \amp 3
-        \end{array}
-        \right].
-      </me>
-    </p>
-    <p>
-      Does the system have infinitely many solutions? If so, explain why.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Determine whether every variable corresponds to a pivot column.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      Yes, the system has infinitely many solutions.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      There are three variables but only two pivot columns. Since at least one
-      variable is free, the system has infinitely many solutions.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-pivot-4">
-  <statement>
-    <p>
-      A system of linear equations in three variables has a reduced row
-      echelon form with exactly two pivot positions.
-    </p>
-    <p>
-      Describe the solution set geometrically.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Think about how many free variables there are.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      The solution set is a line in three‑dimensional space.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      With three variables and two pivot positions, there is one free
-      variable. Therefore, the solution set depends on one parameter and forms
-      a line in <m>\mathbb{R}^3</m>.
-    </p>
-  </solution>
-</exercise>
-
-<exercise label="exam-pivot-5">
-  <statement>
-    <p>
-      Explain why the number of pivot positions in the reduced row echelon
-      form of an augmented matrix determines whether a system has no
-      solutions, exactly one solution, or infinitely many solutions.
-    </p>
-  </statement>
-
-  <hint>
-    <p>
-      Consider the roles of pivots in the coefficient columns and the last
-      column.
-    </p>
-  </hint>
-
-  <answer>
-    <p>
-      Pivot positions determine consistency and the number of free variables.
-    </p>
-  </answer>
-
-  <solution>
-    <p>
-      If there is a pivot in the last column, the system is inconsistent and
-      has no solutions. If every variable column has a pivot, there are no
-      free variables and the system has exactly one solution. If there are
-      fewer pivot positions than variables and no pivot in the last column,
-      there are free variables and infinitely many solutions.
-    </p>
-  </solution>
-</exercise> -->
 
 </exercises>
 
