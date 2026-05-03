@@ -836,6 +836,429 @@
   </solution>
 </exercise>
 
+<exercise xml:id="sec2-6-projection-guided">
+  <statement>
+    Let <m>T : \mathbb{R}^2 \to \mathbb{R}^2</m> be the linear transformation
+    that projects every vector onto the line <m>y = x</m>.
+    <ol>
+      <li>Any vector on the line <m>y=x</m> can be written in the form
+        <m>t\begin{bmatrix}1\\1\end{bmatrix}</m>.
+        Use this to explain why
+        <m>T(\mathbf{e}_1)</m> must have this form.</li>
+      <li>Find the value of <m>t</m> such that the vector
+        <m>\mathbf{e}_1 - t\begin{bmatrix}1\\1\end{bmatrix}</m>
+        is perpendicular to the line <m>y=x</m>.</li>
+      <li>Use your result to compute <m>T(\mathbf{e}_1)</m> and
+        <m>T(\mathbf{e}_2)</m>, then write the matrix of <m>T</m>.</li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      A vector is perpendicular to the line <m>y=x</m> if it is perpendicular to
+      <m>\begin{bmatrix}1\\1\end{bmatrix}</m>.  Use the dot product.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>T(\mathbf{e}_1) = T(\mathbf{e}_2) = \tfrac12\begin{bmatrix}1\\1\end{bmatrix}</m>,
+      and the matrix of <m>T</m> is
+      <m>
+        \begin{bmatrix}
+          \tfrac12 \amp \tfrac12 \\
+          \tfrac12 \amp \tfrac12
+        \end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Since the image of any vector under the projection lies on the line
+      <m>y=x</m>, we know that
+      <m>T(\mathbf{e}_1) = t\begin{bmatrix}1\\1\end{bmatrix}</m>
+      for some scalar <m>t</m>.
+    </p>
+    <p>
+      The vector from <m>T(\mathbf{e}_1)</m> to <m>\mathbf{e}_1</m> must be
+      perpendicular to the line <m>y=x</m>.  Therefore,
+    </p>
+    <me>
+      \left(
+        \begin{bmatrix}1\\0\end{bmatrix}
+        -
+        t\begin{bmatrix}1\\1\end{bmatrix}
+      \right)
+      \cdot
+      \begin{bmatrix}1\\1\end{bmatrix}
+      = 0.
+    </me>
+    <p>
+      Computing the dot product gives
+      <m>1 - 2t = 0</m>, so <m>t = \tfrac12</m>.
+      Thus,
+      <m>T(\mathbf{e}_1) = \tfrac12\begin{bmatrix}1\\1\end{bmatrix}</m>.
+    </p>
+    <p>
+      By symmetry, <m>\mathbf{e}_2</m> projects to the same point on the line,
+      so
+      <m>T(\mathbf{e}_2) = \tfrac12\begin{bmatrix}1\\1\end{bmatrix}</m>.
+      Placing these vectors as columns gives the matrix
+    </p>
+    <me>
+      \begin{bmatrix}
+        \tfrac12 \amp \tfrac12 \\
+        \tfrac12 \amp \tfrac12
+      \end{bmatrix}.
+    </me>
+  </solution>
+</exercise>
+
+<!-- Based on OPL problem at Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.3.47.pg -->
+    <exercise xml:id="ex-ww-li1" label="ex-ww-li1">
+      <statement>
+        <p>
+          Let <m>\{\mathbf{v}_1,\mathbf{v}_2,\mathbf{v}_3,\mathbf{v}_4\}</m> be a linearly independent set of vectors.
+          Select the best statement.
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <m>\{\mathbf{v}_1,\mathbf{v}_2,\mathbf{v}_3\}</m> is never a linearly independent set of vectors.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              The independence of the set <m>\{\vvec_1,\vvec_2,\vvec_3\}</m> depends on the vectors chosen.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>\{\vvec_1,\vvec_2,\vvec_3\}</m> is always a linearly independent set of vectors.
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+
+    <!-- Based on the OPL problem at Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.3.49.pg -->
+    <exercise xml:id="ex-ww-li2" label="ex-ww-li2">
+      <statement>
+        <p>
+          Let <m>\vvec_4</m> be a linear combination of <m>\{\vvec_1,\vvec_2,\vvec_3\}</m>.
+          Select the best statement.
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>\{\vvec_1,\vvec_2,\vvec_3,\vvec_4\}</m> is never a linearly independent set of vectors.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <m>\{\vvec_1,\vvec_2,\vvec_3,\vvec_4\}</m> is always a linearly independent set of vectors.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              We can't conclude whether or not <m>\{\vvec_1,\vvec_2,\vvec_3,\vvec_4\}</m> is a linearly independent set of vectors.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              The set <m>\{\vvec_1,\vvec_2,\vvec_3\}</m> must be a linearly independent set of vectors.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              The set <m>\{\vvec_1,\vvec_2,\vvec_3\}</m> cannot be a linearly independent set of vectors.
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+
+    <!-- Based on the OPL problem at Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.3.52.pg -->
+    <exercise xml:id="ex-ww-li3" label="ex-ww-li3">
+      <statement>
+        <p>
+          Assume <m>\vvec_4</m> is not a linear combination of the vectors <m>\vvec_1,\vvec_2,\vvec_3</m>.
+          Select the best statement.
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              The set <m>\{\vvec_1,\vvec_2,\vvec_3,\vvec_4\}</m> is always linearly independent.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              The set <m>\{\vvec_1,\vvec_2,\vvec_3,\vvec_4\}</m> is never linearly independent.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              The set <m>\{\vvec_1,\vvec_2,\vvec_3,\vvec_4\}</m> is linearly independent provided that <m>\{\vvec_1,\vvec_2,\vvec_3\}</m> is linearly independent.
+            </p>
+          </statement>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="ex-mc-transf-matrix1">
+    <statement>
+      <p>
+        What is the size of the matrix <m>A</m> used for the matrix transformation <m>T:\R^n\to \R^m</m>?
+      </p>
+    </statement>
+    <choices randomize="yes">
+      <choice correct="yes">
+        <statement>
+          <p>
+            <m>m\times n</m>
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Correct! We need to be able to multiply on the right by an <m>n\times 1</m>
+            column vector, and get an <m>m\times 1</m> column vector as output.
+          </p>
+        </feedback>
+      </choice>
+      <choice correct="no">
+        <statement>
+          <p>
+            <m>n\times m</m>
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            The domain of <m>T</m> is <m>\R^n</m>,
+            and the product <m>A\xvec</m> is only defined if the number of columns (<m>m</m>)
+            is equal to the dimension of the domain.
+          </p>
+        </feedback>
+      </choice>
+      <choice correct="no">
+        <statement>
+          <p>
+            <m>m\times m</m>
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            The domain of <m>T</m> is <m>\R^n</m>,
+            and the product <m>A\xvec</m> is only defined if the number of columns (<m>m</m>)
+            is equal to the dimension of the domain.
+          </p>
+        </feedback>
+      </choice>
+      <choice correct="no">
+        <statement>
+          <p>
+            <m>n\times n</m>
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Although the product <m>A\xvec</m> would be defined in this case,
+            the result would be a vector in <m>\R^n</m>, and we want a vector in <m>\R^m</m>.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+
+  <exercise label="ex-rs-mc-span" xml:id="ex-rs-mc-span">
+    <statement>
+      <p>
+        Let <m>S = \{\vvec_1,\ldots, \vvec_k\}</m> be a set of vectors.
+        Which of the following statements are equivalent to the statement,
+        <q>The vector <m>\wvec</m> belongs to the span of <m>S</m>.</q>?
+      </p>
+    </statement>
+    <choices randomize="yes">
+      <choice correct="no">
+        <statement>
+          <p>
+            <m>\wvec=\vvec_1+\cdots +\vvec_k</m>.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            This is a tricky one: the statement implies that <m>\wvec</m> the span of <m>S</m>,
+            but it is not equivalent, since the converse is not necessarily true.
+          </p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            For some scalars <m>c_1,\ldots, c_k</m>,
+            <m>c_1\vvec_1+\cdots + c_k\vvec_k=\wvec</m>.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Yes! This is the definition of span.
+          </p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>
+            The vector <m>\wvec</m> is a linear combination of the vectors in <m>S</m>.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Correct.
+          </p>
+        </feedback>
+      </choice>
+      <choice correct="no">
+        <statement>
+          <p>
+            For any scalars <m>c_1,\ldots, c_k</m>,
+            <m>c_1\vvec_1+\cdots + c_k\vvec=\wvec</m>.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            The only way this statement could be true for all possible scalars
+            is if all the vectors involved are zero.
+            Otherwise, changing a scalar is going to change the resulting linear combination.
+          </p>
+        </feedback>
+      </choice>
+      <choice correct="no">
+        <statement>
+          <p>
+            <m>\wvec = \vvec_i</m> for some <m>i=1,\ldots, k</m>.
+          </p>
+        </statement>
+        <feedback>
+          <p>
+            Although each vector in <m>S</m> belongs to the span of <m>S</m>,
+            the span of <m>S</m> contains much more than just the vectors in <m>S</m>!
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+
+   <!-- Based on OPL problem Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.2.63.pg -->
+    <exercise xml:id="ex-ww-span4" label="ex-ww-span4">
+      <statement>
+        <p>
+          Let <m>\uvec_4</m> be a vector that is not a linear combination of the vectors <m>\uvec_1,\uvec_2,\uvec_3</m>.
+          Select the best statement.
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              We only know that the span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m> is a subset of the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              The span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m> is a proper subset of the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              We only know that the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m> is a subset of the span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              There is no obvious relationship between the span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m>
+              and the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              The span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m> is equal to the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m>.
+            </p>
+          </statement>
+        </choice>
+      </choices>  
+    </exercise>
+
+    <!-- Based on the OPL problem at Library/WHFreeman/Holt_linear_algebra/Chaps_1-4/2.2.62.pg -->
+    <exercise xml:id="ex-ww-span5" label="ex-ww-span5">
+      <statement>
+        <p>
+          Let <m>\uvec_4</m> be a linear combination of the vectors <m>\uvec_1,\uvec_2,\uvec_3</m>.
+          Select the best statement.
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              There is no obvious relationship between the span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m>
+              and the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              We only know that the span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m> is a subset of the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m>.
+            </p>
+          </statement>
+        </choice>
+        <choice correct="no">
+            <statement>
+              <p>
+                We only know that the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m> is a subset of the span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m>.
+              </p>
+            </statement>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                The span of <m>\{\uvec_1,\uvec_2,\uvec_3\}</m> is equal to the span of <m>\{\uvec_1,\uvec_2,\uvec_3,\uvec_4\}</m>.
+              </p>
+            </statement>
+          </choice>
+        </choices>
+    </exercise>
+
 </exercises>
 
 </section>
