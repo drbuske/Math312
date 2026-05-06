@@ -185,6 +185,7 @@
       <title>Practice Exams</title>
       <xi:include href="./handouts/Chapter1PracticeExam.ptx" /> 
       <xi:include href="./handouts/Chapter2PracticeExam.ptx" /> 
+      <xi:include href="./handouts/Chapter3PracticeExam.ptx" />
       <!-- <xi:include href="./handouts/PracticeExam2a.ptx" /> 
       <xi:include href="./handouts/PracticeExam3a.ptx" />
       <xi:include href="./handouts/PracticeExam4a.ptx" /> -->

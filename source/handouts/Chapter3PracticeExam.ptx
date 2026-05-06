@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Chapter 3 Practice Exam</title>
+
+<section>
+<title>Topics</title>
+
+    <ul>
+      <li><url href="
+https://drbuske.github.io/linearalgebra/sec-matrix-inverse.html#sec-matrix-inverse" visual="Invertibility"/>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-bases.html#sec-bases" visual="Bases and coordinate systems"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-determinants.html#sec-determinants" visual="Determinants"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-subspaces.html#sec-subspaces" visual="Subspaces"/>
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam3">
+    <title>Questions</title> 
+
+ <exercise xml:id="exercise-invertibility-gauss-jordan">
+  <statement>
+    <p>
+      Consider the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          2 \amp 1 \\
+          5 \amp 3
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Determine whether <m>A</m> is invertible. If it is, find <m>A^{-1}</m>
+      using row reduction.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Form the augmented matrix <m>[A \mid I]</m> and row reduce.
+      If the left side reduces to the identity matrix, then <m>A</m> is invertible.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The matrix <m>A</m> is invertible, and
+      <m>
+        A^{-1} =
+        \begin{bmatrix}
+          3 \amp -1 \\
+          -5 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We begin with the augmented matrix
+      <m>
+        \left[
+        \begin{array}{cc|cc}
+          2 \amp 1 \amp 1 \amp 0 \\
+          5 \amp 3 \amp 0 \amp 1
+        \end{array}
+        \right].
+      </m>
+    </p>
+    <p>
+      After performing row operations to reduce the left side to the identity,
+      we obtain
+      <m>
+        \left[
+        \begin{array}{cc|cc}
+          1 \amp 0 \amp 3 \amp -1 \\
+          0 \amp 1 \amp -5 \amp 2
+        \end{array}
+        \right].
+      </m>
+    </p>
+    <p>
+      Since the left side is the identity matrix, <m>A</m> is invertible,
+      and the right side is <m>A^{-1}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-invertibility-solving-system">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          1 \amp -2 \\
+          2 \amp -3
+        \end{bmatrix},
+        \quad
+        \mathbf{b} =
+        \begin{bmatrix}
+          4 \\
+          7
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      <ol> 
+        <li> Show that <m>A</m> is invertible. 
+        </li>
+       <li> Solve the equation <m>A\mathbf{x}=\mathbf{b}</m> using <m>A^{-1}</m>.
+       </li>
+      </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      First find <m>A^{-1}</m>. Then multiply both sides of
+      <m>A\mathbf{x}=\mathbf{b}</m> on the left by <m>A^{-1}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The matrix <m>A</m> is invertible, and the solution is
+      <m>
+        \mathbf{x} =
+        \begin{bmatrix}
+          2 \\
+          -1
+        \end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The inverse of <m>A</m> is
+      <m>
+        A^{-1} =
+        \begin{bmatrix}
+          -3 \amp 2 \\
+          -2 \amp 1
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      We compute
+      <m>
+        \mathbf{x}
+        = A^{-1}\mathbf{b}
+        =
+        \begin{bmatrix}
+          -3 \amp 2 \\
+          -2 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}
+          4 \\
+          7
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          2 \\
+          -1
+        \end{bmatrix}.
+      </m>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-invertibility-conceptual">
+  <statement>
+    <p>
+      Suppose <m>A</m> is a square matrix and there exists a vector
+      <m>\mathbf{b}</m> such that the equation <m>A\mathbf{x}=\mathbf{b}</m>
+      has more than one solution.
+    </p>
+    <p>
+      Explain why <m>A</m> is not invertible.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Consider what invertibility would imply about the number of solutions
+      to <m>A\mathbf{x}=\mathbf{b}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      If <m>A</m> were invertible, then multiplying both sides of
+      <m>A\mathbf{x}=\mathbf{b}</m> by <m>A^{-1}</m> would yield
+      <m>\mathbf{x}=A^{-1}\mathbf{b}</m>.
+    </p>
+    <p>
+      This equation would produce a unique solution.
+      Since the system has more than one solution, this contradicts
+      the existence of an inverse.
+    </p>
+    <p>
+      Therefore, <m>A</m> is not invertible.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      If <m>A</m> were invertible, then multiplying both sides of
+      <m>A\mathbf{x}=\mathbf{b}</m> by <m>A^{-1}</m> would yield
+      <m>\mathbf{x}=A^{-1}\mathbf{b}</m>.
+    </p>
+    <p>
+      This equation would produce a unique solution.
+      Since the system has more than one solution, this contradicts
+      the existence of an inverse.
+    </p>
+    <p>
+      Therefore, <m>A</m> is not invertible.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-bases-coordinates">
+  <statement>
+    <p>
+      Let
+      <m>
+        \mathcal{B} =
+        \left\{
+        \begin{bmatrix}1\\1\end{bmatrix},
+        \begin{bmatrix}2\\-1\end{bmatrix}
+        \right\}
+      </m>
+      be a basis of <m>\mathbb{R}^2</m>.
+    </p>
+    <p>
+      Find the coordinate vector of
+      <m>
+        \mathbf{v} =
+        \begin{bmatrix}3\\0\end{bmatrix}
+      </m>
+      relative to the basis <m>\mathcal{B}</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Write <m>\mathbf{v}</m> as a linear combination of the basis vectors
+      and solve for the coefficients.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>
+        [\mathbf{v}]_{\mathcal{B}} =
+        \begin{bmatrix}1\\1\end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We seek scalars <m>c_1</m> and <m>c_2</m> such that
+      <m>
+        c_1
+        \begin{bmatrix}1\\1\end{bmatrix}
+        +
+        c_2
+        \begin{bmatrix}2\\-1\end{bmatrix}
+        =
+        \begin{bmatrix}3\\0\end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      This gives the system
+      <m>
+        \begin{cases}
+          c_1 + 2c_2 = 3 \\
+          c_1 - c_2 = 0
+        \end{cases}.
+      </m>
+    </p>
+    <p>
+      Solving, we find <m>c_1=1</m> and <m>c_2=1</m>.
+      Therefore,
+      <m>
+        [\mathbf{v}]_{\mathcal{B}} =
+        \begin{bmatrix}1\\1\end{bmatrix}.
+      </m>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-bases-uniqueness">
+  <statement>
+    <p>
+      Let <m>\mathcal{B}</m> be a basis of a vector space <m>V</m>.
+      Suppose that a vector <m>\mathbf{v}\in V</m> satisfies
+      <m>
+        [\mathbf{v}]_{\mathcal{B}} =
+        \begin{bmatrix}4\\-1\\2\end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Explain why <m>\mathbf{v}</m> cannot have a different coordinate
+      vector relative to <m>\mathcal{B}</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Recall the definition of a basis and what it implies about linear
+      combinations.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The coordinate vector of <m>\mathbf{v}</m> relative to
+      <m>\mathcal{B}</m> is unique.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Since <m>\mathcal{B}</m> is a basis, it is linearly independent.
+      This means that there is exactly one way to express <m>\mathbf{v}</m>
+      as a linear combination of the vectors in <m>\mathcal{B}</m>.
+    </p>
+    <p>
+      Coordinates record the coefficients in this linear combination.
+      If there were two different coordinate vectors for <m>\mathbf{v}</m>,
+      then <m>\mathbf{v}</m> would have two distinct representations as
+      a linear combination of the basis vectors.
+    </p>
+    <p>
+      This would contradict linear independence.
+      Therefore, the coordinate vector is unique.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-change-of-basis">
+  <statement>
+    <p>
+      Let
+      <m>
+        \mathcal{B} =
+        \left\{
+        \begin{bmatrix}1\\0\end{bmatrix},
+        \begin{bmatrix}1\\1\end{bmatrix}
+        \right\}
+      </m>
+      be a basis of <m>\mathbb{R}^2</m>.
+    </p>
+    <p>
+      The coordinate vector of <m>\mathbf{v}</m> relative to
+      <m>\mathcal{B}</m> is
+      <m>
+        \mathbf{v}_{\mathcal{B}} =
+        \begin{bmatrix}2\\-1\end{bmatrix}
+      </m>.
+      </p>
+    <p>
+      Find <m>\mathbf{v}</m> in standard coordinates.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Use the definition of coordinate vectors to reconstruct
+      the actual vector.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>
+        \mathbf{v} =
+        \begin{bmatrix}1\\-1\end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      By definition,
+      <m>
+        \mathbf{v}
+        = 2
+        \begin{bmatrix}1\\0\end{bmatrix}
+        - 1
+        \begin{bmatrix}1\\1\end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Therefore,
+      <m>
+        \mathbf{v}
+        =
+        \begin{bmatrix}2\\0\end{bmatrix}
+        -
+        \begin{bmatrix}1\\1\end{bmatrix}
+        =
+        \begin{bmatrix}1\\-1\end{bmatrix}.
+      </m>
+    </p>
+  </solution>
+</exercise>
+
+</exercises>
+
+</section>
+</handout>
