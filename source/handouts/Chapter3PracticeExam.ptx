@@ -430,6 +430,672 @@ https://drbuske.github.io/linearalgebra/sec-subspaces.html#sec-subspaces" visual
   </solution>
 </exercise>
 
+<exercise xml:id="exercise-change-of-basis-matrix-visual">
+  <statement>
+    <p>
+      In the <xref ref="basis-find-change-basis-matrix"/>, the vectors
+      <m>
+        \mathbf{b}_1 =
+        \begin{bmatrix}2\\1\end{bmatrix}
+         \text{and} 
+        \mathbf{b}_2 =
+        \begin{bmatrix}-1\\1\end{bmatrix}
+      </m>
+      are shown as arrows in the plane.
+      These vectors form a basis
+      <m>\mathcal{B}=\{\mathbf{b}_1,\mathbf{b}_2\}</m>
+      for <m>\mathbb{R}^2</m>.
+    </p>
+
+    <figure xml:id="basis-find-change-basis-matrix">
+      <image width="60%">
+<prefigure xmlns="https://prefigure.org"
+             label="basis-find-change-basis-matrix-21-11">
+<diagram xmlns="https://prefigure.org"
+         dimensions="(300, 300)" margins="5">
+  <definition>v1=(2,1)</definition>
+  <definition>v2=(-1,1)</definition>
+  <coordinates bbox="(-8,-8,8,8)">
+    <grid spacings="((-6,2,6),(-6,2,6))" stroke="#ddd"/> 
+    <grid basis="(v1,v2)" stroke="lightgray"/>
+    <axes decorations="no"/>
+    <vector v="v1" alignment="se" stroke="blue">
+      <m>{\mathbf v}_1</m>
+    </vector>
+    <vector v="v2" alignment="nw" stroke="blue">
+      <m>{\mathbf v}_2</m>
+    </vector>
+  </coordinates>
+</diagram>
+</prefigure>
+      </image>
+    </figure>
+
+    <ol>
+      <li>
+
+    <p>
+     Construct the change‑of‑basis matrix
+      <m>P_{\mathcal{B}}</m> that converts
+      <m>\mathcal{B}</m>-coordinates into standard coordinates.
+    </p>
+  </li>
+    <li> <p>
+      Use this matrix to find the standard coordinates of a vector
+      <m>\mathbf{v}</m> whose <m>\mathcal{B}</m>-coordinates are
+      <m>
+        [\mathbf{v}]_{\mathcal{B}} =
+        \begin{bmatrix}3\\-1\end{bmatrix}.
+      </m>
+    </p>
+  </li>
+</ol>
+  </statement>
+
+  <hint>
+    <p>
+      The columns of the change‑of‑basis matrix are the basis vectors
+      written in standard coordinates.
+      Then multiply the matrix by the coordinate vector.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>
+        P_{\mathcal{B}}
+        =
+        \begin{bmatrix}
+          2 \amp -1 \\
+          1 \amp 1
+        \end{bmatrix},
+        \qquad
+        \mathbf{v}
+        =
+        \begin{bmatrix}7\\2\end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <ol>
+    <li> <p> The change‑of‑basis matrix from <m>\mathcal{B}</m>
+      to the standard basis is formed by placing the basis vectors
+      as columns:
+      <m>
+        P_{\mathcal{B}}
+        =
+        \begin{bmatrix}
+          2 \amp -1 \\
+          1 \amp 1
+        \end{bmatrix}.
+      </m>
+    </p>
+    </li>
+
+    <li> <p> To recover the vector in standard coordinates, we compute
+      <m>
+        \mathbf{v}
+        = P_{\mathcal{B}}[\mathbf{v}]_{\mathcal{B}}
+        =
+        \begin{bmatrix}
+          2 \amp -1 \\
+          1 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}
+          3 \\
+          -1
+        \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Carrying out the multiplication gives
+      <m>
+        \mathbf{v}
+        =
+        \begin{bmatrix}
+          6 + 1 \\
+          3 - 1
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          7 \\
+          2
+        \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      This matches what we would expect geometrically from the diagram:
+      the vector is three copies of <m>\mathbf{b}_1</m> minus one copy of
+      <m>\mathbf{b}_2</m>.
+    </p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-determinant-area">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          3 \amp 1 \\
+          2 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+    <ol>
+      <li>
+        <p> Compute <m>\det(A)</m>. </p>
+      </li>
+      <li> <p> Interpret the value of the determinant as the area of a
+      parallelogram and describe its orientation.
+    </p>
+  </li>
+</ol>
+  </statement>
+
+  <hint>
+    <p>
+      For a <m>2 \times 2</m> matrix
+      <m>\begin{bmatrix}a \amp b\\ c \amp d\end{bmatrix}</m>,
+      the determinant is <m>ad - bc</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>\det(A)=4</m>.
+      The parallelogram has area 4 and is positively oriented.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We compute
+      <m>
+        \det(A)
+        = (3)(2) - (1)(2)
+        = 6 - 2
+        = 4.
+      </m>
+    </p>
+    <p>
+      The determinant gives the signed area of the parallelogram
+      formed by the columns of <m>A</m>.
+      Since the value is positive, the orientation is positive,
+      and the area of the parallelogram is 4.
+    </p>
+
+     <figure xml:id="area-parallelogram-det">
+      <image width="60%">
+<prefigure xmlns="https://prefigure.org"
+             label="area-parallelogram-det-32-12">
+<diagram xmlns="https://prefigure.org"
+         dimensions="(300, 300)" margins="5">
+  <definition>v1=(3,2)</definition>
+  <definition>v2=(1,2)</definition>
+  <coordinates bbox="(-5,-5,5,5)">
+    <grid spacings="((-6,2,6),(-6,2,6))" stroke="#ddd"/> 
+    <axes decorations="no"/>
+    <grid-axes xlabel="x" ylabel="y"/>
+    <vector v="v1" alignment="se" stroke="blue">
+      <m>{\mathbf v}_1</m>
+    </vector>
+    <vector v="v2" alignment="nw" stroke="blue">
+      <m>{\mathbf v}_2</m>
+    </vector>
+    <polygon points="((0,0),(3,2),(4,4),(1,2),(0,0))"
+             closed="yes"
+             fill="blue" opacity="0.5"/>
+  </coordinates>
+</diagram>
+</prefigure>
+      </image>
+    </figure>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-determinant-invertibility">
+  <statement>
+    <p>
+      Consider the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          2 \amp 4 \\
+          1 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+    <ol>
+      <li>
+<p>
+      Compute <m>\det(A)</m>. 
+</p>
+</li>
+      <li> <p> Explain what your answer tells you about whether <m>A</m>
+      is invertible.
+    </p>
+  </li>
+   </ol>
+  </statement>
+
+  <hint>
+    <p>
+      A square matrix is invertible if and only if its determinant
+      is nonzero.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>\det(A)=0</m>, so <m>A</m> is not invertible.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We compute
+      <m>
+        \det(A)
+        = (2)(2) - (4)(1)
+        = 4 - 4
+        = 0.
+      </m>
+    </p>
+    <p>
+      Since the determinant is zero, the area of the parallelogram
+      formed by the columns of <m>A</m> is zero.
+      This means the columns are linearly dependent.
+    </p>
+    <p>
+      Therefore, <m>A</m> is not invertible.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-determinant-transformation">
+  <statement>
+    <p>
+      A matrix <m>A</m> represents a linear transformation of
+      <m>\mathbb{R}^2</m>.
+      Suppose
+      <m>\det(A) = -3</m>.
+    </p>
+    <p>
+      Describe how this transformation affects:
+     <ol> <li> <p> area </p> </li>
+      <li> <p> orientation </p> </li>
+     </ol>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      The absolute value of the determinant gives the area scaling
+      factor, and the sign gives the orientation.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      Areas are scaled by a factor of 3 and orientation is reversed.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The determinant describes how a linear transformation affects
+      area and orientation.
+    </p>
+    <p>
+      Since <m>|\det(A)| = 3</m>, areas are scaled by a factor of 3.
+      Any region in the plane will have three times the area after
+      the transformation.
+    </p>
+    <p>
+      Because the determinant is negative, the transformation
+      reverses orientation.
+      This corresponds geometrically to a reflection combined
+      with a scaling.
+    </p>
+
+    <p>
+      Consider, for example, the linear transformation
+      <m>
+        T(\mathbf{x}) = A\mathbf{x},
+        \qquad
+        A =
+        \begin{bmatrix}
+          0 \amp 3 \\
+          1 \amp 0
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      We can use this matrix to illustrate how a determinant of <m>-3</m>
+      affects area and orientation in <m>\mathbb{R}^2</m>.
+    </p>
+
+    <p>
+      First, we compute the determinant of <m>A</m>:
+      <m>
+        \det(A)
+        = (0)(0) - (3)(1)
+        = -3.
+      </m>
+      Because the off‑diagonal entry involves a sign change due to
+      the column order, the transformation reverses orientation,
+      giving an effective determinant of <m>-3</m>.
+    </p>
+
+    <p>
+      To see the geometric effect, consider how <m>A</m> acts on the
+      standard basis vectors:
+      <m>
+        A
+        \begin{bmatrix}1\\0\end{bmatrix}
+        =
+        \begin{bmatrix}0\\1\end{bmatrix},
+        \qquad
+        A
+        \begin{bmatrix}0\\1\end{bmatrix}
+        =
+        \begin{bmatrix}3\\0\end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      The unit square determined by the standard basis vectors is
+      mapped to a parallelogram with base length 3 and height 1.
+      Therefore, the area is multiplied by a factor of 3.
+    </p>
+
+    <p>
+      Since the image of the first basis vector rotates counterclockwise
+      while the second flips direction across the axis, the orientation
+      of the plane is reversed. This corresponds to the negative sign
+      of the determinant.
+    </p>
+
+    <p>
+      Thus, the transformation represented by <m>A</m> expands area
+      by a factor of 3 and reverses orientation, consistent with a
+      determinant of <m>-3</m>.
+    </p>
+    
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-cofactor-expansion">
+  <statement>
+    <p>
+      Compute the determinant of the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          2 \amp 0 \amp -1 \\
+          0 \amp 3 \amp 0 \\
+          1 \amp 4 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      You should use cofactor expansion to simplify your work.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Choose a row or column with the most zeros before expanding.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>\det(A) = 15.</m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We expand along the second row, since it contains two zeros.
+      The only nonzero entry is <m>a_{22}=3</m>.
+    </p>
+    <p>
+      By cofactor expansion,
+      <m>
+        \det(A)
+        = 3 \cdot (-1)^{2+2}
+        \det
+        \begin{bmatrix}
+          2 \amp -1 \\
+          1 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      The remaining determinant is
+      <m>
+        (2)(2) - (-1)(1) = 4 + 1 = 5.
+      </m>
+    </p>
+    <p>
+      Therefore,
+      <m>
+        \det(A) = 3 \cdot 5 = 15.
+      </m>
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-column-space">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          1 \amp 2 \amp -1 \\
+          0 \amp 1 \amp 3 \\
+          1 \amp 3 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+    <ol>
+      <li>
+    <p>
+      Find a basis for the column space of <m>A</m>. </p>
+    </li>
+     <li> <p> What is the dimension of the column space?
+    </p>
+  </li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      Row‑reduce the matrix to identify which columns contain pivots.
+      The corresponding original columns form a basis for the column space.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      A basis for <m>\operatorname{Col}(A)</m> is given by the first two
+      columns of <m>A</m>. The dimension is 2.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We row‑reduce <m>A</m>:
+      <m>
+        \begin{bmatrix}
+          1 \amp 2 \amp -1 \\
+          0 \amp 1 \amp 3 \\
+          1 \amp 3 \amp 2
+        \end{bmatrix}
+        \;\longrightarrow\;
+        \begin{bmatrix}
+          1 \amp 0 \amp -7 \\
+          0 \amp 1 \amp 3 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      The pivot columns are columns 1 and 2.
+      Therefore, the corresponding original columns form a basis for
+      the column space:
+      <m>
+        \left\{
+        \begin{bmatrix}1\\0\\1\end{bmatrix},
+        \begin{bmatrix}2\\1\\3\end{bmatrix}
+        \right\}.
+      </m>
+    </p>
+    <p>
+      Since there are two basis vectors, the dimension of
+      <m>\operatorname{Col}(A)</m> is 2.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-null-space">
+  <statement>
+    <p>
+      Find a basis for the null space of the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          2 \amp -1 \amp 1 \\
+          4 \amp -2 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Solve the homogeneous system <m>A\mathbf{x}=\mathbf{0}</m>
+      and express the solution in parametric vector form.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      A basis for the null space is
+      <m>
+        \left\{
+        \begin{bmatrix}1\\2\\0\end{bmatrix},
+        \begin{bmatrix}-1\\0\\2\end{bmatrix}
+        \right\}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We row‑reduce the augmented matrix:
+      <m>
+        \begin{bmatrix}
+          2 \amp -1 \amp 1 \\
+          4 \amp -2 \amp 2
+        \end{bmatrix}
+        \;\longrightarrow\;
+        \begin{bmatrix}
+          2 \amp -1 \amp 1 \\
+          0 \amp 0 \amp 0
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      The equation is
+      <m>
+        2x_1 - x_2 + x_3 = 0.
+      </m>
+      Solving for <m>x_1</m> gives
+      <m>
+        x_1=\tfrac{1}{2}(x_2 - x_3).
+      </m>
+    </p>
+    <p>
+      Letting <m>x_2=s</m> and <m>x_3=t</m>, the solution is
+      <m>
+        \mathbf{x}
+        =
+        s\begin{bmatrix}1\\2\\0\end{bmatrix}
+        +
+        t\begin{bmatrix}-1\\0\\2\end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      These vectors form a basis for the null space.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-column-null-conceptual">
+  <statement>
+    <p>
+      Let <m>A</m> be a <m>3\times4</m> matrix whose column space has
+      dimension 2.
+    </p>
+    <ol>
+      <li>
+    <p>
+       How many free variables does the homogeneous system
+      <m>A\mathbf{x}=\mathbf{0}</m> have? 
+    </p>
+  </li>
+      <li> <p> What is the dimension of the null space of <m>A</m>?
+    </p>
+  </li>
+</ol>
+  </statement>
+
+  <hint>
+    <p>
+      Use the relationship between pivot columns, free variables,
+      and dimensions.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      There are 2 free variables, and the null space has dimension 2.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The dimension of the column space equals the number of pivot columns.
+      Since the column space has dimension 2, there are 2 pivot columns.
+    </p>
+    <p>
+      Because <m>A</m> has 4 columns total, the number of free variables
+      is
+      <m>
+        4 - 2 = 2.
+      </m>
+    </p>
+    <p>
+      The dimension of the null space equals the number of free variables.
+      Therefore, the null space has dimension 2.
+    </p>
+    <p>
+      This relationship reflects the fundamental balance between the
+      column space and null space emphasized in this section.
+    </p>
+  </solution>
+</exercise>
+
 </exercises>
 
 </section>
