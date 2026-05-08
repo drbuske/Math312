@@ -1078,7 +1078,83 @@ A
 </div>
 <div class="autopermalink" data-description="Exercise 11"><a href="#exercise-cofactor-expansion" title="Copy heading and permalink for Exercise 11" aria-label="Copy heading and permalink for Exercise 11">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="exercise-column-space"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<article class="exercise exercise-like" id="exercise-determinant-cofactor-nozeros"><h5 class="heading"><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="para" id="exercise-determinant-cofactor-nozeros-1-1">Compute the determinant of the matrix <span class="process-math">\(A =
+\begin{bmatrix}
+1 \amp 2 \amp 3 \\
+4 \amp 5 \amp 6 \\
+7 \amp 8 \amp 10
+\end{bmatrix}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-determinant-cofactor-nozeros-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="exercise-determinant-cofactor-nozeros-1-2">Use cofactor expansion to evaluate the determinant.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-determinant-cofactor-nozeros-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="exercise-determinant-cofactor-nozeros-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para" id="exercise-determinant-cofactor-nozeros-2-1">Choose any row or column for cofactor expansion. Expanding along the first row keeps the arithmetic manageable.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-determinant-cofactor-nozeros-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 12.1"><a href="#exercise-determinant-cofactor-nozeros-2" title="Copy heading and permalink for Hint 12.1" aria-label="Copy heading and permalink for Hint 12.1">🔗</a></div>
+</div></details>
+<details id="exercise-determinant-cofactor-nozeros-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="exercise-determinant-cofactor-nozeros-3-1">
+<span class="process-math">\(\det(A) = -3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-determinant-cofactor-nozeros-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 12.1"><a href="#exercise-determinant-cofactor-nozeros-3" title="Copy heading and permalink for Answer 12.1" aria-label="Copy heading and permalink for Answer 12.1">🔗</a></div>
+</div></details>
+<details id="exercise-determinant-cofactor-nozeros-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="exercise-determinant-cofactor-nozeros-4-1">We expand the determinant along the first row: <span class="process-math">\(\det(A)
+=
+1\cdot
+\det
+\begin{bmatrix}
+5 \amp 6 \\
+8 \amp 10
+\end{bmatrix}
+-
+2\cdot
+\det
+\begin{bmatrix}
+4 \amp 6 \\
+7 \amp 10
+\end{bmatrix}
++
+3\cdot
+\det
+\begin{bmatrix}
+4 \amp 5 \\
+7 \amp 8
+\end{bmatrix}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-determinant-cofactor-nozeros-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exercise-determinant-cofactor-nozeros-4-2">We now compute each <span class="process-math">\(2\times2\)</span> determinant: <span class="process-math">\(\det
+\begin{bmatrix}
+5 \amp 6 \\
+8 \amp 10
+\end{bmatrix}
+= 50 - 48 = 2,\)</span> <span class="process-math">\(\det
+\begin{bmatrix}
+4 \amp 6 \\
+7 \amp 10
+\end{bmatrix}
+= 40 - 42 = -2,\)</span> <span class="process-math">\(\det
+\begin{bmatrix}
+4 \amp 5 \\
+7 \amp 8
+\end{bmatrix}
+= 32 - 35 = -3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-determinant-cofactor-nozeros-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="exercise-determinant-cofactor-nozeros-4-3">Substituting back, <span class="process-math">\(\det(A)
+= 1(2) - 2(-2) + 3(-3)
+= 2 + 4 - 9
+= -3.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-determinant-cofactor-nozeros-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 12.1"><a href="#exercise-determinant-cofactor-nozeros-4" title="Copy heading and permalink for Solution 12.1" aria-label="Copy heading and permalink for Solution 12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Exercise 12"><a href="#exercise-determinant-cofactor-nozeros" title="Copy heading and permalink for Exercise 12" aria-label="Copy heading and permalink for Exercise 12">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercise-column-space"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercise-column-space-1-1">Let <span class="process-math">\(A =
 \begin{bmatrix}
 1 \amp 2 \amp -1 \\
@@ -1090,12 +1166,12 @@ A
 <li id="exercise-column-space-1-2-1">
 <div class="para" id="exercise-column-space-1-2-1-1">Find a basis for the column space of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-space-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 12.a"><a href="#exercise-column-space-1-2-1" title="Copy heading and permalink for Item 12.a" aria-label="Copy heading and permalink for Item 12.a">🔗</a></div>
+<div class="autopermalink" data-description="Item 13.a"><a href="#exercise-column-space-1-2-1" title="Copy heading and permalink for Item 13.a" aria-label="Copy heading and permalink for Item 13.a">🔗</a></div>
 </li>
 <li id="exercise-column-space-1-2-2">
 <div class="para" id="exercise-column-space-1-2-2-1">What is the dimension of the column space?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-space-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 12.b"><a href="#exercise-column-space-1-2-2" title="Copy heading and permalink for Item 12.b" aria-label="Copy heading and permalink for Item 12.b">🔗</a></div>
+<div class="autopermalink" data-description="Item 13.b"><a href="#exercise-column-space-1-2-2" title="Copy heading and permalink for Item 13.b" aria-label="Copy heading and permalink for Item 13.b">🔗</a></div>
 </li>
 </ol>
 <div class="solutions">
@@ -1103,13 +1179,13 @@ A
 <div class="hint solution-like knowl__content">
 <div class="para" id="exercise-column-space-2-1">Row‑reduce the matrix to identify which columns contain pivots. The corresponding original columns form a basis for the column space.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-space-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 12.1"><a href="#exercise-column-space-2" title="Copy heading and permalink for Hint 12.1" aria-label="Copy heading and permalink for Hint 12.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 13.1"><a href="#exercise-column-space-2" title="Copy heading and permalink for Hint 13.1" aria-label="Copy heading and permalink for Hint 13.1">🔗</a></div>
 </div></details>
 <details id="exercise-column-space-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="answer solution-like knowl__content">
 <div class="para" id="exercise-column-space-3-1">A basis for <span class="process-math">\(\operatorname{Col}(A)\)</span> is given by the first two columns of <span class="process-math">\(A\text{.}\)</span> The dimension is 2.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-space-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 12.1"><a href="#exercise-column-space-3" title="Copy heading and permalink for Answer 12.1" aria-label="Copy heading and permalink for Answer 12.1">🔗</a></div>
+<div class="autopermalink" data-description="Answer 13.1"><a href="#exercise-column-space-3" title="Copy heading and permalink for Answer 13.1" aria-label="Copy heading and permalink for Answer 13.1">🔗</a></div>
 </div></details>
 <details id="exercise-column-space-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -1132,12 +1208,12 @@ A
 </div>
 <div class="para" id="exercise-column-space-4-3">Since there are two basis vectors, the dimension of <span class="process-math">\(\operatorname{Col}(A)\)</span> is 2.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-space-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 12.1"><a href="#exercise-column-space-4" title="Copy heading and permalink for Solution 12.1" aria-label="Copy heading and permalink for Solution 12.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 13.1"><a href="#exercise-column-space-4" title="Copy heading and permalink for Solution 13.1" aria-label="Copy heading and permalink for Solution 13.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Exercise 12"><a href="#exercise-column-space" title="Copy heading and permalink for Exercise 12" aria-label="Copy heading and permalink for Exercise 12">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 13"><a href="#exercise-column-space" title="Copy heading and permalink for Exercise 13" aria-label="Copy heading and permalink for Exercise 13">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="exercise-null-space"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<article class="exercise exercise-like" id="exercise-null-space"><h5 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercise-null-space-1-1">Find a basis for the null space of the matrix <span class="process-math">\(A =
 \begin{bmatrix}
 2 \amp -1 \amp 1 \\
@@ -1149,7 +1225,7 @@ A
 <div class="hint solution-like knowl__content">
 <div class="para" id="exercise-null-space-2-1">Solve the homogeneous system <span class="process-math">\(A\mathbf{x}=\mathbf{0}\)</span> and express the solution in parametric vector form.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-null-space-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 13.1"><a href="#exercise-null-space-2" title="Copy heading and permalink for Hint 13.1" aria-label="Copy heading and permalink for Hint 13.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 14.1"><a href="#exercise-null-space-2" title="Copy heading and permalink for Hint 14.1" aria-label="Copy heading and permalink for Hint 14.1">🔗</a></div>
 </div></details>
 <details id="exercise-null-space-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="answer solution-like knowl__content">
@@ -1158,7 +1234,7 @@ A
 \begin{bmatrix}-1\\0\\2\end{bmatrix}
 \right\}.\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-null-space-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 13.1"><a href="#exercise-null-space-3" title="Copy heading and permalink for Answer 13.1" aria-label="Copy heading and permalink for Answer 13.1">🔗</a></div>
+<div class="autopermalink" data-description="Answer 14.1"><a href="#exercise-null-space-3" title="Copy heading and permalink for Answer 14.1" aria-label="Copy heading and permalink for Answer 14.1">🔗</a></div>
 </div></details>
 <details id="exercise-null-space-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -1182,24 +1258,24 @@ t\begin{bmatrix}-1\\0\\2\end{bmatrix}.\)</span><div class="autopermalink" data-d
 </div>
 <div class="para" id="exercise-null-space-4-4">These vectors form a basis for the null space.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-null-space-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 13.1"><a href="#exercise-null-space-4" title="Copy heading and permalink for Solution 13.1" aria-label="Copy heading and permalink for Solution 13.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 14.1"><a href="#exercise-null-space-4" title="Copy heading and permalink for Solution 14.1" aria-label="Copy heading and permalink for Solution 14.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Exercise 13"><a href="#exercise-null-space" title="Copy heading and permalink for Exercise 13" aria-label="Copy heading and permalink for Exercise 13">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 14"><a href="#exercise-null-space" title="Copy heading and permalink for Exercise 14" aria-label="Copy heading and permalink for Exercise 14">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="exercise-column-null-conceptual"><h5 class="heading"><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<article class="exercise exercise-like" id="exercise-column-null-conceptual"><h5 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
 <div class="para" id="exercise-column-null-conceptual-1-1">Let <span class="process-math">\(A\)</span> be a <span class="process-math">\(3\times4\)</span> matrix whose column space has dimension 2.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-null-conceptual-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <ol class="lower-alpha lower-alpha-level-1" id="exercise-column-null-conceptual-1-2">
 <li id="exercise-column-null-conceptual-1-2-1">
 <div class="para" id="exercise-column-null-conceptual-1-2-1-1">How many free variables does the homogeneous system <span class="process-math">\(A\mathbf{x}=\mathbf{0}\)</span> have?<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-null-conceptual-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 14.a"><a href="#exercise-column-null-conceptual-1-2-1" title="Copy heading and permalink for Item 14.a" aria-label="Copy heading and permalink for Item 14.a">🔗</a></div>
+<div class="autopermalink" data-description="Item 15.a"><a href="#exercise-column-null-conceptual-1-2-1" title="Copy heading and permalink for Item 15.a" aria-label="Copy heading and permalink for Item 15.a">🔗</a></div>
 </li>
 <li id="exercise-column-null-conceptual-1-2-2">
 <div class="para" id="exercise-column-null-conceptual-1-2-2-1">What is the dimension of the null space of <span class="process-math">\(A\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-null-conceptual-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 14.b"><a href="#exercise-column-null-conceptual-1-2-2" title="Copy heading and permalink for Item 14.b" aria-label="Copy heading and permalink for Item 14.b">🔗</a></div>
+<div class="autopermalink" data-description="Item 15.b"><a href="#exercise-column-null-conceptual-1-2-2" title="Copy heading and permalink for Item 15.b" aria-label="Copy heading and permalink for Item 15.b">🔗</a></div>
 </li>
 </ol>
 <div class="solutions">
@@ -1207,13 +1283,13 @@ t\begin{bmatrix}-1\\0\\2\end{bmatrix}.\)</span><div class="autopermalink" data-d
 <div class="hint solution-like knowl__content">
 <div class="para" id="exercise-column-null-conceptual-2-1">Use the relationship between pivot columns, free variables, and dimensions.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-null-conceptual-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 14.1"><a href="#exercise-column-null-conceptual-2" title="Copy heading and permalink for Hint 14.1" aria-label="Copy heading and permalink for Hint 14.1">🔗</a></div>
+<div class="autopermalink" data-description="Hint 15.1"><a href="#exercise-column-null-conceptual-2" title="Copy heading and permalink for Hint 15.1" aria-label="Copy heading and permalink for Hint 15.1">🔗</a></div>
 </div></details>
 <details id="exercise-column-null-conceptual-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="answer solution-like knowl__content">
 <div class="para" id="exercise-column-null-conceptual-3-1">There are 2 free variables, and the null space has dimension 2.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-null-conceptual-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Answer 14.1"><a href="#exercise-column-null-conceptual-3" title="Copy heading and permalink for Answer 14.1" aria-label="Copy heading and permalink for Answer 14.1">🔗</a></div>
+<div class="autopermalink" data-description="Answer 15.1"><a href="#exercise-column-null-conceptual-3" title="Copy heading and permalink for Answer 15.1" aria-label="Copy heading and permalink for Answer 15.1">🔗</a></div>
 </div></details>
 <details id="exercise-column-null-conceptual-4" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
@@ -1225,10 +1301,10 @@ t\begin{bmatrix}-1\\0\\2\end{bmatrix}.\)</span><div class="autopermalink" data-d
 </div>
 <div class="para" id="exercise-column-null-conceptual-4-4">This relationship reflects the fundamental balance between the column space and null space emphasized in this section.<div class="autopermalink" data-description="Paragraph"><a href="#exercise-column-null-conceptual-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Solution 14.1"><a href="#exercise-column-null-conceptual-4" title="Copy heading and permalink for Solution 14.1" aria-label="Copy heading and permalink for Solution 14.1">🔗</a></div>
+<div class="autopermalink" data-description="Solution 15.1"><a href="#exercise-column-null-conceptual-4" title="Copy heading and permalink for Solution 15.1" aria-label="Copy heading and permalink for Solution 15.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Exercise 14"><a href="#exercise-column-null-conceptual" title="Copy heading and permalink for Exercise 14" aria-label="Copy heading and permalink for Exercise 14">🔗</a></div>
+<div class="autopermalink" data-description="Exercise 15"><a href="#exercise-column-null-conceptual" title="Copy heading and permalink for Exercise 15" aria-label="Copy heading and permalink for Exercise 15">🔗</a></div>
 </article><div class="autopermalink" data-description="Exercises: Questions"><a href="#exercises-practiceexam3" title="Copy heading and permalink for Exercises: Questions" aria-label="Copy heading and permalink for Exercises: Questions">🔗</a></div>
 </section><div class="autopermalink" data-description="Section: Topics"><a href="#ch-practice-exams-4-2" title="Copy heading and permalink for Section: Topics" aria-label="Copy heading and permalink for Section: Topics">🔗</a></div>
 </section><div class="autopermalink" data-description="Handout: Chapter 3 Practice Exam"><a href="#ch-practice-exams-4" title="Copy heading and permalink for Handout: Chapter 3 Practice Exam" aria-label="Copy heading and permalink for Handout: Chapter 3 Practice Exam">🔗</a></div>
