@@ -894,6 +894,106 @@ https://drbuske.github.io/linearalgebra/sec-subspaces.html#sec-subspaces" visual
   </solution>
 </exercise>
 
+<exercise xml:id="exercise-determinant-cofactor-nozeros">
+  <statement>
+    <p>
+      Compute the determinant of the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          1 \amp 2 \amp 3 \\
+          4 \amp 5 \amp 6 \\
+          7 \amp 8 \amp 10
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Use cofactor expansion to evaluate the determinant.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Choose any row or column for cofactor expansion.
+      Expanding along the first row keeps the arithmetic manageable.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>\det(A) = -3.</m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We expand the determinant along the first row:
+      <m>
+        \det(A)
+        =
+        1\cdot
+        \det
+        \begin{bmatrix}
+          5 \amp 6 \\
+          8 \amp 10
+        \end{bmatrix}
+        -
+        2\cdot
+        \det
+        \begin{bmatrix}
+          4 \amp 6 \\
+          7 \amp 10
+        \end{bmatrix}
+        +
+        3\cdot
+        \det
+        \begin{bmatrix}
+          4 \amp 5 \\
+          7 \amp 8
+        \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      We now compute each <m>2\times2</m> determinant:
+      <m>
+        \det
+        \begin{bmatrix}
+          5 \amp 6 \\
+          8 \amp 10
+        \end{bmatrix}
+        = 50 - 48 = 2,
+      </m>
+      <m>
+        \det
+        \begin{bmatrix}
+          4 \amp 6 \\
+          7 \amp 10
+        \end{bmatrix}
+        = 40 - 42 = -2,
+      </m>
+      <m>
+        \det
+        \begin{bmatrix}
+          4 \amp 5 \\
+          7 \amp 8
+        \end{bmatrix}
+        = 32 - 35 = -3.
+      </m>
+    </p>
+
+    <p>
+      Substituting back,
+      <m>
+        \det(A)
+        = 1(2) - 2(-2) + 3(-3)
+        = 2 + 4 - 9
+        = -3.
+      </m>
+    </p>
+  </solution>
+</exercise>
+
 <exercise xml:id="exercise-column-space">
   <statement>
     <p>

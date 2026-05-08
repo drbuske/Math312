@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Chapter 4 Practice Exam</title>
+
+<section>
+<title>Topics</title>
+
+    <ul>
+      <li><url href="
+https://drbuske.github.io/linearalgebra/sec-eigen-intro.html" visual="An introduction to eigenvalues and eigenvectors"/>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-eigen-find.html" visual="Finding eigenvalues and eigenvectors"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-eigen-diag.html" visual="Diagonalization, similarity, and powers of a matrix"/>
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam4">
+    <title>Questions</title> 
+
+ <exercise xml:id="exercise-eigen-definition">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          2 \amp 1 \\
+          1 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Verify that
+      <m>
+        \mathbf{v} =
+        \begin{bmatrix}1\\1\end{bmatrix}
+      </m>
+      is an eigenvector of <m>A</m>, and find its corresponding eigenvalue.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Compute <m>A\mathbf{v}</m> and check whether it is a scalar multiple
+      of <m>\mathbf{v}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>\mathbf{v}</m> is an eigenvector with eigenvalue <m>\lambda=3</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We compute
+      <m>
+        A\mathbf{v}
+        =
+        \begin{bmatrix}
+          2 \amp 1 \\
+          1 \amp 2
+        \end{bmatrix}
+        \begin{bmatrix}
+          1 \\
+          1
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+          3 \\
+          3
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Since
+      <m>
+        A\mathbf{v} = 3\mathbf{v},
+      </m>
+      the vector <m>\mathbf{v}</m> is an eigenvector and the corresponding
+      eigenvalue is <m>\lambda=3</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-find-eigenvalues-2x2">
+  <statement>
+    <p>
+      Find the eigenvalues of the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          4 \amp -2 \\
+          1 \amp 1
+        \end{bmatrix}.
+      </m>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Eigenvalues satisfy <m>\det(A-\lambda I)=0</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The eigenvalues are <m>\lambda=2</m> and <m>\lambda=3</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We compute
+      <m>
+        \det(A-\lambda I)
+        =
+        \det
+        \begin{bmatrix}
+          4-\lambda \amp -2 \\
+          1 \amp 1-\lambda
+        \end{bmatrix}
+        =
+        (4-\lambda)(1-\lambda)+2.
+      </m>
+    </p>
+    <p>
+      Expanding,
+      <m>
+        (4-\lambda)(1-\lambda)+2
+        = \lambda^2 -5\lambda +6.
+      </m>
+    </p>
+    <p>
+      Setting this equal to zero,
+      <m>
+        \lambda^2 -5\lambda +6 = 0,
+      </m>
+      which factors as
+      <m>
+        (\lambda-2)(\lambda-3)=0.
+      </m>
+    </p>
+    <p>
+      Therefore, the eigenvalues are <m>\lambda=2</m> and <m>\lambda=3</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-eigen-geometry-enhanced">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          2 \amp 0 \\
+          0 \amp -1
+        \end{bmatrix}.
+      </m>
+    </p>
+    <ol> <li><p>
+      Describe geometrically how <m>A</m> acts on vectors in
+      <m>\mathbb{R}^2</m>. </p> </li>
+    <li> <p> Identify all eigenvalues of <m>A</m> and describe the
+      corresponding eigenvectors geometrically.
+    </p>
+  </li>
+</ol>
+  </statement>
+
+  <hint>
+    <p>
+      Examine what happens to vectors lying on each coordinate axis,
+      and interpret the sign and magnitude of the resulting scalar multiples.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The matrix stretches vectors on the <m>x</m>-axis by a factor of 2
+      and reflects vectors on the <m>y</m>-axis across the origin.
+      The eigenvalues are <m>2</m> and <m>-1</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <ol> <li> <p>
+      The matrix <m>A</m> acts independently on each coordinate.
+      A vector
+      <m>
+        \begin{bmatrix}x\\y\end{bmatrix}
+      </m>
+      is sent to
+      <m>
+        \begin{bmatrix}2x\\-y\end{bmatrix}.
+      </m>
+      Geometrically, this stretches space horizontally by a factor of 2
+      and reflects vectors vertically across the origin.
+    </p>
+  </li>
+   <li> <p>
+      For vectors on the <m>x</m>-axis, we have
+      <m>
+        A\begin{bmatrix}x\\0\end{bmatrix}
+        =
+        \begin{bmatrix}2x\\0\end{bmatrix}
+        =
+        2\begin{bmatrix}x\\0\end{bmatrix}.
+      </m>
+      Every nonzero vector on the <m>x</m>-axis is therefore an eigenvector
+      with eigenvalue <m>2</m>.
+    </p>
+    <p>
+      For vectors on the <m>y</m>-axis,
+      <m>
+        A\begin{bmatrix}0\\y\end{bmatrix}
+        =
+        \begin{bmatrix}0\\-y\end{bmatrix}
+        =
+        -1\begin{bmatrix}0\\y\end{bmatrix}.
+      </m>
+      Every nonzero vector on the <m>y</m>-axis is an eigenvector
+      with eigenvalue <m>-1</m>.
+    </p>
+    <p>
+      Thus, <m>A</m> has two distinct eigenvalues with eigendirections
+      aligned with the coordinate axes, one producing stretching and
+      the other producing a reflection.
+    </p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-eigenvectors-linear-combination">
+  <statement>
+    <p>
+      Consider the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          4 \amp 1 \amp 0 \\
+          0 \amp 2 \amp 0 \\
+          0 \amp 0 \amp 1
+        \end{bmatrix},
+      </m>
+      and the vectors
+      <me>
+        \mathbf{v}_1 =
+        \begin{bmatrix}1\\0\\0\end{bmatrix},
+        \quad
+        \mathbf{v}_2 =
+        \begin{bmatrix}1\\-2\\0\end{bmatrix},
+        \quad
+        \mathbf{v}_3 =
+        \begin{bmatrix}0\\0\\1\end{bmatrix}.
+      </me>
+    </p>
+<ol> <li>
+    <p>
+      Show that <m>\mathbf{v}_1</m>, <m>\mathbf{v}_2</m>, and
+      <m>\mathbf{v}_3</m> are eigenvectors of <m>A</m>, and find their
+      associated eigenvalues.
+    </p>
+  </li>
+<li>
+    <p>
+      Express the vector
+      <m>
+        \mathbf{x} =
+        \begin{bmatrix}
+          3\\-4\\2
+        \end{bmatrix}
+      </m>
+      as a linear combination of the eigenvectors.
+    </p>
+  </li>
+  <li>
+    <p>
+      Use this expression to compute <m>A\mathbf{x}</m>,
+      <m>A^2\mathbf{x}</m>, and <m>A^{-1}\mathbf{x}</m> as linear
+      combinations of the eigenvectors.
+    </p>
+  </li>
+</ol>
+  </statement>
+
+  <hint>
+    <p>
+      For part (a), check whether <m>A\mathbf{v}_i</m> is a scalar multiple
+      of <m>\mathbf{v}_i</m>.  
+      For parts (b) and (c), work entirely in the eigenvector basis.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The eigenvalues are <m>4</m>, <m>2</m>, and <m>1</m>.
+      The vector <m>\mathbf{x}</m> can be written as
+      <m>
+        \mathbf{x}
+        = \mathbf{v}_1 + 2\mathbf{v}_2 + 2\mathbf{v}_3.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+<ol>
+  <li>
+    <p>
+      We compute:
+      <me>
+        A\mathbf{v}_1
+        =
+        \begin{bmatrix}
+          4 \amp 1 \amp 0 \\
+          0 \amp 2 \amp 0 \\
+          0 \amp 0 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}1\\0\\0\end{bmatrix}
+        =
+        \begin{bmatrix}4\\0\\0\end{bmatrix}
+        =
+        4\mathbf{v}_1,
+      </me>
+      so <m>\mathbf{v}_1</m> is an eigenvector with eigenvalue <m>4</m>.
+    </p>
+
+    <p>
+      Next,
+      <me>
+        A\mathbf{v}_2
+        =
+        \begin{bmatrix}
+          4 \amp 1 \amp 0 \\
+          0 \amp 2 \amp 0 \\
+          0 \amp 0 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}1\\-2\\0\end{bmatrix}
+        =
+        \begin{bmatrix}2\\-4\\0\end{bmatrix}
+        =
+        2\mathbf{v}_2,
+      </me>
+      so <m>\mathbf{v}_2</m> has eigenvalue <m>2</m>.
+    </p>
+
+    <p>
+      Finally,
+      <me>
+        A\mathbf{v}_3
+        =
+        \begin{bmatrix}
+          4 \amp 1 \amp 0 \\
+          0 \amp 2 \amp 0 \\
+          0 \amp 0 \amp 1
+        \end{bmatrix}
+        \begin{bmatrix}0\\0\\1\end{bmatrix}
+        =
+        \begin{bmatrix}0\\0\\1\end{bmatrix}
+        =
+        \mathbf{v}_3,
+      </me>
+      so the eigenvalue is <m>1</m>.
+    </p>
+  </li>
+<li>
+    <p>
+      We seek scalars <m>a</m>, <m>b</m>, and <m>c</m> such that
+      <me>
+        a\mathbf{v}_1 + b\mathbf{v}_2 + c\mathbf{v}_3
+        =
+        \begin{bmatrix}3\\-4\\2\end{bmatrix}.
+      </me>
+      This gives
+      <me>
+        \begin{bmatrix}
+          a + b \\
+          -2b \\
+          c
+        \end{bmatrix}
+        =
+        \begin{bmatrix}3\\-4\\2\end{bmatrix}.
+      </me>
+      Solving, we find <m>b=2</m>, <m>a=1</m>, and <m>c=2</m>.
+    </p>
+  </li>
+<li>
+   <p>
+  Since each eigenvector satisfies
+  <m>A\mathbf{v}_i = \lambda_i\mathbf{v}_i</m>, we can apply powers and
+  inverses of <m>A</m> by scaling each eigenvector.
+  Using
+  <m>
+    \mathbf{x}
+    = \mathbf{v}_1 + 2\mathbf{v}_2 + 2\mathbf{v}_3,
+  </m>
+  we compute:
+</p>
+
+<p>
+  <md>
+    <mrow> A\mathbf{x}
+    \amp = 1(4\mathbf{v}_1) + 2(2\mathbf{v}_2) + 2(1\mathbf{v}_3) </mrow>
+    <mrow> \amp = 4\mathbf{v}_1 + 4\mathbf{v}_2 + 2\mathbf{v}_3. </mrow>
+  </md>
+</p>
+
+<p>
+  Similarly,
+  <md>
+    <mrow> A^2\mathbf{x}
+    \amp = 1(4^2\mathbf{v}_1) + 2(2^2\mathbf{v}_2) + 2(1^2\mathbf{v}_3) </mrow>
+    <mrow> \amp = 16\mathbf{v}_1 + 8\mathbf{v}_2 + 2\mathbf{v}_3. </mrow>
+  </md>
+</p>
+
+<p>
+  Since
+  <m>A^{-1}\mathbf{v}_i = \tfrac{1}{\lambda_i}\mathbf{v}_i</m>, we obtain
+</p>
+
+<p>
+  <md>
+    <mrow> A^{-1}\mathbf{x}
+    \amp = 1\left(\tfrac{1}{4}\mathbf{v}_1\right)
+      + 2\left(\tfrac{1}{2}\mathbf{v}_2\right)
+      + 2(1\mathbf{v}_3) </mrow>
+    <mrow> \amp = \tfrac{1}{4}\mathbf{v}_1 + \mathbf{v}_2 + 2\mathbf{v}_3. </mrow>
+  </md>
+</p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
+
+</exercises>
+
+</section>
+</handout>
