@@ -2411,6 +2411,51 @@ var ptx_lunr_docs = [
   "number": "15",
   "title": "",
   "body": "  Let be a matrix whose column space has dimension 2.    How many free variables does the homogeneous system have?    What is the dimension of the null space of ?      Use the relationship between pivot columns, free variables, and dimensions.    There are 2 free variables, and the null space has dimension 2.    The dimension of the column space equals the number of pivot columns. Since the column space has dimension 2, there are 2 pivot columns.  Because has 4 columns total, the number of free variables is   The dimension of the null space equals the number of free variables. Therefore, the null space has dimension 2.  This relationship reflects the fundamental balance between the column space and null space emphasized in this section.   "
+},
+{
+  "id": "ch-practice-exams-5",
+  "level": "1",
+  "url": "ch-practice-exams-5.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Chapter 4 Practice Exam",
+  "body": " Chapter 4 Practice Exam   Topics                Be sure to try each question before looking at the solutions.   Questions    Let   Verify that is an eigenvector of , and find its corresponding eigenvalue.    Compute and check whether it is a scalar multiple of .     is an eigenvector with eigenvalue .    We compute   Since the vector is an eigenvector and the corresponding eigenvalue is .      Find the eigenvalues of the matrix     Eigenvalues satisfy .    The eigenvalues are and .    We compute   Expanding,   Setting this equal to zero, which factors as   Therefore, the eigenvalues are and .      Let    Describe geometrically how acts on vectors in .    Identify all eigenvalues of and describe the corresponding eigenvectors geometrically.      Examine what happens to vectors lying on each coordinate axis, and interpret the sign and magnitude of the resulting scalar multiples.    The matrix stretches vectors on the -axis by a factor of 2 and reflects vectors on the -axis across the origin. The eigenvalues are and .      The matrix acts independently on each coordinate. A vector is sent to Geometrically, this stretches space horizontally by a factor of 2 and reflects vectors vertically across the origin.    For vectors on the -axis, we have Every nonzero vector on the -axis is therefore an eigenvector with eigenvalue .  For vectors on the -axis, Every nonzero vector on the -axis is an eigenvector with eigenvalue .  Thus, has two distinct eigenvalues with eigendirections aligned with the coordinate axes, one producing stretching and the other producing a reflection.        Consider the matrix and the vectors     Show that , , and are eigenvectors of , and find their associated eigenvalues.    Express the vector as a linear combination of the eigenvectors.    Use this expression to compute , , and as linear combinations of the eigenvectors.      For part (a), check whether is a scalar multiple of . For parts (b) and (c), work entirely in the eigenvector basis.    The eigenvalues are , , and . The vector can be written as       We compute: so is an eigenvector with eigenvalue .  Next, so has eigenvalue .  Finally, so the eigenvalue is .    We seek scalars , , and such that This gives Solving, we find , , and .    Since each eigenvector satisfies , we can apply powers and inverses of by scaling each eigenvector. Using we compute:     Similarly,   Since , we obtain           "
+},
+{
+  "id": "exercise-eigen-definition",
+  "level": "2",
+  "url": "ch-practice-exams-5.html#exercise-eigen-definition",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Let   Verify that is an eigenvector of , and find its corresponding eigenvalue.    Compute and check whether it is a scalar multiple of .     is an eigenvector with eigenvalue .    We compute   Since the vector is an eigenvector and the corresponding eigenvalue is .   "
+},
+{
+  "id": "exercise-find-eigenvalues-2x2",
+  "level": "2",
+  "url": "ch-practice-exams-5.html#exercise-find-eigenvalues-2x2",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Find the eigenvalues of the matrix     Eigenvalues satisfy .    The eigenvalues are and .    We compute   Expanding,   Setting this equal to zero, which factors as   Therefore, the eigenvalues are and .   "
+},
+{
+  "id": "exercise-eigen-geometry-enhanced",
+  "level": "2",
+  "url": "ch-practice-exams-5.html#exercise-eigen-geometry-enhanced",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Let    Describe geometrically how acts on vectors in .    Identify all eigenvalues of and describe the corresponding eigenvectors geometrically.      Examine what happens to vectors lying on each coordinate axis, and interpret the sign and magnitude of the resulting scalar multiples.    The matrix stretches vectors on the -axis by a factor of 2 and reflects vectors on the -axis across the origin. The eigenvalues are and .      The matrix acts independently on each coordinate. A vector is sent to Geometrically, this stretches space horizontally by a factor of 2 and reflects vectors vertically across the origin.    For vectors on the -axis, we have Every nonzero vector on the -axis is therefore an eigenvector with eigenvalue .  For vectors on the -axis, Every nonzero vector on the -axis is an eigenvector with eigenvalue .  Thus, has two distinct eigenvalues with eigendirections aligned with the coordinate axes, one producing stretching and the other producing a reflection.     "
+},
+{
+  "id": "exercise-eigenvectors-linear-combination",
+  "level": "2",
+  "url": "ch-practice-exams-5.html#exercise-eigenvectors-linear-combination",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Consider the matrix and the vectors     Show that , , and are eigenvectors of , and find their associated eigenvalues.    Express the vector as a linear combination of the eigenvectors.    Use this expression to compute , , and as linear combinations of the eigenvectors.      For part (a), check whether is a scalar multiple of . For parts (b) and (c), work entirely in the eigenvector basis.    The eigenvalues are , , and . The vector can be written as       We compute: so is an eigenvector with eigenvalue .  Next, so has eigenvalue .  Finally, so the eigenvalue is .    We seek scalars , , and such that This gives Solving, we find , , and .    Since each eigenvector satisfies , we can apply powers and inverses of by scaling each eigenvector. Using we compute:     Similarly,   Since , we obtain        "
 }
 ]
 
