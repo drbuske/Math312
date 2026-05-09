@@ -450,6 +450,703 @@ https://drbuske.github.io/linearalgebra/sec-eigen-diag.html" visual="Diagonaliza
   </solution>
 </exercise>
 
+<exercise xml:id="exercise-eigenvectors-given-lambda">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          4 \amp 1 \\
+          0 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Find a basis for the eigenspace corresponding to the eigenvalue
+      <m>\lambda=2</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Solve <m>(A-2I)\mathbf{x}=\mathbf{0}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      A basis is
+      <m>
+        \left\{
+        \begin{bmatrix}-1\\2\end{bmatrix}
+        \right\}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We form
+      <m>
+        A-2I =
+        \begin{bmatrix}
+          2 \amp 1 \\
+          0 \amp 0
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      The equation <m>(A-2I)\mathbf{x}=\mathbf{0}</m> becomes
+      <m>2x_1+x_2=0</m>.
+      Solving gives <m>x_2=-2x_1</m>.
+    </p>
+    <p>
+      Thus eigenvectors are multiples of
+      <m>\begin{bmatrix}-1\\2\end{bmatrix}</m>,
+      which forms a basis for the eigenspace.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-eigenvalues-triangular">
+  <statement>
+    <p>
+      Compute the eigenvalues of
+      <m>
+        A =
+        \begin{bmatrix}
+          1 \amp 2 \amp 0 \\
+          0 \amp 3 \amp -1 \\
+          0 \amp 0 \amp 5
+        \end{bmatrix}.
+      </m>
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Consider how the determinant of <m>A-\lambda I</m> simplifies.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The eigenvalues are <m>1</m>, <m>3</m>, and <m>5</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Since <m>A-\lambda I</m> is upper triangular,
+      its determinant is the product of the diagonal entries:
+      <m>
+        (1-\lambda)(3-\lambda)(5-\lambda).
+      </m>
+    </p>
+    <p>
+      Setting this equal to zero gives the eigenvalues
+      <m>\lambda=1</m>, <m>\lambda=3</m>, and <m>\lambda=5</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-eigenvalue-geometry">
+  <statement>
+    <p>
+      Suppose a <m>2\times2</m> matrix <m>A</m> has a single eigenvalue
+      <m>\lambda</m> of multiplicity two.
+    </p>
+    <p>
+      Explain what this means for the action of <m>A</m> on vectors in
+      <m>\mathbb{R}^2</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Consider how many independent directions are preserved by the transformation.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      All eigenvectors lie along a single line through the origin.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      A repeated eigenvalue means that the characteristic polynomial
+      has only one root.
+    </p>
+    <p>
+      The eigenspace may still be one‑dimensional, meaning there is
+      only one line of vectors that are stretched by the transformation.
+      Vectors not on this line are generally rotated or sheared.
+    </p>
+    <p>
+      This situation contrasts with matrices that have two distinct
+      eigenvalues, which preserve two independent directions.
+    </p>
+
+    <p>
+      For example, consider the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          3 \amp 1 \\
+          0 \amp 3
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      This matrix has a single eigenvalue of multiplicity two.
+      We analyze its eigenvalues, eigenvectors, and geometric behavior.
+    </p>
+
+    <p>
+      We compute the characteristic polynomial:
+      <m>
+        \det(A-\lambda I)
+        =
+        \det
+        \begin{bmatrix}
+          3-\lambda \amp 1 \\
+          0 \amp 3-\lambda
+        \end{bmatrix}
+        =
+        (3-\lambda)^2.
+      </m>
+      Thus, <m>\lambda=3</m> is the only eigenvalue, with multiplicity two.
+    </p>
+
+    <p>
+      To find the eigenvectors, we solve
+      <m>(A-3I)\mathbf{x}=\mathbf{0}</m>:
+      <m>
+        A-3I =
+        \begin{bmatrix}
+          0 \amp 1 \\
+          0 \amp 0
+        \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      This gives the equation <m>x_2=0</m>, so eigenvectors have the form
+      <m>
+        \begin{bmatrix}x\\0\end{bmatrix}, \; x\neq 0.
+      </m>
+      The eigenspace is therefore one‑dimensional, consisting of all
+      nonzero vectors along the <m>x</m>-axis.
+    </p>
+
+    <p>
+      Geometrically, the transformation scales vectors by a factor of 3,
+      but also shears vectors that are not on the eigenline.
+      Only vectors lying on the <m>x</m>-axis preserve their direction.
+    </p>
+
+    <p>
+      This example illustrates that a repeated eigenvalue does not
+      guarantee two independent eigenvectors. Even though the eigenvalue
+      has multiplicity two, there is only one invariant direction in
+      <m>\mathbb{R}^2</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-diagonalizable-or-not">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          2 \amp 1 \\
+          0 \amp 2
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Determine whether <m>A</m> is diagonalizable.
+      Justify your answer.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Find the eigenvalues and the dimension of each eigenspace.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The matrix <m>A</m> is not diagonalizable.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The characteristic polynomial of <m>A</m> is
+      <m>
+        \det(A-\lambda I)
+        =
+        \det
+        \begin{bmatrix}
+          2-\lambda \amp 1 \\
+          0 \amp 2-\lambda
+        \end{bmatrix}
+        = (2-\lambda)^2.
+      </m>
+      Thus the only eigenvalue is <m>\lambda=2</m>, with algebraic
+      multiplicity 2.
+    </p>
+    <p>
+      To find the eigenspace, we solve
+      <m>(A-2I)\mathbf{x}=\mathbf{0}</m>:
+      <m>
+        A-2I =
+        \begin{bmatrix}
+          0 \amp 1 \\
+          0 \amp 0
+        \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      This gives <m>x_2=0</m>, so the eigenspace is one‑dimensional.
+      Because there are fewer eigenvectors than the size of the matrix,
+      <m>A</m> is not diagonalizable.
+    </p>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-diagonalization-3x3-repeated-clean">
+  <statement>
+    <p>
+      Consider the matrix
+      <m>
+        A =
+        \begin{bmatrix}
+          2 \amp 1 \amp 0 \\
+          1 \amp 2 \amp 0 \\
+          0 \amp 0 \amp 3
+        \end{bmatrix}.
+      </m>
+    </p>
+    <ol> <li>
+    <p>
+      Find the eigenvalues of <m>A</m> and their algebraic multiplicities. </p>
+    </li>
+    <li>
+      <p>
+        Find a basis for each eigenspace.
+      </p>
+    </li>
+    <li> <p>
+     Diagonalize <m>A</m> by finding matrices <m>P</m> and <m>D</m>
+      such that <m>A = PDP^{-1}</m>.
+    </p>
+  </li>
+</ol>
+  </statement>
+
+  <hint>
+    <p>
+      First compute <m>\det(A-\lambda I)</m>.
+      Then solve <m>(A-\lambda I)\mathbf{x}=\mathbf{0}</m> for each eigenvalue.
+      Remember that <m>A</m> is diagonalizable if it has three linearly
+      independent eigenvectors.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The eigenvalues are <m>3</m> with multiplicity 2 and <m>1</m> with
+      multiplicity 1. The matrix is diagonalizable.
+    </p>
+  </answer>
+
+  <solution>
+    <ol> <li>
+    <p>
+      We compute
+      <md>
+        <mrow> \det(A-\lambda I)
+        \amp =
+        \det
+        \begin{bmatrix}
+          2-\lambda \amp 1 \amp 0 \\
+          1 \amp 2-\lambda \amp 0 \\
+          0 \amp 0 \amp 3-\lambda
+        \end{bmatrix} </mrow>
+        <mrow> \amp =
+        (3-\lambda)\big((2-\lambda)^2-1\big). </mrow>
+      </md>
+      This factors as
+      <m>(3-\lambda)(\lambda-1)(\lambda-3)</m>.
+      Thus the eigenvalues are <m>\lambda=3</m> (multiplicity 2) and
+      <m>\lambda=1</m> (multiplicity 1).
+    </p>
+  </li> 
+  <li>
+    <p>
+      For <m>\lambda=3</m>, we solve
+      <m>(A-3I)\mathbf{x}=\mathbf{0}</m>, which gives
+      <m>x_1=x_2</m> with <m>x_3</m> free.
+      A basis for this eigenspace is
+      <me>
+        \left\{
+        \begin{bmatrix}1\\1\\0\end{bmatrix},
+        \begin{bmatrix}0\\0\\1\end{bmatrix}
+        \right\}.
+      </me>
+    </p>
+
+    <p>
+      For <m>\lambda=1</m>, solving <m>(A-I)\mathbf{x}=\mathbf{0}</m>
+      yields <m>x_1=-x_2</m> and <m>x_3=0</m>.
+      A basis for this eigenspace is
+      <me>
+        \left\{
+        \begin{bmatrix}1\\-1\\0\end{bmatrix}
+        \right\}.
+      </me>
+    </p>
+  </li>
+  <li>
+    <p>
+      Since there are three linearly independent eigenvectors,
+      <m>A</m> is diagonalizable.
+      Let
+      <me>
+        P  =
+        \begin{bmatrix}
+          1 \amp 0 \amp 1 \\
+          1 \amp 0 \amp -1 \\
+          0 \amp 1 \amp 0
+        \end{bmatrix},
+        \quad
+        D =
+        \begin{bmatrix}
+          3 \amp 0 \amp 0 \\
+          0 \amp 3 \amp 0 \\
+          0 \amp 0 \amp 1
+        \end{bmatrix}.
+      </me>
+      Then <m>A = PDP^{-1}</m>.
+    </p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-diagonalization-2x2-nth-power">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          3 \amp 2 \\
+          2 \amp 3
+        \end{bmatrix}.
+      </m>
+    </p>
+    <ol> <li>
+    <p>
+      Find the eigenvalues and eigenvectors of <m>A</m>. </p>
+    </li>
+    <li> <p>
+      Diagonalize <m>A</m> by finding matrices <m>P</m> and <m>D</m>
+      such that <m>A = PDP^{-1}</m>. </p> 
+    </li>
+    <li> <p>
+      Use the diagonalization to find a formula for <m>A^n</m>,
+      where <m>n</m> is a positive integer.
+    </p>
+  </li>
+</ol>
+  </statement>
+
+  <hint>
+    <p>
+      The eigenvalues satisfy <m>\det(A-\lambda I)=0</m>.
+      If <m>A=PDP^{-1}</m>, then <m>A^n = PD^nP^{-1}</m>.
+      Powers of a diagonal matrix are easy to compute.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The eigenvalues are <m>5</m> and <m>1</m>.
+      A formula for <m>A^n</m> is
+      <me>
+        A^n
+        =
+        \frac{1}{2}
+        \begin{bmatrix}
+          5^n + 1^n \amp 5^n - 1^n \\
+          5^n - 1^n \amp 5^n + 1^n
+        \end{bmatrix}.
+      </me>
+    </p>
+  </answer>
+
+  <solution>
+    <ol> <li>
+    <p>
+      We compute the characteristic polynomial:
+      <md>
+        <mrow> \det(A-\lambda I)
+        \amp =
+        \det
+        \begin{bmatrix}
+          3-\lambda \amp 2 \\
+          2 \amp 3-\lambda
+        \end{bmatrix} </mrow>
+        <mrow> \amp =
+        (3-\lambda)^2 - 4 </mrow>
+        <mrow> \amp = \lambda^2 - 6\lambda + 5.</mrow>
+      </md>
+      Factoring gives
+      <m>(\lambda-5)(\lambda-1)=0</m>.
+      Thus the eigenvalues are <m>\lambda=5</m> and <m>\lambda=1</m>.
+    </p>
+
+    <p>
+      For <m>\lambda=5</m>, solving <m>(A-5I)\mathbf{x}=\mathbf{0}</m>
+      yields eigenvectors proportional to
+      <m>\begin{bmatrix}1\\1\end{bmatrix}</m>.
+      For <m>\lambda=1</m>, solving <m>(A-I)\mathbf{x}=\mathbf{0}</m>
+      yields eigenvectors proportional to
+      <m>\begin{bmatrix}1\\-1\end{bmatrix}</m>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Let
+      <me>
+        P =
+        \begin{bmatrix}
+          1 \amp 1 \\
+          1 \amp -1
+        \end{bmatrix},
+        \quad
+        D =
+        \begin{bmatrix}
+          5 \amp 0 \\
+          0 \amp 1
+        \end{bmatrix}.
+      </me>
+      Since the columns of <m>P</m> are linearly independent,
+      <m>P</m> is invertible and <m>A = PDP^{-1}</m>.
+    </p>
+  </li>
+  <li>
+    <p>
+      Using <m>A^n = PD^nP^{-1}</m>, we compute
+      <me>
+        D^n =
+        \begin{bmatrix}
+          5^n \amp 0 \\
+          0 \amp 1^n
+        \end{bmatrix}.
+      </me>
+      Carrying out the multiplication gives
+      <me>
+        A^n
+        =
+        \frac{1}{2}
+        \begin{bmatrix}
+          5^n + 1^n \amp 5^n - 1^n \\
+          5^n - 1^n \amp 5^n + 1^n
+        \end{bmatrix}.
+      </me>
+    </p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
+<exercise xml:id="exercise-complex-eigenvalues-real-diagonalization">
+  <statement>
+    <p>
+      Let
+      <m>
+        A =
+        \begin{bmatrix}
+          1 \amp 2 \\
+          -3 \amp 1
+        \end{bmatrix}.
+      </m>
+      This matrix has complex eigenvalues. In this exercise, we show how
+      to construct a real matrix <m>P</m> such that
+      <m>A\</m> is similar over the reals to a matrix of the form
+      <m>
+        C =
+        \begin{bmatrix}
+          a \amp -b \\
+          b \amp a
+        \end{bmatrix}.
+      </m>
+    </p>
+
+    <ol>
+      <li>
+        Show that the eigenvalues of <m>A</m> are complex.
+      </li>
+
+      <li>
+        Choose one eigenvalue <m>\lambda = a + bi</m> and write down the
+        corresponding matrix <m>C</m>.
+      </li>
+
+      <li>
+        Using the same eigenvalue, find a complex eigenvector
+        <m>\mathbf v</m> by solving
+        <m>(A - \lambda I)\mathbf v = \mathbf 0</m>.
+      </li>
+
+      <li>
+        Write <m>\mathbf v = \mathbf v_1 + i\mathbf v_2</m>, where
+        <m>\mathbf v_1</m> and <m>\mathbf v_2</m> have real entries.
+      </li>
+
+      <li>
+        Let <m>P = [\mathbf v_1\ \mathbf v_2]</m>.
+        Verify directly that
+        <m>A\mathbf v_1 = a\mathbf v_1 - b\mathbf v_2</m> and
+        <m>A\mathbf v_2 = b\mathbf v_1 + a\mathbf v_2</m>,
+        and conclude that <m>A = PCP^{-1}</m>.
+      </li>
+    </ol>
+  </statement>
+
+  <hint>
+    <p>
+      For part (a), compute <m>\det(A - \lambda I)</m>.
+      For the final part, do not compute <m>P^{-1}</m> directly; instead,
+      use how <m>A</m> acts on <m>\mathbf v_1</m> and <m>\mathbf v_2</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The eigenvalues are <m>1 \pm i\sqrt{6}</m>.
+      One valid choice of <m>P</m> satisfies <m>A = PCP^{-1}</m> with
+      <me>
+        C =
+        \begin{bmatrix}
+          1 \amp -\sqrt{6} \\
+          \sqrt{6} \amp 1
+        \end{bmatrix}.
+      </me>
+    </p>
+  </answer>
+
+  <solution>
+    <ol> <li>
+    <p>
+      We compute
+      <md>
+        <mrow> \det(A - \lambda I)
+        \amp =
+        \det
+        \begin{bmatrix}
+          1-\lambda \amp 2 \\
+          -3 \amp 1-\lambda
+        \end{bmatrix} </mrow>
+        <mrow> \amp =
+        (1-\lambda)^2 + 6. </mrow>
+      </md>
+      Setting this equal to zero gives
+      <m>\lambda = 1 \pm i\sqrt{6}</m>, so the eigenvalues are complex.
+    </p>
+  </li>
+  <li>
+    <p>
+      Choosing <m>\lambda = 1 + i\sqrt{6}</m>, we have
+      <m>a = 1</m> and <m>b = \sqrt{6}</m>, and therefore
+      <me>
+        C =
+        \begin{bmatrix}
+          1 \amp -\sqrt{6} \\
+          \sqrt{6} \amp 1
+        \end{bmatrix}.
+      </me>
+    </p>
+  </li>
+  <li>
+    <p>
+      Solving <m>(A - \lambda I)\mathbf v = \mathbf 0</m> with
+      <m>\lambda = 1 + i\sqrt{6}</m> yields the eigenvector
+      <me>
+        \mathbf v =
+        \begin{bmatrix}
+          2 \\
+          i\sqrt{6}
+        \end{bmatrix}.
+      </me>
+    </p>
+  </li>
+  <li>
+    <p>
+      Writing <m>\mathbf v = \mathbf v_1 + i\mathbf v_2</m>, we obtain
+      <me>
+        \mathbf v_1 =
+        \begin{bmatrix}
+          2 \\
+          0
+        \end{bmatrix},
+        \qquad
+        \mathbf v_2 =
+        \begin{bmatrix}
+          0 \\
+          \sqrt{6}
+        \end{bmatrix}.
+      </me>
+    </p>
+  </li>
+  <li>
+    <p>
+      Let
+      <me>
+        P =
+        \begin{bmatrix}
+          2 \amp 0 \\
+          0 \amp \sqrt{6}
+        \end{bmatrix}.
+      </me>
+      We compute
+      <md>
+        <mrow> A\mathbf v_1 =
+        \begin{bmatrix}
+          2 \\
+          -6
+        \end{bmatrix} </mrow>
+        <mrow> \amp = \mathbf v_1 - \sqrt{6}\mathbf v_2, </mrow>
+      </md>
+      and
+      <md>
+        <mrow> A\mathbf v_2 =
+        \begin{bmatrix}
+          2\sqrt{6} \\
+          \sqrt{6}
+        \end{bmatrix} </mrow>
+        <mrow> \amp = \sqrt{6}\mathbf v_1 + \mathbf v_2. </mrow>
+      </md>
+      These identities show that
+      <m>A[\mathbf v_1\ \mathbf v_2] = [\mathbf v_1\ \mathbf v_2]C</m>,
+      and since <m>P</m> is invertible, we conclude that
+      <m>A = PCP^{-1}</m>.
+    </p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
 
 </exercises>
 
