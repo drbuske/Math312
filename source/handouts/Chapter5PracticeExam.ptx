@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Chapter 5 Practice Exam</title>
+
+<section>
+<title>Topics</title>
+
+    <ul>
+      <li><url href="
+https://drbuske.github.io/linearalgebra/sec-vecspace-intro.html" visual="Vector spaces"/>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-lin-comb-span-lin-ind.html" visual="Linear combinations, span, and linear independence"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-vecsubspace-intro.html" visual="Subspaces"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-basis-dimension.html" visual="Basis and dimension"/>
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam5">
+    <title>Questions</title> 
+
+   <exercise>
+  <statement>
+    <p> Let <m>\mathbb{P}_2</m> be the vector space of all real polynomials of degree at most <m>2</m>.
+    Let <m>W</m> be the subset of <m>\mathbb{P}_2</m> consisting of those polynomials <m>p</m>
+    that satisfy the condition
+    <me>p'(0) + p(1) = 0.</me>
+
+    <ol>
+      <li><p> What is the dimension of <m>W</m>? </p></li>
+      <li><p> Find a basis for <m>W</m>.</p></li>
+    </ol>
+  </p>
+  </statement>
+
+  <hint>
+    <p> Write a general polynomial <m>p(x) = ax^2 + bx + c</m>.
+    Compute <m>p'(x)</m>, then evaluate <m>p'(0)</m> and <m>p(1)</m>.
+    The given condition gives a linear equation relating <m>a</m>, <m>b</m>, and <m>c</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p> The dimension of <m>W</m> is <m>2</m>.
+    One possible basis for <m>W</m> is
+    <me>\{x^2 - 1,\; x - 2\}.</me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Let <m>p(x) = ax^2 + bx + c</m> be an arbitrary element of <m>\mathbb{P}_2</m>.
+      Then <m>p'(x) = 2ax + b</m>, so
+      <me>p'(0) = b.</me>
+      Also,
+      <me>p(1) = a + b + c.</me>
+      The condition <m>p'(0) + p(1) = 0</m> gives
+      <me>b + (a + b + c) = 0,</me>
+      which simplifies to
+      <me>a + 2b + c = 0.</me>
+    </p>
+
+    <p>
+      Solving for <m>c</m>, we obtain
+      <me>c = -a - 2b.</me>
+      Therefore every polynomial in <m>W</m> has the form
+      <me>
+        p(x) = a(x^2 - 1) + b(x - 2).
+      </me>
+    </p>
+
+    <p>
+      This shows that <m>W</m> is spanned by the polynomials
+      <m>x^2 - 1</m> and <m>x - 2</m>.
+      Since these polynomials are linearly independent,
+      they form a basis for <m>W</m>.
+      Hence
+      <me>\dim W = 2.</me>
+    </p>
+  </solution>
+</exercise> 
+
+ <exercise>
+  <statement>
+    <p> Let <m>V</m> be the vector space of all real sequences
+    <me>(x_1, x_2, x_3, \dots)</me>
+
+    with addition and scalar multiplication defined componentwise.</p>
+
+    <p>
+    Define
+    <me>
+      W = \{ \mathbf{x} \in V : x_{n+1} - x_n \text{ is constant for all } n \ge 1 \}.
+    </me>
+
+    <ol>
+      <li><p> Show that <m>W</m> is a subspace of <m>V</m>. </p></li>
+      <li><p> Describe all sequences in <m>W</m> explicitly. </p></li>
+      <li><p> Find a spanning set for <m>W</m> and determine the dimension of <m>W</m>. </p></li>
+    </ol>
+  </p>
+  </statement>
+
+  <hint>
+    <p> If the difference <m>x_{n+1} - x_n</m> is constant, try rewriting
+    <m>x_{n+1}</m> in terms of <m>x_n</m>.
+    Think about how many initial values determine an entire sequence in <m>W</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+    The set <m>W</m> is a subspace of <m>V</m>.
+    Every sequence in <m>W</m> has the form
+    <me>x_n = a + (n-1)c</me>
+    for real numbers <m>a</m> and <m>c</m>.
+    A spanning set for <m>W</m> is
+    <me>\{(1,1,1,\dots),(0,1,2,3,\dots)\}</me>
+    and <m>\dim W = 2</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The zero sequence <m>(0,0,0,\dots)</m> satisfies
+      <m>0 - 0 = 0</m> for all <m>n</m>, so <m>\mathbf{0} \in W</m>.
+    </p>
+
+    <p>
+      Let <m>\mathbf{x}, \mathbf{y} \in W</m>.
+      Then there exist constants <m>c</m> and <m>d</m> such that
+      <m>x_{n+1} - x_n = c</m> and <m>y_{n+1} - y_n = d</m> for all <m>n</m>.
+      Then
+      <me>
+        (x+y)_{n+1} - (x+y)_n
+        = (x_{n+1}-x_n) + (y_{n+1}-y_n)
+        = c + d,
+      </me>
+      which is constant. Hence <m>\mathbf{x} + \mathbf{y} \in W</m>.
+    </p>
+
+    <p>
+      For any scalar <m>\alpha</m>,
+      <me>
+        (\alpha x)_{n+1} - (\alpha x)_n
+        = \alpha(x_{n+1} - x_n)
+        = \alpha c,
+      </me>
+      which is constant. Thus <m>\alpha \mathbf{x} \in W</m>.
+      Therefore, <m>W</m> is a subspace of <m>V</m>.
+    </p>
+
+    <p>
+      If <m>\mathbf{x} \in W</m>, then there exists a constant <m>c</m> such that
+      <m>x_{n+1} = x_n + c</m> for all <m>n</m>.
+      Since we also have <m>x_{n}=x_{n-1} + c</m>, we also know that <md><mrow> x_{n+1} \amp = (x_{n-1} + c)+c </mrow> <mrow> \amp =x_{n-1}+2c.</mrow> </md>  Likewise, we have that <me>x_{n+1}=x_{n-2}+3c</me> and we conclude the pattern with 
+      <me>x_n = x_1 + (n-1)c.</me>
+      Hence every sequence in <m>W</m> is an <em>arithmetic</em> sequence.
+    </p>
+
+    <p>
+      Any <m>\mathbf{x} \in W</m> can be written as
+      <me>
+        \mathbf{x}
+        = x_1(1,1,1,\dots) + c(0,1,2,3,\dots).
+      </me>
+      Therefore,
+      <me>
+        W = \operatorname{span}\{(1,1,1,\dots),(0,1,2,3,\dots)\}.
+      </me>
+      These two sequences are linearly independent, so <m>\dim W = 2</m>.
+    </p>
+  </solution>
+</exercise>
+
+
+</exercises>
+
+</section>
+</handout>
