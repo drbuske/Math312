@@ -2527,7 +2527,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Chapter 5 Practice Exam",
-  "body": " Chapter 5 Practice Exam   Topics                     Be sure to try each question before looking at the solutions.   Questions    Let be the vector space of all real polynomials of degree at most . Let be the subset of consisting of those polynomials that satisfy the condition   What is the dimension of ?  Find a basis for .      Write a general polynomial . Compute , then evaluate and . The given condition gives a linear equation relating , , and .    The dimension of is . One possible basis for is     Let be an arbitrary element of . Then , so Also, The condition gives which simplifies to   Solving for , we obtain Therefore every polynomial in has the form   This shows that is spanned by the polynomials and . Since these polynomials are linearly independent, they form a basis for . Hence       Let be the vector space of all real sequences with addition and scalar multiplication defined componentwise.  Define   Show that is a subspace of .  Describe all sequences in explicitly.  Find a spanning set for and determine the dimension of .      If the difference is constant, try rewriting in terms of . Think about how many initial values determine an entire sequence in .    The set is a subspace of . Every sequence in has the form for real numbers and . A spanning set for is and .    The zero sequence satisfies for all , so .  Let . Then there exist constants and such that and for all . Then which is constant. Hence .  For any scalar , which is constant. Thus . Therefore, is a subspace of .  If , then there exists a constant such that for all . Since we also have , we also know that Likewise, we have that and we conclude the pattern with Hence every sequence in is an arithmetic sequence.  Any can be written as Therefore, These two sequences are linearly independent, so .      "
+  "body": " Chapter 5 Practice Exam   Topics                     Be sure to try each question before looking at the solutions.   Questions    Let be the set of all real sequences such that for all . Use the usual definitions of addition and scalar multiplication of sequences. Determine whether is a vector space over .    Think about additive inverses.     is not a vector space.    The zero sequence belongs to , and is closed under addition. However, if and , then has negative entries and does not belong to .  Thus additive inverses do not exist for all vectors, so axiom (A4) fails and is not a vector space.      Let . Define addition as usual, but define scalar multiplication by Determine whether is a vector space.    Check whether behaves as expected.     is not a vector space.    Let . Then , since .  But , while associativity of scalar multiplication requires to equal for all vectors.  The scalar multiplication axiom (SM3) fails, so is not a vector space.      Let be the set of all real polynomials. Define addition as usual, but define scalar multiplication by Determine whether is a vector space.    Identify the additive identity and test scalar distributivity.     is not a vector space.    The additive identity with respect to usual addition is the zero polynomial, but , which is not the zero polynomial unless .  Thus scalar multiplication does not preserve the additive identity, violating axiom (SM4). Therefore is not a vector space.      Let be the vector space of all real polynomials of degree at most . Let be the subset of consisting of those polynomials that satisfy the condition   What is the dimension of ?  Find a basis for .      Write a general polynomial . Compute , then evaluate and . The given condition gives a linear equation relating , , and .    The dimension of is . One possible basis for is     Let be an arbitrary element of . Then , so Also, The condition gives which simplifies to   Solving for , we obtain Therefore every polynomial in has the form   This shows that is spanned by the polynomials and . Since these polynomials are linearly independent, they form a basis for . Hence       Let be the vector space of all real sequences with addition and scalar multiplication defined componentwise.  Define   Show that is a subspace of .  Describe all sequences in explicitly.  Find a spanning set for and determine the dimension of .      If the difference is constant, try rewriting in terms of . Think about how many initial values determine an entire sequence in .    The set is a subspace of . Every sequence in has the form for real numbers and . A spanning set for is and .    The zero sequence satisfies for all , so .  Let . Then there exist constants and such that and for all . Then which is constant. Hence .  For any scalar , which is constant. Thus . Therefore, is a subspace of .  If , then there exists a constant such that for all . Since we also have , we also know that Likewise, we have that and we conclude the pattern with Hence every sequence in is an arithmetic sequence.  Any can be written as Therefore, These two sequences are linearly independent, so .      Let and define operations and on by Show that is a vector space over . Your justification should address the vector space axioms.    First identify the additive identity with respect to . Then determine the additive inverse of a general matrix . Finally, check carefully how scalar multiplication interacts with addition.    Yes, is a vector space. The additive identity is , the additive inverse of is , and all vector space axioms are satisfied.    We verify the vector space axioms. Since is closed under ordinary matrix addition and scalar multiplication, and since , the set is closed under and .  To find the additive identity, suppose satisfies for all . Then which implies . Thus the additive identity with respect to is .  Let . To find the additive inverse of , we seek such that . This gives so Hence every element of has an additive inverse.  The operation is commutative and associative because ordinary matrix addition is commutative and associative, and the same matrix is subtracted in every sum.  We now verify compatibility of scalar multiplication. Let and . Then   We also check distributivity over addition. For , while Thus scalar multiplication distributes over addition.  Finally, so the scalar identity axiom holds. Therefore all vector space axioms are satisfied, and is a vector space.      Let be a vector space and let . Suppose that and that the set is linearly independent. Find a basis for .    Decide whether adds anything new to the span.    A basis for is .    Since is a linear combination of and , it does not add anything new to the span.  Because is already linearly independent and spans the same space, it is a basis for .      Let , and let be a fixed real matrix. Define Determine whether is a subspace of . Justify your answer.    Suppose and satisfy . Check whether their sum and scalar multiples also satisfy this condition.    Yes, is a subspace of .    Let . Then and . Using linearity of matrix multiplication, Thus , so is closed under addition.  Let and let . Then so . Thus is closed under scalar multiplication.  Since , the zero vector belongs to . Therefore is a subspace of .  Note that the vectors in are eigenvectors of with eigenvalue .      Let be the vector space of all real‑valued functions defined on . Define Determine whether is a subspace of . Justify your answer.    Write two generic functions in and compute their sum. Then check what happens when you multiply such a function by a scalar.    Yes, is a subspace of .    Let and be functions in . Then there exist real numbers and such that   Their sum is which is again of the same form. Thus is closed under addition.  Let . Then which is also of the required form. Hence is closed under scalar multiplication.  The zero function belongs to by taking . Therefore contains the zero vector.  Since contains the zero function and is closed under addition and scalar multiplication, it is a subspace of .      Find the dimension of , the vector space of all real matrices with zero trace. Note: The trace is defined as the sum of the diagonal elements of a matrix.    Write a general matrix, impose the zero‑trace condition, and count how many free parameters remain.    The dimension is .    A general real matrix has the form . The trace is .  The condition that the trace is zero gives , or . Thus every matrix in can be written as .  The entries , , and are free, so the space depends on three independent real parameters. Therefore .      Let be the set of all real matrices of the form where , and let be the set of all real matrices of the form where .  Find a basis for and .    Write a general element of each set as a linear combination of matrices involving one parameter at a time.    A basis for is A basis for is     Any matrix in can be written as These two matrices are linearly independent, so they form a basis for .  Any matrix in can be written as These matrices are linearly independent, so they form a basis for .     Linear Independence and Dimension   Let be a vector space with . Let be a subset of that is linearly independent and has vectors. Which of the following statements is false ?     There must exist a linearly independent subset of such that and is not a basis for .    Every nonempty subset of is linearly independent.    There must exist a linearly dependent subset of such that .     .      Linear Dependence of Matrix Powers   Let be a matrix with real entries and let . Consider the vectors Which of the following statements is correct?     The vectors are linearly independent.   A vector space of dimension cannot contain six linearly independent vectors.     The vectors are linearly dependent.   A nontrivial linear combination of equal to .     The vectors are linearly independent if and only if is symmetric.   Symmetry of has no bearing on linear dependence of these vectors.     Linear dependence or independence cannot be determined from the given data.   Linear dependence occurs regardless of the choice of and .     ``   "
 },
 {
   "id": "exercises-practiceexam5-2",
@@ -2536,7 +2536,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1",
   "title": "",
-  "body": "  Let be the vector space of all real polynomials of degree at most . Let be the subset of consisting of those polynomials that satisfy the condition   What is the dimension of ?  Find a basis for .      Write a general polynomial . Compute , then evaluate and . The given condition gives a linear equation relating , , and .    The dimension of is . One possible basis for is     Let be an arbitrary element of . Then , so Also, The condition gives which simplifies to   Solving for , we obtain Therefore every polynomial in has the form   This shows that is spanned by the polynomials and . Since these polynomials are linearly independent, they form a basis for . Hence    "
+  "body": "  Let be the set of all real sequences such that for all . Use the usual definitions of addition and scalar multiplication of sequences. Determine whether is a vector space over .    Think about additive inverses.     is not a vector space.    The zero sequence belongs to , and is closed under addition. However, if and , then has negative entries and does not belong to .  Thus additive inverses do not exist for all vectors, so axiom (A4) fails and is not a vector space.   "
 },
 {
   "id": "exercises-practiceexam5-3",
@@ -2545,7 +2545,106 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2",
   "title": "",
+  "body": "  Let . Define addition as usual, but define scalar multiplication by Determine whether is a vector space.    Check whether behaves as expected.     is not a vector space.    Let . Then , since .  But , while associativity of scalar multiplication requires to equal for all vectors.  The scalar multiplication axiom (SM3) fails, so is not a vector space.   "
+},
+{
+  "id": "exercises-practiceexam5-4",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-4",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Let be the set of all real polynomials. Define addition as usual, but define scalar multiplication by Determine whether is a vector space.    Identify the additive identity and test scalar distributivity.     is not a vector space.    The additive identity with respect to usual addition is the zero polynomial, but , which is not the zero polynomial unless .  Thus scalar multiplication does not preserve the additive identity, violating axiom (SM4). Therefore is not a vector space.   "
+},
+{
+  "id": "exercises-practiceexam5-5",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-5",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Let be the vector space of all real polynomials of degree at most . Let be the subset of consisting of those polynomials that satisfy the condition   What is the dimension of ?  Find a basis for .      Write a general polynomial . Compute , then evaluate and . The given condition gives a linear equation relating , , and .    The dimension of is . One possible basis for is     Let be an arbitrary element of . Then , so Also, The condition gives which simplifies to   Solving for , we obtain Therefore every polynomial in has the form   This shows that is spanned by the polynomials and . Since these polynomials are linearly independent, they form a basis for . Hence    "
+},
+{
+  "id": "exercises-practiceexam5-6",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-6",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
   "body": "  Let be the vector space of all real sequences with addition and scalar multiplication defined componentwise.  Define   Show that is a subspace of .  Describe all sequences in explicitly.  Find a spanning set for and determine the dimension of .      If the difference is constant, try rewriting in terms of . Think about how many initial values determine an entire sequence in .    The set is a subspace of . Every sequence in has the form for real numbers and . A spanning set for is and .    The zero sequence satisfies for all , so .  Let . Then there exist constants and such that and for all . Then which is constant. Hence .  For any scalar , which is constant. Thus . Therefore, is a subspace of .  If , then there exists a constant such that for all . Since we also have , we also know that Likewise, we have that and we conclude the pattern with Hence every sequence in is an arithmetic sequence.  Any can be written as Therefore, These two sequences are linearly independent, so .   "
+},
+{
+  "id": "exercises-practiceexam5-7",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-7",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Let and define operations and on by Show that is a vector space over . Your justification should address the vector space axioms.    First identify the additive identity with respect to . Then determine the additive inverse of a general matrix . Finally, check carefully how scalar multiplication interacts with addition.    Yes, is a vector space. The additive identity is , the additive inverse of is , and all vector space axioms are satisfied.    We verify the vector space axioms. Since is closed under ordinary matrix addition and scalar multiplication, and since , the set is closed under and .  To find the additive identity, suppose satisfies for all . Then which implies . Thus the additive identity with respect to is .  Let . To find the additive inverse of , we seek such that . This gives so Hence every element of has an additive inverse.  The operation is commutative and associative because ordinary matrix addition is commutative and associative, and the same matrix is subtracted in every sum.  We now verify compatibility of scalar multiplication. Let and . Then   We also check distributivity over addition. For , while Thus scalar multiplication distributes over addition.  Finally, so the scalar identity axiom holds. Therefore all vector space axioms are satisfied, and is a vector space.   "
+},
+{
+  "id": "exercises-practiceexam5-8",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-8",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  Let be a vector space and let . Suppose that and that the set is linearly independent. Find a basis for .    Decide whether adds anything new to the span.    A basis for is .    Since is a linear combination of and , it does not add anything new to the span.  Because is already linearly independent and spans the same space, it is a basis for .   "
+},
+{
+  "id": "exercises-practiceexam5-9",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-9",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  Let , and let be a fixed real matrix. Define Determine whether is a subspace of . Justify your answer.    Suppose and satisfy . Check whether their sum and scalar multiples also satisfy this condition.    Yes, is a subspace of .    Let . Then and . Using linearity of matrix multiplication, Thus , so is closed under addition.  Let and let . Then so . Thus is closed under scalar multiplication.  Since , the zero vector belongs to . Therefore is a subspace of .  Note that the vectors in are eigenvectors of with eigenvalue .   "
+},
+{
+  "id": "exercises-practiceexam5-10",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-10",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Let be the vector space of all real‑valued functions defined on . Define Determine whether is a subspace of . Justify your answer.    Write two generic functions in and compute their sum. Then check what happens when you multiply such a function by a scalar.    Yes, is a subspace of .    Let and be functions in . Then there exist real numbers and such that   Their sum is which is again of the same form. Thus is closed under addition.  Let . Then which is also of the required form. Hence is closed under scalar multiplication.  The zero function belongs to by taking . Therefore contains the zero vector.  Since contains the zero function and is closed under addition and scalar multiplication, it is a subspace of .   "
+},
+{
+  "id": "exercises-practiceexam5-11",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-11",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Find the dimension of , the vector space of all real matrices with zero trace. Note: The trace is defined as the sum of the diagonal elements of a matrix.    Write a general matrix, impose the zero‑trace condition, and count how many free parameters remain.    The dimension is .    A general real matrix has the form . The trace is .  The condition that the trace is zero gives , or . Thus every matrix in can be written as .  The entries , , and are free, so the space depends on three independent real parameters. Therefore .   "
+},
+{
+  "id": "exercises-practiceexam5-12",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-12",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  Let be the set of all real matrices of the form where , and let be the set of all real matrices of the form where .  Find a basis for and .    Write a general element of each set as a linear combination of matrices involving one parameter at a time.    A basis for is A basis for is     Any matrix in can be written as These two matrices are linearly independent, so they form a basis for .  Any matrix in can be written as These matrices are linearly independent, so they form a basis for .   "
+},
+{
+  "id": "choices-linind-dim",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#choices-linind-dim",
+  "type": "Exercise",
+  "number": "12",
+  "title": "Linear Independence and Dimension.",
+  "body": " Linear Independence and Dimension   Let be a vector space with . Let be a subset of that is linearly independent and has vectors. Which of the following statements is false ?     There must exist a linearly independent subset of such that and is not a basis for .    Every nonempty subset of is linearly independent.    There must exist a linearly dependent subset of such that .     .    "
+},
+{
+  "id": "choices-cayley-hamilton",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#choices-cayley-hamilton",
+  "type": "Exercise",
+  "number": "13",
+  "title": "Linear Dependence of Matrix Powers.",
+  "body": " Linear Dependence of Matrix Powers   Let be a matrix with real entries and let . Consider the vectors Which of the following statements is correct?     The vectors are linearly independent.   A vector space of dimension cannot contain six linearly independent vectors.     The vectors are linearly dependent.   A nontrivial linear combination of equal to .     The vectors are linearly independent if and only if is symmetric.   Symmetry of has no bearing on linear dependence of these vectors.     Linear dependence or independence cannot be determined from the given data.   Linear dependence occurs regardless of the choice of and .     "
 }
 ]
 
