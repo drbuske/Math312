@@ -39,6 +39,111 @@ https://drbuske.github.io/linearalgebra/sec-basis-dimension.html" visual="Basis 
 
    <exercise>
   <statement>
+    <p>
+    Let <m>V</m> be the set of all real sequences
+    <me>(x_1,x_2,x_3,\dots)</me>
+    such that <m>x_n \ge 0</m> for all <m>n</m>.
+    Use the usual definitions of addition and scalar multiplication of sequences.
+
+    Determine whether <m>V</m> is a vector space over <m>\mathbb{R}</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p> Think about additive inverses. </p>
+  </hint>
+
+  <answer>
+    <p> <m>V</m> is not a vector space. </p>
+  </answer>
+
+  <solution>
+    <p>
+      The zero sequence belongs to <m>V</m>, and <m>V</m> is closed under addition.
+      However, if <m>\mathbf{x}\in V</m> and <m>\mathbf{x}\neq\mathbf{0}</m>,
+      then <m>-\mathbf{x}</m> has negative entries and does not belong to <m>V</m>.
+    </p>
+    <p>
+      Thus additive inverses do not exist for all vectors,
+      so axiom (A4) fails and <m>V</m> is not a vector space.
+    </p>
+  </solution>
+</exercise> 
+
+<exercise>
+  <statement>
+    <p> Let <m>V=\mathbb{R}^2</m>.
+    Define addition as usual, but define scalar multiplication by
+    <me>c \odot (x,y) = (cx, |c|y).</me>
+
+    Determine whether <m>(V,+,\odot)</m> is a vector space.
+    </p>
+  </statement>
+
+  <hint>
+    <p> Check whether <m>(-1)\odot(( -1)\odot\mathbf{v})</m> behaves as expected. </p>
+  </hint>
+
+  <answer>
+    <p> <m>V</m> is not a vector space. </p>
+  </answer>
+
+  <solution>
+    <p>
+      Let <m>\mathbf{v}=(0,1)</m>.
+      Then
+      <m>(-1)\odot\mathbf{v}=(0,1)</m>,
+      since <m>|-1|=1</m>.
+    </p>
+    <p>
+      But
+      <m>(-1)(-1)\odot\mathbf{v} = 1\odot\mathbf{v}=(0,1)</m>,
+      while associativity of scalar multiplication requires
+      <m>(-1)((-1)\odot\mathbf{v}) = (1)\odot\mathbf{v}</m>
+      to equal <m>(-1\cdot-1)\odot\mathbf{v}</m> for all vectors.
+    </p>
+    <p>
+      The scalar multiplication axiom (SM3) fails,
+      so <m>V</m> is not a vector space.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p> Let <m>V</m> be the set of all real polynomials.
+    Define addition as usual, but define scalar multiplication by
+    <me>c \odot p(x) = cp(x) + (1-c).</me>
+
+    Determine whether <m>(V,+,\odot)</m> is a vector space.
+    </p>
+  </statement>
+
+  <hint>
+    <p> Identify the additive identity and test scalar distributivity. </p>
+  </hint>
+
+  <answer>
+    <p> <m>V</m> is not a vector space. </p>
+  </answer>
+
+  <solution>
+    <p>
+      The additive identity with respect to usual addition is the zero polynomial,
+      but
+      <m>c\odot 0 = 1-c</m>,
+      which is not the zero polynomial unless <m>c=1</m>.
+    </p>
+    <p>
+      Thus scalar multiplication does not preserve the additive identity,
+      violating axiom (SM4).
+      Therefore <m>V</m> is not a vector space.
+    </p>
+  </solution>
+</exercise>
+
+   <exercise>
+  <statement>
     <p> Let <m>\mathbb{P}_2</m> be the vector space of all real polynomials of degree at most <m>2</m>.
     Let <m>W</m> be the subset of <m>\mathbb{P}_2</m> consisting of those polynomials <m>p</m>
     that satisfy the condition
@@ -191,6 +296,494 @@ https://drbuske.github.io/linearalgebra/sec-basis-dimension.html" visual="Basis 
   </solution>
 </exercise>
 
+<exercise>
+  <statement>
+    <p> Let <m>V = M_{2,2}(\mathbb{R})</m> and define operations
+    <m>\oplus</m> and <m>\odot</m> on <m>V</m> by
+    <md>
+      <mrow> A \oplus B \amp = A + B - I, </mrow>
+      
+      <mrow> c \odot A \amp = cA + (1-c)I.</mrow>
+    </md>
+
+    Show that <m>(V,\oplus,\odot)</m> is a vector space over <m>\mathbb{R}</m>.
+    Your justification should address the vector space axioms.
+  </p>
+  </statement>
+
+  <hint>
+    <p> First identify the additive identity with respect to <m>\oplus</m>.
+    Then determine the additive inverse of a general matrix <m>A</m>.
+    Finally, check carefully how scalar multiplication interacts with addition.
+    </p>
+  </hint>
+
+  <answer>
+    <p> Yes, <m>(V,\oplus,\odot)</m> is a vector space.
+    The additive identity is <m>I</m>, the additive inverse of <m>A</m> is <m>2I-A</m>,
+    and all vector space axioms are satisfied.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We verify the vector space axioms.
+      Since <m>M_{2,2}(\mathbb{R})</m> is closed under ordinary matrix addition and scalar
+      multiplication, and since <m>I \in V</m>, the set <m>V</m> is closed under
+      <m>\oplus</m> and <m>\odot</m>.
+    </p>
+
+    <p>
+      To find the additive identity, suppose <m>Z \in V</m> satisfies
+      <m>A \oplus Z = A</m> for all <m>A \in V</m>.
+      Then
+      <me>A + Z - I = A,</me>
+      which implies <m>Z = I</m>.
+      Thus the additive identity with respect to <m>\oplus</m> is <m>I</m>.
+    </p>
+
+    <p>
+      Let <m>A \in V</m>.
+      To find the additive inverse of <m>A</m>, we seek <m>B \in V</m> such that
+      <m>A \oplus B = I</m>.
+      This gives
+      <me>A + B - I = I,</me>
+      so <me>B = 2I - A.</me>
+      Hence every element of <m>V</m> has an additive inverse.
+    </p>
+
+    <p>
+      The operation <m>\oplus</m> is commutative and associative because ordinary matrix
+      addition is commutative and associative, and the same matrix <m>I</m> is subtracted
+      in every sum.
+    </p>
+
+    <p>
+      We now verify compatibility of scalar multiplication.
+      Let <m>c,d \in \mathbb{R}</m> and <m>A \in V</m>.
+      Then
+      <md>
+        <mrow> c \odot (d \odot A)
+        \amp = c \odot (dA + (1-d)I) </mrow>
+        <mrow> \amp = cdA + c(1-d)I + (1-c)I </mrow>
+        <mrow> \amp = (cd)A + (1-cd)I </mrow>
+        <mrow> \amp = (cd) \odot A. </mrow>
+      </md>
+    </p>
+
+    <p>
+      We also check distributivity over addition.
+      For <m>A,B \in V</m>,
+      <md>
+        <mrow> c \odot (A \oplus B)
+        \amp = c \odot (A + B - I) </mrow>
+        <mrow> \amp = cA + cB - cI + (1-c)I </mrow>
+        <mrow> \amp = cA + cB +I - 2cI, </mrow>
+      </md>
+      while
+      <md>
+        <mrow> (c \odot A) \oplus (c \odot B)
+        \amp = (cA + (1-c)I) + (cB + (1-c)I) - I </mrow>
+        <mrow> \amp = cA + cB +I - 2cI. </mrow>
+      </md>
+      Thus scalar multiplication distributes over addition.
+    </p>
+
+    <p>
+      Finally,
+      <me>1 \odot A = 1A + (1-1)I = A,</me>
+      so the scalar identity axiom holds.
+      Therefore all vector space axioms are satisfied, and
+      <m>(V,\oplus,\odot)</m> is a vector space.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p> Let <m>V</m> be a vector space and let
+    <m>S=\{\mathbf{v}_1,\mathbf{v}_2,\mathbf{v}_3,\mathbf{v}_4\}\subseteq V</m>.
+    Suppose that
+    <me>\mathbf{v}_4=\mathbf{v}_1+\mathbf{v}_2</me>
+    and that the set <m>\{\mathbf{v}_1,\mathbf{v}_2,\mathbf{v}_3\}</m>
+    is linearly independent.
+
+    Find a basis for <m>\operatorname{span}(S)</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p> Decide whether <m>\mathbf{v}_4</m> adds anything new to the span. </p>
+  </hint>
+
+  <answer>
+    <p> A basis for <m>\operatorname{span}(S)</m> is
+    <m>\{\mathbf{v}_1,\mathbf{v}_2,\mathbf{v}_3\}</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Since <m>\mathbf{v}_4</m> is a linear combination of
+      <m>\mathbf{v}_1</m> and <m>\mathbf{v}_2</m>,
+      it does not add anything new to the span.
+    </p>
+    <p>
+      Because <m>\{\mathbf{v}_1,\mathbf{v}_2,\mathbf{v}_3\}</m>
+      is already linearly independent and spans the same space,
+      it is a basis for <m>\operatorname{span}(S)</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p> Let <m>V=\mathbb{R}^n</m>, and let <m>A</m> be a fixed <m>n\times n</m> real matrix.
+    Define
+    <me>
+      S = \{\mathbf{x}\in\mathbb{R}^n : A\mathbf{x} = 2\mathbf{x}\}.
+    </me>
+
+    Determine whether <m>S</m> is a subspace of <m>\mathbb{R}^n</m>.
+    Justify your answer.
+  </p>
+  </statement>
+
+  <hint>
+    <p> Suppose <m>\mathbf{x}_1</m> and <m>\mathbf{x}_2</m> satisfy
+    <m>A\mathbf{x}=2\mathbf{x}</m>.
+    Check whether their sum and scalar multiples also satisfy this condition.
+    </p>
+  </hint>
+
+  <answer>
+    <p> Yes, <m>S</m> is a subspace of <m>\mathbb{R}^n</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Let <m>\mathbf{x}_1,\mathbf{x}_2\in S</m>.
+      Then
+      <m>A\mathbf{x}_1=2\mathbf{x}_1</m>
+      and
+      <m>A\mathbf{x}_2=2\mathbf{x}_2</m>.
+      Using linearity of matrix multiplication,
+      <me>
+        A(\mathbf{x}_1+\mathbf{x}_2)
+        = A\mathbf{x}_1 + A\mathbf{x}_2
+        = 2\mathbf{x}_1 + 2\mathbf{x}_2
+        = 2(\mathbf{x}_1+\mathbf{x}_2).
+      </me>
+      Thus <m>\mathbf{x}_1+\mathbf{x}_2\in S</m>, so <m>S</m> is closed under addition.
+    </p>
+
+    <p>
+      Let <m>c\in\mathbb{R}</m> and let <m>\mathbf{x}_1\in S</m>.
+      Then
+      <me>
+        A(c\mathbf{x}_1)
+        = cA\mathbf{x}_1
+        = c(2\mathbf{x}_1)
+        = 2(c\mathbf{x}_1),
+      </me>
+      so <m>c\mathbf{x}_1\in S</m>.
+      Thus <m>S</m> is closed under scalar multiplication.
+    </p>
+
+    <p>
+      Since <m>A\mathbf{0}=2\mathbf{0}</m>, the zero vector belongs to <m>S</m>.
+      Therefore <m>S</m> is a subspace of <m>\mathbb{R}^n</m>.
+    </p>
+
+    <p>
+      Note that the vectors in <m>S</m> are eigenvectors of <m>A</m> with eigenvalue <m>2</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p> Let <m>V = F(-\infty,\infty)</m> be the vector space of all real‑valued functions
+    defined on <m>(-\infty,\infty)</m>.
+    Define
+    <me>
+      S = \{ f \in V : f(x) = a\cos x + b\sin x + c
+      \text{ for some } a,b,c \in \mathbb{R} \}.
+    </me>
+
+    Determine whether <m>S</m> is a subspace of <m>V</m>.
+    Justify your answer.
+  </p>
+  </statement>
+
+  <hint>
+    <p> Write two generic functions in <m>S</m> and compute their sum.
+    Then check what happens when you multiply such a function by a scalar.
+    </p>
+  </hint>
+
+  <answer>
+    <p> Yes, <m>S</m> is a subspace of <m>V</m>. </p>
+  </answer>
+
+  <solution>
+    <p>
+      Let <m>f</m> and <m>g</m> be functions in <m>S</m>.
+      Then there exist real numbers <m>a_1,b_1,c_1</m> and <m>a_2,b_2,c_2</m> such that
+      <me>
+        f(x)=a_1\cos x + b_1\sin x + c_1
+        \quad \text{and} \quad
+        g(x)=a_2\cos x + b_2\sin x + c_2.
+      </me>
+    </p>
+
+    <p>
+      Their sum is
+      <me>
+        f(x)+g(x)
+        = (a_1+a_2)\cos x + (b_1+b_2)\sin x + (c_1+c_2),
+      </me>
+      which is again of the same form.
+      Thus <m>S</m> is closed under addition.
+    </p>
+
+    <p>
+      Let <m>r \in \mathbb{R}</m>.
+      Then
+      <me>
+        r f(x)
+        = (r a_1)\cos x + (r b_1)\sin x + (r c_1),
+      </me>
+      which is also of the required form.
+      Hence <m>S</m> is closed under scalar multiplication.
+    </p>
+
+    <p>
+      The zero function belongs to <m>S</m> by taking
+      <m>a=b=c=0</m>.
+      Therefore <m>S</m> contains the zero vector.
+    </p>
+
+    <p>
+      Since <m>S</m> contains the zero function and is closed under addition
+      and scalar multiplication, it is a subspace of <m>V</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Find the dimension of <m>\mathcal{Z}_2</m>, the vector space of all
+      <m>2\times 2</m> real matrices with zero trace.  Note: The trace is defined as the sum of the diagonal elements of a matrix.  
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Write a general <m>2\times 2</m> matrix, impose the zero‑trace condition,
+      and count how many free parameters remain.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The dimension is <m>3</m>.
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      A general <m>2\times 2</m> real matrix has the form
+      <m>\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m>.
+      The trace is <m>a+d</m>.
+    </p>
+
+    <p>
+      The condition that the trace is zero gives
+      <m>a+d=0</m>, or <m>d=-a</m>.
+      Thus every matrix in <m>\mathcal{Z}_2</m> can be written as
+      <m>\begin{bmatrix} a \amp b \\ c \amp -a \end{bmatrix}</m>.
+    </p>
+
+    <p>
+      The entries <m>a</m>, <m>b</m>, and <m>c</m> are free,
+      so the space depends on three independent real parameters.
+      Therefore
+      <m>\dim(\mathcal{Z}_2)=3</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let <m>\mathcal{U}</m> be the set of all <m>2\times2</m> real matrices of the form
+      <me>
+        \begin{bmatrix}
+          u \amp -u-x \\
+          0 \amp x
+        \end{bmatrix},
+      </me>
+      where <m>u,x \in \mathbb{R}</m>, and let <m>\mathcal{V}</m> be the set of all
+      <m>2\times2</m> real matrices of the form
+      <me>
+        \begin{bmatrix}
+          v \amp 0 \\
+          w \amp -v
+        \end{bmatrix},
+      </me>
+      where <m>v,w \in \mathbb{R}</m>.
+    </p>
+
+    <p>
+      Find a basis for <m>\mathcal{U}</m> and <m>\mathcal{V}</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Write a general element of each set as a linear combination of matrices
+      involving one parameter at a time.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      A basis for <m>\mathcal{U}</m> is
+      <me>\left\{
+      \begin{bmatrix}1\amp -1\\0\amp 0\end{bmatrix},
+      \begin{bmatrix}0\amp -1\\0\amp 1\end{bmatrix}
+      \right\}.</me>
+      A basis for <m>\mathcal{V}</m> is
+      <me>\left\{
+      \begin{bmatrix}1\amp 0\\0\amp -1\end{bmatrix},
+      \begin{bmatrix}0\amp 0\\1\amp 0\end{bmatrix}
+      \right\}.</me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Any matrix in <m>\mathcal{U}</m> can be written as
+      <me>
+        u\begin{bmatrix}1\amp -1\\0\amp 0\end{bmatrix}
+        + x\begin{bmatrix}0\amp -1\\0\amp 1\end{bmatrix}.
+      </me>
+      These two matrices are linearly independent, so they form a basis for
+      <m>\mathcal{U}</m>.
+    </p>
+
+    <p>
+      Any matrix in <m>\mathcal{V}</m> can be written as
+      <me>
+        v\begin{bmatrix}1\amp 0\\0\amp -1\end{bmatrix}
+        + w\begin{bmatrix}0\amp 0\\1\amp 0\end{bmatrix}.
+      </me>
+      These matrices are linearly independent, so they form a basis for
+      <m>\mathcal{V}</m>.
+    </p>
+  </solution>
+</exercise>
+
+
+<exercise label="choices-linind-dim">
+  <title>Linear Independence and Dimension</title>
+
+  <statement>
+    <p>
+      Let <m>V</m> be a vector space with <m>\dim V = 12</m>.
+      Let <m>S</m> be a subset of <m>V</m> that is linearly independent and has
+      <m>11</m> vectors.
+      Which of the following statements is <em>false</em>?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice correct="yes">
+      <statement>
+        There must exist a linearly independent subset <m>S_1</m> of <m>V</m>
+        such that <m>S \subseteq S_1</m> and <m>S_1</m> is not a basis for <m>V</m>.
+      </statement>
+    </choice>
+
+    <choice>
+      <statement>
+        Every nonempty subset <m>S_1</m> of <m>S</m> is linearly independent.
+      </statement>
+    </choice>
+
+    <choice>
+      <statement>
+        There must exist a linearly dependent subset <m>S_1</m> of <m>V</m>
+        such that <m>S \subseteq S_1</m>.
+      </statement>
+    </choice>
+
+    <choice>
+      <statement>
+        <m>\dim(\operatorname{span}(S)) &lt; \dim V</m>.
+      </statement>
+    </choice>
+  </choices>
+</exercise>
+
+<exercise label="choices-cayley-hamilton">
+  <title>Linear Dependence of Matrix Powers</title> 
+
+  <statement>
+    <p>
+      Let <m>A</m> be a <m>5\times5</m> matrix with real entries and let
+      <m>\mathbf{x}\neq\mathbf{0}</m>.
+      Consider the vectors
+      <me>\mathbf{x},\; A\mathbf{x},\; A^2\mathbf{x},\; A^3\mathbf{x},\; A^4\mathbf{x},\; A^5\mathbf{x}.</me>
+      Which of the following statements is correct?
+    </p>
+  </statement>
+
+  <choices randomize="yes">
+    <choice>
+      <statement>
+        The vectors are linearly independent.
+      </statement>
+      <feedback>
+        <p> A vector space of dimension <m>5</m> cannot contain six linearly independent
+        vectors. </p>
+      </feedback>
+    </choice>
+
+    <choice correct="yes">
+      <statement>
+        The vectors are linearly dependent.
+      </statement>
+      <feedback>
+        <p> A nontrivial linear combination of
+        <m>\mathbf{x},A\mathbf{x},\dots,A^5\mathbf{x}</m> equal to <m>\mathbf{0}</m>. </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        The vectors are linearly independent if and only if <m>A</m> is symmetric.
+      </statement>
+      <feedback>
+        <p> Symmetry of <m>A</m> has no bearing on linear dependence of these vectors. </p>
+      </feedback>
+    </choice>
+
+    <choice>
+      <statement>
+        Linear dependence or independence cannot be determined from the given data.
+      </statement>
+      <feedback>
+        <p> Linear dependence occurs regardless of the choice of
+        <m>A</m> and <m>\mathbf{x}</m>. </p>
+        </feedback>
+    </choice>
+  </choices>
+</exercise>
+``
 
 </exercises>
 
