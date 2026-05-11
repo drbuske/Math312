@@ -2519,6 +2519,33 @@ var ptx_lunr_docs = [
   "number": "11",
   "title": "",
   "body": "  Let This matrix has complex eigenvalues. In this exercise, we show how to construct a real matrix such that is similar over the reals to a matrix of the form    Show that the eigenvalues of are complex.  Choose one eigenvalue and write down the corresponding matrix .  Using the same eigenvalue, find a complex eigenvector by solving .  Write , where and have real entries.  Let . Verify directly that and , and conclude that .     For part (a), compute . For the final part, do not compute directly; instead, use how acts on and .    The eigenvalues are . One valid choice of satisfies with       We compute Setting this equal to zero gives , so the eigenvalues are complex.    Choosing , we have and , and therefore     Solving with yields the eigenvector     Writing , we obtain     Let We compute and These identities show that , and since is invertible, we conclude that .     "
+},
+{
+  "id": "ch-practice-exams-6",
+  "level": "1",
+  "url": "ch-practice-exams-6.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Chapter 5 Practice Exam",
+  "body": " Chapter 5 Practice Exam   Topics                     Be sure to try each question before looking at the solutions.   Questions    Let be the vector space of all real polynomials of degree at most . Let be the subset of consisting of those polynomials that satisfy the condition   What is the dimension of ?  Find a basis for .      Write a general polynomial . Compute , then evaluate and . The given condition gives a linear equation relating , , and .    The dimension of is . One possible basis for is     Let be an arbitrary element of . Then , so Also, The condition gives which simplifies to   Solving for , we obtain Therefore every polynomial in has the form   This shows that is spanned by the polynomials and . Since these polynomials are linearly independent, they form a basis for . Hence       Let be the vector space of all real sequences with addition and scalar multiplication defined componentwise.  Define   Show that is a subspace of .  Describe all sequences in explicitly.  Find a spanning set for and determine the dimension of .      If the difference is constant, try rewriting in terms of . Think about how many initial values determine an entire sequence in .    The set is a subspace of . Every sequence in has the form for real numbers and . A spanning set for is and .    The zero sequence satisfies for all , so .  Let . Then there exist constants and such that and for all . Then which is constant. Hence .  For any scalar , which is constant. Thus . Therefore, is a subspace of .  If , then there exists a constant such that for all . Since we also have , we also know that Likewise, we have that and we conclude the pattern with Hence every sequence in is an arithmetic sequence.  Any can be written as Therefore, These two sequences are linearly independent, so .      "
+},
+{
+  "id": "exercises-practiceexam5-2",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-2",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Let be the vector space of all real polynomials of degree at most . Let be the subset of consisting of those polynomials that satisfy the condition   What is the dimension of ?  Find a basis for .      Write a general polynomial . Compute , then evaluate and . The given condition gives a linear equation relating , , and .    The dimension of is . One possible basis for is     Let be an arbitrary element of . Then , so Also, The condition gives which simplifies to   Solving for , we obtain Therefore every polynomial in has the form   This shows that is spanned by the polynomials and . Since these polynomials are linearly independent, they form a basis for . Hence    "
+},
+{
+  "id": "exercises-practiceexam5-3",
+  "level": "2",
+  "url": "ch-practice-exams-6.html#exercises-practiceexam5-3",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Let be the vector space of all real sequences with addition and scalar multiplication defined componentwise.  Define   Show that is a subspace of .  Describe all sequences in explicitly.  Find a spanning set for and determine the dimension of .      If the difference is constant, try rewriting in terms of . Think about how many initial values determine an entire sequence in .    The set is a subspace of . Every sequence in has the form for real numbers and . A spanning set for is and .    The zero sequence satisfies for all , so .  Let . Then there exist constants and such that and for all . Then which is constant. Hence .  For any scalar , which is constant. Thus . Therefore, is a subspace of .  If , then there exists a constant such that for all . Since we also have , we also know that Likewise, we have that and we conclude the pattern with Hence every sequence in is an arithmetic sequence.  Any can be written as Therefore, These two sequences are linearly independent, so .   "
 }
 ]
 
