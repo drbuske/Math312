@@ -2636,6 +2636,69 @@ var ptx_lunr_docs = [
   "number": "13",
   "title": "Linear Dependence of Matrix Powers.",
   "body": " Linear Dependence of Matrix Powers   Let be a matrix with real entries and let . Consider the vectors Which of the following statements is correct?     The vectors are linearly independent.   A vector space of dimension cannot contain six linearly independent vectors.     The vectors are linearly dependent.   A nontrivial linear combination of equal to .     The vectors are linearly independent if and only if is symmetric.   Symmetry of has no bearing on linear dependence of these vectors.     Linear dependence or independence cannot be determined from the given data.   Linear dependence occurs regardless of the choice of and .     "
+},
+{
+  "id": "ch-practice-exams-7",
+  "level": "1",
+  "url": "ch-practice-exams-7.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Chapter 6 Practice Exam",
+  "body": " Chapter 6 Practice Exam   Topics                          Be sure to try each question before looking at the solutions.   Questions    Let and . Compute and determine the angle between the vectors.    Compute the dot product first. Then use .    , and .    Compute the dot product: .  Compute magnitudes: , .  Then , so .      Find a unit vector in the direction of , and verify that its dot product with itself is 1.    Divide the vector by its magnitude.    The unit vector is , and its dot product with itself is 1.     .  The unit vector is .  Check: .      Determine whether and are orthogonal. If they are not, find the projection of onto .    Compute . If it is zero, the vectors are orthogonal. Otherwise use the projection formula.    The vectors are orthogonal, so the projection is .    Compute the dot product: .  Since the dot product is zero, the vectors are orthogonal.  Therefore, the projection is .      Let . Find a vector in the orthogonal complement of the row space of .    A vector in the orthogonal complement must be orthogonal to each row of . Use dot products to form a system of equations.    One such vector is .    Let . Being orthogonal to the rows gives   .  From the second equation, . Substituting, , so .  Thus , so choosing gives the result.      Let . Compute and verify that for and .    Compute both sides separately: find and dot with , then compute and dot with .     , and both sides evaluate to .    First compute the transpose: .  Compute .  Then .  Now compute .  Then .  Both sides agree, verifying the identity.      Let   (a) Find a basis for the column space of .  (b) What is the rank of ?  (c) Find a basis for the orthogonal complement of the column space of .    Row reduce to identify pivot columns for the column space. The orthogonal complement of the column space consists of all vectors satisfying .    A basis for the column space is   The rank of is 2.  A basis for the orthogonal complement is     The columns of are   Observe that and . Therefore, the column space is spanned by and .  Hence a basis for the column space is   Since there are two pivot columns, the rank of is 2.  To find the orthogonal complement, we solve . This is equivalent to requiring to be orthogonal to and .  Let . Then   .  From the first equation, . Substituting into the second, , so .  Therefore,   A basis for the orthogonal complement is .      "
+},
+{
+  "id": "exercises-practiceexam6-2",
+  "level": "2",
+  "url": "ch-practice-exams-7.html#exercises-practiceexam6-2",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Let and . Compute and determine the angle between the vectors.    Compute the dot product first. Then use .    , and .    Compute the dot product: .  Compute magnitudes: , .  Then , so .   "
+},
+{
+  "id": "exercises-practiceexam6-3",
+  "level": "2",
+  "url": "ch-practice-exams-7.html#exercises-practiceexam6-3",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Find a unit vector in the direction of , and verify that its dot product with itself is 1.    Divide the vector by its magnitude.    The unit vector is , and its dot product with itself is 1.     .  The unit vector is .  Check: .   "
+},
+{
+  "id": "exercises-practiceexam6-4",
+  "level": "2",
+  "url": "ch-practice-exams-7.html#exercises-practiceexam6-4",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Determine whether and are orthogonal. If they are not, find the projection of onto .    Compute . If it is zero, the vectors are orthogonal. Otherwise use the projection formula.    The vectors are orthogonal, so the projection is .    Compute the dot product: .  Since the dot product is zero, the vectors are orthogonal.  Therefore, the projection is .   "
+},
+{
+  "id": "exercises-practiceexam6-5",
+  "level": "2",
+  "url": "ch-practice-exams-7.html#exercises-practiceexam6-5",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Let . Find a vector in the orthogonal complement of the row space of .    A vector in the orthogonal complement must be orthogonal to each row of . Use dot products to form a system of equations.    One such vector is .    Let . Being orthogonal to the rows gives   .  From the second equation, . Substituting, , so .  Thus , so choosing gives the result.   "
+},
+{
+  "id": "exercises-practiceexam6-6",
+  "level": "2",
+  "url": "ch-practice-exams-7.html#exercises-practiceexam6-6",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Let . Compute and verify that for and .    Compute both sides separately: find and dot with , then compute and dot with .     , and both sides evaluate to .    First compute the transpose: .  Compute .  Then .  Now compute .  Then .  Both sides agree, verifying the identity.   "
+},
+{
+  "id": "exercises-practiceexam6-7",
+  "level": "2",
+  "url": "ch-practice-exams-7.html#exercises-practiceexam6-7",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Let   (a) Find a basis for the column space of .  (b) What is the rank of ?  (c) Find a basis for the orthogonal complement of the column space of .    Row reduce to identify pivot columns for the column space. The orthogonal complement of the column space consists of all vectors satisfying .    A basis for the column space is   The rank of is 2.  A basis for the orthogonal complement is     The columns of are   Observe that and . Therefore, the column space is spanned by and .  Hence a basis for the column space is   Since there are two pivot columns, the rank of is 2.  To find the orthogonal complement, we solve . This is equivalent to requiring to be orthogonal to and .  Let . Then   .  From the first equation, . Substituting into the second, , so .  Therefore,   A basis for the orthogonal complement is .   "
 }
 ]
 
