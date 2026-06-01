@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Chapter 6 Practice Exam</title>
+
+<section>
+<title>Topics</title>
+
+    <ul>
+      <li><url href="
+https://drbuske.github.io/linearalgebra/sec-dot-product.html" visual="The dot product"/>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-transpose.html" visual="Orthogonal complements and the matrix transpose"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-orthogonal-bases.html" visual="Orthogonal bases and projections"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-gram-schmidt.html" visual="Finding orthogonal bases"/>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="
+https://drbuske.github.io/linearalgebra/sec-least-squares.html" visual="Orthogonal least squares"/>
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practiceexam6">
+    <title>Questions</title> 
+
+<exercise>
+  <statement>
+    <p>Let <m>\mathbf{u} = \begin{bmatrix} 2 \\ -1 \\ 3 \end{bmatrix}</m> and <m>\mathbf{v} = \begin{bmatrix} 1 \\ 4 \\ -2 \end{bmatrix}</m>. Compute <m>\mathbf{u}\cdot\mathbf{v}</m> and determine the angle between the vectors.</p>
+  </statement>
+  <hint>
+    <p>Compute the dot product first. Then use <m>\cos\theta = \frac{\mathbf{u}\cdot\mathbf{v}}{\|\mathbf{u}\|\|\mathbf{v}\|}</m>.</p>
+  </hint>
+  <answer>
+    <p><m>\mathbf{u}\cdot\mathbf{v} = -8</m>, and <m>\theta \approx 111.3^\circ</m>.</p>
+  </answer>
+  <solution>
+    <p>
+      Compute the dot product:
+      <m>(2)(1) + (-1)(4) + (3)(-2) = 2 - 4 - 6 = -8</m>.
+    </p>
+    <p>
+      Compute magnitudes:
+      <m>\|\mathbf{u}\| = \sqrt{14}</m>, <m>\|\mathbf{v}\| = \sqrt{21}</m>.
+    </p>
+    <p>
+      Then <m>\cos\theta = \frac{-8}{\sqrt{14}\sqrt{21}}</m>, so
+      <m>\theta = \cos^{-1}\left(\frac{-8}{\sqrt{294}}\right) \approx 111.3^\circ</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>Find a unit vector in the direction of <m>\mathbf{u} = \begin{bmatrix} -3 \\ 4 \end{bmatrix}</m>, and verify that its dot product with itself is 1.</p>
+  </statement>
+  <hint>
+    <p>Divide the vector by its magnitude.</p>
+  </hint>
+  <answer>
+    <p>
+      The unit vector is
+      <m>\begin{bmatrix} -\frac{3}{5} \\ \frac{4}{5} \end{bmatrix}</m>,
+      and its dot product with itself is 1.
+    </p>
+  </answer>
+  <solution>
+    <p>
+      <m>\|\mathbf{u}\| = \sqrt{(-3)^2 + 4^2} = 5</m>.
+    </p>
+    <p>
+      The unit vector is
+      <m>\frac{1}{5}\begin{bmatrix} -3 \\ 4 \end{bmatrix}
+      =
+      \begin{bmatrix} -\frac{3}{5} \\ \frac{4}{5} \end{bmatrix}</m>.
+    </p>
+    <p>
+      Check:
+      <m>\left(-\frac{3}{5}\right)^2 + \left(\frac{4}{5}\right)^2 = \frac{9}{25} + \frac{16}{25} = 1</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>Determine whether <m>\mathbf{u} = \begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}</m> and <m>\mathbf{v} = \begin{bmatrix} 2 \\ -1 \\ 0 \end{bmatrix}</m> are orthogonal. If they are not, find the projection of <m>\mathbf{u}</m> onto <m>\mathbf{v}</m>.</p>
+  </statement>
+  <hint>
+    <p>Compute <m>\mathbf{u}\cdot\mathbf{v}</m>. If it is zero, the vectors are orthogonal. Otherwise use the projection formula.</p>
+  </hint>
+  <answer>
+    <p>The vectors are orthogonal, so the projection is <m>\begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}</m>.</p>
+  </answer>
+  <solution>
+    <p>
+      Compute the dot product:
+      <m>(1)(2) + (2)(-1) + (1)(0) = 2 - 2 + 0 = 0</m>.
+    </p>
+    <p>
+      Since the dot product is zero, the vectors are orthogonal.
+    </p>
+    <p>
+      Therefore, the projection is
+      <m>\begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let <m>A = \begin{bmatrix} 1 \amp 2 \amp -1 \\ 0 \amp 1 \amp 3 \end{bmatrix}</m>.
+      Find a vector in the orthogonal complement of the row space of <m>A</m>.
+    </p>
+  </statement>
+  <hint>
+    <p>
+      A vector in the orthogonal complement must be orthogonal to each row of <m>A</m>. Use dot products to form a system of equations.
+    </p>
+  </hint>
+  <answer>
+    <p>
+      One such vector is <m>\begin{bmatrix} 7 \\ -3 \\ 1 \end{bmatrix}</m>.
+    </p>
+  </answer>
+  <solution>
+    <p>
+      Let <m>\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}</m>.
+      Being orthogonal to the rows gives
+    </p>
+    <p>
+      <m>
+      \begin{aligned}
+      x_1 + 2x_2 - x_3 = 0 \\
+      x_2 + 3x_3 = 0
+      \end{aligned}
+      </m>.
+    </p>
+    <p>
+      From the second equation, <m>x_2 = -3x_3</m>. Substituting,
+      <m>x_1 - 7x_3 = 0</m>, so <m>x_1 = 7x_3</m>.
+    </p>
+    <p>
+      Thus
+      <m>\mathbf{x} = x_3 \begin{bmatrix} 7 \\ -3 \\ 1 \end{bmatrix}</m>,
+      so choosing <m>x_3 = 1</m> gives the result.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let <m>A = \begin{bmatrix} 1 \amp 0 \\ 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}</m>.
+      Compute <m>A^T</m> and verify that
+      <m>(A\mathbf{x}) \cdot \mathbf{y} = \mathbf{x} \cdot (A^T\mathbf{y})</m>
+      for
+      <m>\mathbf{x} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}</m>
+      and
+      <m>\mathbf{y} = \begin{bmatrix} 2 \\ 0 \\ 1 \end{bmatrix}</m>.
+    </p>
+  </statement>
+  <hint>
+    <p>
+      Compute both sides separately: find <m>A\mathbf{x}</m> and dot with <m>\mathbf{y}</m>, then compute <m>A^T\mathbf{y}</m> and dot with <m>\mathbf{x}</m>.
+    </p>
+  </hint>
+  <answer>
+    <p>
+      <m>A^T = \begin{bmatrix} 1 \amp 2 \amp -1 \\ 0 \amp 1 \amp 3 \end{bmatrix}</m>,
+      and both sides evaluate to <m>-2</m>.
+    </p>
+  </answer>
+  <solution>
+    <p>
+      First compute the transpose:
+      <m>A^T = \begin{bmatrix} 1 \amp 2 \amp -1 \\ 0 \amp 1 \amp 3 \end{bmatrix}</m>.
+    </p>
+    <p>
+      Compute
+      <m>
+      A\mathbf{x} =
+      \begin{bmatrix}
+      1 \amp 0 \\
+      2 \amp 1 \\
+      -1 \amp 3
+      \end{bmatrix}
+      \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+      =
+      \begin{bmatrix} 1 \\ 1 \\ -4 \end{bmatrix}
+      </m>.
+    </p>
+    <p>
+      Then
+      <m>(A\mathbf{x}) \cdot \mathbf{y} = (1)(2) + (1)(0) + (-4)(1) = -2</m>.
+    </p>
+    <p>
+      Now compute
+      <m>
+      A^T \mathbf{y} =
+      \begin{bmatrix}
+      1 \amp 2 \amp -1 \\
+      0 \amp 1 \amp 3
+      \end{bmatrix}
+      \begin{bmatrix} 2 \\ 0 \\ 1 \end{bmatrix}
+      =
+      \begin{bmatrix} 1 \\ 3 \end{bmatrix}
+      </m>.
+    </p>
+    <p>
+      Then
+      <m>\mathbf{x} \cdot (A^T \mathbf{y}) = (1)(1) + (-1)(3) = -2</m>.
+    </p>
+    <p>
+      Both sides agree, verifying the identity.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let 
+      <m>
+      A =
+      \begin{bmatrix}
+      1 \amp 2 \amp 3 \amp 0 \\
+      0 \amp 1 \amp 1 \amp -1 \\
+      1 \amp 3 \amp 4 \amp -1
+      \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      (a) Find a basis for the column space of <m>A</m>.
+    </p>
+    <p>
+      (b) What is the rank of <m>A</m>?
+    </p>
+    <p>
+      (c) Find a basis for the orthogonal complement of the column space of <m>A</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Row reduce <m>A</m> to identify pivot columns for the column space.
+      The orthogonal complement of the column space consists of all vectors
+      <m>\mathbf{x}</m> satisfying <m>A^T \mathbf{x} = \mathbf{0}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      A basis for the column space is 
+      <m>
+      \left\{
+      \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix},
+      \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}
+      \right\}.
+      </m>
+    </p>
+    <p>
+      The rank of <m>A</m> is 2.
+    </p>
+    <p>
+      A basis for the orthogonal complement is 
+      <m>
+      \left\{
+      \begin{bmatrix} -1 \\ -1 \\ 1 \end{bmatrix}
+      \right\}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      The columns of <m>A</m> are
+      <m>
+      \mathbf{c}_1 = \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}, \quad
+      \mathbf{c}_2 = \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}, \quad
+      \mathbf{c}_3 = \begin{bmatrix} 3 \\ 1 \\ 4 \end{bmatrix}, \quad
+      \mathbf{c}_4 = \begin{bmatrix} 0 \\ -1 \\ -1 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Observe that
+      <m>\mathbf{c}_3 = \mathbf{c}_1 + \mathbf{c}_2</m> and
+      <m>\mathbf{c}_4 = 2\mathbf{c}_1 - \mathbf{c}_2</m>.
+      Therefore, the column space is spanned by
+      <m>\mathbf{c}_1</m> and <m>\mathbf{c}_2</m>.
+    </p>
+
+    <p>
+      Hence a basis for the column space is
+      <m>
+      \left\{
+      \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix},
+      \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}
+      \right\}.
+      </m>
+    </p>
+
+    <p>
+      Since there are two pivot columns, the rank of <m>A</m> is 2.
+    </p>
+
+    <p>
+      To find the orthogonal complement, we solve
+      <m>A^T \mathbf{x} = \mathbf{0}</m>.
+      This is equivalent to requiring <m>\mathbf{x}</m> to be orthogonal to
+      <m>\mathbf{c}_1</m> and <m>\mathbf{c}_2</m>.
+    </p>
+
+    <p>
+      Let
+      <m>\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}</m>.
+      Then
+    </p>
+
+    <p>
+      <m>
+      \begin{aligned}
+      x_1 + x_3 = 0 \\
+      2x_1 + x_2 + 3x_3 = 0
+      \end{aligned}
+      </m>.
+    </p>
+
+    <p>
+      From the first equation, <m>x_1 = -x_3</m>. Substituting into the second,
+      <m>-2x_3 + x_2 + 3x_3 = x_2 + x_3 = 0</m>, so <m>x_2 = -x_3</m>.
+    </p>
+
+    <p>
+      Therefore,
+      <m>
+      \mathbf{x} =
+      x_3
+      \begin{bmatrix}
+      -1 \\ -1 \\ 1
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      A basis for the orthogonal complement is
+      <m>\begin{bmatrix} -1 \\ -1 \\ 1 \end{bmatrix}</m>.
+    </p>
+  </solution>
+</exercise>
+<exercise>
+  <statement>
+    <p>
+      Let 
+      <m>
+      \mathbf{u}_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, 
+      \mathbf{u}_2 = \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}, 
+      \mathbf{u}_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}.
+      </m>
+      Show that this is an orthogonal basis for <m>\mathbb{R}^3</m>, and write
+      <m>\mathbf{v} = \begin{bmatrix} 3 \\ 1 \\ 2 \end{bmatrix}</m>
+      as a linear combination of these vectors.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      First verify that all pairwise dot products are zero. Then use
+      <m>c_i = \frac{\mathbf{v} \cdot \mathbf{u}_i}{\mathbf{u}_i \cdot \mathbf{u}_i}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The vectors are orthogonal, and
+      <m>
+      \mathbf{v} = 2\mathbf{u}_1 + 1\mathbf{u}_2 + 2\mathbf{u}_3.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Compute dot products:
+      <m>\mathbf{u}_1 \cdot \mathbf{u}_2 = 1 - 1 + 0 = 0</m>,
+      <m>\mathbf{u}_1 \cdot \mathbf{u}_3 = 0</m>,
+      <m>\mathbf{u}_2 \cdot \mathbf{u}_3 = 0</m>.
+      So the vectors are orthogonal.
+    </p>
+
+    <p>
+      Now compute coefficients:
+    </p>
+
+    <p>
+      <m>
+      c_1 = \frac{\mathbf{v} \cdot \mathbf{u}_1}{\mathbf{u}_1 \cdot \mathbf{u}_1}
+      = \frac{3 + 1}{2} = 2,
+      </m>
+    </p>
+
+    <p>
+      <m>
+      c_2 = \frac{\mathbf{v} \cdot \mathbf{u}_2}{\mathbf{u}_2 \cdot \mathbf{u}_2}
+      = \frac{3 - 1}{2} = 1,
+      </m>
+    </p>
+
+    <p>
+      <m>
+      c_3 = \frac{\mathbf{v} \cdot \mathbf{u}_3}{\mathbf{u}_3 \cdot \mathbf{u}_3}
+      = 2.
+      </m>
+    </p>
+
+    <p>
+      Therefore,
+      <m>\mathbf{v} = 2\mathbf{u}_1 + \mathbf{u}_2 + 2\mathbf{u}_3</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let 
+      <m>
+      \mathbf{u}_1 =
+      \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, 
+      \mathbf{u}_2 =
+      \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}.
+      </m>
+      Suppose that these vectors form an orthogonal basis for a subspace <m>W</m> of <m>\mathbb{R}^3</m>.
+    </p>
+    <p>
+      (a) Verify that <m>\mathbf{u}_1</m> and <m>\mathbf{u}_2</m> are orthogonal.
+    </p>
+    <p>
+      (b) Find the orthogonal projection of 
+      <m>\mathbf{v} = \begin{bmatrix} 3 \\ 1 \\ 2 \end{bmatrix}</m>
+      onto <m>W</m>.
+    </p>
+    <p>
+      (c) Write <m>\mathbf{v}</m> as the sum of a vector in <m>W</m> and a vector orthogonal to <m>W</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Use the orthogonal projection formula:
+      <m>\mathrm{proj}_W \mathbf{v} =
+      \frac{\mathbf{v}\cdot\mathbf{u}_1}{\mathbf{u}_1\cdot\mathbf{u}_1}\mathbf{u}_1
+      +
+      \frac{\mathbf{v}\cdot\mathbf{u}_2}{\mathbf{u}_2\cdot\mathbf{u}_2}\mathbf{u}_2</m>.
+      Then subtract from <m>\mathbf{v}</m> to find the orthogonal component.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      (a) The vectors are orthogonal.
+    </p>
+    <p>
+      (b)
+      <m>
+      \mathrm{proj}_W \mathbf{v}
+      =
+      \begin{bmatrix} 3 \\ 1 \\ 0 \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      (c)
+      <m>
+      \mathbf{v}
+      =
+      \begin{bmatrix} 3 \\ 1 \\ 0 \end{bmatrix}
+      +
+      \begin{bmatrix} 0 \\ 0 \\ 2 \end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      (a) Compute
+      <m>
+      \mathbf{u}_1 \cdot \mathbf{u}_2
+      = (1)(1) + (1)(-1) + (0)(0)
+      = 0,
+      </m>
+      so the vectors are orthogonal.
+    </p>
+
+    <p>
+      (b) Compute
+      <m>
+      \mathbf{v} \cdot \mathbf{u}_1 = 3 + 1 + 0 = 4, \quad
+      \mathbf{u}_1 \cdot \mathbf{u}_1 = 2,
+      </m>
+      and
+      <m>
+      \mathbf{v} \cdot \mathbf{u}_2 = 3 - 1 + 0 = 2, \quad
+      \mathbf{u}_2 \cdot \mathbf{u}_2 = 2.
+      </m>
+    </p>
+
+    <p>
+      Therefore,
+      <m>
+      \mathrm{proj}_W \mathbf{v}
+      =
+      \frac{4}{2}\mathbf{u}_1 + \frac{2}{2}\mathbf{u}_2
+      =
+      2\mathbf{u}_1 + \mathbf{u}_2.
+      </m>
+    </p>
+
+    <p>
+      Compute:
+      <m>
+      2\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}
+      +
+      \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}
+      =
+      \begin{bmatrix} 3 \\ 1 \\ 0 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      (c) Then
+      <m>
+      \mathbf{v} - \mathrm{proj}_W \mathbf{v}
+      =
+      \begin{bmatrix} 3 \\ 1 \\ 2 \end{bmatrix}
+      -
+      \begin{bmatrix} 3 \\ 1 \\ 0 \end{bmatrix}
+      =
+      \begin{bmatrix} 0 \\ 0 \\ 2 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      This vector is orthogonal to both <m>\mathbf{u}_1</m> and <m>\mathbf{u}_2</m>,
+      so it lies in <m>W^\perp</m>.
+    </p>
+  </solution>
+</exercise>
+
+</exercises>
+
+</section>
+</handout>
