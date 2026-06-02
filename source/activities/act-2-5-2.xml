@@ -98,15 +98,16 @@
 	    A\twovec{0}{1} = \twovec{1}{2}</m>.
 	    </p></li>
 
-	    <li><p> <m>T\left(\twovec xy\right) =
-	    \twovec{2x+y}{x+2y}</m>.
-	    </p></li>
-
-	    <li><p> We seek a vector <m>\xvec</m> such that
+		<li><p> We seek a vector <m>\xvec</m> such that
 	    <m>T(\xvec) = A\xvec=\twovec{3}{0}</m>.  We can solve
 	    this equation to find the unique solution
 	    <m>\xvec=\twovec{2}{-1}</m>.
 	    </p></li>
+
+	    <li><p> <m>T\left(\twovec xy\right) =
+	    \twovec{2x+y}{x+2y}</m>.
+	    </p></li>
+
 	  </ol>
 	  </p></li>
 
