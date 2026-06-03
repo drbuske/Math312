@@ -566,6 +566,556 @@ https://drbuske.github.io/linearalgebra/sec-least-squares.html" visual="Orthogon
   </solution>
 </exercise>
 
+<exercise>
+  <statement>
+    <p>
+      Apply the Gram–Schmidt process to the vectors
+      <me>
+      \mathbf{v}_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \quad
+      \mathbf{v}_2 = \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
+      </me>
+      to produce an orthogonal basis for the subspace they span.
+    </p>
+    <p>
+      Then normalize your result to produce an orthonormal basis.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Set <m>\mathbf{u}_1 = \mathbf{v}_1</m>. Then compute
+      <m>\mathbf{u}_2 = \mathbf{v}_2 - \mathrm{proj}_{\mathbf{u}_1}\mathbf{v}_2</m>
+      using
+      <m>\mathrm{proj}_{\mathbf{u}_1}\mathbf{v}_2 =
+      \frac{\mathbf{v}_2 \cdot \mathbf{u}_1}{\mathbf{u}_1 \cdot \mathbf{u}_1}\mathbf{u}_1</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      An orthogonal basis is
+      <me>
+      \mathbf{u}_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \quad
+      \mathbf{u}_2 = \begin{bmatrix} \tfrac{1}{2} \\ -\tfrac{1}{2} \\ 1 \end{bmatrix}.
+      </me>
+    </p>
+    <p>
+      An orthonormal basis is
+      <me>
+      \mathbf{e}_1 = \begin{bmatrix} \tfrac{1}{\sqrt{2}} \\ \tfrac{1}{\sqrt{2}} \\ 0 \end{bmatrix}, \quad
+      \mathbf{e}_2 = \begin{bmatrix} \tfrac{1}{\sqrt{6}} \\ -\tfrac{1}{\sqrt{6}} \\ \tfrac{2}{\sqrt{6}} \end{bmatrix}.
+      </me>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Start with
+      <m>\mathbf{u}_1 = \mathbf{v}_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}</m>.
+    </p>
+
+    <p>
+      Compute
+      <me>
+      \mathbf{v}_2 \cdot \mathbf{u}_1 = 1 + 0 + 0 = 1, \quad
+      \mathbf{u}_1 \cdot \mathbf{u}_1 = 2.
+      </me>
+    </p>
+
+    <p>
+      So
+      <me>
+      \mathrm{proj}_{\mathbf{u}_1} \mathbf{v}_2
+      =
+      \frac{1}{2}\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}
+      =
+      \begin{bmatrix} \tfrac{1}{2} \\ \tfrac{1}{2} \\ 0 \end{bmatrix}.
+      </me>
+    </p>
+
+    <p>
+      Then
+      <me>
+      \mathbf{u}_2
+      =
+      \mathbf{v}_2 - \mathrm{proj}_{\mathbf{u}_1} \mathbf{v}_2
+      =
+      \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
+      -
+      \begin{bmatrix} \tfrac{1}{2} \\ \tfrac{1}{2} \\ 0 \end{bmatrix}
+      =
+      \begin{bmatrix} \tfrac{1}{2} \\ -\tfrac{1}{2} \\ 1 \end{bmatrix}.
+      </me>
+    </p>
+
+    <p>
+      This gives an orthogonal basis <m>\{\mathbf{u}_1, \mathbf{u}_2\}</m>.
+    </p>
+
+    <p>
+      Now normalize:
+    </p>
+
+    <p>
+      <me>
+      \|\mathbf{u}_1\| = \sqrt{2}, \quad
+      \mathbf{e}_1 =
+      \frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}.
+      </me>
+    </p>
+
+    <p>
+      Also
+      <m>
+      \|\mathbf{u}_2\| = \sqrt{\tfrac{1}{4} + \tfrac{1}{4} + 1} = \sqrt{\tfrac{3}{2}}.
+      </m>
+    </p>
+
+    <p>
+      Thus
+      <m>
+      \mathbf{e}_2 =
+      \frac{1}{\sqrt{3/2}}
+      \begin{bmatrix} \tfrac{1}{2} \\ -\tfrac{1}{2} \\ 1 \end{bmatrix}
+      =
+      \begin{bmatrix} \tfrac{1}{\sqrt{6}} \\ -\tfrac{1}{\sqrt{6}} \\ \tfrac{2}{\sqrt{6}} \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Hence <m>\{\mathbf{e}_1, \mathbf{e}_2\}</m> is an orthonormal basis.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let 
+      <m>
+      A =
+      \begin{bmatrix}
+      1 \amp 2 \\
+      1 \amp 0 \\
+      0 \amp 1
+      \end{bmatrix}.
+      </m>
+      Compute the QR factorization of <m>A</m>.
+    </p>
+    <p>
+      That is, find an orthonormal matrix <m>Q</m> and an upper triangular matrix <m>R</m>
+      such that <m>A = QR</m>.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Apply Gram–Schmidt to the columns of <m>A</m>.
+      You should find that the projection is especially simple,
+      and the coefficients in <m>R</m> come out as integers.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      <m>
+      Q =
+      \begin{bmatrix}
+      \tfrac{1}{\sqrt{2}} \amp \tfrac{1}{\sqrt{2}} \\
+      \tfrac{1}{\sqrt{2}} \amp -\tfrac{1}{\sqrt{2}} \\
+      0 \amp 0
+      \end{bmatrix},
+      \quad
+      R =
+      \begin{bmatrix}
+      \sqrt{2} \amp \sqrt{2} \\
+      0 \amp \sqrt{2}
+      \end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      Let the columns of <m>A</m> be
+      <m>
+      \mathbf{v}_1 =
+      \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \quad
+      \mathbf{v}_2 =
+      \begin{bmatrix} 2 \\ 0 \\ 1 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Set <m>\mathbf{u}_1 = \mathbf{v}_1</m>.
+      Then
+      <m>\|\mathbf{u}_1\| = \sqrt{2}</m>, so
+      <m>
+      \mathbf{e}_1 =
+      \frac{1}{\sqrt{2}}
+      \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Compute
+      <m>
+      \mathbf{u}_2 =
+      \mathbf{v}_2 -
+      \mathrm{proj}_{\mathbf{u}_1}\mathbf{v}_2.
+      </m>
+    </p>
+
+    <p>
+      <m>
+      \mathbf{v}_2 \cdot \mathbf{u}_1 = 2, \quad
+      \mathbf{u}_1 \cdot \mathbf{u}_1 = 2,
+      </m>
+      so
+      <m>
+      \mathrm{proj}_{\mathbf{u}_1}\mathbf{v}_2
+      =
+      \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Thus
+      <m>
+      \mathbf{u}_2 =
+      \begin{bmatrix} 2 \\ 0 \\ 1 \end{bmatrix}
+      -
+      \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}
+      =
+      \begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Compute
+      <m>
+      \|\mathbf{u}_2\| = \sqrt{1 + 1 + 1} = \sqrt{3},
+      </m>
+      so
+      <m>
+      \mathbf{e}_2 =
+      \frac{1}{\sqrt{3}}
+      \begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Thus
+      <m>
+      Q =
+      \begin{bmatrix}
+      \tfrac{1}{\sqrt{2}} \amp \tfrac{1}{\sqrt{3}} \\
+      \tfrac{1}{\sqrt{2}} \amp -\tfrac{1}{\sqrt{3}} \\
+      0 \amp \tfrac{1}{\sqrt{3}}
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Now compute <m>R = Q^T A</m>.
+    </p>
+
+    <p>
+      <m>
+      r_{11} = \|\mathbf{v}_1\| = \sqrt{2}, \quad
+      r_{12} = \mathbf{e}_1 \cdot \mathbf{v}_2 = \sqrt{2},
+      </m>
+      and
+      <m>
+      r_{22} = \|\mathbf{u}_2\| = \sqrt{3}.
+      </m>
+    </p>
+
+    <p>
+      Therefore
+      <m>
+      R =
+      \begin{bmatrix}
+      \sqrt{2} \amp \sqrt{2} \\
+      0 \amp \sqrt{3}
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Hence, <m>A = QR</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let 
+      <m>
+      A =
+      \begin{bmatrix}
+      1 \amp 1 \\
+      1 \amp 0 \\
+      0 \amp 1
+      \end{bmatrix},
+      \quad
+      \mathbf{b} =
+      \begin{bmatrix}
+      2 \\
+      1 \\
+      2
+      \end{bmatrix}.
+      </m>
+    </p>
+    <p>
+      Find the least squares solution to the system <m>A\mathbf{x} = \mathbf{b}</m>.
+    </p>
+    <p>
+      Then compute the vector <m>A\mathbf{x}</m> and interpret your result.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Compute <m>A^T A</m> and <m>A^T \mathbf{b}</m>, then solve the normal equations
+      <m>A^T A \mathbf{x} = A^T \mathbf{b}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The least squares solution is 
+      <m>\mathbf{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}</m>.
+    </p>
+    <p>
+      <m>
+      A\mathbf{x} =
+      \begin{bmatrix}
+      2 \\
+      1 \\
+      1
+      \end{bmatrix}.
+      </m>
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      First compute
+      <m>
+      A^T =
+      \begin{bmatrix}
+      1 \amp 1 \amp 0 \\
+      1 \amp 0 \amp 1
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Then
+      <m>
+      A^T A =
+      \begin{bmatrix}
+      2 \amp 1 \\
+      1 \amp 2
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Next compute
+      <m>
+      A^T \mathbf{b} =
+      \begin{bmatrix}
+      1\cdot2 + 1\cdot1 + 0\cdot2 \\
+      1\cdot2 + 0\cdot1 + 1\cdot2
+      \end{bmatrix}
+      =
+      \begin{bmatrix} 3 \\ 4 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Solve the normal equations:
+      <m>
+      \begin{bmatrix}
+      2 \amp 1 \\
+      1 \amp 2
+      \end{bmatrix}
+      \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}
+      =
+      \begin{bmatrix} 3 \\ 4 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      From the first equation: <m>2x_1 + x_2 = 3</m>.
+      From the second: <m>x_1 + 2x_2 = 4</m>.
+    </p>
+
+    <p>
+      Solving gives <m>x_1 = 1</m>, <m>x_2 = 1</m>.
+    </p>
+
+    <p>
+      Therefore,
+      <m>\mathbf{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}</m>.
+    </p>
+
+    <p>
+      Compute
+      <m>
+      A\mathbf{x} =
+      \begin{bmatrix}
+      1 \amp 1 \\
+      1 \amp 0 \\
+      0 \amp 1
+      \end{bmatrix}
+      \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+      =
+      \begin{bmatrix}
+      2 \\
+      1 \\
+      1
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      This vector is the projection of <m>\mathbf{b}</m> onto the column space of <m>A</m>.
+      It is the closest vector in the column space to <m>\mathbf{b}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      A company tracks the number of hours an employee trains and the number of tasks completed during a shift. The data collected are:
+    </p>
+    <p>
+      <m>(1,2), (2,2), (3,4), (4,5)</m>.
+    </p>
+    <p>
+      Fit a line <m>y = c + mt</m> to this data using the method of least squares.
+    </p>
+    <p>
+      Interpret the meaning of the slope and intercept in this context.
+    </p>
+  </statement>
+
+  <hint>
+    <p>
+      Form a matrix equation <m>A\mathbf{x} = \mathbf{b}</m> where
+      <m>A = \begin{bmatrix} 1 \amp t_1 \\ 1 \amp t_2 \\ 1 \amp t_3 \\ 1 \amp t_4 \end{bmatrix}</m>.
+      Then compute <m>A^T A</m> and <m>A^T \mathbf{b}</m>, and solve
+      <m>A^T A \mathbf{x} = A^T \mathbf{b}</m>.
+    </p>
+  </hint>
+
+  <answer>
+    <p>
+      The least squares line is
+      <m>y = \frac{1}{2} + \frac{11}{10}t</m>.
+    </p>
+    <p>
+      The slope indicates that each additional hour of training increases output by about 1.1 tasks,
+      and the intercept suggests about one-half of a task is completed with no training (a baseline level).
+    </p>
+  </answer>
+
+  <solution>
+    <p>
+      We model the relationship as <m>y = c + mt</m>.
+    </p>
+
+    <p>
+      <m>
+      A =
+      \begin{bmatrix}
+      1 \amp 1 \\
+      1 \amp 2 \\
+      1 \amp 3 \\
+      1 \amp 4
+      \end{bmatrix}, \quad
+      \mathbf{b} =
+      \begin{bmatrix}
+      2 \\
+      2 \\
+      4 \\
+      5
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      <m>
+      A^T =
+      \begin{bmatrix}
+      1 \amp 1 \amp 1 \amp 1 \\
+      1 \amp 2 \amp 3 \amp 4
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      <m>
+      A^T A =
+      \begin{bmatrix}
+      4 \amp 10 \\
+      10 \amp 30
+      \end{bmatrix}, \quad
+      A^T \mathbf{b} =
+      \begin{bmatrix}
+      13 \\
+      38
+      \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Solve
+      <m>
+      \begin{bmatrix}
+      4 \amp 10 \\
+      10 \amp 30
+      \end{bmatrix}
+      \begin{bmatrix} c \\ m \end{bmatrix}
+      =
+      \begin{bmatrix} 13 \\ 38 \end{bmatrix}.
+      </m>
+    </p>
+
+    <p>
+      Multiply the first equation by 5:
+      <m>20c + 50m = 65</m>,
+      and the second by 2:
+      <m>20c + 60m = 76</m>.
+    </p>
+
+    <p>
+      Subtracting gives <m>10m = 11</m>, so <m>m = \frac{11}{10}</m>.
+    </p>
+
+    <p>
+      Substitute back:
+      <m>4c + 10\cdot\frac{11}{10} = 13</m>,
+      so <m>4c = 2</m>, and <m>c = \frac{1}{2}</m>.
+    </p>
+
+    <p>
+      Therefore, the least squares line is
+      <m>y = \frac{1}{2} + \frac{11}{10}t</m>.
+    </p>
+
+    <p>
+      This line gives the best linear approximation to the data,
+      minimizing the total squared error between observed and predicted values.
+    </p>
+  </solution>
+</exercise>
+
 </exercises>
 
 </section>

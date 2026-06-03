@@ -34,6 +34,8 @@ https://drbuske.github.io/linearalgebra/sec-subspaces.html#sec-subspaces" visual
       Be sure to try each question before looking at the solutions.
     </p>
 
+    <page/>
+
   <exercises xml:id="exercises-practiceexam3">
     <title>Questions</title> 
 
@@ -186,6 +188,7 @@ https://drbuske.github.io/linearalgebra/sec-subspaces.html#sec-subspaces" visual
         \end{bmatrix}.
       </m>
     </p>
+    <pagebreak/>
   </solution>
 </exercise>
 
@@ -430,6 +433,8 @@ https://drbuske.github.io/linearalgebra/sec-subspaces.html#sec-subspaces" visual
   </solution>
 </exercise>
 
+<page/>
+
 <exercise xml:id="exercise-change-of-basis-matrix-visual">
   <statement>
     <p>
@@ -437,7 +442,7 @@ https://drbuske.github.io/linearalgebra/sec-subspaces.html#sec-subspaces" visual
       <m>
         \mathbf{b}_1 =
         \begin{bmatrix}2\\1\end{bmatrix}
-         \text{and} 
+         \text{and } 
         \mathbf{b}_2 =
         \begin{bmatrix}-1\\1\end{bmatrix}
       </m>
@@ -455,15 +460,15 @@ https://drbuske.github.io/linearalgebra/sec-subspaces.html#sec-subspaces" visual
          dimensions="(300, 300)" margins="5">
   <definition>v1=(2,1)</definition>
   <definition>v2=(-1,1)</definition>
-  <coordinates bbox="(-8,-8,8,8)">
+  <coordinates bbox="(-6,-6,6,6)">
     <grid spacings="((-6,2,6),(-6,2,6))" stroke="#ddd"/> 
     <grid basis="(v1,v2)" stroke="lightgray"/>
-    <axes decorations="no"/>
+    <axes hticks="(-6,1,6)" vticks="(-6,1,6)"/>
     <vector v="v1" alignment="se" stroke="blue">
-      <m>{\mathbf v}_1</m>
+      <m>{\mathbf b}_1</m>
     </vector>
     <vector v="v2" alignment="nw" stroke="blue">
-      <m>{\mathbf v}_2</m>
+      <m>{\mathbf b}_2</m>
     </vector>
   </coordinates>
 </diagram>
