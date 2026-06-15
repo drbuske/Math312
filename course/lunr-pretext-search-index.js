@@ -2753,6 +2753,60 @@ var ptx_lunr_docs = [
   "number": "12",
   "title": "",
   "body": "  A company tracks the number of hours an employee trains and the number of tasks completed during a shift. The data collected are:   .  Fit a line to this data using the method of least squares.  Interpret the meaning of the slope and intercept in this context.    Form a matrix equation where . Then compute and , and solve .    The least squares line is .  The slope indicates that each additional hour of training increases output by about 1.1 tasks, and the intercept suggests about one-half of a task is completed with no training (a baseline level).    We model the relationship as .           Solve   Multiply the first equation by 5: , and the second by 2: .  Subtracting gives , so .  Substitute back: , so , and .  Therefore, the least squares line is .  This line gives the best linear approximation to the data, minimizing the total squared error between observed and predicted values.   "
+},
+{
+  "id": "ch-practice-exams-8",
+  "level": "1",
+  "url": "ch-practice-exams-8.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Final Practice Exam",
+  "body": " Final Practice Exam   Be sure to try each question before looking at the solutions.   Questions    Consider the system of equations:    Write this system as a matrix equation .  Using row reduction, find a parametric description of the intersection of these two planes.          Put the following augmented matrix in RREF:   The solution to this system can be described parametrically by         Determine weights to make a true statement below, or explain why this cannot be done.     Form an augmented matrix and row reduce:   So we have   by choosing the free variable .      Suppose that    Compute . Explain how you calculated this.  is a subspace of for  Compute the dimension of .  Find a basis for .  Find a basis for .       so that rank( ) = 2 since there are 2 rows containing a pivot.    has 4 columns so that is a subspace of . That is .    The dimension of = 4 - rank( ) = 4 - 2 = 2.    The pivot columns from the original matrix form a basis for . That is the basis is given by     is the null space of .  Since we can solve for . But since   we have one free variable and a basis for the set of solutions, which is precisely a basis for , is given by   Is it easy to check that this vector is both perpendicular to each vector found in the basis for and linearly independent if placed in a set with those vectors.        Let   Explain why is a subspace of .     so it is a subspace.      Define a specific linear transformation and use a determinant to find the area of the parallelogram with vertices , , , and .    Define a linear transformation so that   Then   The area of the parallelogram is then       "
+},
+{
+  "id": "exercises-practicefinalexam-2",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-2",
+  "type": "Exercise",
+  "number": "1",
+  "title": "",
+  "body": "  Consider the system of equations:    Write this system as a matrix equation .  Using row reduction, find a parametric description of the intersection of these two planes.          Put the following augmented matrix in RREF:   The solution to this system can be described parametrically by      "
+},
+{
+  "id": "exercises-practicefinalexam-3",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-3",
+  "type": "Exercise",
+  "number": "2",
+  "title": "",
+  "body": "  Determine weights to make a true statement below, or explain why this cannot be done.     Form an augmented matrix and row reduce:   So we have   by choosing the free variable .   "
+},
+{
+  "id": "exercises-practicefinalexam-4",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-4",
+  "type": "Exercise",
+  "number": "3",
+  "title": "",
+  "body": "  Suppose that    Compute . Explain how you calculated this.  is a subspace of for  Compute the dimension of .  Find a basis for .  Find a basis for .       so that rank( ) = 2 since there are 2 rows containing a pivot.    has 4 columns so that is a subspace of . That is .    The dimension of = 4 - rank( ) = 4 - 2 = 2.    The pivot columns from the original matrix form a basis for . That is the basis is given by     is the null space of .  Since we can solve for . But since   we have one free variable and a basis for the set of solutions, which is precisely a basis for , is given by   Is it easy to check that this vector is both perpendicular to each vector found in the basis for and linearly independent if placed in a set with those vectors.     "
+},
+{
+  "id": "exercises-practicefinalexam-5",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-5",
+  "type": "Exercise",
+  "number": "4",
+  "title": "",
+  "body": "  Let   Explain why is a subspace of .     so it is a subspace.   "
+},
+{
+  "id": "exercises-practicefinalexam-6",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-6",
+  "type": "Exercise",
+  "number": "5",
+  "title": "",
+  "body": "  Define a specific linear transformation and use a determinant to find the area of the parallelogram with vertices , , , and .    Define a linear transformation so that   Then   The area of the parallelogram is then    "
 }
 ]
 
