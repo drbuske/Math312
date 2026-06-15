@@ -246,6 +246,26 @@
 <exercise>
   <statement>
     <p>Define a specific linear transformation <m>T</m> and use a determinant to find the area of the parallelogram with vertices <m>(0,0)</m>, <m>(4,1)</m>, <m>(2,4)</m>, and <m>(-2,3)</m>.</p>
+
+
+    <image width="50%">
+    <prefigure xmlns="https://prefigure.org"
+             label="parallelogram-image-finalexam-review">
+    <diagram dimensions="(300, 300)" margins="5">
+  <coordinates bbox="(-2,-2,5,5)">
+    <grid-axes hticks="(-2,5,1)" vticks="(-2,5,1)" hlabels="(-1,1,4)" vlabels="(-1,1,4)"/>
+    <vector v="(4,1)" alignment="se" stroke="red">
+    </vector>
+    <vector v="(-2,3)" alignment="se" stroke="red">
+    </vector>
+    <definition>points=((0,0),(-2,3),(2,4),(4,1))</definition>
+    <polygon points="points" stroke="blue" closed="yes" 
+    fill="blue" opacity="0.5" />
+  </coordinates>
+</diagram>
+  </prefigure>
+</image>
+
   </statement>
 
   <solution>
@@ -271,6 +291,510 @@
     <me>
       \det(A) = 12 - (-2) = 14
     </me>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let <m>\mathcal{B} = \left\{ \mathbf{v_1} = \begin{bmatrix} 1 \\ 2 \end{bmatrix},\,
+      \mathbf{v_2} = \begin{bmatrix} 1 \\ -2 \end{bmatrix} \right\}</m>.
+    </p>
+
+   <image width="50%">
+   <prefigure xmlns="https://prefigure.org"
+             label="parallelogram-image-finalexam-review-2">
+<diagram xmlns="https://prefigure.org"
+         dimensions="(300, 300)" margins="5">
+  <definition>v1=(1,2)</definition>
+  <definition>v2=(1,-2)</definition>
+  <coordinates bbox="(-5,-5,5,5)">
+    <grid spacings="((-6,2,6),(-6,2,6))" stroke="#ddd"/> 
+    <grid basis="(v1,v2)" stroke="lightgray"/>
+    <axes hticks="(-6,1,6)" vticks="(-6,1,6)"/>
+    <vector v="v1" alignment="ne" stroke="blue">
+      <m>{\mathbf v}_1</m>
+    </vector>
+    <vector v="v2" alignment="se" stroke="blue">
+      <m>{\mathbf v}_2</m>
+    </vector>
+  </coordinates>
+</diagram>
+  </prefigure>
+</image>
+
+    <ol marker="(a)">
+      <li><p>Is <m>\mathcal{B}</m> a basis of <m>\mathbb{R}^2</m>? Defend your answer.</p></li>
+      <li><p>Find a <m>2 \times 2</m> matrix that will convert <m>B</m>-coordinate vectors to standard coordinate vectors.  That is, find a matrix <m>P</m> with <m>\mathbf{y}=P\left\{ \mathbf{y}\right\}_{\mathcal{B}}</m> for every vector <m>\mathbf{y}</m> in <m>\mathbb{R}^2</m>.</p></li>
+      <li><p>Find a <m>2 \times 2</m> matrix that will convert standard coordinate vectors to <m>\mathcal{B}</m>-coordinate vectors.  That is, find a matrix <m>Q</m> with <m>\mathbf{y}_{\mathcal{B}}=Q\left\{ \mathbf{y}\right\}</m> for every vector <m>\mathbf{y}</m> in <m>\mathbb{R}^2</m>.</p></li>
+      <li><p>If <m>\{y\}_{\mathcal{B}} = \begin{bmatrix} -2 \\ 3 \end{bmatrix}</m>, find <m>y</m>.</p></li>
+      <li><p>If <m>y = \begin{bmatrix} 4 \\ 5 \end{bmatrix}</m>, find <m>\{y\}_{\mathcal{B}}</m>.</p></li>
+    </ol>
+  </statement>
+  <solution>
+  <ol>
+  <li marker="(a)">
+    <p>Yes, the vectors are linearly independent and span <m>\mathbb{R}^2</m>. If they were the columns in a matrix <m>A</m>, the matrix in the RREF would be the <m>2 \times 2</m> identity matrix with a pivot in each row and in each column.</p>
+  </li>
+  <li>
+    <p><m>P = \begin{bmatrix} 1 \amp 1 \\ 2 \amp -2 \end{bmatrix}</m></p>
+  </li>
+  <li>
+    <p><m>Q = P^{-1} = \begin{bmatrix} \tfrac{1}{2} \amp \tfrac{1}{4} \\ \tfrac{1}{2} \amp -\tfrac{1}{4} \end{bmatrix}</m></p>
+  </li>
+  <li>
+    <p><m>
+      \mathbf{y} = \begin{bmatrix} 1 \amp 1 \\ 2 \amp -2 \end{bmatrix}
+      \begin{bmatrix} -2 \\ 3 \end{bmatrix}
+      =
+      \begin{bmatrix} 1 \\ -10 \end{bmatrix}
+    </m></p>
+  </li>
+  <li>
+    <p><m>
+      \{\mathbf{y}\}_{\mathcal{B}} =
+      \begin{bmatrix} \tfrac{1}{2} \amp \tfrac{1}{4} \\ \tfrac{1}{2} \amp -\tfrac{1}{4} \end{bmatrix}
+      \begin{bmatrix} 4 \\ 5 \end{bmatrix}
+      =
+      \begin{bmatrix} 3.25 \\ 0.75 \end{bmatrix}
+    </m></p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      The elementary matrices
+      <m>E_1 = \begin{bmatrix} 1 \amp 0 \amp 0 \\ -2 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}</m>
+      and
+      <m>E_2 = \begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp -\tfrac{4}{3} \amp 1 \end{bmatrix}</m>
+      transform the matrix
+      <m>A = \begin{bmatrix} 2 \amp 4 \amp 6 \\ 4 \amp 5 \amp 6 \\ 0 \amp -4 \amp -8 \end{bmatrix}</m>
+      to
+      <m>U = \begin{bmatrix} 2 \amp 4 \amp 6 \\ 0 \amp -3 \amp -6 \\ 0 \amp 0 \amp 0 \end{bmatrix}</m>.
+      That is, <m>E_2 E_1 A = U</m>.
+    </p>
+    <ol>
+      <li><p>Find the LU-factorization of <m>A</m>.  That is, determine a lower triangular matrix <m>L</m> so that <m>A=LU</m> with <m>A</m> and <m>U</m> as given above.</p></li>
+      <li><p>Is <m>A</m> invertible?  How can you decide without attempting to find the inverse of <m>A</m> through computation?</p></li>
+      <li><p>Use the LU-factorization to solve <m>A\mathbf{x}=\mathbf{b}</m> for <m>\mathbf{b} = \begin{bmatrix} 14 \\ 19 \\ -12 \end{bmatrix}</m>.</p></li>
+    </ol>
+  </statement>
+  <solution>
+    <ol marker="(a)">
+      <li>
+    <p><m>
+      L = E_1^{-1} E_2^{-1}
+      =
+      \begin{bmatrix} 1 \amp 0 \amp 0 \\ 2 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}
+      \begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp \tfrac{4}{3} \amp 1 \end{bmatrix}
+      =
+      \begin{bmatrix} 1 \amp 0 \amp 0 \\ 2 \amp 1 \amp 0 \\ 0 \amp \tfrac{4}{3} \amp 1 \end{bmatrix}
+    </m></p>
+  </li>
+  <li>
+    <p>No. <m>\det(U) = 0</m> since it has a 0 row and the product of its diagonal entries is 0. So det(A) is also 0 and hence not invertible.</p>
+  </li>
+  <li>
+    <p>
+      We solve <m>A\mathbf{x}=\mathbf{b}</m> as <m>LU\mathbf{x}=\mathbf{b}</m>. Set <m>\mathbf{y}=U\mathbf{x}</m>. Then <m>L\mathbf{y}=\mathbf{b}</m>.  That is, we solve the following via forward substitution:
+      <me>
+      \begin{bmatrix} 1 \amp 0 \amp 0 \\ 2 \amp 1 \amp 0 \\ 0 \amp -1 \amp 1 \end{bmatrix}
+      \begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+      =
+      \begin{bmatrix} 14 \\ 19 \\ -12 \end{bmatrix}
+      </me>
+      This gives <m>\mathbf{y} = \begin{bmatrix} 14 \\ -9 \\ -21 \end{bmatrix}</m>.
+      We then use back substitution to find <m>\mathbf{x}</m>:
+      <me>
+      \begin{bmatrix} 2 \amp 4 \amp 6 \\ 0 \amp -3 \amp -6 \\ 0 \amp 0 \amp 0 \end{bmatrix}
+      \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}
+      =
+      \begin{bmatrix} 14 \\ -9 \\ -21 \end{bmatrix}
+      </me>
+      This gives <m>\mathbf{x} = \begin{bmatrix} 11.5 \\ -18 \\ 10.5 \end{bmatrix}</m>.
+    </p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      A <m>2 \times 2</m> matrix <m>A</m> has eigenvalues
+      <m>\lambda_1=-2</m> with eigenvector <m>\mathbf{v}_1=\begin{bmatrix}3\\2\end{bmatrix}</m>
+      and <m>\lambda_2=3</m> with eigenvector <m>\mathbf{v}_2=\begin{bmatrix}1\\1\end{bmatrix}</m>.
+      Find <m>A^4 \begin{bmatrix}5\\-1\end{bmatrix}</m>.  Hint: Do not try to find <m>A</m>.  The point is to do this without actually computing <m>A^4</m>.  Instead, write <m>\begin{bmatrix}5\\-1\end{bmatrix}</m> as a linear combination of <m>\mathbf{v}_1</m> and <m>\mathbf{v}_2</m>.  
+    </p>
+  </statement>
+
+  <solution>
+    
+<p>
+      To write <m>\begin{bmatrix} 5 \\ -1 \end{bmatrix}</m> as a linear combination of <m>\mathbf{v}_1</m> and <m>\mathbf{v}_2</m>, we use an augmented matrix:
+      <me>
+      \begin{bmatrix} 3 \amp 1 \amp 5 \\ 2 \amp 1 \amp -1 \end{bmatrix}
+      \sim
+      \begin{bmatrix} 1 \amp 0 \amp 6 \\ 0 \amp 1 \amp -13 \end{bmatrix}.
+      </me>
+    </p> 
+   <p>
+      So,
+      <me>\begin{bmatrix} 5 \\ -1 \end{bmatrix} = 6 \begin{bmatrix} 3 \\ 2 \end{bmatrix} - 13 \begin{bmatrix} 1 \\ 1 \end{bmatrix}</me>    
+which means that
+      <md>
+      <mrow> A^4 \begin{bmatrix} 5 \\ -1 \end{bmatrix}
+      \mathstrut \amp = A^4 \left( 6 \begin{bmatrix} 3 \\ 2 \end{bmatrix} - 13 \begin{bmatrix} 1 \\
+     1 \end{bmatrix} \right) </mrow>
+      <mrow> \mathstrut \amp = 6(-2)^4 \begin{bmatrix} 3 \\ 2 \end{bmatrix} -13(3)^4 \begin{bmatrix} 1 \\ 1 \end{bmatrix} </mrow>
+      <mrow> \mathstrut \amp = 96 \begin{bmatrix} 3 \\ 2 \end{bmatrix} -1053 \begin{bmatrix} 1 \\ 1 \end{bmatrix} </mrow>
+      <mrow> \mathstrut \amp = \begin{bmatrix} -765 \\ -861 \end{bmatrix}. </mrow>
+      </md>
+    </p>
+  </solution>
+
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Let <m>A=\begin{bmatrix}2 \amp -2 \\ -2 \amp 5\end{bmatrix}</m>.
+      Find the eigenvalues of <m>A</m> and find a basis for each eigenspace.
+      Then, identify a diagonal matrix <m>D</m> and an orthogonal matrix <m>P</m> such that <m>A=PDP^{-1}</m>.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      <m>\det(A-\lambda I)=\lambda^2-7\lambda+6=(\lambda-6)(\lambda-1)</m>
+      so that the eigenvalues of <m>A</m> are <m>\lambda_1=6</m> and <m>\lambda_2=1</m>.
+    </p>
+    <p>
+      A basis for the eigenspace <m>E_{\{6\}}</m> is
+      <m>\left\{\begin{bmatrix}1\\-2\end{bmatrix}\right\}</m>
+      and a basis for the eigenspace <m>E_{\{1\}}</m> is
+      <m>\left\{\begin{bmatrix}2\\1\end{bmatrix}\right\}</m>.
+    </p>
+    <p>
+      So we can diagonalize <m>A</m> using
+      <m>D=\begin{bmatrix}6 \amp 0 \\ 0 \amp 1\end{bmatrix}</m>,
+      and <m>P=\begin{bmatrix}1 \amp 2 \\ -2 \amp 1\end{bmatrix}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Consider the matrix <m>A=\begin{bmatrix}6 \amp 8 \\ -1 \amp 2\end{bmatrix}</m>.
+    </p>
+    <ol>
+      <li><p>Find the characteristic polynomial of <m>A</m>.</p></li>
+      <li><p>Find the eigenvalues of <m>A</m>.</p></li>
+      <li><p>Find a (complex) eigenvector for <m>A</m>.</p></li>
+      <li><p>Find an invertible matrix <m>P</m> and a matrix <m>C=\begin{bmatrix}a \amp -b \\ b \amp a\end{bmatrix}</m> such that <m>A=PCP^{-1}</m>.</p></li>
+    </ol>
+  </statement>
+  <solution>
+  <ol marker="(a)">
+    <li>
+      <p>
+        <m>\det(A- \lambda I) = \begin{vmatrix} 6 - \lambda \amp 8 \\ -1 \amp 2 - \lambda \end{vmatrix} = \lambda^2 - 8\lambda + 20</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        Using the quadratic formula to solve <m>\lambda^2 -8\lambda+20 =</m> gives <m>\lambda = 4 \pm 2i</m> (two complex eigenvalues).
+      </p>
+    </li>
+    <li>
+      <p>
+        For <m>\lambda = 4 + 2i</m>, we solve <m>(A- \lambda I)\mathbf{x} = \mathbf{0}</m> using an augmented matrix:
+        <me>
+        \begin{bmatrix} 2 - 2i \amp 8 \amp 0 \\ -1 \amp -2 - 2i \amp 0 \end{bmatrix}
+        \sim
+        \begin{bmatrix} 1 \amp 2 + 2i \amp 0 \\ 2 - 2i \amp 8 \amp 0 \end{bmatrix}
+        \sim
+        \begin{bmatrix} 1 \amp 2 + 2i \amp 0 \\ 0 \amp 0 \amp 0 \end{bmatrix}
+        </me>
+        so that an eigenvector of <m>A</m> is
+        <me>\mathbf{v} = \begin{bmatrix} 2 + 2i \\ -1 \end{bmatrix} = \begin{bmatrix} 2 \\ -1 \end{bmatrix} - i \begin{bmatrix} -2 \\ 0 \end{bmatrix}</me>
+      </p>
+    </li>
+    <li>
+      <p>
+        Here <m>P = \begin{bmatrix} 2 \amp -2 \\ -1 \amp 0 \end{bmatrix}</m> so that <m>P^{-1} = \begin{bmatrix} 0 \amp -1 \\ -\tfrac{1}{2} \amp -1 \end{bmatrix}</m> and <m>C = \begin{bmatrix} 4 \amp -2 \\ 2 \amp 4 \end{bmatrix}</m>.
+      </p>
+    </li>
+  </ol>
+</solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      For the following, decide if the statement is True or False. If it is false, give a counterexample. If it is true, explain why.
+    </p>
+    <ol marker="(a)">
+      <li><p>The sum of two eigenvectors of a matrix <m>A</m> is always an eigenvector of <m>A</m>.</p></li>
+      <li><p>The sum of two eigenvectors of a matrix <m>A</m> is never an eigenvector of <m>A</m>.</p></li>
+    </ol>
+  </statement>
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          False. Counterexample: <m>A = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 2 \end{bmatrix}</m>.
+          Eigenvector for eigenvalue 1: <m>\begin{bmatrix} 1 \\ 0 \end{bmatrix}</m>.
+          Eigenvector for eigenvalue 2: <m>\begin{bmatrix} 0 \\ 1 \end{bmatrix}</m>.
+          Their sum is <m>\begin{bmatrix} 1 \\ 1 \end{bmatrix}</m>.
+          Check: <m>A \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}</m>,
+          which is not a scalar multiple of <m>\begin{bmatrix} 1 \\ 1 \end{bmatrix}</m>.
+          So the sum is not necessarily an eigenvector.
+        </p>
+      </li>
+      <li>
+        <p>
+          False. Counterexample: <m>A = \begin{bmatrix} 3 \amp 0 \\ 0 \amp 3 \end{bmatrix}</m>.
+          Every nonzero vector is an eigenvector (eigenvalue 3).
+          So if <m>\mathbf{u} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}</m>,
+          <m>\mathbf{v} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}</m>, then
+          <m>\mathbf{u} + \mathbf{v} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}</m>
+          is also an eigenvector.
+          In general, if two eigenvectors correspond to the same eigenvalue, any linear combination (including their sum) is an eigenvector.
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Consider the following subset of the vector space of all real-valued functions
+      <me>S = \{\cos^2 t,\sin^2 t,\cos(2t),\sin(2t),1\}.</me>
+      Let <m>W = \text{span } S</m>. What is <m>\dim W</m>?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Since <m>\cos^2(t) = \frac{1 + \cos(2t)}{2}</m> and
+      <m>\sin^2(t) = \frac{1 - \cos(2t)}{2}</m>, these two functions are linear combinations are <m>1</m> and <m>\cos(2t)</m>.
+      So <m>W = \text{span}\{\cos(2t),\sin(2t),1\}</m>.
+      These functions are all linearly independent so that <m>\dim W = 3</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Is the function <m>f(x) = x+5</m> in the subspace spanned by
+      <m>g(x) = x+1</m> and <m>h(x) = x+3</m>? Explain.
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Yes. In fact, <m>f(x) = -1g(x) + 2h(x)</m>.
+      This is essentially the same as asking if the vector
+      <m>\begin{bmatrix} 5 \\ 1 \end{bmatrix}</m>
+      is in the subspace spanned by
+      <m>\left\{\begin{bmatrix} 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 3 \\ 1 \end{bmatrix}\right\}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      In the following, decide if the set <m>S</m> is a basis, an orthogonal basis, an orthonormal basis, or not a basis for <m>\mathbb{R}^3</m>.
+    </p>
+    <ol marker="(a)">
+      <li><p><m>S = \left\{\begin{bmatrix} 1/3 \\ 1/3 \\ 1/3 \end{bmatrix}, \begin{bmatrix} -1/2 \\ 0 \\ 1/2 \end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\right\}</m></p></li>
+      <li><p><m>S = \left\{\begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 2 \\ 5 \\ 2 \end{bmatrix}\right\}</m></p></li>
+      <li><p><m>S = \left\{\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}, \begin{bmatrix} 3 \\ -1 \\ -1 \end{bmatrix}, \begin{bmatrix} 1 \\ -4 \\ 7 \end{bmatrix}\right\}</m></p></li>
+    </ol>
+  </statement>
+  <solution>
+    <ol marker="(a)">
+      <li><p>Basis</p></li>
+      <li><p>Not a Basis</p></li>
+      <li><p>Orthogonal Basis</p></li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Suppose a subspace <m>W</m> of <m>\mathbb{R}^3</m> is formed by
+      <me>
+      \mathbf{u}_1 = \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix},\;
+      \mathbf{u}_2 = \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}.
+      </me>
+    </p>
+    <ol marker="(a)">
+      <li><p>Find an orthogonal basis for <m>W</m>.</p></li>
+      <li><p>Find the matrix <m>P</m> that projects vectors orthogonally onto <m>W</m>.</p></li>
+      <li><p>Find the closest point to <m>y = \begin{bmatrix} 10 \\ 10 \\ 18 \end{bmatrix}</m> in the subspace <m>U</m> of <m>\mathbb{R}^3</m> spanned by the orthogonal basis vectors <m>\mathbf{v}_1 = \begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix}</m> and <m>\begin{bmatrix} 0 \\ 0 \\ 3 \end{bmatrix}</m>.</p></li>
+      <li><p>Find the orthogonal projection of <m>\begin{bmatrix} 3 \\ 0 \\ 1 \end{bmatrix}</m> onto <m>W</m>.</p></li>
+    </ol>
+  </statement>
+  <solution>
+    <ol marker="(a)">
+      <li>
+        <p>
+          Let <m>\mathbf{w}_1 = \mathbf{u}_1</m>. Let <m>\mathbf{w}_2 = \mathbf{u}_2 - \hat{\mathbf{u}}_2</m> where
+          <m>\hat{\mathbf{u}}_2 = \frac{\mathbf{u}_2 \cdot \mathbf{u}_1}{\mathbf{u}_1 \cdot \mathbf{u}_1} \mathbf{u}_1 = \tfrac{1}{6} \mathbf{u}_1</m>.
+          So an orthogonal basis for <m>W</m> is <m>\{\mathbf{w}_1,\mathbf{w}_2\}</m> where
+          <m>\mathbf{w}_1 = \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix}</m>,
+          <m>\mathbf{w}_2 = \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix} - \begin{bmatrix} -2/6 \\ 1/6 \\ 1/6 \end{bmatrix}
+          = \begin{bmatrix} 4/6 \\ -7/6 \\ -1/6 \end{bmatrix}.</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>P = QQ^T</m> where
+          <m>
+          Q = [\mathbf{w}_1 \mathbf{w}_2] =
+          \begin{bmatrix} 2 \amp 4/6 \\ 1 \amp -7/6 \\ 1 \amp -1/6 \end{bmatrix}.
+          </m>
+          So
+          <md>
+          <mrow> P \mathstrut \amp =
+          \begin{bmatrix} 2 \amp 4/6 \\ 1 \amp -7/6 \\ 1 \amp -1/6 \end{bmatrix}
+          \begin{bmatrix} 2 \amp 1 \amp 1 \\ 4/6 \amp -7/6 \amp -1/6 \end{bmatrix} </mrow>
+          <mrow> \mathstrut \amp =
+          \begin{bmatrix} 40/9 \amp 11/9 \amp 17/9 \\ 11/9 \amp 85/36 \amp 43/36 \\ 17/9 \amp 43/36 \amp 37/36 \end{bmatrix}. </mrow>
+          </md>
+        </p>
+      </li>
+      <li>
+        <p>
+          The projection of <m>\mathbf{y}</m> onto <m>U</m> is given by
+          <md>
+            <mrow> \frac{\mathbf{y} \cdot \mathbf{v}_1}{\mathbf{v}_1 \cdot \mathbf{v}_1} \mathbf{v}_1 + \frac{\mathbf{y} \cdot \mathbf{v}_2}{\mathbf{v}_2 \cdot \mathbf{v}_2} \mathbf{v}_2
+          \mathstrut \amp = \frac{30}{5} \mathbf{v}_1 + \frac{54}{9} \mathbf{v}_2 </mrow>
+          <mrow> \mathstrut \amp = 6 \begin{bmatrix} 1 \\ 2 \\ 0 \end{bmatrix} + 6 \begin{bmatrix} 0 \\ 0 \\ 3 \end{bmatrix} </mrow>
+          <mrow> \mathstrut \amp = \begin{bmatrix} 6 \\ 12 \\ 18 \end{bmatrix}.</mrow>
+        </md>
+        </p>
+      </li>
+      <li>
+        <p>
+          <me>
+          \begin{bmatrix} 40/9 \amp 11/9 \amp 17/9 \\ 11/9 \amp 85/36 \amp 43/36 \\ 17/9 \amp 43/36 \amp 37/36 \end{bmatrix}
+          \begin{bmatrix} 3 \\ 0 \\ 1 \end{bmatrix}
+          =
+          \begin{bmatrix} 137/9 \\ 175/36 \\ 241/36 \end{bmatrix}
+          </me>;
+          Note that
+          <m>\begin{bmatrix} 137/9 \\ 175/36 \\ 241/36 \end{bmatrix}</m>
+          is a linear combination of <m>\begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix}</m> and
+          <m>\begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}</m> since
+          <me>
+          \begin{bmatrix} 137/9 \\ 175/36 \\ 241/36 \end{bmatrix}
+          = \tfrac{241}{36} \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix}
+          + \tfrac{11}{6} \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}.
+          </me>
+        </p>
+      </li>
+    </ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Apply the Gram-Schmidt orthogonalization process to the following basis for a 3-dimensional subspace <m>W</m> of <m>\mathbb{R}^4</m>:
+      <me>
+      \left\{
+      \mathbf{v}_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix},
+      \mathbf{v}_2 = \begin{bmatrix} 2 \\ 4 \\ 1 \\ 0 \end{bmatrix},
+      \mathbf{v}_3 = \begin{bmatrix} 3 \\ 5 \\ 4 \\ 1 \end{bmatrix}
+      \right\}.
+      </me>
+    </p>
+  </statement>
+  <solution>
+    <p>
+      Start by setting <m>\mathbf{u}_1 = \mathbf{v}_1</m>. Then, define
+    </p>
+    <p>
+      <md>
+      <mrow> \mathbf{u}_2 \mathstrut \amp = \mathbf{v}_2 - \frac{\mathbf{v}_2 \cdot \mathbf{u}_1}{\mathbf{u}_1 \cdot \mathbf{u}_1} \mathbf{u}_1 </mrow>
+      <mrow> \mathstrut \amp =
+      \begin{bmatrix} 2 \\ 4 \\ 1 \\ 0 \end{bmatrix}
+      -
+      \frac{6}{2}
+      \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix} </mrow>
+      <mrow> \mathstrut \amp =
+      \begin{bmatrix} -1 \\ 1 \\ 1 \\ 0 \end{bmatrix}. </mrow>
+      </md>
+    </p>
+    <p>
+      Finally, define
+    </p>
+    <p>
+      <md>
+      <mrow> \mathbf{u}_3 \mathstrut \amp = \mathbf{v}_3
+      - \frac{\mathbf{v}_3 \cdot \mathbf{u}_1}{\mathbf{u}_1 \cdot \mathbf{u}_1} \mathbf{u}_1
+      - \frac{\mathbf{v}_3 \cdot \mathbf{u}_2}{\mathbf{u}_2 \cdot \mathbf{u}_2} \mathbf{u}_2 </mrow> 
+      <mrow> \mathstrut \amp =
+      \begin{bmatrix} 3 \\ 5 \\ 4 \\ 1 \end{bmatrix}
+      -
+      \begin{bmatrix} 4 \\ 4 \\ 0 \\ 0 \end{bmatrix}
+      -
+      \begin{bmatrix} -2 \\ 2 \\ 2 \\ 0 \end{bmatrix} </mrow> 
+      <mrow> \mathstrut \amp =
+      \begin{bmatrix} 1 \\ -1 \\ 2 \\ 1 \end{bmatrix}. </mrow> 
+      </md>
+    </p>
+    <p>
+      The orthogonal basis constructed is then
+      <me>
+      \left\{
+      \mathbf{u}_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \\ 0 \end{bmatrix},
+      \mathbf{u}_2 = \begin{bmatrix} -1 \\ 1 \\ 1 \\ 0 \end{bmatrix},
+      \mathbf{u}_3 = \begin{bmatrix} 1 \\ -1 \\ 2 \\ 1 \end{bmatrix}
+      \right\}.
+      </me>
+    </p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>
+      Show that the linear system
+      <m>
+      \begin{bmatrix} 2 \amp -1 \\ -1 \amp 1 \\ 3 \amp -2 \end{bmatrix}
+      \begin{bmatrix} x \\ y \end{bmatrix}
+      =
+      \begin{bmatrix} 5 \\ 7 \\ -1 \end{bmatrix}
+      </m>
+      is inconsistent. What value of
+      <m>\begin{bmatrix} x \\ y \end{bmatrix}</m>
+      comes closest to solving this system, in the sense that
+      <me>
+      \left|
+      \begin{bmatrix} 2 \amp -1 \\ -1 \amp 1 \\ 3 \amp -2 \end{bmatrix}
+      \begin{bmatrix} x \\ y \end{bmatrix}
+      -
+      \begin{bmatrix} 5 \\ 7 \\ -1 \end{bmatrix}
+      \right|^2
+      </me>
+      is minimized?
+    </p>
+  </statement>
+  <solution>
+    <p>
+      If <m>A = \begin{bmatrix} 2 \amp -1 \\ -1 \amp 1 \\ 3 \amp -2 \end{bmatrix}</m> and
+      <m>\mathbf{b} = \begin{bmatrix} 5 \\ 7 \\ -1 \end{bmatrix}</m>, the answer can be expressed as
+      <me>\begin{bmatrix} \hat{\mathbf{x}} \\ \hat{\mathbf{y}} \end{bmatrix} = (A^T A)^{-1} A^T \mathbf{b} = \begin{bmatrix} 12 \\ 18.67 \end{bmatrix}.</me>
+    </p>
   </solution>
 </exercise>
 
