@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+  <title>Final Practice Exam</title>
+
+<section>
+
+    <p>
+      Be sure to try each question before looking at the solutions.
+    </p>
+
+  <exercises xml:id="exercises-practicefinalexam">
+    <title>Questions</title> 
+
+<exercise>
+  <statement>
+    <p>Consider the system of equations:</p>
+    <md>
+      <mrow> 3x_1 - 2x_2 + 3x_3 \mathstrut \amp = -2 </mrow>
+      <mrow> -3x_1 + x_2 + 2x_3 \mathstrut \amp = 0 </mrow>
+    </md>
+    <ol marker="(a)">
+      <li><p>Write this system as a matrix equation <m>A\mathbf{x}=\mathbf{b}</m>.</p></li>
+      <li><p>Using row reduction, find a parametric description of the intersection of these two planes.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <ol>
+      <li><p>
+    <me>
+      \begin{bmatrix}
+      3 \amp -2 \amp 3 \\
+      -3 \amp 1 \amp 2
+      \end{bmatrix}
+      \begin{bmatrix}
+      x_1 \\ x_2 \\ x_3
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      -2 \\ 0
+      \end{bmatrix}
+    </me>
+  </p>
+</li>
+
+    <li><p>Put the following augmented matrix in RREF: 
+    <md>
+      \begin{bmatrix}
+      3 \amp -2 \amp 3 \amp -2 \\
+      -3 \amp 1 \amp 2 \amp 0
+      \end{bmatrix}
+      \sim
+      \begin{bmatrix}
+      1 \amp 0 \amp -7/3 \amp 2/3 \\
+      0 \amp 1 \amp -5 \amp 2
+      \end{bmatrix}
+    </md>
+  </p>
+    <p>The solution to this system can be described parametrically by</p>
+
+    <me>
+      \mathbf{x} =
+      \begin{bmatrix}
+      2/3 \\ 2 \\ 0
+      \end{bmatrix}
+      +
+      x_3
+      \begin{bmatrix}
+      7/3 \\ 5 \\ 1
+      \end{bmatrix}
+    </me>
+</li>
+</ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>Determine weights to make a true statement below, or explain why this cannot be done.</p>
+
+    <me>
+      \underline{\hspace{8mm}}\begin{bmatrix}2\\-1\\4\end{bmatrix}
+      +
+      \underline{\hspace{8mm}}\begin{bmatrix}7\\-36\\29\end{bmatrix}
+      +
+      \underline{\hspace{8mm}}\begin{bmatrix}1\\6\\-1\end{bmatrix}
+      =
+      \begin{bmatrix}10\\21\\8\end{bmatrix}
+    </me>
+  </statement>
+
+  <solution>
+    <p>Form an augmented matrix and row reduce:</p>
+
+    <md>
+      \begin{bmatrix}
+      2 \amp 7 \amp 1 \amp 10 \\
+      -1 \amp -36 \amp 6 \amp 21 \\
+      4 \amp 29 \amp -1 \amp 8
+      \end{bmatrix}
+      \sim
+      \begin{bmatrix}
+      1 \amp 0 \amp 1.2 \amp 7.8 \\
+      0 \amp 1 \amp -0.2 \amp -0.8 \\
+      0 \amp 0 \amp 0 \amp 0
+      \end{bmatrix}
+    </md>
+
+    <p>So we have</p>
+
+    <me>
+      7.8 \begin{bmatrix}2\\-1\\4\end{bmatrix}
+      + -0.8 \begin{bmatrix}7\\-36\\29\end{bmatrix}
+      + 0 \begin{bmatrix}1\\6\\-1\end{bmatrix}
+      =
+      \begin{bmatrix}10\\21\\8\end{bmatrix}
+    </me>
+
+    <p>by choosing the free variable <m>x_3 = 0</m>.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>Suppose that</p>
+
+    <me>
+      A =
+      \begin{bmatrix}
+      1 \amp 2 \amp 3 \amp 4 \\
+      2 \amp 4 \amp 6 \amp 8 \\
+      1 \amp 3 \amp 4 \amp 5
+      \end{bmatrix}
+    </me>
+
+    <ol marker="(a)">
+      <li><p>Compute <m>rank(A)</m>. Explain how you calculated this.</p></li>
+      <li><p><m>Nul(A)</m> is a subspace of <m>\mathbb{R}^k</m> for <m>k =\underline{\hspace{8mm}}</m></p></li>
+      <li><p>Compute the dimension of <m>Nul(A)</m>.</p></li>
+      <li><p>Find a basis for <m>Col(A)</m>.</p></li>
+      <li><p>Find a basis for <m>Col(A)^\perp</m>.</p></li>
+    </ol>
+  </statement>
+
+  <solution>
+    <ol marker="(a)">
+      <li><p>
+    <md>
+      A \sim
+      \begin{bmatrix}
+      1 \amp 0 \amp 1 \amp 2 \\
+      0 \amp 1 \amp 1 \amp 1 \\
+      0 \amp 0 \amp 0 \amp 0
+      \end{bmatrix}
+    </md>
+
+    so that rank(<m>A</m>) = 2 since there are 2 rows containing a pivot.</p>
+  </li>
+<li>
+    <p><m>A</m> has 4 columns so that <m>Nul(A)</m> is a subspace of <m>\mathbb{R}^4</m>. That is <m>k = 4</m>.</p>
+</li>
+<li>
+    <p>The dimension of <m>Nul(A)</m> = 4 - rank(<m>A</m>) = 4 - 2 = 2.</p>
+</li>
+<li>
+    <p>The pivot columns from the original matrix <m>A</m> form a basis for <m>Col(A)</m>. That is the basis is given by</p>
+
+    <me>
+      \left\{
+      \begin{bmatrix}1\\2\\1\end{bmatrix},
+      \begin{bmatrix}2\\4\\3\end{bmatrix}
+      \right\}
+    </me>
+  </li>
+  <li>
+    <p><m>Col(A)^\perp</m> is the null space of <m>A^T</m>.</p>
+    <p>Since
+    <m>
+      A^T =
+      \begin{bmatrix}
+      1 \amp 2 \amp 1 \\
+      2 \amp 4 \amp 3 \\
+      3 \amp 6 \amp 4 \\
+      4 \amp 8 \amp 5
+      \end{bmatrix}
+    </m>
+
+    we can solve <m>A^T\mathbf{y} = \mathbf{0}</m> for <m>\mathbf{y} \in \mathbb{R}^3</m>.  But since </p>
+
+    <me>
+      A^T \sim
+      \begin{bmatrix}
+      1 \amp 2 \amp 1 \\
+      0 \amp 0 \amp 1 \\
+      0 \amp 0 \amp 0 \\
+      0 \amp 0 \amp 0
+      \end{bmatrix}
+    </me>
+
+    <p>we have one free variable and a basis for the set of solutions, which is precisely a basis for <m>Col(A)^\perp</m>, is given by</p>
+
+    <me>
+      \left\{
+      \begin{bmatrix}-2\\1\\0\end{bmatrix}
+      \right\}
+    </me>
+    <p>Is it easy to check that this vector is both perpendicular to each vector found in the basis for <m>Col(A)</m> and linearly independent if placed in a set with those vectors.  </p>
+  </li>
+</ol>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>Let</p>
+
+    <me>
+      H =
+      \left\{
+      \begin{bmatrix}
+      2a - 4b - 3c \\
+      4a - 6b \\
+      9a - b + 7c
+      \end{bmatrix}
+      : a,b,c \text{ are real}
+      \right\}
+    </me>
+
+    <p>Explain why <m>H</m> is a subspace of <m>\mathbb{R}^3</m>.</p>
+  </statement>
+
+  <solution>
+    <me>
+      H = span \left\{
+      \begin{bmatrix}1\\4\\9\end{bmatrix},
+      \begin{bmatrix}-4\\-6\\-1\end{bmatrix},
+      \begin{bmatrix}-3\\0\\7\end{bmatrix}
+      \right\}
+    </me>
+
+    <p>so it is a subspace.</p>
+  </solution>
+</exercise>
+
+<exercise>
+  <statement>
+    <p>Define a specific linear transformation <m>T</m> and use a determinant to find the area of the parallelogram with vertices <m>(0,0)</m>, <m>(4,1)</m>, <m>(2,4)</m>, and <m>(-2,3)</m>.</p>
+  </statement>
+
+  <solution>
+    <p>Define a linear transformation <m>T</m> so that</p>
+
+    <me>
+      T(\mathbf{e_1}) = \begin{bmatrix}4\\1\end{bmatrix}, \quad
+      T(\mathbf{e_2}) = \begin{bmatrix}-2\\3\end{bmatrix}
+    </me>
+
+    <p>Then</p>
+
+    <me>
+      T(\mathbf{x}) = A\mathbf{x} =
+      \begin{bmatrix}
+      4 \amp -2 \\
+      1 \amp 3
+      \end{bmatrix}
+    </me>
+
+    <p>The area of the parallelogram is then</p>
+
+    <me>
+      \det(A) = 12 - (-2) = 14
+    </me>
+  </solution>
+</exercise>
+
+</exercises>
+
+</section>
+</handout>
