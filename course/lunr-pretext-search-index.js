@@ -2761,7 +2761,7 @@ var ptx_lunr_docs = [
   "type": "Handout",
   "number": "",
   "title": "Final Practice Exam",
-  "body": " Final Practice Exam   Be sure to try each question before looking at the solutions.   Questions    Consider the system of equations:    Write this system as a matrix equation .  Using row reduction, find a parametric description of the intersection of these two planes.          Put the following augmented matrix in RREF:   The solution to this system can be described parametrically by         Determine weights to make a true statement below, or explain why this cannot be done.     Form an augmented matrix and row reduce:   So we have   by choosing the free variable .      Suppose that    Compute . Explain how you calculated this.  is a subspace of for  Compute the dimension of .  Find a basis for .  Find a basis for .       so that rank( ) = 2 since there are 2 rows containing a pivot.    has 4 columns so that is a subspace of . That is .    The dimension of = 4 - rank( ) = 4 - 2 = 2.    The pivot columns from the original matrix form a basis for . That is the basis is given by     is the null space of .  Since we can solve for . But since   we have one free variable and a basis for the set of solutions, which is precisely a basis for , is given by   Is it easy to check that this vector is both perpendicular to each vector found in the basis for and linearly independent if placed in a set with those vectors.        Let   Explain why is a subspace of .     so it is a subspace.      Define a specific linear transformation and use a determinant to find the area of the parallelogram with vertices , , , and .    Define a linear transformation so that   Then   The area of the parallelogram is then       "
+  "body": " Final Practice Exam   Be sure to try each question before looking at the solutions.   Questions    Consider the system of equations:    Write this system as a matrix equation .  Using row reduction, find a parametric description of the intersection of these two planes.          Put the following augmented matrix in RREF:   The solution to this system can be described parametrically by         Determine weights to make a true statement below, or explain why this cannot be done.     Form an augmented matrix and row reduce:   So we have   by choosing the free variable .      Suppose that    Compute . Explain how you calculated this.  is a subspace of for  Compute the dimension of .  Find a basis for .  Find a basis for .       so that rank( ) = 2 since there are 2 rows containing a pivot.    has 4 columns so that is a subspace of . That is .    The dimension of = 4 - rank( ) = 4 - 2 = 2.    The pivot columns from the original matrix form a basis for . That is the basis is given by     is the null space of .  Since we can solve for . But since   we have one free variable and a basis for the set of solutions, which is precisely a basis for , is given by   Is it easy to check that this vector is both perpendicular to each vector found in the basis for and linearly independent if placed in a set with those vectors.        Let   Explain why is a subspace of .     so it is a subspace.      Define a specific linear transformation and use a determinant to find the area of the parallelogram with vertices , , , and .           points=((0,0),(-2,3),(2,4),(4,1))         Define a linear transformation so that   Then   The area of the parallelogram is then       Let .     v1=(1,2)  v2=(1,-2)       {\\mathbf v}_1    {\\mathbf v}_2        Is a basis of ? Defend your answer.  Find a matrix that will convert -coordinate vectors to standard coordinate vectors. That is, find a matrix with for every vector in .  Find a matrix that will convert standard coordinate vectors to -coordinate vectors. That is, find a matrix with for every vector in .  If , find .  If , find .       Yes, the vectors are linearly independent and span . If they were the columns in a matrix , the matrix in the RREF would be the identity matrix with a pivot in each row and in each column.                    The elementary matrices and transform the matrix to . That is, .   Find the LU-factorization of . That is, determine a lower triangular matrix so that with and as given above.  Is invertible? How can you decide without attempting to find the inverse of through computation?  Use the LU-factorization to solve for .          No. since it has a 0 row and the product of its diagonal entries is 0. So det(A) is also 0 and hence not invertible.    We solve as . Set . Then . That is, we solve the following via forward substitution: This gives . We then use back substitution to find : This gives .        A matrix has eigenvalues with eigenvector and with eigenvector . Find . Hint: Do not try to find . The point is to do this without actually computing . Instead, write as a linear combination of and .    To write as a linear combination of and , we use an augmented matrix:   So, which means that       Let . Find the eigenvalues of and find a basis for each eigenspace. Then, identify a diagonal matrix and an orthogonal matrix such that .     so that the eigenvalues of are and .  A basis for the eigenspace is and a basis for the eigenspace is .  So we can diagonalize using , and .      Consider the matrix .   Find the characteristic polynomial of .  Find the eigenvalues of .  Find a (complex) eigenvector for .  Find an invertible matrix and a matrix such that .            Using the quadratic formula to solve gives (two complex eigenvalues).    For , we solve using an augmented matrix: so that an eigenvector of is     Here so that and .        For the following, decide if the statement is True or False. If it is false, give a counterexample. If it is true, explain why.   The sum of two eigenvectors of a matrix is always an eigenvector of .  The sum of two eigenvectors of a matrix is never an eigenvector of .       False. Counterexample: . Eigenvector for eigenvalue 1: . Eigenvector for eigenvalue 2: . Their sum is . Check: , which is not a scalar multiple of . So the sum is not necessarily an eigenvector.    False. Counterexample: . Every nonzero vector is an eigenvector (eigenvalue 3). So if , , then is also an eigenvector. In general, if two eigenvectors correspond to the same eigenvalue, any linear combination (including their sum) is an eigenvector.        Consider the following subset of the vector space of all real-valued functions Let . What is ?    Since and , these two functions are linear combinations are and . So . These functions are all linearly independent so that .      Is the function in the subspace spanned by and ? Explain.    Yes. In fact, . This is essentially the same as asking if the vector is in the subspace spanned by .      In the following, decide if the set is a basis, an orthogonal basis, an orthonormal basis, or not a basis for .          Basis  Not a Basis  Orthogonal Basis       Suppose a subspace of is formed by    Find an orthogonal basis for .  Find the matrix that projects vectors orthogonally onto .  Find the closest point to in the subspace of spanned by the orthogonal basis vectors and .  Find the orthogonal projection of onto .       Let . Let where . So an orthogonal basis for is where ,      where So     The projection of onto is given by      ; Note that is a linear combination of and since         Apply the Gram-Schmidt orthogonalization process to the following basis for a 3-dimensional subspace of :     Start by setting . Then, define     Finally, define     The orthogonal basis constructed is then       Show that the linear system is inconsistent. What value of comes closest to solving this system, in the sense that is minimized?    If and , the answer can be expressed as       "
 },
 {
   "id": "exercises-practicefinalexam-2",
@@ -2806,7 +2806,115 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5",
   "title": "",
-  "body": "  Define a specific linear transformation and use a determinant to find the area of the parallelogram with vertices , , , and .    Define a linear transformation so that   Then   The area of the parallelogram is then    "
+  "body": "  Define a specific linear transformation and use a determinant to find the area of the parallelogram with vertices , , , and .           points=((0,0),(-2,3),(2,4),(4,1))         Define a linear transformation so that   Then   The area of the parallelogram is then    "
+},
+{
+  "id": "exercises-practicefinalexam-7",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-7",
+  "type": "Exercise",
+  "number": "6",
+  "title": "",
+  "body": "  Let .     v1=(1,2)  v2=(1,-2)       {\\mathbf v}_1    {\\mathbf v}_2        Is a basis of ? Defend your answer.  Find a matrix that will convert -coordinate vectors to standard coordinate vectors. That is, find a matrix with for every vector in .  Find a matrix that will convert standard coordinate vectors to -coordinate vectors. That is, find a matrix with for every vector in .  If , find .  If , find .       Yes, the vectors are linearly independent and span . If they were the columns in a matrix , the matrix in the RREF would be the identity matrix with a pivot in each row and in each column.                 "
+},
+{
+  "id": "exercises-practicefinalexam-8",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-8",
+  "type": "Exercise",
+  "number": "7",
+  "title": "",
+  "body": "  The elementary matrices and transform the matrix to . That is, .   Find the LU-factorization of . That is, determine a lower triangular matrix so that with and as given above.  Is invertible? How can you decide without attempting to find the inverse of through computation?  Use the LU-factorization to solve for .          No. since it has a 0 row and the product of its diagonal entries is 0. So det(A) is also 0 and hence not invertible.    We solve as . Set . Then . That is, we solve the following via forward substitution: This gives . We then use back substitution to find : This gives .     "
+},
+{
+  "id": "exercises-practicefinalexam-9",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-9",
+  "type": "Exercise",
+  "number": "8",
+  "title": "",
+  "body": "  A matrix has eigenvalues with eigenvector and with eigenvector . Find . Hint: Do not try to find . The point is to do this without actually computing . Instead, write as a linear combination of and .    To write as a linear combination of and , we use an augmented matrix:   So, which means that    "
+},
+{
+  "id": "exercises-practicefinalexam-10",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-10",
+  "type": "Exercise",
+  "number": "9",
+  "title": "",
+  "body": "  Let . Find the eigenvalues of and find a basis for each eigenspace. Then, identify a diagonal matrix and an orthogonal matrix such that .     so that the eigenvalues of are and .  A basis for the eigenspace is and a basis for the eigenspace is .  So we can diagonalize using , and .   "
+},
+{
+  "id": "exercises-practicefinalexam-11",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-11",
+  "type": "Exercise",
+  "number": "10",
+  "title": "",
+  "body": "  Consider the matrix .   Find the characteristic polynomial of .  Find the eigenvalues of .  Find a (complex) eigenvector for .  Find an invertible matrix and a matrix such that .            Using the quadratic formula to solve gives (two complex eigenvalues).    For , we solve using an augmented matrix: so that an eigenvector of is     Here so that and .     "
+},
+{
+  "id": "exercises-practicefinalexam-12",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-12",
+  "type": "Exercise",
+  "number": "11",
+  "title": "",
+  "body": "  For the following, decide if the statement is True or False. If it is false, give a counterexample. If it is true, explain why.   The sum of two eigenvectors of a matrix is always an eigenvector of .  The sum of two eigenvectors of a matrix is never an eigenvector of .       False. Counterexample: . Eigenvector for eigenvalue 1: . Eigenvector for eigenvalue 2: . Their sum is . Check: , which is not a scalar multiple of . So the sum is not necessarily an eigenvector.    False. Counterexample: . Every nonzero vector is an eigenvector (eigenvalue 3). So if , , then is also an eigenvector. In general, if two eigenvectors correspond to the same eigenvalue, any linear combination (including their sum) is an eigenvector.     "
+},
+{
+  "id": "exercises-practicefinalexam-13",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-13",
+  "type": "Exercise",
+  "number": "12",
+  "title": "",
+  "body": "  Consider the following subset of the vector space of all real-valued functions Let . What is ?    Since and , these two functions are linear combinations are and . So . These functions are all linearly independent so that .   "
+},
+{
+  "id": "exercises-practicefinalexam-14",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-14",
+  "type": "Exercise",
+  "number": "13",
+  "title": "",
+  "body": "  Is the function in the subspace spanned by and ? Explain.    Yes. In fact, . This is essentially the same as asking if the vector is in the subspace spanned by .   "
+},
+{
+  "id": "exercises-practicefinalexam-15",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-15",
+  "type": "Exercise",
+  "number": "14",
+  "title": "",
+  "body": "  In the following, decide if the set is a basis, an orthogonal basis, an orthonormal basis, or not a basis for .          Basis  Not a Basis  Orthogonal Basis    "
+},
+{
+  "id": "exercises-practicefinalexam-16",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-16",
+  "type": "Exercise",
+  "number": "15",
+  "title": "",
+  "body": "  Suppose a subspace of is formed by    Find an orthogonal basis for .  Find the matrix that projects vectors orthogonally onto .  Find the closest point to in the subspace of spanned by the orthogonal basis vectors and .  Find the orthogonal projection of onto .       Let . Let where . So an orthogonal basis for is where ,      where So     The projection of onto is given by      ; Note that is a linear combination of and since      "
+},
+{
+  "id": "exercises-practicefinalexam-17",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-17",
+  "type": "Exercise",
+  "number": "16",
+  "title": "",
+  "body": "  Apply the Gram-Schmidt orthogonalization process to the following basis for a 3-dimensional subspace of :     Start by setting . Then, define     Finally, define     The orthogonal basis constructed is then    "
+},
+{
+  "id": "exercises-practicefinalexam-18",
+  "level": "2",
+  "url": "ch-practice-exams-8.html#exercises-practicefinalexam-18",
+  "type": "Exercise",
+  "number": "17",
+  "title": "",
+  "body": "  Show that the linear system is inconsistent. What value of comes closest to solving this system, in the sense that is minimized?    If and , the answer can be expressed as    "
 }
 ]
 
