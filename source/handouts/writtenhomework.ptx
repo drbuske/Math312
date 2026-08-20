@@ -12,7 +12,7 @@
 
   <page>
     
-  <p><em>Doing</em> mathematics is necessary to understand mathematics.  To that end, there are 13 written homework assignments you will submit this term.  Since there are 13 sections in the textbook, this means that there is one written homework assignment to be submitted for each two sections of content.  Deadlines for submission appear in D2L Brightspace.  
+  <p><em>Doing</em> mathematics is necessary to understand mathematics.  To that end, there are 13 written homework assignments you will submit this term.  Since there are 27 sections in the textbook, this means that there is one written homework assignment to be submitted for each two sections of content (and none on the last section).  Deadlines for submission appear in D2L Brightspace.  
   </p>
   
   <p>Solutions to these exercises must be <alert>written by hand</alert> and not typed.  In addition, some exercises may require you to do a screen capture.  These include exercises in which Sage calculations are done and Checkpoint exercises in which you drag and drop answers.  Your goal is to effectively communicate these solutions.  <alert>Submissions will be limited to a single file.  Please convert that single file to PDF before submission.</alert>
@@ -21,8 +21,12 @@
   <p>If you struggle on some of these exercises, it is natural to turn to an AI system for help.  If you do so, please be sure to document such aid in your submission.  But be aware that as of 2026, AI LLM's often hallucinate and produce incorrect mathematics.  So be careful in just assuming what is being returned to you is correct.  
   </p>
 
-  <p>The grading rubric for homework assignments is found below.  Because of the fast-paced nature of the course, it will be nearly impossible to provide meaningful feedback prior to taking an exam on that same topic (which may be that same day or same hour!).  The best way to get quick feedback may be posting to the Discussion board in D2L - another student may respond more quickly than I can.  AI can also help provide feedback (assuming you are willing to upload the questions and your written work to such an interface...such effort is not required).  
+  <p>The grading rubric for homework assignments is found below.  Because of the fast-paced nature of the course, it will be nearly impossible to provide meaningful feedback prior to taking an exam on that same topic (which may be that same day).  Naturally AI can help provide feedback (assuming you are willing to upload the questions and your written work to such an interface...such effort is not required).  
   </p>
+
+  </page>
+
+  <page>
 
   <table xml:id="Homework312Rubric" >
 <title>Written Homework Grading Rubric</title>
@@ -162,11 +166,13 @@
 </tabular>
 </table>
 
+</page>
+
+<page>
 
   <p>
     Below are the 13 written homework assignments to be submitted to D2L.  
   </p>
-  </page>
 
   <p>
   <dl>
@@ -257,6 +263,7 @@ https://drbuske.github.io/linearalgebra/sec-eigen-intro.html#ula-proteus-4-1-eig
 https://drbuske.github.io/linearalgebra/sec-eigen-find.html#ula-proteus-4-2-reasoning-about-eigenthings">4.2</url>:</alert> Checkpoints 4.2.15, 4.2.16, 4.2.18, 4.2.19; </p><p>Exercises #1-3,5,6
       </p>
     </li>
+
     <li>
       <title>Hwk 9 (4.3, 5.1)</title>
       <p>
@@ -314,4 +321,152 @@ https://drbuske.github.io/linearalgebra/sec-least-squares.html#ula-proteus-6-5-f
     </li>
   </dl>
 </p>
+
+</page>
+
+<page>
+
+  <p>
+    In <xref ref="schedule-writtenhomework-table"/> are deadlines for the written homework to be uploaded to D2L for grading.  
+  </p>
+
+  <table xml:id="schedule-writtenhomework-table">
+  <title>Written Homework Due Dates</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+      <cell><alert>Week Starting</alert></cell>
+      <cell><alert>Monday</alert></cell>
+      <cell><alert>Tuesday</alert></cell>
+      <!-- <cell><alert>Wednesday</alert></cell> -->
+      <cell><alert>Thursday</alert></cell>
+      <cell><alert>Friday</alert></cell>
+    </row>
+
+    <row>
+      <cell><alert>8/24</alert></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    
+    </row>
+
+    <row>
+      <cell><alert>8/31</alert></cell>
+        <cell></cell>
+      <cell></cell>
+      <cell>Hwk 1 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>9/7</alert></cell>
+      <cell></cell>
+      <cell>Hwk 2 Due</cell>
+      <cell></cell>
+      <cell>Hwk 3 Due</cell>
+    </row>
+
+    <row>
+      <cell><alert>9/14</alert></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>9/21</alert></cell>
+      <cell>Hwk 4 Due</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      
+    </row>
+
+    <row>
+      <cell><alert>9/28</alert></cell>
+      <cell>Hwk 5 Due</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>10/5</alert></cell>
+      <cell></cell>
+      <cell>Hwk 6 Due</cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>10/12</alert></cell>
+      <cell></cell>
+      <cell>Hwk 7 Due</cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>10/19</alert></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>10/26</alert></cell>
+      <cell>Hwk 8 Due</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/2</alert></cell>
+      <cell>Hwk 9 Due</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/9</alert></cell>
+      <cell>Hwk 10 Due</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/16</alert></cell>
+      <cell></cell>
+      <cell>Hwk 11 Due</cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/23</alert></cell>
+      <cell></cell>
+      <cell>Hwk 12 Due</cell>
+            <cell></cell>
+            <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/30</alert></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell>Hwk 13 Due</cell>
+    </row>
+
+  </tabular>
+</table>
+
+</page>
+
 </handout>

@@ -17,9 +17,11 @@
       <xi:include href="./syllabus/syllabus.ptx" /> 
       <!-- Other documents could go here, like a schedule, project description, etc. -->
 
+      <xi:include href="./handouts/dailyprep.ptx" /> 
+
       <xi:include href="./handouts/writtenhomework.ptx" /> 
 
-          <chapter xml:id="ch1activities">
+      <chapter xml:id="ch1activities">
       <title>Ch. 1 Activity Solutions</title>
 
       <xi:include href="./activities/act-1-1-1.xml"/> 
@@ -114,7 +116,7 @@
         <xi:include href="./activities/act-5-4-2.xml"/>
       </chapter>
 
-      <chapter xml:id="ch6activities">
+     <chapter xml:id="ch6activities">
       <title>Ch. 6 Activity Solutions</title>
           <xi:include href="./activities/act-6-1-1.xml"/>
           <xi:include href="./activities/act-6-1-2.xml"/>
@@ -141,8 +143,8 @@
           <xi:include href="./activities/act-6-5-4.xml"/>
           <xi:include href="./activities/act-6-5-5.xml"/>
           <xi:include href="./activities/act-6-5-6.xml"/>
-      </chapter>
-
+      </chapter> 
+    
        <!--  <chapter xml:id="ch-Textbook">
       <title>Daily Prep</title>
       

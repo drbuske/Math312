@@ -8,7 +8,7 @@
     <title>Course Information</title>
 
     <p>
-      This is the syllabus for <term>Linear Algebra (MATH 312)</term> for Summer 2026.
+      This is the syllabus for <term>Linear Algebra (MATH 312)</term> for Fall 2026.
       It is a 4-credit course offered through St. Cloud State University.
       <!-- use a description list (dl) for short items -->
       <dl>
@@ -24,7 +24,42 @@
           <title>Student Hours</title>
 
           <p>
-            Available via Zoom by appointment.  Meetings on campus are also possible.  Email to set up a day, time, and method to meet.  
+            <table xml:id="OfficeHours" >
+<title>Student Support Hours</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Day</alert> </cell>
+<cell> <alert>Times</alert> </cell>
+</row>
+
+<row>
+<cell> Mondays </cell> 
+<cell> 11:00-11:50, 1:00-2:50 </cell>   
+</row>
+
+<row>
+<cell> Tuesdays </cell> 
+<cell> 2:00-2:50 </cell>   
+</row>
+
+<row>
+<cell> Wednesdays </cell> 
+<cell> 9:00-10:50 </cell>   
+</row>
+
+<row>
+<cell> Thursdays </cell> 
+<cell> 1:00-2:50 </cell>   
+</row>
+
+<row>
+<cell> Fridays </cell> 
+<cell> 11:00-11:50 </cell>  
+</row>
+
+</tabular>
+</table>  
+
           </p>
         </li>
 
@@ -38,44 +73,44 @@
           <title>Class Meetings</title>
 
           <p>
-            The course is asynchronous; however, closely following the suggested schedule is strongly advised in order to be successful and prepared for assessments of your learning.   
+            We will meet Mondays, Tuesday, Thursdays, and Fridays from 10-10:50 AM in CH 234.     
           </p>
 
-          <!-- <table xml:id="MeetingDates" >
+          <table xml:id="MeetingDates" >
 <title>Exam Dates</title>
 <tabular halign="center" bottom="minor" top="minor">
 <row header="no" bottom="medium" top="medium">
+<cell> <alert>Exam</alert> </cell>
 <cell> <alert>Date</alert> </cell>
-<cell> <alert>Time</alert> </cell>
 </row>
 
 <row>
-<cell> June 2 </cell> 
-<cell> 9:00-10:30 AM </cell>   
+<cell> <line> Exam 1 </line> <line>(1.1-1.4, 2.1-2.6)</line> </cell> 
+<cell> September 22 </cell>   
 </row>
 
 <row>
-<cell> June 16 </cell> 
-<cell> 9:00-10:30 AM </cell>   
+<cell> <line> Exam 2 </line> <line>(3.1-3.4, 4.1)</line> </cell> 
+<cell> October 13 </cell>   
 </row>
 
 <row>
-<cell> June 30 </cell> 
-<cell> 9:00-10:30 AM </cell>   
+<cell> <line> Exam 3 </line> <line>(4.2-4.3, 5.1-5.4)</line> </cell> 
+<cell> November 6 </cell>   
 </row>
 
 <row>
-<cell> July 14 </cell> 
-<cell> 9:00-10:30 AM </cell>   
+<cell> <line> Exam 4 </line> <line> (6.1-6.4) </line></cell> 
+<cell> November 24 </cell>   
 </row>
 
 <row>
-<cell> July 23 </cell> 
-<cell> 9:00-11:15 AM </cell>  
+<cell> <line> Final Exam </line> <line> (1.1-7.1) </line> </cell> 
+<cell> <line> Wednesday, December 9 </line> <line> (9:55 AM - 12:10 PM) </line></cell>  
 </row>
 
 </tabular>
-</table> -->
+</table> 
 
         </li>
 
@@ -128,7 +163,7 @@
               </li>
               <li>
                 <p>
-                  The textbook is also built for <term>active learning</term>.  The activities in the text are a primary focus of your learning.  If you have trouble answering questions in a given activity, know that solutions to these are found on the course website (link given below).  The reading in the textbook is brief - this is intentional.  The primary focus will be working through the activities to explore the content.  
+                  The textbook is built for <term>active learning</term>.  The activities in the text are a primary focus of your learning.  If you have trouble answering questions in a given activity, know that solutions to these are found on the course website (link given below).  The reading in the textbook is brief - this is intentional.  The primary focus will be working through the activities to explore the content.  
                 </p>
               </li>
               <li>
@@ -144,16 +179,16 @@
           </p>
             
           <p>
-            <term>D2L Brightspace</term> will be the learning management tool used to organize the course.  Grades, a calendar, assignments, and exams as well as announcements we be posted on D2L.  Visit <url href="http://myhuskynet.stcloudstate.edu" visual="http://myhuskynet.stcloudstate.edu"/> and login to your account using your Huskynet ID and password.  
+            <term>D2L Brightspace</term> will be the learning management tool used to organize the course.  Grades, a calendar, and announcements we be posted on D2L.  Visit <url href="http://myhuskynet.stcloudstate.edu" visual="http://myhuskynet.stcloudstate.edu"/> and login to your account using your Huskynet ID and password.  
           </p>
 
           <p>
             Electronic homework will be done via the <url href="http://www.myopenmath.com" visual="MyOpenMath"/> platform located at <url href="http://www.myopenmath.com" visual="http://www.myopenmath.com"/>.  A free account can be attained by using any email address and choosing a password.  Please use your real name as grades need to be manually transferred to D2L.  
           </p>
 
-          <p>Course ID: <term>323855</term></p>
+          <p>Course ID: <term>342309</term></p>
 
-          <p>Enrollment key: <term>Buske312Su26</term></p>
+          <p>Enrollment key: <term>Buske312F26</term></p>
         </li>
       </dl>
     </p>
@@ -163,7 +198,7 @@
       <title>Course Overview</title>
 
       <p>
-        People learn mathematics by <em>doing</em> mathematics.  Though the course is asynchronous and hence flexible, you would be well-advised to <em>do</em> mathematics each day.  The course calendar has dates for each topic.  Each section of the text contains videos, readings, core activities, and exercises to prepare you for each graded assessment.  Procrastination will not serve you well.  A number of tools are available to support you, but the most important tool will be your dedicated effort.  
+        People learn mathematics by <em>doing</em> mathematics.  You are well-advised to <em>do</em> mathematics each day.  The course calendar has dates for each topic.  Each section of the text contains videos, readings, core activities, and exercises to prepare you for each graded assessment.  Procrastination will not serve you well.  A number of tools are available to support you, but the most important tool will be your dedicated effort.  
       </p>
     </paragraphs>
   </section>
@@ -195,6 +230,10 @@
 
           <p> Orthogonality and Least Squares: The dot product; Orthogonal complements and the matrix transpose; Orthogonal bases and projections; Finding orthogonal bases; Orthogonal least squares.
           </p>
+
+          <p>
+            Orthogonal Diagonalizability: Symmetric Matrices and Variance
+          </p>
         </li>
 
         <li>
@@ -220,7 +259,7 @@
   <section xml:id="subsec-calendar">
     <title>Calendar</title>
     <p>
-      Below is a calendar with dates that you should study each topic and dates to take the written exams.  Depending on your schedule, you may wish to do some of the work on weekends.  Just be sure to not fall behind and be prepared for assessments on the prescribed dates.  
+      Below is a calendar with dates that you should study each topic and dates to take the written exams.  Be sure to not fall behind and be prepared for assessments on the prescribed dates.  
     </p>
 
 <table xml:id="schedule-table">
@@ -230,78 +269,137 @@
       <cell><alert>Week Starting</alert></cell>
       <cell><alert>Monday</alert></cell>
       <cell><alert>Tuesday</alert></cell>
-      <cell><alert>Wednesday</alert></cell>
+      <!-- <cell><alert>Wednesday</alert></cell> -->
       <cell><alert>Thursday</alert></cell>
       <cell><alert>Friday</alert></cell>
     </row>
 
     <row>
-      <cell><alert>5/11</alert></cell>
+      <cell><alert>8/24</alert></cell>
       <cell>1.1 What can we expect</cell>
       <cell>1.2 Finding solutions to linear systems</cell>
+      <cell>1.2 Finding solutions to linear systems</cell>
       <cell>1.3 Computation with Sage</cell>
-      <cell>1.4 Pivots and their influence on solution spaces</cell>
-      <cell><alert>Review &amp; Exam 1</alert></cell>
+    
     </row>
 
     <row>
-      <cell><alert>5/18</alert></cell>
+      <cell><alert>8/31</alert></cell>
+        <cell>1.4 Pivots and their influence on solution spaces</cell>
+      <cell>2.1 Vectors and linear combinations</cell>
       <cell>2.1 Vectors and linear combinations</cell>
       <cell>2.2 Matrix multiplication and linear combinations</cell>
+    </row>
+
+    <row>
+      <cell><alert>9/7</alert></cell>
+      <cell><em>No Class</em></cell>
+      <cell>2.2 Matrix multiplication and linear combinations</cell>
       <cell>2.3 The span of a set of vectors</cell>
+      <cell>2.3 The span of a set of vectors</cell>
+    </row>
+
+    <row>
+      <cell><alert>9/14</alert></cell>
       <cell>2.4 Linear independence</cell>
       <cell>2.5 Matrix transformations</cell>
-    </row>
-
-    <row>
-      <cell><alert>5/25</alert></cell>
-      <cell><em>No Class</em></cell>
+      <cell>2.5 Matrix transformations</cell>
       <cell>2.6 The geometry of matrix transformations</cell>
-      <cell><alert>Review &amp; Exam 2</alert></cell>
-      <cell>3.1 Invertibility</cell>
-      <cell>3.2 Bases and coordinate systems</cell>
     </row>
 
     <row>
-      <cell><alert>6/1</alert></cell>
+      <cell><alert>9/21</alert></cell>
+      <cell><alert>Review </alert></cell>
+      <cell><alert>Exam 1</alert></cell>
+      <cell>3.1 Invertibility</cell>
+      <cell>3.1 Invertibility</cell>
+      
+    </row>
+
+    <row>
+      <cell><alert>9/28</alert></cell>
+      <cell>3.2 Bases and coordinate systems</cell>
+      <cell>3.2 Bases and coordinate systems</cell>
       <cell>3.3 Determinants</cell>
+      <cell>3.3 Determinants</cell>
+    </row>
+
+    <row>
+      <cell><alert>10/5</alert></cell>
       <cell>3.4 Subspaces</cell>
-      <cell><alert>Review &amp; Exam 3</alert></cell>
+      <cell>3.4 Subspaces</cell>
       <cell>4.1 An introduction to eigenvalues and eigenvectors</cell>
+      <cell>4.1 An introduction to eigenvalues and eigenvectors</cell>
+    </row>
+
+    <row>
+      <cell><alert>10/12</alert></cell>
+      <cell><em>No Class</em></cell>
+      <cell><alert>Exam 2</alert></cell>
+      <cell>4.2 Finding eigenvalues and eigenvectors</cell>
       <cell>4.2 Finding eigenvalues and eigenvectors</cell>
     </row>
 
     <row>
-      <cell><alert>6/8</alert></cell>
+      <cell><alert>10/19</alert></cell>
       <cell>4.3 Diagonalization, similarity, and powers of a matrix</cell>
-      <cell><alert>Review &amp; Exam 4</alert></cell>
+      <cell>4.3 Diagonalization, similarity, and powers of a matrix</cell>
+      <cell>5.1 Definition of vector spaces</cell>
+      <cell>5.1 Definition of vector spaces</cell>
+    </row>
+
+    <row>
+      <cell><alert>10/26</alert></cell>
       <cell>5.1 Definition of vector spaces</cell>
       <cell>5.2 Linear combinations, span, and independence</cell>
+      <cell>5.3 Vector subspaces</cell>
       <cell>5.3 Vector subspaces</cell>
     </row>
 
     <row>
-      <cell><alert>6/15</alert></cell>
+      <cell><alert>11/2</alert></cell>
       <cell>5.4 Basis and dimension</cell>
-      <cell><alert>Review &amp; Exam 5</alert></cell>
-      <cell>6.1 The dot product</cell>
-      <cell>6.2 Orthogonal complements and the matrix transpose</cell>
-      <cell><em>No class</em></cell>
+      <cell>5.4 Basis and dimension</cell>
+      <cell><alert>Review</alert></cell>
+      <cell><alert>Exam 3</alert></cell>
     </row>
 
     <row>
-      <cell><alert>6/22</alert></cell>
+      <cell><alert>11/9</alert></cell>
+      <cell>6.1 The dot product</cell>
+      <cell>6.1 The dot product</cell>
+      <cell>6.2 Orthogonal complements and the matrix transpose</cell>
+      <cell>6.2 Orthogonal complements and the matrix transpose</cell>
+    </row>
+
+    <row>
+      <cell><alert>11/16</alert></cell>
+      <cell>6.3 Orthogonal bases and projections</cell>
       <cell>6.3 Orthogonal bases and projections</cell>
       <cell>6.4 Finding orthogonal bases</cell>
+      <cell>6.4 Finding orthogonal bases</cell>
+    </row>
+
+    <row>
+      <cell><alert>11/23</alert></cell>
       <cell>6.5 Orthogonal least squares</cell>
-      <cell><alert>Review &amp; Exam 6</alert></cell>
-      <cell><alert>Review &amp; Final Exam</alert></cell>
+      <cell><alert>Exam 4</alert></cell>
+            <cell><em>No class</em></cell>
+            <cell><em>No class</em></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/30</alert></cell>
+      <cell>6.5 Orthogonal least squares</cell>
+      <cell>7.1 Symmetric matrices</cell>
+      <cell>7.1 Symmetric matrices</cell>
+      <cell><alert>Review</alert></cell>
     </row>
 
   </tabular>
 </table>
 
-    <p>
+    <!-- <p>
       Exams will cover the following material from the course.
     </p>
 
@@ -357,11 +455,11 @@
 </row>
 
 </tabular>
-</table>
+</table> 
 
 <p>
 This course is accelerated!  That means it moves at more than double the pace of a normal semester.  The reality is that to be successful, several hours a day will need to be dedicated to your studies.  Studying on weekends to get ahead, especially if holding a job or other commitments during the work week, will be helpful.  Below is a table with time you might expect to spend on each aspect of the course (for each section of the textbook).  Note that this totals roughly 4 hours per day or 20 hours per week!  In reality, this is likely the bare minimum you should expect to spend working on this course each week.  
-</p>
+</p> -->
 
 <table xml:id="StudyTime" >
 <title>Estimated Time on Various Aspects of the Course</title>
@@ -376,24 +474,24 @@ This course is accelerated!  That means it moves at more than double the pace of
 <cell> 30-60 minutes </cell>     
 </row>
 
-<row>
+<!-- <row>
 <cell> Watching Videos </cell> 
 <cell> 15-30 minutes </cell>    
-</row>
+</row> -->
 
-<row>
+<!-- <row>
 <cell> Working the Activities in Text </cell> 
 <cell> 60 minutes </cell>  
-</row>
+</row> -->
 
 <row>
 <cell> Written Homework </cell> 
-<cell> 60-90 minutes </cell>  
+<cell> 90-120 minutes </cell>  
 </row>
 
 <row>
 <cell> Electronic Homework (MOMwork) </cell> 
-<cell> 30 minutes </cell>  
+<cell> 30-45 minutes </cell>  
 </row>
 
 </tabular>
@@ -408,6 +506,15 @@ This course is accelerated!  That means it moves at more than double the pace of
     <p>
 <dl>
   
+  <li>
+        <title>Daily Prep</title>
+        <p>
+          Near the beginning of each section of the textbook is a Preview Activity.   Directions for completing these and the grading rubric can be found under the <alert>Daily Prep</alert> section of this website.  This particular assessment is <em>formative</em> rather than <em>summative</em> and the goal is to prepare you to better digest material discussed each day in class.   
+        </p>
+
+        <!-- <p>A syllabus quiz will be taking during the first week.  These points will count towards written homework.
+        </p> -->
+      </li>
 
       <li>
         <title>Written Homework</title>
@@ -415,8 +522,8 @@ This course is accelerated!  That means it moves at more than double the pace of
           There will be 13 written homework assignments.  Directions for these, the grading rubric, and the specific exercises to address can be found under the <alert>Written Homework</alert> section of this website.  Remember that <em>doing</em> mathematics is the best, and perhaps <em>only</em> way to learn mathematics!  
         </p>
 
-        <p>A syllabus quiz will be taking during the first week.  These points will count towards written homework.
-        </p>
+        <!-- <p>A syllabus quiz will be taking during the first week.  These points will count towards written homework.
+        </p> -->
       </li>
 
       <li>
@@ -427,24 +534,20 @@ This course is accelerated!  That means it moves at more than double the pace of
   <p> Associated with the course is an open source (FREE) electronic homework system (MyOpenMath).  We will use this for MOMwork.  To access this, use the link <url href="https://www.myopenmath.com/" visual="https://www.myopenmath.com/"/>.
   </p> 
 
-      <p>Course ID: <alert>323855</alert></p>
-      <p>Enrollment Key: <alert>Buske312Su26</alert></p>
+      <p>Course ID: <alert>342309</alert></p>
+      <p>Enrollment Key: <alert>Buske312F26</alert></p>
       </li>
 
       <li>
         <title>Written Exams</title>
         <p>
-          There will be seven (7) written exams.  One of the written exams will be a comprehensive final.  All exams are to be independent assessments of your knowledge.   
+          There will be five (5) written exams.  One of the written exams will be a comprehensive final.  All exams in this course will be taken in class.  
         </p>
 
-        <p>
-          <alert>Exam Proctoring:</alert> All exams in this course will be proctored (recorded via Respondus Monitor), with no exceptions. 
-        </p>
-
-        <p> Dates for the exams are included on the provided schedule.  Exams (except the final exam) are time limited to 90 minutes, but may be taken during any 90-minute period of the scheduled day(s).  Students with possible schedule conflicts should contact me immediately to discuss other possible days at which a proctored exam could be taken. 
+        <p> Dates for the exams are included on the provided schedule.  Students with possible schedule conflicts should contact me in advance to discuss other possible days at which an exam could be taken. 
         </p>         
 
-        <p> Exams will open as a D2L quiz and all written work will be scanned and submitted to a separate D2L assignment dropbox after the exam has closed in D2L.  More information is provided in D2L Brightspace.
+        <!-- <p> Exams will open as a D2L quiz and all written work will be scanned and submitted to a separate D2L assignment dropbox after the exam has closed in D2L.  More information is provided in D2L Brightspace.
         </p>
 
         <ul>
@@ -456,20 +559,20 @@ This course is accelerated!  That means it moves at more than double the pace of
 
           <li> During the exams, students will also be required to connect to the Respondus Lockdown Monitor via a second device, such as a cell phone or tablet.  <alert>This second device should be placed slightly behind and to one side of where the student is seated during the exam to clearly show that there are no unauthorized notes or devices being used during the exam.  Failure to do so will result in a score of zero on that exam.</alert>  Exam 0 is a trial run - passing Exam 0 means your setup is acceptable.  
           </li>
-        </ul>
+        </ul> 
 
 
         <p> While some students may have reservations about the use of the Respondus software to record audio and video of themselves in their private living spaces, it is the unfortunate reality that academic conduct is so prevalent during unproctored online exams that it is absolutely necessary to protect the integrity of the testing process.  Our accreditors expect no less of us.   
         </p>
 
         <p> Students that prefer not to install the Respondus software may have the option to make arrangements to take the exams in person instead, either in an SCSU classroom with me if you live near the St. Cloud area or at another educational institution that provides test proctoring services.  Students must indicate their intent to do so during the first week of class, and all arrangements for proctoring at other educational institutions must be finalized no later than the end of the second week of class.
-        </p>
+        </p> 
 
         <p> Exams for this course will be closed-book and closed-notes, meaning that you may not use the textbook, any unauthorized notes or electronic devices, or any online resources while working on the exams nor may you discuss the exam problems with anyone.   All submitted work must be completed on your own without any unauthorized help.  Calculators will be allowed on exams; in fact, a scientific calculator will appear on the D2L screen during the exam.  
         </p>
 
         <p> Reminder: Submitting work from someone else, work generated by ChatGPT (or any other generative AI software), or work copied from other websites as your own would constitute a violation of the SCSU Academic Integrity policy, as would allowing another student to submit your work as their own.  Any such violation will be reported to the appropriate authority and will result in sanctions to the grades of all students involved as discussed in the SCSU Academic Integrity policy.
-        </p>
+        </p> -->
       </li>
 
       <li>
@@ -487,8 +590,13 @@ This course is accelerated!  That means it moves at more than double the pace of
 </row>
 
 <row>
-<cell> MOMwork (MyOpenMath) </cell> 
+<cell> Daily Prep (Preview Activities) </cell> 
 <cell> 10% </cell>     
+</row>
+
+<row>
+<cell> MOMwork (MyOpenMath) </cell> 
+<cell> 15% </cell>     
 </row>
 
 <row>
@@ -498,7 +606,7 @@ This course is accelerated!  That means it moves at more than double the pace of
 
 <row>
 <cell> Exams </cell> 
-<cell> 70% </cell>  
+<cell> 55% </cell>  
 </row>
 
 </tabular>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout xml:id="dailyprep312">
+<title>Daily Prep</title>
+
+  <!-- <page>
+    <p workspace="1in">
+      A first paragraph with some space for notes below it.
+    </p>
+
+  </page> -->
+
+  <page>
+    
+  <p>The best way to fully benefit from our class time together is to be reasonably prepared for class.  To that end, each section of the text includes a Preview Activity.  These activities are connected questions that prepare you for what is coming in a given section through recall of key ideas of previous mathematics you have learned.  They are often constructive and highlight a core idea of the section.    
+  </p>
+  
+
+
+  <p>These assignments are intended to be formative in nature.  As such, the grading rubric in <xref ref="DailyPrep312Rubric"/> will be utilized.   
+  </p>
+
+  <table xml:id="DailyPrep312Rubric" >
+<title>Daily Prep Grading Rubric</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+<cell> <alert>Score</alert> </cell>
+<cell> <alert>Description</alert> </cell>
+</row>
+
+<row>
+<cell> 4 </cell> 
+<cell> All questions thoughtfully addressed with sufficient justifications provided. </cell>     
+</row>
+
+<row>
+<cell> 3 </cell>  
+<cell> More than 90% complete, but lacking key justifications </cell>  
+</row>
+
+<row>
+<cell> 2 </cell> 
+<cell> Submission looks to be a last-minute thought submitted with few if any explanations </cell>  
+</row>
+
+<row>
+<cell> 1 </cell> 
+<cell> Less than half of what was requested was submitted; little thought put into work </cell>   
+</row>
+
+<row>
+<cell> 0 </cell> 
+<cell> No submission </cell> 
+</row>
+
+</tabular>
+</table>
+
+ </page> 
+
+ <page> 
+
+    <p>Based on the calendar found in <xref ref="schedule-dailyprep-table"/>, please submit your attempts to respond to the questions in each Preview Activity.  <alert>Submissions will be limited to a single file.  Please convert that single file to PDF before submission to D2L Brightspace.</alert>
+  </p>
+
+  <p>
+    In <xref ref="schedule-dailyprep-table"/> are deadlines for the daily prep assignments to be uploaded to D2L for grading.  
+  </p>
+
+<table xml:id="schedule-dailyprep-table">
+  <title>Daily Prep Due Dates</title>
+<tabular halign="center" bottom="minor" top="minor">
+<row header="no" bottom="medium" top="medium">
+      <cell><alert>Week Starting</alert></cell>
+      <cell><alert>Monday</alert></cell>
+      <cell><alert>Tuesday</alert></cell>
+      <!-- <cell><alert>Wednesday</alert></cell> -->
+      <cell><alert>Thursday</alert></cell>
+      <cell><alert>Friday</alert></cell>
+    </row>
+
+    <row>
+      <cell><alert>8/24</alert></cell>
+      <cell></cell>
+      <cell>DP 1.2 Due</cell>
+      <cell></cell>
+      <cell></cell>
+    
+    </row>
+
+    <row>
+      <cell><alert>8/31</alert></cell>
+        <cell>DP 1.4 Due</cell>
+      <cell>DP 2.1 Due</cell>
+      <cell></cell>
+      <cell>DP 2.2 Due</cell>
+    </row>
+
+    <row>
+      <cell><alert>9/7</alert></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell>DP 2.3 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>9/14</alert></cell>
+      <cell>DP 2.4 Due</cell>
+      <cell>DP 2.5 Due</cell>
+      <cell></cell>
+      <cell>DP 2.6 Due</cell>
+    </row>
+
+    <row>
+      <cell><alert>9/21</alert></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell>DP 3.1 Due</cell>
+      <cell></cell>
+      
+    </row>
+
+    <row>
+      <cell><alert>9/28</alert></cell>
+      <cell>DP 3.2 Due</cell>
+      <cell></cell>
+      <cell>DP 3.3 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>10/5</alert></cell>
+      <cell>DP 3.4 Due</cell>
+      <cell></cell>
+      <cell>DP 4.1 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>10/12</alert></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell>DP 4.2 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>10/19</alert></cell>
+      <cell>DP 4.3 Due</cell>
+      <cell></cell>
+      <cell>DP 5.1 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>10/26</alert></cell>
+      <cell></cell>
+      <cell>DP 5.2 Due</cell>
+      <cell>DP 5.3 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/2</alert></cell>
+      <cell>DP 5.4 Due</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/9</alert></cell>
+      <cell>DP 6.1 Due</cell>
+      <cell></cell>
+      <cell>DP 6.2 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/16</alert></cell>
+      <cell>DP 6.3 Due</cell>
+      <cell></cell>
+      <cell>DP 6.4 Due</cell>
+      <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/23</alert></cell>
+      <cell>DP 6.5 Due</cell>
+      <cell></cell>
+            <cell></cell>
+            <cell></cell>
+    </row>
+
+    <row>
+      <cell><alert>11/30</alert></cell>
+      <cell></cell>
+      <cell>DP 7.1 Due</cell>
+      <cell></cell>
+      <cell></cell>
+    </row>
+
+  </tabular>
+</table>
+
+</page>
+
+</handout>
