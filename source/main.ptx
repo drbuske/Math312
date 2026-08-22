@@ -246,11 +246,11 @@
 
     </chapter> --> 
 
-    <!-- <chapter xml:id="myslides">
-      <title>Class Slides</title>
+    <chapter xml:id="mynotes">
+      <title>Class Notes</title>
 
-<xi:include href="./slides/slides.ptx" />
-    </chapter> -->
+<xi:include href="./handouts/Sec11Notes.ptx" />
+    </chapter> 
 
     <!-- Include additional chapters for other categories -->
 
