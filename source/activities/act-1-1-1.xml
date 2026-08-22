@@ -18,12 +18,12 @@
         <statement>
 	  <p>
 	    On the grid below, graph the lines
-	    <me>
+	    <md>
 	      \begin{aligned}
 	      y \amp = x+1 \\
 	      y \amp = 2x-1\text{.} \\
 	      \end{aligned}
-	    </me>
+	    </md>
 	  </p>
 	  <p>
 	    At what point or points <m>(x,y)</m>, do the lines
@@ -70,12 +70,12 @@
         <statement>
 	  <p>
 	    On the grid below, graph the lines
-	    <me>
+	    <md>
 	      \begin{aligned}
 	      y \amp = x+1 \\
 	      y \amp = x-1\text{.} \\
 	      \end{aligned}
-	    </me>
+	    </md>
 	  </p>
 	  <p>
 	    At what point or points <m>(x,y)</m>, do the lines
@@ -121,9 +121,9 @@
         <statement>
 	  <p>
 	    On the grid below, graph the line
-	    <me>
+	    <md>
 	      y = x+1
-	      </me>.
+	      </md>.
 	  </p>
 	  <p>
 	    How many points <m>(x,y)</m> satisfy this
@@ -167,13 +167,13 @@
         <statement>
 	  <p>
 	    On the grid below, graph the lines
-	    <me>
+	    <md>
 	      \begin{aligned}
 	      y \amp = x+1 \\
 	      y \amp = 2x-1 \\
 	      y \amp = -x. \\
 	      \end{aligned}
-	    </me>
+	    </md>
 	  </p>
 	  <p>
 	    At what point or points <m>(x,y)</m>, do the lines
