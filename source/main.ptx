@@ -250,6 +250,7 @@
       <title>Class Notes</title>
 
 <xi:include href="./handouts/Sec11Notes.ptx" />
+<xi:include href="./handouts/Sec12Notes.ptx" />
     </chapter> 
 
     <!-- Include additional chapters for other categories -->

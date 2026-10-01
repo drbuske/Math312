@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout>
+<title>Section 1.2 Notes</title>
+
+<p><alert>
+    Equivalent systems
+</alert> are two linear systems with the same solution set. </p>
+
+<p>Our strategy for solving a linear system will be to replace one system with an equivalent system that is easier to solve. </p>
+
+<example xml:id="ex-linear-system-graphical">
+    <title>A Linear System in Two Variables</title>
+
+    <statement>
+        <p>
+            Consider the system
+        </p>
+
+        <md>
+            \begin{aligned}
+            x_1-2x_2 \amp = -1\\
+            -x_1+3x_2 \amp = 3.
+            \end{aligned}
+        </md>
+
+        <p>
+            Solving the system gives
+        </p>
+
+        <me>
+            \begin{aligned}
+            x_1-2x_2 \amp = -1\\
+            x_2 \amp = 2,
+            \end{aligned}
+        </me>
+
+        <p>
+            and therefore
+        </p>
+
+        <me>
+            x_1=3,
+            \qquad
+            x_2=2.
+        </me>
+
+        <figure xml:id="fig-successive-elimination">
+            <caption>
+                A graphical interpretation of solving a linear system by
+                elimination. The first panel shows two intersecting lines.
+                The second panel represents an equivalent system after
+                elimination. The third panel represents the unique
+                solution point.
+            </caption>
+
+            <description>
+                Three coordinate-plane diagrams arranged from left to
+                right. The first shows two nonparallel lines intersecting.
+                The second shows a slanted line intersecting a horizontal
+                line whose height corresponds to x-sub-2 equals two.
+                The third shows a vertical line and a horizontal line
+                intersecting at the point with coordinates
+                (3,2), representing the solution x-sub-1 equals three
+                and x-sub-2 equals two.
+            </description>
+<image width="50%">
+            <latex-image>
+\begin{tikzpicture}[scale=0.55]
+
+% Panel 1
+\begin{scope}
+\draw[->] (-10,0) -- (10,0) node[right] {$x_1$};
+\draw[->] (0,-5) -- (0,5) node[above] {$x_2$};
+
+\draw[line width=1.2pt]
+(-10,-2.5) -- (10,4.2);
+
+\draw[line width=1.2pt]
+(-10,-4.8) -- (10,5.2);
+\end{scope}
+
+% Panel 2
+\begin{scope}[xshift=14cm]
+\draw[->] (-10,0) -- (10,0) node[right] {$x_1$};
+\draw[->] (0,-5) -- (0,5) node[above] {$x_2$};
+
+\draw[line width=1.2pt]
+(-10,-4.8) -- (10,5.2);
+
+\draw[line width=1.2pt]
+(-10,2) -- (10,2);
+\end{scope}
+
+% Panel 3
+\begin{scope}[xshift=28cm]
+\draw[->] (-10,0) -- (10,0) node[right] {$x_1$};
+\draw[->] (0,-5) -- (0,5) node[above] {$x_2$};
+
+\draw[line width=1.2pt]
+(3,-5) -- (3,5);
+
+\draw[line width=1.2pt]
+(-10,2) -- (10,2);
+
+\fill (3,2) circle (2pt);
+\end{scope}
+
+\end{tikzpicture}
+            </latex-image>
+          </image>
+        </figure>
+    </statement>
+</example>
+
+</handout>
